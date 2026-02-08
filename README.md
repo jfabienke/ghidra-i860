@@ -1,94 +1,152 @@
-# ghidra-i860: Intel i860 Processor Module for Ghidra
+# ghidra-i860
 
-A Ghidra extension providing disassembly and decompilation support for the Intel i860 (80860) RISC microprocessor.
+Intel i860 (80860) processor module for [Ghidra](https://ghidra-sre.org/) — disassembly and decompilation of i860 binaries.
 
-## Status
+## Features
 
-**Phase**: Documentation and planning. No SLEIGH code written yet.
+- **~172 unique instructions** across 337 SLEIGH definitions covering the full i860 ISA
+- **4 language variants**: little-endian and big-endian for both XR (1989) and XP (1991)
+- **2 calling conventions**: GCC/NeXTSTEP ABI and SPEA/APX2 ABI
+- **Full p-code semantics** for decompiler output — no `unimpl` instructions
+- **Auto-detection** of Mach-O (CPU type 15) and ELF (EM_860 = 7) binaries
+- **100% mnemonic match** on 15,432 instructions verified against reference disassembler
 
-## Background
+## Installation
 
-The Intel i860 is not supported by any mainstream open-source reverse engineering tool except IDA Pro. This project adds i860 support to Ghidra via a SLEIGH language module.
+Copy the contents of `data/languages/` into your Ghidra processor directory:
 
-### Target Binaries
+```
+cp -r data/languages/ <ghidra-install>/Ghidra/Processors/i860/data/languages/
+```
 
-- **NeXTdimension** firmware (Mach-O / raw binary, little-endian)
-- **SPEA Fire** graphics card firmware (COFF, little-endian)
-- **Intel iPSC/860 and Paragon** applications (ELF)
-- Raw ROM images from various i860 systems
+On macOS with Homebrew:
+```
+cp -r data/languages/ /opt/homebrew/Cellar/ghidra/<version>/libexec/Ghidra/Processors/i860/data/languages/
+```
 
-### Architecture Highlights
+Restart Ghidra after copying.
 
-- 32-bit RISC, fixed 32-bit instruction width
-- 32 integer registers (r0 hardwired to zero) + 32 FP registers (f0/f1 hardwired to zero)
-- Bi-endian (configurable, default little-endian)
-- Dual-instruction VLIW mode (core + FP simultaneously)
-- Branch delay slots on `.t` variants and `bla` only
-- Pipelined FP with program-accessible pipeline state
-- Two variants: XR (1989) and XP (1991), binary compatible
+## Supported Binary Formats
+
+| Format | Status | Details |
+|--------|--------|---------|
+| **Mach-O** | Supported | CPU_TYPE_I860 (15) — auto-detected by Ghidra |
+| **ELF** | Supported | EM_860 (7) — auto-detected by Ghidra |
+| **Raw binary** | Supported | Manual language selection required |
+| **COFF** | Planned | Magic `0x014D` (Intel APX2) and `0x0090` (SPEA FGA) |
+
+**Target binaries**: NeXTdimension firmware (64 KB Mach-O), SPEA Fire graphics firmware (COFF), Intel iPSC/Paragon applications (ELF).
+
+## Architecture Overview
+
+The Intel i860 is a 32-bit RISC processor with fixed 32-bit instruction width.
+
+- **Registers**: 32 integer (r0 = zero), 32 floating-point (f0/f1 = zero), 6 control
+- **Encoding**: primary opcode in bits [31:26], register fields src2[25:21], dest[20:16], src1[15:11]
+- **FP escape**: opcode `0x12` with 7-bit sub-opcode in bits [6:0]
+- **Core escape**: opcode `0x13` with 3-bit sub-opcode in bits [2:0]
+- **Delay slots**: `bc.t`, `bnc.t`, `bla`, `br`, `call`, `bri`, `calli` (NOT `bc`, `bnc`, `bte`, `btne`)
+- **Dual-instruction mode**: core + FP execute simultaneously via `d.` prefix
+- **Bi-endian**: configurable at reset, default little-endian
+
+## Language Variants
+
+| ID | Endianness | Variant | Processor Spec |
+|----|------------|---------|----------------|
+| `i860:LE:32:XR` | Little | XR (1989) | `i860_xr.pspec` |
+| `i860:BE:32:XR` | Big | XR (1989) | `i860_xr.pspec` |
+| `i860:LE:32:XP` | Little | XP (1991) | `i860_xp.pspec` |
+| `i860:BE:32:XP` | Big | XP (1991) | `i860_xp.pspec` |
+
+All variants share the same `.sinc` instruction definitions. XP adds 10 instructions gated by a context register. Endianness is set at SLEIGH compile time via separate `.slaspec` files.
+
+## Calling Conventions
+
+| ABI | Stack Pointer | Frame Pointer | Arg Registers | Return Register |
+|-----|---------------|---------------|---------------|-----------------|
+| **GCC/NeXTSTEP** (`gcc.cspec`) | r2 | r3 | r16–r27 | r16 |
+| **SPEA/APX2** (`spea.cspec`) | r29 | r28 | r4–r11 | r2 |
+
+Both conventions use r1 as the return address register (set by `call`/`calli`).
+
+## Building from Source
+
+Compile the SLEIGH specifications into `.sla` files:
+
+```bash
+# Little-endian
+sleigh data/languages/i860_le.slaspec
+
+# Big-endian
+sleigh data/languages/i860_be.slaspec
+```
+
+The SLEIGH compiler is included with Ghidra:
+```
+<ghidra-install>/Ghidra/Features/Decompiler/os/<platform>/sleigh
+```
+
+Pre-compiled `.sla` files are included in the repository.
+
+## Verification
+
+Tested against a Rust-based i860 disassembler (99.93% MAME accuracy) using the NeXTdimension firmware binary:
+
+- **15,432 / 15,432** comparable instructions = **100.0% mnemonic match**
+- Ghidra decodes 55 additional instructions that the reference outputs as `.long`
+
+Verification uses the included `scripts/DisassembleAll.java` Ghidra script for headless linear-sweep disassembly.
+
+## File Structure
+
+```
+ghidra-i860/
+├── data/languages/
+│   ├── i860.ldefs              # Language definitions (4 variants)
+│   ├── i860.opinion            # Loader-to-language mapping
+│   ├── i860_xr.pspec          # XR processor spec
+│   ├── i860_xp.pspec          # XP processor spec
+│   ├── i860_le.slaspec        # LE top-level (compiles to i860_le.sla)
+│   ├── i860_be.slaspec        # BE top-level (compiles to i860_be.sla)
+│   ├── i860_common.sinc       # Tokens, registers, attach directives
+│   ├── i860_integer.sinc      # ALU, shifts, loads/stores
+│   ├── i860_control.sinc      # Branches, calls, traps
+│   ├── i860_float.sinc        # FP instructions
+│   ├── i860_graphics.sinc     # Graphics ops, dual operations
+│   ├── i860_xp.sinc           # XP-specific instructions
+│   ├── gcc.cspec              # GCC/NeXTSTEP calling convention
+│   └── spea.cspec             # SPEA/APX2 calling convention
+├── scripts/
+│   └── DisassembleAll.java    # Headless disassembly script
+├── docs/                      # Architecture & development reference
+│   ├── 01-i860-architecture-reference.md
+│   ├── 02-instruction-encoding-reference.md
+│   ├── 03-ghidra-sleigh-development-guide.md
+│   ├── 04-instruction-set-status.md
+│   ├── 05-binary-formats-and-platforms.md
+│   └── 06-local-resources-inventory.md
+└── README.md
+```
 
 ## Documentation
 
-The `docs/` directory contains a comprehensive documentation corpus:
+The `docs/` directory contains detailed reference material:
 
 | Document | Description |
 |----------|-------------|
-| [01-i860-architecture-reference.md](docs/01-i860-architecture-reference.md) | Complete ISA reference: registers, addressing, pipelines, memory model |
-| [02-instruction-encoding-reference.md](docs/02-instruction-encoding-reference.md) | Bit-level opcode maps and instruction format layouts |
-| [03-ghidra-sleigh-development-guide.md](docs/03-ghidra-sleigh-development-guide.md) | SLEIGH patterns, file structure, XML configs, implementation strategy |
+| [01-i860-architecture-reference.md](docs/01-i860-architecture-reference.md) | Registers, addressing modes, pipelines, memory model |
+| [02-instruction-encoding-reference.md](docs/02-instruction-encoding-reference.md) | Bit-level opcode maps and instruction formats |
+| [03-ghidra-sleigh-development-guide.md](docs/03-ghidra-sleigh-development-guide.md) | SLEIGH patterns, file structure, implementation notes |
 | [04-instruction-set-status.md](docs/04-instruction-set-status.md) | Complete instruction inventory (~172 instructions) |
-| [05-binary-formats-and-platforms.md](docs/05-binary-formats-and-platforms.md) | Mach-O, COFF, ELF details; relocations; calling conventions; memory maps |
-| [06-local-resources-inventory.md](docs/06-local-resources-inventory.md) | Index of all local i860 artifacts across repositories |
+| [05-binary-formats-and-platforms.md](docs/05-binary-formats-and-platforms.md) | Mach-O, COFF, ELF format details and calling conventions |
+| [06-local-resources-inventory.md](docs/06-local-resources-inventory.md) | Index of reference material and test binaries |
 
-## Implementation Plan
+## Roadmap
 
-### Phase 1: Minimal Disassembly
-- Token and register definitions
-- Integer ALU (adds, addu, subs, subu, and, or, xor, shifts)
-- Load/store (ld.b, ld.s, ld.l, st.b, st.s, st.l)
-- Branches (br, call, bc, bnc, bri, calli, bte, btne)
-- `orh`/`or` for 32-bit constants
-- Pseudo-ops (nop, mov, ret)
+- [ ] COFF loader extension for i860 magic values (`0x014D`, `0x0090`)
+- [ ] Decompiler quality tuning on real-world binaries
+- [ ] GUI testing and usability review
 
-### Phase 2: Control Flow Correctness
-- Delay slots (bc.t, bnc.t, bla)
-- Split branch offset reconstruction
-- Control register access (ld.c, st.c)
+## License
 
-### Phase 3: Floating-Point Disassembly
-- Basic FP (fadd, fsub, fmul with all precision variants)
-- FP load/store (fld, fst with l/d/q sizes)
-- FP specials (frcp, frsqr, fix, ftrunc, famov, fxfr, ixfr)
-- FP comparisons (pfgt, pfle, pfeq)
-
-### Phase 4: Decompiler Quality
-- P-code semantics for all Phase 1-3 instructions
-- Calling convention tuning (cspec/pspec)
-- Regression testing against Rust disassembler golden output
-
-### Phase 5: Advanced Features
-- Pipelined FP, auto-increment addressing
-- Graphics operations (faddp, faddz, fzchk, form, pst.d)
-- Dual operations (PFAM, PFSM, PFMAM, PFMSM)
-- XP-specific instructions
-- Mach-O loader patch (CPU_TYPE_I860 mapping)
-- COFF loader support (magic 0x0090)
-
-## Development Resources
-
-### Existing i860 Implementations (local)
-- **Rust disassembler**: `../nextdimension/i860-disassembler/` — 99.93% MAME match
-- **MAME emulator**: `../nextdimension/tools/mame-i860/` — Authoritative decoder
-- **LLVM backend**: `../nextdimension/llvm-i860/` — TableGen definitions
-- **Rust emulator**: `../nextdimension/emulator/i860-core/` — 73% ISA coverage
-- **Intel manual**: `../nextdimension/docs/i860/reference/i860-reference.pdf`
-
-### Test Binaries
-- `../previous/reverse-engineering/nextdimension-files/disassembly/i860/ND_i860_CLEAN.bin` (64 KB)
-- `../spea-fire/refs/APX2/BOOT.OUT` (13.8 KB COFF)
-- `../spea-fire/refs/APX2/BOOT2.OUT` (27.8 KB COFF)
-
-### Closest Ghidra Processor Modules (for patterns)
-- **SPARC** — Best match: RISC, delay slots, FP register aliasing, similar instruction width
-- **MIPS** — Delay slot handling, r0 hardwired to zero
-- **Toy** — Minimal reference implementation for learning SLEIGH structure
+This project is not affiliated with Intel Corporation or the Ghidra project.
