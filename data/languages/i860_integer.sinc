@@ -160,7 +160,14 @@
 
 # --- shrd: shift right double (64-bit) ---
 # Concatenates src1:dest, shifts right by src2 low 5 bits, result in dest
-:shrd R1src, R2src, Rdest  is op6=0x2C & R1src & R2src & Rdest  {
+# d.shrd: dual-instruction mode (bit 9 set) — next FP op executes in parallel
+:d.shrd R1src, R2src, Rdest  is op6=0x2C & dbit=1 & R1src & R2src & Rdest  {
+    local pair:8 = (zext(R1src) << 32) | zext(Rdest);
+    local shift:8 = zext(R2src & 0x1f);
+    local result:8 = pair >> shift;
+    Rdest = result:4;
+}
+:shrd R1src, R2src, Rdest  is op6=0x2C & dbit=0 & R1src & R2src & Rdest  {
     local pair:8 = (zext(R1src) << 32) | zext(Rdest);
     local shift:8 = zext(R2src & 0x1f);
     local result:8 = pair >> shift;

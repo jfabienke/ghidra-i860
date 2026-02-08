@@ -16,32 +16,32 @@
 # ==================================================================
 
 # fadd.ss fsrc1,fsrc2,fdest (S=0,R=0)
-:fadd.ss FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x30 & pbit=0 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
+:^DualPrefix^"fadd.ss" FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x30 & pbit=0 & DualPrefix & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
     FSdest = FS1src f+ FS2src;
 }
 
 # fadd.sd fsrc1,fsrc2,fddest (S=0,R=1)
-:fadd.sd FS1src, FS2src, FDdest  is op6=0x12 & fpop=0x30 & pbit=0 & dbit=0 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest  {
+:^DualPrefix^"fadd.sd" FS1src, FS2src, FDdest  is op6=0x12 & fpop=0x30 & pbit=0 & DualPrefix & sbit=0 & rbit=1 & FS1src & FS2src & FDdest  {
     FDdest = float2float(FS1src) f+ float2float(FS2src);
 }
 
 # fadd.dd fdsrc1,fdsrc2,fddest (S=1,R=1)
-:fadd.dd FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x30 & pbit=0 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
+:^DualPrefix^"fadd.dd" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x30 & pbit=0 & DualPrefix & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
     FDdest = FD1src f+ FD2src;
 }
 
 # pfadd.ss (pipelined)
-:pfadd.ss FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x30 & pbit=1 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
+:^DualPrefix^"pfadd.ss" FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x30 & pbit=1 & DualPrefix & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
     FSdest = FS1src f+ FS2src;
 }
 
 # pfadd.sd (pipelined)
-:pfadd.sd FS1src, FS2src, FDdest  is op6=0x12 & fpop=0x30 & pbit=1 & dbit=0 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest  {
+:^DualPrefix^"pfadd.sd" FS1src, FS2src, FDdest  is op6=0x12 & fpop=0x30 & pbit=1 & DualPrefix & sbit=0 & rbit=1 & FS1src & FS2src & FDdest  {
     FDdest = float2float(FS1src) f+ float2float(FS2src);
 }
 
 # pfadd.dd (pipelined)
-:pfadd.dd FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x30 & pbit=1 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
+:^DualPrefix^"pfadd.dd" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x30 & pbit=1 & DualPrefix & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
     FDdest = FD1src f+ FD2src;
 }
 
@@ -49,27 +49,27 @@
 # fsub — FP sub-opcode 0x31
 # ==================================================================
 
-:fsub.ss FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x31 & pbit=0 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
+:^DualPrefix^"fsub.ss" FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x31 & pbit=0 & DualPrefix & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
     FSdest = FS1src f- FS2src;
 }
 
-:fsub.sd FS1src, FS2src, FDdest  is op6=0x12 & fpop=0x31 & pbit=0 & dbit=0 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest  {
+:^DualPrefix^"fsub.sd" FS1src, FS2src, FDdest  is op6=0x12 & fpop=0x31 & pbit=0 & DualPrefix & sbit=0 & rbit=1 & FS1src & FS2src & FDdest  {
     FDdest = float2float(FS1src) f- float2float(FS2src);
 }
 
-:fsub.dd FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x31 & pbit=0 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
+:^DualPrefix^"fsub.dd" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x31 & pbit=0 & DualPrefix & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
     FDdest = FD1src f- FD2src;
 }
 
-:pfsub.ss FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x31 & pbit=1 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
+:^DualPrefix^"pfsub.ss" FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x31 & pbit=1 & DualPrefix & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
     FSdest = FS1src f- FS2src;
 }
 
-:pfsub.sd FS1src, FS2src, FDdest  is op6=0x12 & fpop=0x31 & pbit=1 & dbit=0 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest  {
+:^DualPrefix^"pfsub.sd" FS1src, FS2src, FDdest  is op6=0x12 & fpop=0x31 & pbit=1 & DualPrefix & sbit=0 & rbit=1 & FS1src & FS2src & FDdest  {
     FDdest = float2float(FS1src) f- float2float(FS2src);
 }
 
-:pfsub.dd FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x31 & pbit=1 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
+:^DualPrefix^"pfsub.dd" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x31 & pbit=1 & DualPrefix & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
     FDdest = FD1src f- FD2src;
 }
 
@@ -78,27 +78,27 @@
 # Note: .ds is invalid
 # ==================================================================
 
-:fmul.ss FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x20 & pbit=0 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
+:^DualPrefix^"fmul.ss" FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x20 & pbit=0 & DualPrefix & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
     FSdest = FS1src f* FS2src;
 }
 
-:fmul.sd FS1src, FS2src, FDdest  is op6=0x12 & fpop=0x20 & pbit=0 & dbit=0 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest  {
+:^DualPrefix^"fmul.sd" FS1src, FS2src, FDdest  is op6=0x12 & fpop=0x20 & pbit=0 & DualPrefix & sbit=0 & rbit=1 & FS1src & FS2src & FDdest  {
     FDdest = float2float(FS1src) f* float2float(FS2src);
 }
 
-:fmul.dd FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x20 & pbit=0 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
+:^DualPrefix^"fmul.dd" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x20 & pbit=0 & DualPrefix & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
     FDdest = FD1src f* FD2src;
 }
 
-:pfmul.ss FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x20 & pbit=1 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
+:^DualPrefix^"pfmul.ss" FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x20 & pbit=1 & DualPrefix & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
     FSdest = FS1src f* FS2src;
 }
 
-:pfmul.sd FS1src, FS2src, FDdest  is op6=0x12 & fpop=0x20 & pbit=1 & dbit=0 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest  {
+:^DualPrefix^"pfmul.sd" FS1src, FS2src, FDdest  is op6=0x12 & fpop=0x20 & pbit=1 & DualPrefix & sbit=0 & rbit=1 & FS1src & FS2src & FDdest  {
     FDdest = float2float(FS1src) f* float2float(FS2src);
 }
 
-:pfmul.dd FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x20 & pbit=1 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
+:^DualPrefix^"pfmul.dd" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x20 & pbit=1 & DualPrefix & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
     FDdest = FD1src f* FD2src;
 }
 
@@ -106,7 +106,7 @@
 # fmlow.dd — FP sub-opcode 0x21 (multiply low, double only)
 # ==================================================================
 
-:fmlow.dd FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x21 & pbit=0 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
+:^DualPrefix^"fmlow.dd" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x21 & pbit=0 & DualPrefix & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
     FDdest = fp_fmlow(FD1src, FD2src);
 }
 
@@ -114,15 +114,15 @@
 # frcp — FP sub-opcode 0x22 (reciprocal approximation)
 # ==================================================================
 
-:frcp.ss fsrc2, FSdest  is op6=0x12 & fpop=0x22 & pbit=0 & dbit=0 & sbit=0 & rbit=0 & fsrc2 & FS2src & FSdest  {
+:^DualPrefix^"frcp.ss" fsrc2, FSdest  is op6=0x12 & fpop=0x22 & pbit=0 & DualPrefix & sbit=0 & rbit=0 & fsrc2 & FS2src & FSdest  {
     FSdest = f_reciprocal(FS2src);
 }
 
-:frcp.sd fsrc2, FDdest  is op6=0x12 & fpop=0x22 & pbit=0 & dbit=0 & sbit=0 & rbit=1 & fsrc2 & FS2src & FDdest  {
+:^DualPrefix^"frcp.sd" fsrc2, FDdest  is op6=0x12 & fpop=0x22 & pbit=0 & DualPrefix & sbit=0 & rbit=1 & fsrc2 & FS2src & FDdest  {
     FDdest = f_reciprocal(FS2src);
 }
 
-:frcp.dd fdsrc2, FDdest  is op6=0x12 & fpop=0x22 & pbit=0 & dbit=0 & sbit=1 & rbit=1 & fdsrc2 & FD2src & FDdest  {
+:^DualPrefix^"frcp.dd" fdsrc2, FDdest  is op6=0x12 & fpop=0x22 & pbit=0 & DualPrefix & sbit=1 & rbit=1 & fdsrc2 & FD2src & FDdest  {
     FDdest = f_reciprocal(FD2src);
 }
 
@@ -130,15 +130,15 @@
 # frsqr — FP sub-opcode 0x23 (reciprocal square root)
 # ==================================================================
 
-:frsqr.ss fsrc2, FSdest  is op6=0x12 & fpop=0x23 & pbit=0 & dbit=0 & sbit=0 & rbit=0 & fsrc2 & FS2src & FSdest  {
+:^DualPrefix^"frsqr.ss" fsrc2, FSdest  is op6=0x12 & fpop=0x23 & pbit=0 & DualPrefix & sbit=0 & rbit=0 & fsrc2 & FS2src & FSdest  {
     FSdest = f_reciprocal_sqrt(FS2src);
 }
 
-:frsqr.sd fsrc2, FDdest  is op6=0x12 & fpop=0x23 & pbit=0 & dbit=0 & sbit=0 & rbit=1 & fsrc2 & FS2src & FDdest  {
+:^DualPrefix^"frsqr.sd" fsrc2, FDdest  is op6=0x12 & fpop=0x23 & pbit=0 & DualPrefix & sbit=0 & rbit=1 & fsrc2 & FS2src & FDdest  {
     FDdest = f_reciprocal_sqrt(FS2src);
 }
 
-:frsqr.dd fdsrc2, FDdest  is op6=0x12 & fpop=0x23 & pbit=0 & dbit=0 & sbit=1 & rbit=1 & fdsrc2 & FD2src & FDdest  {
+:^DualPrefix^"frsqr.dd" fdsrc2, FDdest  is op6=0x12 & fpop=0x23 & pbit=0 & DualPrefix & sbit=1 & rbit=1 & fdsrc2 & FD2src & FDdest  {
     FDdest = f_reciprocal_sqrt(FD2src);
 }
 
@@ -146,7 +146,7 @@
 # pfmul3.dd — FP sub-opcode 0x24 (XP only, 3-stage pipelined mul)
 # ==================================================================
 
-:pfmul3.dd FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x24 & pbit=1 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
+:^DualPrefix^"pfmul3.dd" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x24 & pbit=1 & DualPrefix & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
     FDdest = FD1src f* FD2src;
 }
 
@@ -155,16 +155,16 @@
 # Result goes to integer destination via FP register
 # ==================================================================
 
-:fix.ss FS1src, FSdest  is op6=0x12 & fpop=0x32 & pbit=0 & dbit=0 & sbit=0 & rbit=0 & FS1src & FSdest  {
+:^DualPrefix^"fix.ss" FS1src, FSdest  is op6=0x12 & fpop=0x32 & pbit=0 & DualPrefix & sbit=0 & rbit=0 & FS1src & FSdest  {
     FSdest = trunc(FS1src);
 }
 
-:fix.sd FS1src, FDdest  is op6=0x12 & fpop=0x32 & pbit=0 & dbit=0 & sbit=0 & rbit=1 & FS1src & FDdest  {
+:^DualPrefix^"fix.sd" FS1src, FDdest  is op6=0x12 & fpop=0x32 & pbit=0 & DualPrefix & sbit=0 & rbit=1 & FS1src & FDdest  {
     local tmp:4 = trunc(FS1src);
     FDdest = sext(tmp);
 }
 
-:fix.dd FD1src, FDdest  is op6=0x12 & fpop=0x32 & pbit=0 & dbit=0 & sbit=1 & rbit=1 & FD1src & FDdest  {
+:^DualPrefix^"fix.dd" FD1src, FDdest  is op6=0x12 & fpop=0x32 & pbit=0 & DualPrefix & sbit=1 & rbit=1 & FD1src & FDdest  {
     FDdest = trunc(FD1src);
 }
 
@@ -173,30 +173,30 @@
 # Similar to fix but truncation mode
 # ==================================================================
 
-:ftrunc.ss FS1src, FSdest  is op6=0x12 & fpop=0x3A & pbit=0 & dbit=0 & sbit=0 & rbit=0 & FS1src & FSdest  {
+:^DualPrefix^"ftrunc.ss" FS1src, FSdest  is op6=0x12 & fpop=0x3A & pbit=0 & DualPrefix & sbit=0 & rbit=0 & FS1src & FSdest  {
     FSdest = trunc(FS1src);
 }
 
-:ftrunc.sd FS1src, FDdest  is op6=0x12 & fpop=0x3A & pbit=0 & dbit=0 & sbit=0 & rbit=1 & FS1src & FDdest  {
+:^DualPrefix^"ftrunc.sd" FS1src, FDdest  is op6=0x12 & fpop=0x3A & pbit=0 & DualPrefix & sbit=0 & rbit=1 & FS1src & FDdest  {
     local tmp:4 = trunc(FS1src);
     FDdest = sext(tmp);
 }
 
-:ftrunc.dd FD1src, FDdest  is op6=0x12 & fpop=0x3A & pbit=0 & dbit=0 & sbit=1 & rbit=1 & FD1src & FDdest  {
+:^DualPrefix^"ftrunc.dd" FD1src, FDdest  is op6=0x12 & fpop=0x3A & pbit=0 & DualPrefix & sbit=1 & rbit=1 & FD1src & FDdest  {
     FDdest = trunc(FD1src);
 }
 
 # Pipelined ftrunc variants
-:pftrunc.ss FS1src, FSdest  is op6=0x12 & fpop=0x3A & pbit=1 & dbit=0 & sbit=0 & rbit=0 & FS1src & FSdest  {
+:^DualPrefix^"pftrunc.ss" FS1src, FSdest  is op6=0x12 & fpop=0x3A & pbit=1 & DualPrefix & sbit=0 & rbit=0 & FS1src & FSdest  {
     FSdest = trunc(FS1src);
 }
 
-:pftrunc.sd FS1src, FDdest  is op6=0x12 & fpop=0x3A & pbit=1 & dbit=0 & sbit=0 & rbit=1 & FS1src & FDdest  {
+:^DualPrefix^"pftrunc.sd" FS1src, FDdest  is op6=0x12 & fpop=0x3A & pbit=1 & DualPrefix & sbit=0 & rbit=1 & FS1src & FDdest  {
     local tmp:4 = trunc(FS1src);
     FDdest = sext(tmp);
 }
 
-:pftrunc.dd FD1src, FDdest  is op6=0x12 & fpop=0x3A & pbit=1 & dbit=0 & sbit=1 & rbit=1 & FD1src & FDdest  {
+:^DualPrefix^"pftrunc.dd" FD1src, FDdest  is op6=0x12 & fpop=0x3A & pbit=1 & DualPrefix & sbit=1 & rbit=1 & FD1src & FDdest  {
     FDdest = trunc(FD1src);
 }
 
@@ -205,36 +205,36 @@
 # All 4 precision combos valid (ss, sd, ds, dd)
 # ==================================================================
 
-:famov.ss FS1src, FSdest  is op6=0x12 & fpop=0x33 & pbit=0 & dbit=0 & sbit=0 & rbit=0 & FS1src & FSdest  {
+:^DualPrefix^"famov.ss" FS1src, FSdest  is op6=0x12 & fpop=0x33 & pbit=0 & DualPrefix & sbit=0 & rbit=0 & FS1src & FSdest  {
     FSdest = FS1src;
 }
 
-:famov.ds FD1src, FSdest  is op6=0x12 & fpop=0x33 & pbit=0 & dbit=0 & sbit=1 & rbit=0 & FD1src & FSdest  {
+:^DualPrefix^"famov.ds" FD1src, FSdest  is op6=0x12 & fpop=0x33 & pbit=0 & DualPrefix & sbit=1 & rbit=0 & FD1src & FSdest  {
     FSdest = float2float(FD1src);
 }
 
-:famov.sd FS1src, FDdest  is op6=0x12 & fpop=0x33 & pbit=0 & dbit=0 & sbit=0 & rbit=1 & FS1src & FDdest  {
+:^DualPrefix^"famov.sd" FS1src, FDdest  is op6=0x12 & fpop=0x33 & pbit=0 & DualPrefix & sbit=0 & rbit=1 & FS1src & FDdest  {
     FDdest = float2float(FS1src);
 }
 
-:famov.dd FD1src, FDdest  is op6=0x12 & fpop=0x33 & pbit=0 & dbit=0 & sbit=1 & rbit=1 & FD1src & FDdest  {
+:^DualPrefix^"famov.dd" FD1src, FDdest  is op6=0x12 & fpop=0x33 & pbit=0 & DualPrefix & sbit=1 & rbit=1 & FD1src & FDdest  {
     FDdest = FD1src;
 }
 
 # Pipelined famov
-:pfamov.ss FS1src, FSdest  is op6=0x12 & fpop=0x33 & pbit=1 & dbit=0 & sbit=0 & rbit=0 & FS1src & FSdest  {
+:^DualPrefix^"pfamov.ss" FS1src, FSdest  is op6=0x12 & fpop=0x33 & pbit=1 & DualPrefix & sbit=0 & rbit=0 & FS1src & FSdest  {
     FSdest = FS1src;
 }
 
-:pfamov.ds FD1src, FSdest  is op6=0x12 & fpop=0x33 & pbit=1 & dbit=0 & sbit=1 & rbit=0 & FD1src & FSdest  {
+:^DualPrefix^"pfamov.ds" FD1src, FSdest  is op6=0x12 & fpop=0x33 & pbit=1 & DualPrefix & sbit=1 & rbit=0 & FD1src & FSdest  {
     FSdest = float2float(FD1src);
 }
 
-:pfamov.sd FS1src, FDdest  is op6=0x12 & fpop=0x33 & pbit=1 & dbit=0 & sbit=0 & rbit=1 & FS1src & FDdest  {
+:^DualPrefix^"pfamov.sd" FS1src, FDdest  is op6=0x12 & fpop=0x33 & pbit=1 & DualPrefix & sbit=0 & rbit=1 & FS1src & FDdest  {
     FDdest = float2float(FS1src);
 }
 
-:pfamov.dd FD1src, FDdest  is op6=0x12 & fpop=0x33 & pbit=1 & dbit=0 & sbit=1 & rbit=1 & FD1src & FDdest  {
+:^DualPrefix^"pfamov.dd" FD1src, FDdest  is op6=0x12 & fpop=0x33 & pbit=1 & DualPrefix & sbit=1 & rbit=1 & FD1src & FDdest  {
     FDdest = FD1src;
 }
 
@@ -245,58 +245,58 @@
 # ==================================================================
 
 # pfgt.ss (greater than, single)
-:pfgt.ss FS1src, FS2src  is op6=0x12 & fpop=0x34 & pbit=1 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src  {
+:^DualPrefix^"pfgt.ss" FS1src, FS2src  is op6=0x12 & fpop=0x34 & pbit=1 & DualPrefix & sbit=0 & rbit=0 & FS1src & FS2src  {
     CC = zext(FS1src f> FS2src);
 }
 
 # pfgt.dd (greater than, double)
-:pfgt.dd FD1src, FD2src  is op6=0x12 & fpop=0x34 & pbit=1 & dbit=0 & sbit=1 & rbit=0 & FD1src & FD2src  {
+:^DualPrefix^"pfgt.dd" FD1src, FD2src  is op6=0x12 & fpop=0x34 & pbit=1 & DualPrefix & sbit=1 & rbit=0 & FD1src & FD2src  {
     CC = zext(FD1src f> FD2src);
 }
 
 # pfle.ss (less-or-equal, single) — R bit set
-:pfle.ss FS1src, FS2src  is op6=0x12 & fpop=0x34 & pbit=1 & dbit=0 & sbit=0 & rbit=1 & FS1src & FS2src  {
+:^DualPrefix^"pfle.ss" FS1src, FS2src  is op6=0x12 & fpop=0x34 & pbit=1 & DualPrefix & sbit=0 & rbit=1 & FS1src & FS2src  {
     # pfle sets CC=0 if fsrc1 <= fsrc2, else CC=1 (inverted sense)
     CC = zext(FS1src f> FS2src);
 }
 
 # pfle.dd (less-or-equal, double)
-:pfle.dd FD1src, FD2src  is op6=0x12 & fpop=0x34 & pbit=1 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src  {
+:^DualPrefix^"pfle.dd" FD1src, FD2src  is op6=0x12 & fpop=0x34 & pbit=1 & DualPrefix & sbit=1 & rbit=1 & FD1src & FD2src  {
     CC = zext(FD1src f> FD2src);
 }
 
 # pfeq.ss (equal, single)
-:pfeq.ss FS1src, FS2src  is op6=0x12 & fpop=0x35 & pbit=1 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src  {
+:^DualPrefix^"pfeq.ss" FS1src, FS2src  is op6=0x12 & fpop=0x35 & pbit=1 & DualPrefix & sbit=0 & rbit=0 & FS1src & FS2src  {
     CC = zext(FS1src f== FS2src);
 }
 
 # pfeq.dd (equal, double)
-:pfeq.dd FD1src, FD2src  is op6=0x12 & fpop=0x35 & pbit=1 & dbit=0 & sbit=1 & rbit=0 & FD1src & FD2src  {
+:^DualPrefix^"pfeq.dd" FD1src, FD2src  is op6=0x12 & fpop=0x35 & pbit=1 & DualPrefix & sbit=1 & rbit=0 & FD1src & FD2src  {
     CC = zext(FD1src f== FD2src);
 }
 
 # Non-pipelined comparison variants (fgt, fle, feq)
-:fgt.ss FS1src, FS2src  is op6=0x12 & fpop=0x34 & pbit=0 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src  {
+:^DualPrefix^"fgt.ss" FS1src, FS2src  is op6=0x12 & fpop=0x34 & pbit=0 & DualPrefix & sbit=0 & rbit=0 & FS1src & FS2src  {
     CC = zext(FS1src f> FS2src);
 }
 
-:fgt.dd FD1src, FD2src  is op6=0x12 & fpop=0x34 & pbit=0 & dbit=0 & sbit=1 & rbit=0 & FD1src & FD2src  {
+:^DualPrefix^"fgt.dd" FD1src, FD2src  is op6=0x12 & fpop=0x34 & pbit=0 & DualPrefix & sbit=1 & rbit=0 & FD1src & FD2src  {
     CC = zext(FD1src f> FD2src);
 }
 
-:fle.ss FS1src, FS2src  is op6=0x12 & fpop=0x34 & pbit=0 & dbit=0 & sbit=0 & rbit=1 & FS1src & FS2src  {
+:^DualPrefix^"fle.ss" FS1src, FS2src  is op6=0x12 & fpop=0x34 & pbit=0 & DualPrefix & sbit=0 & rbit=1 & FS1src & FS2src  {
     CC = zext(FS1src f> FS2src);
 }
 
-:fle.dd FD1src, FD2src  is op6=0x12 & fpop=0x34 & pbit=0 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src  {
+:^DualPrefix^"fle.dd" FD1src, FD2src  is op6=0x12 & fpop=0x34 & pbit=0 & DualPrefix & sbit=1 & rbit=1 & FD1src & FD2src  {
     CC = zext(FD1src f> FD2src);
 }
 
-:feq.ss FS1src, FS2src  is op6=0x12 & fpop=0x35 & pbit=0 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src  {
+:^DualPrefix^"feq.ss" FS1src, FS2src  is op6=0x12 & fpop=0x35 & pbit=0 & DualPrefix & sbit=0 & rbit=0 & FS1src & FS2src  {
     CC = zext(FS1src f== FS2src);
 }
 
-:feq.dd FD1src, FD2src  is op6=0x12 & fpop=0x35 & pbit=0 & dbit=0 & sbit=1 & rbit=0 & FD1src & FD2src  {
+:^DualPrefix^"feq.dd" FD1src, FD2src  is op6=0x12 & fpop=0x35 & pbit=0 & DualPrefix & sbit=1 & rbit=0 & FD1src & FD2src  {
     CC = zext(FD1src f== FD2src);
 }
 
@@ -305,42 +305,42 @@
 # ==================================================================
 
 # fiadd.ss (fpop=0x49, S=0, R=0)
-:fiadd.ss FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x49 & pbit=0 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
+:^DualPrefix^"fiadd.ss" FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x49 & pbit=0 & DualPrefix & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
     FSdest = FS1src + FS2src;
 }
 
 # fiadd.dd (fpop=0x49, S=1, R=1)
-:fiadd.dd FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x49 & pbit=0 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
+:^DualPrefix^"fiadd.dd" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x49 & pbit=0 & DualPrefix & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
     FDdest = FD1src + FD2src;
 }
 
 # pfiadd.ss (pipelined)
-:pfiadd.ss FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x49 & pbit=1 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
+:^DualPrefix^"pfiadd.ss" FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x49 & pbit=1 & DualPrefix & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
     FSdest = FS1src + FS2src;
 }
 
 # pfiadd.dd (pipelined)
-:pfiadd.dd FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x49 & pbit=1 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
+:^DualPrefix^"pfiadd.dd" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x49 & pbit=1 & DualPrefix & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
     FDdest = FD1src + FD2src;
 }
 
 # fisub.ss (fpop=0x4D, S=0, R=0)
-:fisub.ss FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x4D & pbit=0 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
+:^DualPrefix^"fisub.ss" FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x4D & pbit=0 & DualPrefix & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
     FSdest = FS1src - FS2src;
 }
 
 # fisub.dd (fpop=0x4D, S=1, R=1)
-:fisub.dd FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x4D & pbit=0 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
+:^DualPrefix^"fisub.dd" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x4D & pbit=0 & DualPrefix & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
     FDdest = FD1src - FD2src;
 }
 
 # pfisub.ss (pipelined)
-:pfisub.ss FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x4D & pbit=1 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
+:^DualPrefix^"pfisub.ss" FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x4D & pbit=1 & DualPrefix & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
     FSdest = FS1src - FS2src;
 }
 
 # pfisub.dd (pipelined)
-:pfisub.dd FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x4D & pbit=1 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
+:^DualPrefix^"pfisub.dd" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x4D & pbit=1 & DualPrefix & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
     FDdest = FD1src - FD2src;
 }
 
@@ -348,10 +348,10 @@
 # fxfr — FP-to-integer register transfer (fpop=0x40)
 # ==================================================================
 
-:fxfr fsrc1, dest  is op6=0x12 & fpop=0x40 & pbit=0 & dbit=0 & sbit=0 & rbit=0 & fsrc1 & dest & dest_zero!=0  {
+:^DualPrefix^"fxfr" fsrc1, dest  is op6=0x12 & fpop=0x40 & pbit=0 & DualPrefix & sbit=0 & rbit=0 & fsrc1 & dest & dest_zero!=0  {
     dest = fsrc1;
 }
-:fxfr fsrc1, dest  is op6=0x12 & fpop=0x40 & pbit=0 & dbit=0 & sbit=0 & rbit=0 & fsrc1 & dest  { }
+:^DualPrefix^"fxfr" fsrc1, dest  is op6=0x12 & fpop=0x40 & pbit=0 & DualPrefix & sbit=0 & rbit=0 & fsrc1 & dest  { }
 
 # ==================================================================
 # FP Loads — primary opcode 0x08 (reg+reg) and 0x09 (disp+reg)

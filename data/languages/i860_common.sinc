@@ -239,6 +239,17 @@ stimm: val  is sthi & stlo
 # ------------------------------------------------------------------
 # P-code ops for instructions without direct equivalents
 # ------------------------------------------------------------------
+# ------------------------------------------------------------------
+# Sub-constructor: Dual-instruction-mode prefix (d.)
+# FP escape (0x12) and shrd (0x2C) use bit 9 to indicate
+# dual-instruction mode where an FP and core op execute in parallel.
+# ------------------------------------------------------------------
+DualPrefix: "d." is dbit=1 { }
+DualPrefix: ""   is dbit=0 { }
+
+# ------------------------------------------------------------------
+# P-code ops for instructions without direct equivalents
+# ------------------------------------------------------------------
 define pcodeop i860_trap;
 define pcodeop i860_intovr;
 define pcodeop i860_lock;

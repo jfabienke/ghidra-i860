@@ -4,17 +4,20 @@
 # ======================================================================
 
 # ==================================================================
-# Unconditional Branch and Call (26-bit PC-relative, NO delay slot)
+# Unconditional Branch and Call (26-bit PC-relative, WITH delay slot)
+# MAME confirms: br, call both have delay slots
 # ==================================================================
 
-# br target — unconditional branch, no delay slot
+# br target — unconditional branch, WITH delay slot
 :br br26target  is op6=0x1A & br26target  {
+    delayslot(1);
     goto br26target;
 }
 
-# call target — saves PC+4 to r1, no delay slot
+# call target — saves PC+4 to r1, WITH delay slot
 :call br26target  is op6=0x1B & br26target  {
     r1 = inst_next;
+    delayslot(1);
     call br26target;
 }
 
@@ -88,16 +91,19 @@
 }
 
 # ==================================================================
-# Indirect Branch/Call
+# Indirect Branch/Call — ALL have delay slots per MAME reference
 # ==================================================================
 
-# ret — bri r1 recognized as function return
+# ret — bri r1 recognized as function return (most specific match)
 :ret  is op6=0x10 & src1_zero=1 & src2_zero=0 & dest_zero=0  {
+    delayslot(1);
     return [r1];
 }
 
-# bri src1 — indirect branch (not return), NO delay slot
-:bri R1src  is op6=0x10 & R1src & src1_zero!=1  {
+# bri src1 — indirect branch, WITH delay slot
+# No src1_zero constraint: catches all bri including r1 with non-zero src2/dest
+:bri R1src  is op6=0x10 & R1src  {
+    delayslot(1);
     goto [R1src];
 }
 
@@ -106,6 +112,7 @@
 # Constrain calli to src2=0 & dest=0 (unused fields should be 0 for calli).
 :calli R1src  is op6=0x13 & escop=0x02 & R1src & src2_zero=0 & dest_zero=0  {
     r1 = inst_next;
+    delayslot(1);
     call [R1src];
 }
 
