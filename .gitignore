@@ -1,0 +1,9 @@
+# Compiled SLEIGH artifacts (regenerate with sleigh compiler)
+*.sla
+
+# macOS
+.DS_Store
+
+# Ghidra project files
+*.gpr
+*.rep/

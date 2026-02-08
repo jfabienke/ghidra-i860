@@ -1,0 +1,138 @@
+# ======================================================================
+# Intel i860 Control Flow Instructions
+# Branches, calls, traps, indirect jumps
+# ======================================================================
+
+# ==================================================================
+# Unconditional Branch and Call (26-bit PC-relative, NO delay slot)
+# ==================================================================
+
+# br target — unconditional branch, no delay slot
+:br br26target  is op6=0x1A & br26target  {
+    goto br26target;
+}
+
+# call target — saves PC+4 to r1, no delay slot
+:call br26target  is op6=0x1B & br26target  {
+    r1 = inst_next;
+    call br26target;
+}
+
+# ==================================================================
+# Conditional Branches (26-bit PC-relative)
+# ==================================================================
+
+# bc target — branch if CC set, NO delay slot
+:bc br26target  is op6=0x1C & br26target  {
+    if (CC != 0) goto br26target;
+}
+
+# bc.t target — branch if CC set, WITH delay slot
+:bc.t br26target  is op6=0x1D & br26target  {
+    local cond:1 = (CC != 0);
+    delayslot(1);
+    if (cond) goto br26target;
+}
+
+# bnc target — branch if CC clear, NO delay slot
+:bnc br26target  is op6=0x1E & br26target  {
+    if (CC == 0) goto br26target;
+}
+
+# bnc.t target — branch if CC clear, WITH delay slot
+:bnc.t br26target  is op6=0x1F & br26target  {
+    local cond:1 = (CC == 0);
+    delayslot(1);
+    if (cond) goto br26target;
+}
+
+# ==================================================================
+# Compare-and-Branch (split offset, register or immediate)
+# ==================================================================
+
+# bte src1,src2,sbroff — branch if equal, NO delay slot (register form)
+:bte R1src, src2, sbroff  is op6=0x16 & R1src & src2 & sbroff  {
+    if (R1src == src2) goto sbroff;
+}
+
+# bte #imm5,src2,sbroff — branch if equal, NO delay slot (immediate form)
+:bte imm5, src2, sbroff  is op6=0x17 & imm5 & src2 & sbroff  {
+    if (src2 == imm5) goto sbroff;
+}
+
+# btne src1,src2,sbroff — branch if not equal, NO delay slot (register form)
+:btne R1src, src2, sbroff  is op6=0x14 & R1src & src2 & sbroff  {
+    if (R1src != src2) goto sbroff;
+}
+
+# btne #imm5,src2,sbroff — branch if not equal, NO delay slot (immediate form)
+:btne imm5, src2, sbroff  is op6=0x15 & imm5 & src2 & sbroff  {
+    if (src2 != imm5) goto sbroff;
+}
+
+# ==================================================================
+# Branch on LCC and Add (bla) — WITH delay slot
+# bla src1,src2,sbroff
+# 1. Save current LCC (CC)
+# 2. Compute new LCC: carry check
+# 3. src2 = src1 + src2
+# 4. Execute delay slot
+# 5. If old LCC was set, branch to target
+# ==================================================================
+:bla R1src, src2, sbroff  is op6=0x2D & R1src & src2 & sbroff  {
+    local oldCC:1 = (CC != 0);
+    CC = zext(carry(src2, R1src));
+    src2 = src2 + R1src;
+    delayslot(1);
+    if (oldCC) goto sbroff;
+}
+
+# ==================================================================
+# Indirect Branch/Call
+# ==================================================================
+
+# ret — bri r1 recognized as function return
+:ret  is op6=0x10 & src1_zero=1 & src2_zero=0 & dest_zero=0  {
+    return [r1];
+}
+
+# bri src1 — indirect branch (not return), NO delay slot
+:bri R1src  is op6=0x10 & R1src & src1_zero!=1  {
+    goto [R1src];
+}
+
+# calli src1 — call indirect (core escape 0x13, sub-opcode 0x02)
+# In XP mode, escop=0x02 with dest!=0 & src2=0 is ldint (see i860_xp.sinc).
+# Constrain calli to src2=0 & dest=0 (unused fields should be 0 for calli).
+:calli R1src  is op6=0x13 & escop=0x02 & R1src & src2_zero=0 & dest_zero=0  {
+    r1 = inst_next;
+    call [R1src];
+}
+
+# ==================================================================
+# Trap
+# ==================================================================
+
+# trap src1,src2,dest — software trap
+:trap R1src, R2src, Rdest  is op6=0x11 & R1src & R2src & Rdest  {
+    i860_trap(R1src, R2src);
+}
+
+# ==================================================================
+# Core Escape Operations (primary opcode 0x13)
+# ==================================================================
+
+# intovr — integer overflow trap (sub-opcode 0x04)
+:intovr  is op6=0x13 & escop=0x04  {
+    i860_intovr();
+}
+
+# lock — bus lock (sub-opcode 0x01)
+:lock  is op6=0x13 & escop=0x01  {
+    i860_lock();
+}
+
+# unlock — bus unlock (sub-opcode 0x07)
+:unlock  is op6=0x13 & escop=0x07  {
+    i860_unlock();
+}

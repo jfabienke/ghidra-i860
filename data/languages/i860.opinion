@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<opinions>
+  <!-- Mach-O: CPU_TYPE_I860 = 15, LE code payload -->
+  <constraint loader="Mac OS X Mach-O" compilerSpecID="gcc">
+    <constraint primary="15" processor="i860" endian="little" size="32" variant="XR"/>
+  </constraint>
+
+  <!-- ELF: EM_860 = 7 -->
+  <constraint loader="Executable and Linking Format (ELF)" compilerSpecID="gcc">
+    <constraint primary="7" processor="i860" endian="little" size="32" variant="XR"/>
+  </constraint>
+</opinions>

@@ -1,0 +1,258 @@
+# ======================================================================
+# Intel i860 (80860) SLEIGH Common Definitions
+# Tokens, registers, attach directives, sub-constructors
+# ======================================================================
+
+# ------------------------------------------------------------------
+# Instruction Token (32 bits)
+# ------------------------------------------------------------------
+define token instr(32)
+    op6       = (26,31)       # Primary opcode
+    src2      = (21,25)       # Source register 2
+    dest      = (16,20)       # Destination register
+    src1      = (11,15)       # Source register 1
+    imm16     = (0,15)        # 16-bit unsigned immediate
+    simm16    = (0,15) signed # 16-bit signed immediate
+    imm5      = (11,15)       # 5-bit immediate (bte/btne imm form)
+    broff26   = (0,25) signed # 26-bit signed branch offset
+
+    # Zero-check fields (unattached, for sub-constructor constraints)
+    src1_zero = (11,15)       # Raw field for src1==0 check
+    src2_zero = (21,25)       # Raw field for src2==0 check
+    dest_zero = (16,20)       # Raw field for dest==0 check
+
+    # Split branch offset fields (bte, btne, bla)
+    sbrhi     = (16,20) signed  # High 5 bits of split offset (signed for sign-extension)
+    sbrlo     = (0,10)          # Low 11 bits of split offset
+
+    # FP register fields — same bit positions, different names for attach
+    fsrc1     = (11,15)       # FP source 1 (single)
+    fsrc2     = (21,25)       # FP source 2 (single)
+    fdest     = (16,20)       # FP destination (single)
+    fdsrc1    = (11,15)       # FP source 1 (double, even only)
+    fdsrc2    = (21,25)       # FP source 2 (double, even only)
+    fddest    = (16,20)       # FP destination (double, even only)
+
+    # FP zero-check fields (unattached)
+    fsrc1_zero = (11,15)      # Raw field for fsrc1==0/1 check
+    fsrc2_zero = (21,25)      # Raw field for fsrc2==0/1 check
+    fdest_zero = (16,20)      # Raw field for fdest==0/1 check
+
+    # FP escape opcode fields (primary opcode 0x12)
+    fpop      = (0,6)         # 7-bit FP sub-opcode
+    pbit      = (10,10)       # Pipelined bit
+    dbit      = (9,9)         # Dual-instruction mode bit
+    sbit      = (8,8)         # Source precision (0=single, 1=double)
+    rbit      = (7,7)         # Result precision (0=single, 1=double)
+
+    # Core escape opcode fields (primary opcode 0x13)
+    escop     = (0,2)         # 3-bit core escape sub-opcode
+
+    # Integer load/store size encoding
+    lsbit28   = (28,28)       # High bit of size index
+    lsbit0    = (0,0)         # Low bit of size index
+    lsmode    = (26,26)       # Addressing mode: 0=reg+reg, 1=disp+reg
+
+    # FP load/store size encoding
+    fpsize    = (1,2)         # FP operand size field: 0=8B, 1=4B, 2=16B, 3=4B
+    fpauto    = (0,0)         # FP auto-increment bit
+
+    # Control register field (3 bits for ld.c/st.c)
+    creg      = (21,23)
+
+    # Store split-immediate
+    sthi      = (16,20) signed  # High 5 bits (signed for sign-extension)
+    stlo      = (0,10)
+
+    # Flush auto-increment
+    flushauto = (0,0)
+
+    # Dual-op DPC code (low 4 bits of FP sub-opcode)
+    dpc       = (0,3)
+    dpc_sub   = (4,4)         # bit 4: 0=pfam/pfmam, 1=pfsm/pfmsm
+;
+
+# ------------------------------------------------------------------
+# Register Spaces
+# ------------------------------------------------------------------
+
+define space ram      type=ram_space      size=4 default;
+define space register type=register_space size=4;
+
+# Integer registers: 32 x 4 bytes at offset 0x0000
+define register offset=0x0000 size=4 [
+    r0  r1  r2  r3  r4  r5  r6  r7
+    r8  r9  r10 r11 r12 r13 r14 r15
+    r16 r17 r18 r19 r20 r21 r22 r23
+    r24 r25 r26 r27 r28 r29 r30 r31
+];
+
+# FP single-precision registers: 32 x 4 bytes at offset 0x1000
+define register offset=0x1000 size=4 [
+    f0  f1  f2  f3  f4  f5  f6  f7
+    f8  f9  f10 f11 f12 f13 f14 f15
+    f16 f17 f18 f19 f20 f21 f22 f23
+    f24 f25 f26 f27 f28 f29 f30 f31
+];
+
+# FP double-precision registers: aliased at same offset, 16 x 8 bytes
+# f0f1 occupies same space as f0+f1, f2f3 same as f2+f3, etc.
+define register offset=0x1000 size=8 [
+    f0f1   f2f3   f4f5   f6f7
+    f8f9   f10f11 f12f13 f14f15
+    f16f17 f18f19 f20f21 f22f23
+    f24f25 f26f27 f28f29 f30f31
+];
+
+# Control registers (6 defined): fir, psr, dirbase, db, fsr, epsr
+define register offset=0x2000 size=4 [
+    fir psr dirbase db fsr epsr
+];
+
+# Special pipeline registers (64-bit)
+define register offset=0x2100 size=8 [KR KI T];
+define register offset=0x2118 size=8 [MERGE];
+
+# Program counter and condition code
+define register offset=0x3000 size=4 [PC CC];
+
+# Write-sink registers: writes to r0/f0/f1 are silently discarded
+# These are never read by any instruction — dead writes go here
+define register offset=0x5000 size=4 [r0_sink f0_sink];
+define register offset=0x5008 size=8 [fd0_sink];
+
+# Context register for XP mode gating
+define register offset=0x4000 size=4 contextreg;
+define context contextreg
+    xpMode = (0,0)
+;
+
+# ------------------------------------------------------------------
+# Attach Variables
+# ------------------------------------------------------------------
+
+# Map 5-bit fields to integer register names
+attach variables [ src1 src2 dest ] [
+    r0  r1  r2  r3  r4  r5  r6  r7
+    r8  r9  r10 r11 r12 r13 r14 r15
+    r16 r17 r18 r19 r20 r21 r22 r23
+    r24 r25 r26 r27 r28 r29 r30 r31
+];
+
+# Map 5-bit FP fields to single-precision register names
+attach variables [ fsrc1 fsrc2 fdest ] [
+    f0  f1  f2  f3  f4  f5  f6  f7
+    f8  f9  f10 f11 f12 f13 f14 f15
+    f16 f17 f18 f19 f20 f21 f22 f23
+    f24 f25 f26 f27 f28 f29 f30 f31
+];
+
+# Map 5-bit FP fields to double-precision register names (even only)
+attach variables [ fdsrc1 fdsrc2 fddest ] [
+    f0f1   _      f2f3   _      f4f5   _      f6f7   _
+    f8f9   _      f10f11 _      f12f13 _      f14f15 _
+    f16f17 _      f18f19 _      f20f21 _      f22f23 _
+    f24f25 _      f26f27 _      f28f29 _      f30f31 _
+];
+
+# Map 3-bit creg field to control register names
+attach variables [ creg ] [
+    fir psr dirbase db fsr epsr _ _
+];
+
+# ------------------------------------------------------------------
+# Sub-constructors: Integer register zero guards
+# Uses _zero fields (unattached) for constraints; register-attached
+# fields for display and export. Follows SPARC pattern.
+# ------------------------------------------------------------------
+
+# Source register 1: reads from r0 always yield 0
+R1src: src1     is src1 & src1_zero=0   { export 0:4; }
+R1src: src1     is src1                 { export src1; }
+
+# Source register 2: reads from r0 always yield 0
+R2src: src2     is src2 & src2_zero=0   { export 0:4; }
+R2src: src2     is src2                 { export src2; }
+
+# Destination: writes to r0 go to sink (discarded), others export dest
+Rdest: dest     is dest & dest_zero!=0  { export dest; }
+Rdest: dest     is dest & dest_zero=0   { export r0_sink; }
+
+# ------------------------------------------------------------------
+# Sub-constructors: FP register zero guards
+# f0 and f1 are hardwired to 0.0 on reads
+# ------------------------------------------------------------------
+
+# FP single source 1
+FS1src: fsrc1   is fsrc1 & fsrc1_zero=0           { export 0:4; }
+FS1src: fsrc1   is fsrc1 & fsrc1_zero=1           { export 0:4; }
+FS1src: fsrc1   is fsrc1                           { export fsrc1; }
+
+# FP single source 2
+FS2src: fsrc2   is fsrc2 & fsrc2_zero=0            { export 0:4; }
+FS2src: fsrc2   is fsrc2 & fsrc2_zero=1            { export 0:4; }
+FS2src: fsrc2   is fsrc2                            { export fsrc2; }
+
+# FP single destination: writes to f0/f1 go to sink (discarded)
+FSdest: fdest   is fdest & fdest_zero!=0 & fdest_zero!=1  { export fdest; }
+FSdest: fdest   is fdest                                   { export f0_sink; }
+
+# FP double source 1 (f0f1 pair is zero)
+FD1src: fdsrc1  is fdsrc1 & fsrc1_zero=0            { export 0:8; }
+FD1src: fdsrc1  is fdsrc1                            { export fdsrc1; }
+
+# FP double source 2 (f0f1 pair is zero)
+FD2src: fdsrc2  is fdsrc2 & fsrc2_zero=0             { export 0:8; }
+FD2src: fdsrc2  is fdsrc2                             { export fdsrc2; }
+
+# FP double destination: writes to f0f1 go to sink (discarded)
+FDdest: fddest  is fddest & fdest_zero!=0              { export fddest; }
+FDdest: fddest  is fddest                              { export fd0_sink; }
+
+# ------------------------------------------------------------------
+# Sub-constructors: Split branch offset (bte, btne, bla)
+# Combines sbrhi[20:16] and sbrlo[10:0] into 16-bit signed offset
+# Reconstruction: sign_ext(sbrhi:sbrlo, 16) << 2
+# Target = PC + 4 + sext(combined) * 4
+# ------------------------------------------------------------------
+sbroff: target  is sbrhi & sbrlo
+    [ target = inst_start + 4 + (((sbrhi << 11) | sbrlo) * 4); ]
+    { export *:4 target; }
+
+# ------------------------------------------------------------------
+# Sub-constructors: 26-bit branch target
+# Target = PC + sign_extend(broff26) << 2
+# ------------------------------------------------------------------
+br26target: target  is broff26
+    [ target = inst_start + (broff26 << 2); ]
+    { export *:4 target; }
+
+# ------------------------------------------------------------------
+# Sub-constructors: Store split-immediate offset
+# Same encoding as split branch: hi=[20:16], lo=[10:0]
+# Used as displacement for st.b/st.s/st.l
+# ------------------------------------------------------------------
+stimm: val  is sthi & stlo
+    [ val = (sthi << 11) | stlo; ]
+    { export *[const]:4 val; }
+
+# ------------------------------------------------------------------
+# P-code ops for instructions without direct equivalents
+# ------------------------------------------------------------------
+define pcodeop i860_trap;
+define pcodeop i860_intovr;
+define pcodeop i860_lock;
+define pcodeop i860_unlock;
+define pcodeop i860_flush;
+define pcodeop f_reciprocal;
+define pcodeop f_reciprocal_sqrt;
+define pcodeop fp_faddp;
+define pcodeop fp_faddz;
+define pcodeop fp_fzchkl;
+define pcodeop fp_fzchks;
+define pcodeop fp_form;
+define pcodeop fp_fmlow;
+define pcodeop i860_ldio;
+define pcodeop i860_stio;
+define pcodeop i860_ldint;
+define pcodeop i860_scyc;

@@ -1,0 +1,283 @@
+# ======================================================================
+# Intel i860 Integer Instructions
+# ALU, shifts, integer loads/stores, pseudo-ops, system ops
+# ======================================================================
+
+# ==================================================================
+# Pseudo-operations (must be before the real instructions they alias)
+# ==================================================================
+
+# nop = shl r0,r0,r0  (encoding: 0xA0000000)
+:nop  is op6=0x28 & src1_zero=0 & src2_zero=0 & dest_zero=0  { }
+
+# mov src1,dest = or src1,r0,dest  (only when src2=r0 and dest!=r0)
+:mov R1src, Rdest  is op6=0x38 & R1src & src2_zero=0 & Rdest & dest_zero!=0  {
+    Rdest = R1src;
+}
+
+# ==================================================================
+# Integer ALU: Register-Register (Format A, even opcodes)
+# ==================================================================
+
+# --- addu: unsigned add ---
+:addu R1src, R2src, Rdest  is op6=0x20 & R1src & R2src & Rdest  {
+    Rdest = R1src + R2src;
+}
+
+# --- addu immediate ---
+:addu simm16, R2src, Rdest  is op6=0x21 & simm16 & R2src & Rdest  {
+    Rdest = R2src + sext(simm16:2);
+}
+
+# --- adds: signed add ---
+:adds R1src, R2src, Rdest  is op6=0x24 & R1src & R2src & Rdest  {
+    Rdest = R1src + R2src;
+}
+
+# --- adds immediate ---
+:adds simm16, R2src, Rdest  is op6=0x25 & simm16 & R2src & Rdest  {
+    Rdest = R2src + sext(simm16:2);
+}
+
+# --- subu: unsigned subtract ---
+:subu R1src, R2src, Rdest  is op6=0x22 & R1src & R2src & Rdest  {
+    Rdest = R2src - R1src;
+}
+
+# --- subu immediate ---
+:subu simm16, R2src, Rdest  is op6=0x23 & simm16 & R2src & Rdest  {
+    Rdest = R2src - sext(simm16:2);
+}
+
+# --- subs: signed subtract ---
+:subs R1src, R2src, Rdest  is op6=0x26 & R1src & R2src & Rdest  {
+    Rdest = R2src - R1src;
+}
+
+# --- subs immediate ---
+:subs simm16, R2src, Rdest  is op6=0x27 & simm16 & R2src & Rdest  {
+    Rdest = R2src - sext(simm16:2);
+}
+
+# ==================================================================
+# Logical Operations
+# ==================================================================
+
+# --- and reg ---
+:and R1src, R2src, Rdest  is op6=0x30 & R1src & R2src & Rdest  {
+    Rdest = R1src & R2src;
+}
+
+# --- and immediate (zero-extended) ---
+:and imm16, R2src, Rdest  is op6=0x31 & imm16 & R2src & Rdest  {
+    Rdest = zext(imm16:2) & R2src;
+}
+
+# --- andh (AND with imm << 16) ---
+:andh imm16, R2src, Rdest  is op6=0x33 & imm16 & R2src & Rdest  {
+    Rdest = (zext(imm16:2) << 16) & R2src;
+}
+
+# --- andnot reg ---
+:andnot R1src, R2src, Rdest  is op6=0x34 & R1src & R2src & Rdest  {
+    Rdest = (~R1src) & R2src;
+}
+
+# --- andnot immediate ---
+:andnot imm16, R2src, Rdest  is op6=0x35 & imm16 & R2src & Rdest  {
+    Rdest = (~zext(imm16:2)) & R2src;
+}
+
+# --- andnoth (AND NOT with imm << 16) ---
+:andnoth imm16, R2src, Rdest  is op6=0x37 & imm16 & R2src & Rdest  {
+    Rdest = (~(zext(imm16:2) << 16)) & R2src;
+}
+
+# --- or reg ---
+# (Note: mov pseudo-op listed above catches src2=0 & dest!=0 first via specificity)
+:or R1src, R2src, Rdest  is op6=0x38 & R1src & R2src & Rdest  {
+    Rdest = R1src | R2src;
+}
+
+# --- or immediate ---
+:or imm16, R2src, Rdest  is op6=0x39 & imm16 & R2src & Rdest  {
+    Rdest = zext(imm16:2) | R2src;
+}
+
+# --- orh (OR with imm << 16) ---
+:orh imm16, R2src, Rdest  is op6=0x3B & imm16 & R2src & Rdest  {
+    Rdest = (zext(imm16:2) << 16) | R2src;
+}
+
+# --- xor reg ---
+:xor R1src, R2src, Rdest  is op6=0x3C & R1src & R2src & Rdest  {
+    Rdest = R1src ^ R2src;
+}
+
+# --- xor immediate ---
+:xor imm16, R2src, Rdest  is op6=0x3D & imm16 & R2src & Rdest  {
+    Rdest = zext(imm16:2) ^ R2src;
+}
+
+# --- xorh (XOR with imm << 16) ---
+:xorh imm16, R2src, Rdest  is op6=0x3F & imm16 & R2src & Rdest  {
+    Rdest = (zext(imm16:2) << 16) ^ R2src;
+}
+
+# ==================================================================
+# Shift Operations
+# ==================================================================
+
+# --- shl reg (opcode shared with nop; nop matches first when all zero) ---
+:shl R1src, R2src, Rdest  is op6=0x28 & R1src & R2src & Rdest  {
+    Rdest = R2src << R1src;
+}
+
+# --- shl immediate ---
+:shl imm16, R2src, Rdest  is op6=0x29 & imm16 & R2src & Rdest  {
+    Rdest = R2src << imm16;
+}
+
+# --- shr reg (logical) ---
+:shr R1src, R2src, Rdest  is op6=0x2A & R1src & R2src & Rdest  {
+    Rdest = R2src >> R1src;
+}
+
+# --- shr immediate ---
+:shr imm16, R2src, Rdest  is op6=0x2B & imm16 & R2src & Rdest  {
+    Rdest = R2src >> imm16;
+}
+
+# --- shra reg (arithmetic) ---
+:shra R1src, R2src, Rdest  is op6=0x2E & R1src & R2src & Rdest  {
+    Rdest = R2src s>> R1src;
+}
+
+# --- shra immediate ---
+:shra imm16, R2src, Rdest  is op6=0x2F & imm16 & R2src & Rdest  {
+    Rdest = R2src s>> imm16;
+}
+
+# --- shrd: shift right double (64-bit) ---
+# Concatenates src1:dest, shifts right by src2 low 5 bits, result in dest
+:shrd R1src, R2src, Rdest  is op6=0x2C & R1src & R2src & Rdest  {
+    local pair:8 = (zext(R1src) << 32) | zext(Rdest);
+    local shift:8 = zext(R2src & 0x1f);
+    local result:8 = pair >> shift;
+    Rdest = result:4;
+}
+
+# ==================================================================
+# Integer Loads — Register+Register addressing (bit 26 = 0)
+# ==================================================================
+
+# ld.b src1(src2),dest  (opcode 0x00: reg+reg, byte)
+:ld.b R1src(R2src), Rdest  is op6=0x00 & R1src & R2src & Rdest  {
+    local addr:4 = R1src + R2src;
+    Rdest = zext(*:1 addr);
+}
+
+# ld.s src1(src2),dest  (opcode 0x04, bit0=0: reg+reg, short)
+:ld.s R1src(R2src), Rdest  is op6=0x04 & lsbit0=0 & R1src & R2src & Rdest  {
+    local addr:4 = R1src + R2src;
+    Rdest = zext(*:2 addr);
+}
+
+# ld.l src1(src2),dest  (opcode 0x04, bit0=1: reg+reg, long)
+:ld.l R1src(R2src), Rdest  is op6=0x04 & lsbit0=1 & R1src & R2src & Rdest  {
+    local addr:4 = R1src + R2src;
+    Rdest = *:4 addr;
+}
+
+# ==================================================================
+# Integer Loads — Displacement+Register addressing (bit 26 = 1)
+# ==================================================================
+
+# ld.b simm16(src2),dest  (opcode 0x01: disp+reg, byte)
+:ld.b simm16(R2src), Rdest  is op6=0x01 & simm16 & R2src & Rdest  {
+    local addr:4 = R2src + sext(simm16:2);
+    Rdest = zext(*:1 addr);
+}
+
+# ld.s simm16(src2),dest  (opcode 0x05, bit0=0: disp+reg, short)
+:ld.s simm16(R2src), Rdest  is op6=0x05 & lsbit0=0 & simm16 & R2src & Rdest  {
+    local addr:4 = R2src + sext(simm16:2);
+    Rdest = zext(*:2 addr);
+}
+
+# ld.l simm16(src2),dest  (opcode 0x05, bit0=1: disp+reg, long)
+:ld.l simm16(R2src), Rdest  is op6=0x05 & lsbit0=1 & simm16 & R2src & Rdest  {
+    local addr:4 = R2src + sext(simm16:2);
+    Rdest = *:4 addr;
+}
+
+# ==================================================================
+# Integer Stores — always displacement+register, split immediate
+# Store has NO reg+reg form. Uses split immediate: hi=[20:16], lo=[10:0]
+# Note: bit 0 is part of the split offset AND determines size for st.s/st.l
+# ==================================================================
+
+# st.b src1,offset(src2)  (opcode 0x03)
+:st.b R1src, stimm(R2src)  is op6=0x03 & R1src & R2src & stimm  {
+    local disp:4 = stimm;
+    local addr:4 = R2src + disp;
+    *:1 addr = R1src:1;
+}
+
+# st.s src1,offset(src2)  (opcode 0x07, bit0=0: short)
+# bit 0 = 0 means short; also means displacement LSB=0 (aligned)
+:st.s R1src, stimm(R2src)  is op6=0x07 & lsbit0=0 & R1src & R2src & stimm  {
+    local disp:4 = stimm;
+    local addr:4 = R2src + disp;
+    *:2 addr = R1src:2;
+}
+
+# st.l src1,offset(src2)  (opcode 0x07, bit0=1: long)
+# bit 0 = 1 means long; displacement low 2 bits are masked in hardware
+:st.l R1src, stimm(R2src)  is op6=0x07 & lsbit0=1 & R1src & R2src & stimm  {
+    local disp:4 = stimm;
+    local addr:4 = R2src + disp;
+    *:4 addr = R1src;
+}
+
+# ==================================================================
+# Integer-to-FP register transfer
+# ==================================================================
+
+# ixfr src1,fdest  (opcode 0x02)
+# Writes to f0/f1 are discarded (second variant catches those)
+:ixfr R1src, fdest  is op6=0x02 & R1src & fdest & fdest_zero!=0 & fdest_zero!=1  {
+    fdest = R1src;
+}
+:ixfr R1src, fdest  is op6=0x02 & R1src & fdest  { }
+
+# ==================================================================
+# Control Register Load/Store
+# ==================================================================
+
+# ld.c csrc2,dest  (opcode 0x0C)
+:ld.c creg, Rdest  is op6=0x0C & creg & Rdest  {
+    Rdest = creg;
+}
+
+# st.c src1,csrc2  (opcode 0x0E)
+:st.c R1src, creg  is op6=0x0E & R1src & creg  {
+    creg = R1src;
+}
+
+# ==================================================================
+# Cache Flush
+# ==================================================================
+
+# flush simm16(src2)  (opcode 0x0D, no auto-inc)
+:flush simm16(R2src)  is op6=0x0D & flushauto=0 & simm16 & R2src  {
+    local addr:4 = R2src + sext(simm16:2);
+    i860_flush(addr);
+}
+
+# flush simm16(src2)++  (opcode 0x0D, auto-inc)
+:"flush" simm16(R2src)"++"  is op6=0x0D & flushauto=1 & simm16 & R2src & src2_zero!=0  {
+    local addr:4 = R2src + sext(simm16:2);
+    i860_flush(addr);
+    R2src = addr;
+}

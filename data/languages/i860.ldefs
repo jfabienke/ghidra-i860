@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<language_definitions>
+
+  <!-- Little-endian XR -->
+  <language processor="i860"
+           endian="little"
+           size="32"
+           variant="XR"
+           version="1.0"
+           slafile="i860_le.sla"
+           processorspec="i860_xr.pspec"
+           id="i860:LE:32:XR">
+    <description>Intel i860 XR (little-endian)</description>
+    <compiler name="gcc" spec="gcc.cspec" id="gcc"/>
+    <compiler name="spea" spec="spea.cspec" id="spea"/>
+  </language>
+
+  <!-- Big-endian XR -->
+  <language processor="i860"
+           endian="big"
+           size="32"
+           variant="XR"
+           version="1.0"
+           slafile="i860_be.sla"
+           processorspec="i860_xr.pspec"
+           id="i860:BE:32:XR">
+    <description>Intel i860 XR (big-endian)</description>
+    <compiler name="gcc" spec="gcc.cspec" id="gcc"/>
+    <compiler name="spea" spec="spea.cspec" id="spea"/>
+  </language>
+
+  <!-- Little-endian XP -->
+  <language processor="i860"
+           endian="little"
+           size="32"
+           variant="XP"
+           version="1.0"
+           slafile="i860_le.sla"
+           processorspec="i860_xp.pspec"
+           id="i860:LE:32:XP">
+    <description>Intel i860 XP (little-endian)</description>
+    <compiler name="gcc" spec="gcc.cspec" id="gcc"/>
+    <compiler name="spea" spec="spea.cspec" id="spea"/>
+  </language>
+
+  <!-- Big-endian XP -->
+  <language processor="i860"
+           endian="big"
+           size="32"
+           variant="XP"
+           version="1.0"
+           slafile="i860_be.sla"
+           processorspec="i860_xp.pspec"
+           id="i860:BE:32:XP">
+    <description>Intel i860 XP (big-endian)</description>
+    <compiler name="gcc" spec="gcc.cspec" id="gcc"/>
+    <compiler name="spea" spec="spea.cspec" id="spea"/>
+  </language>
+
+</language_definitions>

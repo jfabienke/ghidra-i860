@@ -1,0 +1,67 @@
+# ======================================================================
+# Intel i860 XP-Specific Instructions
+# Gated by xpMode=1 context (set by i860_xp.pspec)
+# ======================================================================
+
+# ==================================================================
+# XP I/O Load/Store — core escape opcode 0x13
+# ldio: sub-opcode 0x08 in extended field
+# stio: sub-opcode 0x09 in extended field
+#
+# Note: The XP escape encoding uses more bits than the 3-bit escop.
+# For XP, bits[6:0] encode the sub-operation with size in bits[1:0]:
+#   ldio: bits[6:0] = 0b0001_0xx where xx encodes size
+#   stio: bits[6:0] = 0b0010_0xx where xx encodes size
+#
+# For simplicity, we use broader bit patterns matching the known encodings.
+# ==================================================================
+
+# ldio.b src1(src2),dest — XP I/O load byte
+:ldio.b R1src(R2src), Rdest  is xpMode=1 & op6=0x13 & escop=0x00 & R1src & R2src & Rdest & dest_zero!=0  {
+    local addr:4 = R1src + R2src;
+    Rdest = i860_ldio(addr, 1:4);
+}
+
+# ldio.s src1(src2),dest — XP I/O load short
+:ldio.s R1src(R2src), Rdest  is xpMode=1 & op6=0x13 & escop=0x01 & R1src & R2src & Rdest & dest_zero!=0  {
+    local addr:4 = R1src + R2src;
+    Rdest = i860_ldio(addr, 2:4);
+}
+
+# ldio.l src1(src2),dest — XP I/O load long
+:ldio.l R1src(R2src), Rdest  is xpMode=1 & op6=0x13 & escop=0x03 & R1src & R2src & Rdest & dest_zero!=0  {
+    local addr:4 = R1src + R2src;
+    Rdest = i860_ldio(addr, 4:4);
+}
+
+# stio.b src1,src2(dest) — XP I/O store byte
+:stio.b R1src, R2src(Rdest)  is xpMode=1 & op6=0x13 & escop=0x04 & R1src & R2src & Rdest  {
+    local addr:4 = R2src + Rdest;
+    i860_stio(addr, R1src, 1:4);
+}
+
+# stio.s src1,src2(dest) — XP I/O store short
+:stio.s R1src, R2src(Rdest)  is xpMode=1 & op6=0x13 & escop=0x05 & R1src & R2src & Rdest  {
+    local addr:4 = R2src + Rdest;
+    i860_stio(addr, R1src, 2:4);
+}
+
+# stio.l src1,src2(dest) — XP I/O store long
+:stio.l R1src, R2src(Rdest)  is xpMode=1 & op6=0x13 & escop=0x07 & R1src & R2src & Rdest  {
+    local addr:4 = R2src + Rdest;
+    i860_stio(addr, R1src, 4:4);
+}
+
+# ==================================================================
+# ldint — Load interrupt vector (XP only)
+# ==================================================================
+:ldint R1src, Rdest  is xpMode=1 & op6=0x13 & escop=0x02 & R1src & Rdest & dest_zero!=0 & src2_zero=0  {
+    Rdest = i860_ldint(R1src);
+}
+
+# ==================================================================
+# scyc — Special cycles broadcast (XP only)
+# ==================================================================
+:scyc  is xpMode=1 & op6=0x13 & escop=0x03 & src1_zero=0 & src2_zero=0 & dest_zero=0  {
+    i860_scyc();
+}

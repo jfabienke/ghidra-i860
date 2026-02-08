@@ -1,0 +1,624 @@
+# ======================================================================
+# Intel i860 Floating-Point Instructions
+# All under primary opcode 0x12 (FP escape) plus FP loads/stores
+# ======================================================================
+
+# ==================================================================
+# FP Pseudo-ops (must be before real instructions)
+# ==================================================================
+
+# fnop = 0xB0000000 (op6=0x12, all FP fields zero with pbit=1)
+:fnop  is op6=0x12 & fsrc1=0 & fsrc2=0 & fdest=0 & pbit=1 & dbit=0 & sbit=0 & rbit=0 & fpop=0x30  { }
+
+# ==================================================================
+# Basic FP Arithmetic (Adder Unit) — FP sub-opcode 0x30 (fadd)
+# Precision: S bit=source, R bit=result
+# ==================================================================
+
+# fadd.ss fsrc1,fsrc2,fdest (S=0,R=0)
+:fadd.ss FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x30 & pbit=0 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
+    FSdest = FS1src f+ FS2src;
+}
+
+# fadd.sd fsrc1,fsrc2,fddest (S=0,R=1)
+:fadd.sd FS1src, FS2src, FDdest  is op6=0x12 & fpop=0x30 & pbit=0 & dbit=0 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest  {
+    FDdest = float2float(FS1src) f+ float2float(FS2src);
+}
+
+# fadd.dd fdsrc1,fdsrc2,fddest (S=1,R=1)
+:fadd.dd FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x30 & pbit=0 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
+    FDdest = FD1src f+ FD2src;
+}
+
+# pfadd.ss (pipelined)
+:pfadd.ss FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x30 & pbit=1 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
+    FSdest = FS1src f+ FS2src;
+}
+
+# pfadd.sd (pipelined)
+:pfadd.sd FS1src, FS2src, FDdest  is op6=0x12 & fpop=0x30 & pbit=1 & dbit=0 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest  {
+    FDdest = float2float(FS1src) f+ float2float(FS2src);
+}
+
+# pfadd.dd (pipelined)
+:pfadd.dd FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x30 & pbit=1 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
+    FDdest = FD1src f+ FD2src;
+}
+
+# ==================================================================
+# fsub — FP sub-opcode 0x31
+# ==================================================================
+
+:fsub.ss FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x31 & pbit=0 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
+    FSdest = FS1src f- FS2src;
+}
+
+:fsub.sd FS1src, FS2src, FDdest  is op6=0x12 & fpop=0x31 & pbit=0 & dbit=0 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest  {
+    FDdest = float2float(FS1src) f- float2float(FS2src);
+}
+
+:fsub.dd FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x31 & pbit=0 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
+    FDdest = FD1src f- FD2src;
+}
+
+:pfsub.ss FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x31 & pbit=1 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
+    FSdest = FS1src f- FS2src;
+}
+
+:pfsub.sd FS1src, FS2src, FDdest  is op6=0x12 & fpop=0x31 & pbit=1 & dbit=0 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest  {
+    FDdest = float2float(FS1src) f- float2float(FS2src);
+}
+
+:pfsub.dd FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x31 & pbit=1 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
+    FDdest = FD1src f- FD2src;
+}
+
+# ==================================================================
+# fmul — FP sub-opcode 0x20 (Multiplier Unit)
+# Note: .ds is invalid
+# ==================================================================
+
+:fmul.ss FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x20 & pbit=0 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
+    FSdest = FS1src f* FS2src;
+}
+
+:fmul.sd FS1src, FS2src, FDdest  is op6=0x12 & fpop=0x20 & pbit=0 & dbit=0 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest  {
+    FDdest = float2float(FS1src) f* float2float(FS2src);
+}
+
+:fmul.dd FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x20 & pbit=0 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
+    FDdest = FD1src f* FD2src;
+}
+
+:pfmul.ss FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x20 & pbit=1 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
+    FSdest = FS1src f* FS2src;
+}
+
+:pfmul.sd FS1src, FS2src, FDdest  is op6=0x12 & fpop=0x20 & pbit=1 & dbit=0 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest  {
+    FDdest = float2float(FS1src) f* float2float(FS2src);
+}
+
+:pfmul.dd FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x20 & pbit=1 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
+    FDdest = FD1src f* FD2src;
+}
+
+# ==================================================================
+# fmlow.dd — FP sub-opcode 0x21 (multiply low, double only)
+# ==================================================================
+
+:fmlow.dd FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x21 & pbit=0 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
+    FDdest = fp_fmlow(FD1src, FD2src);
+}
+
+# ==================================================================
+# frcp — FP sub-opcode 0x22 (reciprocal approximation)
+# ==================================================================
+
+:frcp.ss fsrc2, FSdest  is op6=0x12 & fpop=0x22 & pbit=0 & dbit=0 & sbit=0 & rbit=0 & fsrc2 & FS2src & FSdest  {
+    FSdest = f_reciprocal(FS2src);
+}
+
+:frcp.sd fsrc2, FDdest  is op6=0x12 & fpop=0x22 & pbit=0 & dbit=0 & sbit=0 & rbit=1 & fsrc2 & FS2src & FDdest  {
+    FDdest = f_reciprocal(FS2src);
+}
+
+:frcp.dd fdsrc2, FDdest  is op6=0x12 & fpop=0x22 & pbit=0 & dbit=0 & sbit=1 & rbit=1 & fdsrc2 & FD2src & FDdest  {
+    FDdest = f_reciprocal(FD2src);
+}
+
+# ==================================================================
+# frsqr — FP sub-opcode 0x23 (reciprocal square root)
+# ==================================================================
+
+:frsqr.ss fsrc2, FSdest  is op6=0x12 & fpop=0x23 & pbit=0 & dbit=0 & sbit=0 & rbit=0 & fsrc2 & FS2src & FSdest  {
+    FSdest = f_reciprocal_sqrt(FS2src);
+}
+
+:frsqr.sd fsrc2, FDdest  is op6=0x12 & fpop=0x23 & pbit=0 & dbit=0 & sbit=0 & rbit=1 & fsrc2 & FS2src & FDdest  {
+    FDdest = f_reciprocal_sqrt(FS2src);
+}
+
+:frsqr.dd fdsrc2, FDdest  is op6=0x12 & fpop=0x23 & pbit=0 & dbit=0 & sbit=1 & rbit=1 & fdsrc2 & FD2src & FDdest  {
+    FDdest = f_reciprocal_sqrt(FD2src);
+}
+
+# ==================================================================
+# pfmul3.dd — FP sub-opcode 0x24 (XP only, 3-stage pipelined mul)
+# ==================================================================
+
+:pfmul3.dd FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x24 & pbit=1 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
+    FDdest = FD1src f* FD2src;
+}
+
+# ==================================================================
+# fix — FP sub-opcode 0x32 (float to integer conversion)
+# Result goes to integer destination via FP register
+# ==================================================================
+
+:fix.ss FS1src, FSdest  is op6=0x12 & fpop=0x32 & pbit=0 & dbit=0 & sbit=0 & rbit=0 & FS1src & FSdest  {
+    FSdest = trunc(FS1src);
+}
+
+:fix.sd FS1src, FDdest  is op6=0x12 & fpop=0x32 & pbit=0 & dbit=0 & sbit=0 & rbit=1 & FS1src & FDdest  {
+    local tmp:4 = trunc(FS1src);
+    FDdest = sext(tmp);
+}
+
+:fix.dd FD1src, FDdest  is op6=0x12 & fpop=0x32 & pbit=0 & dbit=0 & sbit=1 & rbit=1 & FD1src & FDdest  {
+    FDdest = trunc(FD1src);
+}
+
+# ==================================================================
+# ftrunc — FP sub-opcode 0x3A (truncate to integer)
+# Similar to fix but truncation mode
+# ==================================================================
+
+:ftrunc.ss FS1src, FSdest  is op6=0x12 & fpop=0x3A & pbit=0 & dbit=0 & sbit=0 & rbit=0 & FS1src & FSdest  {
+    FSdest = trunc(FS1src);
+}
+
+:ftrunc.sd FS1src, FDdest  is op6=0x12 & fpop=0x3A & pbit=0 & dbit=0 & sbit=0 & rbit=1 & FS1src & FDdest  {
+    local tmp:4 = trunc(FS1src);
+    FDdest = sext(tmp);
+}
+
+:ftrunc.dd FD1src, FDdest  is op6=0x12 & fpop=0x3A & pbit=0 & dbit=0 & sbit=1 & rbit=1 & FD1src & FDdest  {
+    FDdest = trunc(FD1src);
+}
+
+# Pipelined ftrunc variants
+:pftrunc.ss FS1src, FSdest  is op6=0x12 & fpop=0x3A & pbit=1 & dbit=0 & sbit=0 & rbit=0 & FS1src & FSdest  {
+    FSdest = trunc(FS1src);
+}
+
+:pftrunc.sd FS1src, FDdest  is op6=0x12 & fpop=0x3A & pbit=1 & dbit=0 & sbit=0 & rbit=1 & FS1src & FDdest  {
+    local tmp:4 = trunc(FS1src);
+    FDdest = sext(tmp);
+}
+
+:pftrunc.dd FD1src, FDdest  is op6=0x12 & fpop=0x3A & pbit=1 & dbit=0 & sbit=1 & rbit=1 & FD1src & FDdest  {
+    FDdest = trunc(FD1src);
+}
+
+# ==================================================================
+# famov — FP sub-opcode 0x33 (move via adder pipeline)
+# All 4 precision combos valid (ss, sd, ds, dd)
+# ==================================================================
+
+:famov.ss FS1src, FSdest  is op6=0x12 & fpop=0x33 & pbit=0 & dbit=0 & sbit=0 & rbit=0 & FS1src & FSdest  {
+    FSdest = FS1src;
+}
+
+:famov.ds FD1src, FSdest  is op6=0x12 & fpop=0x33 & pbit=0 & dbit=0 & sbit=1 & rbit=0 & FD1src & FSdest  {
+    FSdest = float2float(FD1src);
+}
+
+:famov.sd FS1src, FDdest  is op6=0x12 & fpop=0x33 & pbit=0 & dbit=0 & sbit=0 & rbit=1 & FS1src & FDdest  {
+    FDdest = float2float(FS1src);
+}
+
+:famov.dd FD1src, FDdest  is op6=0x12 & fpop=0x33 & pbit=0 & dbit=0 & sbit=1 & rbit=1 & FD1src & FDdest  {
+    FDdest = FD1src;
+}
+
+# Pipelined famov
+:pfamov.ss FS1src, FSdest  is op6=0x12 & fpop=0x33 & pbit=1 & dbit=0 & sbit=0 & rbit=0 & FS1src & FSdest  {
+    FSdest = FS1src;
+}
+
+:pfamov.ds FD1src, FSdest  is op6=0x12 & fpop=0x33 & pbit=1 & dbit=0 & sbit=1 & rbit=0 & FD1src & FSdest  {
+    FSdest = float2float(FD1src);
+}
+
+:pfamov.sd FS1src, FDdest  is op6=0x12 & fpop=0x33 & pbit=1 & dbit=0 & sbit=0 & rbit=1 & FS1src & FDdest  {
+    FDdest = float2float(FS1src);
+}
+
+:pfamov.dd FD1src, FDdest  is op6=0x12 & fpop=0x33 & pbit=1 & dbit=0 & sbit=1 & rbit=1 & FD1src & FDdest  {
+    FDdest = FD1src;
+}
+
+# ==================================================================
+# FP Comparisons — Set CC register
+# pfgt: fpop=0x34, R=0; pfle: fpop=0x34, R=1; pfeq: fpop=0x35
+# Comparisons always pipelined (p bit set)
+# ==================================================================
+
+# pfgt.ss (greater than, single)
+:pfgt.ss FS1src, FS2src  is op6=0x12 & fpop=0x34 & pbit=1 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src  {
+    CC = zext(FS1src f> FS2src);
+}
+
+# pfgt.dd (greater than, double)
+:pfgt.dd FD1src, FD2src  is op6=0x12 & fpop=0x34 & pbit=1 & dbit=0 & sbit=1 & rbit=0 & FD1src & FD2src  {
+    CC = zext(FD1src f> FD2src);
+}
+
+# pfle.ss (less-or-equal, single) — R bit set
+:pfle.ss FS1src, FS2src  is op6=0x12 & fpop=0x34 & pbit=1 & dbit=0 & sbit=0 & rbit=1 & FS1src & FS2src  {
+    # pfle sets CC=0 if fsrc1 <= fsrc2, else CC=1 (inverted sense)
+    CC = zext(FS1src f> FS2src);
+}
+
+# pfle.dd (less-or-equal, double)
+:pfle.dd FD1src, FD2src  is op6=0x12 & fpop=0x34 & pbit=1 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src  {
+    CC = zext(FD1src f> FD2src);
+}
+
+# pfeq.ss (equal, single)
+:pfeq.ss FS1src, FS2src  is op6=0x12 & fpop=0x35 & pbit=1 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src  {
+    CC = zext(FS1src f== FS2src);
+}
+
+# pfeq.dd (equal, double)
+:pfeq.dd FD1src, FD2src  is op6=0x12 & fpop=0x35 & pbit=1 & dbit=0 & sbit=1 & rbit=0 & FD1src & FD2src  {
+    CC = zext(FD1src f== FD2src);
+}
+
+# Non-pipelined comparison variants (fgt, fle, feq)
+:fgt.ss FS1src, FS2src  is op6=0x12 & fpop=0x34 & pbit=0 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src  {
+    CC = zext(FS1src f> FS2src);
+}
+
+:fgt.dd FD1src, FD2src  is op6=0x12 & fpop=0x34 & pbit=0 & dbit=0 & sbit=1 & rbit=0 & FD1src & FD2src  {
+    CC = zext(FD1src f> FD2src);
+}
+
+:fle.ss FS1src, FS2src  is op6=0x12 & fpop=0x34 & pbit=0 & dbit=0 & sbit=0 & rbit=1 & FS1src & FS2src  {
+    CC = zext(FS1src f> FS2src);
+}
+
+:fle.dd FD1src, FD2src  is op6=0x12 & fpop=0x34 & pbit=0 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src  {
+    CC = zext(FD1src f> FD2src);
+}
+
+:feq.ss FS1src, FS2src  is op6=0x12 & fpop=0x35 & pbit=0 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src  {
+    CC = zext(FS1src f== FS2src);
+}
+
+:feq.dd FD1src, FD2src  is op6=0x12 & fpop=0x35 & pbit=0 & dbit=0 & sbit=1 & rbit=0 & FD1src & FD2src  {
+    CC = zext(FD1src f== FD2src);
+}
+
+# ==================================================================
+# FP Integer operations (fiadd, fisub) — Operate on integer bits in FP regs
+# ==================================================================
+
+# fiadd.ss (fpop=0x49, S=0, R=0)
+:fiadd.ss FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x49 & pbit=0 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
+    FSdest = FS1src + FS2src;
+}
+
+# fiadd.dd (fpop=0x49, S=1, R=1)
+:fiadd.dd FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x49 & pbit=0 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
+    FDdest = FD1src + FD2src;
+}
+
+# pfiadd.ss (pipelined)
+:pfiadd.ss FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x49 & pbit=1 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
+    FSdest = FS1src + FS2src;
+}
+
+# pfiadd.dd (pipelined)
+:pfiadd.dd FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x49 & pbit=1 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
+    FDdest = FD1src + FD2src;
+}
+
+# fisub.ss (fpop=0x4D, S=0, R=0)
+:fisub.ss FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x4D & pbit=0 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
+    FSdest = FS1src - FS2src;
+}
+
+# fisub.dd (fpop=0x4D, S=1, R=1)
+:fisub.dd FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x4D & pbit=0 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
+    FDdest = FD1src - FD2src;
+}
+
+# pfisub.ss (pipelined)
+:pfisub.ss FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x4D & pbit=1 & dbit=0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
+    FSdest = FS1src - FS2src;
+}
+
+# pfisub.dd (pipelined)
+:pfisub.dd FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x4D & pbit=1 & dbit=0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
+    FDdest = FD1src - FD2src;
+}
+
+# ==================================================================
+# fxfr — FP-to-integer register transfer (fpop=0x40)
+# ==================================================================
+
+:fxfr fsrc1, dest  is op6=0x12 & fpop=0x40 & pbit=0 & dbit=0 & sbit=0 & rbit=0 & fsrc1 & dest & dest_zero!=0  {
+    dest = fsrc1;
+}
+:fxfr fsrc1, dest  is op6=0x12 & fpop=0x40 & pbit=0 & dbit=0 & sbit=0 & rbit=0 & fsrc1 & dest  { }
+
+# ==================================================================
+# FP Loads — primary opcode 0x08 (reg+reg) and 0x09 (disp+reg)
+# Size from fpsize field: bits[2:1]: 0=8B(d), 1=4B(l), 2=16B(q), 3=4B
+# Auto-increment: bit 0
+# ==================================================================
+
+# --- fld.l (4 bytes, single) reg+reg: fpsize=1, fpauto=0 ---
+:fld.l src1(R2src), FSdest  is op6=0x08 & fpsize=0b01 & fpauto=0 & src1 & R2src & FSdest  {
+    local addr:4 = src1 + R2src;
+    FSdest = *:4 addr;
+}
+
+# fld.l reg+reg with auto-inc
+:fld.l src1(R2src)"++", FSdest  is op6=0x08 & fpsize=0b01 & fpauto=1 & src1 & R2src & src2_zero!=0 & FSdest  {
+    local addr:4 = src1 + R2src;
+    FSdest = *:4 addr;
+    R2src = addr;
+}
+
+# --- fld.l disp+reg ---
+:fld.l simm16(R2src), FSdest  is op6=0x09 & fpsize=0b01 & fpauto=0 & simm16 & R2src & FSdest  {
+    local addr:4 = R2src + sext(simm16:2);
+    FSdest = *:4 addr;
+}
+
+# fld.l disp+reg with auto-inc
+:fld.l simm16(R2src)"++", FSdest  is op6=0x09 & fpsize=0b01 & fpauto=1 & simm16 & R2src & src2_zero!=0 & FSdest  {
+    local addr:4 = R2src + sext(simm16:2);
+    FSdest = *:4 addr;
+    R2src = addr;
+}
+
+# --- fld.l alternate encoding: fpsize=0b11 is also 4 bytes ---
+:fld.l src1(R2src), FSdest  is op6=0x08 & fpsize=0b11 & fpauto=0 & src1 & R2src & FSdest  {
+    local addr:4 = src1 + R2src;
+    FSdest = *:4 addr;
+}
+:fld.l src1(R2src)"++", FSdest  is op6=0x08 & fpsize=0b11 & fpauto=1 & src1 & R2src & src2_zero!=0 & FSdest  {
+    local addr:4 = src1 + R2src;
+    FSdest = *:4 addr;
+    R2src = addr;
+}
+:fld.l simm16(R2src), FSdest  is op6=0x09 & fpsize=0b11 & fpauto=0 & simm16 & R2src & FSdest  {
+    local addr:4 = R2src + sext(simm16:2);
+    FSdest = *:4 addr;
+}
+:fld.l simm16(R2src)"++", FSdest  is op6=0x09 & fpsize=0b11 & fpauto=1 & simm16 & R2src & src2_zero!=0 & FSdest  {
+    local addr:4 = R2src + sext(simm16:2);
+    FSdest = *:4 addr;
+    R2src = addr;
+}
+
+# --- fld.d (8 bytes, double) reg+reg: fpsize=0 ---
+:fld.d src1(R2src), FDdest  is op6=0x08 & fpsize=0b00 & fpauto=0 & src1 & R2src & FDdest  {
+    local addr:4 = src1 + R2src;
+    FDdest = *:8 addr;
+}
+
+:fld.d src1(R2src)"++", FDdest  is op6=0x08 & fpsize=0b00 & fpauto=1 & src1 & R2src & src2_zero!=0 & FDdest  {
+    local addr:4 = src1 + R2src;
+    FDdest = *:8 addr;
+    R2src = addr;
+}
+
+:fld.d simm16(R2src), FDdest  is op6=0x09 & fpsize=0b00 & fpauto=0 & simm16 & R2src & FDdest  {
+    local addr:4 = R2src + sext(simm16:2);
+    FDdest = *:8 addr;
+}
+
+:fld.d simm16(R2src)"++", FDdest  is op6=0x09 & fpsize=0b00 & fpauto=1 & simm16 & R2src & src2_zero!=0 & FDdest  {
+    local addr:4 = R2src + sext(simm16:2);
+    FDdest = *:8 addr;
+    R2src = addr;
+}
+
+# --- fld.q (16 bytes, quad) reg+reg: fpsize=2 ---
+:fld.q src1(R2src), fddest  is op6=0x08 & fpsize=0b10 & fpauto=0 & src1 & R2src & fddest  {
+    local addr:4 = src1 + R2src;
+    local lo:8 = *:8 addr;
+    local hi:8 = *:8 (addr + 8);
+    fddest = lo;
+}
+
+:fld.q src1(R2src)"++", fddest  is op6=0x08 & fpsize=0b10 & fpauto=1 & src1 & R2src & src2_zero!=0 & fddest  {
+    local addr:4 = src1 + R2src;
+    local lo:8 = *:8 addr;
+    local hi:8 = *:8 (addr + 8);
+    fddest = lo;
+    R2src = addr;
+}
+
+:fld.q simm16(R2src), fddest  is op6=0x09 & fpsize=0b10 & fpauto=0 & simm16 & R2src & fddest  {
+    local addr:4 = R2src + sext(simm16:2);
+    local lo:8 = *:8 addr;
+    local hi:8 = *:8 (addr + 8);
+    fddest = lo;
+}
+
+:fld.q simm16(R2src)"++", fddest  is op6=0x09 & fpsize=0b10 & fpauto=1 & simm16 & R2src & src2_zero!=0 & fddest  {
+    local addr:4 = R2src + sext(simm16:2);
+    local lo:8 = *:8 addr;
+    local hi:8 = *:8 (addr + 8);
+    fddest = lo;
+    R2src = addr;
+}
+
+# ==================================================================
+# Pipelined FP Loads — primary opcode 0x18 (reg+reg), 0x19 (disp+reg)
+# Same encoding as fld but opcode is 0x18/0x19 instead of 0x08/0x09
+# No pipelined load quad on XR
+# ==================================================================
+
+:pfld.l src1(R2src), FSdest  is op6=0x18 & fpsize=0b01 & fpauto=0 & src1 & R2src & FSdest  {
+    local addr:4 = src1 + R2src;
+    FSdest = *:4 addr;
+}
+
+:pfld.l src1(R2src)"++", FSdest  is op6=0x18 & fpsize=0b01 & fpauto=1 & src1 & R2src & src2_zero!=0 & FSdest  {
+    local addr:4 = src1 + R2src;
+    FSdest = *:4 addr;
+    R2src = addr;
+}
+
+:pfld.l simm16(R2src), FSdest  is op6=0x19 & fpsize=0b01 & fpauto=0 & simm16 & R2src & FSdest  {
+    local addr:4 = R2src + sext(simm16:2);
+    FSdest = *:4 addr;
+}
+
+:pfld.l simm16(R2src)"++", FSdest  is op6=0x19 & fpsize=0b01 & fpauto=1 & simm16 & R2src & src2_zero!=0 & FSdest  {
+    local addr:4 = R2src + sext(simm16:2);
+    FSdest = *:4 addr;
+    R2src = addr;
+}
+
+# --- pfld.l alternate encoding: fpsize=0b11 ---
+:pfld.l src1(R2src), FSdest  is op6=0x18 & fpsize=0b11 & fpauto=0 & src1 & R2src & FSdest  {
+    local addr:4 = src1 + R2src;
+    FSdest = *:4 addr;
+}
+:pfld.l src1(R2src)"++", FSdest  is op6=0x18 & fpsize=0b11 & fpauto=1 & src1 & R2src & src2_zero!=0 & FSdest  {
+    local addr:4 = src1 + R2src;
+    FSdest = *:4 addr;
+    R2src = addr;
+}
+:pfld.l simm16(R2src), FSdest  is op6=0x19 & fpsize=0b11 & fpauto=0 & simm16 & R2src & FSdest  {
+    local addr:4 = R2src + sext(simm16:2);
+    FSdest = *:4 addr;
+}
+:pfld.l simm16(R2src)"++", FSdest  is op6=0x19 & fpsize=0b11 & fpauto=1 & simm16 & R2src & src2_zero!=0 & FSdest  {
+    local addr:4 = R2src + sext(simm16:2);
+    FSdest = *:4 addr;
+    R2src = addr;
+}
+
+:pfld.d src1(R2src), FDdest  is op6=0x18 & fpsize=0b00 & fpauto=0 & src1 & R2src & FDdest  {
+    local addr:4 = src1 + R2src;
+    FDdest = *:8 addr;
+}
+
+:pfld.d src1(R2src)"++", FDdest  is op6=0x18 & fpsize=0b00 & fpauto=1 & src1 & R2src & src2_zero!=0 & FDdest  {
+    local addr:4 = src1 + R2src;
+    FDdest = *:8 addr;
+    R2src = addr;
+}
+
+:pfld.d simm16(R2src), FDdest  is op6=0x19 & fpsize=0b00 & fpauto=0 & simm16 & R2src & FDdest  {
+    local addr:4 = R2src + sext(simm16:2);
+    FDdest = *:8 addr;
+}
+
+:pfld.d simm16(R2src)"++", FDdest  is op6=0x19 & fpsize=0b00 & fpauto=1 & simm16 & R2src & src2_zero!=0 & FDdest  {
+    local addr:4 = R2src + sext(simm16:2);
+    FDdest = *:8 addr;
+    R2src = addr;
+}
+
+# ==================================================================
+# FP Stores — primary opcode 0x0A (reg+reg), 0x0B (disp+reg)
+# Same size encoding as FP loads
+# ==================================================================
+
+# --- fst.l (4 bytes) ---
+:fst.l fsrc1, src1(R2src)  is op6=0x0A & fpsize=0b01 & fpauto=0 & fsrc1 & src1 & R2src  {
+    local addr:4 = src1 + R2src;
+    *:4 addr = fsrc1;
+}
+
+:fst.l fsrc1, src1(R2src)"++"  is op6=0x0A & fpsize=0b01 & fpauto=1 & fsrc1 & src1 & R2src & src2_zero!=0  {
+    local addr:4 = src1 + R2src;
+    *:4 addr = fsrc1;
+    R2src = addr;
+}
+
+:fst.l fsrc1, simm16(R2src)  is op6=0x0B & fpsize=0b01 & fpauto=0 & fsrc1 & simm16 & R2src  {
+    local addr:4 = R2src + sext(simm16:2);
+    *:4 addr = fsrc1;
+}
+
+:fst.l fsrc1, simm16(R2src)"++"  is op6=0x0B & fpsize=0b01 & fpauto=1 & fsrc1 & simm16 & R2src & src2_zero!=0  {
+    local addr:4 = R2src + sext(simm16:2);
+    *:4 addr = fsrc1;
+    R2src = addr;
+}
+
+# --- fst.l alternate encoding: fpsize=0b11 ---
+:fst.l fsrc1, src1(R2src)  is op6=0x0A & fpsize=0b11 & fpauto=0 & fsrc1 & src1 & R2src  {
+    local addr:4 = src1 + R2src;
+    *:4 addr = fsrc1;
+}
+:fst.l fsrc1, src1(R2src)"++"  is op6=0x0A & fpsize=0b11 & fpauto=1 & fsrc1 & src1 & R2src & src2_zero!=0  {
+    local addr:4 = src1 + R2src;
+    *:4 addr = fsrc1;
+    R2src = addr;
+}
+:fst.l fsrc1, simm16(R2src)  is op6=0x0B & fpsize=0b11 & fpauto=0 & fsrc1 & simm16 & R2src  {
+    local addr:4 = R2src + sext(simm16:2);
+    *:4 addr = fsrc1;
+}
+:fst.l fsrc1, simm16(R2src)"++"  is op6=0x0B & fpsize=0b11 & fpauto=1 & fsrc1 & simm16 & R2src & src2_zero!=0  {
+    local addr:4 = R2src + sext(simm16:2);
+    *:4 addr = fsrc1;
+    R2src = addr;
+}
+
+# --- fst.d (8 bytes) ---
+:fst.d fdsrc1, src1(R2src)  is op6=0x0A & fpsize=0b00 & fpauto=0 & fdsrc1 & src1 & R2src  {
+    local addr:4 = src1 + R2src;
+    *:8 addr = fdsrc1;
+}
+
+:fst.d fdsrc1, src1(R2src)"++"  is op6=0x0A & fpsize=0b00 & fpauto=1 & fdsrc1 & src1 & R2src & src2_zero!=0  {
+    local addr:4 = src1 + R2src;
+    *:8 addr = fdsrc1;
+    R2src = addr;
+}
+
+:fst.d fdsrc1, simm16(R2src)  is op6=0x0B & fpsize=0b00 & fpauto=0 & fdsrc1 & simm16 & R2src  {
+    local addr:4 = R2src + sext(simm16:2);
+    *:8 addr = fdsrc1;
+}
+
+:fst.d fdsrc1, simm16(R2src)"++"  is op6=0x0B & fpsize=0b00 & fpauto=1 & fdsrc1 & simm16 & R2src & src2_zero!=0  {
+    local addr:4 = R2src + sext(simm16:2);
+    *:8 addr = fdsrc1;
+    R2src = addr;
+}
+
+# --- fst.q (16 bytes) ---
+:fst.q fdsrc1, src1(R2src)  is op6=0x0A & fpsize=0b10 & fpauto=0 & fdsrc1 & src1 & R2src  {
+    local addr:4 = src1 + R2src;
+    *:8 addr = fdsrc1;
+}
+
+:fst.q fdsrc1, src1(R2src)"++"  is op6=0x0A & fpsize=0b10 & fpauto=1 & fdsrc1 & src1 & R2src & src2_zero!=0  {
+    local addr:4 = src1 + R2src;
+    *:8 addr = fdsrc1;
+    R2src = addr;
+}
+
+:fst.q fdsrc1, simm16(R2src)  is op6=0x0B & fpsize=0b10 & fpauto=0 & fdsrc1 & simm16 & R2src  {
+    local addr:4 = R2src + sext(simm16:2);
+    *:8 addr = fdsrc1;
+}
+
+:fst.q fdsrc1, simm16(R2src)"++"  is op6=0x0B & fpsize=0b10 & fpauto=1 & fdsrc1 & simm16 & R2src & src2_zero!=0  {
+    local addr:4 = R2src + sext(simm16:2);
+    *:8 addr = fdsrc1;
+    R2src = addr;
+}

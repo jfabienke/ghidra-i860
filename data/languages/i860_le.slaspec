@@ -1,0 +1,9 @@
+define endian=little;
+define alignment=4;
+
+@include "i860_common.sinc"
+@include "i860_integer.sinc"
+@include "i860_control.sinc"
+@include "i860_float.sinc"
+@include "i860_graphics.sinc"
+@include "i860_xp.sinc"
