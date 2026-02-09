@@ -8,7 +8,7 @@
 | 2 | \_\_text section | 730,440 | 91.83% | 100% byte-typed (heuristic); embedded Mach-Os at 0x017CB8, 0x03DCB8, 0x05DCB8 | Which bytes are truly executable i860 code? (beyond current proven CFG islands) |
 | 3 | \_\_TEXT tail (segment bytes outside \_\_text) | 6,840 | 0.86% | Accounted; currently looks foreign/non-i860 | Any meaningful i860 content here? |
 | 4 | \_\_data section | 56,400 | 7.09% | Reconciled: TIFF/LZW + zero-fill + ChangeLog | No static dispatch table found; runtime only? |
-| 5 | \_\_DATA tail (segment bytes outside \_\_data) | 944 | 0.12% | Mostly ASCII (ChangeLog-like continuation) | Exact linker/section provenance |
+| 5 | \_\_DATA tail (segment bytes outside \_\_data) | 944 | 0.12% | **CLOSED**: 176 B inter-section alignment padding + 768 B segment file padding in \_\_bss VA range; 100% GNU Emacs ChangeLog text; linker artifact | None — fully mapped |
 | | **TOTAL** | **795,464** | **100.00%** | **Byte accounting complete** | — |
 
 ## \_\_text Heuristic Typing (730,440 bytes)
@@ -34,11 +34,33 @@ Classification, not proof of execution. Scoped to \_\_text section only; the raw
 - 1.28% of full firmware, 1.39% of \_\_text
 - Phase 2 added 0 new seeds (runtime-computed bri remains the blocker)
 
+## \_\_DATA Tail Provenance (944 bytes — CLOSED)
+
+The \_\_DATA segment has 3 sections, not just \_\_data:
+
+| Section | Type | VA | Size | File offset |
+|---------|------|----|-----:|-------------|
+| \_\_data | S\_REGULAR | 0xF80B4000 | 56,400 | 738120 |
+| \_\_bss | S\_ZEROFILL | 0xF80C1D00 | 2,752 | 0 (no file backing) |
+| \_\_common | S\_ZEROFILL | 0xF80C27C0 | 6,360 | 0 (no file backing) |
+
+The 944-byte tail (segment-relative 0xDC50–0xDFFF) breaks down as:
+
+| Range (seg-rel) | Bytes | Classification |
+|-----------------|------:|----------------|
+| 0xDC50–0xDCFF | 176 | Inter-section alignment padding: \_\_bss align=2^8=256 requires VA 0xF80C1D00; gap from \_\_data end |
+| 0xDD00–0xDFFF | 768 | Segment file padding in \_\_bss VA range: segment filesize (0xE000) extends past \_\_data; \_\_bss is ZEROFILL so these file bytes are inert |
+
+All 944 bytes are 100% printable ASCII: GNU Emacs ChangeLog entries (October 1986, Richard Mlynarik at MIT). The linker did not zero the gap, leaving stale object-file buffer content. At runtime, the \_\_bss portion (0xDD00–0xDFFF) is overwritten with zeros by the Mach-O loader.
+
+**Conclusion**: No i860 code, no data structures, no dispatch tables. Pure linker/alignment artifact.
+
 ## What We Know Now
 
 1. Byte accounting is airtight (100%).
 2. \_\_DATA contains no static flat dispatch table (TIFF/LZW, zero-fill, ChangeLog).
 3. Static cross-block BRI resolution hit the structural limit (no valid new targets).
+4. \_\_DATA tail (944 B) fully mapped: alignment padding + segment file padding, all ChangeLog text.
 
 ## What Is Still Open
 
@@ -56,3 +78,4 @@ Classification, not proof of execution. Scoped to \_\_text section only; the raw
 - `re/nextdimension/kernel/reports/i860_kernel_report_hardmask_pcode_phase1_promoted.txt`
 - `re/nextdimension/firmware/analysis/phase2/cross_block_results.json`
 - `re/nextdimension/firmware/analysis/phase2/phase2_seeds.json`
+- `re/nextdimension/firmware/analysis/provenance/data_tail_map.json`

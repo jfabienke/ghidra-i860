@@ -1,0 +1,81 @@
+{
+  "description": "__DATA segment tail provenance: mapping every byte in segment-relative 0xDC50..0xDFFF",
+  "binary": "ND_MachDriver_reloc",
+  "binary_size": 795464,
+  "segment": {
+    "name": "__DATA",
+    "vmaddr": "0xF80B4000",
+    "vmsize": 73728,
+    "fileoff": 738120,
+    "filesize": 57344
+  },
+  "sections": [
+    {
+      "name": "__data",
+      "type": "S_REGULAR",
+      "vmaddr": "0xF80B4000",
+      "size": 56400,
+      "file_offset": 738120,
+      "alignment": 4096,
+      "segment_relative": { "start": "0x0000", "end": "0xDC4F" }
+    },
+    {
+      "name": "__bss",
+      "type": "S_ZEROFILL",
+      "vmaddr": "0xF80C1D00",
+      "size": 2752,
+      "file_offset": 0,
+      "alignment": 256,
+      "segment_relative": { "start": "0xDD00", "end": "0xE7BF" },
+      "note": "No file backing (S_ZEROFILL); zero-initialized at runtime by loader"
+    },
+    {
+      "name": "__common",
+      "type": "S_ZEROFILL",
+      "vmaddr": "0xF80C27C0",
+      "size": 6360,
+      "file_offset": 0,
+      "alignment": 16,
+      "segment_relative": { "start": "0xE7C0", "end": "0x10097" },
+      "note": "No file backing (S_ZEROFILL); zero-initialized at runtime by loader"
+    }
+  ],
+  "tail": {
+    "total_bytes": 944,
+    "segment_relative": { "start": "0xDC50", "end": "0xDFFF" },
+    "file_range": { "start": 794520, "end": 795463 },
+    "va_range": { "start": "0xF80C1C50", "end": "0xF80C1FFF" },
+    "regions": [
+      {
+        "name": "inter_section_alignment_padding",
+        "segment_relative": { "start": "0xDC50", "end": "0xDCFF" },
+        "file_range": { "start": 794520, "end": 794695 },
+        "va_range": { "start": "0xF80C1C50", "end": "0xF80C1CFF" },
+        "bytes": 176,
+        "cause": "__bss section alignment 2^8=256 requires VA 0xF80C1D00; __data ends at VA 0xF80C1C50; gap = 0xB0 = 176 bytes",
+        "content": "GNU Emacs ChangeLog text (Oct 1986, Richard Mlynarik at MIT)",
+        "runtime_fate": "Unmapped gap between sections; not zeroed by loader, not referenced by code",
+        "printable_ascii_pct": 100.0
+      },
+      {
+        "name": "segment_file_padding_in_bss_range",
+        "segment_relative": { "start": "0xDD00", "end": "0xDFFF" },
+        "file_range": { "start": 794696, "end": 795463 },
+        "va_range": { "start": "0xF80C1D00", "end": "0xF80C1FFF" },
+        "bytes": 768,
+        "cause": "Segment filesize (0xE000=57344) extends past __data section (0xDC50=56400) into __bss VA range; __bss is S_ZEROFILL with offset=0, so these file bytes are inert padding",
+        "content": "GNU Emacs ChangeLog text (Oct 1986, Richard Mlynarik at MIT)",
+        "runtime_fate": "Overwritten with zeros by Mach-O loader when __bss is initialized",
+        "printable_ascii_pct": 100.0
+      }
+    ],
+    "content_summary": "All 944 bytes are 100% printable ASCII: GNU Emacs ChangeLog entries from October 1986 by Richard Mlynarik. This is stale linker padding — the ld(1) tool did not zero the gap between __data and the segment file boundary, leaving whatever was in the link-time object file buffer.",
+    "conclusion": "No i860 code, no data structures, no dispatch tables. Every byte is accounted for as linker/alignment artifact."
+  },
+  "verification": {
+    "bytes_mapped": 944,
+    "bytes_expected": 944,
+    "coverage": "100%",
+    "exit_criterion_met": true
+  }
+}
