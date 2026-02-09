@@ -8,7 +8,7 @@ Intel i860 (80860) processor module for [Ghidra](https://ghidra-sre.org/) — di
 - **4 language variants**: little-endian and big-endian for both XR (1989) and XP (1991)
 - **2 calling conventions**: GCC/NeXTSTEP ABI and SPEA/APX2 ABI
 - **Full p-code semantics** for decompiler output — no `unimpl` instructions
-- **Auto-detection** of Mach-O (CPU type 15) and ELF (EM_860 = 7) binaries
+- **Auto-detection** of Mach-O (CPU type 15) and ELF (EM_860 = 7) binaries; ND kernel Mach-O requires scripted import (see below)
 - **100% mnemonic match** on 15,432 instructions verified against reference disassembler
 
 ## Installation
@@ -97,6 +97,18 @@ Tested against a Rust-based i860 disassembler (99.93% MAME accuracy) using the N
 
 Verification uses the included `scripts/DisassembleAll.java` Ghidra script for headless linear-sweep disassembly.
 
+## Mach-O Kernel Analysis
+
+For Mach-O binaries where Ghidra can't parse the i860 thread command (e.g., NeXTdimension kernel), a two-script pipeline handles import and analysis:
+
+```bash
+./re/nextdimension/kernel/scripts/run_analysis.sh [binary] [xrefs_json] [recovery_map_json]
+```
+
+This runs `I860Import.java` (entry point + recursive descent with iterative call/branch seeding) as a preScript, followed by `I860Analyze.java` (worklist-based seed discovery, function creation, code/data classification, optional range filtering) as a postScript. Baseline recovery (no xrefs/map) currently yields 735 instructions across 8 functions (0.4% coverage). With the bundled `recovery_map.json` (allow/deny ranges + curated seeds), the same 784 KB kernel run produced 1,663 instructions across 64 functions (0.9% coverage on February 8, 2026). The kernel still relies heavily on indirect calls (`calli`) through dispatch tables, limiting static discovery.
+
+See [`re/nextdimension/kernel/`](re/nextdimension/kernel/) for results, findings, and scripts.
+
 ## File Structure
 
 ```
@@ -117,7 +129,17 @@ ghidra-i860/
 │   ├── gcc.cspec              # GCC/NeXTSTEP calling convention
 │   └── spea.cspec             # SPEA/APX2 calling convention
 ├── scripts/
-│   └── DisassembleAll.java    # Headless disassembly script
+│   ├── DisassembleAll.java    # Raw binary linear sweep + export
+│   └── AnalysisStats.java     # Analysis statistics utility
+├── re/                        # Reverse engineering targets
+│   └── nextdimension/
+│       ├── kernel/
+│       │   ├── i860_kernel.bin        # 784 KB Mach-O binary
+│       │   ├── scripts/               # Kernel analysis pipeline
+│       │   ├── reports/               # Analysis reports + logs
+│       │   └── docs/                  # Findings + memory map
+│       ├── firmware/                  # ND firmware binaries
+│       └── boot-rom/                  # ND boot ROM
 ├── docs/                      # Architecture & development reference
 │   ├── 01-i860-architecture-reference.md
 │   ├── 02-instruction-encoding-reference.md
