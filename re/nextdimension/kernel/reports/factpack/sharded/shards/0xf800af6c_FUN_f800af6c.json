@@ -1,0 +1,380 @@
+{
+  "schema_version": "shard-v1",
+  "factpack_source": "re/nextdimension/kernel/reports/factpack/20260209-162613",
+  "function": {
+    "entry": "0xf800af6c",
+    "name": "FUN_f800af6c",
+    "size": 48,
+    "in_exec": true,
+    "in_allow": true,
+    "in_deny": false,
+    "confidence_source": "curated",
+    "has_unresolved_bri": false
+  },
+  "blocks": [
+    {
+      "func_entry": "0xf800af6c",
+      "block_start": "0xf800af6c",
+      "block_end": "0xf800af9b",
+      "insn_count": 12
+    }
+  ],
+  "edges": [
+    {
+      "src": "0xf800af80",
+      "dst": "0xf800af84",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf800af7c",
+      "dst": "0xf800af80",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf800af84",
+      "dst": "0xf800af88",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf800af88",
+      "dst": "0xf800af8c",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf800af6c",
+      "dst": "0xf800af70",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf800af8c",
+      "dst": "0xf800af90",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf800af70",
+      "dst": "0xf800af74",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf800af90",
+      "dst": "0xf800af94",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf800af74",
+      "dst": "0xf800af78",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf800af94",
+      "dst": "0xf800af98",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf800af98",
+      "dst": "0xf800af9c",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf800af78",
+      "dst": "0xf800af7c",
+      "kind": "fallthrough",
+      "delay_slot": false
+    }
+  ],
+  "insns": [
+    {
+      "addr": "0xf800af6c",
+      "func_entry": "0xf800af6c",
+      "word": "0x000000a0",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r0(r0),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "0x0"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf800af70",
+      "func_entry": "0xf800af6c",
+      "word": "0x000010e4",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r2(r0),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "0x0",
+        "r2"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf800af74",
+      "func_entry": "0xf800af6c",
+      "word": "0x1180801c",
+      "mnemonic": "ld.s",
+      "operands": "ld.s r16(r12),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "r16",
+        "r12"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf800af78",
+      "func_entry": "0xf800af6c",
+      "word": "0x15009014",
+      "mnemonic": "ld.s",
+      "operands": "ld.s -0x6fec(r8),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "r8",
+        "0x9014"
+      ],
+      "pcode_ops": [
+        "INT_SEXT",
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": "mmio_high_space",
+      "string_ref": null
+    },
+    {
+      "addr": "0xf800af7c",
+      "func_entry": "0xf800af6c",
+      "word": "0x05800058",
+      "mnemonic": "ld.b",
+      "operands": "ld.b 0x58(r12),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "r12",
+        "0x58"
+      ],
+      "pcode_ops": [
+        "INT_SEXT",
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf800af80",
+      "func_entry": "0xf800af6c",
+      "word": "0x0000d0a0",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r26(r0),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "0x0",
+        "r26"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf800af84",
+      "func_entry": "0xf800af6c",
+      "word": "0xa4feff6f",
+      "mnemonic": "shl",
+      "operands": "shl 0xff6f,r7,r30",
+      "defs": [
+        "r30"
+      ],
+      "uses": [
+        "r7",
+        "0xff6f"
+      ],
+      "pcode_ops": [
+        "INT_LEFT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf800af88",
+      "func_entry": "0xf800af6c",
+      "word": "0x000211e4",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r2(r0),r2",
+      "defs": [
+        "r2"
+      ],
+      "uses": [
+        "0x0",
+        "r2"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf800af8c",
+      "func_entry": "0xf800af6c",
+      "word": "0x02000068",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r0(r16),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "0x0",
+        "r16"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf800af90",
+      "func_entry": "0xf800af6c",
+      "word": "0x000000a0",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r0(r0),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "0x0"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf800af94",
+      "func_entry": "0xf800af6c",
+      "word": "0x000010e4",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r2(r0),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "0x0",
+        "r2"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf800af98",
+      "func_entry": "0xf800af6c",
+      "word": "0x1580801c",
+      "mnemonic": "ld.s",
+      "operands": "ld.s -0x7fe4(r12),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "r12",
+        "0x801c"
+      ],
+      "pcode_ops": [
+        "INT_SEXT",
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": "mmio_high_space",
+      "string_ref": null
+    }
+  ],
+  "refs": [],
+  "strings": [],
+  "dispatch_unresolved": [],
+  "callees": [],
+  "callers": [],
+  "context": {
+    "r15_cluster": false,
+    "mmio_accesses": [
+      {
+        "addr": "0xf800af78",
+        "tag": "mmio_high_space"
+      }
+    ],
+    "nearby_deny_ranges": [],
+    "nearby_embedded_objects": [],
+    "priority_tags": [
+      "mmio_access"
+    ]
+  }
+}

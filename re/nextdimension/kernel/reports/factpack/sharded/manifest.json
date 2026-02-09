@@ -1,0 +1,585 @@
+{
+  "schema_version": "manifest-v1",
+  "factpack_source": "re/nextdimension/kernel/reports/factpack/20260209-162613",
+  "binary_sha256": "4c6db5675434c5d1ca75a1d76ba4f3f55918474276554134f7710f1e2435e6cf",
+  "language_id": "i860:LE:32:XR",
+  "compiler_spec": "gcc",
+  "function_count": 60,
+  "shards": [
+    {
+      "entry": "0xf800a680",
+      "name": "FUN_f800a680",
+      "size": 156,
+      "insn_count": 39,
+      "priority_tags": [
+        "unresolved_bri",
+        "mmio_access"
+      ],
+      "file": "shards/0xf800a680_FUN_f800a680.json"
+    },
+    {
+      "entry": "0xf8021a20",
+      "name": "FUN_f8021a20",
+      "size": 100,
+      "insn_count": 25,
+      "priority_tags": [
+        "unresolved_bri",
+        "mmio_access"
+      ],
+      "file": "shards/0xf8021a20_FUN_f8021a20.json"
+    },
+    {
+      "entry": "0xf800c630",
+      "name": "FUN_f800c630",
+      "size": 92,
+      "insn_count": 23,
+      "priority_tags": [
+        "unresolved_bri",
+        "mmio_access"
+      ],
+      "file": "shards/0xf800c630_FUN_f800c630.json"
+    },
+    {
+      "entry": "0xf8008ee4",
+      "name": "FUN_f8008ee4",
+      "size": 84,
+      "insn_count": 21,
+      "priority_tags": [
+        "unresolved_bri",
+        "mmio_access"
+      ],
+      "file": "shards/0xf8008ee4_FUN_f8008ee4.json"
+    },
+    {
+      "entry": "0xf8008274",
+      "name": "FUN_f8008274",
+      "size": 72,
+      "insn_count": 18,
+      "priority_tags": [
+        "unresolved_bri",
+        "mmio_access"
+      ],
+      "file": "shards/0xf8008274_FUN_f8008274.json"
+    },
+    {
+      "entry": "0xf800f70c",
+      "name": "FUN_f800f70c",
+      "size": 52,
+      "insn_count": 13,
+      "priority_tags": [
+        "unresolved_bri",
+        "mmio_access"
+      ],
+      "file": "shards/0xf800f70c_FUN_f800f70c.json"
+    },
+    {
+      "entry": "0xf800c584",
+      "name": "FUN_f800c584",
+      "size": 36,
+      "insn_count": 9,
+      "priority_tags": [
+        "unresolved_bri",
+        "mmio_access"
+      ],
+      "file": "shards/0xf800c584_FUN_f800c584.json"
+    },
+    {
+      "entry": "0xf800cb9c",
+      "name": "FUN_f800cb9c",
+      "size": 20,
+      "insn_count": 5,
+      "priority_tags": [
+        "unresolved_bri"
+      ],
+      "file": "shards/0xf800cb9c_FUN_f800cb9c.json"
+    },
+    {
+      "entry": "0xf800c2a4",
+      "name": "FUN_f800c2a4",
+      "size": 632,
+      "insn_count": 158,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf800c2a4_FUN_f800c2a4.json"
+    },
+    {
+      "entry": "0xf800f77c",
+      "name": "FUN_f800f77c",
+      "size": 424,
+      "insn_count": 106,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf800f77c_FUN_f800f77c.json"
+    },
+    {
+      "entry": "0xf8000000",
+      "name": "entry",
+      "size": 276,
+      "insn_count": 69,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf8000000_entry.json"
+    },
+    {
+      "entry": "0xf8009270",
+      "name": "FUN_f8009270",
+      "size": 256,
+      "insn_count": 64,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf8009270_FUN_f8009270.json"
+    },
+    {
+      "entry": "0xf80094fc",
+      "name": "FUN_f80094fc",
+      "size": 240,
+      "insn_count": 60,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf80094fc_FUN_f80094fc.json"
+    },
+    {
+      "entry": "0xf800916c",
+      "name": "FUN_f800916c",
+      "size": 184,
+      "insn_count": 46,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf800916c_FUN_f800916c.json"
+    },
+    {
+      "entry": "0xf800c964",
+      "name": "FUN_f800c964",
+      "size": 168,
+      "insn_count": 42,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf800c964_FUN_f800c964.json"
+    },
+    {
+      "entry": "0xf800a44c",
+      "name": "FUN_f800a44c",
+      "size": 112,
+      "insn_count": 28,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf800a44c_FUN_f800a44c.json"
+    },
+    {
+      "entry": "0xf800bf74",
+      "name": "FUN_f800bf74",
+      "size": 112,
+      "insn_count": 28,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf800bf74_FUN_f800bf74.json"
+    },
+    {
+      "entry": "0xf800d0ec",
+      "name": "FUN_f800d0ec",
+      "size": 92,
+      "insn_count": 23,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf800d0ec_FUN_f800d0ec.json"
+    },
+    {
+      "entry": "0xf800cd64",
+      "name": "FUN_f800cd64",
+      "size": 88,
+      "insn_count": 22,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf800cd64_FUN_f800cd64.json"
+    },
+    {
+      "entry": "0xf800d00c",
+      "name": "FUN_f800d00c",
+      "size": 88,
+      "insn_count": 22,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf800d00c_FUN_f800d00c.json"
+    },
+    {
+      "entry": "0xf8008098",
+      "name": "FUN_f8008098",
+      "size": 72,
+      "insn_count": 18,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf8008098_FUN_f8008098.json"
+    },
+    {
+      "entry": "0xf8008f5c",
+      "name": "FUN_f8008f5c",
+      "size": 72,
+      "insn_count": 18,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf8008f5c_FUN_f8008f5c.json"
+    },
+    {
+      "entry": "0xf800b83c",
+      "name": "FUN_f800b83c",
+      "size": 72,
+      "insn_count": 18,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf800b83c_FUN_f800b83c.json"
+    },
+    {
+      "entry": "0xf800c8bc",
+      "name": "FUN_f800c8bc",
+      "size": 72,
+      "insn_count": 18,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf800c8bc_FUN_f800c8bc.json"
+    },
+    {
+      "entry": "0xf807ee1c",
+      "name": "FUN_f807ee1c",
+      "size": 72,
+      "insn_count": 18,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf807ee1c_FUN_f807ee1c.json"
+    },
+    {
+      "entry": "0xf800842c",
+      "name": "FUN_f800842c",
+      "size": 68,
+      "insn_count": 17,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf800842c_FUN_f800842c.json"
+    },
+    {
+      "entry": "0xf8009ae8",
+      "name": "FUN_f8009ae8",
+      "size": 64,
+      "insn_count": 16,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf8009ae8_FUN_f8009ae8.json"
+    },
+    {
+      "entry": "0xf800c520",
+      "name": "FUN_f800c520",
+      "size": 64,
+      "insn_count": 16,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf800c520_FUN_f800c520.json"
+    },
+    {
+      "entry": "0xf800cf8c",
+      "name": "FUN_f800cf8c",
+      "size": 64,
+      "insn_count": 16,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf800cf8c_FUN_f800cf8c.json"
+    },
+    {
+      "entry": "0xf800c79c",
+      "name": "FUN_f800c79c",
+      "size": 60,
+      "insn_count": 15,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf800c79c_FUN_f800c79c.json"
+    },
+    {
+      "entry": "0xf80014c4",
+      "name": "FUN_f80014c4",
+      "size": 56,
+      "insn_count": 14,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf80014c4_FUN_f80014c4.json"
+    },
+    {
+      "entry": "0xf800dc7c",
+      "name": "FUN_f800dc7c",
+      "size": 56,
+      "insn_count": 14,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf800dc7c_FUN_f800dc7c.json"
+    },
+    {
+      "entry": "0xf800bc68",
+      "name": "FUN_f800bc68",
+      "size": 52,
+      "insn_count": 13,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf800bc68_FUN_f800bc68.json"
+    },
+    {
+      "entry": "0xf80080f4",
+      "name": "FUN_f80080f4",
+      "size": 48,
+      "insn_count": 12,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf80080f4_FUN_f80080f4.json"
+    },
+    {
+      "entry": "0xf800af6c",
+      "name": "FUN_f800af6c",
+      "size": 48,
+      "insn_count": 12,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf800af6c_FUN_f800af6c.json"
+    },
+    {
+      "entry": "0xf800a554",
+      "name": "FUN_f800a554",
+      "size": 44,
+      "insn_count": 11,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf800a554_FUN_f800a554.json"
+    },
+    {
+      "entry": "0xf800cef0",
+      "name": "FUN_f800cef0",
+      "size": 44,
+      "insn_count": 11,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf800cef0_FUN_f800cef0.json"
+    },
+    {
+      "entry": "0xf8008000",
+      "name": "FUN_f8008000",
+      "size": 40,
+      "insn_count": 10,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf8008000_FUN_f8008000.json"
+    },
+    {
+      "entry": "0xf800b3fc",
+      "name": "FUN_f800b3fc",
+      "size": 40,
+      "insn_count": 10,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf800b3fc_FUN_f800b3fc.json"
+    },
+    {
+      "entry": "0xf8008e70",
+      "name": "FUN_f8008e70",
+      "size": 32,
+      "insn_count": 8,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf8008e70_FUN_f8008e70.json"
+    },
+    {
+      "entry": "0xf80090d4",
+      "name": "FUN_f80090d4",
+      "size": 32,
+      "insn_count": 8,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf80090d4_FUN_f80090d4.json"
+    },
+    {
+      "entry": "0xf8009420",
+      "name": "FUN_f8009420",
+      "size": 32,
+      "insn_count": 8,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf8009420_FUN_f8009420.json"
+    },
+    {
+      "entry": "0xf800a0bc",
+      "name": "FUN_f800a0bc",
+      "size": 28,
+      "insn_count": 7,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf800a0bc_FUN_f800a0bc.json"
+    },
+    {
+      "entry": "0xf800df78",
+      "name": "FUN_f800df78",
+      "size": 28,
+      "insn_count": 7,
+      "priority_tags": [
+        "mmio_access"
+      ],
+      "file": "shards/0xf800df78_FUN_f800df78.json"
+    },
+    {
+      "entry": "0xf80017cc",
+      "name": "FUN_f80017cc",
+      "size": 248,
+      "insn_count": 62,
+      "priority_tags": [],
+      "file": "shards/0xf80017cc_FUN_f80017cc.json"
+    },
+    {
+      "entry": "0xf8008dd4",
+      "name": "FUN_f8008dd4",
+      "size": 72,
+      "insn_count": 18,
+      "priority_tags": [],
+      "file": "shards/0xf8008dd4_FUN_f8008dd4.json"
+    },
+    {
+      "entry": "0xf8000348",
+      "name": "FUN_f8000348",
+      "size": 68,
+      "insn_count": 17,
+      "priority_tags": [],
+      "file": "shards/0xf8000348_FUN_f8000348.json"
+    },
+    {
+      "entry": "0xf800a1c8",
+      "name": "FUN_f800a1c8",
+      "size": 68,
+      "insn_count": 17,
+      "priority_tags": [],
+      "file": "shards/0xf800a1c8_FUN_f800a1c8.json"
+    },
+    {
+      "entry": "0xf800f4d4",
+      "name": "FUN_f800f4d4",
+      "size": 48,
+      "insn_count": 12,
+      "priority_tags": [],
+      "file": "shards/0xf800f4d4_FUN_f800f4d4.json"
+    },
+    {
+      "entry": "0xf800bb60",
+      "name": "FUN_f800bb60",
+      "size": 44,
+      "insn_count": 11,
+      "priority_tags": [],
+      "file": "shards/0xf800bb60_FUN_f800bb60.json"
+    },
+    {
+      "entry": "0xf800db54",
+      "name": "FUN_f800db54",
+      "size": 44,
+      "insn_count": 11,
+      "priority_tags": [],
+      "file": "shards/0xf800db54_FUN_f800db54.json"
+    },
+    {
+      "entry": "0xf800b504",
+      "name": "FUN_f800b504",
+      "size": 40,
+      "insn_count": 10,
+      "priority_tags": [],
+      "file": "shards/0xf800b504_FUN_f800b504.json"
+    },
+    {
+      "entry": "0xf8008e20",
+      "name": "FUN_f8008e20",
+      "size": 32,
+      "insn_count": 8,
+      "priority_tags": [],
+      "file": "shards/0xf8008e20_FUN_f8008e20.json"
+    },
+    {
+      "entry": "0xf800c194",
+      "name": "FUN_f800c194",
+      "size": 32,
+      "insn_count": 8,
+      "priority_tags": [],
+      "file": "shards/0xf800c194_FUN_f800c194.json"
+    },
+    {
+      "entry": "0xf800cc00",
+      "name": "FUN_f800cc00",
+      "size": 32,
+      "insn_count": 8,
+      "priority_tags": [],
+      "file": "shards/0xf800cc00_FUN_f800cc00.json"
+    },
+    {
+      "entry": "0xf8004e44",
+      "name": "FUN_f8004e44",
+      "size": 24,
+      "insn_count": 6,
+      "priority_tags": [],
+      "file": "shards/0xf8004e44_FUN_f8004e44.json"
+    },
+    {
+      "entry": "0xf800b9e0",
+      "name": "FUN_f800b9e0",
+      "size": 24,
+      "insn_count": 6,
+      "priority_tags": [],
+      "file": "shards/0xf800b9e0_FUN_f800b9e0.json"
+    },
+    {
+      "entry": "0xf800f80c",
+      "name": "FUN_f800f80c",
+      "size": 24,
+      "insn_count": 6,
+      "priority_tags": [],
+      "file": "shards/0xf800f80c_FUN_f800f80c.json"
+    },
+    {
+      "entry": "0xf800bd9c",
+      "name": "FUN_f800bd9c",
+      "size": 16,
+      "insn_count": 4,
+      "priority_tags": [],
+      "file": "shards/0xf800bd9c_FUN_f800bd9c.json"
+    },
+    {
+      "entry": "0xf800c458",
+      "name": "FUN_f800c458",
+      "size": 16,
+      "insn_count": 4,
+      "priority_tags": [],
+      "file": "shards/0xf800c458_FUN_f800c458.json"
+    }
+  ]
+}

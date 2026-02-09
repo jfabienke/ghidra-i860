@@ -1,0 +1,204 @@
+{
+  "schema_version": "shard-v1",
+  "factpack_source": "re/nextdimension/kernel/reports/factpack/20260209-162613",
+  "function": {
+    "entry": "0xf800f80c",
+    "name": "FUN_f800f80c",
+    "size": 24,
+    "in_exec": true,
+    "in_allow": true,
+    "in_deny": false,
+    "confidence_source": "curated",
+    "has_unresolved_bri": false
+  },
+  "blocks": [
+    {
+      "func_entry": "0xf800f80c",
+      "block_start": "0xf800f80c",
+      "block_end": "0xf800f823",
+      "insn_count": 6
+    }
+  ],
+  "edges": [
+    {
+      "src": "0xf800f820",
+      "dst": "0xf800f824",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf800f81c",
+      "dst": "0xf800f820",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf800f80c",
+      "dst": "0xf800f810",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf800f810",
+      "dst": "0xf800f814",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf800f814",
+      "dst": "0xf800f818",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf800f818",
+      "dst": "0xf800f81c",
+      "kind": "fallthrough",
+      "delay_slot": false
+    }
+  ],
+  "insns": [
+    {
+      "addr": "0xf800f80c",
+      "func_entry": "0xf800f80c",
+      "word": "0x0c003087",
+      "mnemonic": "st.b",
+      "operands": "st.b r6,0x87(r0)",
+      "defs": [],
+      "uses": [
+        "0x0",
+        "0x87",
+        "r6"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "STORE"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf800f810",
+      "func_entry": "0xf800f80c",
+      "word": "0xe0ff7184",
+      "mnemonic": "or",
+      "operands": "or r14,r7,r31",
+      "defs": [
+        "r31"
+      ],
+      "uses": [
+        "r14",
+        "r7"
+      ],
+      "pcode_ops": [
+        "INT_OR"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf800f814",
+      "func_entry": "0xf800f80c",
+      "word": "0x05003f16",
+      "mnemonic": "ld.b",
+      "operands": "ld.b 0x3f16(r8),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "r8",
+        "0x3f16"
+      ],
+      "pcode_ops": [
+        "INT_SEXT",
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf800f818",
+      "func_entry": "0xf800f80c",
+      "word": "0x05f8001e",
+      "mnemonic": "ld.b",
+      "operands": "ld.b 0x1e(r15),r24",
+      "defs": [
+        "r24"
+      ],
+      "uses": [
+        "r15",
+        "0x1e"
+      ],
+      "pcode_ops": [
+        "INT_SEXT",
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf800f81c",
+      "func_entry": "0xf800f80c",
+      "word": "0x01003f16",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r7(r8),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "r8",
+        "r7"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf800f820",
+      "func_entry": "0xf800f80c",
+      "word": "0x01f8001e",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r0(r15),r24",
+      "defs": [
+        "r24"
+      ],
+      "uses": [
+        "0x0",
+        "r15"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    }
+  ],
+  "refs": [],
+  "strings": [],
+  "dispatch_unresolved": [],
+  "callees": [],
+  "callers": [],
+  "context": {
+    "r15_cluster": false,
+    "mmio_accesses": [],
+    "nearby_deny_ranges": [],
+    "nearby_embedded_objects": [],
+    "priority_tags": []
+  }
+}
