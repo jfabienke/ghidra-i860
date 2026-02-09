@@ -1,0 +1,1058 @@
+{
+  "metadata": {
+    "firmware": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/firmware/extracted/ND_MachDriver___TEXT_clean_window.bin",
+    "binary_size": 200704,
+    "target_offset": 130048,
+    "target_offset_hex": "0x1fc00",
+    "text_vmbase": "0xf8000000",
+    "data_vmbase": "0xf80b4000",
+    "embedded_m68k_macho_offset": "0x17cb8"
+  },
+  "embedded_m68k_macho": {
+    "offset": 97464,
+    "sections": {
+      "__text": {
+        "vmaddr": "0x00000000",
+        "size": 34146,
+        "file_offset": "0x017ed0"
+      },
+      "__const": {
+        "vmaddr": "0x00008562",
+        "size": 1672,
+        "file_offset": "0x020432"
+      },
+      "__cstring": {
+        "vmaddr": "0x00008bea",
+        "size": 1923,
+        "file_offset": "0x020aba"
+      },
+      "__data": {
+        "vmaddr": "0x0000936e",
+        "size": 256,
+        "file_offset": "0x02123e"
+      },
+      "__bss": {
+        "vmaddr": "0x0000946e",
+        "size": 44,
+        "file_offset": "0x017cb8"
+      }
+    },
+    "symbols_readable": [
+      "_Start",
+      "_CIEABCImageInit",
+      "_CIEASampleProc",
+      "_CantHappen",
+      "_ConvertColor",
+      "_CrCMYKAdjustParams",
+      "_FindDiffBounds",
+      "_FindRCacheFor",
+      "_LAddToDirty",
+      "_LFlushBits",
+      "_Mark",
+      "_NXGetWi"
+    ]
+  },
+  "const_dispatch_tables": [
+    {
+      "table_index": 0,
+      "entry_count": 21,
+      "entries": [
+        {
+          "const_vmaddr": "0x8562",
+          "target_vmaddr": "0x04a6"
+        },
+        {
+          "const_vmaddr": "0x8566",
+          "target_vmaddr": "0x07b2"
+        },
+        {
+          "const_vmaddr": "0x856a",
+          "target_vmaddr": "0x06d0"
+        },
+        {
+          "const_vmaddr": "0x856e",
+          "target_vmaddr": "0x07f2"
+        },
+        {
+          "const_vmaddr": "0x8572",
+          "target_vmaddr": "0x0a2c"
+        },
+        {
+          "const_vmaddr": "0x8576",
+          "target_vmaddr": "0x0a60"
+        },
+        {
+          "const_vmaddr": "0x857a",
+          "target_vmaddr": "0x0a96"
+        },
+        {
+          "const_vmaddr": "0x857e",
+          "target_vmaddr": "0x0aba"
+        },
+        {
+          "const_vmaddr": "0x8582",
+          "target_vmaddr": "0x0b28"
+        },
+        {
+          "const_vmaddr": "0x8586",
+          "target_vmaddr": "0x0b42"
+        },
+        {
+          "const_vmaddr": "0x858a",
+          "target_vmaddr": "0x0bdc"
+        },
+        {
+          "const_vmaddr": "0x858e",
+          "target_vmaddr": "0x0bfc"
+        },
+        {
+          "const_vmaddr": "0x8592",
+          "target_vmaddr": "0x0c30"
+        },
+        {
+          "const_vmaddr": "0x8596",
+          "target_vmaddr": "0x0c7a"
+        },
+        {
+          "const_vmaddr": "0x859a",
+          "target_vmaddr": "0x0c94"
+        },
+        {
+          "const_vmaddr": "0x859e",
+          "target_vmaddr": "0x0cae"
+        },
+        {
+          "const_vmaddr": "0x85a2",
+          "target_vmaddr": "0x0cc8"
+        },
+        {
+          "const_vmaddr": "0x85a6",
+          "target_vmaddr": "0x0ce2"
+        },
+        {
+          "const_vmaddr": "0x85aa",
+          "target_vmaddr": "0x0d06"
+        },
+        {
+          "const_vmaddr": "0x85ae",
+          "target_vmaddr": "0x0778"
+        },
+        {
+          "const_vmaddr": "0x85b2",
+          "target_vmaddr": "0x0d64"
+        }
+      ]
+    },
+    {
+      "table_index": 1,
+      "entry_count": 12,
+      "entries": [
+        {
+          "const_vmaddr": "0x85ba",
+          "target_vmaddr": "0x1eae"
+        },
+        {
+          "const_vmaddr": "0x85be",
+          "target_vmaddr": "0x1f24"
+        },
+        {
+          "const_vmaddr": "0x85c2",
+          "target_vmaddr": "0x1f92"
+        },
+        {
+          "const_vmaddr": "0x85c6",
+          "target_vmaddr": "0x2194"
+        },
+        {
+          "const_vmaddr": "0x85ca",
+          "target_vmaddr": "0x2352"
+        },
+        {
+          "const_vmaddr": "0x85ce",
+          "target_vmaddr": "0x242c"
+        },
+        {
+          "const_vmaddr": "0x85d2",
+          "target_vmaddr": "0x249a"
+        },
+        {
+          "const_vmaddr": "0x85d6",
+          "target_vmaddr": "0x2550"
+        },
+        {
+          "const_vmaddr": "0x85da",
+          "target_vmaddr": "0x2636"
+        },
+        {
+          "const_vmaddr": "0x85de",
+          "target_vmaddr": "0x26d2"
+        },
+        {
+          "const_vmaddr": "0x85e2",
+          "target_vmaddr": "0x2580"
+        },
+        {
+          "const_vmaddr": "0x85e6",
+          "target_vmaddr": "0x25f8"
+        }
+      ]
+    },
+    {
+      "table_index": 2,
+      "entry_count": 4,
+      "entries": [
+        {
+          "const_vmaddr": "0x85ee",
+          "target_vmaddr": "0x1388"
+        },
+        {
+          "const_vmaddr": "0x85f2",
+          "target_vmaddr": "0x26f4"
+        },
+        {
+          "const_vmaddr": "0x8616",
+          "target_vmaddr": "0x340a"
+        },
+        {
+          "const_vmaddr": "0x8632",
+          "target_vmaddr": "0x340a"
+        }
+      ]
+    },
+    {
+      "table_index": 3,
+      "entry_count": 8,
+      "entries": [
+        {
+          "const_vmaddr": "0x863e",
+          "target_vmaddr": "0x0001"
+        },
+        {
+          "const_vmaddr": "0x8642",
+          "target_vmaddr": "0x0004"
+        },
+        {
+          "const_vmaddr": "0x8646",
+          "target_vmaddr": "0x0002"
+        },
+        {
+          "const_vmaddr": "0x864a",
+          "target_vmaddr": "0x0005"
+        },
+        {
+          "const_vmaddr": "0x864e",
+          "target_vmaddr": "0x0006"
+        },
+        {
+          "const_vmaddr": "0x8652",
+          "target_vmaddr": "0x0003"
+        },
+        {
+          "const_vmaddr": "0x8656",
+          "target_vmaddr": "0x0007"
+        },
+        {
+          "const_vmaddr": "0x865a",
+          "target_vmaddr": "0x000c"
+        }
+      ]
+    },
+    {
+      "table_index": 4,
+      "entry_count": 1,
+      "entries": [
+        {
+          "const_vmaddr": "0x86a2",
+          "target_vmaddr": "0x0004"
+        }
+      ]
+    },
+    {
+      "table_index": 5,
+      "entry_count": 1,
+      "entries": [
+        {
+          "const_vmaddr": "0x86ae",
+          "target_vmaddr": "0x0004"
+        }
+      ]
+    },
+    {
+      "table_index": 6,
+      "entry_count": 1,
+      "entries": [
+        {
+          "const_vmaddr": "0x86ee",
+          "target_vmaddr": "0x0004"
+        }
+      ]
+    },
+    {
+      "table_index": 7,
+      "entry_count": 1,
+      "entries": [
+        {
+          "const_vmaddr": "0x86fa",
+          "target_vmaddr": "0x0004"
+        }
+      ]
+    },
+    {
+      "table_index": 8,
+      "entry_count": 1,
+      "entries": [
+        {
+          "const_vmaddr": "0x873a",
+          "target_vmaddr": "0x0004"
+        }
+      ]
+    },
+    {
+      "table_index": 9,
+      "entry_count": 1,
+      "entries": [
+        {
+          "const_vmaddr": "0x8746",
+          "target_vmaddr": "0x0004"
+        }
+      ]
+    },
+    {
+      "table_index": 10,
+      "entry_count": 1,
+      "entries": [
+        {
+          "const_vmaddr": "0x8796",
+          "target_vmaddr": "0x0004"
+        }
+      ]
+    },
+    {
+      "table_index": 11,
+      "entry_count": 1,
+      "entries": [
+        {
+          "const_vmaddr": "0x87a2",
+          "target_vmaddr": "0x0004"
+        }
+      ]
+    },
+    {
+      "table_index": 12,
+      "entry_count": 1,
+      "entries": [
+        {
+          "const_vmaddr": "0x87f6",
+          "target_vmaddr": "0x0004"
+        }
+      ]
+    },
+    {
+      "table_index": 13,
+      "entry_count": 22,
+      "entries": [
+        {
+          "const_vmaddr": "0x8952",
+          "target_vmaddr": "0x000c"
+        },
+        {
+          "const_vmaddr": "0x895a",
+          "target_vmaddr": "0x0001"
+        },
+        {
+          "const_vmaddr": "0x89e2",
+          "target_vmaddr": "0x000c"
+        },
+        {
+          "const_vmaddr": "0x89ea",
+          "target_vmaddr": "0x0001"
+        },
+        {
+          "const_vmaddr": "0x89fa",
+          "target_vmaddr": "0x000c"
+        },
+        {
+          "const_vmaddr": "0x8a02",
+          "target_vmaddr": "0x0001"
+        },
+        {
+          "const_vmaddr": "0x8ae6",
+          "target_vmaddr": "0x000c"
+        },
+        {
+          "const_vmaddr": "0x8aee",
+          "target_vmaddr": "0x0001"
+        },
+        {
+          "const_vmaddr": "0x8afa",
+          "target_vmaddr": "0x000c"
+        },
+        {
+          "const_vmaddr": "0x8b02",
+          "target_vmaddr": "0x0001"
+        },
+        {
+          "const_vmaddr": "0x8b0e",
+          "target_vmaddr": "0x000c"
+        },
+        {
+          "const_vmaddr": "0x8b16",
+          "target_vmaddr": "0x0001"
+        },
+        {
+          "const_vmaddr": "0x8b22",
+          "target_vmaddr": "0x000c"
+        },
+        {
+          "const_vmaddr": "0x8b2a",
+          "target_vmaddr": "0x0001"
+        },
+        {
+          "const_vmaddr": "0x8b36",
+          "target_vmaddr": "0x000c"
+        },
+        {
+          "const_vmaddr": "0x8b3e",
+          "target_vmaddr": "0x0001"
+        },
+        {
+          "const_vmaddr": "0x8b4e",
+          "target_vmaddr": "0x000c"
+        },
+        {
+          "const_vmaddr": "0x8b56",
+          "target_vmaddr": "0x0001"
+        },
+        {
+          "const_vmaddr": "0x8b8e",
+          "target_vmaddr": "0x000c"
+        },
+        {
+          "const_vmaddr": "0x8b96",
+          "target_vmaddr": "0x0001"
+        },
+        {
+          "const_vmaddr": "0x8bae",
+          "target_vmaddr": "0x000c"
+        },
+        {
+          "const_vmaddr": "0x8bb6",
+          "target_vmaddr": "0x0001"
+        }
+      ]
+    }
+  ],
+  "named_handlers": [
+    {
+      "name": "nd_setsync",
+      "name_addr": "0x8c72",
+      "handler_addr": "0x06a8"
+    },
+    {
+      "name": "nd_currentsync",
+      "name_addr": "0x8c63",
+      "handler_addr": "0x06bc"
+    }
+  ],
+  "handler_dispatch_table": [
+    {
+      "data_vmaddr": "0x937e",
+      "handler_addr": "0x06a8"
+    },
+    {
+      "data_vmaddr": "0x9386",
+      "handler_addr": "0x06bc"
+    },
+    {
+      "data_vmaddr": "0x93da",
+      "handler_addr": "0x15e4"
+    },
+    {
+      "data_vmaddr": "0x93e2",
+      "handler_addr": "0x0f7e"
+    },
+    {
+      "data_vmaddr": "0x93ea",
+      "handler_addr": "0x0fd6"
+    },
+    {
+      "data_vmaddr": "0x93ee",
+      "handler_addr": "0x111e"
+    },
+    {
+      "data_vmaddr": "0x93f2",
+      "handler_addr": "0x11d6"
+    },
+    {
+      "data_vmaddr": "0x93f6",
+      "handler_addr": "0x1382"
+    },
+    {
+      "data_vmaddr": "0x93fa",
+      "handler_addr": "0x0fa8"
+    },
+    {
+      "data_vmaddr": "0x93fe",
+      "handler_addr": "0x1572"
+    },
+    {
+      "data_vmaddr": "0x9406",
+      "handler_addr": "0x15ac"
+    },
+    {
+      "data_vmaddr": "0x940e",
+      "handler_addr": "0x0f1c"
+    }
+  ],
+  "error_strings": [
+    {
+      "addr": "0x937a",
+      "string": "nd_setsync"
+    },
+    {
+      "addr": "0x9382",
+      "string": "nd_currentsync"
+    },
+    {
+      "addr": "0x9432",
+      "string": "permission required"
+    },
+    {
+      "addr": "0x9436",
+      "string": "unknown server"
+    },
+    {
+      "addr": "0x943a",
+      "string": "server loaded"
+    },
+    {
+      "addr": "0x943e",
+      "string": "server unloaded"
+    },
+    {
+      "addr": "0x9442",
+      "string": "need a server name"
+    },
+    {
+      "addr": "0x9446",
+      "string": "server already exists"
+    },
+    {
+      "addr": "0x944a",
+      "string": "port already advertised"
+    },
+    {
+      "addr": "0x944e",
+      "string": "server won't relocate"
+    },
+    {
+      "addr": "0x9452",
+      "string": "server won't load"
+    },
+    {
+      "addr": "0x9456",
+      "string": "can't open server relocatable"
+    },
+    {
+      "addr": "0x945a",
+      "string": "relocatable malformed"
+    },
+    {
+      "addr": "0x945e",
+      "string": "can't allocate server memory"
+    },
+    {
+      "addr": "0x9462",
+      "string": "server deleted during operation"
+    },
+    {
+      "addr": "0x9466",
+      "string": "server won't unload properly"
+    },
+    {
+      "addr": "0x946a",
+      "string": "server detached"
+    }
+  ],
+  "ps_prologue_operators": [
+    {
+      "name": "c",
+      "offset": "0x0fd66",
+      "alias_for": null
+    },
+    {
+      "name": "v",
+      "offset": "0x0fd91",
+      "alias_for": null
+    },
+    {
+      "name": "y",
+      "offset": "0x0fdd2",
+      "alias_for": null
+    },
+    {
+      "name": "l",
+      "offset": "0x0fe04",
+      "alias_for": null
+    },
+    {
+      "name": "m",
+      "offset": "0x0fe2e",
+      "alias_for": null
+    },
+    {
+      "name": "cf",
+      "offset": "0x0fe93",
+      "alias_for": null
+    },
+    {
+      "name": "showpage",
+      "offset": "0x105bf",
+      "alias_for": null
+    },
+    {
+      "name": "annotatepage",
+      "offset": "0x10d34",
+      "alias_for": null
+    },
+    {
+      "name": "Y",
+      "offset": "0x0fcf3",
+      "alias_for": "y"
+    },
+    {
+      "name": "L",
+      "offset": "0x0fd27",
+      "alias_for": "l"
+    },
+    {
+      "name": "C",
+      "offset": "0x0fd80",
+      "alias_for": "c"
+    },
+    {
+      "name": "V",
+      "offset": "0x0fdc1",
+      "alias_for": "v"
+    },
+    {
+      "name": "Y",
+      "offset": "0x0fdf3",
+      "alias_for": "y"
+    },
+    {
+      "name": "L",
+      "offset": "0x0fe1d",
+      "alias_for": "l"
+    }
+  ],
+  "cstrings": [
+    {
+      "vmaddr": "0x8bea",
+      "string": "NDDriver: ND_Load_MachDriver"
+    },
+    {
+      "vmaddr": "0x8c07",
+      "string": "NextDimension"
+    },
+    {
+      "vmaddr": "0x8c16",
+      "string": "NDDriver: netname_lookup: ND timeout"
+    },
+    {
+      "vmaddr": "0x8c3b",
+      "string": "NDDriver: ND_GetBoardList"
+    },
+    {
+      "vmaddr": "0x8c55",
+      "string": "NeXTdimension"
+    },
+    {
+      "vmaddr": "0x8c63",
+      "string": "nd_currentsync"
+    },
+    {
+      "vmaddr": "0x8c72",
+      "string": "nd_setsync"
+    },
+    {
+      "vmaddr": "0x8c7d",
+      "string": "port_allocate"
+    },
+    {
+      "vmaddr": "0x8c8b",
+      "string": "Another WindowServer is using the NeXTdimension board.\n"
+    },
+    {
+      "vmaddr": "0x8cc3",
+      "string": "Cannot set PostScript hook. (%d)\n"
+    },
+    {
+      "vmaddr": "0x8ce5",
+      "string": "-NDSlot"
+    },
+    {
+      "vmaddr": "0x8ced",
+      "string": "(NextDimension)"
+    },
+    {
+      "vmaddr": "0x8cfd",
+      "string": "/usr/lib/NextStep/Displays/NeXTdimension.psdrvr/NDserver"
+    },
+    {
+      "vmaddr": "0x8d36",
+      "string": "FAILURE IN NeXTdimension SERVER\n"
+    },
+    {
+      "vmaddr": "0x8d57",
+      "string": "ps_server"
+    },
+    {
+      "vmaddr": "0x8d61",
+      "string": "NDserver died on startup.\n"
+    },
+    {
+      "vmaddr": "0x8d7c",
+      "string": "netname_look_up for ps_server failed (%d)\n"
+    },
+    {
+      "vmaddr": "0x8da7",
+      "string": "{1 2.2 div exp } dup dup {}"
+    },
+    {
+      "vmaddr": "0x8dc3",
+      "string": "NeXTdimension internal msg error: %s\n"
+    },
+    {
+      "vmaddr": "0x8de9",
+      "string": "makePublic: msg_send returned %D\n"
+    },
+    {
+      "vmaddr": "0x8e0b",
+      "string": "makePublic: msg_receive returned %D\n"
+    },
+    {
+      "vmaddr": "0x8e30",
+      "string": "mark_msg_send: msg_send returned %D\n"
+    },
+    {
+      "vmaddr": "0x8e55",
+      "string": "nd_start_video: can't find window bag\n"
+    },
+    {
+      "vmaddr": "0x8e7c",
+      "string": "nd_start_video: can't get window info\n"
+    },
+    {
+      "vmaddr": "0x8ea3",
+      "string": "NDGrab: can't find window bag\n"
+    },
+    {
+      "vmaddr": "0x8ec2",
+      "string": "nd_resumerecording: ps_setRecordingInfo fails (%d)\n"
+    },
+    {
+      "vmaddr": "0x8ef6",
+      "string": "nd_resumerecording: ps_startRecording fails (%d)\n"
+    },
+    {
+      "vmaddr": "0x8f28",
+      "string": "malloc failed"
+    },
+    {
+      "vmaddr": "0x8f36",
+      "string": "vm_allocate failed\n"
+    },
+    {
+      "vmaddr": "0x8f4a",
+      "string": "as_newRead: no memory"
+    },
+    {
+      "vmaddr": "0x8f60",
+      "string": "as_new_message: incorrect id for continuation message"
+    },
+    {
+      "vmaddr": "0x8f96",
+      "string": "as_read: size mismatch on read"
+    },
+    {
+      "vmaddr": "0x8fb5",
+      "string": "as_read: size mismatch on out-of-band read"
+    },
+    {
+      "vmaddr": "0x8fe0",
+      "string": "nd ps driver: can't build CIE table\n"
+    },
+    {
+      "vmaddr": "0x9005",
+      "string": "Detached"
+    },
+    {
+      "vmaddr": "0x900e",
+      "string": "Deallocated"
+    },
+    {
+      "vmaddr": "0x901a",
+      "string": "Unloading"
+    },
+    {
+      "vmaddr": "0x9024",
+      "string": "Loaded"
+    },
+    {
+      "vmaddr": "0x902b",
+      "string": "Loading"
+    },
+    {
+      "vmaddr": "0x9033",
+      "string": "Allocated"
+    },
+    {
+      "vmaddr": "0x903d",
+      "string": "Allocating"
+    },
+    {
+      "vmaddr": "0x9048",
+      "string": "Zombie"
+    },
+    {
+      "vmaddr": "0x904f",
+      "string": "NeXTdimension: Couldn't find kern_loader's port (%s)\n"
+    },
+    {
+      "vmaddr": "0x9085",
+      "string": "NeXTdimension: get_server_state() fails (%s)\n"
+    },
+    {
+      "vmaddr": "0x90b3",
+      "string": "/usr/lib/NextStep/Displays/NeXTdimension.psdrvr/ND_MachDriver_reloc"
+    },
+    {
+      "vmaddr": "0x90f7",
+      "string": "NeXTdimension: kern_loader_add_server() fails (%s)\n"
+    },
+    {
+      "vmaddr": "0x912b",
+      "string": "NeXTdimension: kern_loader_load_server() fails (%s)\n"
+    },
+    {
+      "vmaddr": "0x9160",
+      "string": "NeXTdimension: Mach driver spontaneously unloading!\n"
+    },
+    {
+      "vmaddr": "0x9195",
+      "string": "NeXTdimension: Mach driver has become a zombie!\n"
+    },
+    {
+      "vmaddr": "0x91c6",
+      "string": "r"
+    },
+    {
+      "vmaddr": "0x91c8",
+      "string": "/etc/kern_loader.conf"
+    },
+    {
+      "vmaddr": "0x91de",
+      "string": " \t\n"
+    },
+    {
+      "vmaddr": "0x91e2",
+      "string": "a"
+    },
+    {
+      "vmaddr": "0x91e4",
+      "string": "\n"
+    },
+    {
+      "vmaddr": "0x91e6",
+      "string": "%s\n"
+    },
+    {
+      "vmaddr": "0x91ea",
+      "string": "parent_port"
+    },
+    {
+      "vmaddr": "0x91f6",
+      "string": "ND_Port_check_in()"
+    },
+    {
+      "vmaddr": "0x9209",
+      "string": "%s : %s (%d)\n"
+    },
+    {
+      "vmaddr": "0x9217",
+      "string": "server detached"
+    },
+    {
+      "vmaddr": "0x9227",
+      "string": "server won't unload properly"
+    },
+    {
+      "vmaddr": "0x9244",
+      "string": "server deleted during operation"
+    },
+    {
+      "vmaddr": "0x9264",
+      "string": "can't allocate server memory"
+    },
+    {
+      "vmaddr": "0x9281",
+      "string": "relocatable malformed"
+    },
+    {
+      "vmaddr": "0x9297",
+      "string": "can't open server relocatable"
+    },
+    {
+      "vmaddr": "0x92b5",
+      "string": "server won't load"
+    },
+    {
+      "vmaddr": "0x92c7",
+      "string": "server won't relocate"
+    },
+    {
+      "vmaddr": "0x92dd",
+      "string": "port already advertised"
+    },
+    {
+      "vmaddr": "0x92f5",
+      "string": "server already exists"
+    },
+    {
+      "vmaddr": "0x930b",
+      "string": "need a server name"
+    },
+    {
+      "vmaddr": "0x931e",
+      "string": "server unloaded"
+    },
+    {
+      "vmaddr": "0x932e",
+      "string": "server loaded"
+    },
+    {
+      "vmaddr": "0x933c",
+      "string": "unknown server"
+    },
+    {
+      "vmaddr": "0x934b",
+      "string": "permission required"
+    },
+    {
+      "vmaddr": "0x935f",
+      "string": "server_loader"
+    }
+  ],
+  "i860_address_constants": [
+    {
+      "offset": "0x00028",
+      "register": 16,
+      "value": "0xf80c27c0"
+    },
+    {
+      "offset": "0x0003c",
+      "register": 2,
+      "value": "0xf80b5000"
+    },
+    {
+      "offset": "0x000bc",
+      "register": 20,
+      "value": "0xf8001000"
+    },
+    {
+      "offset": "0x01008",
+      "register": 21,
+      "value": "0xf80010b0"
+    },
+    {
+      "offset": "0x01064",
+      "register": 2,
+      "value": "0xf80b5000"
+    },
+    {
+      "offset": "0x01078",
+      "register": 16,
+      "value": "0xf800109c"
+    },
+    {
+      "offset": "0x01764",
+      "register": 16,
+      "value": "0xf80b7000"
+    },
+    {
+      "offset": "0x01d30",
+      "register": 16,
+      "value": "0xf80b4fe0"
+    },
+    {
+      "offset": "0x01d88",
+      "register": 16,
+      "value": "0xf80b4fe0"
+    },
+    {
+      "offset": "0x01e38",
+      "register": 16,
+      "value": "0xf80b4fe0"
+    }
+  ],
+  "handler_addresses": [
+    "0x0001",
+    "0x0002",
+    "0x0003",
+    "0x0004",
+    "0x0005",
+    "0x0006",
+    "0x0007",
+    "0x000c",
+    "0x04a6",
+    "0x06a8",
+    "0x06bc",
+    "0x06d0",
+    "0x0778",
+    "0x07b2",
+    "0x07f2",
+    "0x0a2c",
+    "0x0a60",
+    "0x0a96",
+    "0x0aba",
+    "0x0b28",
+    "0x0b42",
+    "0x0bdc",
+    "0x0bfc",
+    "0x0c30",
+    "0x0c7a",
+    "0x0c94",
+    "0x0cae",
+    "0x0cc8",
+    "0x0ce2",
+    "0x0d06",
+    "0x0d64",
+    "0x0f1c",
+    "0x0f7e",
+    "0x0fa8",
+    "0x0fd6",
+    "0x111e",
+    "0x11d6",
+    "0x1382",
+    "0x1388",
+    "0x1572",
+    "0x15ac",
+    "0x15e4",
+    "0x1eae",
+    "0x1f24",
+    "0x1f92",
+    "0x2194",
+    "0x2352",
+    "0x242c",
+    "0x249a",
+    "0x2550",
+    "0x2580",
+    "0x25f8",
+    "0x2636",
+    "0x26d2",
+    "0x26f4",
+    "0x340a"
+  ],
+  "handler_count": 56
+}

@@ -1,0 +1,5689 @@
+{
+  "metadata": {
+    "binary": "ND_MachDriver___TEXT_clean_window.bin",
+    "base_address": "0xf8000000",
+    "binary_size": 200704,
+    "total_bri_raw": 1211,
+    "bri_in_code": 616,
+    "bri_in_data_filtered": 595,
+    "resolved_count": 0,
+    "unresolved_count": 616,
+    "source_type_breakdown": {
+      "register_chain": 27,
+      "unknown": 586,
+      "ld_table": 2,
+      "ld_reg": 1
+    }
+  },
+  "bri_sites": [
+    {
+      "addr": "0xf800117c",
+      "file_offset": "0x0117c",
+      "addr_int": 4160754044,
+      "file_offset_int": 4476,
+      "target_reg": "r8",
+      "source_type": "register_chain",
+      "writer_addr": "0xf8001150",
+      "writer_file_offset": "0x01150",
+      "op": "addu_imm",
+      "detail": "addu_imm -> r8 at 0xf8001150"
+    },
+    {
+      "addr": "0xf80011c8",
+      "file_offset": "0x011c8",
+      "addr_int": 4160754120,
+      "file_offset_int": 4552,
+      "target_reg": "r28",
+      "source_type": "unknown",
+      "detail": "no write to r28 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80011e4",
+      "file_offset": "0x011e4",
+      "addr_int": 4160754148,
+      "file_offset_int": 4580,
+      "target_reg": "r30",
+      "source_type": "unknown",
+      "detail": "no write to r30 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80011f8",
+      "file_offset": "0x011f8",
+      "addr_int": 4160754168,
+      "file_offset_int": 4600,
+      "target_reg": "r30",
+      "source_type": "unknown",
+      "detail": "no write to r30 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800120c",
+      "file_offset": "0x0120c",
+      "addr_int": 4160754188,
+      "file_offset_int": 4620,
+      "target_reg": "r30",
+      "source_type": "unknown",
+      "detail": "no write to r30 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8001210",
+      "file_offset": "0x01210",
+      "addr_int": 4160754192,
+      "file_offset_int": 4624,
+      "target_reg": "r10",
+      "source_type": "unknown",
+      "detail": "no write to r10 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8001240",
+      "file_offset": "0x01240",
+      "addr_int": 4160754240,
+      "file_offset_int": 4672,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8001244",
+      "file_offset": "0x01244",
+      "addr_int": 4160754244,
+      "file_offset_int": 4676,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80015a4",
+      "file_offset": "0x015a4",
+      "addr_int": 4160755108,
+      "file_offset_int": 5540,
+      "target_reg": "r28",
+      "source_type": "unknown",
+      "detail": "no write to r28 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8001660",
+      "file_offset": "0x01660",
+      "addr_int": 4160755296,
+      "file_offset_int": 5728,
+      "target_reg": "r8",
+      "source_type": "unknown",
+      "detail": "no write to r8 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8001734",
+      "file_offset": "0x01734",
+      "addr_int": 4160755508,
+      "file_offset_int": 5940,
+      "target_reg": "r8",
+      "source_type": "unknown",
+      "detail": "no write to r8 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8002d38",
+      "file_offset": "0x02d38",
+      "addr_int": 4160761144,
+      "file_offset_int": 11576,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8002d60",
+      "file_offset": "0x02d60",
+      "addr_int": 4160761184,
+      "file_offset_int": 11616,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8002da4",
+      "file_offset": "0x02da4",
+      "addr_int": 4160761252,
+      "file_offset_int": 11684,
+      "target_reg": "r31",
+      "source_type": "unknown",
+      "detail": "no write to r31 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80034f8",
+      "file_offset": "0x034f8",
+      "addr_int": 4160763128,
+      "file_offset_int": 13560,
+      "target_reg": "r18",
+      "source_type": "unknown",
+      "detail": "no write to r18 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8003804",
+      "file_offset": "0x03804",
+      "addr_int": 4160763908,
+      "file_offset_int": 14340,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80041c8",
+      "file_offset": "0x041c8",
+      "addr_int": 4160766408,
+      "file_offset_int": 16840,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80042a4",
+      "file_offset": "0x042a4",
+      "addr_int": 4160766628,
+      "file_offset_int": 17060,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8004358",
+      "file_offset": "0x04358",
+      "addr_int": 4160766808,
+      "file_offset_int": 17240,
+      "target_reg": "r29",
+      "source_type": "unknown",
+      "detail": "no write to r29 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8004370",
+      "file_offset": "0x04370",
+      "addr_int": 4160766832,
+      "file_offset_int": 17264,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80043ec",
+      "file_offset": "0x043ec",
+      "addr_int": 4160766956,
+      "file_offset_int": 17388,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8004540",
+      "file_offset": "0x04540",
+      "addr_int": 4160767296,
+      "file_offset_int": 17728,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8004acc",
+      "file_offset": "0x04acc",
+      "addr_int": 4160768716,
+      "file_offset_int": 19148,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8004b2c",
+      "file_offset": "0x04b2c",
+      "addr_int": 4160768812,
+      "file_offset_int": 19244,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800502c",
+      "file_offset": "0x0502c",
+      "addr_int": 4160770092,
+      "file_offset_int": 20524,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8005044",
+      "file_offset": "0x05044",
+      "addr_int": 4160770116,
+      "file_offset_int": 20548,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800507c",
+      "file_offset": "0x0507c",
+      "addr_int": 4160770172,
+      "file_offset_int": 20604,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80050b0",
+      "file_offset": "0x050b0",
+      "addr_int": 4160770224,
+      "file_offset_int": 20656,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80051f4",
+      "file_offset": "0x051f4",
+      "addr_int": 4160770548,
+      "file_offset_int": 20980,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80052c4",
+      "file_offset": "0x052c4",
+      "addr_int": 4160770756,
+      "file_offset_int": 21188,
+      "target_reg": "r30",
+      "source_type": "unknown",
+      "detail": "no write to r30 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800545c",
+      "file_offset": "0x0545c",
+      "addr_int": 4160771164,
+      "file_offset_int": 21596,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8005e44",
+      "file_offset": "0x05e44",
+      "addr_int": 4160773700,
+      "file_offset_int": 24132,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8005e48",
+      "file_offset": "0x05e48",
+      "addr_int": 4160773704,
+      "file_offset_int": 24136,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8005e50",
+      "file_offset": "0x05e50",
+      "addr_int": 4160773712,
+      "file_offset_int": 24144,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8005f0c",
+      "file_offset": "0x05f0c",
+      "addr_int": 4160773900,
+      "file_offset_int": 24332,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8005f58",
+      "file_offset": "0x05f58",
+      "addr_int": 4160773976,
+      "file_offset_int": 24408,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8006498",
+      "file_offset": "0x06498",
+      "addr_int": 4160775320,
+      "file_offset_int": 25752,
+      "target_reg": "r8",
+      "source_type": "unknown",
+      "detail": "no write to r8 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8006584",
+      "file_offset": "0x06584",
+      "addr_int": 4160775556,
+      "file_offset_int": 25988,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8006588",
+      "file_offset": "0x06588",
+      "addr_int": 4160775560,
+      "file_offset_int": 25992,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80065f8",
+      "file_offset": "0x065f8",
+      "addr_int": 4160775672,
+      "file_offset_int": 26104,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8006660",
+      "file_offset": "0x06660",
+      "addr_int": 4160775776,
+      "file_offset_int": 26208,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8006664",
+      "file_offset": "0x06664",
+      "addr_int": 4160775780,
+      "file_offset_int": 26212,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8006878",
+      "file_offset": "0x06878",
+      "addr_int": 4160776312,
+      "file_offset_int": 26744,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8006884",
+      "file_offset": "0x06884",
+      "addr_int": 4160776324,
+      "file_offset_int": 26756,
+      "target_reg": "r4",
+      "source_type": "unknown",
+      "detail": "no write to r4 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80068ac",
+      "file_offset": "0x068ac",
+      "addr_int": 4160776364,
+      "file_offset_int": 26796,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8006910",
+      "file_offset": "0x06910",
+      "addr_int": 4160776464,
+      "file_offset_int": 26896,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80069f0",
+      "file_offset": "0x069f0",
+      "addr_int": 4160776688,
+      "file_offset_int": 27120,
+      "target_reg": "r10",
+      "source_type": "unknown",
+      "detail": "no write to r10 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8006a00",
+      "file_offset": "0x06a00",
+      "addr_int": 4160776704,
+      "file_offset_int": 27136,
+      "target_reg": "r8",
+      "source_type": "unknown",
+      "detail": "no write to r8 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8006ab4",
+      "file_offset": "0x06ab4",
+      "addr_int": 4160776884,
+      "file_offset_int": 27316,
+      "target_reg": "r8",
+      "source_type": "unknown",
+      "detail": "no write to r8 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8006ad8",
+      "file_offset": "0x06ad8",
+      "addr_int": 4160776920,
+      "file_offset_int": 27352,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8006b34",
+      "file_offset": "0x06b34",
+      "addr_int": 4160777012,
+      "file_offset_int": 27444,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8006c08",
+      "file_offset": "0x06c08",
+      "addr_int": 4160777224,
+      "file_offset_int": 27656,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8006c2c",
+      "file_offset": "0x06c2c",
+      "addr_int": 4160777260,
+      "file_offset_int": 27692,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8006f08",
+      "file_offset": "0x06f08",
+      "addr_int": 4160777992,
+      "file_offset_int": 28424,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8006f64",
+      "file_offset": "0x06f64",
+      "addr_int": 4160778084,
+      "file_offset_int": 28516,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80070ac",
+      "file_offset": "0x070ac",
+      "addr_int": 4160778412,
+      "file_offset_int": 28844,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80070c0",
+      "file_offset": "0x070c0",
+      "addr_int": 4160778432,
+      "file_offset_int": 28864,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80070f4",
+      "file_offset": "0x070f4",
+      "addr_int": 4160778484,
+      "file_offset_int": 28916,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800712c",
+      "file_offset": "0x0712c",
+      "addr_int": 4160778540,
+      "file_offset_int": 28972,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8007148",
+      "file_offset": "0x07148",
+      "addr_int": 4160778568,
+      "file_offset_int": 29000,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80071ec",
+      "file_offset": "0x071ec",
+      "addr_int": 4160778732,
+      "file_offset_int": 29164,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8007248",
+      "file_offset": "0x07248",
+      "addr_int": 4160778824,
+      "file_offset_int": 29256,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80073e4",
+      "file_offset": "0x073e4",
+      "addr_int": 4160779236,
+      "file_offset_int": 29668,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80073ec",
+      "file_offset": "0x073ec",
+      "addr_int": 4160779244,
+      "file_offset_int": 29676,
+      "target_reg": "r4",
+      "source_type": "unknown",
+      "detail": "no write to r4 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8007440",
+      "file_offset": "0x07440",
+      "addr_int": 4160779328,
+      "file_offset_int": 29760,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80074a0",
+      "file_offset": "0x074a0",
+      "addr_int": 4160779424,
+      "file_offset_int": 29856,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80074f4",
+      "file_offset": "0x074f4",
+      "addr_int": 4160779508,
+      "file_offset_int": 29940,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80077a4",
+      "file_offset": "0x077a4",
+      "addr_int": 4160780196,
+      "file_offset_int": 30628,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80079a4",
+      "file_offset": "0x079a4",
+      "addr_int": 4160780708,
+      "file_offset_int": 31140,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80079a8",
+      "file_offset": "0x079a8",
+      "addr_int": 4160780712,
+      "file_offset_int": 31144,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8007bf8",
+      "file_offset": "0x07bf8",
+      "addr_int": 4160781304,
+      "file_offset_int": 31736,
+      "target_reg": "r18",
+      "source_type": "unknown",
+      "detail": "no write to r18 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8007db8",
+      "file_offset": "0x07db8",
+      "addr_int": 4160781752,
+      "file_offset_int": 32184,
+      "target_reg": "r18",
+      "source_type": "unknown",
+      "detail": "no write to r18 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8007fcc",
+      "file_offset": "0x07fcc",
+      "addr_int": 4160782284,
+      "file_offset_int": 32716,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8007fd0",
+      "file_offset": "0x07fd0",
+      "addr_int": 4160782288,
+      "file_offset_int": 32720,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8008028",
+      "file_offset": "0x08028",
+      "addr_int": 4160782376,
+      "file_offset_int": 32808,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800802c",
+      "file_offset": "0x0802c",
+      "addr_int": 4160782380,
+      "file_offset_int": 32812,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80081c8",
+      "file_offset": "0x081c8",
+      "addr_int": 4160782792,
+      "file_offset_int": 33224,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80082b4",
+      "file_offset": "0x082b4",
+      "addr_int": 4160783028,
+      "file_offset_int": 33460,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8008378",
+      "file_offset": "0x08378",
+      "addr_int": 4160783224,
+      "file_offset_int": 33656,
+      "target_reg": "r20",
+      "source_type": "unknown",
+      "detail": "no write to r20 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8008a30",
+      "file_offset": "0x08a30",
+      "addr_int": 4160784944,
+      "file_offset_int": 35376,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8008ac8",
+      "file_offset": "0x08ac8",
+      "addr_int": 4160785096,
+      "file_offset_int": 35528,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8008e40",
+      "file_offset": "0x08e40",
+      "addr_int": 4160785984,
+      "file_offset_int": 36416,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8008e44",
+      "file_offset": "0x08e44",
+      "addr_int": 4160785988,
+      "file_offset_int": 36420,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8008e64",
+      "file_offset": "0x08e64",
+      "addr_int": 4160786020,
+      "file_offset_int": 36452,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8008e68",
+      "file_offset": "0x08e68",
+      "addr_int": 4160786024,
+      "file_offset_int": 36456,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8008f30",
+      "file_offset": "0x08f30",
+      "addr_int": 4160786224,
+      "file_offset_int": 36656,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8009660",
+      "file_offset": "0x09660",
+      "addr_int": 4160788064,
+      "file_offset_int": 38496,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8009664",
+      "file_offset": "0x09664",
+      "addr_int": 4160788068,
+      "file_offset_int": 38500,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8009744",
+      "file_offset": "0x09744",
+      "addr_int": 4160788292,
+      "file_offset_int": 38724,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8009748",
+      "file_offset": "0x09748",
+      "addr_int": 4160788296,
+      "file_offset_int": 38728,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8009808",
+      "file_offset": "0x09808",
+      "addr_int": 4160788488,
+      "file_offset_int": 38920,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800980c",
+      "file_offset": "0x0980c",
+      "addr_int": 4160788492,
+      "file_offset_int": 38924,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80098e4",
+      "file_offset": "0x098e4",
+      "addr_int": 4160788708,
+      "file_offset_int": 39140,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80098e8",
+      "file_offset": "0x098e8",
+      "addr_int": 4160788712,
+      "file_offset_int": 39144,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8009be0",
+      "file_offset": "0x09be0",
+      "addr_int": 4160789472,
+      "file_offset_int": 39904,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8009bf0",
+      "file_offset": "0x09bf0",
+      "addr_int": 4160789488,
+      "file_offset_int": 39920,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8009cc0",
+      "file_offset": "0x09cc0",
+      "addr_int": 4160789696,
+      "file_offset_int": 40128,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800a0f0",
+      "file_offset": "0x0a0f0",
+      "addr_int": 4160790768,
+      "file_offset_int": 41200,
+      "target_reg": "r8",
+      "source_type": "unknown",
+      "detail": "no write to r8 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800a104",
+      "file_offset": "0x0a104",
+      "addr_int": 4160790788,
+      "file_offset_int": 41220,
+      "target_reg": "r4",
+      "source_type": "unknown",
+      "detail": "no write to r4 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800a23c",
+      "file_offset": "0x0a23c",
+      "addr_int": 4160791100,
+      "file_offset_int": 41532,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800a714",
+      "file_offset": "0x0a714",
+      "addr_int": 4160792340,
+      "file_offset_int": 42772,
+      "target_reg": "r31",
+      "source_type": "register_chain",
+      "writer_addr": "0xf800a6fc",
+      "writer_file_offset": "0x0a6fc",
+      "op": "xorh_imm",
+      "detail": "xorh_imm -> r31 at 0xf800a6fc"
+    },
+    {
+      "addr": "0xf800adac",
+      "file_offset": "0x0adac",
+      "addr_int": 4160794028,
+      "file_offset_int": 44460,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800adb0",
+      "file_offset": "0x0adb0",
+      "addr_int": 4160794032,
+      "file_offset_int": 44464,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800adf4",
+      "file_offset": "0x0adf4",
+      "addr_int": 4160794100,
+      "file_offset_int": 44532,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800ae88",
+      "file_offset": "0x0ae88",
+      "addr_int": 4160794248,
+      "file_offset_int": 44680,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800aec4",
+      "file_offset": "0x0aec4",
+      "addr_int": 4160794308,
+      "file_offset_int": 44740,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800b028",
+      "file_offset": "0x0b028",
+      "addr_int": 4160794664,
+      "file_offset_int": 45096,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800b02c",
+      "file_offset": "0x0b02c",
+      "addr_int": 4160794668,
+      "file_offset_int": 45100,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800b068",
+      "file_offset": "0x0b068",
+      "addr_int": 4160794728,
+      "file_offset_int": 45160,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800b06c",
+      "file_offset": "0x0b06c",
+      "addr_int": 4160794732,
+      "file_offset_int": 45164,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800b1e0",
+      "file_offset": "0x0b1e0",
+      "addr_int": 4160795104,
+      "file_offset_int": 45536,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800ba70",
+      "file_offset": "0x0ba70",
+      "addr_int": 4160797296,
+      "file_offset_int": 47728,
+      "target_reg": "r27",
+      "source_type": "unknown",
+      "detail": "no write to r27 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800ba7c",
+      "file_offset": "0x0ba7c",
+      "addr_int": 4160797308,
+      "file_offset_int": 47740,
+      "target_reg": "r27",
+      "source_type": "unknown",
+      "detail": "no write to r27 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800c170",
+      "file_offset": "0x0c170",
+      "addr_int": 4160799088,
+      "file_offset_int": 49520,
+      "target_reg": "r30",
+      "source_type": "register_chain",
+      "writer_addr": "0xf800c110",
+      "writer_file_offset": "0x0c110",
+      "op": "andh_imm",
+      "detail": "andh_imm -> r30 at 0xf800c110"
+    },
+    {
+      "addr": "0xf800c38c",
+      "file_offset": "0x0c38c",
+      "addr_int": 4160799628,
+      "file_offset_int": 50060,
+      "target_reg": "r31",
+      "source_type": "register_chain",
+      "writer_addr": "0xf800c378",
+      "writer_file_offset": "0x0c378",
+      "op": "xorh_imm",
+      "detail": "xorh_imm -> r31 at 0xf800c378"
+    },
+    {
+      "addr": "0xf800c5a0",
+      "file_offset": "0x0c5a0",
+      "addr_int": 4160800160,
+      "file_offset_int": 50592,
+      "target_reg": "r22",
+      "source_type": "unknown",
+      "detail": "no write to r22 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800c754",
+      "file_offset": "0x0c754",
+      "addr_int": 4160800596,
+      "file_offset_int": 51028,
+      "target_reg": "r30",
+      "source_type": "register_chain",
+      "writer_addr": "0xf800c718",
+      "writer_file_offset": "0x0c718",
+      "op": "andnot_reg",
+      "detail": "andnot_reg -> r30 at 0xf800c718"
+    },
+    {
+      "addr": "0xf800cba8",
+      "file_offset": "0x0cba8",
+      "addr_int": 4160801704,
+      "file_offset_int": 52136,
+      "target_reg": "r22",
+      "source_type": "unknown",
+      "detail": "no write to r22 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800d1f0",
+      "file_offset": "0x0d1f0",
+      "addr_int": 4160803312,
+      "file_offset_int": 53744,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800d4e4",
+      "file_offset": "0x0d4e4",
+      "addr_int": 4160804068,
+      "file_offset_int": 54500,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800d528",
+      "file_offset": "0x0d528",
+      "addr_int": 4160804136,
+      "file_offset_int": 54568,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800d74c",
+      "file_offset": "0x0d74c",
+      "addr_int": 4160804684,
+      "file_offset_int": 55116,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800d750",
+      "file_offset": "0x0d750",
+      "addr_int": 4160804688,
+      "file_offset_int": 55120,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800d7ac",
+      "file_offset": "0x0d7ac",
+      "addr_int": 4160804780,
+      "file_offset_int": 55212,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800d7b0",
+      "file_offset": "0x0d7b0",
+      "addr_int": 4160804784,
+      "file_offset_int": 55216,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800dbec",
+      "file_offset": "0x0dbec",
+      "addr_int": 4160805868,
+      "file_offset_int": 56300,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800dbf0",
+      "file_offset": "0x0dbf0",
+      "addr_int": 4160805872,
+      "file_offset_int": 56304,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800debc",
+      "file_offset": "0x0debc",
+      "addr_int": 4160806588,
+      "file_offset_int": 57020,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800df3c",
+      "file_offset": "0x0df3c",
+      "addr_int": 4160806716,
+      "file_offset_int": 57148,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800e078",
+      "file_offset": "0x0e078",
+      "addr_int": 4160807032,
+      "file_offset_int": 57464,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800e07c",
+      "file_offset": "0x0e07c",
+      "addr_int": 4160807036,
+      "file_offset_int": 57468,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800e0ac",
+      "file_offset": "0x0e0ac",
+      "addr_int": 4160807084,
+      "file_offset_int": 57516,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800e0b0",
+      "file_offset": "0x0e0b0",
+      "addr_int": 4160807088,
+      "file_offset_int": 57520,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800e2dc",
+      "file_offset": "0x0e2dc",
+      "addr_int": 4160807644,
+      "file_offset_int": 58076,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800e300",
+      "file_offset": "0x0e300",
+      "addr_int": 4160807680,
+      "file_offset_int": 58112,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800e350",
+      "file_offset": "0x0e350",
+      "addr_int": 4160807760,
+      "file_offset_int": 58192,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800e8e8",
+      "file_offset": "0x0e8e8",
+      "addr_int": 4160809192,
+      "file_offset_int": 59624,
+      "target_reg": "r13",
+      "source_type": "unknown",
+      "detail": "no write to r13 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800ecb4",
+      "file_offset": "0x0ecb4",
+      "addr_int": 4160810164,
+      "file_offset_int": 60596,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800ed4c",
+      "file_offset": "0x0ed4c",
+      "addr_int": 4160810316,
+      "file_offset_int": 60748,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800ee18",
+      "file_offset": "0x0ee18",
+      "addr_int": 4160810520,
+      "file_offset_int": 60952,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800ee90",
+      "file_offset": "0x0ee90",
+      "addr_int": 4160810640,
+      "file_offset_int": 61072,
+      "target_reg": "r2",
+      "source_type": "register_chain",
+      "writer_addr": "0xf800ee40",
+      "writer_file_offset": "0x0ee40",
+      "op": "xorh_imm",
+      "detail": "xorh_imm -> r2 at 0xf800ee40"
+    },
+    {
+      "addr": "0xf800f16c",
+      "file_offset": "0x0f16c",
+      "addr_int": 4160811372,
+      "file_offset_int": 61804,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800f38c",
+      "file_offset": "0x0f38c",
+      "addr_int": 4160811916,
+      "file_offset_int": 62348,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800f390",
+      "file_offset": "0x0f390",
+      "addr_int": 4160811920,
+      "file_offset_int": 62352,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800f3d8",
+      "file_offset": "0x0f3d8",
+      "addr_int": 4160811992,
+      "file_offset_int": 62424,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800f3dc",
+      "file_offset": "0x0f3dc",
+      "addr_int": 4160811996,
+      "file_offset_int": 62428,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800f5d0",
+      "file_offset": "0x0f5d0",
+      "addr_int": 4160812496,
+      "file_offset_int": 62928,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800f634",
+      "file_offset": "0x0f634",
+      "addr_int": 4160812596,
+      "file_offset_int": 63028,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800f638",
+      "file_offset": "0x0f638",
+      "addr_int": 4160812600,
+      "file_offset_int": 63032,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800f738",
+      "file_offset": "0x0f738",
+      "addr_int": 4160812856,
+      "file_offset_int": 63288,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800f9f0",
+      "file_offset": "0x0f9f0",
+      "addr_int": 4160813552,
+      "file_offset_int": 63984,
+      "target_reg": "r16",
+      "source_type": "ld_table",
+      "writer_addr": "0xf800f984",
+      "writer_file_offset": "0x0f984",
+      "base_reg": "r13",
+      "offset": -32740,
+      "detail": "ld.s -32740(r13), r16"
+    },
+    {
+      "addr": "0xf800fa10",
+      "file_offset": "0x0fa10",
+      "addr_int": 4160813584,
+      "file_offset_int": 64016,
+      "target_reg": "r18",
+      "source_type": "unknown",
+      "detail": "no write to r18 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800fa18",
+      "file_offset": "0x0fa18",
+      "addr_int": 4160813592,
+      "file_offset_int": 64024,
+      "target_reg": "r18",
+      "source_type": "unknown",
+      "detail": "no write to r18 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800fae4",
+      "file_offset": "0x0fae4",
+      "addr_int": 4160813796,
+      "file_offset_int": 64228,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800fb5c",
+      "file_offset": "0x0fb5c",
+      "addr_int": 4160813916,
+      "file_offset_int": 64348,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf800fca0",
+      "file_offset": "0x0fca0",
+      "addr_int": 4160814240,
+      "file_offset_int": 64672,
+      "target_reg": "r8",
+      "source_type": "unknown",
+      "detail": "no write to r8 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8010248",
+      "file_offset": "0x10248",
+      "addr_int": 4160815688,
+      "file_offset_int": 66120,
+      "target_reg": "r5",
+      "source_type": "unknown",
+      "detail": "no write to r5 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80102d0",
+      "file_offset": "0x102d0",
+      "addr_int": 4160815824,
+      "file_offset_int": 66256,
+      "target_reg": "r12",
+      "source_type": "unknown",
+      "detail": "no write to r12 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8010304",
+      "file_offset": "0x10304",
+      "addr_int": 4160815876,
+      "file_offset_int": 66308,
+      "target_reg": "r4",
+      "source_type": "unknown",
+      "detail": "no write to r4 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8010da0",
+      "file_offset": "0x10da0",
+      "addr_int": 4160818592,
+      "file_offset_int": 69024,
+      "target_reg": "r13",
+      "source_type": "unknown",
+      "detail": "no write to r13 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8010e90",
+      "file_offset": "0x10e90",
+      "addr_int": 4160818832,
+      "file_offset_int": 69264,
+      "target_reg": "r12",
+      "source_type": "unknown",
+      "detail": "no write to r12 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8010ea0",
+      "file_offset": "0x10ea0",
+      "addr_int": 4160818848,
+      "file_offset_int": 69280,
+      "target_reg": "r12",
+      "source_type": "unknown",
+      "detail": "no write to r12 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80119b0",
+      "file_offset": "0x119b0",
+      "addr_int": 4160821680,
+      "file_offset_int": 72112,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80119fc",
+      "file_offset": "0x119fc",
+      "addr_int": 4160821756,
+      "file_offset_int": 72188,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8011a48",
+      "file_offset": "0x11a48",
+      "addr_int": 4160821832,
+      "file_offset_int": 72264,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8011ab0",
+      "file_offset": "0x11ab0",
+      "addr_int": 4160821936,
+      "file_offset_int": 72368,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8011ca4",
+      "file_offset": "0x11ca4",
+      "addr_int": 4160822436,
+      "file_offset_int": 72868,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8011cf0",
+      "file_offset": "0x11cf0",
+      "addr_int": 4160822512,
+      "file_offset_int": 72944,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8011d3c",
+      "file_offset": "0x11d3c",
+      "addr_int": 4160822588,
+      "file_offset_int": 73020,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8011d88",
+      "file_offset": "0x11d88",
+      "addr_int": 4160822664,
+      "file_offset_int": 73096,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8011e10",
+      "file_offset": "0x11e10",
+      "addr_int": 4160822800,
+      "file_offset_int": 73232,
+      "target_reg": "r4",
+      "source_type": "unknown",
+      "detail": "no write to r4 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8011f44",
+      "file_offset": "0x11f44",
+      "addr_int": 4160823108,
+      "file_offset_int": 73540,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80120e0",
+      "file_offset": "0x120e0",
+      "addr_int": 4160823520,
+      "file_offset_int": 73952,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80123d0",
+      "file_offset": "0x123d0",
+      "addr_int": 4160824272,
+      "file_offset_int": 74704,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80125f0",
+      "file_offset": "0x125f0",
+      "addr_int": 4160824816,
+      "file_offset_int": 75248,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801263c",
+      "file_offset": "0x1263c",
+      "addr_int": 4160824892,
+      "file_offset_int": 75324,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80127c4",
+      "file_offset": "0x127c4",
+      "addr_int": 4160825284,
+      "file_offset_int": 75716,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8012810",
+      "file_offset": "0x12810",
+      "addr_int": 4160825360,
+      "file_offset_int": 75792,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8012e44",
+      "file_offset": "0x12e44",
+      "addr_int": 4160826948,
+      "file_offset_int": 77380,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8012e90",
+      "file_offset": "0x12e90",
+      "addr_int": 4160827024,
+      "file_offset_int": 77456,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8012ef8",
+      "file_offset": "0x12ef8",
+      "addr_int": 4160827128,
+      "file_offset_int": 77560,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8012f44",
+      "file_offset": "0x12f44",
+      "addr_int": 4160827204,
+      "file_offset_int": 77636,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8013134",
+      "file_offset": "0x13134",
+      "addr_int": 4160827700,
+      "file_offset_int": 78132,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80131c8",
+      "file_offset": "0x131c8",
+      "addr_int": 4160827848,
+      "file_offset_int": 78280,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801360c",
+      "file_offset": "0x1360c",
+      "addr_int": 4160828940,
+      "file_offset_int": 79372,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80136ec",
+      "file_offset": "0x136ec",
+      "addr_int": 4160829164,
+      "file_offset_int": 79596,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8013800",
+      "file_offset": "0x13800",
+      "addr_int": 4160829440,
+      "file_offset_int": 79872,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80139b0",
+      "file_offset": "0x139b0",
+      "addr_int": 4160829872,
+      "file_offset_int": 80304,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8013c90",
+      "file_offset": "0x13c90",
+      "addr_int": 4160830608,
+      "file_offset_int": 81040,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80143bc",
+      "file_offset": "0x143bc",
+      "addr_int": 4160832444,
+      "file_offset_int": 82876,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8014408",
+      "file_offset": "0x14408",
+      "addr_int": 4160832520,
+      "file_offset_int": 82952,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8014454",
+      "file_offset": "0x14454",
+      "addr_int": 4160832596,
+      "file_offset_int": 83028,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80144cc",
+      "file_offset": "0x144cc",
+      "addr_int": 4160832716,
+      "file_offset_int": 83148,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8014518",
+      "file_offset": "0x14518",
+      "addr_int": 4160832792,
+      "file_offset_int": 83224,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80146d8",
+      "file_offset": "0x146d8",
+      "addr_int": 4160833240,
+      "file_offset_int": 83672,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8014724",
+      "file_offset": "0x14724",
+      "addr_int": 4160833316,
+      "file_offset_int": 83748,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8014770",
+      "file_offset": "0x14770",
+      "addr_int": 4160833392,
+      "file_offset_int": 83824,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80148f8",
+      "file_offset": "0x148f8",
+      "addr_int": 4160833784,
+      "file_offset_int": 84216,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80149f8",
+      "file_offset": "0x149f8",
+      "addr_int": 4160834040,
+      "file_offset_int": 84472,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8014b50",
+      "file_offset": "0x14b50",
+      "addr_int": 4160834384,
+      "file_offset_int": 84816,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8014d70",
+      "file_offset": "0x14d70",
+      "addr_int": 4160834928,
+      "file_offset_int": 85360,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8014f90",
+      "file_offset": "0x14f90",
+      "addr_int": 4160835472,
+      "file_offset_int": 85904,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8015090",
+      "file_offset": "0x15090",
+      "addr_int": 4160835728,
+      "file_offset_int": 86160,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80150dc",
+      "file_offset": "0x150dc",
+      "addr_int": 4160835804,
+      "file_offset_int": 86236,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8015128",
+      "file_offset": "0x15128",
+      "addr_int": 4160835880,
+      "file_offset_int": 86312,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8015568",
+      "file_offset": "0x15568",
+      "addr_int": 4160836968,
+      "file_offset_int": 87400,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80156fc",
+      "file_offset": "0x156fc",
+      "addr_int": 4160837372,
+      "file_offset_int": 87804,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8015744",
+      "file_offset": "0x15744",
+      "addr_int": 4160837444,
+      "file_offset_int": 87876,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80158e8",
+      "file_offset": "0x158e8",
+      "addr_int": 4160837864,
+      "file_offset_int": 88296,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801597c",
+      "file_offset": "0x1597c",
+      "addr_int": 4160838012,
+      "file_offset_int": 88444,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8015ab4",
+      "file_offset": "0x15ab4",
+      "addr_int": 4160838324,
+      "file_offset_int": 88756,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8015bf0",
+      "file_offset": "0x15bf0",
+      "addr_int": 4160838640,
+      "file_offset_int": 89072,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8015c84",
+      "file_offset": "0x15c84",
+      "addr_int": 4160838788,
+      "file_offset_int": 89220,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8015d34",
+      "file_offset": "0x15d34",
+      "addr_int": 4160838964,
+      "file_offset_int": 89396,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8015d7c",
+      "file_offset": "0x15d7c",
+      "addr_int": 4160839036,
+      "file_offset_int": 89468,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8015fbc",
+      "file_offset": "0x15fbc",
+      "addr_int": 4160839612,
+      "file_offset_int": 90044,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801613c",
+      "file_offset": "0x1613c",
+      "addr_int": 4160839996,
+      "file_offset_int": 90428,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8016288",
+      "file_offset": "0x16288",
+      "addr_int": 4160840328,
+      "file_offset_int": 90760,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80163d0",
+      "file_offset": "0x163d0",
+      "addr_int": 4160840656,
+      "file_offset_int": 91088,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8016464",
+      "file_offset": "0x16464",
+      "addr_int": 4160840804,
+      "file_offset_int": 91236,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80164b0",
+      "file_offset": "0x164b0",
+      "addr_int": 4160840880,
+      "file_offset_int": 91312,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8016608",
+      "file_offset": "0x16608",
+      "addr_int": 4160841224,
+      "file_offset_int": 91656,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8016784",
+      "file_offset": "0x16784",
+      "addr_int": 4160841604,
+      "file_offset_int": 92036,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8016810",
+      "file_offset": "0x16810",
+      "addr_int": 4160841744,
+      "file_offset_int": 92176,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8016b74",
+      "file_offset": "0x16b74",
+      "addr_int": 4160842612,
+      "file_offset_int": 93044,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8016c7c",
+      "file_offset": "0x16c7c",
+      "addr_int": 4160842876,
+      "file_offset_int": 93308,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8016cc8",
+      "file_offset": "0x16cc8",
+      "addr_int": 4160842952,
+      "file_offset_int": 93384,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8016e4c",
+      "file_offset": "0x16e4c",
+      "addr_int": 4160843340,
+      "file_offset_int": 93772,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8016f3c",
+      "file_offset": "0x16f3c",
+      "addr_int": 4160843580,
+      "file_offset_int": 94012,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80172c4",
+      "file_offset": "0x172c4",
+      "addr_int": 4160844484,
+      "file_offset_int": 94916,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80174d4",
+      "file_offset": "0x174d4",
+      "addr_int": 4160845012,
+      "file_offset_int": 95444,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8017990",
+      "file_offset": "0x17990",
+      "addr_int": 4160846224,
+      "file_offset_int": 96656,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80179dc",
+      "file_offset": "0x179dc",
+      "addr_int": 4160846300,
+      "file_offset_int": 96732,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8017ba4",
+      "file_offset": "0x17ba4",
+      "addr_int": 4160846756,
+      "file_offset_int": 97188,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8017bf0",
+      "file_offset": "0x17bf0",
+      "addr_int": 4160846832,
+      "file_offset_int": 97264,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8017c4c",
+      "file_offset": "0x17c4c",
+      "addr_int": 4160846924,
+      "file_offset_int": 97356,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8017de8",
+      "file_offset": "0x17de8",
+      "addr_int": 4160847336,
+      "file_offset_int": 97768,
+      "target_reg": "r11",
+      "source_type": "unknown",
+      "detail": "no write to r11 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8017e2c",
+      "file_offset": "0x17e2c",
+      "addr_int": 4160847404,
+      "file_offset_int": 97836,
+      "target_reg": "r11",
+      "source_type": "unknown",
+      "detail": "no write to r11 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80181e4",
+      "file_offset": "0x181e4",
+      "addr_int": 4160848356,
+      "file_offset_int": 98788,
+      "target_reg": "r13",
+      "source_type": "unknown",
+      "detail": "no write to r13 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801822c",
+      "file_offset": "0x1822c",
+      "addr_int": 4160848428,
+      "file_offset_int": 98860,
+      "target_reg": "r13",
+      "source_type": "unknown",
+      "detail": "no write to r13 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8018334",
+      "file_offset": "0x18334",
+      "addr_int": 4160848692,
+      "file_offset_int": 99124,
+      "target_reg": "r15",
+      "source_type": "register_chain",
+      "writer_addr": "0xf801830c",
+      "writer_file_offset": "0x1830c",
+      "op": "shra_imm",
+      "detail": "shra_imm -> r15 at 0xf801830c"
+    },
+    {
+      "addr": "0xf8018350",
+      "file_offset": "0x18350",
+      "addr_int": 4160848720,
+      "file_offset_int": 99152,
+      "target_reg": "r17",
+      "source_type": "unknown",
+      "detail": "no write to r17 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80183b0",
+      "file_offset": "0x183b0",
+      "addr_int": 4160848816,
+      "file_offset_int": 99248,
+      "target_reg": "r29",
+      "source_type": "unknown",
+      "detail": "no write to r29 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80184ac",
+      "file_offset": "0x184ac",
+      "addr_int": 4160849068,
+      "file_offset_int": 99500,
+      "target_reg": "r18",
+      "source_type": "unknown",
+      "detail": "no write to r18 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80184cc",
+      "file_offset": "0x184cc",
+      "addr_int": 4160849100,
+      "file_offset_int": 99532,
+      "target_reg": "r18",
+      "source_type": "unknown",
+      "detail": "no write to r18 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80186f8",
+      "file_offset": "0x186f8",
+      "addr_int": 4160849656,
+      "file_offset_int": 100088,
+      "target_reg": "r27",
+      "source_type": "unknown",
+      "detail": "no write to r27 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8018784",
+      "file_offset": "0x18784",
+      "addr_int": 4160849796,
+      "file_offset_int": 100228,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8018790",
+      "file_offset": "0x18790",
+      "addr_int": 4160849808,
+      "file_offset_int": 100240,
+      "target_reg": "r31",
+      "source_type": "unknown",
+      "detail": "no write to r31 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801894c",
+      "file_offset": "0x1894c",
+      "addr_int": 4160850252,
+      "file_offset_int": 100684,
+      "target_reg": "r10",
+      "source_type": "register_chain",
+      "writer_addr": "0xf8018940",
+      "writer_file_offset": "0x18940",
+      "op": "shr_reg",
+      "detail": "shr_reg -> r10 at 0xf8018940"
+    },
+    {
+      "addr": "0xf80189a8",
+      "file_offset": "0x189a8",
+      "addr_int": 4160850344,
+      "file_offset_int": 100776,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8018a54",
+      "file_offset": "0x18a54",
+      "addr_int": 4160850516,
+      "file_offset_int": 100948,
+      "target_reg": "r18",
+      "source_type": "unknown",
+      "detail": "no write to r18 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8018c84",
+      "file_offset": "0x18c84",
+      "addr_int": 4160851076,
+      "file_offset_int": 101508,
+      "target_reg": "r16",
+      "source_type": "unknown",
+      "detail": "no write to r16 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8018ca8",
+      "file_offset": "0x18ca8",
+      "addr_int": 4160851112,
+      "file_offset_int": 101544,
+      "target_reg": "r16",
+      "source_type": "unknown",
+      "detail": "no write to r16 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8018ccc",
+      "file_offset": "0x18ccc",
+      "addr_int": 4160851148,
+      "file_offset_int": 101580,
+      "target_reg": "r16",
+      "source_type": "unknown",
+      "detail": "no write to r16 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8018e14",
+      "file_offset": "0x18e14",
+      "addr_int": 4160851476,
+      "file_offset_int": 101908,
+      "target_reg": "r18",
+      "source_type": "unknown",
+      "detail": "no write to r18 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8019100",
+      "file_offset": "0x19100",
+      "addr_int": 4160852224,
+      "file_offset_int": 102656,
+      "target_reg": "r9",
+      "source_type": "unknown",
+      "detail": "no write to r9 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8019114",
+      "file_offset": "0x19114",
+      "addr_int": 4160852244,
+      "file_offset_int": 102676,
+      "target_reg": "r23",
+      "source_type": "unknown",
+      "detail": "no write to r23 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801913c",
+      "file_offset": "0x1913c",
+      "addr_int": 4160852284,
+      "file_offset_int": 102716,
+      "target_reg": "r18",
+      "source_type": "unknown",
+      "detail": "no write to r18 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80192dc",
+      "file_offset": "0x192dc",
+      "addr_int": 4160852700,
+      "file_offset_int": 103132,
+      "target_reg": "r12",
+      "source_type": "unknown",
+      "detail": "no write to r12 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801936c",
+      "file_offset": "0x1936c",
+      "addr_int": 4160852844,
+      "file_offset_int": 103276,
+      "target_reg": "r27",
+      "source_type": "unknown",
+      "detail": "no write to r27 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801937c",
+      "file_offset": "0x1937c",
+      "addr_int": 4160852860,
+      "file_offset_int": 103292,
+      "target_reg": "r28",
+      "source_type": "unknown",
+      "detail": "no write to r28 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80194d0",
+      "file_offset": "0x194d0",
+      "addr_int": 4160853200,
+      "file_offset_int": 103632,
+      "target_reg": "r4",
+      "source_type": "unknown",
+      "detail": "no write to r4 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8019880",
+      "file_offset": "0x19880",
+      "addr_int": 4160854144,
+      "file_offset_int": 104576,
+      "target_reg": "r29",
+      "source_type": "unknown",
+      "detail": "no write to r29 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801991c",
+      "file_offset": "0x1991c",
+      "addr_int": 4160854300,
+      "file_offset_int": 104732,
+      "target_reg": "r22",
+      "source_type": "unknown",
+      "detail": "no write to r22 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801996c",
+      "file_offset": "0x1996c",
+      "addr_int": 4160854380,
+      "file_offset_int": 104812,
+      "target_reg": "r12",
+      "source_type": "unknown",
+      "detail": "no write to r12 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8019990",
+      "file_offset": "0x19990",
+      "addr_int": 4160854416,
+      "file_offset_int": 104848,
+      "target_reg": "r31",
+      "source_type": "unknown",
+      "detail": "no write to r31 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8019ac0",
+      "file_offset": "0x19ac0",
+      "addr_int": 4160854720,
+      "file_offset_int": 105152,
+      "target_reg": "r29",
+      "source_type": "unknown",
+      "detail": "no write to r29 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8019adc",
+      "file_offset": "0x19adc",
+      "addr_int": 4160854748,
+      "file_offset_int": 105180,
+      "target_reg": "r4",
+      "source_type": "unknown",
+      "detail": "no write to r4 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8019ae8",
+      "file_offset": "0x19ae8",
+      "addr_int": 4160854760,
+      "file_offset_int": 105192,
+      "target_reg": "r4",
+      "source_type": "unknown",
+      "detail": "no write to r4 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8019b20",
+      "file_offset": "0x19b20",
+      "addr_int": 4160854816,
+      "file_offset_int": 105248,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8019e30",
+      "file_offset": "0x19e30",
+      "addr_int": 4160855600,
+      "file_offset_int": 106032,
+      "target_reg": "r29",
+      "source_type": "unknown",
+      "detail": "no write to r29 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8019f3c",
+      "file_offset": "0x19f3c",
+      "addr_int": 4160855868,
+      "file_offset_int": 106300,
+      "target_reg": "r26",
+      "source_type": "unknown",
+      "detail": "no write to r26 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8019f44",
+      "file_offset": "0x19f44",
+      "addr_int": 4160855876,
+      "file_offset_int": 106308,
+      "target_reg": "r29",
+      "source_type": "unknown",
+      "detail": "no write to r29 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8019f8c",
+      "file_offset": "0x19f8c",
+      "addr_int": 4160855948,
+      "file_offset_int": 106380,
+      "target_reg": "r14",
+      "source_type": "unknown",
+      "detail": "no write to r14 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801a0f0",
+      "file_offset": "0x1a0f0",
+      "addr_int": 4160856304,
+      "file_offset_int": 106736,
+      "target_reg": "r28",
+      "source_type": "unknown",
+      "detail": "no write to r28 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801a13c",
+      "file_offset": "0x1a13c",
+      "addr_int": 4160856380,
+      "file_offset_int": 106812,
+      "target_reg": "r13",
+      "source_type": "unknown",
+      "detail": "no write to r13 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801a17c",
+      "file_offset": "0x1a17c",
+      "addr_int": 4160856444,
+      "file_offset_int": 106876,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801a38c",
+      "file_offset": "0x1a38c",
+      "addr_int": 4160856972,
+      "file_offset_int": 107404,
+      "target_reg": "r17",
+      "source_type": "unknown",
+      "detail": "no write to r17 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801a4a0",
+      "file_offset": "0x1a4a0",
+      "addr_int": 4160857248,
+      "file_offset_int": 107680,
+      "target_reg": "r18",
+      "source_type": "unknown",
+      "detail": "no write to r18 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801a560",
+      "file_offset": "0x1a560",
+      "addr_int": 4160857440,
+      "file_offset_int": 107872,
+      "target_reg": "r15",
+      "source_type": "unknown",
+      "detail": "no write to r15 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801a578",
+      "file_offset": "0x1a578",
+      "addr_int": 4160857464,
+      "file_offset_int": 107896,
+      "target_reg": "r29",
+      "source_type": "unknown",
+      "detail": "no write to r29 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801a928",
+      "file_offset": "0x1a928",
+      "addr_int": 4160858408,
+      "file_offset_int": 108840,
+      "target_reg": "r31",
+      "source_type": "register_chain",
+      "writer_addr": "0xf801a90c",
+      "writer_file_offset": "0x1a90c",
+      "op": "andnoth_imm",
+      "detail": "andnoth_imm -> r31 at 0xf801a90c"
+    },
+    {
+      "addr": "0xf801a97c",
+      "file_offset": "0x1a97c",
+      "addr_int": 4160858492,
+      "file_offset_int": 108924,
+      "target_reg": "r24",
+      "source_type": "unknown",
+      "detail": "no write to r24 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801a980",
+      "file_offset": "0x1a980",
+      "addr_int": 4160858496,
+      "file_offset_int": 108928,
+      "target_reg": "r29",
+      "source_type": "unknown",
+      "detail": "no write to r29 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801adb4",
+      "file_offset": "0x1adb4",
+      "addr_int": 4160859572,
+      "file_offset_int": 110004,
+      "target_reg": "r17",
+      "source_type": "unknown",
+      "detail": "no write to r17 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801ae80",
+      "file_offset": "0x1ae80",
+      "addr_int": 4160859776,
+      "file_offset_int": 110208,
+      "target_reg": "r17",
+      "source_type": "unknown",
+      "detail": "no write to r17 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801af6c",
+      "file_offset": "0x1af6c",
+      "addr_int": 4160860012,
+      "file_offset_int": 110444,
+      "target_reg": "r12",
+      "source_type": "unknown",
+      "detail": "no write to r12 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801afd0",
+      "file_offset": "0x1afd0",
+      "addr_int": 4160860112,
+      "file_offset_int": 110544,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801b024",
+      "file_offset": "0x1b024",
+      "addr_int": 4160860196,
+      "file_offset_int": 110628,
+      "target_reg": "r21",
+      "source_type": "unknown",
+      "detail": "no write to r21 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801b034",
+      "file_offset": "0x1b034",
+      "addr_int": 4160860212,
+      "file_offset_int": 110644,
+      "target_reg": "r19",
+      "source_type": "unknown",
+      "detail": "no write to r19 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801b088",
+      "file_offset": "0x1b088",
+      "addr_int": 4160860296,
+      "file_offset_int": 110728,
+      "target_reg": "r31",
+      "source_type": "unknown",
+      "detail": "no write to r31 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801b0a4",
+      "file_offset": "0x1b0a4",
+      "addr_int": 4160860324,
+      "file_offset_int": 110756,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801b448",
+      "file_offset": "0x1b448",
+      "addr_int": 4160861256,
+      "file_offset_int": 111688,
+      "target_reg": "r29",
+      "source_type": "unknown",
+      "detail": "no write to r29 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801b6cc",
+      "file_offset": "0x1b6cc",
+      "addr_int": 4160861900,
+      "file_offset_int": 112332,
+      "target_reg": "r31",
+      "source_type": "unknown",
+      "detail": "no write to r31 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801b8ac",
+      "file_offset": "0x1b8ac",
+      "addr_int": 4160862380,
+      "file_offset_int": 112812,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801b8f8",
+      "file_offset": "0x1b8f8",
+      "addr_int": 4160862456,
+      "file_offset_int": 112888,
+      "target_reg": "r16",
+      "source_type": "unknown",
+      "detail": "no write to r16 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801b994",
+      "file_offset": "0x1b994",
+      "addr_int": 4160862612,
+      "file_offset_int": 113044,
+      "target_reg": "r30",
+      "source_type": "unknown",
+      "detail": "no write to r30 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801ba78",
+      "file_offset": "0x1ba78",
+      "addr_int": 4160862840,
+      "file_offset_int": 113272,
+      "target_reg": "r11",
+      "source_type": "unknown",
+      "detail": "no write to r11 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801bd6c",
+      "file_offset": "0x1bd6c",
+      "addr_int": 4160863596,
+      "file_offset_int": 114028,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801bd84",
+      "file_offset": "0x1bd84",
+      "addr_int": 4160863620,
+      "file_offset_int": 114052,
+      "target_reg": "r9",
+      "source_type": "unknown",
+      "detail": "no write to r9 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801be80",
+      "file_offset": "0x1be80",
+      "addr_int": 4160863872,
+      "file_offset_int": 114304,
+      "target_reg": "r12",
+      "source_type": "unknown",
+      "detail": "no write to r12 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801bf54",
+      "file_offset": "0x1bf54",
+      "addr_int": 4160864084,
+      "file_offset_int": 114516,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801bf6c",
+      "file_offset": "0x1bf6c",
+      "addr_int": 4160864108,
+      "file_offset_int": 114540,
+      "target_reg": "r12",
+      "source_type": "unknown",
+      "detail": "no write to r12 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801c02c",
+      "file_offset": "0x1c02c",
+      "addr_int": 4160864300,
+      "file_offset_int": 114732,
+      "target_reg": "r29",
+      "source_type": "unknown",
+      "detail": "no write to r29 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801c100",
+      "file_offset": "0x1c100",
+      "addr_int": 4160864512,
+      "file_offset_int": 114944,
+      "target_reg": "r13",
+      "source_type": "unknown",
+      "detail": "no write to r13 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801c1d4",
+      "file_offset": "0x1c1d4",
+      "addr_int": 4160864724,
+      "file_offset_int": 115156,
+      "target_reg": "r21",
+      "source_type": "unknown",
+      "detail": "no write to r21 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801c278",
+      "file_offset": "0x1c278",
+      "addr_int": 4160864888,
+      "file_offset_int": 115320,
+      "target_reg": "r13",
+      "source_type": "unknown",
+      "detail": "no write to r13 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801c280",
+      "file_offset": "0x1c280",
+      "addr_int": 4160864896,
+      "file_offset_int": 115328,
+      "target_reg": "r20",
+      "source_type": "unknown",
+      "detail": "no write to r20 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801c308",
+      "file_offset": "0x1c308",
+      "addr_int": 4160865032,
+      "file_offset_int": 115464,
+      "target_reg": "r14",
+      "source_type": "unknown",
+      "detail": "no write to r14 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801c310",
+      "file_offset": "0x1c310",
+      "addr_int": 4160865040,
+      "file_offset_int": 115472,
+      "target_reg": "r19",
+      "source_type": "unknown",
+      "detail": "no write to r19 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801c3f4",
+      "file_offset": "0x1c3f4",
+      "addr_int": 4160865268,
+      "file_offset_int": 115700,
+      "target_reg": "r29",
+      "source_type": "unknown",
+      "detail": "no write to r29 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801c3f8",
+      "file_offset": "0x1c3f8",
+      "addr_int": 4160865272,
+      "file_offset_int": 115704,
+      "target_reg": "r29",
+      "source_type": "unknown",
+      "detail": "no write to r29 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801c4d4",
+      "file_offset": "0x1c4d4",
+      "addr_int": 4160865492,
+      "file_offset_int": 115924,
+      "target_reg": "r17",
+      "source_type": "unknown",
+      "detail": "no write to r17 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801c624",
+      "file_offset": "0x1c624",
+      "addr_int": 4160865828,
+      "file_offset_int": 116260,
+      "target_reg": "r13",
+      "source_type": "unknown",
+      "detail": "no write to r13 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801c6a4",
+      "file_offset": "0x1c6a4",
+      "addr_int": 4160865956,
+      "file_offset_int": 116388,
+      "target_reg": "r14",
+      "source_type": "unknown",
+      "detail": "no write to r14 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801c750",
+      "file_offset": "0x1c750",
+      "addr_int": 4160866128,
+      "file_offset_int": 116560,
+      "target_reg": "r30",
+      "source_type": "unknown",
+      "detail": "no write to r30 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801c75c",
+      "file_offset": "0x1c75c",
+      "addr_int": 4160866140,
+      "file_offset_int": 116572,
+      "target_reg": "r31",
+      "source_type": "unknown",
+      "detail": "no write to r31 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801c768",
+      "file_offset": "0x1c768",
+      "addr_int": 4160866152,
+      "file_offset_int": 116584,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801c77c",
+      "file_offset": "0x1c77c",
+      "addr_int": 4160866172,
+      "file_offset_int": 116604,
+      "target_reg": "r14",
+      "source_type": "unknown",
+      "detail": "no write to r14 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801c7c8",
+      "file_offset": "0x1c7c8",
+      "addr_int": 4160866248,
+      "file_offset_int": 116680,
+      "target_reg": "r4",
+      "source_type": "unknown",
+      "detail": "no write to r4 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801c7e0",
+      "file_offset": "0x1c7e0",
+      "addr_int": 4160866272,
+      "file_offset_int": 116704,
+      "target_reg": "r30",
+      "source_type": "unknown",
+      "detail": "no write to r30 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801c8e8",
+      "file_offset": "0x1c8e8",
+      "addr_int": 4160866536,
+      "file_offset_int": 116968,
+      "target_reg": "r8",
+      "source_type": "unknown",
+      "detail": "no write to r8 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801c8fc",
+      "file_offset": "0x1c8fc",
+      "addr_int": 4160866556,
+      "file_offset_int": 116988,
+      "target_reg": "r14",
+      "source_type": "unknown",
+      "detail": "no write to r14 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801c9ac",
+      "file_offset": "0x1c9ac",
+      "addr_int": 4160866732,
+      "file_offset_int": 117164,
+      "target_reg": "r11",
+      "source_type": "unknown",
+      "detail": "no write to r11 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801c9c0",
+      "file_offset": "0x1c9c0",
+      "addr_int": 4160866752,
+      "file_offset_int": 117184,
+      "target_reg": "r14",
+      "source_type": "unknown",
+      "detail": "no write to r14 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801ca38",
+      "file_offset": "0x1ca38",
+      "addr_int": 4160866872,
+      "file_offset_int": 117304,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801ca4c",
+      "file_offset": "0x1ca4c",
+      "addr_int": 4160866892,
+      "file_offset_int": 117324,
+      "target_reg": "r14",
+      "source_type": "unknown",
+      "detail": "no write to r14 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801cac4",
+      "file_offset": "0x1cac4",
+      "addr_int": 4160867012,
+      "file_offset_int": 117444,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801cad8",
+      "file_offset": "0x1cad8",
+      "addr_int": 4160867032,
+      "file_offset_int": 117464,
+      "target_reg": "r15",
+      "source_type": "unknown",
+      "detail": "no write to r15 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801cb64",
+      "file_offset": "0x1cb64",
+      "addr_int": 4160867172,
+      "file_offset_int": 117604,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801cb78",
+      "file_offset": "0x1cb78",
+      "addr_int": 4160867192,
+      "file_offset_int": 117624,
+      "target_reg": "r15",
+      "source_type": "unknown",
+      "detail": "no write to r15 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801cbf0",
+      "file_offset": "0x1cbf0",
+      "addr_int": 4160867312,
+      "file_offset_int": 117744,
+      "target_reg": "r8",
+      "source_type": "unknown",
+      "detail": "no write to r8 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801cc04",
+      "file_offset": "0x1cc04",
+      "addr_int": 4160867332,
+      "file_offset_int": 117764,
+      "target_reg": "r15",
+      "source_type": "unknown",
+      "detail": "no write to r15 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801cc88",
+      "file_offset": "0x1cc88",
+      "addr_int": 4160867464,
+      "file_offset_int": 117896,
+      "target_reg": "r9",
+      "source_type": "unknown",
+      "detail": "no write to r9 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801cc9c",
+      "file_offset": "0x1cc9c",
+      "addr_int": 4160867484,
+      "file_offset_int": 117916,
+      "target_reg": "r15",
+      "source_type": "unknown",
+      "detail": "no write to r15 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801cd68",
+      "file_offset": "0x1cd68",
+      "addr_int": 4160867688,
+      "file_offset_int": 118120,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801cd7c",
+      "file_offset": "0x1cd7c",
+      "addr_int": 4160867708,
+      "file_offset_int": 118140,
+      "target_reg": "r15",
+      "source_type": "unknown",
+      "detail": "no write to r15 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801d184",
+      "file_offset": "0x1d184",
+      "addr_int": 4160868740,
+      "file_offset_int": 119172,
+      "target_reg": "r11",
+      "source_type": "unknown",
+      "detail": "no write to r11 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801d19c",
+      "file_offset": "0x1d19c",
+      "addr_int": 4160868764,
+      "file_offset_int": 119196,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801d404",
+      "file_offset": "0x1d404",
+      "addr_int": 4160869380,
+      "file_offset_int": 119812,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801d41c",
+      "file_offset": "0x1d41c",
+      "addr_int": 4160869404,
+      "file_offset_int": 119836,
+      "target_reg": "r22",
+      "source_type": "unknown",
+      "detail": "no write to r22 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801d514",
+      "file_offset": "0x1d514",
+      "addr_int": 4160869652,
+      "file_offset_int": 120084,
+      "target_reg": "r12",
+      "source_type": "unknown",
+      "detail": "no write to r12 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801d648",
+      "file_offset": "0x1d648",
+      "addr_int": 4160869960,
+      "file_offset_int": 120392,
+      "target_reg": "r4",
+      "source_type": "unknown",
+      "detail": "no write to r4 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801d660",
+      "file_offset": "0x1d660",
+      "addr_int": 4160869984,
+      "file_offset_int": 120416,
+      "target_reg": "r14",
+      "source_type": "unknown",
+      "detail": "no write to r14 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801d690",
+      "file_offset": "0x1d690",
+      "addr_int": 4160870032,
+      "file_offset_int": 120464,
+      "target_reg": "r31",
+      "source_type": "register_chain",
+      "writer_addr": "0xf801d678",
+      "writer_file_offset": "0x1d678",
+      "op": "xorh_imm",
+      "detail": "xorh_imm -> r31 at 0xf801d678"
+    },
+    {
+      "addr": "0xf801d73c",
+      "file_offset": "0x1d73c",
+      "addr_int": 4160870204,
+      "file_offset_int": 120636,
+      "target_reg": "r5",
+      "source_type": "unknown",
+      "detail": "no write to r5 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801d754",
+      "file_offset": "0x1d754",
+      "addr_int": 4160870228,
+      "file_offset_int": 120660,
+      "target_reg": "r15",
+      "source_type": "unknown",
+      "detail": "no write to r15 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801d864",
+      "file_offset": "0x1d864",
+      "addr_int": 4160870500,
+      "file_offset_int": 120932,
+      "target_reg": "r13",
+      "source_type": "unknown",
+      "detail": "no write to r13 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801d92c",
+      "file_offset": "0x1d92c",
+      "addr_int": 4160870700,
+      "file_offset_int": 121132,
+      "target_reg": "r13",
+      "source_type": "unknown",
+      "detail": "no write to r13 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801da08",
+      "file_offset": "0x1da08",
+      "addr_int": 4160870920,
+      "file_offset_int": 121352,
+      "target_reg": "r13",
+      "source_type": "unknown",
+      "detail": "no write to r13 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801db1c",
+      "file_offset": "0x1db1c",
+      "addr_int": 4160871196,
+      "file_offset_int": 121628,
+      "target_reg": "r13",
+      "source_type": "unknown",
+      "detail": "no write to r13 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801dc08",
+      "file_offset": "0x1dc08",
+      "addr_int": 4160871432,
+      "file_offset_int": 121864,
+      "target_reg": "r26",
+      "source_type": "unknown",
+      "detail": "no write to r26 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801dc20",
+      "file_offset": "0x1dc20",
+      "addr_int": 4160871456,
+      "file_offset_int": 121888,
+      "target_reg": "r22",
+      "source_type": "unknown",
+      "detail": "no write to r22 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801dd20",
+      "file_offset": "0x1dd20",
+      "addr_int": 4160871712,
+      "file_offset_int": 122144,
+      "target_reg": "r26",
+      "source_type": "unknown",
+      "detail": "no write to r26 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801dd38",
+      "file_offset": "0x1dd38",
+      "addr_int": 4160871736,
+      "file_offset_int": 122168,
+      "target_reg": "r19",
+      "source_type": "unknown",
+      "detail": "no write to r19 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801de38",
+      "file_offset": "0x1de38",
+      "addr_int": 4160871992,
+      "file_offset_int": 122424,
+      "target_reg": "r26",
+      "source_type": "unknown",
+      "detail": "no write to r26 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801de50",
+      "file_offset": "0x1de50",
+      "addr_int": 4160872016,
+      "file_offset_int": 122448,
+      "target_reg": "r16",
+      "source_type": "unknown",
+      "detail": "no write to r16 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801df50",
+      "file_offset": "0x1df50",
+      "addr_int": 4160872272,
+      "file_offset_int": 122704,
+      "target_reg": "r26",
+      "source_type": "unknown",
+      "detail": "no write to r26 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801df68",
+      "file_offset": "0x1df68",
+      "addr_int": 4160872296,
+      "file_offset_int": 122728,
+      "target_reg": "r13",
+      "source_type": "unknown",
+      "detail": "no write to r13 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801e068",
+      "file_offset": "0x1e068",
+      "addr_int": 4160872552,
+      "file_offset_int": 122984,
+      "target_reg": "r26",
+      "source_type": "unknown",
+      "detail": "no write to r26 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801e080",
+      "file_offset": "0x1e080",
+      "addr_int": 4160872576,
+      "file_offset_int": 123008,
+      "target_reg": "r10",
+      "source_type": "unknown",
+      "detail": "no write to r10 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801e198",
+      "file_offset": "0x1e198",
+      "addr_int": 4160872856,
+      "file_offset_int": 123288,
+      "target_reg": "r26",
+      "source_type": "unknown",
+      "detail": "no write to r26 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801e1a4",
+      "file_offset": "0x1e1a4",
+      "addr_int": 4160872868,
+      "file_offset_int": 123300,
+      "target_reg": "r27",
+      "source_type": "unknown",
+      "detail": "no write to r27 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801e1b4",
+      "file_offset": "0x1e1b4",
+      "addr_int": 4160872884,
+      "file_offset_int": 123316,
+      "target_reg": "r14",
+      "source_type": "unknown",
+      "detail": "no write to r14 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801e2bc",
+      "file_offset": "0x1e2bc",
+      "addr_int": 4160873148,
+      "file_offset_int": 123580,
+      "target_reg": "r14",
+      "source_type": "unknown",
+      "detail": "no write to r14 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801e3d4",
+      "file_offset": "0x1e3d4",
+      "addr_int": 4160873428,
+      "file_offset_int": 123860,
+      "target_reg": "r14",
+      "source_type": "unknown",
+      "detail": "no write to r14 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801e4b4",
+      "file_offset": "0x1e4b4",
+      "addr_int": 4160873652,
+      "file_offset_int": 124084,
+      "target_reg": "r4",
+      "source_type": "unknown",
+      "detail": "no write to r4 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801e5ac",
+      "file_offset": "0x1e5ac",
+      "addr_int": 4160873900,
+      "file_offset_int": 124332,
+      "target_reg": "r28",
+      "source_type": "unknown",
+      "detail": "no write to r28 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801e6dc",
+      "file_offset": "0x1e6dc",
+      "addr_int": 4160874204,
+      "file_offset_int": 124636,
+      "target_reg": "r14",
+      "source_type": "unknown",
+      "detail": "no write to r14 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801e78c",
+      "file_offset": "0x1e78c",
+      "addr_int": 4160874380,
+      "file_offset_int": 124812,
+      "target_reg": "r4",
+      "source_type": "unknown",
+      "detail": "no write to r4 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801e7a4",
+      "file_offset": "0x1e7a4",
+      "addr_int": 4160874404,
+      "file_offset_int": 124836,
+      "target_reg": "r5",
+      "source_type": "unknown",
+      "detail": "no write to r5 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801e8bc",
+      "file_offset": "0x1e8bc",
+      "addr_int": 4160874684,
+      "file_offset_int": 125116,
+      "target_reg": "r15",
+      "source_type": "unknown",
+      "detail": "no write to r15 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801e990",
+      "file_offset": "0x1e990",
+      "addr_int": 4160874896,
+      "file_offset_int": 125328,
+      "target_reg": "r31",
+      "source_type": "unknown",
+      "detail": "no write to r31 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801e9bc",
+      "file_offset": "0x1e9bc",
+      "addr_int": 4160874940,
+      "file_offset_int": 125372,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801eab4",
+      "file_offset": "0x1eab4",
+      "addr_int": 4160875188,
+      "file_offset_int": 125620,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801eb64",
+      "file_offset": "0x1eb64",
+      "addr_int": 4160875364,
+      "file_offset_int": 125796,
+      "target_reg": "r4",
+      "source_type": "unknown",
+      "detail": "no write to r4 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801eb7c",
+      "file_offset": "0x1eb7c",
+      "addr_int": 4160875388,
+      "file_offset_int": 125820,
+      "target_reg": "r10",
+      "source_type": "unknown",
+      "detail": "no write to r10 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801ec60",
+      "file_offset": "0x1ec60",
+      "addr_int": 4160875616,
+      "file_offset_int": 126048,
+      "target_reg": "r15",
+      "source_type": "unknown",
+      "detail": "no write to r15 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801ed38",
+      "file_offset": "0x1ed38",
+      "addr_int": 4160875832,
+      "file_offset_int": 126264,
+      "target_reg": "r5",
+      "source_type": "unknown",
+      "detail": "no write to r5 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801ed50",
+      "file_offset": "0x1ed50",
+      "addr_int": 4160875856,
+      "file_offset_int": 126288,
+      "target_reg": "r16",
+      "source_type": "unknown",
+      "detail": "no write to r16 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801ee30",
+      "file_offset": "0x1ee30",
+      "addr_int": 4160876080,
+      "file_offset_int": 126512,
+      "target_reg": "r16",
+      "source_type": "unknown",
+      "detail": "no write to r16 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801ee44",
+      "file_offset": "0x1ee44",
+      "addr_int": 4160876100,
+      "file_offset_int": 126532,
+      "target_reg": "r15",
+      "source_type": "unknown",
+      "detail": "no write to r15 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801ee94",
+      "file_offset": "0x1ee94",
+      "addr_int": 4160876180,
+      "file_offset_int": 126612,
+      "target_reg": "r4",
+      "source_type": "unknown",
+      "detail": "no write to r4 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801eeac",
+      "file_offset": "0x1eeac",
+      "addr_int": 4160876204,
+      "file_offset_int": 126636,
+      "target_reg": "r4",
+      "source_type": "unknown",
+      "detail": "no write to r4 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801f0fc",
+      "file_offset": "0x1f0fc",
+      "addr_int": 4160876796,
+      "file_offset_int": 127228,
+      "target_reg": "r4",
+      "source_type": "unknown",
+      "detail": "no write to r4 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801f584",
+      "file_offset": "0x1f584",
+      "addr_int": 4160877956,
+      "file_offset_int": 128388,
+      "target_reg": "r5",
+      "source_type": "unknown",
+      "detail": "no write to r5 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801f59c",
+      "file_offset": "0x1f59c",
+      "addr_int": 4160877980,
+      "file_offset_int": 128412,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801f688",
+      "file_offset": "0x1f688",
+      "addr_int": 4160878216,
+      "file_offset_int": 128648,
+      "target_reg": "r9",
+      "source_type": "unknown",
+      "detail": "no write to r9 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801f780",
+      "file_offset": "0x1f780",
+      "addr_int": 4160878464,
+      "file_offset_int": 128896,
+      "target_reg": "r10",
+      "source_type": "unknown",
+      "detail": "no write to r10 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801f878",
+      "file_offset": "0x1f878",
+      "addr_int": 4160878712,
+      "file_offset_int": 129144,
+      "target_reg": "r11",
+      "source_type": "unknown",
+      "detail": "no write to r11 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801f970",
+      "file_offset": "0x1f970",
+      "addr_int": 4160878960,
+      "file_offset_int": 129392,
+      "target_reg": "r12",
+      "source_type": "unknown",
+      "detail": "no write to r12 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801fa6c",
+      "file_offset": "0x1fa6c",
+      "addr_int": 4160879212,
+      "file_offset_int": 129644,
+      "target_reg": "r12",
+      "source_type": "unknown",
+      "detail": "no write to r12 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801fb74",
+      "file_offset": "0x1fb74",
+      "addr_int": 4160879476,
+      "file_offset_int": 129908,
+      "target_reg": "r26",
+      "source_type": "unknown",
+      "detail": "no write to r26 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801fb80",
+      "file_offset": "0x1fb80",
+      "addr_int": 4160879488,
+      "file_offset_int": 129920,
+      "target_reg": "r27",
+      "source_type": "unknown",
+      "detail": "no write to r27 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801fc50",
+      "file_offset": "0x1fc50",
+      "addr_int": 4160879696,
+      "file_offset_int": 130128,
+      "target_reg": "r4",
+      "source_type": "unknown",
+      "detail": "no write to r4 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801fcfc",
+      "file_offset": "0x1fcfc",
+      "addr_int": 4160879868,
+      "file_offset_int": 130300,
+      "target_reg": "r5",
+      "source_type": "unknown",
+      "detail": "no write to r5 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801fd14",
+      "file_offset": "0x1fd14",
+      "addr_int": 4160879892,
+      "file_offset_int": 130324,
+      "target_reg": "r23",
+      "source_type": "unknown",
+      "detail": "no write to r23 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801ffc0",
+      "file_offset": "0x1ffc0",
+      "addr_int": 4160880576,
+      "file_offset_int": 131008,
+      "target_reg": "r16",
+      "source_type": "unknown",
+      "detail": "no write to r16 found within 32 instructions"
+    },
+    {
+      "addr": "0xf801ffcc",
+      "file_offset": "0x1ffcc",
+      "addr_int": 4160880588,
+      "file_offset_int": 131020,
+      "target_reg": "r17",
+      "source_type": "unknown",
+      "detail": "no write to r17 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80200c4",
+      "file_offset": "0x200c4",
+      "addr_int": 4160880836,
+      "file_offset_int": 131268,
+      "target_reg": "r21",
+      "source_type": "unknown",
+      "detail": "no write to r21 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8020230",
+      "file_offset": "0x20230",
+      "addr_int": 4160881200,
+      "file_offset_int": 131632,
+      "target_reg": "r20",
+      "source_type": "unknown",
+      "detail": "no write to r20 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8020b18",
+      "file_offset": "0x20b18",
+      "addr_int": 4160883480,
+      "file_offset_int": 133912,
+      "target_reg": "r12",
+      "source_type": "unknown",
+      "detail": "no write to r12 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8020b58",
+      "file_offset": "0x20b58",
+      "addr_int": 4160883544,
+      "file_offset_int": 133976,
+      "target_reg": "r12",
+      "source_type": "unknown",
+      "detail": "no write to r12 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8020f00",
+      "file_offset": "0x20f00",
+      "addr_int": 4160884480,
+      "file_offset_int": 134912,
+      "target_reg": "r12",
+      "source_type": "unknown",
+      "detail": "no write to r12 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8023c24",
+      "file_offset": "0x23c24",
+      "addr_int": 4160896036,
+      "file_offset_int": 146468,
+      "target_reg": "r9",
+      "source_type": "unknown",
+      "detail": "no write to r9 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8023c78",
+      "file_offset": "0x23c78",
+      "addr_int": 4160896120,
+      "file_offset_int": 146552,
+      "target_reg": "r12",
+      "source_type": "unknown",
+      "detail": "no write to r12 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8023c90",
+      "file_offset": "0x23c90",
+      "addr_int": 4160896144,
+      "file_offset_int": 146576,
+      "target_reg": "r11",
+      "source_type": "unknown",
+      "detail": "no write to r11 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8023e18",
+      "file_offset": "0x23e18",
+      "addr_int": 4160896536,
+      "file_offset_int": 146968,
+      "target_reg": "r20",
+      "source_type": "unknown",
+      "detail": "no write to r20 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8023e94",
+      "file_offset": "0x23e94",
+      "addr_int": 4160896660,
+      "file_offset_int": 147092,
+      "target_reg": "r4",
+      "source_type": "unknown",
+      "detail": "no write to r4 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8023f10",
+      "file_offset": "0x23f10",
+      "addr_int": 4160896784,
+      "file_offset_int": 147216,
+      "target_reg": "r22",
+      "source_type": "unknown",
+      "detail": "no write to r22 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80240fc",
+      "file_offset": "0x240fc",
+      "addr_int": 4160897276,
+      "file_offset_int": 147708,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80241f8",
+      "file_offset": "0x241f8",
+      "addr_int": 4160897528,
+      "file_offset_int": 147960,
+      "target_reg": "r26",
+      "source_type": "unknown",
+      "detail": "no write to r26 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8024240",
+      "file_offset": "0x24240",
+      "addr_int": 4160897600,
+      "file_offset_int": 148032,
+      "target_reg": "r27",
+      "source_type": "unknown",
+      "detail": "no write to r27 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80242f8",
+      "file_offset": "0x242f8",
+      "addr_int": 4160897784,
+      "file_offset_int": 148216,
+      "target_reg": "r4",
+      "source_type": "unknown",
+      "detail": "no write to r4 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80243e0",
+      "file_offset": "0x243e0",
+      "addr_int": 4160898016,
+      "file_offset_int": 148448,
+      "target_reg": "r24",
+      "source_type": "unknown",
+      "detail": "no write to r24 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8024428",
+      "file_offset": "0x24428",
+      "addr_int": 4160898088,
+      "file_offset_int": 148520,
+      "target_reg": "r17",
+      "source_type": "unknown",
+      "detail": "no write to r17 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80245ac",
+      "file_offset": "0x245ac",
+      "addr_int": 4160898476,
+      "file_offset_int": 148908,
+      "target_reg": "r28",
+      "source_type": "register_chain",
+      "writer_addr": "0xf8024598",
+      "writer_file_offset": "0x24598",
+      "op": "xor_reg",
+      "detail": "xor_reg -> r28 at 0xf8024598"
+    },
+    {
+      "addr": "0xf8024804",
+      "file_offset": "0x24804",
+      "addr_int": 4160899076,
+      "file_offset_int": 149508,
+      "target_reg": "r18",
+      "source_type": "unknown",
+      "detail": "no write to r18 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8024948",
+      "file_offset": "0x24948",
+      "addr_int": 4160899400,
+      "file_offset_int": 149832,
+      "target_reg": "r4",
+      "source_type": "unknown",
+      "detail": "no write to r4 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8024a34",
+      "file_offset": "0x24a34",
+      "addr_int": 4160899636,
+      "file_offset_int": 150068,
+      "target_reg": "r25",
+      "source_type": "unknown",
+      "detail": "no write to r25 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8024a44",
+      "file_offset": "0x24a44",
+      "addr_int": 4160899652,
+      "file_offset_int": 150084,
+      "target_reg": "r28",
+      "source_type": "unknown",
+      "detail": "no write to r28 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8024c38",
+      "file_offset": "0x24c38",
+      "addr_int": 4160900152,
+      "file_offset_int": 150584,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8024d6c",
+      "file_offset": "0x24d6c",
+      "addr_int": 4160900460,
+      "file_offset_int": 150892,
+      "target_reg": "r28",
+      "source_type": "unknown",
+      "detail": "no write to r28 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8024da0",
+      "file_offset": "0x24da0",
+      "addr_int": 4160900512,
+      "file_offset_int": 150944,
+      "target_reg": "r13",
+      "source_type": "unknown",
+      "detail": "no write to r13 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8024de0",
+      "file_offset": "0x24de0",
+      "addr_int": 4160900576,
+      "file_offset_int": 151008,
+      "target_reg": "r19",
+      "source_type": "unknown",
+      "detail": "no write to r19 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8024f40",
+      "file_offset": "0x24f40",
+      "addr_int": 4160900928,
+      "file_offset_int": 151360,
+      "target_reg": "r9",
+      "source_type": "unknown",
+      "detail": "no write to r9 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8024fd0",
+      "file_offset": "0x24fd0",
+      "addr_int": 4160901072,
+      "file_offset_int": 151504,
+      "target_reg": "r2",
+      "source_type": "register_chain",
+      "writer_addr": "0xf8024fb4",
+      "writer_file_offset": "0x24fb4",
+      "op": "or_reg",
+      "detail": "or_reg -> r2 at 0xf8024fb4"
+    },
+    {
+      "addr": "0xf8025054",
+      "file_offset": "0x25054",
+      "addr_int": 4160901204,
+      "file_offset_int": 151636,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8025378",
+      "file_offset": "0x25378",
+      "addr_int": 4160902008,
+      "file_offset_int": 152440,
+      "target_reg": "r2",
+      "source_type": "register_chain",
+      "writer_addr": "0xf8025360",
+      "writer_file_offset": "0x25360",
+      "op": "adds_imm",
+      "detail": "adds_imm -> r2 at 0xf8025360"
+    },
+    {
+      "addr": "0xf8025578",
+      "file_offset": "0x25578",
+      "addr_int": 4160902520,
+      "file_offset_int": 152952,
+      "target_reg": "r31",
+      "source_type": "unknown",
+      "detail": "no write to r31 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80256f8",
+      "file_offset": "0x256f8",
+      "addr_int": 4160902904,
+      "file_offset_int": 153336,
+      "target_reg": "r17",
+      "source_type": "unknown",
+      "detail": "no write to r17 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8025890",
+      "file_offset": "0x25890",
+      "addr_int": 4160903312,
+      "file_offset_int": 153744,
+      "target_reg": "r25",
+      "source_type": "unknown",
+      "detail": "no write to r25 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8025a04",
+      "file_offset": "0x25a04",
+      "addr_int": 4160903684,
+      "file_offset_int": 154116,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8025a60",
+      "file_offset": "0x25a60",
+      "addr_int": 4160903776,
+      "file_offset_int": 154208,
+      "target_reg": "r29",
+      "source_type": "unknown",
+      "detail": "no write to r29 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8025a9c",
+      "file_offset": "0x25a9c",
+      "addr_int": 4160903836,
+      "file_offset_int": 154268,
+      "target_reg": "r30",
+      "source_type": "unknown",
+      "detail": "no write to r30 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8025c00",
+      "file_offset": "0x25c00",
+      "addr_int": 4160904192,
+      "file_offset_int": 154624,
+      "target_reg": "r25",
+      "source_type": "unknown",
+      "detail": "no write to r25 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8025da8",
+      "file_offset": "0x25da8",
+      "addr_int": 4160904616,
+      "file_offset_int": 155048,
+      "target_reg": "r26",
+      "source_type": "unknown",
+      "detail": "no write to r26 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8025e40",
+      "file_offset": "0x25e40",
+      "addr_int": 4160904768,
+      "file_offset_int": 155200,
+      "target_reg": "r29",
+      "source_type": "unknown",
+      "detail": "no write to r29 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8025e90",
+      "file_offset": "0x25e90",
+      "addr_int": 4160904848,
+      "file_offset_int": 155280,
+      "target_reg": "r24",
+      "source_type": "unknown",
+      "detail": "no write to r24 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8025ff4",
+      "file_offset": "0x25ff4",
+      "addr_int": 4160905204,
+      "file_offset_int": 155636,
+      "target_reg": "r13",
+      "source_type": "unknown",
+      "detail": "no write to r13 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8026038",
+      "file_offset": "0x26038",
+      "addr_int": 4160905272,
+      "file_offset_int": 155704,
+      "target_reg": "r15",
+      "source_type": "unknown",
+      "detail": "no write to r15 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802604c",
+      "file_offset": "0x2604c",
+      "addr_int": 4160905292,
+      "file_offset_int": 155724,
+      "target_reg": "r23",
+      "source_type": "unknown",
+      "detail": "no write to r23 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80261e4",
+      "file_offset": "0x261e4",
+      "addr_int": 4160905700,
+      "file_offset_int": 156132,
+      "target_reg": "r9",
+      "source_type": "unknown",
+      "detail": "no write to r9 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80261f0",
+      "file_offset": "0x261f0",
+      "addr_int": 4160905712,
+      "file_offset_int": 156144,
+      "target_reg": "r9",
+      "source_type": "unknown",
+      "detail": "no write to r9 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8026434",
+      "file_offset": "0x26434",
+      "addr_int": 4160906292,
+      "file_offset_int": 156724,
+      "target_reg": "r8",
+      "source_type": "register_chain",
+      "writer_addr": "0xf8026420",
+      "writer_file_offset": "0x26420",
+      "op": "subu_imm",
+      "detail": "subu_imm -> r8 at 0xf8026420"
+    },
+    {
+      "addr": "0xf802664c",
+      "file_offset": "0x2664c",
+      "addr_int": 4160906828,
+      "file_offset_int": 157260,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8026770",
+      "file_offset": "0x26770",
+      "addr_int": 4160907120,
+      "file_offset_int": 157552,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8026874",
+      "file_offset": "0x26874",
+      "addr_int": 4160907380,
+      "file_offset_int": 157812,
+      "target_reg": "r5",
+      "source_type": "unknown",
+      "detail": "no write to r5 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8026d6c",
+      "file_offset": "0x26d6c",
+      "addr_int": 4160908652,
+      "file_offset_int": 159084,
+      "target_reg": "r9",
+      "source_type": "unknown",
+      "detail": "no write to r9 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8026f80",
+      "file_offset": "0x26f80",
+      "addr_int": 4160909184,
+      "file_offset_int": 159616,
+      "target_reg": "r29",
+      "source_type": "unknown",
+      "detail": "no write to r29 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8026fe0",
+      "file_offset": "0x26fe0",
+      "addr_int": 4160909280,
+      "file_offset_int": 159712,
+      "target_reg": "r12",
+      "source_type": "unknown",
+      "detail": "no write to r12 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8027080",
+      "file_offset": "0x27080",
+      "addr_int": 4160909440,
+      "file_offset_int": 159872,
+      "target_reg": "r6",
+      "source_type": "register_chain",
+      "writer_addr": "0xf8027078",
+      "writer_file_offset": "0x27078",
+      "op": "shr_reg",
+      "detail": "shr_reg -> r6 at 0xf8027078"
+    },
+    {
+      "addr": "0xf80271c0",
+      "file_offset": "0x271c0",
+      "addr_int": 4160909760,
+      "file_offset_int": 160192,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80272d8",
+      "file_offset": "0x272d8",
+      "addr_int": 4160910040,
+      "file_offset_int": 160472,
+      "target_reg": "r9",
+      "source_type": "unknown",
+      "detail": "no write to r9 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80273a4",
+      "file_offset": "0x273a4",
+      "addr_int": 4160910244,
+      "file_offset_int": 160676,
+      "target_reg": "r8",
+      "source_type": "unknown",
+      "detail": "no write to r8 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80273b0",
+      "file_offset": "0x273b0",
+      "addr_int": 4160910256,
+      "file_offset_int": 160688,
+      "target_reg": "r9",
+      "source_type": "unknown",
+      "detail": "no write to r9 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80275fc",
+      "file_offset": "0x275fc",
+      "addr_int": 4160910844,
+      "file_offset_int": 161276,
+      "target_reg": "r5",
+      "source_type": "unknown",
+      "detail": "no write to r5 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8027608",
+      "file_offset": "0x27608",
+      "addr_int": 4160910856,
+      "file_offset_int": 161288,
+      "target_reg": "r27",
+      "source_type": "unknown",
+      "detail": "no write to r27 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8027818",
+      "file_offset": "0x27818",
+      "addr_int": 4160911384,
+      "file_offset_int": 161816,
+      "target_reg": "r27",
+      "source_type": "unknown",
+      "detail": "no write to r27 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8027898",
+      "file_offset": "0x27898",
+      "addr_int": 4160911512,
+      "file_offset_int": 161944,
+      "target_reg": "r14",
+      "source_type": "register_chain",
+      "writer_addr": "0xf8027874",
+      "writer_file_offset": "0x27874",
+      "op": "or_reg",
+      "detail": "or_reg -> r14 at 0xf8027874"
+    },
+    {
+      "addr": "0xf80278c4",
+      "file_offset": "0x278c4",
+      "addr_int": 4160911556,
+      "file_offset_int": 161988,
+      "target_reg": "r14",
+      "source_type": "unknown",
+      "detail": "no write to r14 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80278f8",
+      "file_offset": "0x278f8",
+      "addr_int": 4160911608,
+      "file_offset_int": 162040,
+      "target_reg": "r18",
+      "source_type": "unknown",
+      "detail": "no write to r18 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8027958",
+      "file_offset": "0x27958",
+      "addr_int": 4160911704,
+      "file_offset_int": 162136,
+      "target_reg": "r15",
+      "source_type": "register_chain",
+      "writer_addr": "0xf8027950",
+      "writer_file_offset": "0x27950",
+      "op": "addu_reg",
+      "detail": "addu_reg -> r15 at 0xf8027950"
+    },
+    {
+      "addr": "0xf8027a10",
+      "file_offset": "0x27a10",
+      "addr_int": 4160911888,
+      "file_offset_int": 162320,
+      "target_reg": "r19",
+      "source_type": "unknown",
+      "detail": "no write to r19 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8027d6c",
+      "file_offset": "0x27d6c",
+      "addr_int": 4160912748,
+      "file_offset_int": 163180,
+      "target_reg": "r5",
+      "source_type": "unknown",
+      "detail": "no write to r5 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8027ddc",
+      "file_offset": "0x27ddc",
+      "addr_int": 4160912860,
+      "file_offset_int": 163292,
+      "target_reg": "r30",
+      "source_type": "unknown",
+      "detail": "no write to r30 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8027f0c",
+      "file_offset": "0x27f0c",
+      "addr_int": 4160913164,
+      "file_offset_int": 163596,
+      "target_reg": "r7",
+      "source_type": "register_chain",
+      "writer_addr": "0xf8027ef0",
+      "writer_file_offset": "0x27ef0",
+      "op": "addu_imm",
+      "detail": "addu_imm -> r7 at 0xf8027ef0"
+    },
+    {
+      "addr": "0xf8028380",
+      "file_offset": "0x28380",
+      "addr_int": 4160914304,
+      "file_offset_int": 164736,
+      "target_reg": "r10",
+      "source_type": "unknown",
+      "detail": "no write to r10 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8028780",
+      "file_offset": "0x28780",
+      "addr_int": 4160915328,
+      "file_offset_int": 165760,
+      "target_reg": "r12",
+      "source_type": "unknown",
+      "detail": "no write to r12 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8028808",
+      "file_offset": "0x28808",
+      "addr_int": 4160915464,
+      "file_offset_int": 165896,
+      "target_reg": "r18",
+      "source_type": "unknown",
+      "detail": "no write to r18 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80288a8",
+      "file_offset": "0x288a8",
+      "addr_int": 4160915624,
+      "file_offset_int": 166056,
+      "target_reg": "r18",
+      "source_type": "unknown",
+      "detail": "no write to r18 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80289c0",
+      "file_offset": "0x289c0",
+      "addr_int": 4160915904,
+      "file_offset_int": 166336,
+      "target_reg": "r14",
+      "source_type": "unknown",
+      "detail": "no write to r14 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80289d8",
+      "file_offset": "0x289d8",
+      "addr_int": 4160915928,
+      "file_offset_int": 166360,
+      "target_reg": "r13",
+      "source_type": "unknown",
+      "detail": "no write to r13 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8028a3c",
+      "file_offset": "0x28a3c",
+      "addr_int": 4160916028,
+      "file_offset_int": 166460,
+      "target_reg": "r31",
+      "source_type": "unknown",
+      "detail": "no write to r31 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8028acc",
+      "file_offset": "0x28acc",
+      "addr_int": 4160916172,
+      "file_offset_int": 166604,
+      "target_reg": "r15",
+      "source_type": "unknown",
+      "detail": "no write to r15 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8028c80",
+      "file_offset": "0x28c80",
+      "addr_int": 4160916608,
+      "file_offset_int": 167040,
+      "target_reg": "r22",
+      "source_type": "unknown",
+      "detail": "no write to r22 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8028f68",
+      "file_offset": "0x28f68",
+      "addr_int": 4160917352,
+      "file_offset_int": 167784,
+      "target_reg": "r10",
+      "source_type": "unknown",
+      "detail": "no write to r10 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8028f78",
+      "file_offset": "0x28f78",
+      "addr_int": 4160917368,
+      "file_offset_int": 167800,
+      "target_reg": "r18",
+      "source_type": "unknown",
+      "detail": "no write to r18 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8028f8c",
+      "file_offset": "0x28f8c",
+      "addr_int": 4160917388,
+      "file_offset_int": 167820,
+      "target_reg": "r14",
+      "source_type": "unknown",
+      "detail": "no write to r14 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8029010",
+      "file_offset": "0x29010",
+      "addr_int": 4160917520,
+      "file_offset_int": 167952,
+      "target_reg": "r17",
+      "source_type": "ld_reg",
+      "writer_addr": "0xf8028ff8",
+      "writer_file_offset": "0x28ff8",
+      "index_reg": "r26",
+      "base_reg": "r2",
+      "detail": "ld.l r26(r2), r17"
+    },
+    {
+      "addr": "0xf8029020",
+      "file_offset": "0x29020",
+      "addr_int": 4160917536,
+      "file_offset_int": 167968,
+      "target_reg": "r10",
+      "source_type": "unknown",
+      "detail": "no write to r10 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8029028",
+      "file_offset": "0x29028",
+      "addr_int": 4160917544,
+      "file_offset_int": 167976,
+      "target_reg": "r8",
+      "source_type": "unknown",
+      "detail": "no write to r8 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8029094",
+      "file_offset": "0x29094",
+      "addr_int": 4160917652,
+      "file_offset_int": 168084,
+      "target_reg": "r26",
+      "source_type": "unknown",
+      "detail": "no write to r26 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8029364",
+      "file_offset": "0x29364",
+      "addr_int": 4160918372,
+      "file_offset_int": 168804,
+      "target_reg": "r28",
+      "source_type": "register_chain",
+      "writer_addr": "0xf8029328",
+      "writer_file_offset": "0x29328",
+      "op": "subs_reg",
+      "detail": "subs_reg -> r28 at 0xf8029328"
+    },
+    {
+      "addr": "0xf802938c",
+      "file_offset": "0x2938c",
+      "addr_int": 4160918412,
+      "file_offset_int": 168844,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80293dc",
+      "file_offset": "0x293dc",
+      "addr_int": 4160918492,
+      "file_offset_int": 168924,
+      "target_reg": "r21",
+      "source_type": "unknown",
+      "detail": "no write to r21 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8029474",
+      "file_offset": "0x29474",
+      "addr_int": 4160918644,
+      "file_offset_int": 169076,
+      "target_reg": "r15",
+      "source_type": "unknown",
+      "detail": "no write to r15 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802959c",
+      "file_offset": "0x2959c",
+      "addr_int": 4160918940,
+      "file_offset_int": 169372,
+      "target_reg": "r15",
+      "source_type": "unknown",
+      "detail": "no write to r15 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8029760",
+      "file_offset": "0x29760",
+      "addr_int": 4160919392,
+      "file_offset_int": 169824,
+      "target_reg": "r12",
+      "source_type": "unknown",
+      "detail": "no write to r12 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80297ec",
+      "file_offset": "0x297ec",
+      "addr_int": 4160919532,
+      "file_offset_int": 169964,
+      "target_reg": "r11",
+      "source_type": "unknown",
+      "detail": "no write to r11 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802984c",
+      "file_offset": "0x2984c",
+      "addr_int": 4160919628,
+      "file_offset_int": 170060,
+      "target_reg": "r31",
+      "source_type": "unknown",
+      "detail": "no write to r31 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8029874",
+      "file_offset": "0x29874",
+      "addr_int": 4160919668,
+      "file_offset_int": 170100,
+      "target_reg": "r22",
+      "source_type": "unknown",
+      "detail": "no write to r22 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8029944",
+      "file_offset": "0x29944",
+      "addr_int": 4160919876,
+      "file_offset_int": 170308,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80299c0",
+      "file_offset": "0x299c0",
+      "addr_int": 4160920000,
+      "file_offset_int": 170432,
+      "target_reg": "r29",
+      "source_type": "unknown",
+      "detail": "no write to r29 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8029a8c",
+      "file_offset": "0x29a8c",
+      "addr_int": 4160920204,
+      "file_offset_int": 170636,
+      "target_reg": "r8",
+      "source_type": "unknown",
+      "detail": "no write to r8 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8029b30",
+      "file_offset": "0x29b30",
+      "addr_int": 4160920368,
+      "file_offset_int": 170800,
+      "target_reg": "r19",
+      "source_type": "register_chain",
+      "writer_addr": "0xf8029b00",
+      "writer_file_offset": "0x29b00",
+      "op": "xorh_imm",
+      "detail": "xorh_imm -> r19 at 0xf8029b00"
+    },
+    {
+      "addr": "0xf8029e4c",
+      "file_offset": "0x29e4c",
+      "addr_int": 4160921164,
+      "file_offset_int": 171596,
+      "target_reg": "r19",
+      "source_type": "register_chain",
+      "writer_addr": "0xf8029e18",
+      "writer_file_offset": "0x29e18",
+      "op": "shra_imm",
+      "detail": "shra_imm -> r19 at 0xf8029e18"
+    },
+    {
+      "addr": "0xf802a24c",
+      "file_offset": "0x2a24c",
+      "addr_int": 4160922188,
+      "file_offset_int": 172620,
+      "target_reg": "r13",
+      "source_type": "register_chain",
+      "writer_addr": "0xf802a238",
+      "writer_file_offset": "0x2a238",
+      "op": "andnot_imm",
+      "detail": "andnot_imm -> r13 at 0xf802a238"
+    },
+    {
+      "addr": "0xf802a2c4",
+      "file_offset": "0x2a2c4",
+      "addr_int": 4160922308,
+      "file_offset_int": 172740,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802a488",
+      "file_offset": "0x2a488",
+      "addr_int": 4160922760,
+      "file_offset_int": 173192,
+      "target_reg": "r21",
+      "source_type": "unknown",
+      "detail": "no write to r21 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802a628",
+      "file_offset": "0x2a628",
+      "addr_int": 4160923176,
+      "file_offset_int": 173608,
+      "target_reg": "r16",
+      "source_type": "unknown",
+      "detail": "no write to r16 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802a630",
+      "file_offset": "0x2a630",
+      "addr_int": 4160923184,
+      "file_offset_int": 173616,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802a698",
+      "file_offset": "0x2a698",
+      "addr_int": 4160923288,
+      "file_offset_int": 173720,
+      "target_reg": "r17",
+      "source_type": "unknown",
+      "detail": "no write to r17 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802a6c0",
+      "file_offset": "0x2a6c0",
+      "addr_int": 4160923328,
+      "file_offset_int": 173760,
+      "target_reg": "r9",
+      "source_type": "unknown",
+      "detail": "no write to r9 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802a788",
+      "file_offset": "0x2a788",
+      "addr_int": 4160923528,
+      "file_offset_int": 173960,
+      "target_reg": "r28",
+      "source_type": "unknown",
+      "detail": "no write to r28 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802a828",
+      "file_offset": "0x2a828",
+      "addr_int": 4160923688,
+      "file_offset_int": 174120,
+      "target_reg": "r14",
+      "source_type": "unknown",
+      "detail": "no write to r14 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802a998",
+      "file_offset": "0x2a998",
+      "addr_int": 4160924056,
+      "file_offset_int": 174488,
+      "target_reg": "r22",
+      "source_type": "unknown",
+      "detail": "no write to r22 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802aa44",
+      "file_offset": "0x2aa44",
+      "addr_int": 4160924228,
+      "file_offset_int": 174660,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802aa5c",
+      "file_offset": "0x2aa5c",
+      "addr_int": 4160924252,
+      "file_offset_int": 174684,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802aa84",
+      "file_offset": "0x2aa84",
+      "addr_int": 4160924292,
+      "file_offset_int": 174724,
+      "target_reg": "r16",
+      "source_type": "unknown",
+      "detail": "no write to r16 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802ab3c",
+      "file_offset": "0x2ab3c",
+      "addr_int": 4160924476,
+      "file_offset_int": 174908,
+      "target_reg": "r12",
+      "source_type": "unknown",
+      "detail": "no write to r12 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802aba0",
+      "file_offset": "0x2aba0",
+      "addr_int": 4160924576,
+      "file_offset_int": 175008,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802ac34",
+      "file_offset": "0x2ac34",
+      "addr_int": 4160924724,
+      "file_offset_int": 175156,
+      "target_reg": "r12",
+      "source_type": "unknown",
+      "detail": "no write to r12 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802aca4",
+      "file_offset": "0x2aca4",
+      "addr_int": 4160924836,
+      "file_offset_int": 175268,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802ace8",
+      "file_offset": "0x2ace8",
+      "addr_int": 4160924904,
+      "file_offset_int": 175336,
+      "target_reg": "r11",
+      "source_type": "unknown",
+      "detail": "no write to r11 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802afa8",
+      "file_offset": "0x2afa8",
+      "addr_int": 4160925608,
+      "file_offset_int": 176040,
+      "target_reg": "r10",
+      "source_type": "unknown",
+      "detail": "no write to r10 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802b230",
+      "file_offset": "0x2b230",
+      "addr_int": 4160926256,
+      "file_offset_int": 176688,
+      "target_reg": "r21",
+      "source_type": "unknown",
+      "detail": "no write to r21 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802b3e8",
+      "file_offset": "0x2b3e8",
+      "addr_int": 4160926696,
+      "file_offset_int": 177128,
+      "target_reg": "r4",
+      "source_type": "unknown",
+      "detail": "no write to r4 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802b598",
+      "file_offset": "0x2b598",
+      "addr_int": 4160927128,
+      "file_offset_int": 177560,
+      "target_reg": "r28",
+      "source_type": "unknown",
+      "detail": "no write to r28 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802b604",
+      "file_offset": "0x2b604",
+      "addr_int": 4160927236,
+      "file_offset_int": 177668,
+      "target_reg": "r18",
+      "source_type": "register_chain",
+      "writer_addr": "0xf802b5bc",
+      "writer_file_offset": "0x2b5bc",
+      "op": "addu_reg",
+      "detail": "addu_reg -> r18 at 0xf802b5bc"
+    },
+    {
+      "addr": "0xf802ba24",
+      "file_offset": "0x2ba24",
+      "addr_int": 4160928292,
+      "file_offset_int": 178724,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802bbc8",
+      "file_offset": "0x2bbc8",
+      "addr_int": 4160928712,
+      "file_offset_int": 179144,
+      "target_reg": "r10",
+      "source_type": "unknown",
+      "detail": "no write to r10 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802bbf8",
+      "file_offset": "0x2bbf8",
+      "addr_int": 4160928760,
+      "file_offset_int": 179192,
+      "target_reg": "r25",
+      "source_type": "unknown",
+      "detail": "no write to r25 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802bd70",
+      "file_offset": "0x2bd70",
+      "addr_int": 4160929136,
+      "file_offset_int": 179568,
+      "target_reg": "r11",
+      "source_type": "register_chain",
+      "writer_addr": "0xf802bd38",
+      "writer_file_offset": "0x2bd38",
+      "op": "subs_reg",
+      "detail": "subs_reg -> r11 at 0xf802bd38"
+    },
+    {
+      "addr": "0xf802c030",
+      "file_offset": "0x2c030",
+      "addr_int": 4160929840,
+      "file_offset_int": 180272,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802c06c",
+      "file_offset": "0x2c06c",
+      "addr_int": 4160929900,
+      "file_offset_int": 180332,
+      "target_reg": "r27",
+      "source_type": "unknown",
+      "detail": "no write to r27 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802c304",
+      "file_offset": "0x2c304",
+      "addr_int": 4160930564,
+      "file_offset_int": 180996,
+      "target_reg": "r23",
+      "source_type": "unknown",
+      "detail": "no write to r23 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802c334",
+      "file_offset": "0x2c334",
+      "addr_int": 4160930612,
+      "file_offset_int": 181044,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802c3a0",
+      "file_offset": "0x2c3a0",
+      "addr_int": 4160930720,
+      "file_offset_int": 181152,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802c40c",
+      "file_offset": "0x2c40c",
+      "addr_int": 4160930828,
+      "file_offset_int": 181260,
+      "target_reg": "r21",
+      "source_type": "unknown",
+      "detail": "no write to r21 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802c470",
+      "file_offset": "0x2c470",
+      "addr_int": 4160930928,
+      "file_offset_int": 181360,
+      "target_reg": "r18",
+      "source_type": "unknown",
+      "detail": "no write to r18 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802c500",
+      "file_offset": "0x2c500",
+      "addr_int": 4160931072,
+      "file_offset_int": 181504,
+      "target_reg": "r24",
+      "source_type": "unknown",
+      "detail": "no write to r24 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802c53c",
+      "file_offset": "0x2c53c",
+      "addr_int": 4160931132,
+      "file_offset_int": 181564,
+      "target_reg": "r13",
+      "source_type": "unknown",
+      "detail": "no write to r13 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802c540",
+      "file_offset": "0x2c540",
+      "addr_int": 4160931136,
+      "file_offset_int": 181568,
+      "target_reg": "r9",
+      "source_type": "unknown",
+      "detail": "no write to r9 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802c580",
+      "file_offset": "0x2c580",
+      "addr_int": 4160931200,
+      "file_offset_int": 181632,
+      "target_reg": "r10",
+      "source_type": "unknown",
+      "detail": "no write to r10 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802c690",
+      "file_offset": "0x2c690",
+      "addr_int": 4160931472,
+      "file_offset_int": 181904,
+      "target_reg": "r16",
+      "source_type": "unknown",
+      "detail": "no write to r16 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802c6d0",
+      "file_offset": "0x2c6d0",
+      "addr_int": 4160931536,
+      "file_offset_int": 181968,
+      "target_reg": "r24",
+      "source_type": "unknown",
+      "detail": "no write to r24 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802c94c",
+      "file_offset": "0x2c94c",
+      "addr_int": 4160932172,
+      "file_offset_int": 182604,
+      "target_reg": "r9",
+      "source_type": "unknown",
+      "detail": "no write to r9 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802cb7c",
+      "file_offset": "0x2cb7c",
+      "addr_int": 4160932732,
+      "file_offset_int": 183164,
+      "target_reg": "r17",
+      "source_type": "unknown",
+      "detail": "no write to r17 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802cda8",
+      "file_offset": "0x2cda8",
+      "addr_int": 4160933288,
+      "file_offset_int": 183720,
+      "target_reg": "r4",
+      "source_type": "unknown",
+      "detail": "no write to r4 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802cec4",
+      "file_offset": "0x2cec4",
+      "addr_int": 4160933572,
+      "file_offset_int": 184004,
+      "target_reg": "r24",
+      "source_type": "unknown",
+      "detail": "no write to r24 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802cedc",
+      "file_offset": "0x2cedc",
+      "addr_int": 4160933596,
+      "file_offset_int": 184028,
+      "target_reg": "r27",
+      "source_type": "unknown",
+      "detail": "no write to r27 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802cef4",
+      "file_offset": "0x2cef4",
+      "addr_int": 4160933620,
+      "file_offset_int": 184052,
+      "target_reg": "r15",
+      "source_type": "unknown",
+      "detail": "no write to r15 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802d004",
+      "file_offset": "0x2d004",
+      "addr_int": 4160933892,
+      "file_offset_int": 184324,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802d038",
+      "file_offset": "0x2d038",
+      "addr_int": 4160933944,
+      "file_offset_int": 184376,
+      "target_reg": "r8",
+      "source_type": "unknown",
+      "detail": "no write to r8 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802d0bc",
+      "file_offset": "0x2d0bc",
+      "addr_int": 4160934076,
+      "file_offset_int": 184508,
+      "target_reg": "r23",
+      "source_type": "unknown",
+      "detail": "no write to r23 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802d118",
+      "file_offset": "0x2d118",
+      "addr_int": 4160934168,
+      "file_offset_int": 184600,
+      "target_reg": "r5",
+      "source_type": "unknown",
+      "detail": "no write to r5 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802d1a8",
+      "file_offset": "0x2d1a8",
+      "addr_int": 4160934312,
+      "file_offset_int": 184744,
+      "target_reg": "r13",
+      "source_type": "unknown",
+      "detail": "no write to r13 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802d2fc",
+      "file_offset": "0x2d2fc",
+      "addr_int": 4160934652,
+      "file_offset_int": 185084,
+      "target_reg": "r7",
+      "source_type": "register_chain",
+      "writer_addr": "0xf802d2f0",
+      "writer_file_offset": "0x2d2f0",
+      "op": "subs_reg",
+      "detail": "subs_reg -> r7 at 0xf802d2f0"
+    },
+    {
+      "addr": "0xf802d3fc",
+      "file_offset": "0x2d3fc",
+      "addr_int": 4160934908,
+      "file_offset_int": 185340,
+      "target_reg": "r22",
+      "source_type": "unknown",
+      "detail": "no write to r22 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802d41c",
+      "file_offset": "0x2d41c",
+      "addr_int": 4160934940,
+      "file_offset_int": 185372,
+      "target_reg": "r8",
+      "source_type": "unknown",
+      "detail": "no write to r8 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802d4e8",
+      "file_offset": "0x2d4e8",
+      "addr_int": 4160935144,
+      "file_offset_int": 185576,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802d6b0",
+      "file_offset": "0x2d6b0",
+      "addr_int": 4160935600,
+      "file_offset_int": 186032,
+      "target_reg": "r8",
+      "source_type": "unknown",
+      "detail": "no write to r8 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802d6cc",
+      "file_offset": "0x2d6cc",
+      "addr_int": 4160935628,
+      "file_offset_int": 186060,
+      "target_reg": "r26",
+      "source_type": "ld_table",
+      "writer_addr": "0xf802d6c4",
+      "writer_file_offset": "0x2d6c4",
+      "base_reg": "r18",
+      "offset": "reg",
+      "detail": "ld.s r29(r18), r26"
+    },
+    {
+      "addr": "0xf802d750",
+      "file_offset": "0x2d750",
+      "addr_int": 4160935760,
+      "file_offset_int": 186192,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802d7f0",
+      "file_offset": "0x2d7f0",
+      "addr_int": 4160935920,
+      "file_offset_int": 186352,
+      "target_reg": "r20",
+      "source_type": "unknown",
+      "detail": "no write to r20 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802d9a4",
+      "file_offset": "0x2d9a4",
+      "addr_int": 4160936356,
+      "file_offset_int": 186788,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802daa4",
+      "file_offset": "0x2daa4",
+      "addr_int": 4160936612,
+      "file_offset_int": 187044,
+      "target_reg": "r26",
+      "source_type": "unknown",
+      "detail": "no write to r26 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802dac4",
+      "file_offset": "0x2dac4",
+      "addr_int": 4160936644,
+      "file_offset_int": 187076,
+      "target_reg": "r10",
+      "source_type": "unknown",
+      "detail": "no write to r10 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802dac8",
+      "file_offset": "0x2dac8",
+      "addr_int": 4160936648,
+      "file_offset_int": 187080,
+      "target_reg": "r24",
+      "source_type": "unknown",
+      "detail": "no write to r24 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802de40",
+      "file_offset": "0x2de40",
+      "addr_int": 4160937536,
+      "file_offset_int": 187968,
+      "target_reg": "r29",
+      "source_type": "unknown",
+      "detail": "no write to r29 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802def8",
+      "file_offset": "0x2def8",
+      "addr_int": 4160937720,
+      "file_offset_int": 188152,
+      "target_reg": "r29",
+      "source_type": "unknown",
+      "detail": "no write to r29 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802e084",
+      "file_offset": "0x2e084",
+      "addr_int": 4160938116,
+      "file_offset_int": 188548,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802e150",
+      "file_offset": "0x2e150",
+      "addr_int": 4160938320,
+      "file_offset_int": 188752,
+      "target_reg": "r17",
+      "source_type": "unknown",
+      "detail": "no write to r17 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802e22c",
+      "file_offset": "0x2e22c",
+      "addr_int": 4160938540,
+      "file_offset_int": 188972,
+      "target_reg": "r15",
+      "source_type": "unknown",
+      "detail": "no write to r15 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802e268",
+      "file_offset": "0x2e268",
+      "addr_int": 4160938600,
+      "file_offset_int": 189032,
+      "target_reg": "r10",
+      "source_type": "unknown",
+      "detail": "no write to r10 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802e2e4",
+      "file_offset": "0x2e2e4",
+      "addr_int": 4160938724,
+      "file_offset_int": 189156,
+      "target_reg": "r15",
+      "source_type": "unknown",
+      "detail": "no write to r15 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802e394",
+      "file_offset": "0x2e394",
+      "addr_int": 4160938900,
+      "file_offset_int": 189332,
+      "target_reg": "r30",
+      "source_type": "unknown",
+      "detail": "no write to r30 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802e408",
+      "file_offset": "0x2e408",
+      "addr_int": 4160939016,
+      "file_offset_int": 189448,
+      "target_reg": "r10",
+      "source_type": "unknown",
+      "detail": "no write to r10 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802e4e4",
+      "file_offset": "0x2e4e4",
+      "addr_int": 4160939236,
+      "file_offset_int": 189668,
+      "target_reg": "r4",
+      "source_type": "register_chain",
+      "writer_addr": "0xf802e4e0",
+      "writer_file_offset": "0x2e4e0",
+      "op": "subu_reg",
+      "detail": "subu_reg -> r4 at 0xf802e4e0"
+    },
+    {
+      "addr": "0xf802e55c",
+      "file_offset": "0x2e55c",
+      "addr_int": 4160939356,
+      "file_offset_int": 189788,
+      "target_reg": "r4",
+      "source_type": "register_chain",
+      "writer_addr": "0xf802e550",
+      "writer_file_offset": "0x2e550",
+      "op": "addu_imm",
+      "detail": "addu_imm -> r4 at 0xf802e550"
+    },
+    {
+      "addr": "0xf802e614",
+      "file_offset": "0x2e614",
+      "addr_int": 4160939540,
+      "file_offset_int": 189972,
+      "target_reg": "r18",
+      "source_type": "unknown",
+      "detail": "no write to r18 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802e620",
+      "file_offset": "0x2e620",
+      "addr_int": 4160939552,
+      "file_offset_int": 189984,
+      "target_reg": "r18",
+      "source_type": "unknown",
+      "detail": "no write to r18 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802e65c",
+      "file_offset": "0x2e65c",
+      "addr_int": 4160939612,
+      "file_offset_int": 190044,
+      "target_reg": "r30",
+      "source_type": "unknown",
+      "detail": "no write to r30 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802e6e4",
+      "file_offset": "0x2e6e4",
+      "addr_int": 4160939748,
+      "file_offset_int": 190180,
+      "target_reg": "r17",
+      "source_type": "unknown",
+      "detail": "no write to r17 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802e854",
+      "file_offset": "0x2e854",
+      "addr_int": 4160940116,
+      "file_offset_int": 190548,
+      "target_reg": "r12",
+      "source_type": "unknown",
+      "detail": "no write to r12 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802ea78",
+      "file_offset": "0x2ea78",
+      "addr_int": 4160940664,
+      "file_offset_int": 191096,
+      "target_reg": "r14",
+      "source_type": "unknown",
+      "detail": "no write to r14 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802eb6c",
+      "file_offset": "0x2eb6c",
+      "addr_int": 4160940908,
+      "file_offset_int": 191340,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802ed38",
+      "file_offset": "0x2ed38",
+      "addr_int": 4160941368,
+      "file_offset_int": 191800,
+      "target_reg": "r16",
+      "source_type": "unknown",
+      "detail": "no write to r16 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802ee64",
+      "file_offset": "0x2ee64",
+      "addr_int": 4160941668,
+      "file_offset_int": 192100,
+      "target_reg": "r8",
+      "source_type": "unknown",
+      "detail": "no write to r8 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802ef68",
+      "file_offset": "0x2ef68",
+      "addr_int": 4160941928,
+      "file_offset_int": 192360,
+      "target_reg": "r27",
+      "source_type": "unknown",
+      "detail": "no write to r27 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802efbc",
+      "file_offset": "0x2efbc",
+      "addr_int": 4160942012,
+      "file_offset_int": 192444,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802f048",
+      "file_offset": "0x2f048",
+      "addr_int": 4160942152,
+      "file_offset_int": 192584,
+      "target_reg": "r26",
+      "source_type": "unknown",
+      "detail": "no write to r26 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802f05c",
+      "file_offset": "0x2f05c",
+      "addr_int": 4160942172,
+      "file_offset_int": 192604,
+      "target_reg": "r16",
+      "source_type": "unknown",
+      "detail": "no write to r16 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802f104",
+      "file_offset": "0x2f104",
+      "addr_int": 4160942340,
+      "file_offset_int": 192772,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802f1b8",
+      "file_offset": "0x2f1b8",
+      "addr_int": 4160942520,
+      "file_offset_int": 192952,
+      "target_reg": "r13",
+      "source_type": "unknown",
+      "detail": "no write to r13 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802f3a0",
+      "file_offset": "0x2f3a0",
+      "addr_int": 4160943008,
+      "file_offset_int": 193440,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802f3b4",
+      "file_offset": "0x2f3b4",
+      "addr_int": 4160943028,
+      "file_offset_int": 193460,
+      "target_reg": "r15",
+      "source_type": "unknown",
+      "detail": "no write to r15 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802f3f4",
+      "file_offset": "0x2f3f4",
+      "addr_int": 4160943092,
+      "file_offset_int": 193524,
+      "target_reg": "r9",
+      "source_type": "unknown",
+      "detail": "no write to r9 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802f4b4",
+      "file_offset": "0x2f4b4",
+      "addr_int": 4160943284,
+      "file_offset_int": 193716,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802f690",
+      "file_offset": "0x2f690",
+      "addr_int": 4160943760,
+      "file_offset_int": 194192,
+      "target_reg": "r27",
+      "source_type": "unknown",
+      "detail": "no write to r27 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802f714",
+      "file_offset": "0x2f714",
+      "addr_int": 4160943892,
+      "file_offset_int": 194324,
+      "target_reg": "r10",
+      "source_type": "unknown",
+      "detail": "no write to r10 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802f7b0",
+      "file_offset": "0x2f7b0",
+      "addr_int": 4160944048,
+      "file_offset_int": 194480,
+      "target_reg": "r25",
+      "source_type": "unknown",
+      "detail": "no write to r25 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802f86c",
+      "file_offset": "0x2f86c",
+      "addr_int": 4160944236,
+      "file_offset_int": 194668,
+      "target_reg": "r26",
+      "source_type": "unknown",
+      "detail": "no write to r26 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802f9f4",
+      "file_offset": "0x2f9f4",
+      "addr_int": 4160944628,
+      "file_offset_int": 195060,
+      "target_reg": "r7",
+      "source_type": "unknown",
+      "detail": "no write to r7 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802fac8",
+      "file_offset": "0x2fac8",
+      "addr_int": 4160944840,
+      "file_offset_int": 195272,
+      "target_reg": "r28",
+      "source_type": "unknown",
+      "detail": "no write to r28 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802fb18",
+      "file_offset": "0x2fb18",
+      "addr_int": 4160944920,
+      "file_offset_int": 195352,
+      "target_reg": "r26",
+      "source_type": "unknown",
+      "detail": "no write to r26 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802fbe4",
+      "file_offset": "0x2fbe4",
+      "addr_int": 4160945124,
+      "file_offset_int": 195556,
+      "target_reg": "r17",
+      "source_type": "unknown",
+      "detail": "no write to r17 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802fd8c",
+      "file_offset": "0x2fd8c",
+      "addr_int": 4160945548,
+      "file_offset_int": 195980,
+      "target_reg": "r22",
+      "source_type": "unknown",
+      "detail": "no write to r22 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802ff08",
+      "file_offset": "0x2ff08",
+      "addr_int": 4160945928,
+      "file_offset_int": 196360,
+      "target_reg": "r9",
+      "source_type": "unknown",
+      "detail": "no write to r9 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802ff18",
+      "file_offset": "0x2ff18",
+      "addr_int": 4160945944,
+      "file_offset_int": 196376,
+      "target_reg": "r10",
+      "source_type": "unknown",
+      "detail": "no write to r10 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802ff1c",
+      "file_offset": "0x2ff1c",
+      "addr_int": 4160945948,
+      "file_offset_int": 196380,
+      "target_reg": "r22",
+      "source_type": "unknown",
+      "detail": "no write to r22 found within 32 instructions"
+    },
+    {
+      "addr": "0xf802fffc",
+      "file_offset": "0x2fffc",
+      "addr_int": 4160946172,
+      "file_offset_int": 196604,
+      "target_reg": "r29",
+      "source_type": "unknown",
+      "detail": "no write to r29 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8030204",
+      "file_offset": "0x30204",
+      "addr_int": 4160946692,
+      "file_offset_int": 197124,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8030268",
+      "file_offset": "0x30268",
+      "addr_int": 4160946792,
+      "file_offset_int": 197224,
+      "target_reg": "r8",
+      "source_type": "unknown",
+      "detail": "no write to r8 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80303d8",
+      "file_offset": "0x303d8",
+      "addr_int": 4160947160,
+      "file_offset_int": 197592,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8030408",
+      "file_offset": "0x30408",
+      "addr_int": 4160947208,
+      "file_offset_int": 197640,
+      "target_reg": "r20",
+      "source_type": "unknown",
+      "detail": "no write to r20 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80304dc",
+      "file_offset": "0x304dc",
+      "addr_int": 4160947420,
+      "file_offset_int": 197852,
+      "target_reg": "r3",
+      "source_type": "unknown",
+      "detail": "no write to r3 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80304ec",
+      "file_offset": "0x304ec",
+      "addr_int": 4160947436,
+      "file_offset_int": 197868,
+      "target_reg": "r28",
+      "source_type": "unknown",
+      "detail": "no write to r28 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8030588",
+      "file_offset": "0x30588",
+      "addr_int": 4160947592,
+      "file_offset_int": 198024,
+      "target_reg": "r17",
+      "source_type": "unknown",
+      "detail": "no write to r17 found within 32 instructions"
+    },
+    {
+      "addr": "0xf803061c",
+      "file_offset": "0x3061c",
+      "addr_int": 4160947740,
+      "file_offset_int": 198172,
+      "target_reg": "r2",
+      "source_type": "unknown",
+      "detail": "no write to r2 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8030710",
+      "file_offset": "0x30710",
+      "addr_int": 4160947984,
+      "file_offset_int": 198416,
+      "target_reg": "r6",
+      "source_type": "unknown",
+      "detail": "no write to r6 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8030764",
+      "file_offset": "0x30764",
+      "addr_int": 4160948068,
+      "file_offset_int": 198500,
+      "target_reg": "r12",
+      "source_type": "unknown",
+      "detail": "no write to r12 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80308b0",
+      "file_offset": "0x308b0",
+      "addr_int": 4160948400,
+      "file_offset_int": 198832,
+      "target_reg": "r22",
+      "source_type": "unknown",
+      "detail": "no write to r22 found within 32 instructions"
+    },
+    {
+      "addr": "0xf80309f0",
+      "file_offset": "0x309f0",
+      "addr_int": 4160948720,
+      "file_offset_int": 199152,
+      "target_reg": "r16",
+      "source_type": "unknown",
+      "detail": "no write to r16 found within 32 instructions"
+    },
+    {
+      "addr": "0xf8030c94",
+      "file_offset": "0x30c94",
+      "addr_int": 4160949396,
+      "file_offset_int": 199828,
+      "target_reg": "r28",
+      "source_type": "unknown",
+      "detail": "no write to r28 found within 32 instructions"
+    }
+  ],
+  "resolved_targets": [],
+  "resolved_targets_int": [],
+  "load_patterns": {
+    "r13": {
+      "count": 1,
+      "unique_offsets": 1,
+      "offsets_hex": [
+        "-0x7fe4"
+      ],
+      "offsets_decimal": [
+        -32740
+      ],
+      "sites": [
+        {
+          "offset": -32740,
+          "bri_addr": "0xf800f9f0"
+        }
+      ]
+    },
+    "r18": {
+      "count": 1,
+      "unique_offsets": 0,
+      "offsets_hex": [],
+      "offsets_decimal": [],
+      "sites": [
+        {
+          "offset": "reg",
+          "bri_addr": "0xf802d6cc"
+        }
+      ]
+    }
+  }
+}

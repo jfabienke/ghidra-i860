@@ -1,0 +1,5503 @@
+{
+  "metadata": {
+    "clean_fw_path": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/firmware/extracted/ND_MachDriver___TEXT_clean_window.bin",
+    "kernel_path": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/i860_kernel.bin",
+    "full_text_path": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/firmware/extracted/ND_MachDriver___TEXT_section.bin",
+    "clean_size": 200704,
+    "kernel_size": 802816,
+    "full_text_size": 730440,
+    "text_start_in_kernel": 840,
+    "text_start_in_kernel_hex": "0x348",
+    "text_section_size": 730440,
+    "vmaddr_base": 4160749568,
+    "vmaddr_base_hex": "0xf8000000"
+  },
+  "match_verification": {
+    "bytes_compared": 200704,
+    "bytes_matched": 200704,
+    "mismatch_count": 0,
+    "perfect_match": true,
+    "mismatches": []
+  },
+  "address_map": {
+    "clean_base": 0,
+    "clean_base_hex": "0x00000000",
+    "kernel_vmbase": 4160749568,
+    "kernel_vmbase_hex": "0xf8000000",
+    "kernel_text_file_offset": 840,
+    "kernel_text_file_offset_hex": "0x348",
+    "formula_vmaddr": "kernel_vmaddr = 0xF8000000 + clean_offset",
+    "formula_file": "kernel_file_offset = 0x348 + clean_offset"
+  },
+  "post_clean_analysis": {
+    "post_clean_start_text_offset": 200704,
+    "post_clean_start_text_offset_hex": "0x31000",
+    "post_clean_size_bytes": 529736,
+    "total_words": 132434,
+    "zero_words": 33166,
+    "zero_word_pct": 25.04,
+    "valid_opcode_words": 119895,
+    "valid_opcode_pct": 90.53,
+    "raw_regions_count": 4798,
+    "merged_regions_count": 440,
+    "significant_regions_count": 286,
+    "significant_code_bytes": 490672,
+    "significant_code_pct": 92.63
+  },
+  "post_clean_code_regions": [
+    {
+      "text_offset": 200704,
+      "text_offset_hex": "0x31000",
+      "kernel_file_offset": 201544,
+      "kernel_file_offset_hex": "0x31348",
+      "kernel_vmaddr": 4160950272,
+      "kernel_vmaddr_hex": "0xf8031000",
+      "size_bytes": 844,
+      "size_words": 211,
+      "first_opcodes": [
+        "ld.b(r)",
+        "fld(r)",
+        "shr(i)",
+        "shra(r)",
+        "or(r)",
+        "adds(r)",
+        "bc",
+        "addu(i)"
+      ]
+    },
+    {
+      "text_offset": 201588,
+      "text_offset_hex": "0x31374",
+      "kernel_file_offset": 202428,
+      "kernel_file_offset_hex": "0x316bc",
+      "kernel_vmaddr": 4160951156,
+      "kernel_vmaddr_hex": "0xf8031374",
+      "size_bytes": 1884,
+      "size_words": 471,
+      "first_opcodes": [
+        "and(r)",
+        "ld.b(r)",
+        "bnc.t",
+        "andnot(i)",
+        "adds(r)",
+        "shr(i)",
+        "addu(r)",
+        "fst(r)"
+      ]
+    },
+    {
+      "text_offset": 203516,
+      "text_offset_hex": "0x31afc",
+      "kernel_file_offset": 204356,
+      "kernel_file_offset_hex": "0x31e44",
+      "kernel_vmaddr": 4160953084,
+      "kernel_vmaddr_hex": "0xf8031afc",
+      "size_bytes": 5336,
+      "size_words": 1334,
+      "first_opcodes": [
+        "bnc.t",
+        "shr(i)",
+        "shra(i)",
+        "ld(r)",
+        "ld.s(i)"
+      ]
+    },
+    {
+      "text_offset": 208900,
+      "text_offset_hex": "0x33004",
+      "kernel_file_offset": 209740,
+      "kernel_file_offset_hex": "0x3334c",
+      "kernel_vmaddr": 4160958468,
+      "kernel_vmaddr_hex": "0xf8033004",
+      "size_bytes": 10376,
+      "size_words": 2594,
+      "first_opcodes": [
+        "flush(r)",
+        "andh",
+        "ld.b(r)",
+        "bla"
+      ]
+    },
+    {
+      "text_offset": 219316,
+      "text_offset_hex": "0x358b4",
+      "kernel_file_offset": 220156,
+      "kernel_file_offset_hex": "0x35bfc",
+      "kernel_vmaddr": 4160968884,
+      "kernel_vmaddr_hex": "0xf80358b4",
+      "size_bytes": 1856,
+      "size_words": 464,
+      "first_opcodes": [
+        "bte(i)",
+        "bc",
+        "bc.t",
+        "orh"
+      ]
+    },
+    {
+      "text_offset": 221208,
+      "text_offset_hex": "0x36018",
+      "kernel_file_offset": 222048,
+      "kernel_file_offset_hex": "0x36360",
+      "kernel_vmaddr": 4160970776,
+      "kernel_vmaddr_hex": "0xf8036018",
+      "size_bytes": 2120,
+      "size_words": 530,
+      "first_opcodes": [
+        "bnc.t",
+        "orh",
+        "shr(i)",
+        "bte(i)",
+        "orh",
+        "or(r)",
+        "ld.b(i)",
+        "and(r)"
+      ]
+    },
+    {
+      "text_offset": 223364,
+      "text_offset_hex": "0x36884",
+      "kernel_file_offset": 224204,
+      "kernel_file_offset_hex": "0x36bcc",
+      "kernel_vmaddr": 4160972932,
+      "kernel_vmaddr_hex": "0xf8036884",
+      "size_bytes": 2548,
+      "size_words": 637,
+      "first_opcodes": [
+        "fst(r)",
+        "subu(i)",
+        "subs(r)",
+        "shl(i)",
+        "fld(r)",
+        "call",
+        "fld(r)",
+        "shr(i)"
+      ]
+    },
+    {
+      "text_offset": 225948,
+      "text_offset_hex": "0x3729c",
+      "kernel_file_offset": 226788,
+      "kernel_file_offset_hex": "0x375e4",
+      "kernel_vmaddr": 4160975516,
+      "kernel_vmaddr_hex": "0xf803729c",
+      "size_bytes": 3056,
+      "size_words": 764,
+      "first_opcodes": [
+        "subs(i)",
+        "ld.b(r)",
+        "ld.b(r)",
+        "flush(i)",
+        "bc",
+        "pst.d(i)",
+        "shl(i)"
+      ]
+    },
+    {
+      "text_offset": 229040,
+      "text_offset_hex": "0x37eb0",
+      "kernel_file_offset": 229880,
+      "kernel_file_offset_hex": "0x381f8",
+      "kernel_vmaddr": 4160978608,
+      "kernel_vmaddr_hex": "0xf8037eb0",
+      "size_bytes": 80,
+      "size_words": 20,
+      "first_opcodes": [
+        "call",
+        "call",
+        "fld(r)",
+        "fld(i)",
+        "bc",
+        "bnc",
+        "br",
+        "fst(i)"
+      ]
+    },
+    {
+      "text_offset": 229204,
+      "text_offset_hex": "0x37f54",
+      "kernel_file_offset": 230044,
+      "kernel_file_offset_hex": "0x3829c",
+      "kernel_vmaddr": 4160978772,
+      "kernel_vmaddr_hex": "0xf8037f54",
+      "size_bytes": 68,
+      "size_words": 17,
+      "first_opcodes": [
+        "bc",
+        "bc",
+        "call",
+        "bc",
+        "bc"
+      ]
+    },
+    {
+      "text_offset": 229328,
+      "text_offset_hex": "0x37fd0",
+      "kernel_file_offset": 230168,
+      "kernel_file_offset_hex": "0x38318",
+      "kernel_vmaddr": 4160978896,
+      "kernel_vmaddr_hex": "0xf8037fd0",
+      "size_bytes": 3552,
+      "size_words": 888,
+      "first_opcodes": [
+        "bc",
+        "call",
+        "bte(i)",
+        "call",
+        "br",
+        "fld(r)",
+        "bc"
+      ]
+    },
+    {
+      "text_offset": 232916,
+      "text_offset_hex": "0x38dd4",
+      "kernel_file_offset": 233756,
+      "kernel_file_offset_hex": "0x3911c",
+      "kernel_vmaddr": 4160982484,
+      "kernel_vmaddr_hex": "0xf8038dd4",
+      "size_bytes": 8288,
+      "size_words": 2072,
+      "first_opcodes": [
+        "pst.d(r)",
+        "fld(r)",
+        "pst.d(r)",
+        "fld(r)",
+        "btne(i)",
+        "btne(r)",
+        "bnc",
+        "br"
+      ]
+    },
+    {
+      "text_offset": 241240,
+      "text_offset_hex": "0x3ae58",
+      "kernel_file_offset": 242080,
+      "kernel_file_offset_hex": "0x3b1a0",
+      "kernel_vmaddr": 4160990808,
+      "kernel_vmaddr_hex": "0xf803ae58",
+      "size_bytes": 25060,
+      "size_words": 6265,
+      "first_opcodes": [
+        "bc",
+        "call",
+        "fld(r)",
+        "call",
+        "call",
+        "fld(r)",
+        "bc.t",
+        "fld(r)"
+      ]
+    },
+    {
+      "text_offset": 266348,
+      "text_offset_hex": "0x4106c",
+      "kernel_file_offset": 267188,
+      "kernel_file_offset_hex": "0x413b4",
+      "kernel_vmaddr": 4161015916,
+      "kernel_vmaddr_hex": "0xf804106c",
+      "size_bytes": 1296,
+      "size_words": 324,
+      "first_opcodes": [
+        "subu(r)",
+        "bla",
+        "subu(r)",
+        "adds(r)",
+        "subu(r)",
+        "ld(i)",
+        "ld.b(r)",
+        "ld.b(i)"
+      ]
+    },
+    {
+      "text_offset": 267680,
+      "text_offset_hex": "0x415a0",
+      "kernel_file_offset": 268520,
+      "kernel_file_offset_hex": "0x418e8",
+      "kernel_vmaddr": 4161017248,
+      "kernel_vmaddr_hex": "0xf80415a0",
+      "size_bytes": 524,
+      "size_words": 131,
+      "first_opcodes": [
+        "adds(r)",
+        "bte(i)",
+        "bte(i)",
+        "adds(r)",
+        "addu(r)",
+        "ld.b(r)",
+        "ld.s(i)",
+        "ld.b(r)"
+      ]
+    },
+    {
+      "text_offset": 268252,
+      "text_offset_hex": "0x417dc",
+      "kernel_file_offset": 269092,
+      "kernel_file_offset_hex": "0x41b24",
+      "kernel_vmaddr": 4161017820,
+      "kernel_vmaddr_hex": "0xf80417dc",
+      "size_bytes": 1556,
+      "size_words": 389,
+      "first_opcodes": [
+        "bte(i)",
+        "ixfr",
+        "orh",
+        "btne(r)",
+        "fp_esc",
+        "btne(i)",
+        "xorh",
+        "ld.s(r)"
+      ]
+    },
+    {
+      "text_offset": 269860,
+      "text_offset_hex": "0x41e24",
+      "kernel_file_offset": 270700,
+      "kernel_file_offset_hex": "0x4216c",
+      "kernel_vmaddr": 4161019428,
+      "kernel_vmaddr_hex": "0xf8041e24",
+      "size_bytes": 616,
+      "size_words": 154,
+      "first_opcodes": [
+        "btne(i)",
+        "btne(r)",
+        "andnot(r)",
+        "ld.s(i)",
+        "ld.b(r)",
+        "xorh",
+        "btne(r)",
+        "andnot(r)"
+      ]
+    },
+    {
+      "text_offset": 270544,
+      "text_offset_hex": "0x420d0",
+      "kernel_file_offset": 271384,
+      "kernel_file_offset_hex": "0x42418",
+      "kernel_vmaddr": 4161020112,
+      "kernel_vmaddr_hex": "0xf80420d0",
+      "size_bytes": 2100,
+      "size_words": 525,
+      "first_opcodes": [
+        "or(i)",
+        "andnoth",
+        "adds(r)",
+        "bte(i)"
+      ]
+    },
+    {
+      "text_offset": 272716,
+      "text_offset_hex": "0x4294c",
+      "kernel_file_offset": 273556,
+      "kernel_file_offset_hex": "0x42c94",
+      "kernel_vmaddr": 4161022284,
+      "kernel_vmaddr_hex": "0xf804294c",
+      "size_bytes": 832,
+      "size_words": 208,
+      "first_opcodes": [
+        "or(i)",
+        "andnoth",
+        "xorh",
+        "bte(i)",
+        "subu(i)",
+        "bte(i)",
+        "and(r)",
+        "addu(r)"
+      ]
+    },
+    {
+      "text_offset": 273588,
+      "text_offset_hex": "0x42cb4",
+      "kernel_file_offset": 274428,
+      "kernel_file_offset_hex": "0x42ffc",
+      "kernel_vmaddr": 4161023156,
+      "kernel_vmaddr_hex": "0xf8042cb4",
+      "size_bytes": 6212,
+      "size_words": 1553,
+      "first_opcodes": [
+        "subu(r)",
+        "ld.b(r)",
+        "adds(i)",
+        "xorh",
+        "and(i)",
+        "and(i)",
+        "adds(r)",
+        "adds(i)"
+      ]
+    },
+    {
+      "text_offset": 279848,
+      "text_offset_hex": "0x44528",
+      "kernel_file_offset": 280688,
+      "kernel_file_offset_hex": "0x44870",
+      "kernel_vmaddr": 4161029416,
+      "kernel_vmaddr_hex": "0xf8044528",
+      "size_bytes": 988,
+      "size_words": 247,
+      "first_opcodes": [
+        "subu(r)",
+        "adds(r)",
+        "addu(r)",
+        "btne(i)",
+        "subu(r)",
+        "ld.b(r)",
+        "ld(i)",
+        "ld.b(r)"
+      ]
+    },
+    {
+      "text_offset": 280888,
+      "text_offset_hex": "0x44938",
+      "kernel_file_offset": 281728,
+      "kernel_file_offset_hex": "0x44c80",
+      "kernel_vmaddr": 4161030456,
+      "kernel_vmaddr_hex": "0xf8044938",
+      "size_bytes": 832,
+      "size_words": 208,
+      "first_opcodes": [
+        "orh",
+        "fld(i)",
+        "xor(r)",
+        "ld.s(i)",
+        "fld(i)",
+        "and(i)",
+        "shra(r)",
+        "ld.s(r)"
+      ]
+    },
+    {
+      "text_offset": 281800,
+      "text_offset_hex": "0x44cc8",
+      "kernel_file_offset": 282640,
+      "kernel_file_offset_hex": "0x45010",
+      "kernel_vmaddr": 4161031368,
+      "kernel_vmaddr_hex": "0xf8044cc8",
+      "size_bytes": 172,
+      "size_words": 43,
+      "first_opcodes": [
+        "addu(i)",
+        "xor(r)",
+        "subu(r)",
+        "ld.b(r)",
+        "ld.s(r)",
+        "subu(r)",
+        "xorh"
+      ]
+    },
+    {
+      "text_offset": 282028,
+      "text_offset_hex": "0x44dac",
+      "kernel_file_offset": 282868,
+      "kernel_file_offset_hex": "0x450f4",
+      "kernel_vmaddr": 4161031596,
+      "kernel_vmaddr_hex": "0xf8044dac",
+      "size_bytes": 76,
+      "size_words": 19,
+      "first_opcodes": [
+        "subu(r)",
+        "xorh",
+        "fld(i)",
+        "ld.s(i)",
+        "and(i)",
+        "ld.s(i)",
+        "ld.b(r)",
+        "st(i)"
+      ]
+    },
+    {
+      "text_offset": 282144,
+      "text_offset_hex": "0x44e20",
+      "kernel_file_offset": 282984,
+      "kernel_file_offset_hex": "0x45168",
+      "kernel_vmaddr": 4161031712,
+      "kernel_vmaddr_hex": "0xf8044e20",
+      "size_bytes": 164,
+      "size_words": 41,
+      "first_opcodes": [
+        "btne(i)",
+        "ld.s(i)",
+        "ld.b(r)",
+        "or(i)",
+        "btne(r)",
+        "br"
+      ]
+    },
+    {
+      "text_offset": 282348,
+      "text_offset_hex": "0x44eec",
+      "kernel_file_offset": 283188,
+      "kernel_file_offset_hex": "0x45234",
+      "kernel_vmaddr": 4161031916,
+      "kernel_vmaddr_hex": "0xf8044eec",
+      "size_bytes": 1992,
+      "size_words": 498,
+      "first_opcodes": [
+        "xorh",
+        "addu(i)",
+        "xorh",
+        "bri"
+      ]
+    },
+    {
+      "text_offset": 284392,
+      "text_offset_hex": "0x456e8",
+      "kernel_file_offset": 285232,
+      "kernel_file_offset_hex": "0x45a30",
+      "kernel_vmaddr": 4161033960,
+      "kernel_vmaddr_hex": "0xf80456e8",
+      "size_bytes": 7528,
+      "size_words": 1882,
+      "first_opcodes": [
+        "bte(i)",
+        "ld(r)",
+        "ld.b(r)",
+        "st(i)",
+        "btne(r)",
+        "xorh",
+        "ld(i)",
+        "bte(i)"
+      ]
+    },
+    {
+      "text_offset": 291980,
+      "text_offset_hex": "0x4748c",
+      "kernel_file_offset": 292820,
+      "kernel_file_offset_hex": "0x477d4",
+      "kernel_vmaddr": 4161041548,
+      "kernel_vmaddr_hex": "0xf804748c",
+      "size_bytes": 2936,
+      "size_words": 734,
+      "first_opcodes": [
+        "and(i)",
+        "subu(r)",
+        "bnc",
+        "fld(i)",
+        "addu(r)",
+        "ld.s(r)",
+        "bc.t",
+        "adds(r)"
+      ]
+    },
+    {
+      "text_offset": 294952,
+      "text_offset_hex": "0x48028",
+      "kernel_file_offset": 295792,
+      "kernel_file_offset_hex": "0x48370",
+      "kernel_vmaddr": 4161044520,
+      "kernel_vmaddr_hex": "0xf8048028",
+      "size_bytes": 192,
+      "size_words": 48,
+      "first_opcodes": [
+        "shra(r)",
+        "ld.b(r)",
+        "bte(r)",
+        "orh",
+        "ld.b(r)",
+        "btne(i)",
+        "ld.s(r)",
+        "xor(i)"
+      ]
+    },
+    {
+      "text_offset": 295180,
+      "text_offset_hex": "0x4810c",
+      "kernel_file_offset": 296020,
+      "kernel_file_offset_hex": "0x48454",
+      "kernel_vmaddr": 4161044748,
+      "kernel_vmaddr_hex": "0xf804810c",
+      "size_bytes": 1496,
+      "size_words": 374,
+      "first_opcodes": [
+        "subu(r)",
+        "bte(i)",
+        "bte(i)",
+        "adds(r)",
+        "btne(r)"
+      ]
+    },
+    {
+      "text_offset": 296720,
+      "text_offset_hex": "0x48710",
+      "kernel_file_offset": 297560,
+      "kernel_file_offset_hex": "0x48a58",
+      "kernel_vmaddr": 4161046288,
+      "kernel_vmaddr_hex": "0xf8048710",
+      "size_bytes": 8344,
+      "size_words": 2086,
+      "first_opcodes": [
+        "ld.b(r)",
+        "ld.b(r)",
+        "btne(r)",
+        "ld.s(r)"
+      ]
+    },
+    {
+      "text_offset": 305100,
+      "text_offset_hex": "0x4a7cc",
+      "kernel_file_offset": 305940,
+      "kernel_file_offset_hex": "0x4ab14",
+      "kernel_vmaddr": 4161054668,
+      "kernel_vmaddr_hex": "0xf804a7cc",
+      "size_bytes": 2780,
+      "size_words": 695,
+      "first_opcodes": [
+        "xorh",
+        "flush(r)",
+        "st(r)",
+        "bnc.t",
+        "adds(r)",
+        "and(r)",
+        "ld.s(i)",
+        "shra(i)"
+      ]
+    },
+    {
+      "text_offset": 307916,
+      "text_offset_hex": "0x4b2cc",
+      "kernel_file_offset": 308756,
+      "kernel_file_offset_hex": "0x4b614",
+      "kernel_vmaddr": 4161057484,
+      "kernel_vmaddr_hex": "0xf804b2cc",
+      "size_bytes": 336,
+      "size_words": 84,
+      "first_opcodes": [
+        "ld.b(r)",
+        "ld.s(r)",
+        "ld(r)",
+        "ixfr",
+        "subu(r)",
+        "btne(r)",
+        "andh",
+        "ld.b(r)"
+      ]
+    },
+    {
+      "text_offset": 308308,
+      "text_offset_hex": "0x4b454",
+      "kernel_file_offset": 309148,
+      "kernel_file_offset_hex": "0x4b79c",
+      "kernel_vmaddr": 4161057876,
+      "kernel_vmaddr_hex": "0xf804b454",
+      "size_bytes": 9244,
+      "size_words": 2311,
+      "first_opcodes": [
+        "bc.t",
+        "trap",
+        "adds(r)",
+        "ld.b(i)",
+        "addu(r)",
+        "ld.s(i)",
+        "xor(r)",
+        "and(i)"
+      ]
+    },
+    {
+      "text_offset": 317660,
+      "text_offset_hex": "0x4d8dc",
+      "kernel_file_offset": 318500,
+      "kernel_file_offset_hex": "0x4dc24",
+      "kernel_vmaddr": 4161067228,
+      "kernel_vmaddr_hex": "0xf804d8dc",
+      "size_bytes": 13556,
+      "size_words": 3389,
+      "first_opcodes": [
+        "fst(i)",
+        "fld(i)",
+        "fst(i)",
+        "ld.b(r)"
+      ]
+    },
+    {
+      "text_offset": 331264,
+      "text_offset_hex": "0x50e00",
+      "kernel_file_offset": 332104,
+      "kernel_file_offset_hex": "0x51148",
+      "kernel_vmaddr": 4161080832,
+      "kernel_vmaddr_hex": "0xf8050e00",
+      "size_bytes": 76,
+      "size_words": 19,
+      "first_opcodes": [
+        "bc.t",
+        "bc.t",
+        "btne(r)",
+        "call"
+      ]
+    },
+    {
+      "text_offset": 331380,
+      "text_offset_hex": "0x50e74",
+      "kernel_file_offset": 332220,
+      "kernel_file_offset_hex": "0x511bc",
+      "kernel_vmaddr": 4161080948,
+      "kernel_vmaddr_hex": "0xf8050e74",
+      "size_bytes": 196,
+      "size_words": 49,
+      "first_opcodes": [
+        "bc",
+        "bri",
+        "br",
+        "br",
+        "core_esc",
+        "core_esc",
+        "br"
+      ]
+    },
+    {
+      "text_offset": 331812,
+      "text_offset_hex": "0x51024",
+      "kernel_file_offset": 332652,
+      "kernel_file_offset_hex": "0x5136c",
+      "kernel_vmaddr": 4161081380,
+      "kernel_vmaddr_hex": "0xf8051024",
+      "size_bytes": 616,
+      "size_words": 154,
+      "first_opcodes": [
+        "call",
+        "fp_esc",
+        "btne(r)",
+        "call"
+      ]
+    },
+    {
+      "text_offset": 332584,
+      "text_offset_hex": "0x51328",
+      "kernel_file_offset": 333424,
+      "kernel_file_offset_hex": "0x51670",
+      "kernel_vmaddr": 4161082152,
+      "kernel_vmaddr_hex": "0xf8051328",
+      "size_bytes": 132,
+      "size_words": 33,
+      "first_opcodes": [
+        "bc.t",
+        "bri",
+        "call",
+        "bc.t"
+      ]
+    },
+    {
+      "text_offset": 332764,
+      "text_offset_hex": "0x513dc",
+      "kernel_file_offset": 333604,
+      "kernel_file_offset_hex": "0x51724",
+      "kernel_vmaddr": 4161082332,
+      "kernel_vmaddr_hex": "0xf80513dc",
+      "size_bytes": 240,
+      "size_words": 60,
+      "first_opcodes": [
+        "call",
+        "call",
+        "btne(r)",
+        "ld.b(r)",
+        "btne(r)",
+        "pst.d(r)",
+        "bnc",
+        "pst.d(r)"
+      ]
+    },
+    {
+      "text_offset": 333160,
+      "text_offset_hex": "0x51568",
+      "kernel_file_offset": 334000,
+      "kernel_file_offset_hex": "0x518b0",
+      "kernel_vmaddr": 4161082728,
+      "kernel_vmaddr_hex": "0xf8051568",
+      "size_bytes": 64,
+      "size_words": 16,
+      "first_opcodes": [
+        "call",
+        "ld.b(r)",
+        "call",
+        "bc"
+      ]
+    },
+    {
+      "text_offset": 333260,
+      "text_offset_hex": "0x515cc",
+      "kernel_file_offset": 334100,
+      "kernel_file_offset_hex": "0x51914",
+      "kernel_vmaddr": 4161082828,
+      "kernel_vmaddr_hex": "0xf80515cc",
+      "size_bytes": 72,
+      "size_words": 18,
+      "first_opcodes": [
+        "br",
+        "trap",
+        "call",
+        "bc.t"
+      ]
+    },
+    {
+      "text_offset": 333400,
+      "text_offset_hex": "0x51658",
+      "kernel_file_offset": 334240,
+      "kernel_file_offset_hex": "0x519a0",
+      "kernel_vmaddr": 4161082968,
+      "kernel_vmaddr_hex": "0xf8051658",
+      "size_bytes": 208,
+      "size_words": 52,
+      "first_opcodes": [
+        "bc.t",
+        "bc.t",
+        "btne(r)",
+        "pst.d(r)",
+        "call",
+        "call",
+        "pst.d(r)",
+        "bc.t"
+      ]
+    },
+    {
+      "text_offset": 333648,
+      "text_offset_hex": "0x51750",
+      "kernel_file_offset": 334488,
+      "kernel_file_offset_hex": "0x51a98",
+      "kernel_vmaddr": 4161083216,
+      "kernel_vmaddr_hex": "0xf8051750",
+      "size_bytes": 184,
+      "size_words": 46,
+      "first_opcodes": [
+        "call",
+        "ld.b(r)",
+        "call",
+        "call"
+      ]
+    },
+    {
+      "text_offset": 333948,
+      "text_offset_hex": "0x5187c",
+      "kernel_file_offset": 334788,
+      "kernel_file_offset_hex": "0x51bc4",
+      "kernel_vmaddr": 4161083516,
+      "kernel_vmaddr_hex": "0xf805187c",
+      "size_bytes": 92,
+      "size_words": 23,
+      "first_opcodes": [
+        "call",
+        "ld.b(r)",
+        "bc",
+        "ld.b(r)",
+        "trap",
+        "ld.b(r)",
+        "bc.t",
+        "ld.b(r)"
+      ]
+    },
+    {
+      "text_offset": 334100,
+      "text_offset_hex": "0x51914",
+      "kernel_file_offset": 334940,
+      "kernel_file_offset_hex": "0x51c5c",
+      "kernel_vmaddr": 4161083668,
+      "kernel_vmaddr_hex": "0xf8051914",
+      "size_bytes": 104,
+      "size_words": 26,
+      "first_opcodes": [
+        "btne(r)",
+        "br",
+        "pst.d(r)",
+        "bc.t"
+      ]
+    },
+    {
+      "text_offset": 334296,
+      "text_offset_hex": "0x519d8",
+      "kernel_file_offset": 335136,
+      "kernel_file_offset_hex": "0x51d20",
+      "kernel_vmaddr": 4161083864,
+      "kernel_vmaddr_hex": "0xf80519d8",
+      "size_bytes": 460,
+      "size_words": 115,
+      "first_opcodes": [
+        "call",
+        "trap",
+        "bc",
+        "call",
+        "trap",
+        "bc",
+        "bc.t",
+        "bc"
+      ]
+    },
+    {
+      "text_offset": 334888,
+      "text_offset_hex": "0x51c28",
+      "kernel_file_offset": 335728,
+      "kernel_file_offset_hex": "0x51f70",
+      "kernel_vmaddr": 4161084456,
+      "kernel_vmaddr_hex": "0xf8051c28",
+      "size_bytes": 152,
+      "size_words": 38,
+      "first_opcodes": [
+        "bc.t",
+        "call",
+        "call",
+        "br"
+      ]
+    },
+    {
+      "text_offset": 335180,
+      "text_offset_hex": "0x51d4c",
+      "kernel_file_offset": 336020,
+      "kernel_file_offset_hex": "0x52094",
+      "kernel_vmaddr": 4161084748,
+      "kernel_vmaddr_hex": "0xf8051d4c",
+      "size_bytes": 100,
+      "size_words": 25,
+      "first_opcodes": [
+        "call",
+        "call",
+        "call",
+        "bc",
+        "call",
+        "btne(i)",
+        "btne(r)",
+        "bnc"
+      ]
+    },
+    {
+      "text_offset": 335332,
+      "text_offset_hex": "0x51de4",
+      "kernel_file_offset": 336172,
+      "kernel_file_offset_hex": "0x5212c",
+      "kernel_vmaddr": 4161084900,
+      "kernel_vmaddr_hex": "0xf8051de4",
+      "size_bytes": 208,
+      "size_words": 52,
+      "first_opcodes": [
+        "bc",
+        "btne(i)",
+        "pst.d(r)",
+        "bc.t"
+      ]
+    },
+    {
+      "text_offset": 335580,
+      "text_offset_hex": "0x51edc",
+      "kernel_file_offset": 336420,
+      "kernel_file_offset_hex": "0x52224",
+      "kernel_vmaddr": 4161085148,
+      "kernel_vmaddr_hex": "0xf8051edc",
+      "size_bytes": 136,
+      "size_words": 34,
+      "first_opcodes": [
+        "bc.t",
+        "pst.d(r)",
+        "bc.t",
+        "bc.t"
+      ]
+    },
+    {
+      "text_offset": 335752,
+      "text_offset_hex": "0x51f88",
+      "kernel_file_offset": 336592,
+      "kernel_file_offset_hex": "0x522d0",
+      "kernel_vmaddr": 4161085320,
+      "kernel_vmaddr_hex": "0xf8051f88",
+      "size_bytes": 108,
+      "size_words": 27,
+      "first_opcodes": [
+        "br",
+        "bc.t",
+        "bc",
+        "btne(i)",
+        "call"
+      ]
+    },
+    {
+      "text_offset": 335944,
+      "text_offset_hex": "0x52048",
+      "kernel_file_offset": 336784,
+      "kernel_file_offset_hex": "0x52390",
+      "kernel_vmaddr": 4161085512,
+      "kernel_vmaddr_hex": "0xf8052048",
+      "size_bytes": 196,
+      "size_words": 49,
+      "first_opcodes": [
+        "bc",
+        "bc.t",
+        "br",
+        "call",
+        "pst.d(r)",
+        "br",
+        "call",
+        "bc"
+      ]
+    },
+    {
+      "text_offset": 336188,
+      "text_offset_hex": "0x5213c",
+      "kernel_file_offset": 337028,
+      "kernel_file_offset_hex": "0x52484",
+      "kernel_vmaddr": 4161085756,
+      "kernel_vmaddr_hex": "0xf805213c",
+      "size_bytes": 548,
+      "size_words": 137,
+      "first_opcodes": [
+        "bc",
+        "call",
+        "bc",
+        "bc.t"
+      ]
+    },
+    {
+      "text_offset": 336820,
+      "text_offset_hex": "0x523b4",
+      "kernel_file_offset": 337660,
+      "kernel_file_offset_hex": "0x526fc",
+      "kernel_vmaddr": 4161086388,
+      "kernel_vmaddr_hex": "0xf80523b4",
+      "size_bytes": 22824,
+      "size_words": 5706,
+      "first_opcodes": [
+        "bc",
+        "bc.t",
+        "pst.d(r)",
+        "bc",
+        "call"
+      ]
+    },
+    {
+      "text_offset": 359680,
+      "text_offset_hex": "0x57d00",
+      "kernel_file_offset": 360520,
+      "kernel_file_offset_hex": "0x58048",
+      "kernel_vmaddr": 4161109248,
+      "kernel_vmaddr_hex": "0xf8057d00",
+      "size_bytes": 3252,
+      "size_words": 813,
+      "first_opcodes": [
+        "pst.d(r)",
+        "fld(r)",
+        "ld.s(r)",
+        "fld(r)",
+        "core_esc",
+        "fld(r)",
+        "ld.s(r)",
+        "call"
+      ]
+    },
+    {
+      "text_offset": 362972,
+      "text_offset_hex": "0x589dc",
+      "kernel_file_offset": 363812,
+      "kernel_file_offset_hex": "0x58d24",
+      "kernel_vmaddr": 4161112540,
+      "kernel_vmaddr_hex": "0xf80589dc",
+      "size_bytes": 756,
+      "size_words": 189,
+      "first_opcodes": [
+        "addu(i)",
+        "br",
+        "flush(r)",
+        "and(i)",
+        "ld.b(i)",
+        "call",
+        "shra(i)",
+        "addu(i)"
+      ]
+    },
+    {
+      "text_offset": 363768,
+      "text_offset_hex": "0x58cf8",
+      "kernel_file_offset": 364608,
+      "kernel_file_offset_hex": "0x59040",
+      "kernel_vmaddr": 4161113336,
+      "kernel_vmaddr_hex": "0xf8058cf8",
+      "size_bytes": 8264,
+      "size_words": 2066,
+      "first_opcodes": [
+        "nop",
+        "nop",
+        "nop",
+        "nop",
+        "nop",
+        "nop",
+        "nop",
+        "nop"
+      ]
+    },
+    {
+      "text_offset": 372172,
+      "text_offset_hex": "0x5adcc",
+      "kernel_file_offset": 373012,
+      "kernel_file_offset_hex": "0x5b114",
+      "kernel_vmaddr": 4161121740,
+      "kernel_vmaddr_hex": "0xf805adcc",
+      "size_bytes": 140,
+      "size_words": 35,
+      "first_opcodes": [
+        "call",
+        "ld.s(r)",
+        "call",
+        "call",
+        "br",
+        "core_esc"
+      ]
+    },
+    {
+      "text_offset": 372368,
+      "text_offset_hex": "0x5ae90",
+      "kernel_file_offset": 373208,
+      "kernel_file_offset_hex": "0x5b1d8",
+      "kernel_vmaddr": 4161121936,
+      "kernel_vmaddr_hex": "0xf805ae90",
+      "size_bytes": 17736,
+      "size_words": 4434,
+      "first_opcodes": [
+        "fld(r)",
+        "fld(r)",
+        "br",
+        "bc",
+        "call",
+        "call",
+        "fld(r)",
+        "fld(i)"
+      ]
+    },
+    {
+      "text_offset": 390140,
+      "text_offset_hex": "0x5f3fc",
+      "kernel_file_offset": 390980,
+      "kernel_file_offset_hex": "0x5f744",
+      "kernel_vmaddr": 4161139708,
+      "kernel_vmaddr_hex": "0xf805f3fc",
+      "size_bytes": 4452,
+      "size_words": 1113,
+      "first_opcodes": [
+        "and(r)",
+        "ld.b(i)",
+        "ld.b(r)",
+        "bte(r)",
+        "ld.b(r)",
+        "bte(i)",
+        "bte(i)",
+        "adds(r)"
+      ]
+    },
+    {
+      "text_offset": 394640,
+      "text_offset_hex": "0x60590",
+      "kernel_file_offset": 395480,
+      "kernel_file_offset_hex": "0x608d8",
+      "kernel_vmaddr": 4161144208,
+      "kernel_vmaddr_hex": "0xf8060590",
+      "size_bytes": 844,
+      "size_words": 211,
+      "first_opcodes": [
+        "ld.b(i)",
+        "ld.b(r)",
+        "call",
+        "shl(r)"
+      ]
+    },
+    {
+      "text_offset": 395520,
+      "text_offset_hex": "0x60900",
+      "kernel_file_offset": 396360,
+      "kernel_file_offset_hex": "0x60c48",
+      "kernel_vmaddr": 4161145088,
+      "kernel_vmaddr_hex": "0xf8060900",
+      "size_bytes": 1396,
+      "size_words": 349,
+      "first_opcodes": [
+        "subu(r)",
+        "adds(r)",
+        "addu(r)",
+        "btne(i)",
+        "ld.s(r)",
+        "subu(r)",
+        "ld.b(r)",
+        "xorh"
+      ]
+    },
+    {
+      "text_offset": 396952,
+      "text_offset_hex": "0x60e98",
+      "kernel_file_offset": 397792,
+      "kernel_file_offset_hex": "0x611e0",
+      "kernel_vmaddr": 4161146520,
+      "kernel_vmaddr_hex": "0xf8060e98",
+      "size_bytes": 3856,
+      "size_words": 964,
+      "first_opcodes": [
+        "addu(r)",
+        "adds(r)",
+        "bri",
+        "bri",
+        "bri",
+        "bri",
+        "bri",
+        "bri"
+      ]
+    },
+    {
+      "text_offset": 400848,
+      "text_offset_hex": "0x61dd0",
+      "kernel_file_offset": 401688,
+      "kernel_file_offset_hex": "0x62118",
+      "kernel_vmaddr": 4161150416,
+      "kernel_vmaddr_hex": "0xf8061dd0",
+      "size_bytes": 232,
+      "size_words": 58,
+      "first_opcodes": [
+        "ld.b(i)",
+        "ld.b(r)",
+        "fld(i)",
+        "addu(r)",
+        "st(i)",
+        "andnot(r)",
+        "and(i)",
+        "andnot(i)"
+      ]
+    },
+    {
+      "text_offset": 401140,
+      "text_offset_hex": "0x61ef4",
+      "kernel_file_offset": 401980,
+      "kernel_file_offset_hex": "0x6223c",
+      "kernel_vmaddr": 4161150708,
+      "kernel_vmaddr_hex": "0xf8061ef4",
+      "size_bytes": 2448,
+      "size_words": 612,
+      "first_opcodes": [
+        "ld.b(i)",
+        "ld.b(r)",
+        "fst(r)",
+        "subu(r)",
+        "subu(r)",
+        "ld.b(r)",
+        "andnot(r)",
+        "and(i)"
+      ]
+    },
+    {
+      "text_offset": 403648,
+      "text_offset_hex": "0x628c0",
+      "kernel_file_offset": 404488,
+      "kernel_file_offset_hex": "0x62c08",
+      "kernel_vmaddr": 4161153216,
+      "kernel_vmaddr_hex": "0xf80628c0",
+      "size_bytes": 3768,
+      "size_words": 942,
+      "first_opcodes": [
+        "ld.b(i)",
+        "andnoth",
+        "ld(i)",
+        "ld.b(r)",
+        "ld.b(r)",
+        "btne(r)",
+        "xorh",
+        "ld.s(r)"
+      ]
+    },
+    {
+      "text_offset": 407452,
+      "text_offset_hex": "0x6379c",
+      "kernel_file_offset": 408292,
+      "kernel_file_offset_hex": "0x63ae4",
+      "kernel_vmaddr": 4161157020,
+      "kernel_vmaddr_hex": "0xf806379c",
+      "size_bytes": 2408,
+      "size_words": 602,
+      "first_opcodes": [
+        "ld.b(i)",
+        "andnoth",
+        "ld.b(r)",
+        "or(r)"
+      ]
+    },
+    {
+      "text_offset": 409920,
+      "text_offset_hex": "0x64140",
+      "kernel_file_offset": 410760,
+      "kernel_file_offset_hex": "0x64488",
+      "kernel_vmaddr": 4161159488,
+      "kernel_vmaddr_hex": "0xf8064140",
+      "size_bytes": 96,
+      "size_words": 24,
+      "first_opcodes": [
+        "trap",
+        "ld.b(i)",
+        "andnoth",
+        "ld.b(r)"
+      ]
+    },
+    {
+      "text_offset": 410120,
+      "text_offset_hex": "0x64208",
+      "kernel_file_offset": 410960,
+      "kernel_file_offset_hex": "0x64550",
+      "kernel_vmaddr": 4161159688,
+      "kernel_vmaddr_hex": "0xf8064208",
+      "size_bytes": 140,
+      "size_words": 35,
+      "first_opcodes": [
+        "andnoth",
+        "br",
+        "addu(r)",
+        "ld.b(r)",
+        "bte(i)",
+        "or(i)",
+        "nop",
+        "fld(r)"
+      ]
+    },
+    {
+      "text_offset": 410308,
+      "text_offset_hex": "0x642c4",
+      "kernel_file_offset": 411148,
+      "kernel_file_offset_hex": "0x6460c",
+      "kernel_vmaddr": 4161159876,
+      "kernel_vmaddr_hex": "0xf80642c4",
+      "size_bytes": 4860,
+      "size_words": 1215,
+      "first_opcodes": [
+        "andnoth",
+        "trap",
+        "bc.t",
+        "addu(r)",
+        "st(i)",
+        "shr(i)",
+        "and(i)",
+        "adds(r)"
+      ]
+    },
+    {
+      "text_offset": 415236,
+      "text_offset_hex": "0x65604",
+      "kernel_file_offset": 416076,
+      "kernel_file_offset_hex": "0x6594c",
+      "kernel_vmaddr": 4161164804,
+      "kernel_vmaddr_hex": "0xf8065604",
+      "size_bytes": 524,
+      "size_words": 131,
+      "first_opcodes": [
+        "andnoth",
+        "subu(r)",
+        "orh",
+        "adds(r)",
+        "fld(i)"
+      ]
+    },
+    {
+      "text_offset": 415828,
+      "text_offset_hex": "0x65854",
+      "kernel_file_offset": 416668,
+      "kernel_file_offset_hex": "0x65b9c",
+      "kernel_vmaddr": 4161165396,
+      "kernel_vmaddr_hex": "0xf8065854",
+      "size_bytes": 540,
+      "size_words": 135,
+      "first_opcodes": [
+        "andnoth",
+        "subu(r)",
+        "orh",
+        "ld.b(r)",
+        "adds(r)",
+        "xorh",
+        "ld.b(i)",
+        "ld.b(i)"
+      ]
+    },
+    {
+      "text_offset": 416488,
+      "text_offset_hex": "0x65ae8",
+      "kernel_file_offset": 417328,
+      "kernel_file_offset_hex": "0x65e30",
+      "kernel_vmaddr": 4161166056,
+      "kernel_vmaddr_hex": "0xf8065ae8",
+      "size_bytes": 1252,
+      "size_words": 313,
+      "first_opcodes": [
+        "orh",
+        "fld(i)",
+        "adds(r)",
+        "ixfr",
+        "fp_esc"
+      ]
+    },
+    {
+      "text_offset": 417776,
+      "text_offset_hex": "0x65ff0",
+      "kernel_file_offset": 418616,
+      "kernel_file_offset_hex": "0x66338",
+      "kernel_vmaddr": 4161167344,
+      "kernel_vmaddr_hex": "0xf8065ff0",
+      "size_bytes": 200,
+      "size_words": 50,
+      "first_opcodes": [
+        "xorh",
+        "subu(r)",
+        "btne(i)",
+        "subs(r)",
+        "ld.b(i)"
+      ]
+    },
+    {
+      "text_offset": 418024,
+      "text_offset_hex": "0x660e8",
+      "kernel_file_offset": 418864,
+      "kernel_file_offset_hex": "0x66430",
+      "kernel_vmaddr": 4161167592,
+      "kernel_vmaddr_hex": "0xf80660e8",
+      "size_bytes": 244,
+      "size_words": 61,
+      "first_opcodes": [
+        "ld.b(i)",
+        "xorh",
+        "bla",
+        "xorh",
+        "xorh",
+        "ld.s(r)"
+      ]
+    },
+    {
+      "text_offset": 418304,
+      "text_offset_hex": "0x66200",
+      "kernel_file_offset": 419144,
+      "kernel_file_offset_hex": "0x66548",
+      "kernel_vmaddr": 4161167872,
+      "kernel_vmaddr_hex": "0xf8066200",
+      "size_bytes": 3132,
+      "size_words": 783,
+      "first_opcodes": [
+        "xorh",
+        "subu(r)",
+        "btne(i)",
+        "subs(r)",
+        "ld.b(i)"
+      ]
+    },
+    {
+      "text_offset": 421544,
+      "text_offset_hex": "0x66ea8",
+      "kernel_file_offset": 422384,
+      "kernel_file_offset_hex": "0x671f0",
+      "kernel_vmaddr": 4161171112,
+      "kernel_vmaddr_hex": "0xf8066ea8",
+      "size_bytes": 344,
+      "size_words": 86,
+      "first_opcodes": [
+        "or(i)",
+        "and(i)",
+        "andh",
+        "ld.s(r)",
+        "adds(r)"
+      ]
+    },
+    {
+      "text_offset": 421944,
+      "text_offset_hex": "0x67038",
+      "kernel_file_offset": 422784,
+      "kernel_file_offset_hex": "0x67380",
+      "kernel_vmaddr": 4161171512,
+      "kernel_vmaddr_hex": "0xf8067038",
+      "size_bytes": 4492,
+      "size_words": 1123,
+      "first_opcodes": [
+        "or(i)",
+        "ld.b(r)",
+        "trap",
+        "core_esc",
+        "ld.b(r)",
+        "adds(r)"
+      ]
+    },
+    {
+      "text_offset": 426472,
+      "text_offset_hex": "0x681e8",
+      "kernel_file_offset": 427312,
+      "kernel_file_offset_hex": "0x68530",
+      "kernel_vmaddr": 4161176040,
+      "kernel_vmaddr_hex": "0xf80681e8",
+      "size_bytes": 144,
+      "size_words": 36,
+      "first_opcodes": [
+        "ld.b(i)",
+        "xorh",
+        "ld(r)",
+        "ld.b(r)",
+        "adds(r)",
+        "ld.b(r)",
+        "ld(i)",
+        "ld.b(r)"
+      ]
+    },
+    {
+      "text_offset": 426684,
+      "text_offset_hex": "0x682bc",
+      "kernel_file_offset": 427524,
+      "kernel_file_offset_hex": "0x68604",
+      "kernel_vmaddr": 4161176252,
+      "kernel_vmaddr_hex": "0xf80682bc",
+      "size_bytes": 276,
+      "size_words": 69,
+      "first_opcodes": [
+        "ld.b(i)",
+        "xorh",
+        "ld.b(r)",
+        "addu(r)",
+        "xorh",
+        "flush(i)",
+        "xorh",
+        "ld.s(i)"
+      ]
+    },
+    {
+      "text_offset": 427000,
+      "text_offset_hex": "0x683f8",
+      "kernel_file_offset": 427840,
+      "kernel_file_offset_hex": "0x68740",
+      "kernel_vmaddr": 4161176568,
+      "kernel_vmaddr_hex": "0xf80683f8",
+      "size_bytes": 76,
+      "size_words": 19,
+      "first_opcodes": [
+        "trap",
+        "orh",
+        "addu(r)",
+        "st(i)",
+        "st(i)"
+      ]
+    },
+    {
+      "text_offset": 427120,
+      "text_offset_hex": "0x68470",
+      "kernel_file_offset": 427960,
+      "kernel_file_offset_hex": "0x687b8",
+      "kernel_vmaddr": 4161176688,
+      "kernel_vmaddr_hex": "0xf8068470",
+      "size_bytes": 4372,
+      "size_words": 1093,
+      "first_opcodes": [
+        "andh",
+        "addu(r)",
+        "ld.b(r)",
+        "br",
+        "bri",
+        "btne(r)",
+        "xorh",
+        "ld.s(i)"
+      ]
+    },
+    {
+      "text_offset": 431528,
+      "text_offset_hex": "0x695a8",
+      "kernel_file_offset": 432368,
+      "kernel_file_offset_hex": "0x698f0",
+      "kernel_vmaddr": 4161181096,
+      "kernel_vmaddr_hex": "0xf80695a8",
+      "size_bytes": 1236,
+      "size_words": 309,
+      "first_opcodes": [
+        "addu(r)",
+        "st(i)",
+        "call",
+        "andh",
+        "btne(r)",
+        "xorh",
+        "fst(i)",
+        "xorh"
+      ]
+    },
+    {
+      "text_offset": 432800,
+      "text_offset_hex": "0x69aa0",
+      "kernel_file_offset": 433640,
+      "kernel_file_offset_hex": "0x69de8",
+      "kernel_vmaddr": 4161182368,
+      "kernel_vmaddr_hex": "0xf8069aa0",
+      "size_bytes": 340,
+      "size_words": 85,
+      "first_opcodes": [
+        "andnoth",
+        "ld.b(r)",
+        "addu(r)",
+        "st(i)",
+        "btne(i)",
+        "or(r)"
+      ]
+    },
+    {
+      "text_offset": 433288,
+      "text_offset_hex": "0x69c88",
+      "kernel_file_offset": 434128,
+      "kernel_file_offset_hex": "0x69fd0",
+      "kernel_vmaddr": 4161182856,
+      "kernel_vmaddr_hex": "0xf8069c88",
+      "size_bytes": 428,
+      "size_words": 107,
+      "first_opcodes": [
+        "bte(i)",
+        "and(r)",
+        "addu(r)",
+        "ld.b(r)",
+        "btne(r)"
+      ]
+    },
+    {
+      "text_offset": 433760,
+      "text_offset_hex": "0x69e60",
+      "kernel_file_offset": 434600,
+      "kernel_file_offset_hex": "0x6a1a8",
+      "kernel_vmaddr": 4161183328,
+      "kernel_vmaddr_hex": "0xf8069e60",
+      "size_bytes": 7524,
+      "size_words": 1881,
+      "first_opcodes": [
+        "btne(r)",
+        "xorh",
+        "adds(r)",
+        "orh",
+        "adds(r)",
+        "addu(r)",
+        "call",
+        "subu(r)"
+      ]
+    },
+    {
+      "text_offset": 441320,
+      "text_offset_hex": "0x6bbe8",
+      "kernel_file_offset": 442160,
+      "kernel_file_offset_hex": "0x6bf30",
+      "kernel_vmaddr": 4161190888,
+      "kernel_vmaddr_hex": "0xf806bbe8",
+      "size_bytes": 13544,
+      "size_words": 3386,
+      "first_opcodes": [
+        "call",
+        "br",
+        "ld.b(r)",
+        "bc.t"
+      ]
+    },
+    {
+      "text_offset": 455120,
+      "text_offset_hex": "0x6f1d0",
+      "kernel_file_offset": 455960,
+      "kernel_file_offset_hex": "0x6f518",
+      "kernel_vmaddr": 4161204688,
+      "kernel_vmaddr_hex": "0xf806f1d0",
+      "size_bytes": 456,
+      "size_words": 114,
+      "first_opcodes": [
+        "ld.b(r)",
+        "btne(r)",
+        "pst.d(r)",
+        "bc.t",
+        "call"
+      ]
+    },
+    {
+      "text_offset": 455628,
+      "text_offset_hex": "0x6f3cc",
+      "kernel_file_offset": 456468,
+      "kernel_file_offset_hex": "0x6f714",
+      "kernel_vmaddr": 4161205196,
+      "kernel_vmaddr_hex": "0xf806f3cc",
+      "size_bytes": 312,
+      "size_words": 78,
+      "first_opcodes": [
+        "call",
+        "bc",
+        "bnc",
+        "ld.b(r)",
+        "bc",
+        "call"
+      ]
+    },
+    {
+      "text_offset": 455980,
+      "text_offset_hex": "0x6f52c",
+      "kernel_file_offset": 456820,
+      "kernel_file_offset_hex": "0x6f874",
+      "kernel_vmaddr": 4161205548,
+      "kernel_vmaddr_hex": "0xf806f52c",
+      "size_bytes": 136,
+      "size_words": 34,
+      "first_opcodes": [
+        "pst.d(r)",
+        "bc.t",
+        "bc",
+        "btne(r)"
+      ]
+    },
+    {
+      "text_offset": 456152,
+      "text_offset_hex": "0x6f5d8",
+      "kernel_file_offset": 456992,
+      "kernel_file_offset_hex": "0x6f920",
+      "kernel_vmaddr": 4161205720,
+      "kernel_vmaddr_hex": "0xf806f5d8",
+      "size_bytes": 184,
+      "size_words": 46,
+      "first_opcodes": [
+        "br",
+        "bc",
+        "call",
+        "fp_esc",
+        "ld.b(r)",
+        "fp_esc",
+        "bc.t"
+      ]
+    },
+    {
+      "text_offset": 456604,
+      "text_offset_hex": "0x6f79c",
+      "kernel_file_offset": 457444,
+      "kernel_file_offset_hex": "0x6fae4",
+      "kernel_vmaddr": 4161206172,
+      "kernel_vmaddr_hex": "0xf806f79c",
+      "size_bytes": 80,
+      "size_words": 20,
+      "first_opcodes": [
+        "br",
+        "pst.d(r)",
+        "bc.t",
+        "ld.b(r)",
+        "bc"
+      ]
+    },
+    {
+      "text_offset": 456816,
+      "text_offset_hex": "0x6f870",
+      "kernel_file_offset": 457656,
+      "kernel_file_offset_hex": "0x6fbb8",
+      "kernel_vmaddr": 4161206384,
+      "kernel_vmaddr_hex": "0xf806f870",
+      "size_bytes": 224,
+      "size_words": 56,
+      "first_opcodes": [
+        "btne(r)",
+        "bc.t",
+        "call",
+        "core_esc"
+      ]
+    },
+    {
+      "text_offset": 457076,
+      "text_offset_hex": "0x6f974",
+      "kernel_file_offset": 457916,
+      "kernel_file_offset_hex": "0x6fcbc",
+      "kernel_vmaddr": 4161206644,
+      "kernel_vmaddr_hex": "0xf806f974",
+      "size_bytes": 552,
+      "size_words": 138,
+      "first_opcodes": [
+        "bc.t",
+        "br",
+        "bc.t",
+        "btne(r)",
+        "pst.d(r)",
+        "bc",
+        "bc",
+        "btne(i)"
+      ]
+    },
+    {
+      "text_offset": 457688,
+      "text_offset_hex": "0x6fbd8",
+      "kernel_file_offset": 458528,
+      "kernel_file_offset_hex": "0x6ff20",
+      "kernel_vmaddr": 4161207256,
+      "kernel_vmaddr_hex": "0xf806fbd8",
+      "size_bytes": 88,
+      "size_words": 22,
+      "first_opcodes": [
+        "call",
+        "bnc",
+        "call",
+        "bc"
+      ]
+    },
+    {
+      "text_offset": 457860,
+      "text_offset_hex": "0x6fc84",
+      "kernel_file_offset": 458700,
+      "kernel_file_offset_hex": "0x6ffcc",
+      "kernel_vmaddr": 4161207428,
+      "kernel_vmaddr_hex": "0xf806fc84",
+      "size_bytes": 300,
+      "size_words": 75,
+      "first_opcodes": [
+        "bc",
+        "bc",
+        "br",
+        "btne(r)",
+        "bc.t",
+        "pst.d(r)",
+        "bc.t",
+        "call"
+      ]
+    },
+    {
+      "text_offset": 458260,
+      "text_offset_hex": "0x6fe14",
+      "kernel_file_offset": 459100,
+      "kernel_file_offset_hex": "0x7015c",
+      "kernel_vmaddr": 4161207828,
+      "kernel_vmaddr_hex": "0xf806fe14",
+      "size_bytes": 92,
+      "size_words": 23,
+      "first_opcodes": [
+        "bte(i)",
+        "btne(i)",
+        "call",
+        "bc.t",
+        "ld.b(r)",
+        "bc.t",
+        "btne(i)",
+        "ld.b(r)"
+      ]
+    },
+    {
+      "text_offset": 458392,
+      "text_offset_hex": "0x6fe98",
+      "kernel_file_offset": 459232,
+      "kernel_file_offset_hex": "0x701e0",
+      "kernel_vmaddr": 4161207960,
+      "kernel_vmaddr_hex": "0xf806fe98",
+      "size_bytes": 136,
+      "size_words": 34,
+      "first_opcodes": [
+        "call",
+        "call",
+        "br",
+        "br",
+        "bc.t",
+        "call",
+        "bc",
+        "bc"
+      ]
+    },
+    {
+      "text_offset": 458644,
+      "text_offset_hex": "0x6ff94",
+      "kernel_file_offset": 459484,
+      "kernel_file_offset_hex": "0x702dc",
+      "kernel_vmaddr": 4161208212,
+      "kernel_vmaddr_hex": "0xf806ff94",
+      "size_bytes": 316,
+      "size_words": 79,
+      "first_opcodes": [
+        "call",
+        "call",
+        "call",
+        "bc.t",
+        "pst.d(r)"
+      ]
+    },
+    {
+      "text_offset": 459008,
+      "text_offset_hex": "0x70100",
+      "kernel_file_offset": 459848,
+      "kernel_file_offset_hex": "0x70448",
+      "kernel_vmaddr": 4161208576,
+      "kernel_vmaddr_hex": "0xf8070100",
+      "size_bytes": 412,
+      "size_words": 103,
+      "first_opcodes": [
+        "call",
+        "call",
+        "btne(r)",
+        "call",
+        "call",
+        "btne(i)",
+        "call",
+        "call"
+      ]
+    },
+    {
+      "text_offset": 459476,
+      "text_offset_hex": "0x702d4",
+      "kernel_file_offset": 460316,
+      "kernel_file_offset_hex": "0x7061c",
+      "kernel_vmaddr": 4161209044,
+      "kernel_vmaddr_hex": "0xf80702d4",
+      "size_bytes": 21324,
+      "size_words": 5331,
+      "first_opcodes": [
+        "bnc",
+        "bc.t",
+        "bc",
+        "call",
+        "call",
+        "ld.b(r)",
+        "fp_esc"
+      ]
+    },
+    {
+      "text_offset": 480848,
+      "text_offset_hex": "0x75650",
+      "kernel_file_offset": 481688,
+      "kernel_file_offset_hex": "0x75998",
+      "kernel_vmaddr": 4161230416,
+      "kernel_vmaddr_hex": "0xf8075650",
+      "size_bytes": 14012,
+      "size_words": 3503,
+      "first_opcodes": [
+        "subs(r)",
+        "shl(i)",
+        "subs(i)",
+        "ld.s(r)",
+        "flush(r)"
+      ]
+    },
+    {
+      "text_offset": 494900,
+      "text_offset_hex": "0x78d34",
+      "kernel_file_offset": 495740,
+      "kernel_file_offset_hex": "0x7907c",
+      "kernel_vmaddr": 4161244468,
+      "kernel_vmaddr_hex": "0xf8078d34",
+      "size_bytes": 7796,
+      "size_words": 1949,
+      "first_opcodes": [
+        "ld.b(r)",
+        "nop",
+        "nop",
+        "nop",
+        "nop",
+        "nop",
+        "nop",
+        "nop"
+      ]
+    },
+    {
+      "text_offset": 502804,
+      "text_offset_hex": "0x7ac14",
+      "kernel_file_offset": 503644,
+      "kernel_file_offset_hex": "0x7af5c",
+      "kernel_vmaddr": 4161252372,
+      "kernel_vmaddr_hex": "0xf807ac14",
+      "size_bytes": 6512,
+      "size_words": 1628,
+      "first_opcodes": [
+        "addu(i)",
+        "bla",
+        "bc",
+        "call",
+        "call",
+        "pst.d(r)",
+        "andnot(i)",
+        "addu(i)"
+      ]
+    },
+    {
+      "text_offset": 509456,
+      "text_offset_hex": "0x7c610",
+      "kernel_file_offset": 510296,
+      "kernel_file_offset_hex": "0x7c958",
+      "kernel_vmaddr": 4161259024,
+      "kernel_vmaddr_hex": "0xf807c610",
+      "size_bytes": 3112,
+      "size_words": 778,
+      "first_opcodes": [
+        "pst.d(r)",
+        "bc.t",
+        "bc.t",
+        "bc",
+        "bc.t",
+        "pst.d(r)",
+        "bc.t",
+        "br"
+      ]
+    },
+    {
+      "text_offset": 512608,
+      "text_offset_hex": "0x7d260",
+      "kernel_file_offset": 513448,
+      "kernel_file_offset_hex": "0x7d5a8",
+      "kernel_vmaddr": 4161262176,
+      "kernel_vmaddr_hex": "0xf807d260",
+      "size_bytes": 260,
+      "size_words": 65,
+      "first_opcodes": [
+        "bc",
+        "call",
+        "bnc",
+        "addu(r)",
+        "addu(r)",
+        "addu(i)",
+        "call",
+        "btne(i)"
+      ]
+    },
+    {
+      "text_offset": 512916,
+      "text_offset_hex": "0x7d394",
+      "kernel_file_offset": 513756,
+      "kernel_file_offset_hex": "0x7d6dc",
+      "kernel_vmaddr": 4161262484,
+      "kernel_vmaddr_hex": "0xf807d394",
+      "size_bytes": 7364,
+      "size_words": 1841,
+      "first_opcodes": [
+        "bc.t",
+        "call",
+        "ld.b(r)",
+        "addu(r)",
+        "ld.b(r)",
+        "addu(r)",
+        "orh",
+        "addu(r)"
+      ]
+    },
+    {
+      "text_offset": 520352,
+      "text_offset_hex": "0x7f0a0",
+      "kernel_file_offset": 521192,
+      "kernel_file_offset_hex": "0x7f3e8",
+      "kernel_vmaddr": 4161269920,
+      "kernel_vmaddr_hex": "0xf807f0a0",
+      "size_bytes": 156,
+      "size_words": 39,
+      "first_opcodes": [
+        "bc",
+        "flush(r)",
+        "bc.t",
+        "bnc.t"
+      ]
+    },
+    {
+      "text_offset": 520616,
+      "text_offset_hex": "0x7f1a8",
+      "kernel_file_offset": 521456,
+      "kernel_file_offset_hex": "0x7f4f0",
+      "kernel_vmaddr": 4161270184,
+      "kernel_vmaddr_hex": "0xf807f1a8",
+      "size_bytes": 448,
+      "size_words": 112,
+      "first_opcodes": [
+        "bc.t",
+        "bc.t",
+        "bc",
+        "fld(r)",
+        "br"
+      ]
+    },
+    {
+      "text_offset": 521104,
+      "text_offset_hex": "0x7f390",
+      "kernel_file_offset": 521944,
+      "kernel_file_offset_hex": "0x7f6d8",
+      "kernel_vmaddr": 4161270672,
+      "kernel_vmaddr_hex": "0xf807f390",
+      "size_bytes": 556,
+      "size_words": 139,
+      "first_opcodes": [
+        "fld(r)",
+        "fld(r)",
+        "fld(r)",
+        "bc",
+        "br"
+      ]
+    },
+    {
+      "text_offset": 521964,
+      "text_offset_hex": "0x7f6ec",
+      "kernel_file_offset": 522804,
+      "kernel_file_offset_hex": "0x7fa34",
+      "kernel_vmaddr": 4161271532,
+      "kernel_vmaddr_hex": "0xf807f6ec",
+      "size_bytes": 96,
+      "size_words": 24,
+      "first_opcodes": [
+        "fld(r)",
+        "fld(r)",
+        "call",
+        "br",
+        "bc",
+        "br",
+        "bc.t",
+        "bnc"
+      ]
+    },
+    {
+      "text_offset": 522116,
+      "text_offset_hex": "0x7f784",
+      "kernel_file_offset": 522956,
+      "kernel_file_offset_hex": "0x7facc",
+      "kernel_vmaddr": 4161271684,
+      "kernel_vmaddr_hex": "0xf807f784",
+      "size_bytes": 100,
+      "size_words": 25,
+      "first_opcodes": [
+        "br",
+        "call",
+        "br",
+        "call",
+        "bc.t",
+        "bc.t",
+        "bc",
+        "fld(r)"
+      ]
+    },
+    {
+      "text_offset": 522548,
+      "text_offset_hex": "0x7f934",
+      "kernel_file_offset": 523388,
+      "kernel_file_offset_hex": "0x7fc7c",
+      "kernel_vmaddr": 4161272116,
+      "kernel_vmaddr_hex": "0xf807f934",
+      "size_bytes": 108,
+      "size_words": 27,
+      "first_opcodes": [
+        "bc",
+        "call",
+        "bnc",
+        "fld(r)"
+      ]
+    },
+    {
+      "text_offset": 522692,
+      "text_offset_hex": "0x7f9c4",
+      "kernel_file_offset": 523532,
+      "kernel_file_offset_hex": "0x7fd0c",
+      "kernel_vmaddr": 4161272260,
+      "kernel_vmaddr_hex": "0xf807f9c4",
+      "size_bytes": 136,
+      "size_words": 34,
+      "first_opcodes": [
+        "fld(r)",
+        "fld(r)",
+        "bc",
+        "fld(r)",
+        "call"
+      ]
+    },
+    {
+      "text_offset": 522892,
+      "text_offset_hex": "0x7fa8c",
+      "kernel_file_offset": 523732,
+      "kernel_file_offset_hex": "0x7fdd4",
+      "kernel_vmaddr": 4161272460,
+      "kernel_vmaddr_hex": "0xf807fa8c",
+      "size_bytes": 280,
+      "size_words": 70,
+      "first_opcodes": [
+        "bc",
+        "fld(r)",
+        "bc.t",
+        "call",
+        "br",
+        "fld(r)",
+        "call",
+        "br"
+      ]
+    },
+    {
+      "text_offset": 523332,
+      "text_offset_hex": "0x7fc44",
+      "kernel_file_offset": 524172,
+      "kernel_file_offset_hex": "0x7ff8c",
+      "kernel_vmaddr": 4161272900,
+      "kernel_vmaddr_hex": "0xf807fc44",
+      "size_bytes": 216,
+      "size_words": 54,
+      "first_opcodes": [
+        "bte(i)",
+        "bla",
+        "br",
+        "bc.t",
+        "fld(r)",
+        "call",
+        "br",
+        "call"
+      ]
+    },
+    {
+      "text_offset": 523584,
+      "text_offset_hex": "0x7fd40",
+      "kernel_file_offset": 524424,
+      "kernel_file_offset_hex": "0x80088",
+      "kernel_vmaddr": 4161273152,
+      "kernel_vmaddr_hex": "0xf807fd40",
+      "size_bytes": 9544,
+      "size_words": 2386,
+      "first_opcodes": [
+        "xorh",
+        "ld(i)",
+        "st(r)",
+        "st(i)",
+        "fld(r)",
+        "fld(i)",
+        "fst(r)",
+        "fst(i)"
+      ]
+    },
+    {
+      "text_offset": 533176,
+      "text_offset_hex": "0x822b8",
+      "kernel_file_offset": 534016,
+      "kernel_file_offset_hex": "0x82600",
+      "kernel_vmaddr": 4161282744,
+      "kernel_vmaddr_hex": "0xf80822b8",
+      "size_bytes": 4984,
+      "size_words": 1246,
+      "first_opcodes": [
+        "shr(i)",
+        "bc",
+        "ld.b(r)",
+        "shl(i)",
+        "subu(i)",
+        "adds(r)",
+        "shra(r)",
+        "bc"
+      ]
+    },
+    {
+      "text_offset": 538200,
+      "text_offset_hex": "0x83658",
+      "kernel_file_offset": 539040,
+      "kernel_file_offset_hex": "0x839a0",
+      "kernel_vmaddr": 4161287768,
+      "kernel_vmaddr_hex": "0xf8083658",
+      "size_bytes": 7120,
+      "size_words": 1780,
+      "first_opcodes": [
+        "shra(i)",
+        "or(r)",
+        "call",
+        "subs(i)",
+        "or(i)",
+        "shl(i)"
+      ]
+    },
+    {
+      "text_offset": 545360,
+      "text_offset_hex": "0x85250",
+      "kernel_file_offset": 546200,
+      "kernel_file_offset_hex": "0x85598",
+      "kernel_vmaddr": 4161294928,
+      "kernel_vmaddr_hex": "0xf8085250",
+      "size_bytes": 20332,
+      "size_words": 5083,
+      "first_opcodes": [
+        "shra(i)",
+        "andnoth",
+        "call",
+        "st(i)",
+        "fld(r)",
+        "andh",
+        "or(r)",
+        "st(i)"
+      ]
+    },
+    {
+      "text_offset": 565728,
+      "text_offset_hex": "0x8a1e0",
+      "kernel_file_offset": 566568,
+      "kernel_file_offset_hex": "0x8a528",
+      "kernel_vmaddr": 4161315296,
+      "kernel_vmaddr_hex": "0xf808a1e0",
+      "size_bytes": 76,
+      "size_words": 19,
+      "first_opcodes": [
+        "and(i)",
+        "xor(i)",
+        "addu(r)",
+        "call",
+        "st(i)",
+        "andh",
+        "orh",
+        "shrd"
+      ]
+    },
+    {
+      "text_offset": 565840,
+      "text_offset_hex": "0x8a250",
+      "kernel_file_offset": 566680,
+      "kernel_file_offset_hex": "0x8a598",
+      "kernel_vmaddr": 4161315408,
+      "kernel_vmaddr_hex": "0xf808a250",
+      "size_bytes": 13016,
+      "size_words": 3254,
+      "first_opcodes": [
+        "adds(r)",
+        "shl(r)",
+        "ld.b(i)",
+        "fld(i)",
+        "subs(i)",
+        "xor(r)",
+        "flush(i)",
+        "ld.s(i)"
+      ]
+    },
+    {
+      "text_offset": 578900,
+      "text_offset_hex": "0x8d554",
+      "kernel_file_offset": 579740,
+      "kernel_file_offset_hex": "0x8d89c",
+      "kernel_vmaddr": 4161328468,
+      "kernel_vmaddr_hex": "0xf808d554",
+      "size_bytes": 11280,
+      "size_words": 2820,
+      "first_opcodes": [
+        "addu(i)",
+        "shl(i)",
+        "bla",
+        "subu(r)",
+        "addu(i)",
+        "addu(i)",
+        "bte(r)",
+        "btne(i)"
+      ]
+    },
+    {
+      "text_offset": 590220,
+      "text_offset_hex": "0x9018c",
+      "kernel_file_offset": 591060,
+      "kernel_file_offset_hex": "0x904d4",
+      "kernel_vmaddr": 4161339788,
+      "kernel_vmaddr_hex": "0xf809018c",
+      "size_bytes": 9028,
+      "size_words": 2257,
+      "first_opcodes": [
+        "and(i)",
+        "subu(i)",
+        "fld(r)",
+        "and(i)",
+        "bnc",
+        "ld.b(r)",
+        "orh",
+        "bnc"
+      ]
+    },
+    {
+      "text_offset": 599292,
+      "text_offset_hex": "0x924fc",
+      "kernel_file_offset": 600132,
+      "kernel_file_offset_hex": "0x92844",
+      "kernel_vmaddr": 4161348860,
+      "kernel_vmaddr_hex": "0xf80924fc",
+      "size_bytes": 2784,
+      "size_words": 696,
+      "first_opcodes": [
+        "shra(i)",
+        "fp_esc",
+        "trap",
+        "addu(i)",
+        "xorh",
+        "btne(i)",
+        "subs(r)",
+        "bri"
+      ]
+    },
+    {
+      "text_offset": 602112,
+      "text_offset_hex": "0x93000",
+      "kernel_file_offset": 602952,
+      "kernel_file_offset_hex": "0x93348",
+      "kernel_vmaddr": 4161351680,
+      "kernel_vmaddr_hex": "0xf8093000",
+      "size_bytes": 2272,
+      "size_words": 568,
+      "first_opcodes": [
+        "ld(i)",
+        "fld(r)",
+        "btne(i)",
+        "addu(i)",
+        "btne(i)",
+        "addu(i)",
+        "pst.d(i)",
+        "shra(r)"
+      ]
+    },
+    {
+      "text_offset": 604420,
+      "text_offset_hex": "0x93904",
+      "kernel_file_offset": 605260,
+      "kernel_file_offset_hex": "0x93c4c",
+      "kernel_vmaddr": 4161353988,
+      "kernel_vmaddr_hex": "0xf8093904",
+      "size_bytes": 4920,
+      "size_words": 1230,
+      "first_opcodes": [
+        "andnot(i)",
+        "subs(i)",
+        "ld.s(r)",
+        "addu(i)",
+        "ld(r)",
+        "ld(i)"
+      ]
+    },
+    {
+      "text_offset": 609408,
+      "text_offset_hex": "0x94c80",
+      "kernel_file_offset": 610248,
+      "kernel_file_offset_hex": "0x94fc8",
+      "kernel_vmaddr": 4161358976,
+      "kernel_vmaddr_hex": "0xf8094c80",
+      "size_bytes": 8392,
+      "size_words": 2098,
+      "first_opcodes": [
+        "addu(i)",
+        "subs(r)",
+        "shr(r)",
+        "adds(r)",
+        "subs(r)",
+        "trap",
+        "subu(r)",
+        "ld(i)"
+      ]
+    },
+    {
+      "text_offset": 617840,
+      "text_offset_hex": "0x96d70",
+      "kernel_file_offset": 618680,
+      "kernel_file_offset_hex": "0x970b8",
+      "kernel_vmaddr": 4161367408,
+      "kernel_vmaddr_hex": "0xf8096d70",
+      "size_bytes": 12128,
+      "size_words": 3032,
+      "first_opcodes": [
+        "shra(i)",
+        "or(i)",
+        "call",
+        "subs(i)",
+        "fld(i)",
+        "andnot(r)"
+      ]
+    },
+    {
+      "text_offset": 630008,
+      "text_offset_hex": "0x99cf8",
+      "kernel_file_offset": 630848,
+      "kernel_file_offset_hex": "0x9a040",
+      "kernel_vmaddr": 4161379576,
+      "kernel_vmaddr_hex": "0xf8099cf8",
+      "size_bytes": 4736,
+      "size_words": 1184,
+      "first_opcodes": [
+        "nop",
+        "nop",
+        "nop",
+        "nop",
+        "nop",
+        "nop",
+        "nop",
+        "nop"
+      ]
+    },
+    {
+      "text_offset": 634788,
+      "text_offset_hex": "0x9afa4",
+      "kernel_file_offset": 635628,
+      "kernel_file_offset_hex": "0x9b2ec",
+      "kernel_vmaddr": 4161384356,
+      "kernel_vmaddr_hex": "0xf809afa4",
+      "size_bytes": 988,
+      "size_words": 247,
+      "first_opcodes": [
+        "call",
+        "fld(r)",
+        "fld(r)",
+        "br",
+        "bc",
+        "bc",
+        "bc.t"
+      ]
+    },
+    {
+      "text_offset": 635812,
+      "text_offset_hex": "0x9b3a4",
+      "kernel_file_offset": 636652,
+      "kernel_file_offset_hex": "0x9b6ec",
+      "kernel_vmaddr": 4161385380,
+      "kernel_vmaddr_hex": "0xf809b3a4",
+      "size_bytes": 2360,
+      "size_words": 590,
+      "first_opcodes": [
+        "addu(i)",
+        "shr(i)",
+        "ld.b(r)",
+        "addu(i)",
+        "andh",
+        "ld.s(i)",
+        "bc.t",
+        "bc.t"
+      ]
+    },
+    {
+      "text_offset": 638220,
+      "text_offset_hex": "0x9bd0c",
+      "kernel_file_offset": 639060,
+      "kernel_file_offset_hex": "0x9c054",
+      "kernel_vmaddr": 4161387788,
+      "kernel_vmaddr_hex": "0xf809bd0c",
+      "size_bytes": 3756,
+      "size_words": 939,
+      "first_opcodes": [
+        "bc",
+        "ld.s(r)",
+        "call",
+        "pst.d(r)",
+        "br",
+        "bc",
+        "bc",
+        "ld.s(r)"
+      ]
+    },
+    {
+      "text_offset": 642064,
+      "text_offset_hex": "0x9cc10",
+      "kernel_file_offset": 642904,
+      "kernel_file_offset_hex": "0x9cf58",
+      "kernel_vmaddr": 4161391632,
+      "kernel_vmaddr_hex": "0xf809cc10",
+      "size_bytes": 4708,
+      "size_words": 1177,
+      "first_opcodes": [
+        "addu(i)",
+        "fp_esc",
+        "call",
+        "call",
+        "bc.t",
+        "adds(i)",
+        "fst(r)",
+        "addu(i)"
+      ]
+    },
+    {
+      "text_offset": 646808,
+      "text_offset_hex": "0x9de98",
+      "kernel_file_offset": 647648,
+      "kernel_file_offset_hex": "0x9e1e0",
+      "kernel_vmaddr": 4161396376,
+      "kernel_vmaddr_hex": "0xf809de98",
+      "size_bytes": 1592,
+      "size_words": 398,
+      "first_opcodes": [
+        "addu(i)",
+        "ld.b(r)",
+        "addu(r)",
+        "ld.b(r)",
+        "ld.b(r)",
+        "addu(r)",
+        "subs(i)",
+        "addu(i)"
+      ]
+    },
+    {
+      "text_offset": 648440,
+      "text_offset_hex": "0x9e4f8",
+      "kernel_file_offset": 649280,
+      "kernel_file_offset_hex": "0x9e840",
+      "kernel_vmaddr": 4161398008,
+      "kernel_vmaddr_hex": "0xf809e4f8",
+      "size_bytes": 2100,
+      "size_words": 525,
+      "first_opcodes": [
+        "nop",
+        "nop",
+        "nop",
+        "nop",
+        "nop",
+        "nop",
+        "nop",
+        "nop"
+      ]
+    },
+    {
+      "text_offset": 650596,
+      "text_offset_hex": "0x9ed64",
+      "kernel_file_offset": 651436,
+      "kernel_file_offset_hex": "0x9f0ac",
+      "kernel_vmaddr": 4161400164,
+      "kernel_vmaddr_hex": "0xf809ed64",
+      "size_bytes": 3220,
+      "size_words": 805,
+      "first_opcodes": [
+        "call",
+        "ld.s(r)",
+        "call",
+        "bc"
+      ]
+    },
+    {
+      "text_offset": 653852,
+      "text_offset_hex": "0x9fa1c",
+      "kernel_file_offset": 654692,
+      "kernel_file_offset_hex": "0x9fd64",
+      "kernel_vmaddr": 4161403420,
+      "kernel_vmaddr_hex": "0xf809fa1c",
+      "size_bytes": 11872,
+      "size_words": 2968,
+      "first_opcodes": [
+        "addu(i)",
+        "br",
+        "bc",
+        "call",
+        "ld.b(r)",
+        "shl(r)",
+        "bte(r)",
+        "addu(i)"
+      ]
+    },
+    {
+      "text_offset": 665760,
+      "text_offset_hex": "0xa28a0",
+      "kernel_file_offset": 666600,
+      "kernel_file_offset_hex": "0xa2be8",
+      "kernel_vmaddr": 4161415328,
+      "kernel_vmaddr_hex": "0xf80a28a0",
+      "size_bytes": 5268,
+      "size_words": 1317,
+      "first_opcodes": [
+        "btne(r)",
+        "xor(r)",
+        "or(i)",
+        "andh",
+        "shl(r)",
+        "andh",
+        "shr(i)",
+        "bte(i)"
+      ]
+    },
+    {
+      "text_offset": 671080,
+      "text_offset_hex": "0xa3d68",
+      "kernel_file_offset": 671920,
+      "kernel_file_offset_hex": "0xa40b0",
+      "kernel_vmaddr": 4161420648,
+      "kernel_vmaddr_hex": "0xf80a3d68",
+      "size_bytes": 220,
+      "size_words": 55,
+      "first_opcodes": [
+        "bri",
+        "fld(r)",
+        "fld(r)",
+        "fld(r)",
+        "ld.s(r)",
+        "bte(r)",
+        "bc.t",
+        "bc"
+      ]
+    },
+    {
+      "text_offset": 671344,
+      "text_offset_hex": "0xa3e70",
+      "kernel_file_offset": 672184,
+      "kernel_file_offset_hex": "0xa41b8",
+      "kernel_vmaddr": 4161420912,
+      "kernel_vmaddr_hex": "0xf80a3e70",
+      "size_bytes": 64,
+      "size_words": 16,
+      "first_opcodes": [
+        "bc",
+        "bc",
+        "bc",
+        "bnc"
+      ]
+    },
+    {
+      "text_offset": 671568,
+      "text_offset_hex": "0xa3f50",
+      "kernel_file_offset": 672408,
+      "kernel_file_offset_hex": "0xa4298",
+      "kernel_vmaddr": 4161421136,
+      "kernel_vmaddr_hex": "0xf80a3f50",
+      "size_bytes": 76,
+      "size_words": 19,
+      "first_opcodes": [
+        "fld(r)",
+        "bc",
+        "fld(r)",
+        "ld.s(r)",
+        "core_esc"
+      ]
+    },
+    {
+      "text_offset": 671708,
+      "text_offset_hex": "0xa3fdc",
+      "kernel_file_offset": 672548,
+      "kernel_file_offset_hex": "0xa4324",
+      "kernel_vmaddr": 4161421276,
+      "kernel_vmaddr_hex": "0xf80a3fdc",
+      "size_bytes": 132,
+      "size_words": 33,
+      "first_opcodes": [
+        "bc.t",
+        "fld(r)",
+        "call",
+        "call",
+        "bc.t",
+        "fld(r)"
+      ]
+    },
+    {
+      "text_offset": 671896,
+      "text_offset_hex": "0xa4098",
+      "kernel_file_offset": 672736,
+      "kernel_file_offset_hex": "0xa43e0",
+      "kernel_vmaddr": 4161421464,
+      "kernel_vmaddr_hex": "0xf80a4098",
+      "size_bytes": 72,
+      "size_words": 18,
+      "first_opcodes": [
+        "bnc",
+        "call",
+        "fld(r)",
+        "br",
+        "bc.t"
+      ]
+    },
+    {
+      "text_offset": 672152,
+      "text_offset_hex": "0xa4198",
+      "kernel_file_offset": 672992,
+      "kernel_file_offset_hex": "0xa44e0",
+      "kernel_vmaddr": 4161421720,
+      "kernel_vmaddr_hex": "0xf80a4198",
+      "size_bytes": 204,
+      "size_words": 51,
+      "first_opcodes": [
+        "bc",
+        "bnc",
+        "bc",
+        "fld(r)",
+        "bc",
+        "fld(r)",
+        "fld(r)"
+      ]
+    },
+    {
+      "text_offset": 672504,
+      "text_offset_hex": "0xa42f8",
+      "kernel_file_offset": 673344,
+      "kernel_file_offset_hex": "0xa4640",
+      "kernel_vmaddr": 4161422072,
+      "kernel_vmaddr_hex": "0xf80a42f8",
+      "size_bytes": 268,
+      "size_words": 67,
+      "first_opcodes": [
+        "bnc",
+        "bc.t",
+        "flush(r)",
+        "flush(r)"
+      ]
+    },
+    {
+      "text_offset": 672820,
+      "text_offset_hex": "0xa4434",
+      "kernel_file_offset": 673660,
+      "kernel_file_offset_hex": "0xa477c",
+      "kernel_vmaddr": 4161422388,
+      "kernel_vmaddr_hex": "0xf80a4434",
+      "size_bytes": 436,
+      "size_words": 109,
+      "first_opcodes": [
+        "bnc",
+        "call",
+        "bc.t",
+        "call",
+        "bnc.t",
+        "fld(r)",
+        "fld(r)",
+        "ld.s(r)"
+      ]
+    },
+    {
+      "text_offset": 673404,
+      "text_offset_hex": "0xa467c",
+      "kernel_file_offset": 674244,
+      "kernel_file_offset_hex": "0xa49c4",
+      "kernel_vmaddr": 4161422972,
+      "kernel_vmaddr_hex": "0xf80a467c",
+      "size_bytes": 72,
+      "size_words": 18,
+      "first_opcodes": [
+        "ld.s(r)",
+        "bc",
+        "fld(r)",
+        "bc"
+      ]
+    },
+    {
+      "text_offset": 673520,
+      "text_offset_hex": "0xa46f0",
+      "kernel_file_offset": 674360,
+      "kernel_file_offset_hex": "0xa4a38",
+      "kernel_vmaddr": 4161423088,
+      "kernel_vmaddr_hex": "0xf80a46f0",
+      "size_bytes": 304,
+      "size_words": 76,
+      "first_opcodes": [
+        "call",
+        "bc.t",
+        "fld(r)",
+        "ld.s(r)",
+        "bnc",
+        "bc.t"
+      ]
+    },
+    {
+      "text_offset": 673904,
+      "text_offset_hex": "0xa4870",
+      "kernel_file_offset": 674744,
+      "kernel_file_offset_hex": "0xa4bb8",
+      "kernel_vmaddr": 4161423472,
+      "kernel_vmaddr_hex": "0xf80a4870",
+      "size_bytes": 352,
+      "size_words": 88,
+      "first_opcodes": [
+        "bc",
+        "bc.t",
+        "fld(r)",
+        "bnc"
+      ]
+    },
+    {
+      "text_offset": 674296,
+      "text_offset_hex": "0xa49f8",
+      "kernel_file_offset": 675136,
+      "kernel_file_offset_hex": "0xa4d40",
+      "kernel_vmaddr": 4161423864,
+      "kernel_vmaddr_hex": "0xf80a49f8",
+      "size_bytes": 80,
+      "size_words": 20,
+      "first_opcodes": [
+        "call",
+        "bc",
+        "bnc.t",
+        "ld.s(r)",
+        "bc.t",
+        "bc",
+        "flush(i)",
+        "call"
+      ]
+    },
+    {
+      "text_offset": 674580,
+      "text_offset_hex": "0xa4b14",
+      "kernel_file_offset": 675420,
+      "kernel_file_offset_hex": "0xa4e5c",
+      "kernel_vmaddr": 4161424148,
+      "kernel_vmaddr_hex": "0xf80a4b14",
+      "size_bytes": 140,
+      "size_words": 35,
+      "first_opcodes": [
+        "ld.s(r)",
+        "br",
+        "br",
+        "fst(i)"
+      ]
+    },
+    {
+      "text_offset": 674756,
+      "text_offset_hex": "0xa4bc4",
+      "kernel_file_offset": 675596,
+      "kernel_file_offset_hex": "0xa4f0c",
+      "kernel_vmaddr": 4161424324,
+      "kernel_vmaddr_hex": "0xf80a4bc4",
+      "size_bytes": 72,
+      "size_words": 18,
+      "first_opcodes": [
+        "call",
+        "pst.d(r)",
+        "call",
+        "bc",
+        "call",
+        "flush(r)",
+        "bc.t",
+        "bc"
+      ]
+    },
+    {
+      "text_offset": 674928,
+      "text_offset_hex": "0xa4c70",
+      "kernel_file_offset": 675768,
+      "kernel_file_offset_hex": "0xa4fb8",
+      "kernel_vmaddr": 4161424496,
+      "kernel_vmaddr_hex": "0xf80a4c70",
+      "size_bytes": 568,
+      "size_words": 142,
+      "first_opcodes": [
+        "ld.s(r)",
+        "br",
+        "call",
+        "bnc",
+        "br",
+        "bc",
+        "br",
+        "bc.t"
+      ]
+    },
+    {
+      "text_offset": 675620,
+      "text_offset_hex": "0xa4f24",
+      "kernel_file_offset": 676460,
+      "kernel_file_offset_hex": "0xa526c",
+      "kernel_vmaddr": 4161425188,
+      "kernel_vmaddr_hex": "0xf80a4f24",
+      "size_bytes": 192,
+      "size_words": 48,
+      "first_opcodes": [
+        "bnc",
+        "fld(r)",
+        "bc",
+        "bc"
+      ]
+    },
+    {
+      "text_offset": 675928,
+      "text_offset_hex": "0xa5058",
+      "kernel_file_offset": 676768,
+      "kernel_file_offset_hex": "0xa53a0",
+      "kernel_vmaddr": 4161425496,
+      "kernel_vmaddr_hex": "0xf80a5058",
+      "size_bytes": 284,
+      "size_words": 71,
+      "first_opcodes": [
+        "flush(r)",
+        "bc",
+        "fld(r)",
+        "bnc.t",
+        "bc",
+        "bc"
+      ]
+    },
+    {
+      "text_offset": 676380,
+      "text_offset_hex": "0xa521c",
+      "kernel_file_offset": 677220,
+      "kernel_file_offset_hex": "0xa5564",
+      "kernel_vmaddr": 4161425948,
+      "kernel_vmaddr_hex": "0xf80a521c",
+      "size_bytes": 208,
+      "size_words": 52,
+      "first_opcodes": [
+        "call",
+        "bc.t",
+        "fld(r)",
+        "fld(r)"
+      ]
+    },
+    {
+      "text_offset": 676904,
+      "text_offset_hex": "0xa5428",
+      "kernel_file_offset": 677744,
+      "kernel_file_offset_hex": "0xa5770",
+      "kernel_vmaddr": 4161426472,
+      "kernel_vmaddr_hex": "0xf80a5428",
+      "size_bytes": 104,
+      "size_words": 26,
+      "first_opcodes": [
+        "call",
+        "ld.s(r)",
+        "bc.t",
+        "core_esc",
+        "fst(i)",
+        "flush(i)",
+        "flush(r)",
+        "fst(i)"
+      ]
+    },
+    {
+      "text_offset": 677144,
+      "text_offset_hex": "0xa5518",
+      "kernel_file_offset": 677984,
+      "kernel_file_offset_hex": "0xa5860",
+      "kernel_vmaddr": 4161426712,
+      "kernel_vmaddr_hex": "0xf80a5518",
+      "size_bytes": 140,
+      "size_words": 35,
+      "first_opcodes": [
+        "bc.t",
+        "bc.t",
+        "bnc",
+        "bc",
+        "call",
+        "bnc.t",
+        "bte(r)"
+      ]
+    },
+    {
+      "text_offset": 677324,
+      "text_offset_hex": "0xa55cc",
+      "kernel_file_offset": 678164,
+      "kernel_file_offset_hex": "0xa5914",
+      "kernel_vmaddr": 4161426892,
+      "kernel_vmaddr_hex": "0xf80a55cc",
+      "size_bytes": 72,
+      "size_words": 18,
+      "first_opcodes": [
+        "call",
+        "call",
+        "btne(i)",
+        "fld(r)"
+      ]
+    },
+    {
+      "text_offset": 677436,
+      "text_offset_hex": "0xa563c",
+      "kernel_file_offset": 678276,
+      "kernel_file_offset_hex": "0xa5984",
+      "kernel_vmaddr": 4161427004,
+      "kernel_vmaddr_hex": "0xf80a563c",
+      "size_bytes": 180,
+      "size_words": 45,
+      "first_opcodes": [
+        "bnc",
+        "fld(r)",
+        "bte(i)",
+        "bnc.t",
+        "bnc",
+        "bc.t",
+        "bc.t",
+        "bc"
+      ]
+    },
+    {
+      "text_offset": 677652,
+      "text_offset_hex": "0xa5714",
+      "kernel_file_offset": 678492,
+      "kernel_file_offset_hex": "0xa5a5c",
+      "kernel_vmaddr": 4161427220,
+      "kernel_vmaddr_hex": "0xf80a5714",
+      "size_bytes": 392,
+      "size_words": 98,
+      "first_opcodes": [
+        "call",
+        "call",
+        "bnc.t",
+        "bte(r)"
+      ]
+    },
+    {
+      "text_offset": 678096,
+      "text_offset_hex": "0xa58d0",
+      "kernel_file_offset": 678936,
+      "kernel_file_offset_hex": "0xa5c18",
+      "kernel_vmaddr": 4161427664,
+      "kernel_vmaddr_hex": "0xf80a58d0",
+      "size_bytes": 84,
+      "size_words": 21,
+      "first_opcodes": [
+        "call",
+        "bc.t",
+        "bc.t",
+        "fld(r)",
+        "fld(r)",
+        "fld(r)",
+        "call",
+        "fld(r)"
+      ]
+    },
+    {
+      "text_offset": 678260,
+      "text_offset_hex": "0xa5974",
+      "kernel_file_offset": 679100,
+      "kernel_file_offset_hex": "0xa5cbc",
+      "kernel_vmaddr": 4161427828,
+      "kernel_vmaddr_hex": "0xf80a5974",
+      "size_bytes": 132,
+      "size_words": 33,
+      "first_opcodes": [
+        "call",
+        "fld(r)",
+        "br",
+        "bc",
+        "fld(r)",
+        "br"
+      ]
+    },
+    {
+      "text_offset": 678444,
+      "text_offset_hex": "0xa5a2c",
+      "kernel_file_offset": 679284,
+      "kernel_file_offset_hex": "0xa5d74",
+      "kernel_vmaddr": 4161428012,
+      "kernel_vmaddr_hex": "0xf80a5a2c",
+      "size_bytes": 72,
+      "size_words": 18,
+      "first_opcodes": [
+        "bnc",
+        "bc",
+        "ld.s(r)",
+        "flush(r)"
+      ]
+    },
+    {
+      "text_offset": 678564,
+      "text_offset_hex": "0xa5aa4",
+      "kernel_file_offset": 679404,
+      "kernel_file_offset_hex": "0xa5dec",
+      "kernel_vmaddr": 4161428132,
+      "kernel_vmaddr_hex": "0xf80a5aa4",
+      "size_bytes": 76,
+      "size_words": 19,
+      "first_opcodes": [
+        "fld(r)",
+        "br",
+        "bc",
+        "ld.s(r)",
+        "bnc.t",
+        "ld.s(r)",
+        "br",
+        "bc"
+      ]
+    },
+    {
+      "text_offset": 678688,
+      "text_offset_hex": "0xa5b20",
+      "kernel_file_offset": 679528,
+      "kernel_file_offset_hex": "0xa5e68",
+      "kernel_vmaddr": 4161428256,
+      "kernel_vmaddr_hex": "0xf80a5b20",
+      "size_bytes": 120,
+      "size_words": 30,
+      "first_opcodes": [
+        "flush(r)",
+        "bte(i)",
+        "fst(i)",
+        "fld(r)",
+        "fld(r)",
+        "fst(i)",
+        "bc",
+        "fld(r)"
+      ]
+    },
+    {
+      "text_offset": 679064,
+      "text_offset_hex": "0xa5c98",
+      "kernel_file_offset": 679904,
+      "kernel_file_offset_hex": "0xa5fe0",
+      "kernel_vmaddr": 4161428632,
+      "kernel_vmaddr_hex": "0xf80a5c98",
+      "size_bytes": 160,
+      "size_words": 40,
+      "first_opcodes": [
+        "fld(r)",
+        "call",
+        "fst(i)",
+        "btne(r)",
+        "core_esc",
+        "bc",
+        "fld(r)",
+        "bc"
+      ]
+    },
+    {
+      "text_offset": 679576,
+      "text_offset_hex": "0xa5e98",
+      "kernel_file_offset": 680416,
+      "kernel_file_offset_hex": "0xa61e0",
+      "kernel_vmaddr": 4161429144,
+      "kernel_vmaddr_hex": "0xf80a5e98",
+      "size_bytes": 96,
+      "size_words": 24,
+      "first_opcodes": [
+        "ld.s(r)",
+        "call",
+        "bc.t",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "bc"
+      ]
+    },
+    {
+      "text_offset": 679832,
+      "text_offset_hex": "0xa5f98",
+      "kernel_file_offset": 680672,
+      "kernel_file_offset_hex": "0xa62e0",
+      "kernel_vmaddr": 4161429400,
+      "kernel_vmaddr_hex": "0xf80a5f98",
+      "size_bytes": 144,
+      "size_words": 36,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 680024,
+      "text_offset_hex": "0xa6058",
+      "kernel_file_offset": 680864,
+      "kernel_file_offset_hex": "0xa63a0",
+      "kernel_vmaddr": 4161429592,
+      "kernel_vmaddr_hex": "0xf80a6058",
+      "size_bytes": 124,
+      "size_words": 31,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 680196,
+      "text_offset_hex": "0xa6104",
+      "kernel_file_offset": 681036,
+      "kernel_file_offset_hex": "0xa644c",
+      "kernel_vmaddr": 4161429764,
+      "kernel_vmaddr_hex": "0xf80a6104",
+      "size_bytes": 136,
+      "size_words": 34,
+      "first_opcodes": [
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 680380,
+      "text_offset_hex": "0xa61bc",
+      "kernel_file_offset": 681220,
+      "kernel_file_offset_hex": "0xa6504",
+      "kernel_vmaddr": 4161429948,
+      "kernel_vmaddr_hex": "0xf80a61bc",
+      "size_bytes": 140,
+      "size_words": 35,
+      "first_opcodes": [
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 680564,
+      "text_offset_hex": "0xa6274",
+      "kernel_file_offset": 681404,
+      "kernel_file_offset_hex": "0xa65bc",
+      "kernel_vmaddr": 4161430132,
+      "kernel_vmaddr_hex": "0xf80a6274",
+      "size_bytes": 132,
+      "size_words": 33,
+      "first_opcodes": [
+        "flush(r)",
+        "flush(r)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 680744,
+      "text_offset_hex": "0xa6328",
+      "kernel_file_offset": 681584,
+      "kernel_file_offset_hex": "0xa6670",
+      "kernel_vmaddr": 4161430312,
+      "kernel_vmaddr_hex": "0xf80a6328",
+      "size_bytes": 144,
+      "size_words": 36,
+      "first_opcodes": [
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 680928,
+      "text_offset_hex": "0xa63e0",
+      "kernel_file_offset": 681768,
+      "kernel_file_offset_hex": "0xa6728",
+      "kernel_vmaddr": 4161430496,
+      "kernel_vmaddr_hex": "0xf80a63e0",
+      "size_bytes": 316,
+      "size_words": 79,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 681304,
+      "text_offset_hex": "0xa6558",
+      "kernel_file_offset": 682144,
+      "kernel_file_offset_hex": "0xa68a0",
+      "kernel_vmaddr": 4161430872,
+      "kernel_vmaddr_hex": "0xf80a6558",
+      "size_bytes": 132,
+      "size_words": 33,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 681488,
+      "text_offset_hex": "0xa6610",
+      "kernel_file_offset": 682328,
+      "kernel_file_offset_hex": "0xa6958",
+      "kernel_vmaddr": 4161431056,
+      "kernel_vmaddr_hex": "0xf80a6610",
+      "size_bytes": 132,
+      "size_words": 33,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 681668,
+      "text_offset_hex": "0xa66c4",
+      "kernel_file_offset": 682508,
+      "kernel_file_offset_hex": "0xa6a0c",
+      "kernel_vmaddr": 4161431236,
+      "kernel_vmaddr_hex": "0xf80a66c4",
+      "size_bytes": 132,
+      "size_words": 33,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 681840,
+      "text_offset_hex": "0xa6770",
+      "kernel_file_offset": 682680,
+      "kernel_file_offset_hex": "0xa6ab8",
+      "kernel_vmaddr": 4161431408,
+      "kernel_vmaddr_hex": "0xf80a6770",
+      "size_bytes": 144,
+      "size_words": 36,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 682036,
+      "text_offset_hex": "0xa6834",
+      "kernel_file_offset": 682876,
+      "kernel_file_offset_hex": "0xa6b7c",
+      "kernel_vmaddr": 4161431604,
+      "kernel_vmaddr_hex": "0xf80a6834",
+      "size_bytes": 132,
+      "size_words": 33,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 682216,
+      "text_offset_hex": "0xa68e8",
+      "kernel_file_offset": 683056,
+      "kernel_file_offset_hex": "0xa6c30",
+      "kernel_vmaddr": 4161431784,
+      "kernel_vmaddr_hex": "0xf80a68e8",
+      "size_bytes": 132,
+      "size_words": 33,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 682400,
+      "text_offset_hex": "0xa69a0",
+      "kernel_file_offset": 683240,
+      "kernel_file_offset_hex": "0xa6ce8",
+      "kernel_vmaddr": 4161431968,
+      "kernel_vmaddr_hex": "0xf80a69a0",
+      "size_bytes": 124,
+      "size_words": 31,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 682584,
+      "text_offset_hex": "0xa6a58",
+      "kernel_file_offset": 683424,
+      "kernel_file_offset_hex": "0xa6da0",
+      "kernel_vmaddr": 4161432152,
+      "kernel_vmaddr_hex": "0xf80a6a58",
+      "size_bytes": 488,
+      "size_words": 122,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 683132,
+      "text_offset_hex": "0xa6c7c",
+      "kernel_file_offset": 683972,
+      "kernel_file_offset_hex": "0xa6fc4",
+      "kernel_vmaddr": 4161432700,
+      "kernel_vmaddr_hex": "0xf80a6c7c",
+      "size_bytes": 124,
+      "size_words": 31,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 683316,
+      "text_offset_hex": "0xa6d34",
+      "kernel_file_offset": 684156,
+      "kernel_file_offset_hex": "0xa707c",
+      "kernel_vmaddr": 4161432884,
+      "kernel_vmaddr_hex": "0xf80a6d34",
+      "size_bytes": 124,
+      "size_words": 31,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 683496,
+      "text_offset_hex": "0xa6de8",
+      "kernel_file_offset": 684336,
+      "kernel_file_offset_hex": "0xa7130",
+      "kernel_vmaddr": 4161433064,
+      "kernel_vmaddr_hex": "0xf80a6de8",
+      "size_bytes": 124,
+      "size_words": 31,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 683668,
+      "text_offset_hex": "0xa6e94",
+      "kernel_file_offset": 684508,
+      "kernel_file_offset_hex": "0xa71dc",
+      "kernel_vmaddr": 4161433236,
+      "kernel_vmaddr_hex": "0xf80a6e94",
+      "size_bytes": 144,
+      "size_words": 36,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)"
+      ]
+    },
+    {
+      "text_offset": 683864,
+      "text_offset_hex": "0xa6f58",
+      "kernel_file_offset": 684704,
+      "kernel_file_offset_hex": "0xa72a0",
+      "kernel_vmaddr": 4161433432,
+      "kernel_vmaddr_hex": "0xf80a6f58",
+      "size_bytes": 132,
+      "size_words": 33,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)"
+      ]
+    },
+    {
+      "text_offset": 684044,
+      "text_offset_hex": "0xa700c",
+      "kernel_file_offset": 684884,
+      "kernel_file_offset_hex": "0xa7354",
+      "kernel_vmaddr": 4161433612,
+      "kernel_vmaddr_hex": "0xf80a700c",
+      "size_bytes": 124,
+      "size_words": 31,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)"
+      ]
+    },
+    {
+      "text_offset": 684228,
+      "text_offset_hex": "0xa70c4",
+      "kernel_file_offset": 685068,
+      "kernel_file_offset_hex": "0xa740c",
+      "kernel_vmaddr": 4161433796,
+      "kernel_vmaddr_hex": "0xf80a70c4",
+      "size_bytes": 124,
+      "size_words": 31,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)"
+      ]
+    },
+    {
+      "text_offset": 684412,
+      "text_offset_hex": "0xa717c",
+      "kernel_file_offset": 685252,
+      "kernel_file_offset_hex": "0xa74c4",
+      "kernel_vmaddr": 4161433980,
+      "kernel_vmaddr_hex": "0xf80a717c",
+      "size_bytes": 124,
+      "size_words": 31,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)"
+      ]
+    },
+    {
+      "text_offset": 684584,
+      "text_offset_hex": "0xa7228",
+      "kernel_file_offset": 685424,
+      "kernel_file_offset_hex": "0xa7570",
+      "kernel_vmaddr": 4161434152,
+      "kernel_vmaddr_hex": "0xf80a7228",
+      "size_bytes": 136,
+      "size_words": 34,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)"
+      ]
+    },
+    {
+      "text_offset": 685756,
+      "text_offset_hex": "0xa76bc",
+      "kernel_file_offset": 686596,
+      "kernel_file_offset_hex": "0xa7a04",
+      "kernel_vmaddr": 4161435324,
+      "kernel_vmaddr_hex": "0xf80a76bc",
+      "size_bytes": 64,
+      "size_words": 16,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 686120,
+      "text_offset_hex": "0xa7828",
+      "kernel_file_offset": 686960,
+      "kernel_file_offset_hex": "0xa7b70",
+      "kernel_vmaddr": 4161435688,
+      "kernel_vmaddr_hex": "0xf80a7828",
+      "size_bytes": 68,
+      "size_words": 17,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 687580,
+      "text_offset_hex": "0xa7ddc",
+      "kernel_file_offset": 688420,
+      "kernel_file_offset_hex": "0xa8124",
+      "kernel_vmaddr": 4161437148,
+      "kernel_vmaddr_hex": "0xf80a7ddc",
+      "size_bytes": 64,
+      "size_words": 16,
+      "first_opcodes": [
+        "pst.d(r)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "ld.s(r)"
+      ]
+    },
+    {
+      "text_offset": 687700,
+      "text_offset_hex": "0xa7e54",
+      "kernel_file_offset": 688540,
+      "kernel_file_offset_hex": "0xa819c",
+      "kernel_vmaddr": 4161437268,
+      "kernel_vmaddr_hex": "0xf80a7e54",
+      "size_bytes": 124,
+      "size_words": 31,
+      "first_opcodes": [
+        "flush(i)",
+        "pst.d(r)",
+        "pst.d(r)",
+        "pst.d(r)",
+        "pst.d(r)",
+        "pst.d(r)",
+        "pst.d(r)",
+        "pst.d(r)"
+      ]
+    },
+    {
+      "text_offset": 688132,
+      "text_offset_hex": "0xa8004",
+      "kernel_file_offset": 688972,
+      "kernel_file_offset_hex": "0xa834c",
+      "kernel_vmaddr": 4161437700,
+      "kernel_vmaddr_hex": "0xf80a8004",
+      "size_bytes": 68,
+      "size_words": 17,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 689228,
+      "text_offset_hex": "0xa844c",
+      "kernel_file_offset": 690068,
+      "kernel_file_offset_hex": "0xa8794",
+      "kernel_vmaddr": 4161438796,
+      "kernel_vmaddr_hex": "0xf80a844c",
+      "size_bytes": 68,
+      "size_words": 17,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 691344,
+      "text_offset_hex": "0xa8c90",
+      "kernel_file_offset": 692184,
+      "kernel_file_offset_hex": "0xa8fd8",
+      "kernel_vmaddr": 4161440912,
+      "kernel_vmaddr_hex": "0xf80a8c90",
+      "size_bytes": 80,
+      "size_words": 20,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "pst.d(r)",
+        "pst.d(r)",
+        "pst.d(r)",
+        "pst.d(r)"
+      ]
+    },
+    {
+      "text_offset": 692076,
+      "text_offset_hex": "0xa8f6c",
+      "kernel_file_offset": 692916,
+      "kernel_file_offset_hex": "0xa92b4",
+      "kernel_vmaddr": 4161441644,
+      "kernel_vmaddr_hex": "0xf80a8f6c",
+      "size_bytes": 88,
+      "size_words": 22,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 692440,
+      "text_offset_hex": "0xa90d8",
+      "kernel_file_offset": 693280,
+      "kernel_file_offset_hex": "0xa9420",
+      "kernel_vmaddr": 4161442008,
+      "kernel_vmaddr_hex": "0xf80a90d8",
+      "size_bytes": 92,
+      "size_words": 23,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 692624,
+      "text_offset_hex": "0xa9190",
+      "kernel_file_offset": 693464,
+      "kernel_file_offset_hex": "0xa94d8",
+      "kernel_vmaddr": 4161442192,
+      "kernel_vmaddr_hex": "0xf80a9190",
+      "size_bytes": 80,
+      "size_words": 20,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "pst.d(r)"
+      ]
+    },
+    {
+      "text_offset": 693172,
+      "text_offset_hex": "0xa93b4",
+      "kernel_file_offset": 694012,
+      "kernel_file_offset_hex": "0xa96fc",
+      "kernel_vmaddr": 4161442740,
+      "kernel_vmaddr_hex": "0xf80a93b4",
+      "size_bytes": 80,
+      "size_words": 20,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 695364,
+      "text_offset_hex": "0xa9c44",
+      "kernel_file_offset": 696204,
+      "kernel_file_offset_hex": "0xa9f8c",
+      "kernel_vmaddr": 4161444932,
+      "kernel_vmaddr_hex": "0xf80a9c44",
+      "size_bytes": 96,
+      "size_words": 24,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "pst.d(r)",
+        "pst.d(r)",
+        "pst.d(r)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 699560,
+      "text_offset_hex": "0xaaca8",
+      "kernel_file_offset": 700400,
+      "kernel_file_offset_hex": "0xaaff0",
+      "kernel_vmaddr": 4161449128,
+      "kernel_vmaddr_hex": "0xf80aaca8",
+      "size_bytes": 88,
+      "size_words": 22,
+      "first_opcodes": [
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(i)",
+        "flush(r)",
+        "flush(r)"
+      ]
+    },
+    {
+      "text_offset": 699752,
+      "text_offset_hex": "0xaad68",
+      "kernel_file_offset": 700592,
+      "kernel_file_offset_hex": "0xab0b0",
+      "kernel_vmaddr": 4161449320,
+      "kernel_vmaddr_hex": "0xf80aad68",
+      "size_bytes": 84,
+      "size_words": 21,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 699932,
+      "text_offset_hex": "0xaae1c",
+      "kernel_file_offset": 700772,
+      "kernel_file_offset_hex": "0xab164",
+      "kernel_vmaddr": 4161449500,
+      "kernel_vmaddr_hex": "0xf80aae1c",
+      "size_bytes": 84,
+      "size_words": 21,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 700116,
+      "text_offset_hex": "0xaaed4",
+      "kernel_file_offset": 700956,
+      "kernel_file_offset_hex": "0xab21c",
+      "kernel_vmaddr": 4161449684,
+      "kernel_vmaddr_hex": "0xf80aaed4",
+      "size_bytes": 80,
+      "size_words": 20,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 700300,
+      "text_offset_hex": "0xaaf8c",
+      "kernel_file_offset": 701140,
+      "kernel_file_offset_hex": "0xab2d4",
+      "kernel_vmaddr": 4161449868,
+      "kernel_vmaddr_hex": "0xf80aaf8c",
+      "size_bytes": 84,
+      "size_words": 21,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 700480,
+      "text_offset_hex": "0xab040",
+      "kernel_file_offset": 701320,
+      "kernel_file_offset_hex": "0xab388",
+      "kernel_vmaddr": 4161450048,
+      "kernel_vmaddr_hex": "0xf80ab040",
+      "size_bytes": 92,
+      "size_words": 23,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(r)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 700664,
+      "text_offset_hex": "0xab0f8",
+      "kernel_file_offset": 701504,
+      "kernel_file_offset_hex": "0xab440",
+      "kernel_vmaddr": 4161450232,
+      "kernel_vmaddr_hex": "0xf80ab0f8",
+      "size_bytes": 80,
+      "size_words": 20,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)"
+      ]
+    },
+    {
+      "text_offset": 700848,
+      "text_offset_hex": "0xab1b0",
+      "kernel_file_offset": 701688,
+      "kernel_file_offset_hex": "0xab4f8",
+      "kernel_vmaddr": 4161450416,
+      "kernel_vmaddr_hex": "0xf80ab1b0",
+      "size_bytes": 68,
+      "size_words": 17,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(r)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 701040,
+      "text_offset_hex": "0xab270",
+      "kernel_file_offset": 701880,
+      "kernel_file_offset_hex": "0xab5b8",
+      "kernel_vmaddr": 4161450608,
+      "kernel_vmaddr_hex": "0xf80ab270",
+      "size_bytes": 100,
+      "size_words": 25,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 701212,
+      "text_offset_hex": "0xab31c",
+      "kernel_file_offset": 702052,
+      "kernel_file_offset_hex": "0xab664",
+      "kernel_vmaddr": 4161450780,
+      "kernel_vmaddr_hex": "0xf80ab31c",
+      "size_bytes": 84,
+      "size_words": 21,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 701396,
+      "text_offset_hex": "0xab3d4",
+      "kernel_file_offset": 702236,
+      "kernel_file_offset_hex": "0xab71c",
+      "kernel_vmaddr": 4161450964,
+      "kernel_vmaddr_hex": "0xf80ab3d4",
+      "size_bytes": 92,
+      "size_words": 23,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(r)",
+        "flush(i)",
+        "flush(r)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 701580,
+      "text_offset_hex": "0xab48c",
+      "kernel_file_offset": 702420,
+      "kernel_file_offset_hex": "0xab7d4",
+      "kernel_vmaddr": 4161451148,
+      "kernel_vmaddr_hex": "0xf80ab48c",
+      "size_bytes": 80,
+      "size_words": 20,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(r)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 702380,
+      "text_offset_hex": "0xab7ac",
+      "kernel_file_offset": 703220,
+      "kernel_file_offset_hex": "0xabaf4",
+      "kernel_vmaddr": 4161451948,
+      "kernel_vmaddr_hex": "0xf80ab7ac",
+      "size_bytes": 76,
+      "size_words": 19,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 703124,
+      "text_offset_hex": "0xaba94",
+      "kernel_file_offset": 703964,
+      "kernel_file_offset_hex": "0xabddc",
+      "kernel_vmaddr": 4161452692,
+      "kernel_vmaddr_hex": "0xf80aba94",
+      "size_bytes": 64,
+      "size_words": 16,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 703404,
+      "text_offset_hex": "0xabbac",
+      "kernel_file_offset": 704244,
+      "kernel_file_offset_hex": "0xabef4",
+      "kernel_vmaddr": 4161452972,
+      "kernel_vmaddr_hex": "0xf80abbac",
+      "size_bytes": 148,
+      "size_words": 37,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "pst.d(r)",
+        "pst.d(r)",
+        "pst.d(r)",
+        "pst.d(r)",
+        "pst.d(r)",
+        "pst.d(r)"
+      ]
+    },
+    {
+      "text_offset": 703672,
+      "text_offset_hex": "0xabcb8",
+      "kernel_file_offset": 704512,
+      "kernel_file_offset_hex": "0xac000",
+      "kernel_vmaddr": 4161453240,
+      "kernel_vmaddr_hex": "0xf80abcb8",
+      "size_bytes": 68,
+      "size_words": 17,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 703844,
+      "text_offset_hex": "0xabd64",
+      "kernel_file_offset": 704684,
+      "kernel_file_offset_hex": "0xac0ac",
+      "kernel_vmaddr": 4161453412,
+      "kernel_vmaddr_hex": "0xf80abd64",
+      "size_bytes": 76,
+      "size_words": 19,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 704024,
+      "text_offset_hex": "0xabe18",
+      "kernel_file_offset": 704864,
+      "kernel_file_offset_hex": "0xac160",
+      "kernel_vmaddr": 4161453592,
+      "kernel_vmaddr_hex": "0xf80abe18",
+      "size_bytes": 76,
+      "size_words": 19,
+      "first_opcodes": [
+        "flush(r)",
+        "flush(i)",
+        "pst.d(r)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 704208,
+      "text_offset_hex": "0xabed0",
+      "kernel_file_offset": 705048,
+      "kernel_file_offset_hex": "0xac218",
+      "kernel_vmaddr": 4161453776,
+      "kernel_vmaddr_hex": "0xf80abed0",
+      "size_bytes": 76,
+      "size_words": 19,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 704572,
+      "text_offset_hex": "0xac03c",
+      "kernel_file_offset": 705412,
+      "kernel_file_offset_hex": "0xac384",
+      "kernel_vmaddr": 4161454140,
+      "kernel_vmaddr_hex": "0xf80ac03c",
+      "size_bytes": 76,
+      "size_words": 19,
+      "first_opcodes": [
+        "flush(r)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 705244,
+      "text_offset_hex": "0xac2dc",
+      "kernel_file_offset": 706084,
+      "kernel_file_offset_hex": "0xac624",
+      "kernel_vmaddr": 4161454812,
+      "kernel_vmaddr_hex": "0xf80ac2dc",
+      "size_bytes": 140,
+      "size_words": 35,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "pst.d(r)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 705428,
+      "text_offset_hex": "0xac394",
+      "kernel_file_offset": 706268,
+      "kernel_file_offset_hex": "0xac6dc",
+      "kernel_vmaddr": 4161454996,
+      "kernel_vmaddr_hex": "0xf80ac394",
+      "size_bytes": 116,
+      "size_words": 29,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "pst.d(r)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 705608,
+      "text_offset_hex": "0xac448",
+      "kernel_file_offset": 706448,
+      "kernel_file_offset_hex": "0xac790",
+      "kernel_vmaddr": 4161455176,
+      "kernel_vmaddr_hex": "0xf80ac448",
+      "size_bytes": 120,
+      "size_words": 30,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "pst.d(r)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "pst.d(r)",
+        "pst.d(r)"
+      ]
+    },
+    {
+      "text_offset": 705792,
+      "text_offset_hex": "0xac500",
+      "kernel_file_offset": 706632,
+      "kernel_file_offset_hex": "0xac848",
+      "kernel_vmaddr": 4161455360,
+      "kernel_vmaddr_hex": "0xf80ac500",
+      "size_bytes": 320,
+      "size_words": 80,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "pst.d(r)",
+        "flush(i)",
+        "pst.d(r)",
+        "flush(i)",
+        "pst.d(r)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 706328,
+      "text_offset_hex": "0xac718",
+      "kernel_file_offset": 707168,
+      "kernel_file_offset_hex": "0xaca60",
+      "kernel_vmaddr": 4161455896,
+      "kernel_vmaddr_hex": "0xf80ac718",
+      "size_bytes": 148,
+      "size_words": 37,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 706624,
+      "text_offset_hex": "0xac840",
+      "kernel_file_offset": 707464,
+      "kernel_file_offset_hex": "0xacb88",
+      "kernel_vmaddr": 4161456192,
+      "kernel_vmaddr_hex": "0xf80ac840",
+      "size_bytes": 164,
+      "size_words": 41,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 706892,
+      "text_offset_hex": "0xac94c",
+      "kernel_file_offset": 707732,
+      "kernel_file_offset_hex": "0xacc94",
+      "kernel_vmaddr": 4161456460,
+      "kernel_vmaddr_hex": "0xf80ac94c",
+      "size_bytes": 132,
+      "size_words": 33,
+      "first_opcodes": [
+        "flush(i)",
+        "pst.d(r)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "pst.d(r)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 707132,
+      "text_offset_hex": "0xaca3c",
+      "kernel_file_offset": 707972,
+      "kernel_file_offset_hex": "0xacd84",
+      "kernel_vmaddr": 4161456700,
+      "kernel_vmaddr_hex": "0xf80aca3c",
+      "size_bytes": 76,
+      "size_words": 19,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 707496,
+      "text_offset_hex": "0xacba8",
+      "kernel_file_offset": 708336,
+      "kernel_file_offset_hex": "0xacef0",
+      "kernel_vmaddr": 4161457064,
+      "kernel_vmaddr_hex": "0xf80acba8",
+      "size_bytes": 80,
+      "size_words": 20,
+      "first_opcodes": [
+        "flush(r)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 707624,
+      "text_offset_hex": "0xacc28",
+      "kernel_file_offset": 708464,
+      "kernel_file_offset_hex": "0xacf70",
+      "kernel_vmaddr": 4161457192,
+      "kernel_vmaddr_hex": "0xf80acc28",
+      "size_bytes": 132,
+      "size_words": 33,
+      "first_opcodes": [
+        "flush(i)",
+        "pst.d(r)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "pst.d(r)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 707876,
+      "text_offset_hex": "0xacd24",
+      "kernel_file_offset": 708716,
+      "kernel_file_offset_hex": "0xad06c",
+      "kernel_vmaddr": 4161457444,
+      "kernel_vmaddr_hex": "0xf80acd24",
+      "size_bytes": 228,
+      "size_words": 57,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 708228,
+      "text_offset_hex": "0xace84",
+      "kernel_file_offset": 709068,
+      "kernel_file_offset_hex": "0xad1cc",
+      "kernel_vmaddr": 4161457796,
+      "kernel_vmaddr_hex": "0xf80ace84",
+      "size_bytes": 76,
+      "size_words": 19,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 708536,
+      "text_offset_hex": "0xacfb8",
+      "kernel_file_offset": 709376,
+      "kernel_file_offset_hex": "0xad300",
+      "kernel_vmaddr": 4161458104,
+      "kernel_vmaddr_hex": "0xf80acfb8",
+      "size_bytes": 116,
+      "size_words": 29,
+      "first_opcodes": [
+        "flush(i)",
+        "pst.d(r)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "pst.d(r)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 709324,
+      "text_offset_hex": "0xad2cc",
+      "kernel_file_offset": 710164,
+      "kernel_file_offset_hex": "0xad614",
+      "kernel_vmaddr": 4161458892,
+      "kernel_vmaddr_hex": "0xf80ad2cc",
+      "size_bytes": 76,
+      "size_words": 19,
+      "first_opcodes": [
+        "flush(r)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 709872,
+      "text_offset_hex": "0xad4f0",
+      "kernel_file_offset": 710712,
+      "kernel_file_offset_hex": "0xad838",
+      "kernel_vmaddr": 4161459440,
+      "kernel_vmaddr_hex": "0xf80ad4f0",
+      "size_bytes": 76,
+      "size_words": 19,
+      "first_opcodes": [
+        "flush(r)",
+        "flush(i)",
+        "pst.d(r)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 710056,
+      "text_offset_hex": "0xad5a8",
+      "kernel_file_offset": 710896,
+      "kernel_file_offset_hex": "0xad8f0",
+      "kernel_vmaddr": 4161459624,
+      "kernel_vmaddr_hex": "0xf80ad5a8",
+      "size_bytes": 80,
+      "size_words": 20,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(r)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 710420,
+      "text_offset_hex": "0xad714",
+      "kernel_file_offset": 711260,
+      "kernel_file_offset_hex": "0xada5c",
+      "kernel_vmaddr": 4161459988,
+      "kernel_vmaddr_hex": "0xf80ad714",
+      "size_bytes": 76,
+      "size_words": 19,
+      "first_opcodes": [
+        "flush(r)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(r)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 710616,
+      "text_offset_hex": "0xad7d8",
+      "kernel_file_offset": 711456,
+      "kernel_file_offset_hex": "0xadb20",
+      "kernel_vmaddr": 4161460184,
+      "kernel_vmaddr_hex": "0xf80ad7d8",
+      "size_bytes": 72,
+      "size_words": 18,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 711152,
+      "text_offset_hex": "0xad9f0",
+      "kernel_file_offset": 711992,
+      "kernel_file_offset_hex": "0xadd38",
+      "kernel_vmaddr": 4161460720,
+      "kernel_vmaddr_hex": "0xf80ad9f0",
+      "size_bytes": 76,
+      "size_words": 19,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 711520,
+      "text_offset_hex": "0xadb60",
+      "kernel_file_offset": 712360,
+      "kernel_file_offset_hex": "0xadea8",
+      "kernel_vmaddr": 4161461088,
+      "kernel_vmaddr_hex": "0xf80adb60",
+      "size_bytes": 72,
+      "size_words": 18,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "pst.d(r)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 711700,
+      "text_offset_hex": "0xadc14",
+      "kernel_file_offset": 712540,
+      "kernel_file_offset_hex": "0xadf5c",
+      "kernel_vmaddr": 4161461268,
+      "kernel_vmaddr_hex": "0xf80adc14",
+      "size_bytes": 76,
+      "size_words": 19,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "pst.d(r)",
+        "flush(r)",
+        "pst.d(r)",
+        "pst.d(r)",
+        "pst.d(r)"
+      ]
+    },
+    {
+      "text_offset": 711884,
+      "text_offset_hex": "0xadccc",
+      "kernel_file_offset": 712724,
+      "kernel_file_offset_hex": "0xae014",
+      "kernel_vmaddr": 4161461452,
+      "kernel_vmaddr_hex": "0xf80adccc",
+      "size_bytes": 76,
+      "size_words": 19,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 712248,
+      "text_offset_hex": "0xade38",
+      "kernel_file_offset": 713088,
+      "kernel_file_offset_hex": "0xae180",
+      "kernel_vmaddr": 4161461816,
+      "kernel_vmaddr_hex": "0xf80ade38",
+      "size_bytes": 76,
+      "size_words": 19,
+      "first_opcodes": [
+        "flush(r)",
+        "flush(i)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)"
+      ]
+    },
+    {
+      "text_offset": 712432,
+      "text_offset_hex": "0xadef0",
+      "kernel_file_offset": 713272,
+      "kernel_file_offset_hex": "0xae238",
+      "kernel_vmaddr": 4161462000,
+      "kernel_vmaddr_hex": "0xf80adef0",
+      "size_bytes": 80,
+      "size_words": 20,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 712612,
+      "text_offset_hex": "0xadfa4",
+      "kernel_file_offset": 713452,
+      "kernel_file_offset_hex": "0xae2ec",
+      "kernel_vmaddr": 4161462180,
+      "kernel_vmaddr_hex": "0xf80adfa4",
+      "size_bytes": 80,
+      "size_words": 20,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 712748,
+      "text_offset_hex": "0xae02c",
+      "kernel_file_offset": 713588,
+      "kernel_file_offset_hex": "0xae374",
+      "kernel_vmaddr": 4161462316,
+      "kernel_vmaddr_hex": "0xf80ae02c",
+      "size_bytes": 124,
+      "size_words": 31,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 712980,
+      "text_offset_hex": "0xae114",
+      "kernel_file_offset": 713820,
+      "kernel_file_offset_hex": "0xae45c",
+      "kernel_vmaddr": 4161462548,
+      "kernel_vmaddr_hex": "0xf80ae114",
+      "size_bytes": 72,
+      "size_words": 18,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(r)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 713164,
+      "text_offset_hex": "0xae1cc",
+      "kernel_file_offset": 714004,
+      "kernel_file_offset_hex": "0xae514",
+      "kernel_vmaddr": 4161462732,
+      "kernel_vmaddr_hex": "0xf80ae1cc",
+      "size_bytes": 72,
+      "size_words": 18,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 713276,
+      "text_offset_hex": "0xae23c",
+      "kernel_file_offset": 714116,
+      "kernel_file_offset_hex": "0xae584",
+      "kernel_vmaddr": 4161462844,
+      "kernel_vmaddr_hex": "0xf80ae23c",
+      "size_bytes": 144,
+      "size_words": 36,
+      "first_opcodes": [
+        "flush(i)",
+        "pst.d(r)",
+        "pst.d(r)",
+        "pst.d(r)",
+        "pst.d(r)",
+        "pst.d(r)",
+        "pst.d(r)",
+        "pst.d(r)"
+      ]
+    },
+    {
+      "text_offset": 713528,
+      "text_offset_hex": "0xae338",
+      "kernel_file_offset": 714368,
+      "kernel_file_offset_hex": "0xae680",
+      "kernel_vmaddr": 4161463096,
+      "kernel_vmaddr_hex": "0xf80ae338",
+      "size_bytes": 76,
+      "size_words": 19,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 713712,
+      "text_offset_hex": "0xae3f0",
+      "kernel_file_offset": 714552,
+      "kernel_file_offset_hex": "0xae738",
+      "kernel_vmaddr": 4161463280,
+      "kernel_vmaddr_hex": "0xf80ae3f0",
+      "size_bytes": 72,
+      "size_words": 18,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 713824,
+      "text_offset_hex": "0xae460",
+      "kernel_file_offset": 714664,
+      "kernel_file_offset_hex": "0xae7a8",
+      "kernel_vmaddr": 4161463392,
+      "kernel_vmaddr_hex": "0xf80ae460",
+      "size_bytes": 144,
+      "size_words": 36,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)",
+        "flush(r)"
+      ]
+    },
+    {
+      "text_offset": 714004,
+      "text_offset_hex": "0xae514",
+      "kernel_file_offset": 714844,
+      "kernel_file_offset_hex": "0xae85c",
+      "kernel_vmaddr": 4161463572,
+      "kernel_vmaddr_hex": "0xf80ae514",
+      "size_bytes": 148,
+      "size_words": 37,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 714188,
+      "text_offset_hex": "0xae5cc",
+      "kernel_file_offset": 715028,
+      "kernel_file_offset_hex": "0xae914",
+      "kernel_vmaddr": 4161463756,
+      "kernel_vmaddr_hex": "0xf80ae5cc",
+      "size_bytes": 148,
+      "size_words": 37,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 714372,
+      "text_offset_hex": "0xae684",
+      "kernel_file_offset": 715212,
+      "kernel_file_offset_hex": "0xae9cc",
+      "kernel_vmaddr": 4161463940,
+      "kernel_vmaddr_hex": "0xf80ae684",
+      "size_bytes": 512,
+      "size_words": 128,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 714920,
+      "text_offset_hex": "0xae8a8",
+      "kernel_file_offset": 715760,
+      "kernel_file_offset_hex": "0xaebf0",
+      "kernel_vmaddr": 4161464488,
+      "kernel_vmaddr_hex": "0xf80ae8a8",
+      "size_bytes": 144,
+      "size_words": 36,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 715100,
+      "text_offset_hex": "0xae95c",
+      "kernel_file_offset": 715940,
+      "kernel_file_offset_hex": "0xaeca4",
+      "kernel_vmaddr": 4161464668,
+      "kernel_vmaddr_hex": "0xf80ae95c",
+      "size_bytes": 332,
+      "size_words": 83,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 715468,
+      "text_offset_hex": "0xaeacc",
+      "kernel_file_offset": 716308,
+      "kernel_file_offset_hex": "0xaee14",
+      "kernel_vmaddr": 4161465036,
+      "kernel_vmaddr_hex": "0xf80aeacc",
+      "size_bytes": 144,
+      "size_words": 36,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 715652,
+      "text_offset_hex": "0xaeb84",
+      "kernel_file_offset": 716492,
+      "kernel_file_offset_hex": "0xaeecc",
+      "kernel_vmaddr": 4161465220,
+      "kernel_vmaddr_hex": "0xf80aeb84",
+      "size_bytes": 144,
+      "size_words": 36,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 715832,
+      "text_offset_hex": "0xaec38",
+      "kernel_file_offset": 716672,
+      "kernel_file_offset_hex": "0xaef80",
+      "kernel_vmaddr": 4161465400,
+      "kernel_vmaddr_hex": "0xf80aec38",
+      "size_bytes": 136,
+      "size_words": 34,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 716016,
+      "text_offset_hex": "0xaecf0",
+      "kernel_file_offset": 716856,
+      "kernel_file_offset_hex": "0xaf038",
+      "kernel_vmaddr": 4161465584,
+      "kernel_vmaddr_hex": "0xf80aecf0",
+      "size_bytes": 136,
+      "size_words": 34,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 716200,
+      "text_offset_hex": "0xaeda8",
+      "kernel_file_offset": 717040,
+      "kernel_file_offset_hex": "0xaf0f0",
+      "kernel_vmaddr": 4161465768,
+      "kernel_vmaddr_hex": "0xf80aeda8",
+      "size_bytes": 132,
+      "size_words": 33,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 716380,
+      "text_offset_hex": "0xaee5c",
+      "kernel_file_offset": 717220,
+      "kernel_file_offset_hex": "0xaf1a4",
+      "kernel_vmaddr": 4161465948,
+      "kernel_vmaddr_hex": "0xf80aee5c",
+      "size_bytes": 136,
+      "size_words": 34,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 716564,
+      "text_offset_hex": "0xaef14",
+      "kernel_file_offset": 717404,
+      "kernel_file_offset_hex": "0xaf25c",
+      "kernel_vmaddr": 4161466132,
+      "kernel_vmaddr_hex": "0xf80aef14",
+      "size_bytes": 136,
+      "size_words": 34,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 716748,
+      "text_offset_hex": "0xaefcc",
+      "kernel_file_offset": 717588,
+      "kernel_file_offset_hex": "0xaf314",
+      "kernel_vmaddr": 4161466316,
+      "kernel_vmaddr_hex": "0xf80aefcc",
+      "size_bytes": 136,
+      "size_words": 34,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 716928,
+      "text_offset_hex": "0xaf080",
+      "kernel_file_offset": 717768,
+      "kernel_file_offset_hex": "0xaf3c8",
+      "kernel_vmaddr": 4161466496,
+      "kernel_vmaddr_hex": "0xf80af080",
+      "size_bytes": 136,
+      "size_words": 34,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 717112,
+      "text_offset_hex": "0xaf138",
+      "kernel_file_offset": 717952,
+      "kernel_file_offset_hex": "0xaf480",
+      "kernel_vmaddr": 4161466680,
+      "kernel_vmaddr_hex": "0xf80af138",
+      "size_bytes": 140,
+      "size_words": 35,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 717296,
+      "text_offset_hex": "0xaf1f0",
+      "kernel_file_offset": 718136,
+      "kernel_file_offset_hex": "0xaf538",
+      "kernel_vmaddr": 4161466864,
+      "kernel_vmaddr_hex": "0xf80af1f0",
+      "size_bytes": 140,
+      "size_words": 35,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 717476,
+      "text_offset_hex": "0xaf2a4",
+      "kernel_file_offset": 718316,
+      "kernel_file_offset_hex": "0xaf5ec",
+      "kernel_vmaddr": 4161467044,
+      "kernel_vmaddr_hex": "0xf80af2a4",
+      "size_bytes": 136,
+      "size_words": 34,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 717660,
+      "text_offset_hex": "0xaf35c",
+      "kernel_file_offset": 718500,
+      "kernel_file_offset_hex": "0xaf6a4",
+      "kernel_vmaddr": 4161467228,
+      "kernel_vmaddr_hex": "0xf80af35c",
+      "size_bytes": 136,
+      "size_words": 34,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 717844,
+      "text_offset_hex": "0xaf414",
+      "kernel_file_offset": 718684,
+      "kernel_file_offset_hex": "0xaf75c",
+      "kernel_vmaddr": 4161467412,
+      "kernel_vmaddr_hex": "0xf80af414",
+      "size_bytes": 144,
+      "size_words": 36,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 718024,
+      "text_offset_hex": "0xaf4c8",
+      "kernel_file_offset": 718864,
+      "kernel_file_offset_hex": "0xaf810",
+      "kernel_vmaddr": 4161467592,
+      "kernel_vmaddr_hex": "0xf80af4c8",
+      "size_bytes": 136,
+      "size_words": 34,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 718208,
+      "text_offset_hex": "0xaf580",
+      "kernel_file_offset": 719048,
+      "kernel_file_offset_hex": "0xaf8c8",
+      "kernel_vmaddr": 4161467776,
+      "kernel_vmaddr_hex": "0xf80af580",
+      "size_bytes": 148,
+      "size_words": 37,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 718392,
+      "text_offset_hex": "0xaf638",
+      "kernel_file_offset": 719232,
+      "kernel_file_offset_hex": "0xaf980",
+      "kernel_vmaddr": 4161467960,
+      "kernel_vmaddr_hex": "0xf80af638",
+      "size_bytes": 140,
+      "size_words": 35,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 718576,
+      "text_offset_hex": "0xaf6f0",
+      "kernel_file_offset": 719416,
+      "kernel_file_offset_hex": "0xafa38",
+      "kernel_vmaddr": 4161468144,
+      "kernel_vmaddr_hex": "0xf80af6f0",
+      "size_bytes": 132,
+      "size_words": 33,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 718756,
+      "text_offset_hex": "0xaf7a4",
+      "kernel_file_offset": 719596,
+      "kernel_file_offset_hex": "0xafaec",
+      "kernel_vmaddr": 4161468324,
+      "kernel_vmaddr_hex": "0xf80af7a4",
+      "size_bytes": 136,
+      "size_words": 34,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 718940,
+      "text_offset_hex": "0xaf85c",
+      "kernel_file_offset": 719780,
+      "kernel_file_offset_hex": "0xafba4",
+      "kernel_vmaddr": 4161468508,
+      "kernel_vmaddr_hex": "0xf80af85c",
+      "size_bytes": 144,
+      "size_words": 36,
+      "first_opcodes": [
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)",
+        "flush(i)"
+      ]
+    },
+    {
+      "text_offset": 720056,
+      "text_offset_hex": "0xafcb8",
+      "kernel_file_offset": 720896,
+      "kernel_file_offset_hex": "0xb0000",
+      "kernel_vmaddr": 4161469624,
+      "kernel_vmaddr_hex": "0xf80afcb8",
+      "size_bytes": 6916,
+      "size_words": 1729,
+      "first_opcodes": [
+        "nop",
+        "nop",
+        "nop",
+        "nop",
+        "nop",
+        "st(r)",
+        "xor(r)",
+        "subu(r)"
+      ]
+    },
+    {
+      "text_offset": 727008,
+      "text_offset_hex": "0xb17e0",
+      "kernel_file_offset": 727848,
+      "kernel_file_offset_hex": "0xb1b28",
+      "kernel_vmaddr": 4161476576,
+      "kernel_vmaddr_hex": "0xf80b17e0",
+      "size_bytes": 776,
+      "size_words": 194,
+      "first_opcodes": [
+        "shl(r)",
+        "ld.s(i)",
+        "xorh",
+        "addu(r)",
+        "btne(i)",
+        "or(i)",
+        "subs(r)",
+        "st(r)"
+      ]
+    },
+    {
+      "text_offset": 727820,
+      "text_offset_hex": "0xb1b0c",
+      "kernel_file_offset": 728660,
+      "kernel_file_offset_hex": "0xb1e54",
+      "kernel_vmaddr": 4161477388,
+      "kernel_vmaddr_hex": "0xf80b1b0c",
+      "size_bytes": 2620,
+      "size_words": 655,
+      "first_opcodes": [
+        "ld.b(i)",
+        "flush(r)",
+        "call",
+        "addu(i)"
+      ]
+    }
+  ],
+  "seed_transfer_note": "The clean firmware (200,704 bytes) is an exact byte-for-byte match with the first 200,704 bytes of the kernel's __text section. Any function address identified in the clean firmware at offset X maps to kernel virtual address 0xF8000000 + X. The kernel file offset is 0x348 + X. The remaining __text content (offsets 0x31000 to 0xB2548) contains 286 significant code regions totaling 490,672 bytes of additional i860 code not present in the clean firmware window. These regions likely contain additional kernel functions, interrupt handlers, and driver code."
+}

@@ -1,0 +1,6762 @@
+{
+  "metadata": {
+    "binary": "ND_MachDriver___TEXT_clean_window.bin",
+    "binary_size": 200704,
+    "total_words": 50176,
+    "total_orh_or_pairs": 2,
+    "total_standalone_orh": 325,
+    "total_small_constants": 31,
+    "pair_classification_counts": {
+      "other": 2
+    },
+    "orh_classification_counts": {
+      "mmio_hi": 30,
+      "other_hi": 234,
+      "mask_hi": 35,
+      "zero_hi": 26
+    },
+    "orh_by_base_register": {
+      "r23": 10,
+      "r15": 43,
+      "r12": 6,
+      "r31": 3,
+      "r25": 6,
+      "r1": 12,
+      "r0": 11,
+      "r7": 51,
+      "r4": 7,
+      "r16": 7,
+      "r11": 7,
+      "r22": 5,
+      "r24": 6,
+      "r8": 4,
+      "r6": 4,
+      "r18": 71,
+      "r17": 5,
+      "r2": 5,
+      "r29": 5,
+      "r5": 5,
+      "r3": 10,
+      "r20": 7,
+      "r19": 5,
+      "r13": 5,
+      "r9": 3,
+      "r27": 3,
+      "r10": 3,
+      "r26": 1,
+      "r21": 5,
+      "r30": 3,
+      "r28": 5,
+      "r14": 2
+    }
+  },
+  "pairs": [
+    {
+      "orh_addr": "0x02EFC",
+      "or_addr": "0x02F00",
+      "gap": 1,
+      "pattern": "same_base",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x7184",
+      "lo16": "0x7284",
+      "value_hex": "0x71847284",
+      "value_dec": 1904505476,
+      "classification": "other",
+      "is_absolute": false
+    },
+    {
+      "orh_addr": "0x227D0",
+      "or_addr": "0x227D8",
+      "gap": 2,
+      "pattern": "same_base",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 1,
+      "dest_name": "r1",
+      "hi16": "0x00A0",
+      "lo16": "0x00A0",
+      "value_hex": "0x00A000A0",
+      "value_dec": 10485920,
+      "classification": "other",
+      "is_absolute": false
+    }
+  ],
+  "standalone_orh": [
+    {
+      "addr": "0x01C04",
+      "src2": 23,
+      "src2_name": "r23",
+      "dest": 30,
+      "dest_name": "r30",
+      "hi16": "0xFF6F",
+      "hi_value_hex": "0xFF6F0000",
+      "hi_value_dec": 4285464576,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x0295C",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6514",
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x02B50",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6914",
+      "hi_value_hex": "0x69140000",
+      "hi_value_dec": 1762918400,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x02CD8",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6514",
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x02F30",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x7014",
+      "hi_value_hex": "0x70140000",
+      "hi_value_dec": 1880358912,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x02F48",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x7014",
+      "hi_value_hex": "0x70140000",
+      "hi_value_dec": 1880358912,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x02F50",
+      "src2": 12,
+      "src2_name": "r12",
+      "dest": 7,
+      "dest_name": "r7",
+      "hi16": "0x7F1C",
+      "hi_value_hex": "0x7F1C0000",
+      "hi_value_dec": 2132541440,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x02F60",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x7214",
+      "hi_value_hex": "0x72140000",
+      "hi_value_dec": 1913913344,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x0362C",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6514",
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x0398C",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6514",
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x044C8",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6514",
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x045F0",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6514",
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x048D0",
+      "src2": 31,
+      "src2_name": "r31",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0xFF7B",
+      "hi_value_hex": "0xFF7B0000",
+      "hi_value_dec": 4286251008,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x04B50",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6514",
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x04E60",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6514",
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x05488",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6514",
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x059F8",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0xFF73",
+      "hi_value_hex": "0xFF730000",
+      "hi_value_dec": 4285726720,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x05A00",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6514",
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x05AA0",
+      "src2": 25,
+      "src2_name": "r25",
+      "dest": 23,
+      "dest_name": "r23",
+      "hi16": "0x1F50",
+      "hi_value_hex": "0x1F500000",
+      "hi_value_dec": 525336576,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x05B34",
+      "src2": 25,
+      "src2_name": "r25",
+      "dest": 23,
+      "dest_name": "r23",
+      "hi16": "0x1F50",
+      "hi_value_hex": "0x1F500000",
+      "hi_value_dec": 525336576,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x05B6C",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6914",
+      "hi_value_hex": "0x69140000",
+      "hi_value_dec": 1762918400,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x05C80",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6514",
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x05D7C",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6514",
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x05ECC",
+      "src2": 1,
+      "src2_name": "r1",
+      "dest": 15,
+      "dest_name": "r15",
+      "hi16": "0x1F50",
+      "hi_value_hex": "0x1F500000",
+      "hi_value_dec": 525336576,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x05F80",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6914",
+      "hi_value_hex": "0x69140000",
+      "hi_value_dec": 1762918400,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x06140",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6514",
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x0627C",
+      "src2": 25,
+      "src2_name": "r25",
+      "dest": 7,
+      "dest_name": "r7",
+      "hi16": "0x1F50",
+      "hi_value_hex": "0x1F500000",
+      "hi_value_dec": 525336576,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x063C4",
+      "src2": 0,
+      "src2_name": "r0",
+      "dest": 0,
+      "dest_name": "r0",
+      "hi16": "0x11E4",
+      "hi_value_hex": "0x11E40000",
+      "hi_value_dec": 300154880,
+      "classification": "other_hi",
+      "is_absolute": true
+    },
+    {
+      "addr": "0x06C04",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x1316",
+      "hi_value_hex": "0x13160000",
+      "hi_value_dec": 320208896,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x0710C",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x1216",
+      "hi_value_hex": "0x12160000",
+      "hi_value_dec": 303431680,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x07110",
+      "src2": 23,
+      "src2_name": "r23",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x1516",
+      "hi_value_hex": "0x15160000",
+      "hi_value_dec": 353763328,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x07854",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0xFF7B",
+      "hi_value_hex": "0xFF7B0000",
+      "hi_value_dec": 4286251008,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x07868",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6514",
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x07F18",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6D14",
+      "hi_value_hex": "0x6D140000",
+      "hi_value_dec": 1830027264,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x080C8",
+      "src2": 4,
+      "src2_name": "r4",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x1F50",
+      "hi_value_hex": "0x1F500000",
+      "hi_value_dec": 525336576,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x08798",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6514",
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x08AE0",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6514",
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x08EBC",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6514",
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x09154",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6514",
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x096D0",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0xFF7B",
+      "hi_value_hex": "0xFF7B0000",
+      "hi_value_dec": 4286251008,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x09870",
+      "src2": 31,
+      "src2_name": "r31",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0xFF7B",
+      "hi_value_hex": "0xFF7B0000",
+      "hi_value_dec": 4286251008,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x09958",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0xFF7B",
+      "hi_value_hex": "0xFF7B0000",
+      "hi_value_dec": 4286251008,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x09B4C",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6D14",
+      "hi_value_hex": "0x6D140000",
+      "hi_value_dec": 1830027264,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x09E64",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6514",
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x09F14",
+      "src2": 1,
+      "src2_name": "r1",
+      "dest": 24,
+      "dest_name": "r24",
+      "hi16": "0x04E4",
+      "hi_value_hex": "0x04E40000",
+      "hi_value_dec": 82051072,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x0A544",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6514",
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x0A624",
+      "src2": 16,
+      "src2_name": "r16",
+      "dest": 15,
+      "dest_name": "r15",
+      "hi16": "0xA08C",
+      "hi_value_hex": "0xA08C0000",
+      "hi_value_dec": 2693529600,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x0A8D0",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6514",
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x0ABD4",
+      "src2": 23,
+      "src2_name": "r23",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0xFF7B",
+      "hi_value_hex": "0xFF7B0000",
+      "hi_value_dec": 4286251008,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x0AC0C",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6514",
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x0ACF8",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6514",
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x0AE1C",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6514",
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x0B12C",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6914",
+      "hi_value_hex": "0x69140000",
+      "hi_value_dec": 1762918400,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x0B240",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6514",
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x0B2DC",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6514",
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x0B664",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 28,
+      "dest_name": "r28",
+      "hi16": "0xFF6F",
+      "hi_value_hex": "0xFF6F0000",
+      "hi_value_dec": 4285464576,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x0B6FC",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6914",
+      "hi_value_hex": "0x69140000",
+      "hi_value_dec": 1762918400,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x0BA18",
+      "src2": 11,
+      "src2_name": "r11",
+      "dest": 25,
+      "dest_name": "r25",
+      "hi16": "0xF117",
+      "hi_value_hex": "0xF1170000",
+      "hi_value_dec": 4044816384,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x0D138",
+      "src2": 22,
+      "src2_name": "r22",
+      "dest": 26,
+      "dest_name": "r26",
+      "hi16": "0xFF6F",
+      "hi_value_hex": "0xFF6F0000",
+      "hi_value_dec": 4285464576,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x0D1A8",
+      "src2": 11,
+      "src2_name": "r11",
+      "dest": 26,
+      "dest_name": "r26",
+      "hi16": "0xF117",
+      "hi_value_hex": "0xF1170000",
+      "hi_value_dec": 4044816384,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x0DAD8",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x9FB6",
+      "hi_value_hex": "0x9FB60000",
+      "hi_value_dec": 2679504896,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x0DAF8",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6514",
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x0DE18",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6914",
+      "hi_value_hex": "0x69140000",
+      "hi_value_dec": 1762918400,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x0DF74",
+      "src2": 24,
+      "src2_name": "r24",
+      "dest": 0,
+      "dest_name": "r0",
+      "hi16": "0x10C6",
+      "hi_value_hex": "0x10C60000",
+      "hi_value_dec": 281411584,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x0E3A0",
+      "src2": 8,
+      "src2_name": "r8",
+      "dest": 8,
+      "dest_name": "r8",
+      "hi16": "0x401C",
+      "hi_value_hex": "0x401C0000",
+      "hi_value_dec": 1075576832,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x0F994",
+      "src2": 6,
+      "src2_name": "r6",
+      "dest": 30,
+      "dest_name": "r30",
+      "hi16": "0x16E4",
+      "hi_value_hex": "0x16E40000",
+      "hi_value_dec": 384040960,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x181D0",
+      "src2": 23,
+      "src2_name": "r23",
+      "dest": 29,
+      "dest_name": "r29",
+      "hi16": "0xFFFF",
+      "hi_value_hex": "0xFFFF0000",
+      "hi_value_dec": 4294901760,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x183B4",
+      "src2": 23,
+      "src2_name": "r23",
+      "dest": 15,
+      "dest_name": "r15",
+      "hi16": "0x0900",
+      "hi_value_hex": "0x09000000",
+      "hi_value_dec": 150994944,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x183C0",
+      "src2": 23,
+      "src2_name": "r23",
+      "dest": 15,
+      "dest_name": "r15",
+      "hi16": "0x0900",
+      "hi_value_hex": "0x09000000",
+      "hi_value_dec": 150994944,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x183E8",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x2C00",
+      "hi_value_hex": "0x2C000000",
+      "hi_value_dec": 738197504,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1856C",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0x904E",
+      "hi_value_hex": "0x904E0000",
+      "hi_value_dec": 2421030912,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x188F0",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0x5400",
+      "hi_value_hex": "0x54000000",
+      "hi_value_dec": 1409286144,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x18AA0",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0x0100",
+      "hi_value_hex": "0x01000000",
+      "hi_value_dec": 16777216,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x18EE4",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 15,
+      "dest_name": "r15",
+      "hi16": "0xFFFF",
+      "hi_value_hex": "0xFFFF0000",
+      "hi_value_dec": 4294901760,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x190E4",
+      "src2": 17,
+      "src2_name": "r17",
+      "dest": 3,
+      "dest_name": "r3",
+      "hi16": "0xD293",
+      "hi_value_hex": "0xD2930000",
+      "hi_value_dec": 3532849152,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x19190",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x2E2F",
+      "hi_value_hex": "0x2E2F0000",
+      "hi_value_dec": 774832128,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x193D4",
+      "src2": 2,
+      "src2_name": "r2",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x924E",
+      "hi_value_hex": "0x924E0000",
+      "hi_value_dec": 2454585344,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x194A8",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0x94D0",
+      "hi_value_hex": "0x94D00000",
+      "hi_value_dec": 2496659456,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x19634",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0x4239",
+      "hi_value_hex": "0x42390000",
+      "hi_value_dec": 1111031808,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x19638",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x043C",
+      "hi_value_hex": "0x043C0000",
+      "hi_value_dec": 71041024,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x19790",
+      "src2": 16,
+      "src2_name": "r16",
+      "dest": 0,
+      "dest_name": "r0",
+      "hi16": "0x0067",
+      "hi_value_hex": "0x00670000",
+      "hi_value_dec": 6750208,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x19840",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x2E2F",
+      "hi_value_hex": "0x2E2F0000",
+      "hi_value_dec": 774832128,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x19908",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0x1000",
+      "hi_value_hex": "0x10000000",
+      "hi_value_dec": 268435456,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1992C",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 1,
+      "dest_name": "r1",
+      "hi16": "0x58FF",
+      "hi_value_hex": "0x58FF0000",
+      "hi_value_dec": 1493106688,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x19ACC",
+      "src2": 22,
+      "src2_name": "r22",
+      "dest": 18,
+      "dest_name": "r18",
+      "hi16": "0x1E00",
+      "hi_value_hex": "0x1E000000",
+      "hi_value_dec": 503316480,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1A058",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0x5807",
+      "hi_value_hex": "0x58070000",
+      "hi_value_dec": 1476853760,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1A1BC",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 1,
+      "dest_name": "r1",
+      "hi16": "0x54FF",
+      "hi_value_hex": "0x54FF0000",
+      "hi_value_dec": 1425997824,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1A79C",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0x2A25",
+      "hi_value_hex": "0x2A250000",
+      "hi_value_dec": 707067904,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1A7E4",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x0A86",
+      "hi_value_hex": "0x0A860000",
+      "hi_value_dec": 176553984,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1A8DC",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x421D",
+      "hi_value_hex": "0x421D0000",
+      "hi_value_dec": 1109196800,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1A988",
+      "src2": 23,
+      "src2_name": "r23",
+      "dest": 15,
+      "dest_name": "r15",
+      "hi16": "0x80E2",
+      "hi_value_hex": "0x80E20000",
+      "hi_value_dec": 2162294784,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1A98C",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x0201",
+      "hi_value_hex": "0x02010000",
+      "hi_value_dec": 33619968,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1A9DC",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x0A86",
+      "hi_value_hex": "0x0A860000",
+      "hi_value_dec": 176553984,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1AAF4",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0x3422",
+      "hi_value_hex": "0x34220000",
+      "hi_value_dec": 874643456,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1AAF8",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x001C",
+      "hi_value_hex": "0x001C0000",
+      "hi_value_dec": 1835008,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1AB10",
+      "src2": 29,
+      "src2_name": "r29",
+      "dest": 30,
+      "dest_name": "r30",
+      "hi16": "0x900C",
+      "hi_value_hex": "0x900C0000",
+      "hi_value_dec": 2416705536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1AB64",
+      "src2": 29,
+      "src2_name": "r29",
+      "dest": 30,
+      "dest_name": "r30",
+      "hi16": "0x930C",
+      "hi_value_hex": "0x930C0000",
+      "hi_value_dec": 2467037184,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1AC78",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0x2A1F",
+      "hi_value_hex": "0x2A1F0000",
+      "hi_value_dec": 706674688,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1AE24",
+      "src2": 16,
+      "src2_name": "r16",
+      "dest": 15,
+      "dest_name": "r15",
+      "hi16": "0x0000",
+      "hi_value_hex": "0x00000000",
+      "hi_value_dec": 0,
+      "classification": "zero_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1AED4",
+      "src2": 17,
+      "src2_name": "r17",
+      "dest": 3,
+      "dest_name": "r3",
+      "hi16": "0xFECF",
+      "hi_value_hex": "0xFECF0000",
+      "hi_value_dec": 4274978816,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1B0B0",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0x1C00",
+      "hi_value_hex": "0x1C000000",
+      "hi_value_dec": 469762048,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1B0DC",
+      "src2": 23,
+      "src2_name": "r23",
+      "dest": 27,
+      "dest_name": "r27",
+      "hi16": "0xFFFF",
+      "hi_value_hex": "0xFFFF0000",
+      "hi_value_dec": 4294901760,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1B208",
+      "src2": 5,
+      "src2_name": "r5",
+      "dest": 21,
+      "dest_name": "r21",
+      "hi16": "0x4B58",
+      "hi_value_hex": "0x4B580000",
+      "hi_value_dec": 1264058368,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1B278",
+      "src2": 3,
+      "src2_name": "r3",
+      "dest": 18,
+      "dest_name": "r18",
+      "hi16": "0x1A64",
+      "hi_value_hex": "0x1A640000",
+      "hi_value_dec": 442761216,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1B910",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0x00F5",
+      "hi_value_hex": "0x00F50000",
+      "hi_value_dec": 16056320,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1B9A0",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 9,
+      "dest_name": "r9",
+      "hi16": "0x2A00",
+      "hi_value_hex": "0x2A000000",
+      "hi_value_dec": 704643072,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1BD60",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x2030",
+      "hi_value_hex": "0x20300000",
+      "hi_value_dec": 540016640,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1BE08",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0xEACD",
+      "hi_value_hex": "0xEACD0000",
+      "hi_value_dec": 3939303424,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1BE40",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x7286",
+      "hi_value_hex": "0x72860000",
+      "hi_value_dec": 1921384448,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1BF18",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x2000",
+      "hi_value_hex": "0x20000000",
+      "hi_value_dec": 536870912,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1C060",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x3000",
+      "hi_value_hex": "0x30000000",
+      "hi_value_dec": 805306368,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1C0B8",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0xB286",
+      "hi_value_hex": "0xB2860000",
+      "hi_value_dec": 2995126272,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1C240",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x0800",
+      "hi_value_hex": "0x08000000",
+      "hi_value_dec": 134217728,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1C3E0",
+      "src2": 20,
+      "src2_name": "r20",
+      "dest": 6,
+      "dest_name": "r6",
+      "hi16": "0x0000",
+      "hi_value_hex": "0x00000000",
+      "hi_value_dec": 0,
+      "classification": "zero_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1C46C",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x0800",
+      "hi_value_hex": "0x08000000",
+      "hi_value_dec": 134217728,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1C4A8",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x5400",
+      "hi_value_hex": "0x54000000",
+      "hi_value_dec": 1409286144,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1C65C",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x5400",
+      "hi_value_hex": "0x54000000",
+      "hi_value_dec": 1409286144,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1C6B4",
+      "src2": 22,
+      "src2_name": "r22",
+      "dest": 6,
+      "dest_name": "r6",
+      "hi16": "0xFFFF",
+      "hi_value_hex": "0xFFFF0000",
+      "hi_value_dec": 4294901760,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1C708",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x412D",
+      "hi_value_hex": "0x412D0000",
+      "hi_value_dec": 1093468160,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1C7E8",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x432D",
+      "hi_value_hex": "0x432D0000",
+      "hi_value_dec": 1127022592,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1C880",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0x2400",
+      "hi_value_hex": "0x24000000",
+      "hi_value_dec": 603979776,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1C8C4",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x7E87",
+      "hi_value_hex": "0x7E870000",
+      "hi_value_dec": 2122776576,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1C9F4",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x412D",
+      "hi_value_hex": "0x412D0000",
+      "hi_value_dec": 1093468160,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1CA80",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x412D",
+      "hi_value_hex": "0x412D0000",
+      "hi_value_dec": 1093468160,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1CD00",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x412D",
+      "hi_value_hex": "0x412D0000",
+      "hi_value_dec": 1093468160,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1CF20",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0x4000",
+      "hi_value_hex": "0x40000000",
+      "hi_value_dec": 1073741824,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1CF38",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x412D",
+      "hi_value_hex": "0x412D0000",
+      "hi_value_dec": 1093468160,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1D018",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x8400",
+      "hi_value_hex": "0x84000000",
+      "hi_value_dec": 2214592512,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1D0B0",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0x2400",
+      "hi_value_hex": "0x24000000",
+      "hi_value_dec": 603979776,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1D0C8",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x412D",
+      "hi_value_hex": "0x412D0000",
+      "hi_value_dec": 1093468160,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1D160",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x2000",
+      "hi_value_hex": "0x20000000",
+      "hi_value_dec": 536870912,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1D230",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x022F",
+      "hi_value_hex": "0x022F0000",
+      "hi_value_dec": 36634624,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1D264",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x402D",
+      "hi_value_hex": "0x402D0000",
+      "hi_value_dec": 1076690944,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1D324",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x8800",
+      "hi_value_hex": "0x88000000",
+      "hi_value_dec": 2281701376,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1D360",
+      "src2": 0,
+      "src2_name": "r0",
+      "dest": 0,
+      "dest_name": "r0",
+      "hi16": "0x0000",
+      "hi_value_hex": "0x00000000",
+      "hi_value_dec": 0,
+      "classification": "zero_hi",
+      "is_absolute": true
+    },
+    {
+      "addr": "0x1D3BC",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0x2400",
+      "hi_value_hex": "0x24000000",
+      "hi_value_dec": 603979776,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1D4D0",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x2030",
+      "hi_value_hex": "0x20300000",
+      "hi_value_dec": 540016640,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1D5A4",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x1400",
+      "hi_value_hex": "0x14000000",
+      "hi_value_dec": 335544320,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1D5D8",
+      "src2": 23,
+      "src2_name": "r23",
+      "dest": 15,
+      "dest_name": "r15",
+      "hi16": "0xFAA8",
+      "hi_value_hex": "0xFAA80000",
+      "hi_value_dec": 4205314048,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1D630",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x1000",
+      "hi_value_hex": "0x10000000",
+      "hi_value_dec": 268435456,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1D668",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x432D",
+      "hi_value_hex": "0x432D0000",
+      "hi_value_dec": 1127022592,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1D704",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0xD4FE",
+      "hi_value_hex": "0xD4FE0000",
+      "hi_value_dec": 3573415936,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1D75C",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x432D",
+      "hi_value_hex": "0x432D0000",
+      "hi_value_dec": 1127022592,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1D7D4",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0x1C00",
+      "hi_value_hex": "0x1C000000",
+      "hi_value_dec": 469762048,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1D820",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x1800",
+      "hi_value_hex": "0x18000000",
+      "hi_value_dec": 402653184,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1D8F4",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x1000",
+      "hi_value_hex": "0x10000000",
+      "hi_value_dec": 268435456,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1D9C8",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0xD4FE",
+      "hi_value_hex": "0xD4FE0000",
+      "hi_value_dec": 3573415936,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1DABC",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x1400",
+      "hi_value_hex": "0x14000000",
+      "hi_value_dec": 335544320,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1DBD4",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x1C00",
+      "hi_value_hex": "0x1C000000",
+      "hi_value_dec": 469762048,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1DCEC",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x1C00",
+      "hi_value_hex": "0x1C000000",
+      "hi_value_dec": 469762048,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1DE04",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x1C00",
+      "hi_value_hex": "0x1C000000",
+      "hi_value_dec": 469762048,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1DF1C",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x1C00",
+      "hi_value_hex": "0x1C000000",
+      "hi_value_dec": 469762048,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1E034",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x1C00",
+      "hi_value_hex": "0x1C000000",
+      "hi_value_dec": 469762048,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1E14C",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x1400",
+      "hi_value_hex": "0x14000000",
+      "hi_value_dec": 335544320,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1E15C",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 30,
+      "dest_name": "r30",
+      "hi16": "0x4E89",
+      "hi_value_hex": "0x4E890000",
+      "hi_value_dec": 1317601280,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1E250",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0xD4FE",
+      "hi_value_hex": "0xD4FE0000",
+      "hi_value_dec": 3573415936,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1E27C",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x0C00",
+      "hi_value_hex": "0x0C000000",
+      "hi_value_dec": 201326592,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1E2E4",
+      "src2": 4,
+      "src2_name": "r4",
+      "dest": 27,
+      "dest_name": "r27",
+      "hi16": "0xFFFF",
+      "hi_value_hex": "0xFFFF0000",
+      "hi_value_dec": 4294901760,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1E368",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0xD4FE",
+      "hi_value_hex": "0xD4FE0000",
+      "hi_value_dec": 3573415936,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1E394",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x0C00",
+      "hi_value_hex": "0x0C000000",
+      "hi_value_dec": 201326592,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1E480",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0xD4FE",
+      "hi_value_hex": "0xD4FE0000",
+      "hi_value_dec": 3573415936,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1E580",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0xD4FE",
+      "hi_value_hex": "0xD4FE0000",
+      "hi_value_dec": 3573415936,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1E668",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 27,
+      "dest_name": "r27",
+      "hi16": "0xAE89",
+      "hi_value_hex": "0xAE890000",
+      "hi_value_dec": 2928214016,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1E758",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0x1C00",
+      "hi_value_hex": "0x1C000000",
+      "hi_value_dec": 469762048,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1E858",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0xD4FE",
+      "hi_value_hex": "0xD4FE0000",
+      "hi_value_dec": 3573415936,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1E950",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x1400",
+      "hi_value_hex": "0x14000000",
+      "hi_value_dec": 335544320,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1EA3C",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0x1C00",
+      "hi_value_hex": "0x1C000000",
+      "hi_value_dec": 469762048,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1EAE4",
+      "src2": 4,
+      "src2_name": "r4",
+      "dest": 19,
+      "dest_name": "r19",
+      "hi16": "0xFFFF",
+      "hi_value_hex": "0xFFFF0000",
+      "hi_value_dec": 4294901760,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1EB34",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0x1C00",
+      "hi_value_hex": "0x1C000000",
+      "hi_value_dec": 469762048,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1EB84",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x432D",
+      "hi_value_hex": "0x432D0000",
+      "hi_value_dec": 1127022592,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1EC20",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0xD4FE",
+      "hi_value_hex": "0xD4FE0000",
+      "hi_value_dec": 3573415936,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1ED10",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x2030",
+      "hi_value_hex": "0x20300000",
+      "hi_value_dec": 540016640,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1ED58",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x432D",
+      "hi_value_hex": "0x432D0000",
+      "hi_value_dec": 1127022592,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1EDD0",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0x1C00",
+      "hi_value_hex": "0x1C000000",
+      "hi_value_dec": 469762048,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1EE3C",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 29,
+      "dest_name": "r29",
+      "hi16": "0x0800",
+      "hi_value_hex": "0x08000000",
+      "hi_value_dec": 134217728,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1EE5C",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0xCDFE",
+      "hi_value_hex": "0xCDFE0000",
+      "hi_value_dec": 3455975424,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1F048",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 7,
+      "dest_name": "r7",
+      "hi16": "0x1800",
+      "hi_value_hex": "0x18000000",
+      "hi_value_dec": 402653184,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1F0D8",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0xFA8D",
+      "hi_value_hex": "0xFA8D0000",
+      "hi_value_dec": 4203544576,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1F10C",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0xAE42",
+      "hi_value_hex": "0xAE420000",
+      "hi_value_dec": 2923560960,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1F28C",
+      "src2": 24,
+      "src2_name": "r24",
+      "dest": 0,
+      "dest_name": "r0",
+      "hi16": "0x0000",
+      "hi_value_hex": "0x00000000",
+      "hi_value_dec": 0,
+      "classification": "zero_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1F328",
+      "src2": 16,
+      "src2_name": "r16",
+      "dest": 3,
+      "dest_name": "r3",
+      "hi16": "0x0000",
+      "hi_value_hex": "0x00000000",
+      "hi_value_dec": 0,
+      "classification": "zero_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1F340",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 29,
+      "dest_name": "r29",
+      "hi16": "0xEE41",
+      "hi_value_hex": "0xEE410000",
+      "hi_value_dec": 3997237248,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1F3C0",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 7,
+      "dest_name": "r7",
+      "hi16": "0x9200",
+      "hi_value_hex": "0x92000000",
+      "hi_value_dec": 2449473536,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1F498",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0x3A8A",
+      "hi_value_hex": "0x3A8A0000",
+      "hi_value_dec": 982122496,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1F634",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x0800",
+      "hi_value_hex": "0x08000000",
+      "hi_value_dec": 134217728,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1F680",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 30,
+      "dest_name": "r30",
+      "hi16": "0x422D",
+      "hi_value_hex": "0x422D0000",
+      "hi_value_dec": 1110245376,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1F720",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x0800",
+      "hi_value_hex": "0x08000000",
+      "hi_value_dec": 134217728,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1F730",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 30,
+      "dest_name": "r30",
+      "hi16": "0xF68A",
+      "hi_value_hex": "0xF68A0000",
+      "hi_value_dec": 4136239104,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1F818",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x0800",
+      "hi_value_hex": "0x08000000",
+      "hi_value_dec": 134217728,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1F828",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 30,
+      "dest_name": "r30",
+      "hi16": "0x0A8B",
+      "hi_value_hex": "0x0A8B0000",
+      "hi_value_dec": 176881664,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1F910",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x0800",
+      "hi_value_hex": "0x08000000",
+      "hi_value_dec": 134217728,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1F920",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 30,
+      "dest_name": "r30",
+      "hi16": "0x1E8B",
+      "hi_value_hex": "0x1E8B0000",
+      "hi_value_dec": 512425984,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1FA0C",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x1400",
+      "hi_value_hex": "0x14000000",
+      "hi_value_dec": 335544320,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1FA1C",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 30,
+      "dest_name": "r30",
+      "hi16": "0x328B",
+      "hi_value_hex": "0x328B0000",
+      "hi_value_dec": 847970304,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1FB10",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0xD4FE",
+      "hi_value_hex": "0xD4FE0000",
+      "hi_value_dec": 3573415936,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1FC60",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0xAE42",
+      "hi_value_hex": "0xAE420000",
+      "hi_value_dec": 2923560960,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1FDA8",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x2030",
+      "hi_value_hex": "0x20300000",
+      "hi_value_dec": 540016640,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1FDE4",
+      "src2": 4,
+      "src2_name": "r4",
+      "dest": 0,
+      "dest_name": "r0",
+      "hi16": "0xFFFF",
+      "hi_value_hex": "0xFFFF0000",
+      "hi_value_dec": 4294901760,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1FDF0",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x3601",
+      "hi_value_hex": "0x36010000",
+      "hi_value_dec": 906035200,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1FE68",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0x1C00",
+      "hi_value_hex": "0x1C000000",
+      "hi_value_dec": 469762048,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x1FF54",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0x1C00",
+      "hi_value_hex": "0x1C000000",
+      "hi_value_dec": 469762048,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x201D0",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x2400",
+      "hi_value_hex": "0x24000000",
+      "hi_value_dec": 603979776,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x20408",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0x1C00",
+      "hi_value_hex": "0x1C000000",
+      "hi_value_dec": 469762048,
+      "classification": "mask_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x213F8",
+      "src2": 16,
+      "src2_name": "r16",
+      "dest": 8,
+      "dest_name": "r8",
+      "hi16": "0x0000",
+      "hi_value_hex": "0x00000000",
+      "hi_value_dec": 0,
+      "classification": "zero_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x215B8",
+      "src2": 16,
+      "src2_name": "r16",
+      "dest": 11,
+      "dest_name": "r11",
+      "hi16": "0x0000",
+      "hi_value_hex": "0x00000000",
+      "hi_value_dec": 0,
+      "classification": "zero_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x21968",
+      "src2": 17,
+      "src2_name": "r17",
+      "dest": 13,
+      "dest_name": "r13",
+      "hi16": "0x0000",
+      "hi_value_hex": "0x00000000",
+      "hi_value_dec": 0,
+      "classification": "zero_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x21A10",
+      "src2": 1,
+      "src2_name": "r1",
+      "dest": 6,
+      "dest_name": "r6",
+      "hi16": "0x0000",
+      "hi_value_hex": "0x00000000",
+      "hi_value_dec": 0,
+      "classification": "zero_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x21B68",
+      "src2": 0,
+      "src2_name": "r0",
+      "dest": 28,
+      "dest_name": "r28",
+      "hi16": "0x0000",
+      "hi_value_hex": "0x00000000",
+      "hi_value_dec": 0,
+      "classification": "zero_hi",
+      "is_absolute": true
+    },
+    {
+      "addr": "0x21CC0",
+      "src2": 17,
+      "src2_name": "r17",
+      "dest": 10,
+      "dest_name": "r10",
+      "hi16": "0x0000",
+      "hi_value_hex": "0x00000000",
+      "hi_value_dec": 0,
+      "classification": "zero_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x21DB0",
+      "src2": 17,
+      "src2_name": "r17",
+      "dest": 3,
+      "dest_name": "r3",
+      "hi16": "0x0000",
+      "hi_value_hex": "0x00000000",
+      "hi_value_dec": 0,
+      "classification": "zero_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x21F80",
+      "src2": 1,
+      "src2_name": "r1",
+      "dest": 15,
+      "dest_name": "r15",
+      "hi16": "0x0000",
+      "hi_value_hex": "0x00000000",
+      "hi_value_dec": 0,
+      "classification": "zero_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x220D0",
+      "src2": 1,
+      "src2_name": "r1",
+      "dest": 19,
+      "dest_name": "r19",
+      "hi16": "0x0000",
+      "hi_value_hex": "0x00000000",
+      "hi_value_dec": 0,
+      "classification": "zero_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x22290",
+      "src2": 2,
+      "src2_name": "r2",
+      "dest": 13,
+      "dest_name": "r13",
+      "hi16": "0x0000",
+      "hi_value_hex": "0x00000000",
+      "hi_value_dec": 0,
+      "classification": "zero_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x226E8",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 6,
+      "dest_name": "r6",
+      "hi16": "0x0000",
+      "hi_value_hex": "0x00000000",
+      "hi_value_dec": 0,
+      "classification": "zero_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x22754",
+      "src2": 20,
+      "src2_name": "r20",
+      "dest": 6,
+      "dest_name": "r6",
+      "hi16": "0x0000",
+      "hi_value_hex": "0x00000000",
+      "hi_value_dec": 0,
+      "classification": "zero_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2275C",
+      "src2": 20,
+      "src2_name": "r20",
+      "dest": 6,
+      "dest_name": "r6",
+      "hi16": "0x0000",
+      "hi_value_hex": "0x00000000",
+      "hi_value_dec": 0,
+      "classification": "zero_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x22958",
+      "src2": 19,
+      "src2_name": "r19",
+      "dest": 8,
+      "dest_name": "r8",
+      "hi16": "0x0000",
+      "hi_value_hex": "0x00000000",
+      "hi_value_dec": 0,
+      "classification": "zero_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x22E70",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 29,
+      "dest_name": "r29",
+      "hi16": "0x0000",
+      "hi_value_hex": "0x00000000",
+      "hi_value_dec": 0,
+      "classification": "zero_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x22F60",
+      "src2": 2,
+      "src2_name": "r2",
+      "dest": 22,
+      "dest_name": "r22",
+      "hi16": "0x0000",
+      "hi_value_hex": "0x00000000",
+      "hi_value_dec": 0,
+      "classification": "zero_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x231A8",
+      "src2": 19,
+      "src2_name": "r19",
+      "dest": 21,
+      "dest_name": "r21",
+      "hi16": "0x0000",
+      "hi_value_hex": "0x00000000",
+      "hi_value_dec": 0,
+      "classification": "zero_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x232B0",
+      "src2": 3,
+      "src2_name": "r3",
+      "dest": 28,
+      "dest_name": "r28",
+      "hi16": "0x0000",
+      "hi_value_hex": "0x00000000",
+      "hi_value_dec": 0,
+      "classification": "zero_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x23418",
+      "src2": 19,
+      "src2_name": "r19",
+      "dest": 30,
+      "dest_name": "r30",
+      "hi16": "0x0000",
+      "hi_value_hex": "0x00000000",
+      "hi_value_dec": 0,
+      "classification": "zero_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x23848",
+      "src2": 0,
+      "src2_name": "r0",
+      "dest": 0,
+      "dest_name": "r0",
+      "hi16": "0x0000",
+      "hi_value_hex": "0x00000000",
+      "hi_value_dec": 0,
+      "classification": "zero_hi",
+      "is_absolute": true
+    },
+    {
+      "addr": "0x23B94",
+      "src2": 24,
+      "src2_name": "r24",
+      "dest": 2,
+      "dest_name": "r2",
+      "hi16": "0x0000",
+      "hi_value_hex": "0x00000000",
+      "hi_value_dec": 0,
+      "classification": "zero_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x24030",
+      "src2": 1,
+      "src2_name": "r1",
+      "dest": 1,
+      "dest_name": "r1",
+      "hi16": "0xDEC2",
+      "hi_value_hex": "0xDEC20000",
+      "hi_value_dec": 3737255936,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x24470",
+      "src2": 13,
+      "src2_name": "r13",
+      "dest": 9,
+      "dest_name": "r9",
+      "hi16": "0x3397",
+      "hi_value_hex": "0x33970000",
+      "hi_value_dec": 865533952,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x24578",
+      "src2": 29,
+      "src2_name": "r29",
+      "dest": 21,
+      "dest_name": "r21",
+      "hi16": "0x29C1",
+      "hi_value_hex": "0x29C10000",
+      "hi_value_dec": 700514304,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x245B4",
+      "src2": 3,
+      "src2_name": "r3",
+      "dest": 0,
+      "dest_name": "r0",
+      "hi16": "0xEC1B",
+      "hi_value_hex": "0xEC1B0000",
+      "hi_value_dec": 3961192448,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x24BB8",
+      "src2": 3,
+      "src2_name": "r3",
+      "dest": 9,
+      "dest_name": "r9",
+      "hi16": "0x6AA4",
+      "hi_value_hex": "0x6AA40000",
+      "hi_value_dec": 1789132800,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x25184",
+      "src2": 2,
+      "src2_name": "r2",
+      "dest": 23,
+      "dest_name": "r23",
+      "hi16": "0x82ED",
+      "hi_value_hex": "0x82ED0000",
+      "hi_value_dec": 2196570112,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x25258",
+      "src2": 3,
+      "src2_name": "r3",
+      "dest": 9,
+      "dest_name": "r9",
+      "hi16": "0x6AA4",
+      "hi_value_hex": "0x6AA40000",
+      "hi_value_dec": 1789132800,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x25ACC",
+      "src2": 9,
+      "src2_name": "r9",
+      "dest": 19,
+      "dest_name": "r19",
+      "hi16": "0xDFCC",
+      "hi_value_hex": "0xDFCC0000",
+      "hi_value_dec": 3754688512,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x25C40",
+      "src2": 15,
+      "src2_name": "r15",
+      "dest": 29,
+      "dest_name": "r29",
+      "hi16": "0x65A0",
+      "hi_value_hex": "0x65A00000",
+      "hi_value_dec": 1704984576,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x26068",
+      "src2": 0,
+      "src2_name": "r0",
+      "dest": 13,
+      "dest_name": "r13",
+      "hi16": "0x2C2E",
+      "hi_value_hex": "0x2C2E0000",
+      "hi_value_dec": 741212160,
+      "classification": "other_hi",
+      "is_absolute": true
+    },
+    {
+      "addr": "0x261A4",
+      "src2": 1,
+      "src2_name": "r1",
+      "dest": 29,
+      "dest_name": "r29",
+      "hi16": "0x52E6",
+      "hi_value_hex": "0x52E60000",
+      "hi_value_dec": 1390804992,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x263C0",
+      "src2": 3,
+      "src2_name": "r3",
+      "dest": 29,
+      "dest_name": "r29",
+      "hi16": "0xF3B4",
+      "hi_value_hex": "0xF3B40000",
+      "hi_value_dec": 4088659968,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x265CC",
+      "src2": 3,
+      "src2_name": "r3",
+      "dest": 9,
+      "dest_name": "r9",
+      "hi16": "0x6AA4",
+      "hi_value_hex": "0x6AA40000",
+      "hi_value_dec": 1789132800,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2698C",
+      "src2": 4,
+      "src2_name": "r4",
+      "dest": 11,
+      "dest_name": "r11",
+      "hi16": "0x2FB2",
+      "hi_value_hex": "0x2FB20000",
+      "hi_value_dec": 800194560,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x26D9C",
+      "src2": 19,
+      "src2_name": "r19",
+      "dest": 1,
+      "dest_name": "r1",
+      "hi16": "0x336E",
+      "hi_value_hex": "0x336E0000",
+      "hi_value_dec": 862846976,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x26EA8",
+      "src2": 5,
+      "src2_name": "r5",
+      "dest": 9,
+      "dest_name": "r9",
+      "hi16": "0x44FE",
+      "hi_value_hex": "0x44FE0000",
+      "hi_value_dec": 1157496832,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x26EEC",
+      "src2": 27,
+      "src2_name": "r27",
+      "dest": 2,
+      "dest_name": "r2",
+      "hi16": "0x40C0",
+      "hi_value_hex": "0x40C00000",
+      "hi_value_dec": 1086324736,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x26F34",
+      "src2": 10,
+      "src2_name": "r10",
+      "dest": 3,
+      "dest_name": "r3",
+      "hi16": "0x5B8A",
+      "hi_value_hex": "0x5B8A0000",
+      "hi_value_dec": 1535770624,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x27214",
+      "src2": 1,
+      "src2_name": "r1",
+      "dest": 11,
+      "dest_name": "r11",
+      "hi16": "0x02BE",
+      "hi_value_hex": "0x02BE0000",
+      "hi_value_dec": 46006272,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x27244",
+      "src2": 22,
+      "src2_name": "r22",
+      "dest": 24,
+      "dest_name": "r24",
+      "hi16": "0x0B02",
+      "hi_value_hex": "0x0B020000",
+      "hi_value_dec": 184680448,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x273C4",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 21,
+      "dest_name": "r21",
+      "hi16": "0x4FB3",
+      "hi_value_hex": "0x4FB30000",
+      "hi_value_dec": 1337131008,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x27414",
+      "src2": 20,
+      "src2_name": "r20",
+      "dest": 13,
+      "dest_name": "r13",
+      "hi16": "0xD0EC",
+      "hi_value_hex": "0xD0EC0000",
+      "hi_value_dec": 3505127424,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x27418",
+      "src2": 9,
+      "src2_name": "r9",
+      "dest": 3,
+      "dest_name": "r3",
+      "hi16": "0x6B90",
+      "hi_value_hex": "0x6B900000",
+      "hi_value_dec": 1804599296,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x274A8",
+      "src2": 6,
+      "src2_name": "r6",
+      "dest": 15,
+      "dest_name": "r15",
+      "hi16": "0x4ED3",
+      "hi_value_hex": "0x4ED30000",
+      "hi_value_dec": 1322450944,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x27664",
+      "src2": 26,
+      "src2_name": "r26",
+      "dest": 5,
+      "dest_name": "r5",
+      "hi16": "0x9DF7",
+      "hi_value_hex": "0x9DF70000",
+      "hi_value_dec": 2650210304,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x27820",
+      "src2": 0,
+      "src2_name": "r0",
+      "dest": 26,
+      "dest_name": "r26",
+      "hi16": "0x0EC2",
+      "hi_value_hex": "0x0EC20000",
+      "hi_value_dec": 247595008,
+      "classification": "other_hi",
+      "is_absolute": true
+    },
+    {
+      "addr": "0x2793C",
+      "src2": 1,
+      "src2_name": "r1",
+      "dest": 29,
+      "dest_name": "r29",
+      "hi16": "0x012F",
+      "hi_value_hex": "0x012F0000",
+      "hi_value_dec": 19857408,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x286F4",
+      "src2": 13,
+      "src2_name": "r13",
+      "dest": 24,
+      "dest_name": "r24",
+      "hi16": "0xFB6D",
+      "hi_value_hex": "0xFB6D0000",
+      "hi_value_dec": 4218224640,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x28A70",
+      "src2": 7,
+      "src2_name": "r7",
+      "dest": 1,
+      "dest_name": "r1",
+      "hi16": "0xE9EF",
+      "hi_value_hex": "0xE9EF0000",
+      "hi_value_dec": 3924754432,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x28AF4",
+      "src2": 11,
+      "src2_name": "r11",
+      "dest": 1,
+      "dest_name": "r1",
+      "hi16": "0xFCAA",
+      "hi_value_hex": "0xFCAA0000",
+      "hi_value_dec": 4238999552,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x28E74",
+      "src2": 11,
+      "src2_name": "r11",
+      "dest": 1,
+      "dest_name": "r1",
+      "hi16": "0x974E",
+      "hi_value_hex": "0x974E0000",
+      "hi_value_dec": 2538471424,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x29004",
+      "src2": 0,
+      "src2_name": "r0",
+      "dest": 2,
+      "dest_name": "r2",
+      "hi16": "0x88D0",
+      "hi_value_hex": "0x88D00000",
+      "hi_value_dec": 2295332864,
+      "classification": "other_hi",
+      "is_absolute": true
+    },
+    {
+      "addr": "0x29088",
+      "src2": 4,
+      "src2_name": "r4",
+      "dest": 4,
+      "dest_name": "r4",
+      "hi16": "0x3DB2",
+      "hi_value_hex": "0x3DB20000",
+      "hi_value_dec": 1035075584,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2912C",
+      "src2": 20,
+      "src2_name": "r20",
+      "dest": 16,
+      "dest_name": "r16",
+      "hi16": "0x11FA",
+      "hi_value_hex": "0x11FA0000",
+      "hi_value_dec": 301596672,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x294FC",
+      "src2": 9,
+      "src2_name": "r9",
+      "dest": 26,
+      "dest_name": "r26",
+      "hi16": "0x43D2",
+      "hi_value_hex": "0x43D20000",
+      "hi_value_dec": 1137836032,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2958C",
+      "src2": 21,
+      "src2_name": "r21",
+      "dest": 29,
+      "dest_name": "r29",
+      "hi16": "0xB47A",
+      "hi_value_hex": "0xB47A0000",
+      "hi_value_dec": 3027894272,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x296D4",
+      "src2": 13,
+      "src2_name": "r13",
+      "dest": 24,
+      "dest_name": "r24",
+      "hi16": "0xFB6D",
+      "hi_value_hex": "0xFB6D0000",
+      "hi_value_dec": 4218224640,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x299BC",
+      "src2": 24,
+      "src2_name": "r24",
+      "dest": 21,
+      "dest_name": "r21",
+      "hi16": "0xE1A2",
+      "hi_value_hex": "0xE1A20000",
+      "hi_value_dec": 3785490432,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x29B0C",
+      "src2": 25,
+      "src2_name": "r25",
+      "dest": 18,
+      "dest_name": "r18",
+      "hi16": "0x8BB4",
+      "hi_value_hex": "0x8BB40000",
+      "hi_value_dec": 2343829504,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x29B10",
+      "src2": 16,
+      "src2_name": "r16",
+      "dest": 0,
+      "dest_name": "r0",
+      "hi16": "0x46B3",
+      "hi_value_hex": "0x46B30000",
+      "hi_value_dec": 1186136064,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x29D5C",
+      "src2": 30,
+      "src2_name": "r30",
+      "dest": 25,
+      "dest_name": "r25",
+      "hi16": "0x8C67",
+      "hi_value_hex": "0x8C670000",
+      "hi_value_dec": 2355560448,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x29E2C",
+      "src2": 29,
+      "src2_name": "r29",
+      "dest": 24,
+      "dest_name": "r24",
+      "hi16": "0xC239",
+      "hi_value_hex": "0xC2390000",
+      "hi_value_dec": 3258515456,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x29EE4",
+      "src2": 1,
+      "src2_name": "r1",
+      "dest": 13,
+      "dest_name": "r13",
+      "hi16": "0x934C",
+      "hi_value_hex": "0x934C0000",
+      "hi_value_dec": 2471231488,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2A1F4",
+      "src2": 12,
+      "src2_name": "r12",
+      "dest": 23,
+      "dest_name": "r23",
+      "hi16": "0x3B3D",
+      "hi_value_hex": "0x3B3D0000",
+      "hi_value_dec": 993853440,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2A404",
+      "src2": 4,
+      "src2_name": "r4",
+      "dest": 14,
+      "dest_name": "r14",
+      "hi16": "0xCDC8",
+      "hi_value_hex": "0xCDC80000",
+      "hi_value_dec": 3452436480,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2A414",
+      "src2": 12,
+      "src2_name": "r12",
+      "dest": 27,
+      "dest_name": "r27",
+      "hi16": "0x5C34",
+      "hi_value_hex": "0x5C340000",
+      "hi_value_dec": 1546911744,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2A4BC",
+      "src2": 12,
+      "src2_name": "r12",
+      "dest": 21,
+      "dest_name": "r21",
+      "hi16": "0x90D8",
+      "hi_value_hex": "0x90D80000",
+      "hi_value_dec": 2430074880,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2A5C0",
+      "src2": 10,
+      "src2_name": "r10",
+      "dest": 29,
+      "dest_name": "r29",
+      "hi16": "0x9BC5",
+      "hi_value_hex": "0x9BC50000",
+      "hi_value_dec": 2613379072,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2AACC",
+      "src2": 18,
+      "src2_name": "r18",
+      "dest": 9,
+      "dest_name": "r9",
+      "hi16": "0x5693",
+      "hi_value_hex": "0x56930000",
+      "hi_value_dec": 1452474368,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2AB5C",
+      "src2": 8,
+      "src2_name": "r8",
+      "dest": 4,
+      "dest_name": "r4",
+      "hi16": "0x9049",
+      "hi_value_hex": "0x90490000",
+      "hi_value_dec": 2420703232,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2ACF4",
+      "src2": 11,
+      "src2_name": "r11",
+      "dest": 2,
+      "dest_name": "r2",
+      "hi16": "0x8704",
+      "hi_value_hex": "0x87040000",
+      "hi_value_dec": 2265186304,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2AED4",
+      "src2": 11,
+      "src2_name": "r11",
+      "dest": 1,
+      "dest_name": "r1",
+      "hi16": "0xE97A",
+      "hi_value_hex": "0xE97A0000",
+      "hi_value_dec": 3917086720,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2AF1C",
+      "src2": 12,
+      "src2_name": "r12",
+      "dest": 4,
+      "dest_name": "r4",
+      "hi16": "0x3AD6",
+      "hi_value_hex": "0x3AD60000",
+      "hi_value_dec": 987103232,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2B018",
+      "src2": 21,
+      "src2_name": "r21",
+      "dest": 0,
+      "dest_name": "r0",
+      "hi16": "0x2AEC",
+      "hi_value_hex": "0x2AEC0000",
+      "hi_value_dec": 720109568,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2B400",
+      "src2": 0,
+      "src2_name": "r0",
+      "dest": 14,
+      "dest_name": "r14",
+      "hi16": "0x1118",
+      "hi_value_hex": "0x11180000",
+      "hi_value_dec": 286785536,
+      "classification": "other_hi",
+      "is_absolute": true
+    },
+    {
+      "addr": "0x2B5F0",
+      "src2": 24,
+      "src2_name": "r24",
+      "dest": 6,
+      "dest_name": "r6",
+      "hi16": "0x624A",
+      "hi_value_hex": "0x624A0000",
+      "hi_value_dec": 1649016832,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2BA80",
+      "src2": 0,
+      "src2_name": "r0",
+      "dest": 1,
+      "dest_name": "r1",
+      "hi16": "0xD59B",
+      "hi_value_hex": "0xD59B0000",
+      "hi_value_dec": 3583705088,
+      "classification": "other_hi",
+      "is_absolute": true
+    },
+    {
+      "addr": "0x2BE64",
+      "src2": 2,
+      "src2_name": "r2",
+      "dest": 11,
+      "dest_name": "r11",
+      "hi16": "0x9EA8",
+      "hi_value_hex": "0x9EA80000",
+      "hi_value_dec": 2661810176,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2BE8C",
+      "src2": 20,
+      "src2_name": "r20",
+      "dest": 28,
+      "dest_name": "r28",
+      "hi16": "0x61D8",
+      "hi_value_hex": "0x61D80000",
+      "hi_value_dec": 1641545728,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2BF70",
+      "src2": 24,
+      "src2_name": "r24",
+      "dest": 22,
+      "dest_name": "r22",
+      "hi16": "0x32EF",
+      "hi_value_hex": "0x32EF0000",
+      "hi_value_dec": 854523904,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2C210",
+      "src2": 19,
+      "src2_name": "r19",
+      "dest": 19,
+      "dest_name": "r19",
+      "hi16": "0xF202",
+      "hi_value_hex": "0xF2020000",
+      "hi_value_dec": 4060217344,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2C240",
+      "src2": 10,
+      "src2_name": "r10",
+      "dest": 9,
+      "dest_name": "r9",
+      "hi16": "0x5BE3",
+      "hi_value_hex": "0x5BE30000",
+      "hi_value_dec": 1541603328,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2C3F4",
+      "src2": 1,
+      "src2_name": "r1",
+      "dest": 0,
+      "dest_name": "r0",
+      "hi16": "0xB215",
+      "hi_value_hex": "0xB2150000",
+      "hi_value_dec": 2987720704,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2C42C",
+      "src2": 21,
+      "src2_name": "r21",
+      "dest": 10,
+      "dest_name": "r10",
+      "hi16": "0x0419",
+      "hi_value_hex": "0x04190000",
+      "hi_value_dec": 68747264,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2C5A8",
+      "src2": 28,
+      "src2_name": "r28",
+      "dest": 24,
+      "dest_name": "r24",
+      "hi16": "0x02B2",
+      "hi_value_hex": "0x02B20000",
+      "hi_value_dec": 45219840,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2C86C",
+      "src2": 11,
+      "src2_name": "r11",
+      "dest": 30,
+      "dest_name": "r30",
+      "hi16": "0x8891",
+      "hi_value_hex": "0x88910000",
+      "hi_value_dec": 2291204096,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2CCA4",
+      "src2": 13,
+      "src2_name": "r13",
+      "dest": 25,
+      "dest_name": "r25",
+      "hi16": "0x8AC3",
+      "hi_value_hex": "0x8AC30000",
+      "hi_value_dec": 2328035328,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2CD38",
+      "src2": 5,
+      "src2_name": "r5",
+      "dest": 28,
+      "dest_name": "r28",
+      "hi16": "0x4014",
+      "hi_value_hex": "0x40140000",
+      "hi_value_dec": 1075052544,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2D18C",
+      "src2": 0,
+      "src2_name": "r0",
+      "dest": 22,
+      "dest_name": "r22",
+      "hi16": "0x223D",
+      "hi_value_hex": "0x223D0000",
+      "hi_value_dec": 574423040,
+      "classification": "other_hi",
+      "is_absolute": true
+    },
+    {
+      "addr": "0x2D1A0",
+      "src2": 29,
+      "src2_name": "r29",
+      "dest": 24,
+      "dest_name": "r24",
+      "hi16": "0x420F",
+      "hi_value_hex": "0x420F0000",
+      "hi_value_dec": 1108279296,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2D248",
+      "src2": 3,
+      "src2_name": "r3",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x6426",
+      "hi_value_hex": "0x64260000",
+      "hi_value_dec": 1680211968,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2D2C4",
+      "src2": 5,
+      "src2_name": "r5",
+      "dest": 16,
+      "dest_name": "r16",
+      "hi16": "0x645A",
+      "hi_value_hex": "0x645A0000",
+      "hi_value_dec": 1683619840,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2D3C0",
+      "src2": 23,
+      "src2_name": "r23",
+      "dest": 22,
+      "dest_name": "r22",
+      "hi16": "0x3180",
+      "hi_value_hex": "0x31800000",
+      "hi_value_dec": 830472192,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2D624",
+      "src2": 25,
+      "src2_name": "r25",
+      "dest": 3,
+      "dest_name": "r3",
+      "hi16": "0xC11C",
+      "hi_value_hex": "0xC11C0000",
+      "hi_value_dec": 3239837696,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2DC78",
+      "src2": 21,
+      "src2_name": "r21",
+      "dest": 3,
+      "dest_name": "r3",
+      "hi16": "0xAE82",
+      "hi_value_hex": "0xAE820000",
+      "hi_value_dec": 2927755264,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2DD78",
+      "src2": 14,
+      "src2_name": "r14",
+      "dest": 22,
+      "dest_name": "r22",
+      "hi16": "0x7DCB",
+      "hi_value_hex": "0x7DCB0000",
+      "hi_value_dec": 2110455808,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2DDB4",
+      "src2": 0,
+      "src2_name": "r0",
+      "dest": 24,
+      "dest_name": "r24",
+      "hi16": "0xD80F",
+      "hi_value_hex": "0xD80F0000",
+      "hi_value_dec": 3624861696,
+      "classification": "other_hi",
+      "is_absolute": true
+    },
+    {
+      "addr": "0x2DE14",
+      "src2": 1,
+      "src2_name": "r1",
+      "dest": 24,
+      "dest_name": "r24",
+      "hi16": "0xADE4",
+      "hi_value_hex": "0xADE40000",
+      "hi_value_dec": 2917400576,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2DFC8",
+      "src2": 25,
+      "src2_name": "r25",
+      "dest": 22,
+      "dest_name": "r22",
+      "hi16": "0xFE72",
+      "hi_value_hex": "0xFE720000",
+      "hi_value_dec": 4268883968,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2E1D4",
+      "src2": 22,
+      "src2_name": "r22",
+      "dest": 25,
+      "dest_name": "r25",
+      "hi16": "0x76CE",
+      "hi_value_hex": "0x76CE0000",
+      "hi_value_dec": 1993211904,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2E210",
+      "src2": 5,
+      "src2_name": "r5",
+      "dest": 18,
+      "dest_name": "r18",
+      "hi16": "0x3576",
+      "hi_value_hex": "0x35760000",
+      "hi_value_dec": 896925696,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2E370",
+      "src2": 28,
+      "src2_name": "r28",
+      "dest": 26,
+      "dest_name": "r26",
+      "hi16": "0x0941",
+      "hi_value_hex": "0x09410000",
+      "hi_value_dec": 155254784,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2E660",
+      "src2": 8,
+      "src2_name": "r8",
+      "dest": 31,
+      "dest_name": "r31",
+      "hi16": "0x7AAB",
+      "hi_value_hex": "0x7AAB0000",
+      "hi_value_dec": 2058027008,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2E6C4",
+      "src2": 27,
+      "src2_name": "r27",
+      "dest": 18,
+      "dest_name": "r18",
+      "hi16": "0xF41C",
+      "hi_value_hex": "0xF41C0000",
+      "hi_value_dec": 4095475712,
+      "classification": "mmio_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2E72C",
+      "src2": 28,
+      "src2_name": "r28",
+      "dest": 16,
+      "dest_name": "r16",
+      "hi16": "0x978B",
+      "hi_value_hex": "0x978B0000",
+      "hi_value_dec": 2542469120,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2E768",
+      "src2": 12,
+      "src2_name": "r12",
+      "dest": 26,
+      "dest_name": "r26",
+      "hi16": "0x7D37",
+      "hi_value_hex": "0x7D370000",
+      "hi_value_dec": 2100756480,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2EAA4",
+      "src2": 3,
+      "src2_name": "r3",
+      "dest": 0,
+      "dest_name": "r0",
+      "hi16": "0x653A",
+      "hi_value_hex": "0x653A0000",
+      "hi_value_dec": 1698299904,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2F160",
+      "src2": 21,
+      "src2_name": "r21",
+      "dest": 13,
+      "dest_name": "r13",
+      "hi16": "0x1456",
+      "hi_value_hex": "0x14560000",
+      "hi_value_dec": 341180416,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2F298",
+      "src2": 14,
+      "src2_name": "r14",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0x5781",
+      "hi_value_hex": "0x57810000",
+      "hi_value_dec": 1468071936,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2F2FC",
+      "src2": 6,
+      "src2_name": "r6",
+      "dest": 6,
+      "dest_name": "r6",
+      "hi16": "0xDEBD",
+      "hi_value_hex": "0xDEBD0000",
+      "hi_value_dec": 3736928256,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2F538",
+      "src2": 13,
+      "src2_name": "r13",
+      "dest": 15,
+      "dest_name": "r15",
+      "hi16": "0xB44F",
+      "hi_value_hex": "0xB44F0000",
+      "hi_value_dec": 3025076224,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2F548",
+      "src2": 30,
+      "src2_name": "r30",
+      "dest": 29,
+      "dest_name": "r29",
+      "hi16": "0x34D3",
+      "hi_value_hex": "0x34D30000",
+      "hi_value_dec": 886243328,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2F5B4",
+      "src2": 31,
+      "src2_name": "r31",
+      "dest": 9,
+      "dest_name": "r9",
+      "hi16": "0xD552",
+      "hi_value_hex": "0xD5520000",
+      "hi_value_dec": 3578920960,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2FB04",
+      "src2": 3,
+      "src2_name": "r3",
+      "dest": 1,
+      "dest_name": "r1",
+      "hi16": "0x07FB",
+      "hi_value_hex": "0x07FB0000",
+      "hi_value_dec": 133890048,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2FB30",
+      "src2": 27,
+      "src2_name": "r27",
+      "dest": 15,
+      "dest_name": "r15",
+      "hi16": "0x178D",
+      "hi_value_hex": "0x178D0000",
+      "hi_value_dec": 395116544,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2FD78",
+      "src2": 30,
+      "src2_name": "r30",
+      "dest": 28,
+      "dest_name": "r28",
+      "hi16": "0xB7FD",
+      "hi_value_hex": "0xB7FD0000",
+      "hi_value_dec": 3086811136,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x2FDE8",
+      "src2": 28,
+      "src2_name": "r28",
+      "dest": 22,
+      "dest_name": "r22",
+      "hi16": "0x1E9D",
+      "hi_value_hex": "0x1E9D0000",
+      "hi_value_dec": 513605632,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x30460",
+      "src2": 8,
+      "src2_name": "r8",
+      "dest": 9,
+      "dest_name": "r9",
+      "hi16": "0x46B0",
+      "hi_value_hex": "0x46B00000",
+      "hi_value_dec": 1185939456,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x3049C",
+      "src2": 6,
+      "src2_name": "r6",
+      "dest": 7,
+      "dest_name": "r7",
+      "hi16": "0x62CA",
+      "hi_value_hex": "0x62CA0000",
+      "hi_value_dec": 1657405440,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x3097C",
+      "src2": 28,
+      "src2_name": "r28",
+      "dest": 12,
+      "dest_name": "r12",
+      "hi16": "0xEFAC",
+      "hi_value_hex": "0xEFAC0000",
+      "hi_value_dec": 4021026816,
+      "classification": "other_hi",
+      "is_absolute": false
+    },
+    {
+      "addr": "0x30D9C",
+      "src2": 20,
+      "src2_name": "r20",
+      "dest": 14,
+      "dest_name": "r14",
+      "hi16": "0xC8E9",
+      "hi_value_hex": "0xC8E90000",
+      "hi_value_dec": 3370713088,
+      "classification": "other_hi",
+      "is_absolute": false
+    }
+  ],
+  "small_constants": [
+    {
+      "addr": "0x01228",
+      "insn": "addu",
+      "value_hex": "0xFFFF8048",
+      "value_dec": 4294934600,
+      "dest": 5,
+      "dest_name": "r5",
+      "classification": "mmio"
+    },
+    {
+      "addr": "0x197E0",
+      "insn": "addu",
+      "value_hex": "0x00000000",
+      "value_dec": 0,
+      "dest": 8,
+      "dest_name": "r8",
+      "classification": "data_ptr"
+    },
+    {
+      "addr": "0x1A284",
+      "insn": "addu",
+      "value_hex": "0xFFFFEAE9",
+      "value_dec": 4294961897,
+      "dest": 16,
+      "dest_name": "r16",
+      "classification": "mmio"
+    },
+    {
+      "addr": "0x1A330",
+      "insn": "addu",
+      "value_hex": "0xFFFFE8E9",
+      "value_dec": 4294961385,
+      "dest": 16,
+      "dest_name": "r16",
+      "classification": "mmio"
+    },
+    {
+      "addr": "0x1A3CC",
+      "insn": "addu",
+      "value_hex": "0xFFFFEAE9",
+      "value_dec": 4294961897,
+      "dest": 16,
+      "dest_name": "r16",
+      "classification": "mmio"
+    },
+    {
+      "addr": "0x216D0",
+      "insn": "or",
+      "value_hex": "0x00000000",
+      "value_dec": 0,
+      "dest": 3,
+      "dest_name": "r3",
+      "classification": "data_ptr"
+    },
+    {
+      "addr": "0x21B70",
+      "insn": "addu",
+      "value_hex": "0x00000000",
+      "value_dec": 0,
+      "dest": 28,
+      "dest_name": "r28",
+      "classification": "data_ptr"
+    },
+    {
+      "addr": "0x23750",
+      "insn": "addu",
+      "value_hex": "0x00000000",
+      "value_dec": 0,
+      "dest": 6,
+      "dest_name": "r6",
+      "classification": "data_ptr"
+    },
+    {
+      "addr": "0x250A8",
+      "insn": "addu",
+      "value_hex": "0x00003092",
+      "value_dec": 12434,
+      "dest": 7,
+      "dest_name": "r7",
+      "classification": "other"
+    },
+    {
+      "addr": "0x257A8",
+      "insn": "or",
+      "value_hex": "0x0000A653",
+      "value_dec": 42579,
+      "dest": 28,
+      "dest_name": "r28",
+      "classification": "other"
+    },
+    {
+      "addr": "0x25AD8",
+      "insn": "addu",
+      "value_hex": "0xFFFFE663",
+      "value_dec": 4294960739,
+      "dest": 4,
+      "dest_name": "r4",
+      "classification": "mmio"
+    },
+    {
+      "addr": "0x27448",
+      "insn": "addu",
+      "value_hex": "0x00004374",
+      "value_dec": 17268,
+      "dest": 29,
+      "dest_name": "r29",
+      "classification": "code_ptr"
+    },
+    {
+      "addr": "0x27EF0",
+      "insn": "addu",
+      "value_hex": "0x00000D16",
+      "value_dec": 3350,
+      "dest": 7,
+      "dest_name": "r7",
+      "classification": "data_ptr"
+    },
+    {
+      "addr": "0x281EC",
+      "insn": "addu",
+      "value_hex": "0x00000D16",
+      "value_dec": 3350,
+      "dest": 7,
+      "dest_name": "r7",
+      "classification": "data_ptr"
+    },
+    {
+      "addr": "0x2832C",
+      "insn": "addu",
+      "value_hex": "0x00000D16",
+      "value_dec": 3350,
+      "dest": 7,
+      "dest_name": "r7",
+      "classification": "data_ptr"
+    },
+    {
+      "addr": "0x29CDC",
+      "insn": "or",
+      "value_hex": "0x00002A1D",
+      "value_dec": 10781,
+      "dest": 27,
+      "dest_name": "r27",
+      "classification": "other"
+    },
+    {
+      "addr": "0x29D08",
+      "insn": "addu",
+      "value_hex": "0x00000D16",
+      "value_dec": 3350,
+      "dest": 7,
+      "dest_name": "r7",
+      "classification": "data_ptr"
+    },
+    {
+      "addr": "0x2A604",
+      "insn": "addu",
+      "value_hex": "0x000017CC",
+      "value_dec": 6092,
+      "dest": 29,
+      "dest_name": "r29",
+      "classification": "code_ptr"
+    },
+    {
+      "addr": "0x2AC58",
+      "insn": "addu",
+      "value_hex": "0xFFFFC82C",
+      "value_dec": 4294953004,
+      "dest": 29,
+      "dest_name": "r29",
+      "classification": "mmio"
+    },
+    {
+      "addr": "0x2B3A4",
+      "insn": "or",
+      "value_hex": "0x000014E7",
+      "value_dec": 5351,
+      "dest": 25,
+      "dest_name": "r25",
+      "classification": "other"
+    },
+    {
+      "addr": "0x2B524",
+      "insn": "addu",
+      "value_hex": "0x00000D16",
+      "value_dec": 3350,
+      "dest": 7,
+      "dest_name": "r7",
+      "classification": "data_ptr"
+    },
+    {
+      "addr": "0x2B750",
+      "insn": "addu",
+      "value_hex": "0x00000D16",
+      "value_dec": 3350,
+      "dest": 7,
+      "dest_name": "r7",
+      "classification": "data_ptr"
+    },
+    {
+      "addr": "0x2BA08",
+      "insn": "addu",
+      "value_hex": "0x00000D16",
+      "value_dec": 3350,
+      "dest": 7,
+      "dest_name": "r7",
+      "classification": "data_ptr"
+    },
+    {
+      "addr": "0x2C130",
+      "insn": "addu",
+      "value_hex": "0x00004926",
+      "value_dec": 18726,
+      "dest": 6,
+      "dest_name": "r6",
+      "classification": "other"
+    },
+    {
+      "addr": "0x2C4CC",
+      "insn": "addu",
+      "value_hex": "0x0000406F",
+      "value_dec": 16495,
+      "dest": 3,
+      "dest_name": "r3",
+      "classification": "other"
+    },
+    {
+      "addr": "0x2D630",
+      "insn": "or",
+      "value_hex": "0x0000B44A",
+      "value_dec": 46154,
+      "dest": 23,
+      "dest_name": "r23",
+      "classification": "other"
+    },
+    {
+      "addr": "0x2DFAC",
+      "insn": "or",
+      "value_hex": "0x0000DF78",
+      "value_dec": 57208,
+      "dest": 14,
+      "dest_name": "r14",
+      "classification": "code_ptr"
+    },
+    {
+      "addr": "0x2FCA0",
+      "insn": "addu",
+      "value_hex": "0x00000000",
+      "value_dec": 0,
+      "dest": 8,
+      "dest_name": "r8",
+      "classification": "data_ptr"
+    },
+    {
+      "addr": "0x2FCF8",
+      "insn": "addu",
+      "value_hex": "0x00000D16",
+      "value_dec": 3350,
+      "dest": 7,
+      "dest_name": "r7",
+      "classification": "data_ptr"
+    },
+    {
+      "addr": "0x300D4",
+      "insn": "addu",
+      "value_hex": "0x00001B0B",
+      "value_dec": 6923,
+      "dest": 30,
+      "dest_name": "r30",
+      "classification": "other"
+    },
+    {
+      "addr": "0x30790",
+      "insn": "addu",
+      "value_hex": "0x0000258A",
+      "value_dec": 9610,
+      "dest": 5,
+      "dest_name": "r5",
+      "classification": "other"
+    }
+  ],
+  "by_classification": {
+    "pairs": {
+      "other": [
+        {
+          "orh_addr": "0x02EFC",
+          "or_addr": "0x02F00",
+          "value_hex": "0x71847284",
+          "is_absolute": false,
+          "src2_name": "r7",
+          "dest_name": "r31",
+          "pattern": "same_base",
+          "gap": 1
+        },
+        {
+          "orh_addr": "0x227D0",
+          "or_addr": "0x227D8",
+          "value_hex": "0x00A000A0",
+          "is_absolute": false,
+          "src2_name": "r18",
+          "dest_name": "r1",
+          "pattern": "same_base",
+          "gap": 2
+        }
+      ]
+    },
+    "standalone_orh": {
+      "mask_hi": [
+        {
+          "addr": "0x18AA0",
+          "hi16": "0x0100",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x19908",
+          "hi16": "0x1000",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x19ACC",
+          "hi16": "0x1E00",
+          "src2_name": "r22",
+          "dest_name": "r18"
+        },
+        {
+          "addr": "0x1AAF8",
+          "hi16": "0x001C",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1B0B0",
+          "hi16": "0x1C00",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1BF18",
+          "hi16": "0x2000",
+          "src2_name": "r18",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x1C060",
+          "hi16": "0x3000",
+          "src2_name": "r18",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x1C240",
+          "hi16": "0x0800",
+          "src2_name": "r18",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x1C46C",
+          "hi16": "0x0800",
+          "src2_name": "r18",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x1CF20",
+          "hi16": "0x4000",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1D160",
+          "hi16": "0x2000",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1D630",
+          "hi16": "0x1000",
+          "src2_name": "r18",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x1D7D4",
+          "hi16": "0x1C00",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1D820",
+          "hi16": "0x1800",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1D8F4",
+          "hi16": "0x1000",
+          "src2_name": "r18",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x1DBD4",
+          "hi16": "0x1C00",
+          "src2_name": "r18",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x1DCEC",
+          "hi16": "0x1C00",
+          "src2_name": "r18",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x1DE04",
+          "hi16": "0x1C00",
+          "src2_name": "r18",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x1DF1C",
+          "hi16": "0x1C00",
+          "src2_name": "r18",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x1E034",
+          "hi16": "0x1C00",
+          "src2_name": "r18",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x1E27C",
+          "hi16": "0x0C00",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1E394",
+          "hi16": "0x0C00",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1E758",
+          "hi16": "0x1C00",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1EA3C",
+          "hi16": "0x1C00",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1EB34",
+          "hi16": "0x1C00",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1EDD0",
+          "hi16": "0x1C00",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1EE3C",
+          "hi16": "0x0800",
+          "src2_name": "r7",
+          "dest_name": "r29"
+        },
+        {
+          "addr": "0x1F048",
+          "hi16": "0x1800",
+          "src2_name": "r18",
+          "dest_name": "r7"
+        },
+        {
+          "addr": "0x1F634",
+          "hi16": "0x0800",
+          "src2_name": "r18",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x1F720",
+          "hi16": "0x0800",
+          "src2_name": "r18",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x1F818",
+          "hi16": "0x0800",
+          "src2_name": "r18",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x1F910",
+          "hi16": "0x0800",
+          "src2_name": "r18",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x1FE68",
+          "hi16": "0x1C00",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1FF54",
+          "hi16": "0x1C00",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x20408",
+          "hi16": "0x1C00",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        }
+      ],
+      "mmio_hi": [
+        {
+          "addr": "0x01C04",
+          "hi16": "0xFF6F",
+          "src2_name": "r23",
+          "dest_name": "r30"
+        },
+        {
+          "addr": "0x048D0",
+          "hi16": "0xFF7B",
+          "src2_name": "r31",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x059F8",
+          "hi16": "0xFF73",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x07854",
+          "hi16": "0xFF7B",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x096D0",
+          "hi16": "0xFF7B",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x09870",
+          "hi16": "0xFF7B",
+          "src2_name": "r31",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x09958",
+          "hi16": "0xFF7B",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x0ABD4",
+          "hi16": "0xFF7B",
+          "src2_name": "r23",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x0B664",
+          "hi16": "0xFF6F",
+          "src2_name": "r7",
+          "dest_name": "r28"
+        },
+        {
+          "addr": "0x0BA18",
+          "hi16": "0xF117",
+          "src2_name": "r11",
+          "dest_name": "r25"
+        },
+        {
+          "addr": "0x0D138",
+          "hi16": "0xFF6F",
+          "src2_name": "r22",
+          "dest_name": "r26"
+        },
+        {
+          "addr": "0x0D1A8",
+          "hi16": "0xF117",
+          "src2_name": "r11",
+          "dest_name": "r26"
+        },
+        {
+          "addr": "0x181D0",
+          "hi16": "0xFFFF",
+          "src2_name": "r23",
+          "dest_name": "r29"
+        },
+        {
+          "addr": "0x18EE4",
+          "hi16": "0xFFFF",
+          "src2_name": "r7",
+          "dest_name": "r15"
+        },
+        {
+          "addr": "0x1AED4",
+          "hi16": "0xFECF",
+          "src2_name": "r17",
+          "dest_name": "r3"
+        },
+        {
+          "addr": "0x1B0DC",
+          "hi16": "0xFFFF",
+          "src2_name": "r23",
+          "dest_name": "r27"
+        },
+        {
+          "addr": "0x1C6B4",
+          "hi16": "0xFFFF",
+          "src2_name": "r22",
+          "dest_name": "r6"
+        },
+        {
+          "addr": "0x1D5D8",
+          "hi16": "0xFAA8",
+          "src2_name": "r23",
+          "dest_name": "r15"
+        },
+        {
+          "addr": "0x1E2E4",
+          "hi16": "0xFFFF",
+          "src2_name": "r4",
+          "dest_name": "r27"
+        },
+        {
+          "addr": "0x1EAE4",
+          "hi16": "0xFFFF",
+          "src2_name": "r4",
+          "dest_name": "r19"
+        },
+        {
+          "addr": "0x1F0D8",
+          "hi16": "0xFA8D",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1F730",
+          "hi16": "0xF68A",
+          "src2_name": "r7",
+          "dest_name": "r30"
+        },
+        {
+          "addr": "0x1FDE4",
+          "hi16": "0xFFFF",
+          "src2_name": "r4",
+          "dest_name": "r0"
+        },
+        {
+          "addr": "0x263C0",
+          "hi16": "0xF3B4",
+          "src2_name": "r3",
+          "dest_name": "r29"
+        },
+        {
+          "addr": "0x286F4",
+          "hi16": "0xFB6D",
+          "src2_name": "r13",
+          "dest_name": "r24"
+        },
+        {
+          "addr": "0x28AF4",
+          "hi16": "0xFCAA",
+          "src2_name": "r11",
+          "dest_name": "r1"
+        },
+        {
+          "addr": "0x296D4",
+          "hi16": "0xFB6D",
+          "src2_name": "r13",
+          "dest_name": "r24"
+        },
+        {
+          "addr": "0x2C210",
+          "hi16": "0xF202",
+          "src2_name": "r19",
+          "dest_name": "r19"
+        },
+        {
+          "addr": "0x2DFC8",
+          "hi16": "0xFE72",
+          "src2_name": "r25",
+          "dest_name": "r22"
+        },
+        {
+          "addr": "0x2E6C4",
+          "hi16": "0xF41C",
+          "src2_name": "r27",
+          "dest_name": "r18"
+        }
+      ],
+      "other_hi": [
+        {
+          "addr": "0x0295C",
+          "hi16": "0x6514",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x02B50",
+          "hi16": "0x6914",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x02CD8",
+          "hi16": "0x6514",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x02F30",
+          "hi16": "0x7014",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x02F48",
+          "hi16": "0x7014",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x02F50",
+          "hi16": "0x7F1C",
+          "src2_name": "r12",
+          "dest_name": "r7"
+        },
+        {
+          "addr": "0x02F60",
+          "hi16": "0x7214",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x0362C",
+          "hi16": "0x6514",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x0398C",
+          "hi16": "0x6514",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x044C8",
+          "hi16": "0x6514",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x045F0",
+          "hi16": "0x6514",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x04B50",
+          "hi16": "0x6514",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x04E60",
+          "hi16": "0x6514",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x05488",
+          "hi16": "0x6514",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x05A00",
+          "hi16": "0x6514",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x05AA0",
+          "hi16": "0x1F50",
+          "src2_name": "r25",
+          "dest_name": "r23"
+        },
+        {
+          "addr": "0x05B34",
+          "hi16": "0x1F50",
+          "src2_name": "r25",
+          "dest_name": "r23"
+        },
+        {
+          "addr": "0x05B6C",
+          "hi16": "0x6914",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x05C80",
+          "hi16": "0x6514",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x05D7C",
+          "hi16": "0x6514",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x05ECC",
+          "hi16": "0x1F50",
+          "src2_name": "r1",
+          "dest_name": "r15"
+        },
+        {
+          "addr": "0x05F80",
+          "hi16": "0x6914",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x06140",
+          "hi16": "0x6514",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x0627C",
+          "hi16": "0x1F50",
+          "src2_name": "r25",
+          "dest_name": "r7"
+        },
+        {
+          "addr": "0x063C4",
+          "hi16": "0x11E4",
+          "src2_name": "r0",
+          "dest_name": "r0"
+        },
+        {
+          "addr": "0x06C04",
+          "hi16": "0x1316",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x0710C",
+          "hi16": "0x1216",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x07110",
+          "hi16": "0x1516",
+          "src2_name": "r23",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x07868",
+          "hi16": "0x6514",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x07F18",
+          "hi16": "0x6D14",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x080C8",
+          "hi16": "0x1F50",
+          "src2_name": "r4",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x08798",
+          "hi16": "0x6514",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x08AE0",
+          "hi16": "0x6514",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x08EBC",
+          "hi16": "0x6514",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x09154",
+          "hi16": "0x6514",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x09B4C",
+          "hi16": "0x6D14",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x09E64",
+          "hi16": "0x6514",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x09F14",
+          "hi16": "0x04E4",
+          "src2_name": "r1",
+          "dest_name": "r24"
+        },
+        {
+          "addr": "0x0A544",
+          "hi16": "0x6514",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x0A624",
+          "hi16": "0xA08C",
+          "src2_name": "r16",
+          "dest_name": "r15"
+        },
+        {
+          "addr": "0x0A8D0",
+          "hi16": "0x6514",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x0AC0C",
+          "hi16": "0x6514",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x0ACF8",
+          "hi16": "0x6514",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x0AE1C",
+          "hi16": "0x6514",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x0B12C",
+          "hi16": "0x6914",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x0B240",
+          "hi16": "0x6514",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x0B2DC",
+          "hi16": "0x6514",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x0B6FC",
+          "hi16": "0x6914",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x0DAD8",
+          "hi16": "0x9FB6",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x0DAF8",
+          "hi16": "0x6514",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x0DE18",
+          "hi16": "0x6914",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x0DF74",
+          "hi16": "0x10C6",
+          "src2_name": "r24",
+          "dest_name": "r0"
+        },
+        {
+          "addr": "0x0E3A0",
+          "hi16": "0x401C",
+          "src2_name": "r8",
+          "dest_name": "r8"
+        },
+        {
+          "addr": "0x0F994",
+          "hi16": "0x16E4",
+          "src2_name": "r6",
+          "dest_name": "r30"
+        },
+        {
+          "addr": "0x183B4",
+          "hi16": "0x0900",
+          "src2_name": "r23",
+          "dest_name": "r15"
+        },
+        {
+          "addr": "0x183C0",
+          "hi16": "0x0900",
+          "src2_name": "r23",
+          "dest_name": "r15"
+        },
+        {
+          "addr": "0x183E8",
+          "hi16": "0x2C00",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1856C",
+          "hi16": "0x904E",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x188F0",
+          "hi16": "0x5400",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x190E4",
+          "hi16": "0xD293",
+          "src2_name": "r17",
+          "dest_name": "r3"
+        },
+        {
+          "addr": "0x19190",
+          "hi16": "0x2E2F",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x193D4",
+          "hi16": "0x924E",
+          "src2_name": "r2",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x194A8",
+          "hi16": "0x94D0",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x19634",
+          "hi16": "0x4239",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x19638",
+          "hi16": "0x043C",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x19790",
+          "hi16": "0x0067",
+          "src2_name": "r16",
+          "dest_name": "r0"
+        },
+        {
+          "addr": "0x19840",
+          "hi16": "0x2E2F",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1992C",
+          "hi16": "0x58FF",
+          "src2_name": "r18",
+          "dest_name": "r1"
+        },
+        {
+          "addr": "0x1A058",
+          "hi16": "0x5807",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1A1BC",
+          "hi16": "0x54FF",
+          "src2_name": "r18",
+          "dest_name": "r1"
+        },
+        {
+          "addr": "0x1A79C",
+          "hi16": "0x2A25",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1A7E4",
+          "hi16": "0x0A86",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1A8DC",
+          "hi16": "0x421D",
+          "src2_name": "r15",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1A988",
+          "hi16": "0x80E2",
+          "src2_name": "r23",
+          "dest_name": "r15"
+        },
+        {
+          "addr": "0x1A98C",
+          "hi16": "0x0201",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1A9DC",
+          "hi16": "0x0A86",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1AAF4",
+          "hi16": "0x3422",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1AB10",
+          "hi16": "0x900C",
+          "src2_name": "r29",
+          "dest_name": "r30"
+        },
+        {
+          "addr": "0x1AB64",
+          "hi16": "0x930C",
+          "src2_name": "r29",
+          "dest_name": "r30"
+        },
+        {
+          "addr": "0x1AC78",
+          "hi16": "0x2A1F",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1B208",
+          "hi16": "0x4B58",
+          "src2_name": "r5",
+          "dest_name": "r21"
+        },
+        {
+          "addr": "0x1B278",
+          "hi16": "0x1A64",
+          "src2_name": "r3",
+          "dest_name": "r18"
+        },
+        {
+          "addr": "0x1B910",
+          "hi16": "0x00F5",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1B9A0",
+          "hi16": "0x2A00",
+          "src2_name": "r18",
+          "dest_name": "r9"
+        },
+        {
+          "addr": "0x1BD60",
+          "hi16": "0x2030",
+          "src2_name": "r18",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x1BE08",
+          "hi16": "0xEACD",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1BE40",
+          "hi16": "0x7286",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1C0B8",
+          "hi16": "0xB286",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1C4A8",
+          "hi16": "0x5400",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1C65C",
+          "hi16": "0x5400",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1C708",
+          "hi16": "0x412D",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1C7E8",
+          "hi16": "0x432D",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1C880",
+          "hi16": "0x2400",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1C8C4",
+          "hi16": "0x7E87",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1C9F4",
+          "hi16": "0x412D",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1CA80",
+          "hi16": "0x412D",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1CD00",
+          "hi16": "0x412D",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1CF38",
+          "hi16": "0x412D",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1D018",
+          "hi16": "0x8400",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1D0B0",
+          "hi16": "0x2400",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1D0C8",
+          "hi16": "0x412D",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1D230",
+          "hi16": "0x022F",
+          "src2_name": "r18",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x1D264",
+          "hi16": "0x402D",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1D324",
+          "hi16": "0x8800",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1D3BC",
+          "hi16": "0x2400",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1D4D0",
+          "hi16": "0x2030",
+          "src2_name": "r18",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x1D5A4",
+          "hi16": "0x1400",
+          "src2_name": "r18",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x1D668",
+          "hi16": "0x432D",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1D704",
+          "hi16": "0xD4FE",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1D75C",
+          "hi16": "0x432D",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1D9C8",
+          "hi16": "0xD4FE",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1DABC",
+          "hi16": "0x1400",
+          "src2_name": "r18",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x1E14C",
+          "hi16": "0x1400",
+          "src2_name": "r18",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x1E15C",
+          "hi16": "0x4E89",
+          "src2_name": "r7",
+          "dest_name": "r30"
+        },
+        {
+          "addr": "0x1E250",
+          "hi16": "0xD4FE",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1E368",
+          "hi16": "0xD4FE",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1E480",
+          "hi16": "0xD4FE",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1E580",
+          "hi16": "0xD4FE",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1E668",
+          "hi16": "0xAE89",
+          "src2_name": "r7",
+          "dest_name": "r27"
+        },
+        {
+          "addr": "0x1E858",
+          "hi16": "0xD4FE",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1E950",
+          "hi16": "0x1400",
+          "src2_name": "r18",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x1EB84",
+          "hi16": "0x432D",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1EC20",
+          "hi16": "0xD4FE",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1ED10",
+          "hi16": "0x2030",
+          "src2_name": "r18",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x1ED58",
+          "hi16": "0x432D",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1EE5C",
+          "hi16": "0xCDFE",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1F10C",
+          "hi16": "0xAE42",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1F340",
+          "hi16": "0xEE41",
+          "src2_name": "r7",
+          "dest_name": "r29"
+        },
+        {
+          "addr": "0x1F3C0",
+          "hi16": "0x9200",
+          "src2_name": "r18",
+          "dest_name": "r7"
+        },
+        {
+          "addr": "0x1F498",
+          "hi16": "0x3A8A",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1F680",
+          "hi16": "0x422D",
+          "src2_name": "r7",
+          "dest_name": "r30"
+        },
+        {
+          "addr": "0x1F828",
+          "hi16": "0x0A8B",
+          "src2_name": "r7",
+          "dest_name": "r30"
+        },
+        {
+          "addr": "0x1F920",
+          "hi16": "0x1E8B",
+          "src2_name": "r7",
+          "dest_name": "r30"
+        },
+        {
+          "addr": "0x1FA0C",
+          "hi16": "0x1400",
+          "src2_name": "r18",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x1FA1C",
+          "hi16": "0x328B",
+          "src2_name": "r7",
+          "dest_name": "r30"
+        },
+        {
+          "addr": "0x1FB10",
+          "hi16": "0xD4FE",
+          "src2_name": "r18",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x1FC60",
+          "hi16": "0xAE42",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x1FDA8",
+          "hi16": "0x2030",
+          "src2_name": "r18",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x1FDF0",
+          "hi16": "0x3601",
+          "src2_name": "r7",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x201D0",
+          "hi16": "0x2400",
+          "src2_name": "r18",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x24030",
+          "hi16": "0xDEC2",
+          "src2_name": "r1",
+          "dest_name": "r1"
+        },
+        {
+          "addr": "0x24470",
+          "hi16": "0x3397",
+          "src2_name": "r13",
+          "dest_name": "r9"
+        },
+        {
+          "addr": "0x24578",
+          "hi16": "0x29C1",
+          "src2_name": "r29",
+          "dest_name": "r21"
+        },
+        {
+          "addr": "0x245B4",
+          "hi16": "0xEC1B",
+          "src2_name": "r3",
+          "dest_name": "r0"
+        },
+        {
+          "addr": "0x24BB8",
+          "hi16": "0x6AA4",
+          "src2_name": "r3",
+          "dest_name": "r9"
+        },
+        {
+          "addr": "0x25184",
+          "hi16": "0x82ED",
+          "src2_name": "r2",
+          "dest_name": "r23"
+        },
+        {
+          "addr": "0x25258",
+          "hi16": "0x6AA4",
+          "src2_name": "r3",
+          "dest_name": "r9"
+        },
+        {
+          "addr": "0x25ACC",
+          "hi16": "0xDFCC",
+          "src2_name": "r9",
+          "dest_name": "r19"
+        },
+        {
+          "addr": "0x25C40",
+          "hi16": "0x65A0",
+          "src2_name": "r15",
+          "dest_name": "r29"
+        },
+        {
+          "addr": "0x26068",
+          "hi16": "0x2C2E",
+          "src2_name": "r0",
+          "dest_name": "r13"
+        },
+        {
+          "addr": "0x261A4",
+          "hi16": "0x52E6",
+          "src2_name": "r1",
+          "dest_name": "r29"
+        },
+        {
+          "addr": "0x265CC",
+          "hi16": "0x6AA4",
+          "src2_name": "r3",
+          "dest_name": "r9"
+        },
+        {
+          "addr": "0x2698C",
+          "hi16": "0x2FB2",
+          "src2_name": "r4",
+          "dest_name": "r11"
+        },
+        {
+          "addr": "0x26D9C",
+          "hi16": "0x336E",
+          "src2_name": "r19",
+          "dest_name": "r1"
+        },
+        {
+          "addr": "0x26EA8",
+          "hi16": "0x44FE",
+          "src2_name": "r5",
+          "dest_name": "r9"
+        },
+        {
+          "addr": "0x26EEC",
+          "hi16": "0x40C0",
+          "src2_name": "r27",
+          "dest_name": "r2"
+        },
+        {
+          "addr": "0x26F34",
+          "hi16": "0x5B8A",
+          "src2_name": "r10",
+          "dest_name": "r3"
+        },
+        {
+          "addr": "0x27214",
+          "hi16": "0x02BE",
+          "src2_name": "r1",
+          "dest_name": "r11"
+        },
+        {
+          "addr": "0x27244",
+          "hi16": "0x0B02",
+          "src2_name": "r22",
+          "dest_name": "r24"
+        },
+        {
+          "addr": "0x273C4",
+          "hi16": "0x4FB3",
+          "src2_name": "r7",
+          "dest_name": "r21"
+        },
+        {
+          "addr": "0x27414",
+          "hi16": "0xD0EC",
+          "src2_name": "r20",
+          "dest_name": "r13"
+        },
+        {
+          "addr": "0x27418",
+          "hi16": "0x6B90",
+          "src2_name": "r9",
+          "dest_name": "r3"
+        },
+        {
+          "addr": "0x274A8",
+          "hi16": "0x4ED3",
+          "src2_name": "r6",
+          "dest_name": "r15"
+        },
+        {
+          "addr": "0x27664",
+          "hi16": "0x9DF7",
+          "src2_name": "r26",
+          "dest_name": "r5"
+        },
+        {
+          "addr": "0x27820",
+          "hi16": "0x0EC2",
+          "src2_name": "r0",
+          "dest_name": "r26"
+        },
+        {
+          "addr": "0x2793C",
+          "hi16": "0x012F",
+          "src2_name": "r1",
+          "dest_name": "r29"
+        },
+        {
+          "addr": "0x28A70",
+          "hi16": "0xE9EF",
+          "src2_name": "r7",
+          "dest_name": "r1"
+        },
+        {
+          "addr": "0x28E74",
+          "hi16": "0x974E",
+          "src2_name": "r11",
+          "dest_name": "r1"
+        },
+        {
+          "addr": "0x29004",
+          "hi16": "0x88D0",
+          "src2_name": "r0",
+          "dest_name": "r2"
+        },
+        {
+          "addr": "0x29088",
+          "hi16": "0x3DB2",
+          "src2_name": "r4",
+          "dest_name": "r4"
+        },
+        {
+          "addr": "0x2912C",
+          "hi16": "0x11FA",
+          "src2_name": "r20",
+          "dest_name": "r16"
+        },
+        {
+          "addr": "0x294FC",
+          "hi16": "0x43D2",
+          "src2_name": "r9",
+          "dest_name": "r26"
+        },
+        {
+          "addr": "0x2958C",
+          "hi16": "0xB47A",
+          "src2_name": "r21",
+          "dest_name": "r29"
+        },
+        {
+          "addr": "0x299BC",
+          "hi16": "0xE1A2",
+          "src2_name": "r24",
+          "dest_name": "r21"
+        },
+        {
+          "addr": "0x29B0C",
+          "hi16": "0x8BB4",
+          "src2_name": "r25",
+          "dest_name": "r18"
+        },
+        {
+          "addr": "0x29B10",
+          "hi16": "0x46B3",
+          "src2_name": "r16",
+          "dest_name": "r0"
+        },
+        {
+          "addr": "0x29D5C",
+          "hi16": "0x8C67",
+          "src2_name": "r30",
+          "dest_name": "r25"
+        },
+        {
+          "addr": "0x29E2C",
+          "hi16": "0xC239",
+          "src2_name": "r29",
+          "dest_name": "r24"
+        },
+        {
+          "addr": "0x29EE4",
+          "hi16": "0x934C",
+          "src2_name": "r1",
+          "dest_name": "r13"
+        },
+        {
+          "addr": "0x2A1F4",
+          "hi16": "0x3B3D",
+          "src2_name": "r12",
+          "dest_name": "r23"
+        },
+        {
+          "addr": "0x2A404",
+          "hi16": "0xCDC8",
+          "src2_name": "r4",
+          "dest_name": "r14"
+        },
+        {
+          "addr": "0x2A414",
+          "hi16": "0x5C34",
+          "src2_name": "r12",
+          "dest_name": "r27"
+        },
+        {
+          "addr": "0x2A4BC",
+          "hi16": "0x90D8",
+          "src2_name": "r12",
+          "dest_name": "r21"
+        },
+        {
+          "addr": "0x2A5C0",
+          "hi16": "0x9BC5",
+          "src2_name": "r10",
+          "dest_name": "r29"
+        },
+        {
+          "addr": "0x2AACC",
+          "hi16": "0x5693",
+          "src2_name": "r18",
+          "dest_name": "r9"
+        },
+        {
+          "addr": "0x2AB5C",
+          "hi16": "0x9049",
+          "src2_name": "r8",
+          "dest_name": "r4"
+        },
+        {
+          "addr": "0x2ACF4",
+          "hi16": "0x8704",
+          "src2_name": "r11",
+          "dest_name": "r2"
+        },
+        {
+          "addr": "0x2AED4",
+          "hi16": "0xE97A",
+          "src2_name": "r11",
+          "dest_name": "r1"
+        },
+        {
+          "addr": "0x2AF1C",
+          "hi16": "0x3AD6",
+          "src2_name": "r12",
+          "dest_name": "r4"
+        },
+        {
+          "addr": "0x2B018",
+          "hi16": "0x2AEC",
+          "src2_name": "r21",
+          "dest_name": "r0"
+        },
+        {
+          "addr": "0x2B400",
+          "hi16": "0x1118",
+          "src2_name": "r0",
+          "dest_name": "r14"
+        },
+        {
+          "addr": "0x2B5F0",
+          "hi16": "0x624A",
+          "src2_name": "r24",
+          "dest_name": "r6"
+        },
+        {
+          "addr": "0x2BA80",
+          "hi16": "0xD59B",
+          "src2_name": "r0",
+          "dest_name": "r1"
+        },
+        {
+          "addr": "0x2BE64",
+          "hi16": "0x9EA8",
+          "src2_name": "r2",
+          "dest_name": "r11"
+        },
+        {
+          "addr": "0x2BE8C",
+          "hi16": "0x61D8",
+          "src2_name": "r20",
+          "dest_name": "r28"
+        },
+        {
+          "addr": "0x2BF70",
+          "hi16": "0x32EF",
+          "src2_name": "r24",
+          "dest_name": "r22"
+        },
+        {
+          "addr": "0x2C240",
+          "hi16": "0x5BE3",
+          "src2_name": "r10",
+          "dest_name": "r9"
+        },
+        {
+          "addr": "0x2C3F4",
+          "hi16": "0xB215",
+          "src2_name": "r1",
+          "dest_name": "r0"
+        },
+        {
+          "addr": "0x2C42C",
+          "hi16": "0x0419",
+          "src2_name": "r21",
+          "dest_name": "r10"
+        },
+        {
+          "addr": "0x2C5A8",
+          "hi16": "0x02B2",
+          "src2_name": "r28",
+          "dest_name": "r24"
+        },
+        {
+          "addr": "0x2C86C",
+          "hi16": "0x8891",
+          "src2_name": "r11",
+          "dest_name": "r30"
+        },
+        {
+          "addr": "0x2CCA4",
+          "hi16": "0x8AC3",
+          "src2_name": "r13",
+          "dest_name": "r25"
+        },
+        {
+          "addr": "0x2CD38",
+          "hi16": "0x4014",
+          "src2_name": "r5",
+          "dest_name": "r28"
+        },
+        {
+          "addr": "0x2D18C",
+          "hi16": "0x223D",
+          "src2_name": "r0",
+          "dest_name": "r22"
+        },
+        {
+          "addr": "0x2D1A0",
+          "hi16": "0x420F",
+          "src2_name": "r29",
+          "dest_name": "r24"
+        },
+        {
+          "addr": "0x2D248",
+          "hi16": "0x6426",
+          "src2_name": "r3",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x2D2C4",
+          "hi16": "0x645A",
+          "src2_name": "r5",
+          "dest_name": "r16"
+        },
+        {
+          "addr": "0x2D3C0",
+          "hi16": "0x3180",
+          "src2_name": "r23",
+          "dest_name": "r22"
+        },
+        {
+          "addr": "0x2D624",
+          "hi16": "0xC11C",
+          "src2_name": "r25",
+          "dest_name": "r3"
+        },
+        {
+          "addr": "0x2DC78",
+          "hi16": "0xAE82",
+          "src2_name": "r21",
+          "dest_name": "r3"
+        },
+        {
+          "addr": "0x2DD78",
+          "hi16": "0x7DCB",
+          "src2_name": "r14",
+          "dest_name": "r22"
+        },
+        {
+          "addr": "0x2DDB4",
+          "hi16": "0xD80F",
+          "src2_name": "r0",
+          "dest_name": "r24"
+        },
+        {
+          "addr": "0x2DE14",
+          "hi16": "0xADE4",
+          "src2_name": "r1",
+          "dest_name": "r24"
+        },
+        {
+          "addr": "0x2E1D4",
+          "hi16": "0x76CE",
+          "src2_name": "r22",
+          "dest_name": "r25"
+        },
+        {
+          "addr": "0x2E210",
+          "hi16": "0x3576",
+          "src2_name": "r5",
+          "dest_name": "r18"
+        },
+        {
+          "addr": "0x2E370",
+          "hi16": "0x0941",
+          "src2_name": "r28",
+          "dest_name": "r26"
+        },
+        {
+          "addr": "0x2E660",
+          "hi16": "0x7AAB",
+          "src2_name": "r8",
+          "dest_name": "r31"
+        },
+        {
+          "addr": "0x2E72C",
+          "hi16": "0x978B",
+          "src2_name": "r28",
+          "dest_name": "r16"
+        },
+        {
+          "addr": "0x2E768",
+          "hi16": "0x7D37",
+          "src2_name": "r12",
+          "dest_name": "r26"
+        },
+        {
+          "addr": "0x2EAA4",
+          "hi16": "0x653A",
+          "src2_name": "r3",
+          "dest_name": "r0"
+        },
+        {
+          "addr": "0x2F160",
+          "hi16": "0x1456",
+          "src2_name": "r21",
+          "dest_name": "r13"
+        },
+        {
+          "addr": "0x2F298",
+          "hi16": "0x5781",
+          "src2_name": "r14",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x2F2FC",
+          "hi16": "0xDEBD",
+          "src2_name": "r6",
+          "dest_name": "r6"
+        },
+        {
+          "addr": "0x2F538",
+          "hi16": "0xB44F",
+          "src2_name": "r13",
+          "dest_name": "r15"
+        },
+        {
+          "addr": "0x2F548",
+          "hi16": "0x34D3",
+          "src2_name": "r30",
+          "dest_name": "r29"
+        },
+        {
+          "addr": "0x2F5B4",
+          "hi16": "0xD552",
+          "src2_name": "r31",
+          "dest_name": "r9"
+        },
+        {
+          "addr": "0x2FB04",
+          "hi16": "0x07FB",
+          "src2_name": "r3",
+          "dest_name": "r1"
+        },
+        {
+          "addr": "0x2FB30",
+          "hi16": "0x178D",
+          "src2_name": "r27",
+          "dest_name": "r15"
+        },
+        {
+          "addr": "0x2FD78",
+          "hi16": "0xB7FD",
+          "src2_name": "r30",
+          "dest_name": "r28"
+        },
+        {
+          "addr": "0x2FDE8",
+          "hi16": "0x1E9D",
+          "src2_name": "r28",
+          "dest_name": "r22"
+        },
+        {
+          "addr": "0x30460",
+          "hi16": "0x46B0",
+          "src2_name": "r8",
+          "dest_name": "r9"
+        },
+        {
+          "addr": "0x3049C",
+          "hi16": "0x62CA",
+          "src2_name": "r6",
+          "dest_name": "r7"
+        },
+        {
+          "addr": "0x3097C",
+          "hi16": "0xEFAC",
+          "src2_name": "r28",
+          "dest_name": "r12"
+        },
+        {
+          "addr": "0x30D9C",
+          "hi16": "0xC8E9",
+          "src2_name": "r20",
+          "dest_name": "r14"
+        }
+      ],
+      "zero_hi": [
+        {
+          "addr": "0x1AE24",
+          "hi16": "0x0000",
+          "src2_name": "r16",
+          "dest_name": "r15"
+        },
+        {
+          "addr": "0x1C3E0",
+          "hi16": "0x0000",
+          "src2_name": "r20",
+          "dest_name": "r6"
+        },
+        {
+          "addr": "0x1D360",
+          "hi16": "0x0000",
+          "src2_name": "r0",
+          "dest_name": "r0"
+        },
+        {
+          "addr": "0x1F28C",
+          "hi16": "0x0000",
+          "src2_name": "r24",
+          "dest_name": "r0"
+        },
+        {
+          "addr": "0x1F328",
+          "hi16": "0x0000",
+          "src2_name": "r16",
+          "dest_name": "r3"
+        },
+        {
+          "addr": "0x213F8",
+          "hi16": "0x0000",
+          "src2_name": "r16",
+          "dest_name": "r8"
+        },
+        {
+          "addr": "0x215B8",
+          "hi16": "0x0000",
+          "src2_name": "r16",
+          "dest_name": "r11"
+        },
+        {
+          "addr": "0x21968",
+          "hi16": "0x0000",
+          "src2_name": "r17",
+          "dest_name": "r13"
+        },
+        {
+          "addr": "0x21A10",
+          "hi16": "0x0000",
+          "src2_name": "r1",
+          "dest_name": "r6"
+        },
+        {
+          "addr": "0x21B68",
+          "hi16": "0x0000",
+          "src2_name": "r0",
+          "dest_name": "r28"
+        },
+        {
+          "addr": "0x21CC0",
+          "hi16": "0x0000",
+          "src2_name": "r17",
+          "dest_name": "r10"
+        },
+        {
+          "addr": "0x21DB0",
+          "hi16": "0x0000",
+          "src2_name": "r17",
+          "dest_name": "r3"
+        },
+        {
+          "addr": "0x21F80",
+          "hi16": "0x0000",
+          "src2_name": "r1",
+          "dest_name": "r15"
+        },
+        {
+          "addr": "0x220D0",
+          "hi16": "0x0000",
+          "src2_name": "r1",
+          "dest_name": "r19"
+        },
+        {
+          "addr": "0x22290",
+          "hi16": "0x0000",
+          "src2_name": "r2",
+          "dest_name": "r13"
+        },
+        {
+          "addr": "0x226E8",
+          "hi16": "0x0000",
+          "src2_name": "r18",
+          "dest_name": "r6"
+        },
+        {
+          "addr": "0x22754",
+          "hi16": "0x0000",
+          "src2_name": "r20",
+          "dest_name": "r6"
+        },
+        {
+          "addr": "0x2275C",
+          "hi16": "0x0000",
+          "src2_name": "r20",
+          "dest_name": "r6"
+        },
+        {
+          "addr": "0x22958",
+          "hi16": "0x0000",
+          "src2_name": "r19",
+          "dest_name": "r8"
+        },
+        {
+          "addr": "0x22E70",
+          "hi16": "0x0000",
+          "src2_name": "r18",
+          "dest_name": "r29"
+        },
+        {
+          "addr": "0x22F60",
+          "hi16": "0x0000",
+          "src2_name": "r2",
+          "dest_name": "r22"
+        },
+        {
+          "addr": "0x231A8",
+          "hi16": "0x0000",
+          "src2_name": "r19",
+          "dest_name": "r21"
+        },
+        {
+          "addr": "0x232B0",
+          "hi16": "0x0000",
+          "src2_name": "r3",
+          "dest_name": "r28"
+        },
+        {
+          "addr": "0x23418",
+          "hi16": "0x0000",
+          "src2_name": "r19",
+          "dest_name": "r30"
+        },
+        {
+          "addr": "0x23848",
+          "hi16": "0x0000",
+          "src2_name": "r0",
+          "dest_name": "r0"
+        },
+        {
+          "addr": "0x23B94",
+          "hi16": "0x0000",
+          "src2_name": "r24",
+          "dest_name": "r2"
+        }
+      ]
+    }
+  },
+  "code_ptr_candidates": [
+    "0x000017CC",
+    "0x00004374",
+    "0x0000DF78"
+  ],
+  "top_orh_hi_values": [
+    {
+      "hi_value_hex": "0x65140000",
+      "hi_value_dec": 1695809536,
+      "reference_count": 27,
+      "locations": [
+        "0x0295C",
+        "0x02CD8",
+        "0x0362C",
+        "0x0398C",
+        "0x044C8",
+        "0x045F0",
+        "0x04B50",
+        "0x04E60",
+        "0x05488",
+        "0x05A00"
+      ]
+    },
+    {
+      "hi_value_hex": "0x00000000",
+      "hi_value_dec": 0,
+      "reference_count": 26,
+      "locations": [
+        "0x1AE24",
+        "0x1C3E0",
+        "0x1D360",
+        "0x1F28C",
+        "0x1F328",
+        "0x213F8",
+        "0x215B8",
+        "0x21968",
+        "0x21A10",
+        "0x21B68"
+      ]
+    },
+    {
+      "hi_value_hex": "0x1C000000",
+      "hi_value_dec": 469762048,
+      "reference_count": 14,
+      "locations": [
+        "0x1B0B0",
+        "0x1D7D4",
+        "0x1DBD4",
+        "0x1DCEC",
+        "0x1DE04",
+        "0x1DF1C",
+        "0x1E034",
+        "0x1E758",
+        "0x1EA3C",
+        "0x1EB34"
+      ]
+    },
+    {
+      "hi_value_hex": "0xD4FE0000",
+      "hi_value_dec": 3573415936,
+      "reference_count": 9,
+      "locations": [
+        "0x1D704",
+        "0x1D9C8",
+        "0x1E250",
+        "0x1E368",
+        "0x1E480",
+        "0x1E580",
+        "0x1E858",
+        "0x1EC20",
+        "0x1FB10"
+      ]
+    },
+    {
+      "hi_value_hex": "0xFFFF0000",
+      "hi_value_dec": 4294901760,
+      "reference_count": 7,
+      "locations": [
+        "0x181D0",
+        "0x18EE4",
+        "0x1B0DC",
+        "0x1C6B4",
+        "0x1E2E4",
+        "0x1EAE4",
+        "0x1FDE4"
+      ]
+    },
+    {
+      "hi_value_hex": "0x08000000",
+      "hi_value_dec": 134217728,
+      "reference_count": 7,
+      "locations": [
+        "0x1C240",
+        "0x1C46C",
+        "0x1EE3C",
+        "0x1F634",
+        "0x1F720",
+        "0x1F818",
+        "0x1F910"
+      ]
+    },
+    {
+      "hi_value_hex": "0x69140000",
+      "hi_value_dec": 1762918400,
+      "reference_count": 6,
+      "locations": [
+        "0x02B50",
+        "0x05B6C",
+        "0x05F80",
+        "0x0B12C",
+        "0x0B6FC",
+        "0x0DE18"
+      ]
+    },
+    {
+      "hi_value_hex": "0xFF7B0000",
+      "hi_value_dec": 4286251008,
+      "reference_count": 6,
+      "locations": [
+        "0x048D0",
+        "0x07854",
+        "0x096D0",
+        "0x09870",
+        "0x09958",
+        "0x0ABD4"
+      ]
+    },
+    {
+      "hi_value_hex": "0x412D0000",
+      "hi_value_dec": 1093468160,
+      "reference_count": 6,
+      "locations": [
+        "0x1C708",
+        "0x1C9F4",
+        "0x1CA80",
+        "0x1CD00",
+        "0x1CF38",
+        "0x1D0C8"
+      ]
+    },
+    {
+      "hi_value_hex": "0x1F500000",
+      "hi_value_dec": 525336576,
+      "reference_count": 5,
+      "locations": [
+        "0x05AA0",
+        "0x05B34",
+        "0x05ECC",
+        "0x0627C",
+        "0x080C8"
+      ]
+    },
+    {
+      "hi_value_hex": "0x432D0000",
+      "hi_value_dec": 1127022592,
+      "reference_count": 5,
+      "locations": [
+        "0x1C7E8",
+        "0x1D668",
+        "0x1D75C",
+        "0x1EB84",
+        "0x1ED58"
+      ]
+    },
+    {
+      "hi_value_hex": "0x14000000",
+      "hi_value_dec": 335544320,
+      "reference_count": 5,
+      "locations": [
+        "0x1D5A4",
+        "0x1DABC",
+        "0x1E14C",
+        "0x1E950",
+        "0x1FA0C"
+      ]
+    },
+    {
+      "hi_value_hex": "0x20300000",
+      "hi_value_dec": 540016640,
+      "reference_count": 4,
+      "locations": [
+        "0x1BD60",
+        "0x1D4D0",
+        "0x1ED10",
+        "0x1FDA8"
+      ]
+    },
+    {
+      "hi_value_hex": "0x24000000",
+      "hi_value_dec": 603979776,
+      "reference_count": 4,
+      "locations": [
+        "0x1C880",
+        "0x1D0B0",
+        "0x1D3BC",
+        "0x201D0"
+      ]
+    },
+    {
+      "hi_value_hex": "0xFF6F0000",
+      "hi_value_dec": 4285464576,
+      "reference_count": 3,
+      "locations": [
+        "0x01C04",
+        "0x0B664",
+        "0x0D138"
+      ]
+    },
+    {
+      "hi_value_hex": "0x54000000",
+      "hi_value_dec": 1409286144,
+      "reference_count": 3,
+      "locations": [
+        "0x188F0",
+        "0x1C4A8",
+        "0x1C65C"
+      ]
+    },
+    {
+      "hi_value_hex": "0x10000000",
+      "hi_value_dec": 268435456,
+      "reference_count": 3,
+      "locations": [
+        "0x19908",
+        "0x1D630",
+        "0x1D8F4"
+      ]
+    },
+    {
+      "hi_value_hex": "0x6AA40000",
+      "hi_value_dec": 1789132800,
+      "reference_count": 3,
+      "locations": [
+        "0x24BB8",
+        "0x25258",
+        "0x265CC"
+      ]
+    },
+    {
+      "hi_value_hex": "0x70140000",
+      "hi_value_dec": 1880358912,
+      "reference_count": 2,
+      "locations": [
+        "0x02F30",
+        "0x02F48"
+      ]
+    },
+    {
+      "hi_value_hex": "0x6D140000",
+      "hi_value_dec": 1830027264,
+      "reference_count": 2,
+      "locations": [
+        "0x07F18",
+        "0x09B4C"
+      ]
+    },
+    {
+      "hi_value_hex": "0xF1170000",
+      "hi_value_dec": 4044816384,
+      "reference_count": 2,
+      "locations": [
+        "0x0BA18",
+        "0x0D1A8"
+      ]
+    },
+    {
+      "hi_value_hex": "0x09000000",
+      "hi_value_dec": 150994944,
+      "reference_count": 2,
+      "locations": [
+        "0x183B4",
+        "0x183C0"
+      ]
+    },
+    {
+      "hi_value_hex": "0x2E2F0000",
+      "hi_value_dec": 774832128,
+      "reference_count": 2,
+      "locations": [
+        "0x19190",
+        "0x19840"
+      ]
+    },
+    {
+      "hi_value_hex": "0x0A860000",
+      "hi_value_dec": 176553984,
+      "reference_count": 2,
+      "locations": [
+        "0x1A7E4",
+        "0x1A9DC"
+      ]
+    },
+    {
+      "hi_value_hex": "0x20000000",
+      "hi_value_dec": 536870912,
+      "reference_count": 2,
+      "locations": [
+        "0x1BF18",
+        "0x1D160"
+      ]
+    },
+    {
+      "hi_value_hex": "0x18000000",
+      "hi_value_dec": 402653184,
+      "reference_count": 2,
+      "locations": [
+        "0x1D820",
+        "0x1F048"
+      ]
+    },
+    {
+      "hi_value_hex": "0x0C000000",
+      "hi_value_dec": 201326592,
+      "reference_count": 2,
+      "locations": [
+        "0x1E27C",
+        "0x1E394"
+      ]
+    },
+    {
+      "hi_value_hex": "0xAE420000",
+      "hi_value_dec": 2923560960,
+      "reference_count": 2,
+      "locations": [
+        "0x1F10C",
+        "0x1FC60"
+      ]
+    },
+    {
+      "hi_value_hex": "0xFB6D0000",
+      "hi_value_dec": 4218224640,
+      "reference_count": 2,
+      "locations": [
+        "0x286F4",
+        "0x296D4"
+      ]
+    },
+    {
+      "hi_value_hex": "0x7F1C0000",
+      "hi_value_dec": 2132541440,
+      "reference_count": 1,
+      "locations": [
+        "0x02F50"
+      ]
+    },
+    {
+      "hi_value_hex": "0x72140000",
+      "hi_value_dec": 1913913344,
+      "reference_count": 1,
+      "locations": [
+        "0x02F60"
+      ]
+    },
+    {
+      "hi_value_hex": "0xFF730000",
+      "hi_value_dec": 4285726720,
+      "reference_count": 1,
+      "locations": [
+        "0x059F8"
+      ]
+    },
+    {
+      "hi_value_hex": "0x11E40000",
+      "hi_value_dec": 300154880,
+      "reference_count": 1,
+      "locations": [
+        "0x063C4"
+      ]
+    },
+    {
+      "hi_value_hex": "0x13160000",
+      "hi_value_dec": 320208896,
+      "reference_count": 1,
+      "locations": [
+        "0x06C04"
+      ]
+    },
+    {
+      "hi_value_hex": "0x12160000",
+      "hi_value_dec": 303431680,
+      "reference_count": 1,
+      "locations": [
+        "0x0710C"
+      ]
+    },
+    {
+      "hi_value_hex": "0x15160000",
+      "hi_value_dec": 353763328,
+      "reference_count": 1,
+      "locations": [
+        "0x07110"
+      ]
+    },
+    {
+      "hi_value_hex": "0x04E40000",
+      "hi_value_dec": 82051072,
+      "reference_count": 1,
+      "locations": [
+        "0x09F14"
+      ]
+    },
+    {
+      "hi_value_hex": "0xA08C0000",
+      "hi_value_dec": 2693529600,
+      "reference_count": 1,
+      "locations": [
+        "0x0A624"
+      ]
+    },
+    {
+      "hi_value_hex": "0x9FB60000",
+      "hi_value_dec": 2679504896,
+      "reference_count": 1,
+      "locations": [
+        "0x0DAD8"
+      ]
+    },
+    {
+      "hi_value_hex": "0x10C60000",
+      "hi_value_dec": 281411584,
+      "reference_count": 1,
+      "locations": [
+        "0x0DF74"
+      ]
+    },
+    {
+      "hi_value_hex": "0x401C0000",
+      "hi_value_dec": 1075576832,
+      "reference_count": 1,
+      "locations": [
+        "0x0E3A0"
+      ]
+    },
+    {
+      "hi_value_hex": "0x16E40000",
+      "hi_value_dec": 384040960,
+      "reference_count": 1,
+      "locations": [
+        "0x0F994"
+      ]
+    },
+    {
+      "hi_value_hex": "0x2C000000",
+      "hi_value_dec": 738197504,
+      "reference_count": 1,
+      "locations": [
+        "0x183E8"
+      ]
+    },
+    {
+      "hi_value_hex": "0x904E0000",
+      "hi_value_dec": 2421030912,
+      "reference_count": 1,
+      "locations": [
+        "0x1856C"
+      ]
+    },
+    {
+      "hi_value_hex": "0x01000000",
+      "hi_value_dec": 16777216,
+      "reference_count": 1,
+      "locations": [
+        "0x18AA0"
+      ]
+    },
+    {
+      "hi_value_hex": "0xD2930000",
+      "hi_value_dec": 3532849152,
+      "reference_count": 1,
+      "locations": [
+        "0x190E4"
+      ]
+    },
+    {
+      "hi_value_hex": "0x924E0000",
+      "hi_value_dec": 2454585344,
+      "reference_count": 1,
+      "locations": [
+        "0x193D4"
+      ]
+    },
+    {
+      "hi_value_hex": "0x94D00000",
+      "hi_value_dec": 2496659456,
+      "reference_count": 1,
+      "locations": [
+        "0x194A8"
+      ]
+    },
+    {
+      "hi_value_hex": "0x42390000",
+      "hi_value_dec": 1111031808,
+      "reference_count": 1,
+      "locations": [
+        "0x19634"
+      ]
+    },
+    {
+      "hi_value_hex": "0x043C0000",
+      "hi_value_dec": 71041024,
+      "reference_count": 1,
+      "locations": [
+        "0x19638"
+      ]
+    }
+  ]
+}

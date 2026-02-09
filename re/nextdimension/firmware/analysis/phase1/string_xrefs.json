@@ -1,0 +1,1269 @@
+{
+  "metadata": {
+    "binary": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/firmware/extracted/ND_MachDriver___TEXT_clean_window.bin",
+    "binary_size": 200704,
+    "base_va": "0xF8000000",
+    "embedded_m68k_macho_offset": "0x17CB8",
+    "embedded_cstring_va": "0x00008BEA",
+    "embedded_cstring_file_offset": "0x20ABA",
+    "total_strings_found": 82,
+    "embedded_cstrings": 46,
+    "total_xrefs": 28,
+    "i860_xrefs": 0,
+    "m68k_xrefs": 28,
+    "total_unique_strings_referenced": 21,
+    "total_functions_with_strings": 12,
+    "total_unreferenced_strings": 61,
+    "i860_function_entries": 174,
+    "m68k_function_entries": 219
+  },
+  "strings": [
+    {
+      "file_offset": "0x20ABA",
+      "va": "0x00008BEA",
+      "length": 28,
+      "content": "NDDriver: ND_Load_MachDriver"
+    },
+    {
+      "file_offset": "0x20AD7",
+      "va": "0x00008C07",
+      "length": 13,
+      "content": "NextDimension"
+    },
+    {
+      "file_offset": "0x20AE6",
+      "va": "0x00008C16",
+      "length": 36,
+      "content": "NDDriver: netname_lookup: ND timeout"
+    },
+    {
+      "file_offset": "0x20B0B",
+      "va": "0x00008C3B",
+      "length": 25,
+      "content": "NDDriver: ND_GetBoardList"
+    },
+    {
+      "file_offset": "0x20B25",
+      "va": "0x00008C55",
+      "length": 13,
+      "content": "NeXTdimension"
+    },
+    {
+      "file_offset": "0x20B33",
+      "va": "0x00008C63",
+      "length": 14,
+      "content": "nd_currentsync"
+    },
+    {
+      "file_offset": "0x20B42",
+      "va": "0x00008C72",
+      "length": 10,
+      "content": "nd_setsync"
+    },
+    {
+      "file_offset": "0x20B4D",
+      "va": "0x00008C7D",
+      "length": 13,
+      "content": "port_allocate"
+    },
+    {
+      "file_offset": "0x20BB5",
+      "va": "0x00008CE5",
+      "length": 7,
+      "content": "-NDSlot"
+    },
+    {
+      "file_offset": "0x20BBD",
+      "va": "0x00008CED",
+      "length": 15,
+      "content": "(NextDimension)"
+    },
+    {
+      "file_offset": "0x20BCD",
+      "va": "0x00008CFD",
+      "length": 56,
+      "content": "/usr/lib/NextStep/Displays/NeXTdimension.psdrvr/NDserver"
+    },
+    {
+      "file_offset": "0x20C27",
+      "va": "0x00008D57",
+      "length": 9,
+      "content": "ps_server"
+    },
+    {
+      "file_offset": "0x20C77",
+      "va": "0x00008DA7",
+      "length": 27,
+      "content": "{1 2.2 div exp } dup dup {}"
+    },
+    {
+      "file_offset": "0x20DF8",
+      "va": "0x00008F28",
+      "length": 13,
+      "content": "malloc failed"
+    },
+    {
+      "file_offset": "0x20E1A",
+      "va": "0x00008F4A",
+      "length": 21,
+      "content": "as_newRead: no memory"
+    },
+    {
+      "file_offset": "0x20E30",
+      "va": "0x00008F60",
+      "length": 53,
+      "content": "as_new_message: incorrect id for continuation message"
+    },
+    {
+      "file_offset": "0x20E66",
+      "va": "0x00008F96",
+      "length": 30,
+      "content": "as_read: size mismatch on read"
+    },
+    {
+      "file_offset": "0x20E85",
+      "va": "0x00008FB5",
+      "length": 42,
+      "content": "as_read: size mismatch on out-of-band read"
+    },
+    {
+      "file_offset": "0x20ED5",
+      "va": "0x00009005",
+      "length": 8,
+      "content": "Detached"
+    },
+    {
+      "file_offset": "0x20EDE",
+      "va": "0x0000900E",
+      "length": 11,
+      "content": "Deallocated"
+    },
+    {
+      "file_offset": "0x20EEA",
+      "va": "0x0000901A",
+      "length": 9,
+      "content": "Unloading"
+    },
+    {
+      "file_offset": "0x20EF4",
+      "va": "0x00009024",
+      "length": 6,
+      "content": "Loaded"
+    },
+    {
+      "file_offset": "0x20EFB",
+      "va": "0x0000902B",
+      "length": 7,
+      "content": "Loading"
+    },
+    {
+      "file_offset": "0x20F03",
+      "va": "0x00009033",
+      "length": 9,
+      "content": "Allocated"
+    },
+    {
+      "file_offset": "0x20F0D",
+      "va": "0x0000903D",
+      "length": 10,
+      "content": "Allocating"
+    },
+    {
+      "file_offset": "0x20F18",
+      "va": "0x00009048",
+      "length": 6,
+      "content": "Zombie"
+    },
+    {
+      "file_offset": "0x20F83",
+      "va": "0x000090B3",
+      "length": 67,
+      "content": "/usr/lib/NextStep/Displays/NeXTdimension.psdrvr/ND_MachDriver_reloc"
+    },
+    {
+      "file_offset": "0x21098",
+      "va": "0x000091C8",
+      "length": 21,
+      "content": "/etc/kern_loader.conf"
+    },
+    {
+      "file_offset": "0x210BA",
+      "va": "0x000091EA",
+      "length": 11,
+      "content": "parent_port"
+    },
+    {
+      "file_offset": "0x210C6",
+      "va": "0x000091F6",
+      "length": 18,
+      "content": "ND_Port_check_in()"
+    },
+    {
+      "file_offset": "0x210E7",
+      "va": "0x00009217",
+      "length": 15,
+      "content": "server detached"
+    },
+    {
+      "file_offset": "0x210F7",
+      "va": "0x00009227",
+      "length": 28,
+      "content": "server won't unload properly"
+    },
+    {
+      "file_offset": "0x21114",
+      "va": "0x00009244",
+      "length": 31,
+      "content": "server deleted during operation"
+    },
+    {
+      "file_offset": "0x21134",
+      "va": "0x00009264",
+      "length": 28,
+      "content": "can't allocate server memory"
+    },
+    {
+      "file_offset": "0x21151",
+      "va": "0x00009281",
+      "length": 21,
+      "content": "relocatable malformed"
+    },
+    {
+      "file_offset": "0x21167",
+      "va": "0x00009297",
+      "length": 29,
+      "content": "can't open server relocatable"
+    },
+    {
+      "file_offset": "0x21185",
+      "va": "0x000092B5",
+      "length": 17,
+      "content": "server won't load"
+    },
+    {
+      "file_offset": "0x21197",
+      "va": "0x000092C7",
+      "length": 21,
+      "content": "server won't relocate"
+    },
+    {
+      "file_offset": "0x211AD",
+      "va": "0x000092DD",
+      "length": 23,
+      "content": "port already advertised"
+    },
+    {
+      "file_offset": "0x211C5",
+      "va": "0x000092F5",
+      "length": 21,
+      "content": "server already exists"
+    },
+    {
+      "file_offset": "0x211DB",
+      "va": "0x0000930B",
+      "length": 18,
+      "content": "need a server name"
+    },
+    {
+      "file_offset": "0x211EE",
+      "va": "0x0000931E",
+      "length": 15,
+      "content": "server unloaded"
+    },
+    {
+      "file_offset": "0x211FE",
+      "va": "0x0000932E",
+      "length": 13,
+      "content": "server loaded"
+    },
+    {
+      "file_offset": "0x2120C",
+      "va": "0x0000933C",
+      "length": 14,
+      "content": "unknown server"
+    },
+    {
+      "file_offset": "0x2121B",
+      "va": "0x0000934B",
+      "length": 19,
+      "content": "permission required"
+    },
+    {
+      "file_offset": "0x2122F",
+      "va": "0x0000935F",
+      "length": 13,
+      "content": "server_loader"
+    },
+    {
+      "file_offset": "0x0402C",
+      "va": "0xF800402C",
+      "length": 10,
+      "content": "IIH I(@0.h"
+    },
+    {
+      "file_offset": "0x0404C",
+      "va": "0xF800404C",
+      "length": 10,
+      "content": "IIH I(@0.h"
+    },
+    {
+      "file_offset": "0x0406C",
+      "va": "0xF800406C",
+      "length": 10,
+      "content": "IIH I(@0.h"
+    },
+    {
+      "file_offset": "0x0408C",
+      "va": "0xF800408C",
+      "length": 10,
+      "content": "IIH I(@0.h"
+    },
+    {
+      "file_offset": "0x040AC",
+      "va": "0xF80040AC",
+      "length": 10,
+      "content": "IIH I(@0&)"
+    },
+    {
+      "file_offset": "0x040B8",
+      "va": "0xF80040B8",
+      "length": 6,
+      "content": "I(@0.h"
+    },
+    {
+      "file_offset": "0x040D4",
+      "va": "0xF80040D4",
+      "length": 10,
+      "content": "IIH I(@0&)"
+    },
+    {
+      "file_offset": "0x040E0",
+      "va": "0xF80040E0",
+      "length": 6,
+      "content": "I(@0.h"
+    },
+    {
+      "file_offset": "0x04248",
+      "va": "0xF8004248",
+      "length": 5,
+      "content": "I@E4x"
+    },
+    {
+      "file_offset": "0x04312",
+      "va": "0xF8004312",
+      "length": 7,
+      "content": "s I@E4x"
+    },
+    {
+      "file_offset": "0x046CC",
+      "va": "0xF80046CC",
+      "length": 5,
+      "content": "I)@ h"
+    },
+    {
+      "file_offset": "0x046F0",
+      "va": "0xF80046F0",
+      "length": 5,
+      "content": "I@D5p"
+    },
+    {
+      "file_offset": "0x0470A",
+      "va": "0xF800470A",
+      "length": 4,
+      "content": "H0.("
+    },
+    {
+      "file_offset": "0x0472C",
+      "va": "0xF800472C",
+      "length": 5,
+      "content": "I)@ h"
+    },
+    {
+      "file_offset": "0x04750",
+      "va": "0xF8004750",
+      "length": 5,
+      "content": "I@D5p"
+    },
+    {
+      "file_offset": "0x0476A",
+      "va": "0xF800476A",
+      "length": 4,
+      "content": "H0.("
+    },
+    {
+      "file_offset": "0x0EF39",
+      "va": "0xF800EF39",
+      "length": 5,
+      "content": "@x-,B"
+    },
+    {
+      "file_offset": "0x23C1C",
+      "va": "0xF8023C1C",
+      "length": 6,
+      "content": "_Start"
+    },
+    {
+      "file_offset": "0x23C23",
+      "va": "0xF8023C23",
+      "length": 16,
+      "content": "_CIEABCImageInit"
+    },
+    {
+      "file_offset": "0x23C34",
+      "va": "0xF8023C34",
+      "length": 15,
+      "content": "_CIEASampleProc"
+    },
+    {
+      "file_offset": "0x23C44",
+      "va": "0xF8023C44",
+      "length": 11,
+      "content": "_CantHappen"
+    },
+    {
+      "file_offset": "0x23C50",
+      "va": "0xF8023C50",
+      "length": 13,
+      "content": "_ConvertColor"
+    },
+    {
+      "file_offset": "0x23C5E",
+      "va": "0xF8023C5E",
+      "length": 19,
+      "content": "_CrCMYKAdjustParams"
+    },
+    {
+      "file_offset": "0x23C72",
+      "va": "0xF8023C72",
+      "length": 15,
+      "content": "_FindDiffBounds"
+    },
+    {
+      "file_offset": "0x23C82",
+      "va": "0xF8023C82",
+      "length": 14,
+      "content": "_FindRCacheFor"
+    },
+    {
+      "file_offset": "0x23C91",
+      "va": "0xF8023C91",
+      "length": 12,
+      "content": "_LAddToDirty"
+    },
+    {
+      "file_offset": "0x23C9E",
+      "va": "0xF8023C9E",
+      "length": 11,
+      "content": "_LFlushBits"
+    },
+    {
+      "file_offset": "0x23CAA",
+      "va": "0xF8023CAA",
+      "length": 5,
+      "content": "_Mark"
+    },
+    {
+      "file_offset": "0x23CB0",
+      "va": "0xF8023CB0",
+      "length": 8,
+      "content": "_NXGetWi"
+    },
+    {
+      "file_offset": "0x27D1F",
+      "va": "0xF8027D1F",
+      "length": 7,
+      "content": "~E`qx <"
+    },
+    {
+      "file_offset": "0x2AB7C",
+      "va": "0xF802AB7C",
+      "length": 5,
+      "content": ";gboR"
+    },
+    {
+      "file_offset": "0x2CC23",
+      "va": "0xF802CC23",
+      "length": 4,
+      "content": "I`ye"
+    },
+    {
+      "file_offset": "0x2E84B",
+      "va": "0xF802E84B",
+      "length": 4,
+      "content": "mPBM"
+    },
+    {
+      "file_offset": "0x2EE4A",
+      "va": "0xF802EE4A",
+      "length": 6,
+      "content": "BYcBG:"
+    },
+    {
+      "file_offset": "0x0137F",
+      "va": "0xF80B537F",
+      "length": 4,
+      "content": "#A!r"
+    },
+    {
+      "file_offset": "0x02D7A",
+      "va": "0xF80B6D7A",
+      "length": 4,
+      "content": "_vGH"
+    }
+  ],
+  "xrefs": [
+    {
+      "code_addr": "0x18294",
+      "string_va": "0x00008BEA",
+      "string_content": "NDDriver: ND_Load_MachDriver",
+      "full_string": "NDDriver: ND_Load_MachDriver",
+      "byte_offset_into_string": 0,
+      "insn": "PEA 0x00008BEA",
+      "ref_type": "pea",
+      "enclosing_function_addr": "0x18268",
+      "pattern": "m68k:pea",
+      "arch": "m68k"
+    },
+    {
+      "code_addr": "0x182AC",
+      "string_va": "0x00008C07",
+      "string_content": "NextDimension",
+      "full_string": "NextDimension",
+      "byte_offset_into_string": 0,
+      "insn": "PEA 0x00008C07",
+      "ref_type": "pea",
+      "enclosing_function_addr": "0x18268",
+      "pattern": "m68k:pea",
+      "arch": "m68k"
+    },
+    {
+      "code_addr": "0x182CE",
+      "string_va": "0x00008C16",
+      "string_content": "NDDriver: netname_lookup: ND timeout",
+      "full_string": "NDDriver: netname_lookup: ND timeout",
+      "byte_offset_into_string": 0,
+      "insn": "PEA 0x00008C16",
+      "ref_type": "pea",
+      "enclosing_function_addr": "0x18268",
+      "pattern": "m68k:pea",
+      "arch": "m68k"
+    },
+    {
+      "code_addr": "0x182EE",
+      "string_va": "0x00008C3B",
+      "string_content": "NDDriver: ND_GetBoardList",
+      "full_string": "NDDriver: ND_GetBoardList",
+      "byte_offset_into_string": 0,
+      "insn": "PEA 0x00008C3B",
+      "ref_type": "pea",
+      "enclosing_function_addr": "0x18268",
+      "pattern": "m68k:pea",
+      "arch": "m68k"
+    },
+    {
+      "code_addr": "0x18716",
+      "string_va": "0x00008C7D",
+      "string_content": "port_allocate",
+      "full_string": "port_allocate",
+      "byte_offset_into_string": 0,
+      "insn": "PEA 0x00008C7D",
+      "ref_type": "pea",
+      "enclosing_function_addr": "0x186C2",
+      "pattern": "m68k:pea",
+      "arch": "m68k"
+    },
+    {
+      "code_addr": "0x1879E",
+      "string_va": "0x00008CE5",
+      "string_content": "-NDSlot",
+      "full_string": "-NDSlot",
+      "byte_offset_into_string": 0,
+      "insn": "PEA 0x00008CE5",
+      "ref_type": "pea",
+      "enclosing_function_addr": "0x186C2",
+      "pattern": "m68k:pea",
+      "arch": "m68k"
+    },
+    {
+      "code_addr": "0x187A4",
+      "string_va": "0x00008CED",
+      "string_content": "(NextDimension)",
+      "full_string": "(NextDimension)",
+      "byte_offset_into_string": 0,
+      "insn": "PEA 0x00008CED",
+      "ref_type": "pea",
+      "enclosing_function_addr": "0x186C2",
+      "pattern": "m68k:pea",
+      "arch": "m68k"
+    },
+    {
+      "code_addr": "0x187AA",
+      "string_va": "0x00008CFD",
+      "string_content": "/usr/lib/NextStep/Displays/NeXTdimension.psdrvr/NDserver",
+      "full_string": "/usr/lib/NextStep/Displays/NeXTdimension.psdrvr/NDserver",
+      "byte_offset_into_string": 0,
+      "insn": "PEA 0x00008CFD",
+      "ref_type": "pea",
+      "enclosing_function_addr": "0x186C2",
+      "pattern": "m68k:pea",
+      "arch": "m68k"
+    },
+    {
+      "code_addr": "0x187D2",
+      "string_va": "0x00008D57",
+      "string_content": "ps_server",
+      "full_string": "ps_server",
+      "byte_offset_into_string": 0,
+      "insn": "PEA 0x00008D57",
+      "ref_type": "pea",
+      "enclosing_function_addr": "0x186C2",
+      "pattern": "m68k:pea",
+      "arch": "m68k"
+    },
+    {
+      "code_addr": "0x1AD40",
+      "string_va": "0x00008F28",
+      "string_content": "malloc failed",
+      "full_string": "malloc failed",
+      "byte_offset_into_string": 0,
+      "insn": "PEA 0x00008F28",
+      "ref_type": "pea",
+      "enclosing_function_addr": "0x1AD22",
+      "pattern": "m68k:pea",
+      "arch": "m68k"
+    },
+    {
+      "code_addr": "0x1AF76",
+      "string_va": "0x00008F4A",
+      "string_content": "as_newRead: no memory",
+      "full_string": "as_newRead: no memory",
+      "byte_offset_into_string": 0,
+      "insn": "PEA 0x00008F4A",
+      "ref_type": "pea",
+      "enclosing_function_addr": "0x1AF54",
+      "pattern": "m68k:pea",
+      "arch": "m68k"
+    },
+    {
+      "code_addr": "0x1AFA0",
+      "string_va": "0x00008F4A",
+      "string_content": "as_newRead: no memory",
+      "full_string": "as_newRead: no memory",
+      "byte_offset_into_string": 0,
+      "insn": "PEA 0x00008F4A",
+      "ref_type": "pea",
+      "enclosing_function_addr": "0x1AF54",
+      "pattern": "m68k:pea",
+      "arch": "m68k"
+    },
+    {
+      "code_addr": "0x1B080",
+      "string_va": "0x00008F60",
+      "string_content": "as_new_message: incorrect id for continuation message",
+      "full_string": "as_new_message: incorrect id for continuation message",
+      "byte_offset_into_string": 0,
+      "insn": "PEA 0x00008F60",
+      "ref_type": "pea",
+      "enclosing_function_addr": "0x1AFF2",
+      "pattern": "m68k:pea",
+      "arch": "m68k"
+    },
+    {
+      "code_addr": "0x1B0D4",
+      "string_va": "0x00008F96",
+      "string_content": "as_read: size mismatch on read",
+      "full_string": "as_read: size mismatch on read",
+      "byte_offset_into_string": 0,
+      "insn": "PEA 0x00008F96",
+      "ref_type": "pea",
+      "enclosing_function_addr": "0x1B0BC",
+      "pattern": "m68k:pea",
+      "arch": "m68k"
+    },
+    {
+      "code_addr": "0x1B154",
+      "string_va": "0x00008FB5",
+      "string_content": "as_read: size mismatch on out-of-band read",
+      "full_string": "as_read: size mismatch on out-of-band read",
+      "byte_offset_into_string": 0,
+      "insn": "PEA 0x00008FB5",
+      "ref_type": "pea",
+      "enclosing_function_addr": "0x1B0BC",
+      "pattern": "m68k:pea",
+      "arch": "m68k"
+    },
+    {
+      "code_addr": "0x1F1B6",
+      "string_va": "0x00008C55",
+      "string_content": "NeXTdimension",
+      "full_string": "NeXTdimension",
+      "byte_offset_into_string": 0,
+      "insn": "PEA 0x00008C55",
+      "ref_type": "pea",
+      "enclosing_function_addr": "0x1F162",
+      "pattern": "m68k:pea",
+      "arch": "m68k"
+    },
+    {
+      "code_addr": "0x1F224",
+      "string_va": "0x000090B3",
+      "string_content": "/usr/lib/NextStep/Displays/NeXTdimension.psdrvr/ND_MachDriver_reloc",
+      "full_string": "/usr/lib/NextStep/Displays/NeXTdimension.psdrvr/ND_MachDriver_reloc",
+      "byte_offset_into_string": 0,
+      "insn": "PEA 0x000090B3",
+      "ref_type": "pea",
+      "enclosing_function_addr": "0x1F162",
+      "pattern": "m68k:pea",
+      "arch": "m68k"
+    },
+    {
+      "code_addr": "0x1F258",
+      "string_va": "0x00008C55",
+      "string_content": "NeXTdimension",
+      "full_string": "NeXTdimension",
+      "byte_offset_into_string": 0,
+      "insn": "PEA 0x00008C55",
+      "ref_type": "pea",
+      "enclosing_function_addr": "0x1F162",
+      "pattern": "m68k:pea",
+      "arch": "m68k"
+    },
+    {
+      "code_addr": "0x1F2FC",
+      "string_va": "0x00008C55",
+      "string_content": "NeXTdimension",
+      "full_string": "NeXTdimension",
+      "byte_offset_into_string": 0,
+      "insn": "PEA 0x00008C55",
+      "ref_type": "pea",
+      "enclosing_function_addr": "0x1F2CA",
+      "pattern": "m68k:pea",
+      "arch": "m68k"
+    },
+    {
+      "code_addr": "0x1F318",
+      "string_va": "0x00008C55",
+      "string_content": "NeXTdimension",
+      "full_string": "NeXTdimension",
+      "byte_offset_into_string": 0,
+      "insn": "PEA 0x00008C55",
+      "ref_type": "pea",
+      "enclosing_function_addr": "0x1F2CA",
+      "pattern": "m68k:pea",
+      "arch": "m68k"
+    },
+    {
+      "code_addr": "0x1F3AE",
+      "string_va": "0x000091C8",
+      "string_content": "/etc/kern_loader.conf",
+      "full_string": "/etc/kern_loader.conf",
+      "byte_offset_into_string": 0,
+      "insn": "PEA 0x000091C8",
+      "ref_type": "pea",
+      "enclosing_function_addr": "0x1F392",
+      "pattern": "m68k:pea",
+      "arch": "m68k"
+    },
+    {
+      "code_addr": "0x1F432",
+      "string_va": "0x000090B3",
+      "string_content": "/usr/lib/NextStep/Displays/NeXTdimension.psdrvr/ND_MachDriver_reloc",
+      "full_string": "/usr/lib/NextStep/Displays/NeXTdimension.psdrvr/ND_MachDriver_reloc",
+      "byte_offset_into_string": 0,
+      "insn": "PEA 0x000090B3",
+      "ref_type": "pea",
+      "enclosing_function_addr": "0x1F392",
+      "pattern": "m68k:pea",
+      "arch": "m68k"
+    },
+    {
+      "code_addr": "0x1F458",
+      "string_va": "0x000091C8",
+      "string_content": "/etc/kern_loader.conf",
+      "full_string": "/etc/kern_loader.conf",
+      "byte_offset_into_string": 0,
+      "insn": "PEA 0x000091C8",
+      "ref_type": "pea",
+      "enclosing_function_addr": "0x1F392",
+      "pattern": "m68k:pea",
+      "arch": "m68k"
+    },
+    {
+      "code_addr": "0x1F47E",
+      "string_va": "0x000090B3",
+      "string_content": "/usr/lib/NextStep/Displays/NeXTdimension.psdrvr/ND_MachDriver_reloc",
+      "full_string": "/usr/lib/NextStep/Displays/NeXTdimension.psdrvr/ND_MachDriver_reloc",
+      "byte_offset_into_string": 0,
+      "insn": "PEA 0x000090B3",
+      "ref_type": "pea",
+      "enclosing_function_addr": "0x1F392",
+      "pattern": "m68k:pea",
+      "arch": "m68k"
+    },
+    {
+      "code_addr": "0x1F4AE",
+      "string_va": "0x000091EA",
+      "string_content": "parent_port",
+      "full_string": "parent_port",
+      "byte_offset_into_string": 0,
+      "insn": "PEA 0x000091EA",
+      "ref_type": "pea",
+      "enclosing_function_addr": "0x1F4A4",
+      "pattern": "m68k:pea",
+      "arch": "m68k"
+    },
+    {
+      "code_addr": "0x1F4CC",
+      "string_va": "0x000091F6",
+      "string_content": "ND_Port_check_in()",
+      "full_string": "ND_Port_check_in()",
+      "byte_offset_into_string": 0,
+      "insn": "PEA 0x000091F6",
+      "ref_type": "pea",
+      "enclosing_function_addr": "0x1F4A4",
+      "pattern": "m68k:pea",
+      "arch": "m68k"
+    },
+    {
+      "code_addr": "0x1F540",
+      "string_va": "0x0000929E",
+      "string_content": "pen server relocatable",
+      "full_string": "can't open server relocatable",
+      "byte_offset_into_string": 7,
+      "insn": "LEA 0x0000929E, A0",
+      "ref_type": "lea",
+      "enclosing_function_addr": "0x1F52E",
+      "pattern": "m68k:lea",
+      "arch": "m68k"
+    },
+    {
+      "code_addr": "0x2041C",
+      "string_va": "0x0000935F",
+      "string_content": "server_loader",
+      "full_string": "server_loader",
+      "byte_offset_into_string": 0,
+      "insn": "PEA 0x0000935F",
+      "ref_type": "pea",
+      "enclosing_function_addr": "0x20414",
+      "pattern": "m68k:pea",
+      "arch": "m68k"
+    }
+  ],
+  "by_function": {
+    "m68k:0x18268": [
+      "NDDriver: ND_GetBoardList",
+      "NDDriver: ND_Load_MachDriver",
+      "NDDriver: netname_lookup: ND timeout",
+      "NextDimension"
+    ],
+    "m68k:0x186C2": [
+      "(NextDimension)",
+      "-NDSlot",
+      "/usr/lib/NextStep/Displays/NeXTdimension.psdrvr/NDserver",
+      "port_allocate",
+      "ps_server"
+    ],
+    "m68k:0x1AD22": [
+      "malloc failed"
+    ],
+    "m68k:0x1AF54": [
+      "as_newRead: no memory"
+    ],
+    "m68k:0x1AFF2": [
+      "as_new_message: incorrect id for continuation message"
+    ],
+    "m68k:0x1B0BC": [
+      "as_read: size mismatch on out-of-band read",
+      "as_read: size mismatch on read"
+    ],
+    "m68k:0x1F162": [
+      "/usr/lib/NextStep/Displays/NeXTdimension.psdrvr/ND_MachDriver_reloc",
+      "NeXTdimension"
+    ],
+    "m68k:0x1F2CA": [
+      "NeXTdimension"
+    ],
+    "m68k:0x1F392": [
+      "/etc/kern_loader.conf",
+      "/usr/lib/NextStep/Displays/NeXTdimension.psdrvr/ND_MachDriver_reloc"
+    ],
+    "m68k:0x1F4A4": [
+      "ND_Port_check_in()",
+      "parent_port"
+    ],
+    "m68k:0x1F52E": [
+      "pen server relocatable"
+    ],
+    "m68k:0x20414": [
+      "server_loader"
+    ]
+  },
+  "unreferenced_strings": [
+    {
+      "file_offset": "0x20B33",
+      "va": "0x00008C63",
+      "length": 14,
+      "content": "nd_currentsync"
+    },
+    {
+      "file_offset": "0x20B42",
+      "va": "0x00008C72",
+      "length": 10,
+      "content": "nd_setsync"
+    },
+    {
+      "file_offset": "0x20C77",
+      "va": "0x00008DA7",
+      "length": 27,
+      "content": "{1 2.2 div exp } dup dup {}"
+    },
+    {
+      "file_offset": "0x20ED5",
+      "va": "0x00009005",
+      "length": 8,
+      "content": "Detached"
+    },
+    {
+      "file_offset": "0x20EDE",
+      "va": "0x0000900E",
+      "length": 11,
+      "content": "Deallocated"
+    },
+    {
+      "file_offset": "0x20EEA",
+      "va": "0x0000901A",
+      "length": 9,
+      "content": "Unloading"
+    },
+    {
+      "file_offset": "0x20EF4",
+      "va": "0x00009024",
+      "length": 6,
+      "content": "Loaded"
+    },
+    {
+      "file_offset": "0x20EFB",
+      "va": "0x0000902B",
+      "length": 7,
+      "content": "Loading"
+    },
+    {
+      "file_offset": "0x20F03",
+      "va": "0x00009033",
+      "length": 9,
+      "content": "Allocated"
+    },
+    {
+      "file_offset": "0x20F0D",
+      "va": "0x0000903D",
+      "length": 10,
+      "content": "Allocating"
+    },
+    {
+      "file_offset": "0x20F18",
+      "va": "0x00009048",
+      "length": 6,
+      "content": "Zombie"
+    },
+    {
+      "file_offset": "0x210E7",
+      "va": "0x00009217",
+      "length": 15,
+      "content": "server detached"
+    },
+    {
+      "file_offset": "0x210F7",
+      "va": "0x00009227",
+      "length": 28,
+      "content": "server won't unload properly"
+    },
+    {
+      "file_offset": "0x21114",
+      "va": "0x00009244",
+      "length": 31,
+      "content": "server deleted during operation"
+    },
+    {
+      "file_offset": "0x21134",
+      "va": "0x00009264",
+      "length": 28,
+      "content": "can't allocate server memory"
+    },
+    {
+      "file_offset": "0x21151",
+      "va": "0x00009281",
+      "length": 21,
+      "content": "relocatable malformed"
+    },
+    {
+      "file_offset": "0x21185",
+      "va": "0x000092B5",
+      "length": 17,
+      "content": "server won't load"
+    },
+    {
+      "file_offset": "0x21197",
+      "va": "0x000092C7",
+      "length": 21,
+      "content": "server won't relocate"
+    },
+    {
+      "file_offset": "0x211AD",
+      "va": "0x000092DD",
+      "length": 23,
+      "content": "port already advertised"
+    },
+    {
+      "file_offset": "0x211C5",
+      "va": "0x000092F5",
+      "length": 21,
+      "content": "server already exists"
+    },
+    {
+      "file_offset": "0x211DB",
+      "va": "0x0000930B",
+      "length": 18,
+      "content": "need a server name"
+    },
+    {
+      "file_offset": "0x211EE",
+      "va": "0x0000931E",
+      "length": 15,
+      "content": "server unloaded"
+    },
+    {
+      "file_offset": "0x211FE",
+      "va": "0x0000932E",
+      "length": 13,
+      "content": "server loaded"
+    },
+    {
+      "file_offset": "0x2120C",
+      "va": "0x0000933C",
+      "length": 14,
+      "content": "unknown server"
+    },
+    {
+      "file_offset": "0x2121B",
+      "va": "0x0000934B",
+      "length": 19,
+      "content": "permission required"
+    },
+    {
+      "file_offset": "0x0402C",
+      "va": "0xF800402C",
+      "length": 10,
+      "content": "IIH I(@0.h"
+    },
+    {
+      "file_offset": "0x0404C",
+      "va": "0xF800404C",
+      "length": 10,
+      "content": "IIH I(@0.h"
+    },
+    {
+      "file_offset": "0x0406C",
+      "va": "0xF800406C",
+      "length": 10,
+      "content": "IIH I(@0.h"
+    },
+    {
+      "file_offset": "0x0408C",
+      "va": "0xF800408C",
+      "length": 10,
+      "content": "IIH I(@0.h"
+    },
+    {
+      "file_offset": "0x040AC",
+      "va": "0xF80040AC",
+      "length": 10,
+      "content": "IIH I(@0&)"
+    },
+    {
+      "file_offset": "0x040B8",
+      "va": "0xF80040B8",
+      "length": 6,
+      "content": "I(@0.h"
+    },
+    {
+      "file_offset": "0x040D4",
+      "va": "0xF80040D4",
+      "length": 10,
+      "content": "IIH I(@0&)"
+    },
+    {
+      "file_offset": "0x040E0",
+      "va": "0xF80040E0",
+      "length": 6,
+      "content": "I(@0.h"
+    },
+    {
+      "file_offset": "0x04248",
+      "va": "0xF8004248",
+      "length": 5,
+      "content": "I@E4x"
+    },
+    {
+      "file_offset": "0x04312",
+      "va": "0xF8004312",
+      "length": 7,
+      "content": "s I@E4x"
+    },
+    {
+      "file_offset": "0x046CC",
+      "va": "0xF80046CC",
+      "length": 5,
+      "content": "I)@ h"
+    },
+    {
+      "file_offset": "0x046F0",
+      "va": "0xF80046F0",
+      "length": 5,
+      "content": "I@D5p"
+    },
+    {
+      "file_offset": "0x0470A",
+      "va": "0xF800470A",
+      "length": 4,
+      "content": "H0.("
+    },
+    {
+      "file_offset": "0x0472C",
+      "va": "0xF800472C",
+      "length": 5,
+      "content": "I)@ h"
+    },
+    {
+      "file_offset": "0x04750",
+      "va": "0xF8004750",
+      "length": 5,
+      "content": "I@D5p"
+    },
+    {
+      "file_offset": "0x0476A",
+      "va": "0xF800476A",
+      "length": 4,
+      "content": "H0.("
+    },
+    {
+      "file_offset": "0x0EF39",
+      "va": "0xF800EF39",
+      "length": 5,
+      "content": "@x-,B"
+    },
+    {
+      "file_offset": "0x23C1C",
+      "va": "0xF8023C1C",
+      "length": 6,
+      "content": "_Start"
+    },
+    {
+      "file_offset": "0x23C23",
+      "va": "0xF8023C23",
+      "length": 16,
+      "content": "_CIEABCImageInit"
+    },
+    {
+      "file_offset": "0x23C34",
+      "va": "0xF8023C34",
+      "length": 15,
+      "content": "_CIEASampleProc"
+    },
+    {
+      "file_offset": "0x23C44",
+      "va": "0xF8023C44",
+      "length": 11,
+      "content": "_CantHappen"
+    },
+    {
+      "file_offset": "0x23C50",
+      "va": "0xF8023C50",
+      "length": 13,
+      "content": "_ConvertColor"
+    },
+    {
+      "file_offset": "0x23C5E",
+      "va": "0xF8023C5E",
+      "length": 19,
+      "content": "_CrCMYKAdjustParams"
+    },
+    {
+      "file_offset": "0x23C72",
+      "va": "0xF8023C72",
+      "length": 15,
+      "content": "_FindDiffBounds"
+    },
+    {
+      "file_offset": "0x23C82",
+      "va": "0xF8023C82",
+      "length": 14,
+      "content": "_FindRCacheFor"
+    },
+    {
+      "file_offset": "0x23C91",
+      "va": "0xF8023C91",
+      "length": 12,
+      "content": "_LAddToDirty"
+    },
+    {
+      "file_offset": "0x23C9E",
+      "va": "0xF8023C9E",
+      "length": 11,
+      "content": "_LFlushBits"
+    },
+    {
+      "file_offset": "0x23CAA",
+      "va": "0xF8023CAA",
+      "length": 5,
+      "content": "_Mark"
+    },
+    {
+      "file_offset": "0x23CB0",
+      "va": "0xF8023CB0",
+      "length": 8,
+      "content": "_NXGetWi"
+    },
+    {
+      "file_offset": "0x27D1F",
+      "va": "0xF8027D1F",
+      "length": 7,
+      "content": "~E`qx <"
+    },
+    {
+      "file_offset": "0x2AB7C",
+      "va": "0xF802AB7C",
+      "length": 5,
+      "content": ";gboR"
+    },
+    {
+      "file_offset": "0x2CC23",
+      "va": "0xF802CC23",
+      "length": 4,
+      "content": "I`ye"
+    },
+    {
+      "file_offset": "0x2E84B",
+      "va": "0xF802E84B",
+      "length": 4,
+      "content": "mPBM"
+    },
+    {
+      "file_offset": "0x2EE4A",
+      "va": "0xF802EE4A",
+      "length": 6,
+      "content": "BYcBG:"
+    },
+    {
+      "file_offset": "0x0137F",
+      "va": "0xF80B537F",
+      "length": 4,
+      "content": "#A!r"
+    },
+    {
+      "file_offset": "0x02D7A",
+      "va": "0xF80B6D7A",
+      "length": 4,
+      "content": "_vGH"
+    }
+  ]
+}

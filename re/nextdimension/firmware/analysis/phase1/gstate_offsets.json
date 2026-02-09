@@ -1,0 +1,485 @@
+{
+  "metadata": {
+    "binary": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/firmware/extracted/ND_MachDriver___TEXT_clean_window.bin",
+    "vmaddr": "0xf8000000",
+    "total_words": 50176,
+    "code_words": 28928,
+    "code_regions": 16,
+    "pass1_direct": 10,
+    "pass2_orh_fwd_total": 43,
+    "pass2_fwd_resolved": 0,
+    "pass2_fwd_unresolved": 43,
+    "pass3_backward": 0,
+    "total_resolved_entries": 10,
+    "lookahead": 12,
+    "lookback": 12,
+    "notes": [
+      "Most orh r15 sites (43 total) are in pipelined FP rendering code where r31 is used as a scratch register. The orh result is immediately clobbered by the next integer instruction (xor/andnot/orh writing to r31).",
+      "GState field accesses in this binary primarily use direct ld/st simm16(r15) with short-range signed 16-bit offsets.",
+      "Register-indexed accesses (4 st_reg + 2 ld_reg) have unknown effective offsets because the index register value is dynamic.",
+      "Offsets are relative to r15 (GState base pointer). Negative offsets indicate fields below the base address."
+    ]
+  },
+  "offsets": [
+    {
+      "pattern": "direct_st_reg",
+      "addr": "0x008fb8",
+      "vmaddr": "0xf8008fb8",
+      "raw": "0x19e3ff6f",
+      "mnemonic": "st.l r3, r31(r15)",
+      "effective_offset": null,
+      "access_type": "WRITE_REG"
+    },
+    {
+      "pattern": "direct_st",
+      "addr": "0x009540",
+      "vmaddr": "0xf8009540",
+      "raw": "0x1dffff6f",
+      "mnemonic": "st.l r31, -145(r15)",
+      "effective_offset": "0xffffff6f",
+      "access_type": "WRITE",
+      "width": 4
+    },
+    {
+      "pattern": "direct_st_reg",
+      "addr": "0x00e8c0",
+      "vmaddr": "0xf800e8c0",
+      "raw": "0x19ff6414",
+      "mnemonic": "st.s r31, r12(r15)",
+      "effective_offset": null,
+      "access_type": "WRITE_REG"
+    },
+    {
+      "pattern": "direct_st",
+      "addr": "0x00e8c4",
+      "vmaddr": "0xf800e8c4",
+      "raw": "0x1dff6514",
+      "mnemonic": "st.s r31, 25876(r15)",
+      "effective_offset": "0x00006514",
+      "access_type": "WRITE",
+      "width": 2
+    },
+    {
+      "pattern": "direct_st_reg",
+      "addr": "0x024aa4",
+      "vmaddr": "0xf8024aa4",
+      "raw": "0x19f1706d",
+      "mnemonic": "st.l r17, r14(r15)",
+      "effective_offset": null,
+      "access_type": "WRITE_REG"
+    },
+    {
+      "pattern": "direct_st_reg",
+      "addr": "0x025ae4",
+      "vmaddr": "0xf8025ae4",
+      "raw": "0x19e8f667",
+      "mnemonic": "st.l r8, r30(r15)",
+      "effective_offset": null,
+      "access_type": "WRITE_REG"
+    },
+    {
+      "pattern": "direct_ld",
+      "addr": "0x02626c",
+      "vmaddr": "0xf802626c",
+      "raw": "0x15e2acde",
+      "mnemonic": "ld.s -21282(r15), r2",
+      "effective_offset": "0xffffacde",
+      "access_type": "READ",
+      "width": 2
+    },
+    {
+      "pattern": "direct_st",
+      "addr": "0x0263b4",
+      "vmaddr": "0xf80263b4",
+      "raw": "0x1de78ad5",
+      "mnemonic": "st.l r7, -29995(r15)",
+      "effective_offset": "0xffff8ad5",
+      "access_type": "WRITE",
+      "width": 4
+    },
+    {
+      "pattern": "direct_ld_reg",
+      "addr": "0x0263cc",
+      "vmaddr": "0xf80263cc",
+      "raw": "0x11e505fc",
+      "mnemonic": "ld.s r0(r15), r5",
+      "effective_offset": null,
+      "access_type": "READ_REG"
+    },
+    {
+      "pattern": "direct_ld_reg",
+      "addr": "0x02fa04",
+      "vmaddr": "0xf802fa04",
+      "raw": "0x11e69835",
+      "mnemonic": "ld.l r19(r15), r6",
+      "effective_offset": null,
+      "access_type": "READ_REG"
+    }
+  ],
+  "orh_r15_unresolved": [
+    {
+      "addr": "0x00295c",
+      "vmaddr": "0xf800295c",
+      "orh_imm16": "0x6514",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x002b50",
+      "vmaddr": "0xf8002b50",
+      "orh_imm16": "0x6914",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x002cd8",
+      "vmaddr": "0xf8002cd8",
+      "orh_imm16": "0x6514",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x002f30",
+      "vmaddr": "0xf8002f30",
+      "orh_imm16": "0x7014",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x002f48",
+      "vmaddr": "0xf8002f48",
+      "orh_imm16": "0x7014",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x002f60",
+      "vmaddr": "0xf8002f60",
+      "orh_imm16": "0x7214",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x00362c",
+      "vmaddr": "0xf800362c",
+      "orh_imm16": "0x6514",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x00398c",
+      "vmaddr": "0xf800398c",
+      "orh_imm16": "0x6514",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x0044c8",
+      "vmaddr": "0xf80044c8",
+      "orh_imm16": "0x6514",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x0045f0",
+      "vmaddr": "0xf80045f0",
+      "orh_imm16": "0x6514",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x004b50",
+      "vmaddr": "0xf8004b50",
+      "orh_imm16": "0x6514",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x004e60",
+      "vmaddr": "0xf8004e60",
+      "orh_imm16": "0x6514",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x005488",
+      "vmaddr": "0xf8005488",
+      "orh_imm16": "0x6514",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x0059f8",
+      "vmaddr": "0xf80059f8",
+      "orh_imm16": "0xff73",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x005a00",
+      "vmaddr": "0xf8005a00",
+      "orh_imm16": "0x6514",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x005b6c",
+      "vmaddr": "0xf8005b6c",
+      "orh_imm16": "0x6914",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x005c80",
+      "vmaddr": "0xf8005c80",
+      "orh_imm16": "0x6514",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x005d7c",
+      "vmaddr": "0xf8005d7c",
+      "orh_imm16": "0x6514",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x005f80",
+      "vmaddr": "0xf8005f80",
+      "orh_imm16": "0x6914",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x006140",
+      "vmaddr": "0xf8006140",
+      "orh_imm16": "0x6514",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x006c04",
+      "vmaddr": "0xf8006c04",
+      "orh_imm16": "0x1316",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x007868",
+      "vmaddr": "0xf8007868",
+      "orh_imm16": "0x6514",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x007f18",
+      "vmaddr": "0xf8007f18",
+      "orh_imm16": "0x6d14",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x008798",
+      "vmaddr": "0xf8008798",
+      "orh_imm16": "0x6514",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x008ae0",
+      "vmaddr": "0xf8008ae0",
+      "orh_imm16": "0x6514",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x008ebc",
+      "vmaddr": "0xf8008ebc",
+      "orh_imm16": "0x6514",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x009154",
+      "vmaddr": "0xf8009154",
+      "orh_imm16": "0x6514",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x0096d0",
+      "vmaddr": "0xf80096d0",
+      "orh_imm16": "0xff7b",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x009b4c",
+      "vmaddr": "0xf8009b4c",
+      "orh_imm16": "0x6d14",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x009e64",
+      "vmaddr": "0xf8009e64",
+      "orh_imm16": "0x6514",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x00a544",
+      "vmaddr": "0xf800a544",
+      "orh_imm16": "0x6514",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x00a8d0",
+      "vmaddr": "0xf800a8d0",
+      "orh_imm16": "0x6514",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x00ac0c",
+      "vmaddr": "0xf800ac0c",
+      "orh_imm16": "0x6514",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x00acf8",
+      "vmaddr": "0xf800acf8",
+      "orh_imm16": "0x6514",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x00ae1c",
+      "vmaddr": "0xf800ae1c",
+      "orh_imm16": "0x6514",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x00b12c",
+      "vmaddr": "0xf800b12c",
+      "orh_imm16": "0x6914",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x00b240",
+      "vmaddr": "0xf800b240",
+      "orh_imm16": "0x6514",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x00b2dc",
+      "vmaddr": "0xf800b2dc",
+      "orh_imm16": "0x6514",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x00b6fc",
+      "vmaddr": "0xf800b6fc",
+      "orh_imm16": "0x6914",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x00daf8",
+      "vmaddr": "0xf800daf8",
+      "orh_imm16": "0x6514",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x00de18",
+      "vmaddr": "0xf800de18",
+      "orh_imm16": "0x6914",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x01a8dc",
+      "vmaddr": "0xf801a8dc",
+      "orh_imm16": "0x421d",
+      "dest_reg": "r31",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    },
+    {
+      "addr": "0x025c40",
+      "vmaddr": "0xf8025c40",
+      "orh_imm16": "0x65a0",
+      "dest_reg": "r29",
+      "reason": "dest register clobbered before use (pipelined FP code)"
+    }
+  ],
+  "summary": {
+    "unique_offset_count": 4,
+    "unique_offsets_sorted": [
+      "0x00006514",
+      "0xffff8ad5",
+      "0xffffacde",
+      "0xffffff6f"
+    ],
+    "most_accessed": [
+      {
+        "offset": "0xffffff6f",
+        "count": 1,
+        "access_types": [
+          "WRITE"
+        ],
+        "patterns": [
+          "direct_st"
+        ],
+        "sites": [
+          "0xf8009540"
+        ]
+      },
+      {
+        "offset": "0x00006514",
+        "count": 1,
+        "access_types": [
+          "WRITE"
+        ],
+        "patterns": [
+          "direct_st"
+        ],
+        "sites": [
+          "0xf800e8c4"
+        ]
+      },
+      {
+        "offset": "0xffffacde",
+        "count": 1,
+        "access_types": [
+          "READ"
+        ],
+        "patterns": [
+          "direct_ld"
+        ],
+        "sites": [
+          "0xf802626c"
+        ]
+      },
+      {
+        "offset": "0xffff8ad5",
+        "count": 1,
+        "access_types": [
+          "WRITE"
+        ],
+        "patterns": [
+          "direct_st"
+        ],
+        "sites": [
+          "0xf80263b4"
+        ]
+      }
+    ]
+  }
+}

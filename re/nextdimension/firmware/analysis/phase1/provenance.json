@@ -1,0 +1,71 @@
+{
+  "input_artifacts": {
+    "clean_window": {
+      "path": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/firmware/extracted/ND_MachDriver___TEXT_clean_window.bin",
+      "sha256": "6fa70b233568b45ec3d1d0df14ca66c32d3f3f191d62ebb4253c64be7435b56c",
+      "size_bytes": 200704
+    },
+    "kernel": {
+      "path": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/i860_kernel.bin",
+      "sha256": "4c6db5675434c5d1ca75a1d76ba4f3f55918474276554134f7710f1e2435e6cf",
+      "size_bytes": 802816
+    },
+    "full_text": {
+      "path": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/firmware/extracted/ND_MachDriver___TEXT_section.bin",
+      "sha256": "94b35c21a2fb0b0b3f814f0a1e8443f393577d090e8da6891c4f7c6ffa7a920c",
+      "size_bytes": 730440
+    }
+  },
+  "outputs": {
+    "bri_targets.json": {
+      "sha256": "692773506cecde72c1cec502e3fff3d3b4553fed2cf8b14bbbe0f2156fbe86a7",
+      "size_bytes": 161761,
+      "input_binary": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/firmware/extracted/ND_MachDriver___TEXT_clean_window.bin",
+      "input_sha256": "6fa70b233568b45ec3d1d0df14ca66c32d3f3f191d62ebb4253c64be7435b56c"
+    },
+    "constants.json": {
+      "sha256": "554c3e7455dd4268a5929e3fdb9fb9ef01866e7a7e2af118c71608331065a217",
+      "size_bytes": 153855,
+      "input_binary": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/firmware/extracted/ND_MachDriver___TEXT_clean_window.bin",
+      "input_sha256": "6fa70b233568b45ec3d1d0df14ca66c32d3f3f191d62ebb4253c64be7435b56c"
+    },
+    "gstate_offsets.json": {
+      "sha256": "cc8b9831e5e0ccbe566cc8887fe36e1ba195c356d7b0dbce4defa9651a937598",
+      "size_bytes": 13105,
+      "input_binary": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/firmware/extracted/ND_MachDriver___TEXT_clean_window.bin",
+      "input_sha256": "6fa70b233568b45ec3d1d0df14ca66c32d3f3f191d62ebb4253c64be7435b56c"
+    },
+    "kernel_seed_transfer.json": {
+      "sha256": "96af00aa835013aaeb8aa50274d7fa05a2e4201ec79042902fcedc2d5abbf122",
+      "size_bytes": 129447,
+      "input_binary": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/firmware/extracted/ND_MachDriver___TEXT_clean_window.bin",
+      "input_sha256": "6fa70b233568b45ec3d1d0df14ca66c32d3f3f191d62ebb4253c64be7435b56c"
+    },
+    "ps_operator_table.json": {
+      "sha256": "c02e0bc39d9ede8678786f35e2480d03737c5d54debae300cc611d8bc991938c",
+      "size_bytes": 21277,
+      "input_binary": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/firmware/extracted/ND_MachDriver___TEXT_clean_window.bin",
+      "input_sha256": "6fa70b233568b45ec3d1d0df14ca66c32d3f3f191d62ebb4253c64be7435b56c"
+    },
+    "string_xrefs.json": {
+      "sha256": "dad28cf776b70f210e8b9d1a822a4fceada430ea7ebd262747077372a2f779e7",
+      "size_bytes": 30005,
+      "input_binary": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/firmware/extracted/ND_MachDriver___TEXT_clean_window.bin",
+      "input_sha256": "6fa70b233568b45ec3d1d0df14ca66c32d3f3f191d62ebb4253c64be7435b56c"
+    }
+  },
+  "bugs_affecting_outputs": [
+    {
+      "bug": "call_target() added +4 to branch target (should be inst_start + broff26<<2, no +4)",
+      "fixed_in": "i860_decode.py self-test update",
+      "affected_scripts": [
+        "bri_backward_slice.py (line 189: call targets shifted +4)"
+      ],
+      "affected_outputs": [
+        "bri_targets.json (call_targets list has +4 offset error; bri backward-slice results unaffected)"
+      ],
+      "impact": "Call target addresses in bri_targets.json are 4 bytes too high. Does NOT affect the bri source-type classification."
+    }
+  ],
+  "decoder_sha256": "c6604a7e009d9d2558a38fa78284907757d02d1cb441b38b32abb3680b9c82b8"
+}
