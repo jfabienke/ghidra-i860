@@ -17,8 +17,12 @@ def _check_type(data, field, expected_type, errors, prefix=""):
     """Check field type if present."""
     if field in data and data[field] is not None:
         if not isinstance(data[field], expected_type):
+            if isinstance(expected_type, tuple):
+                names = "/".join(t.__name__ for t in expected_type)
+            else:
+                names = expected_type.__name__
             errors.append(
-                f"{prefix}{field}: expected {expected_type.__name__}, "
+                f"{prefix}{field}: expected {names}, "
                 f"got {type(data[field]).__name__}"
             )
 
