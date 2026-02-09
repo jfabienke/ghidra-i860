@@ -159,8 +159,8 @@ public class RecoverRuntimeDispatchSeeds extends GhidraScript {
         if (args.length >= 4) minDecodeScore = parseInt(args[3], DEFAULT_DECODE_SCORE);
 
         if (args.length >= 6) {
-            Long start = parseAddress(args[4]);
-            Long end = parseAddress(args[5]);
+            Long start = parseAddressValue(args[4]);
+            Long end = parseAddressValue(args[5]);
             if (start != null && end != null) {
                 hintRanges.add(normalizeRange(start.longValue(), end.longValue()));
             }
@@ -614,7 +614,7 @@ public class RecoverRuntimeDispatchSeeds extends GhidraScript {
         }
     }
 
-    private static Long parseAddress(String s) {
+    private static Long parseAddressValue(String s) {
         if (s == null) return null;
         String v = s.trim();
         if (v.isEmpty()) return null;
