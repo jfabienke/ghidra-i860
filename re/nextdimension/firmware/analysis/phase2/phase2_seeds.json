@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "raw_candidates": 1,
+    "rejected": 1,
+    "valid_seeds": 0,
+    "existing_seeds_count": 311,
+    "deny_ranges_count": 43
+  },
+  "seeds": [],
+  "rejected": [
+    {
+      "addr": "0x00000d16",
+      "addr_int": 3350,
+      "confidence": "resolved_const",
+      "source": "cross_block",
+      "rejection_reasons": [
+        "not_aligned",
+        "out_of_text_range"
+      ],
+      "detail": "resolved via intra_block"
+    }
+  ],
+  "stats": {
+    "by_confidence": {},
+    "by_source": {},
+    "rejection_reasons": {
+      "not_aligned": 1,
+      "out_of_text_range": 1
+    }
+  }
+}
