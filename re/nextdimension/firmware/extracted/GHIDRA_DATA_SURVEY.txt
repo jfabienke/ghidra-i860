@@ -1,0 +1,84 @@
+=== i860 Kernel Contamination Survey ===
+
+Block: ram  F80B4000-F80C1C4F  56,400 bytes
+
+Start       End               Size  Type            i860 Insns
+----------  ----------  ----------  --------------  ----------
+F80B4000    F80B53FF         5,120  X86_CODE        0
+F80B5400    F80B57FF         1,024  X86_DATA        0
+F80B5800    F80B63FF         3,072  X86_CODE        0
+F80B6400    F80B67FF         1,024  X86_DATA        0
+F80B6800    F80B77FF         4,096  X86_CODE        0
+F80B7800    F80B7FFF         2,048  X86_DATA        0
+F80B8000    F80B9BFF         7,168  NULL_PAD        0
+F80B9C00    F80C1C4F        32,848  ASCII_TEXT      0
+
+--- Type Summary for ram ---
+Type                 Bytes       %  i860 Insns
+--------------  ----------  ------  ----------
+ASCII_TEXT          32,848   58.2%  0
+X86_CODE            12,288   21.8%  0
+NULL_PAD             7,168   12.7%  0
+X86_DATA             4,096    7.3%  0
+TOTAL               56,400  100.0%  0
+
+
+=== Per-Block Detail (1KB) ===
+Address     Type            i860  asc%  nul%  m68k   x86  ent
+----------  --------------  ----  ----  ----  ----  ----  ---
+F80B4000    X86_CODE           0   39%    0%     3    18  7.8
+F80B4400    X86_CODE           0   36%    0%     0    28  7.8
+F80B4800    X86_CODE           0   34%   12%     5    12  7.1
+F80B4C00    X86_CODE           0   41%    0%    10    27  7.8
+F80B5000    X86_CODE           0   42%    0%     8    27  7.7
+F80B5400    X86_DATA           0   43%    0%    11    22  7.7
+F80B5800    X86_CODE           0   44%    0%     6    26  7.6
+F80B5C00    X86_CODE           0   33%   11%     4    10  7.2
+F80B6000    X86_CODE           0   37%    1%     8    28  7.8
+F80B6400    X86_DATA           0   34%    0%    10    20  7.6
+F80B6800    X86_CODE           0   45%    0%     6    17  7.6
+F80B6C00    X86_CODE           0   37%    1%     6    23  7.7
+F80B7000    X86_CODE           0   41%    0%     7    20  7.8
+F80B7400    X86_CODE           0   39%    1%     9    33  7.7
+F80B7800    X86_DATA           0   36%    1%     7    10  7.7
+F80B7C00    X86_DATA           0    5%   80%     1     6  2.1
+F80B8000    NULL_PAD           0    0%  100%     0     0  0.0
+F80B8400    NULL_PAD           0    0%  100%     0     0  0.0
+F80B8800    NULL_PAD           0    0%  100%     0     0  0.0
+F80B8C00    NULL_PAD           0    0%  100%     0     0  0.0
+F80B9000    NULL_PAD           0    0%  100%     0     0  0.0
+F80B9400    NULL_PAD           0    0%  100%     0     0  0.0
+F80B9800    NULL_PAD           0    0%  100%     0     0  0.0
+F80B9C00    ASCII_TEXT         0   82%   17%     0     0  4.6
+F80BA000    ASCII_TEXT         0  100%    0%     0     0  4.9
+F80BA400    ASCII_TEXT         0  100%    0%     0     0  5.1
+F80BA800    ASCII_TEXT         0  100%    0%     0     0  4.9
+F80BAC00    ASCII_TEXT         0  100%    0%     1     0  5.0
+F80BB000    ASCII_TEXT         0  100%    0%     1     0  5.0
+F80BB400    ASCII_TEXT         0  100%    0%     0     0  5.0
+F80BB800    ASCII_TEXT         0  100%    0%     0     0  5.0
+F80BBC00    ASCII_TEXT         0  100%    0%     3     0  5.0
+F80BC000    ASCII_TEXT         0  100%    0%     0     0  5.0
+F80BC400    ASCII_TEXT         0  100%    0%     0     0  4.9
+F80BC800    ASCII_TEXT         0  100%    0%     0     0  4.9
+F80BCC00    ASCII_TEXT         0  100%    0%     0     0  4.7
+F80BD000    ASCII_TEXT         0  100%    0%     0     0  4.9
+F80BD400    ASCII_TEXT         0  100%    0%     1     0  5.0
+F80BD800    ASCII_TEXT         0  100%    0%     3     0  4.9
+F80BDC00    ASCII_TEXT         0  100%    0%     0     0  4.7
+F80BE000    ASCII_TEXT         0  100%    0%     0     0  4.9
+F80BE400    ASCII_TEXT         0  100%    0%     0     0  4.8
+F80BE800    ASCII_TEXT         0  100%    0%     2     0  5.0
+F80BEC00    ASCII_TEXT         0  100%    0%     1     0  5.0
+F80BF000    ASCII_TEXT         0  100%    0%     2     0  5.0
+F80BF400    ASCII_TEXT         0  100%    0%     0     0  4.9
+F80BF800    ASCII_TEXT         0  100%    0%     0     0  4.9
+F80BFC00    ASCII_TEXT         0  100%    0%     0     0  4.9
+F80C0000    ASCII_TEXT         0  100%    0%     0     0  4.9
+F80C0400    ASCII_TEXT         0  100%    0%     2     0  5.0
+F80C0800    ASCII_TEXT         0  100%    0%     0     0  5.1
+F80C0C00    ASCII_TEXT         0  100%    0%     0     0  4.9
+F80C1000    ASCII_TEXT         0  100%    0%     0     0  5.0
+F80C1400    ASCII_TEXT         0  100%    0%     2     0  5.0
+F80C1800    ASCII_TEXT         0  100%    0%     3     0  5.1
+F80C1C00    ASCII_TEXT         0  100%    0%     0     0  4.5

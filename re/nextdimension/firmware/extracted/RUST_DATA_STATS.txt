@@ -1,0 +1,33 @@
+=== Instruction Statistics ===
+Total instructions: 14100
+Total bytes: 56400
+
+Top 20 instructions:
+  ld.b              2317 (16.43%)
+  call              1327 ( 9.41%)
+  .long              995 ( 7.06%)
+  bc                 924 ( 6.55%)
+  bc.t               711 ( 5.04%)
+  pfld.d             675 ( 4.79%)
+  pfld.l             633 ( 4.49%)
+  br                 624 ( 4.43%)
+  fld.d              505 ( 3.58%)
+  ixfr               472 ( 3.35%)
+  fld.l              451 ( 3.20%)
+  fst.l              354 ( 2.51%)
+  st.c               276 ( 1.96%)
+  btne               259 ( 1.84%)
+  fld.q              255 ( 1.81%)
+  ld.c               255 ( 1.81%)
+  fst.q              247 ( 1.75%)
+  fst.d              174 ( 1.23%)
+  flush              170 ( 1.21%)
+  bnc                165 ( 1.17%)
+
+Instruction categories:
+  memory            7106 (50.40%)
+  branches          2871 (20.36%)
+  alu               2582 (18.31%)
+  calls             1381 ( 9.79%)
+  control            153 ( 1.09%)
+  fp                   7 ( 0.05%)

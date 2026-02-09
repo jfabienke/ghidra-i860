@@ -1,0 +1,20 @@
+Input: /Users/jvindahl/Development/previous/reverse-engineering/nextdimension-files/firmware/ND_MachDriver_reloc
+Input size: 795464 bytes
+
+Header bytes before __TEXT segment: 840
+__TEXT segment bytes: 737280
+Gap bytes between __TEXT and __DATA file ranges: 0
+__DATA segment bytes: 57344
+Trailing bytes after __DATA segment: 0
+Accounted total: 795464
+
+Byte accounting: OK (100% of bytes accounted for)
+
+Clean window request: 0x31000 (200704 bytes)
+Clean window extracted: 200704 bytes
+Post-clean __TEXT remainder: 529736 bytes
+
+Notes:
+- __DATA extraction covers initialized data from file-backed __data only.
+- Runtime BSS/common structures are zero-init and not present as initialized bytes.
+- Clean-window extraction is a convenience slice and does NOT prove absence/presence of i860 code outside that window.

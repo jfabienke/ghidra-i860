@@ -1,0 +1,96 @@
+=== ND_MachDriver __DATA Quick Analysis ===
+Generated: 2026-02-09 00:26:41 UTC
+
+Input: /Users/jvindahl/Development/previous/reverse-engineering/nextdimension-files/firmware/ND_MachDriver_reloc
+
+__TEXT segment: vmaddr=0xf8000000 vmsize=0x000b4000 fileoff=840 filesize=737280
+__text section: seg=__TEXT addr=0xf8000000 size=0x000b2548 offset=840
+
+__DATA segment: vmaddr=0xf80b4000 vmsize=0x00012000 fileoff=738120 filesize=57344
+__data section: seg=__DATA addr=0xf80b4000 size=0x0000dc50 offset=738120
+
+-- Direct LE32 pointer scan in __data section --
+  off=0x005DC vm=0xF80B45DC -> 0xF808AFF9 (__TEXT)
+  off=0x0238C vm=0xF80B638C -> 0xF8037B70 (__TEXT)
+  off=0x03978 vm=0xF80B7978 -> 0xF801EBB9 (__TEXT)
+Summary: words=14100 ptrs=3 text_ptrs=3 data_ptrs=0
+
+-- 1KB non-zero density (selected ranges) --
+  off=0x03000 vm=0xF80B7000 nonzero=1019/1024
+  off=0x03400 vm=0xF80B7400 nonzero=1012/1024
+  off=0x03800 vm=0xF80B7800 nonzero=1007/1024
+  off=0x03C00 vm=0xF80B7C00 nonzero= 200/1024
+  off=0x04000 vm=0xF80B8000 nonzero=   0/1024
+  off=0x04400 vm=0xF80B8400 nonzero=   0/1024
+  off=0x04800 vm=0xF80B8800 nonzero=   0/1024
+  off=0x04C00 vm=0xF80B8C00 nonzero=   0/1024
+  off=0x05000 vm=0xF80B9000 nonzero=   0/1024
+  off=0x05400 vm=0xF80B9400 nonzero=   0/1024
+  off=0x05800 vm=0xF80B9800 nonzero=   0/1024
+  off=0x05C00 vm=0xF80B9C00 nonzero= 840/1024
+  off=0x06000 vm=0xF80BA000 nonzero=1024/1024
+  off=0x06400 vm=0xF80BA400 nonzero=1024/1024
+
+-- strings(6+) with offsets (head) --
+4a4 mDOn0ay
+544 #{CC3M
+c5c u $pE6h
+e69 uKxa{O
+f59 2UYpsh0
+1481 3WG5g~
+15b5 qK7b`)
+16bc 2/Bk$
+182c cr ohuB
+1998 "3#a d2id
+1bdd 5>ZuCTE
+1d3f Y.S+5a
+1edd '#5}cY
+1f0d wu+q=b
+2245 AXGU]9
+22fd 7v-0nl7
+2493 " ?8*%
+28e0 !3@!1>
+2949 Sk7tb
+2969 ApE7D#G
+2987 M#YMtWC
+2e2d ;.p0xf
+2f89 xgEQLw
+31e7 JD@UQ"!|y
+33bb DlW4PDC
+345c w_G\@
+3531 \TDtO#
+3b76 QS:)VNc*g
+5cb8 7 1987  Richard M. Stallman  (rms at prep)
+5ce5 * mh-e.el (mh-insert-prefix-string):
+5d0b Use explicit loop by lines.
+5d28 Sun Feb  1 04:39:34 1987  Richard M. Stallman  (rms at prep)
+5d67 * loaddefs.el: purecopy many strings found in initial var values.
+5daa Garbage collect in middle of file to reduce storage required
+5de8 for loading.  Remove ".bin" from completion-ignored-extensions
+5e28 on Unix since only Symbolics customers would benefit from its presence.
+5e71 Symbolics killed the MIT AI lab; don't do business with them.
+5eb1 * view.el (view-file): Kill the buffer at the end if it was
+5eee created just for this and was not modified.
+5f1c * userlock.el (ask-user-about-supercession-help):
+
+-- strings around known changelog region --
+1:5cb8 7 1987  Richard M. Stallman  (rms at prep)
+4:5d28 Sun Feb  1 04:39:34 1987  Richard M. Stallman  (rms at prep)
+25:61a0 Fri Jan 30 16:35:48 1987  Richard Mlynarik  (mly at prep)
+28:6255 Thu Jan 29 03:44:29 1987  Richard M. Stallman  (rms at prep)
+34:6386 Wed Jan 28 17:55:02 1987  Richard M. Stallman  (rms at prep)
+36:640c Mon Jan 26 17:15:27 1987  Richard M. Stallman  (rms at prep)
+39:64b8 Sun Jan 25 15:46:01 1987  Richard Mlynarik  (mly at prep)
+41:6524 Fri Jan 23 13:19:28 1987  Richard M. Stallman  (rms at prep)
+48:6679 Thu Jan 22 16:09:51 1987  Chris Hanson  (cph at prep)
+50:66fd Thu Jan 22 15:08:24 1987  Richard M. Stallman  (rms at prep)
+55:67e0 Thu Jan 22 13:06:33 1987  Richard Mlynarik  (mly at prep)
+59:6897 Wed Jan 21 17:00:19 1987  Richard Mlynarik  (mly at prep)
+62:6936 Wed Jan 21 02:13:17 1987  Richard M. Stallman  (rms at prep)
+63:6975 * Version 18.36 released.
+64:6990 Wed Jan 21 02:13:17 1987  Richard M. Stallman  (rms at prep)
+73:6bc2 Tue Jan 20 11:48:17 1987  Richard M. Stallman  (rms at prep)
+78:6ced Mon Jan 19 12:44:42 1987  Richard M. Stallman  (rms at prep)
+80:6d6b Fri Jan 16 18:09:59 1987  Richard Mlynarik  (mly at prep)
+85:6e75 Thu Jan 15 22:19:17 1987  Richard M. Stallman  (rms at prep)
+88:6f2c Thu Jan 15 17:08:01 1987  Richard Mlynarik  (mly at prep)

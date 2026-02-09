@@ -1,0 +1,4 @@
+offset_file  vmaddr      magic      cpu_type  cpu_name  primary
+0x017CB8     0xF8017CB8  FEEDFACE  6         m68k     no
+0x03DCB8     0xF803DCB8  CEFAEDFE  7         x86      no
+0x05DCB8     0xF805DCB8  CEFAEDFE  7         x86      no

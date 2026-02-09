@@ -1,0 +1,11 @@
+Input: /Users/jvindahl/Development/previous/reverse-engineering/nextdimension-files/firmware/ND_MachDriver_reloc
+Input size: 795464 bytes
+
+__TEXT segment: vmaddr=0xf8000000 vmsize=0x000b4000 fileoff=840 filesize=737280
+__text section: seg=__TEXT addr=0xf8000000 size=0x000b2548 offset=840
+
+__DATA segment: vmaddr=0xf80b4000 vmsize=0x00012000 fileoff=738120 filesize=57344
+__data section: seg=__DATA addr=0xf80b4000 size=0x0000dc50 offset=738120
+
+Clean window bytes: 200704 (requested 200704)
+Post-clean bytes: 529736
