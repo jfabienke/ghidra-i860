@@ -81,6 +81,19 @@ SUBSYSTEM_HINTS = {
 }
 
 
+def _coerce_subsystem_hint(raw):
+    """Extract enum value from verbose subsystem_hint strings.
+
+    Models often produce 'postscript_dispatch (reason...)' or
+    'unknown — explanation'. Extract the leading enum token if it matches.
+    """
+    lower = raw.lower().strip()
+    for hint in SUBSYSTEM_HINTS:
+        if lower.startswith(hint):
+            return hint
+    return "unknown"
+
+
 def validate_intent(data):
     """Validate an intent agent response.
 
@@ -105,23 +118,38 @@ def validate_intent(data):
     _check_type(data, "confidence", (int, float), errors)
     _check_range(data, "confidence", 0, 100, errors)
 
-    # Evidence: must be a list with >= 2 entries, each with addr + fact
+    # Evidence: must be a list of dicts with addr + fact.
+    # Strip entries where addr is not a hex string (model sometimes adds
+    # summary entries like {"addr": "CONTEXT", "fact": "..."}).
     _check_list_of_dicts(data, "evidence", ["addr", "fact"], errors)
     evidence = data.get("evidence", [])
+    if isinstance(evidence, list):
+        clean = []
+        for e in evidence:
+            if isinstance(e, dict):
+                addr = e.get("addr", "")
+                if isinstance(addr, str) and addr.startswith("0x"):
+                    clean.append(e)
+        data["evidence"] = clean
+        evidence = clean
     if isinstance(evidence, list) and len(evidence) < 2:
         errors.append(
-            f"evidence: {len(evidence)} entries (minimum 2 required)"
+            f"evidence: {len(evidence)} hex-addressed entries "
+            f"(minimum 2 required)"
         )
-    # Verify each evidence addr is hex
-    if isinstance(evidence, list):
-        for i, e in enumerate(evidence):
-            if isinstance(e, dict):
-                _check_hex_addr(e, "addr", errors, prefix=f"evidence[{i}].")
 
     _check_type(data, "register_protocol", dict, errors)
     _check_type(data, "control_flow_summary", str, errors)
     _check_type(data, "alternatives", list, errors)
     _check_type(data, "open_questions", list, errors)
+
+    # Coerce verbose subsystem_hint to enum value.
+    # Models often return "postscript_dispatch (reason...)" instead of bare enum.
+    if "subsystem_hint" in data and isinstance(data["subsystem_hint"], str):
+        raw = data["subsystem_hint"]
+        if raw not in SUBSYSTEM_HINTS:
+            coerced = _coerce_subsystem_hint(raw)
+            data["subsystem_hint"] = coerced
 
     _check_enum(data, "subsystem_hint",
                 SUBSYSTEM_HINTS | {None}, errors)

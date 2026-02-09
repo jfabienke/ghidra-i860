@@ -66,8 +66,16 @@ def report_run(conn, run_id):
         "FROM contrarians WHERE run_id = ?", (run_id,)
     ).fetchone()
 
-    tok_in = claim_tok["ti"] + verif_tok["ti"] + contra_tok["ti"]
-    tok_out = claim_tok["to_"] + verif_tok["to_"] + contra_tok["to_"]
+    synth_tok = conn.execute(
+        "SELECT COALESCE(SUM(tokens_in),0) as ti, "
+        "COALESCE(SUM(tokens_out),0) as to_ "
+        "FROM syntheses WHERE run_id = ?", (run_id,)
+    ).fetchone()
+
+    tok_in = (claim_tok["ti"] + verif_tok["ti"]
+              + contra_tok["ti"] + synth_tok["ti"])
+    tok_out = (claim_tok["to_"] + verif_tok["to_"]
+               + contra_tok["to_"] + synth_tok["to_"])
 
     # Per-stage breakdown
     n_contrarians = conn.execute(

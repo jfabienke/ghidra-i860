@@ -270,4 +270,18 @@ class ClaimStore:
         stats["total_tokens_in"] += row["ti"] or 0
         stats["total_tokens_out"] += row["to_"] or 0
 
+        row = self.conn.execute(
+            "SELECT SUM(tokens_in) as ti, SUM(tokens_out) as to_ "
+            "FROM contrarians WHERE run_id = ?", (run_id,),
+        ).fetchone()
+        stats["total_tokens_in"] += row["ti"] or 0
+        stats["total_tokens_out"] += row["to_"] or 0
+
+        row = self.conn.execute(
+            "SELECT SUM(tokens_in) as ti, SUM(tokens_out) as to_ "
+            "FROM syntheses WHERE run_id = ?", (run_id,),
+        ).fetchone()
+        stats["total_tokens_in"] += row["ti"] or 0
+        stats["total_tokens_out"] += row["to_"] or 0
+
         return stats

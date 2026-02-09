@@ -194,12 +194,10 @@ async def warmup_max(caller):
 # ---------- JSON parsing ----------
 
 def parse_json_response(text):
-    """Extract JSON from LLM response, handling markdown code fences."""
+    """Extract JSON from LLM response, handling markdown fences and trailing text."""
     text = text.strip()
     if text.startswith("```"):
-        # Strip markdown code fence
         lines = text.split("\n")
-        # Remove first and last ``` lines
         if lines[0].startswith("```"):
             lines = lines[1:]
         if lines and lines[-1].strip() == "```":
@@ -208,6 +206,12 @@ def parse_json_response(text):
     try:
         return json.loads(text)
     except json.JSONDecodeError as e:
+        # Handle "Extra data" — model appended commentary after the JSON object
+        if "Extra data" in str(e) and e.pos > 0:
+            try:
+                return json.loads(text[:e.pos])
+            except json.JSONDecodeError:
+                pass
         return {"_parse_error": str(e), "_raw_text": text[:2000]}
 
 
