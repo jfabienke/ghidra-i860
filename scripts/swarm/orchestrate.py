@@ -4,20 +4,23 @@
 Dispatches per-function shards to Claude agents in a pipeline:
   intent → gatekeeper → verifier → contrarian → synthesizer
 
+Supports two backends:
+  --backend api   Uses Anthropic API directly (requires ANTHROPIC_API_KEY)
+  --backend max   Uses Claude Agent SDK via Max subscription (no API key needed)
+
 Usage:
     python -m scripts.swarm.orchestrate <sharded_dir> [options]
 
 Options:
     --model MODEL       Claude model (default: claude-sonnet-4-5-20250929)
+    --backend BACKEND   api or max (default: api)
     --out DIR           Output directory (default: <sharded_dir>/../swarm_run_<ts>/)
     --dry-run           Assemble prompts without API calls; write to --out
     --max-functions N   Process at most N functions (0 = all, default: 0)
     --skip-contrarian   Skip contrarian pass
     --skip-synthesis    Skip synthesis pass
-    --concurrency N     Max parallel API calls (default: 4)
+    --concurrency N     Max parallel calls (default: 4 for api, 2 for max)
     --resume RUN_ID     Resume a previous run (requires --out pointing to existing dir)
-
-Requires ANTHROPIC_API_KEY environment variable (unless --dry-run).
 """
 
 import argparse
@@ -34,34 +37,161 @@ from .schemas import validate_intent, validate_verification, validate_contrarian
 from .store import ClaimStore
 
 
-# ---------- API wrapper ----------
+# ---------- Backend: Anthropic API ----------
 
-async def call_claude(client, model, system, messages, semaphore):
-    """Call Claude API with rate limiting via semaphore."""
-    async with semaphore:
-        start = time.monotonic()
-        response = await asyncio.to_thread(
-            client.messages.create,
-            model=model,
-            max_tokens=4096,
-            system=system,
-            messages=messages,
+def make_api_caller(model, semaphore):
+    """Create a caller backed by the Anthropic API (requires ANTHROPIC_API_KEY)."""
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    if not api_key:
+        print("Error: ANTHROPIC_API_KEY not set (required for --backend api)",
+              file=sys.stderr)
+        sys.exit(1)
+
+    try:
+        import anthropic
+    except ImportError:
+        print("Error: anthropic SDK not installed. Run: pip install anthropic",
+              file=sys.stderr)
+        sys.exit(1)
+
+    client = anthropic.Anthropic(api_key=api_key)
+
+    async def caller(system, messages):
+        async with semaphore:
+            start = time.monotonic()
+            response = await asyncio.to_thread(
+                client.messages.create,
+                model=model,
+                max_tokens=4096,
+                system=system,
+                messages=messages,
+            )
+            elapsed_ms = int((time.monotonic() - start) * 1000)
+
+            text = ""
+            for block in response.content:
+                if block.type == "text":
+                    text += block.text
+
+            return {
+                "text": text,
+                "tokens_in": response.usage.input_tokens,
+                "tokens_out": response.usage.output_tokens,
+                "latency_ms": elapsed_ms,
+                "model": response.model,
+            }
+
+    return caller
+
+
+# ---------- Backend: Claude Agent SDK (Max subscription) ----------
+
+MAX_RETRIES = 3
+RETRY_BACKOFF = [2, 5, 10]  # seconds between retries
+
+
+def make_max_caller(model, semaphore):
+    """Create a caller backed by the Claude Agent SDK (Max subscription).
+
+    Includes retry with backoff for 'Control request timeout: initialize'
+    errors caused by cold subprocess starts.
+    """
+    try:
+        from claude_agent_sdk import (
+            query as sdk_query,
+            ClaudeAgentOptions,
+            AssistantMessage,
+            ResultMessage,
+            TextBlock,
         )
-        elapsed_ms = int((time.monotonic() - start) * 1000)
+    except ImportError:
+        print("Error: claude-agent-sdk not installed. "
+              "Run: pip install claude-agent-sdk",
+              file=sys.stderr)
+        sys.exit(1)
+
+    async def _single_call(system, user_content):
+        """One SDK call attempt. Raises on failure."""
+        options = ClaudeAgentOptions(
+            system_prompt=system,
+            model=model,
+            max_turns=1,
+            tools=[],
+        )
 
         text = ""
-        for block in response.content:
-            if block.type == "text":
-                text += block.text
+        tokens_in = 0
+        tokens_out = 0
+        result_model = model
 
-        return {
-            "text": text,
-            "tokens_in": response.usage.input_tokens,
-            "tokens_out": response.usage.output_tokens,
-            "latency_ms": elapsed_ms,
-            "model": response.model,
-        }
+        async for msg in sdk_query(prompt=user_content, options=options):
+            if isinstance(msg, AssistantMessage):
+                for block in msg.content:
+                    if isinstance(block, TextBlock):
+                        text += block.text
+                result_model = getattr(msg, "model", model)
+            elif isinstance(msg, ResultMessage):
+                if msg.is_error:
+                    raise RuntimeError(
+                        f"SDK error: {msg.result or 'unknown'}"
+                    )
+                usage = msg.usage or {}
+                # SDK reports cache-split tokens; sum all input categories
+                tokens_in = (
+                    usage.get("input_tokens", 0)
+                    + usage.get("cache_creation_input_tokens", 0)
+                    + usage.get("cache_read_input_tokens", 0)
+                )
+                tokens_out = usage.get("output_tokens", 0)
 
+        return text, tokens_in, tokens_out, result_model
+
+    async def caller(system, messages):
+        async with semaphore:
+            start = time.monotonic()
+            user_content = messages[0]["content"] if messages else ""
+
+            last_err = None
+            for attempt in range(MAX_RETRIES):
+                try:
+                    text, tokens_in, tokens_out, result_model = (
+                        await _single_call(system, user_content)
+                    )
+                    elapsed_ms = int((time.monotonic() - start) * 1000)
+                    return {
+                        "text": text,
+                        "tokens_in": tokens_in,
+                        "tokens_out": tokens_out,
+                        "latency_ms": elapsed_ms,
+                        "model": result_model,
+                    }
+                except Exception as e:
+                    last_err = e
+                    if attempt < MAX_RETRIES - 1:
+                        delay = RETRY_BACKOFF[attempt]
+                        print(f"    retry {attempt + 1}/{MAX_RETRIES} "
+                              f"after {delay}s: {e}")
+                        await asyncio.sleep(delay)
+
+            raise last_err  # all retries exhausted
+
+    return caller
+
+
+async def warmup_max(caller):
+    """Single trivial call to warm up the Agent SDK subprocess."""
+    print("  Warming up Max backend...", end=" ", flush=True)
+    start = time.monotonic()
+    result = await caller(
+        "Reply with only the word READY.",
+        [{"role": "user", "content": "ping"}],
+    )
+    elapsed = time.monotonic() - start
+    print(f"ok ({elapsed:.1f}s)")
+    return result
+
+
+# ---------- JSON parsing ----------
 
 def parse_json_response(text):
     """Extract JSON from LLM response, handling markdown code fences."""
@@ -83,42 +213,34 @@ def parse_json_response(text):
 
 # ---------- Pipeline stages ----------
 
-async def run_intent(client, model, shard, semaphore):
+async def run_intent(caller, shard):
     """Run intent agent on a single function shard."""
     messages = prompts.build_intent_messages(shard)
-    result = await call_claude(
-        client, model, prompts.INTENT_SYSTEM, messages, semaphore
-    )
+    result = await caller(prompts.INTENT_SYSTEM, messages)
     claim = parse_json_response(result["text"])
     return claim, result
 
 
-async def run_verifier(client, model, shard, claim, semaphore):
+async def run_verifier(caller, shard, claim):
     """Run verifier agent on a claim."""
     messages = prompts.build_verifier_messages(shard, claim)
-    result = await call_claude(
-        client, model, prompts.VERIFIER_SYSTEM, messages, semaphore
-    )
+    result = await caller(prompts.VERIFIER_SYSTEM, messages)
     verification = parse_json_response(result["text"])
     return verification, result
 
 
-async def run_contrarian(client, model, shard, claim, semaphore):
+async def run_contrarian(caller, shard, claim):
     """Run contrarian agent on a claim."""
     messages = prompts.build_contrarian_messages(shard, claim)
-    result = await call_claude(
-        client, model, prompts.CONTRARIAN_SYSTEM, messages, semaphore
-    )
+    result = await caller(prompts.CONTRARIAN_SYSTEM, messages)
     contrarian = parse_json_response(result["text"])
     return contrarian, result
 
 
-async def run_synthesizer(client, model, accepted_claims, callgraph, semaphore):
+async def run_synthesizer(caller, accepted_claims, callgraph):
     """Run synthesizer agent on accepted claims."""
     messages = prompts.build_synthesizer_messages(accepted_claims, callgraph)
-    result = await call_claude(
-        client, model, prompts.SYNTHESIZER_SYSTEM, messages, semaphore
-    )
+    result = await caller(prompts.SYNTHESIZER_SYSTEM, messages)
     synthesis = parse_json_response(result["text"])
     return synthesis, result
 
@@ -157,15 +279,15 @@ def dry_run_function(shard, output_dir):
 
 # ---------- Main pipeline ----------
 
-async def process_function(client, model, shard, store, run_id,
-                           semaphore, skip_contrarian=False):
+async def process_function(caller, shard, store, run_id,
+                           skip_contrarian=False):
     """Full pipeline for one function: intent → gate → verify → contrarian."""
     func = shard["function"]
     func_id = func["entry"]
     func_name = func["name"]
 
     # 1. Intent
-    claim, intent_result = await run_intent(client, model, shard, semaphore)
+    claim, intent_result = await run_intent(caller, shard)
 
     # Validate intent schema before DB insert
     claim, schema_errors = validate_intent(claim)
@@ -197,9 +319,7 @@ async def process_function(client, model, shard, store, run_id,
                 "reasons": reasons}
 
     # 3. Verifier
-    verification, verify_result = await run_verifier(
-        client, model, shard, claim, semaphore
-    )
+    verification, verify_result = await run_verifier(caller, shard, claim)
     verification, v_errors = validate_verification(verification)
     if v_errors:
         print(f"  VERIFY_SCHEMA_FAIL: {func_id}: {v_errors[0]}")
@@ -216,7 +336,7 @@ async def process_function(client, model, shard, store, run_id,
     # 4. Contrarian (optional)
     if not skip_contrarian and status == "accept":
         contrarian, contra_result = await run_contrarian(
-            client, model, shard, claim, semaphore
+            caller, shard, claim
         )
         contrarian, c_errors = validate_contrarian(contrarian)
         if c_errors:
@@ -281,6 +401,7 @@ async def run_pipeline(args):
     print(f"  Output:    {output_dir}")
     print(f"  Run ID:    {run_id}")
     print(f"  Model:     {args.model}")
+    print(f"  Backend:   {args.backend}")
     print(f"  Functions: {len(manifest['shards'])}")
     print(f"  Concurrency: {args.concurrency}")
     print(f"  Dry run:   {args.dry_run}")
@@ -333,6 +454,7 @@ async def run_pipeline(args):
             "run_id": run_id,
             "mode": "dry_run",
             "model": args.model,
+            "backend": args.backend,
             "function_count": len(dry_results),
             "total_estimated_tokens": total_tokens,
             "functions": dry_results,
@@ -345,19 +467,13 @@ async def run_pipeline(args):
         return
 
     # ---------- Live mode ----------
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
-    if not api_key:
-        print("Error: ANTHROPIC_API_KEY not set", file=sys.stderr)
-        sys.exit(1)
+    semaphore = asyncio.Semaphore(args.concurrency)
 
-    try:
-        import anthropic
-    except ImportError:
-        print("Error: anthropic SDK not installed. Run: pip install anthropic",
-              file=sys.stderr)
-        sys.exit(1)
-
-    client = anthropic.Anthropic(api_key=api_key)
+    if args.backend == "max":
+        caller = make_max_caller(args.model, semaphore)
+        await warmup_max(caller)
+    else:
+        caller = make_api_caller(args.model, semaphore)
 
     # Initialize store
     store = ClaimStore(output_dir / "claims.db")
@@ -380,6 +496,7 @@ async def run_pipeline(args):
             binary_sha256=manifest.get("binary_sha256"),
             model=args.model,
             config={
+                "backend": args.backend,
                 "max_functions": args.max_functions,
                 "skip_contrarian": args.skip_contrarian,
                 "skip_synthesis": args.skip_synthesis,
@@ -393,7 +510,6 @@ async def run_pipeline(args):
         return
 
     # Process functions with true concurrency via asyncio.gather
-    semaphore = asyncio.Semaphore(args.concurrency)
     total = len(shard_order)
 
     print(f"=== Phase 1: Intent + Verify + Contrarian "
@@ -407,7 +523,7 @@ async def run_pipeline(args):
         shard = shards[func_entry]
         func = shard["function"]
         result = await process_function(
-            client, args.model, shard, store, run_id, semaphore,
+            caller, shard, store, run_id,
             skip_contrarian=args.skip_contrarian,
         )
         async with progress_lock:
@@ -453,7 +569,7 @@ async def run_pipeline(args):
                             callgraph.append((fid, callee["entry"]))
 
             synthesis, synth_result = await run_synthesizer(
-                client, args.model, accepted_claims, callgraph, semaphore
+                caller, accepted_claims, callgraph
             )
             store.insert_synthesis(
                 run_id, synthesis, synth_result["model"],
@@ -472,6 +588,7 @@ async def run_pipeline(args):
     # Summary
     stats = store.get_run_stats(run_id)
     print(f"\n=== Run Summary ===")
+    print(f"  Backend:          {args.backend}")
     print(f"  Claims:           {stats['claims']}")
     print(f"  Accepted:         {stats['verified_accept']}")
     print(f"  Revised:          {stats['verified_revise']}")
@@ -490,6 +607,7 @@ async def run_pipeline(args):
         json.dump({
             "run_id": run_id,
             "model": args.model,
+            "backend": args.backend,
             "stats": stats,
             "results": final_results,
             "errors": errors,
@@ -505,7 +623,10 @@ def main():
     parser.add_argument("sharded_dir",
                         help="Path to sharded directory (with manifest.json)")
     parser.add_argument("--model", default="claude-sonnet-4-5-20250929",
-                        help="Claude model ID")
+                        help="Claude model ID (default: claude-sonnet-4-5-20250929)")
+    parser.add_argument("--backend", choices=["api", "max"], default="api",
+                        help="api = Anthropic API key, max = Agent SDK / "
+                             "Max subscription (default: api)")
     parser.add_argument("--out",
                         help="Output directory (required for --resume)")
     parser.add_argument("--dry-run", action="store_true",
@@ -516,12 +637,17 @@ def main():
                         help="Skip contrarian pass")
     parser.add_argument("--skip-synthesis", action="store_true",
                         help="Skip synthesis pass")
-    parser.add_argument("--concurrency", type=int, default=4,
-                        help="Max parallel function processing (default: 4)")
+    parser.add_argument("--concurrency", type=int, default=0,
+                        help="Max parallel calls (default: 4 for api, 2 for max)")
     parser.add_argument("--resume",
                         help="Resume a previous run ID (requires --out)")
 
     args = parser.parse_args()
+
+    # Default concurrency: lower for max (subprocess overhead)
+    if args.concurrency == 0:
+        args.concurrency = 2 if args.backend == "max" else 4
+
     asyncio.run(run_pipeline(args))
 
 
