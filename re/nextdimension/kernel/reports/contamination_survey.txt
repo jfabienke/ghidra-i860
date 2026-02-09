@@ -1,0 +1,993 @@
+=== i860 Kernel Contamination Survey ===
+
+Block: __text  F8000000-F80B2547  730,440 bytes
+
+Start       End               Size  Type            i860 Insns
+----------  ----------  ----------  --------------  ----------
+F8000000    F8000FFF         4,096  NULL_PAD        69
+F8001000    F80017FF         2,048  M68K_CODE       4
+F8001800    F8001BFF         1,024  X86_CODE        0
+F8001C00    F8001FFF         1,024  X86_DATA        0
+F8002000    F80023FF         1,024  M68K_DATA       0
+F8002400    F80027FF         1,024  BIN_DATA        0
+F8002800    F8002BFF         1,024  M68K_CODE       0
+F8002C00    F8003BFF         4,096  M68K_DATA       0
+F8003C00    F8003FFF         1,024  BIN_DATA        0
+F8004000    F80047FF         2,048  X86_DATA        0
+F8004800    F8004BFF         1,024  BIN_DATA        0
+F8004C00    F8004FFF         1,024  I860_SPARSE     25
+F8005000    F80053FF         1,024  M68K_DATA       0
+F8005400    F80057FF         1,024  X86_DATA        0
+F8005800    F8005FFF         2,048  M68K_CODE       2
+F8006000    F80067FF         2,048  M68K_DATA       0
+F8006800    F8006BFF         1,024  BIN_DATA        0
+F8006C00    F8006FFF         1,024  X86_DATA        0
+F8007000    F80073FF         1,024  M68K_DATA       0
+F8007400    F80077FF         1,024  X86_DATA        0
+F8007800    F8007BFF         1,024  X86_CODE        0
+F8007C00    F8007FFF         1,024  X86_DATA        0
+F8008000    F80083FF         1,024  X86_CODE        0
+F8008400    F80087FF         1,024  X86_DATA        0
+F8008800    F8008BFF         1,024  X86_CODE        4
+F8008C00    F8008FFF         1,024  I860_CODE       88
+F8009000    F80093FF         1,024  X86_DATA        0
+F8009400    F80097FF         1,024  M68K_DATA       0
+F8009800    F800B7FF         8,192  X86_DATA        0
+F800B800    F800BBFF         1,024  BIN_DATA        0
+F800BC00    F800C3FF         2,048  I860_SPARSE     23
+F800C400    F800C7FF         1,024  BIN_DATA        0
+F800C800    F800CBFF         1,024  X86_DATA        0
+F800CC00    F800CFFF         1,024  BIN_DATA        0
+F800D000    F800D3FF         1,024  I860_SPARSE     17
+F800D400    F800D7FF         1,024  X86_DATA        0
+F800D800    F800DBFF         1,024  M68K_DATA       0
+F800DC00    F800DFFF         1,024  X86_CODE        1
+F800E000    F800E3FF         1,024  M68K_DATA       0
+F800E400    F800E7FF         1,024  X86_DATA        0
+F800E800    F800EBFF         1,024  BIN_DATA        0
+F800EC00    F800EFFF         1,024  X86_DATA        0
+F800F000    F800F3FF         1,024  I860_SPARSE     15
+F800F400    F800F7FF         1,024  X86_CODE        0
+F800F800    F800FBFF         1,024  BIN_DATA        0
+F800FC00    F8017BFF        32,768  ASCII_TEXT      126
+F8017C00    F8017FFF         1,024  MACHO_X86       0
+F8018000    F801C7FF        18,432  M68K_CODE       4
+F801C800    F801CBFF         1,024  M68K_DATA       0
+F801CC00    F801DBFF         4,096  M68K_CODE       0
+F801DC00    F801DFFF         1,024  M68K_DATA       0
+F801E000    F801E7FF         2,048  M68K_CODE       0
+F801E800    F801EBFF         1,024  M68K_DATA       0
+F801EC00    F80207FF         7,168  M68K_CODE       0
+F8020800    F8020BFF         1,024  BIN_DATA        0
+F8020C00    F80213FF         2,048  ASCII_TEXT      0
+F8021400    F8021BFF         2,048  X86_DATA        0
+F8021C00    F80223FF         2,048  M68K_CODE       0
+F8022400    F80227FF         1,024  M68K_DATA       0
+F8022800    F8022BFF         1,024  M68K_CODE       0
+F8022C00    F8022FFF         1,024  BIN_DATA        0
+F8023000    F80233FF         1,024  M68K_DATA       0
+F8023400    F80237FF         1,024  BIN_DATA        2
+F8023800    F8023BFF         1,024  X86_DATA        0
+F8023C00    F80243FF         2,048  X86_CODE        0
+F8024400    F80247FF         1,024  X86_DATA        0
+F8024800    F8027BFF        13,312  X86_CODE        16
+F8027C00    F8027FFF         1,024  X86_DATA        0
+F8028000    F802ABFF        11,264  X86_CODE        4
+F802AC00    F802AFFF         1,024  X86_DATA        0
+F802B000    F802B3FF         1,024  X86_CODE        0
+F802B400    F802B7FF         1,024  X86_DATA        0
+F802B800    F802C3FF         3,072  X86_CODE        0
+F802C400    F802C7FF         1,024  X86_DATA        0
+F802C800    F8033BFF        29,696  X86_CODE        0
+F8033C00    F80343FF         2,048  X86_DATA        0
+F8034400    F80377FF        13,312  X86_CODE        1
+F8037800    F8037BFF         1,024  X86_DATA        0
+F8037C00    F80383FF         2,048  ASCII_TEXT      0
+F8038400    F8038BFF         2,048  NULL_PAD        31
+F8038C00    F8038FFF         1,024  BIN_DATA        0
+F8039000    F80393FF         1,024  NULL_PAD        0
+F8039400    F80397FF         1,024  BIN_DATA        0
+F8039800    F803A3FF         3,072  NULL_PAD        0
+F803A400    F803A7FF         1,024  BIN_DATA        0
+F803A800    F803ABFF         1,024  NULL_PAD        0
+F803AC00    F803B3FF         2,048  BIN_DATA        0
+F803B400    F803BBFF         2,048  NULL_PAD        0
+F803BC00    F803BFFF         1,024  I860_SPARSE     12
+F803C000    F803C3FF         1,024  BIN_DATA        0
+F803C400    F803DBFF         6,144  NULL_PAD        0
+F803DC00    F803DFFF         1,024  MACHO_X86       0
+F803E000    F803E3FF         1,024  X86_DATA        0
+F803E400    F803E7FF         1,024  M68K_CODE       0
+F803E800    F80403FF         7,168  NULL_PAD        0
+F8040400    F804BBFF        47,104  X86_CODE        0
+F804BC00    F804BFFF         1,024  X86_DATA        0
+F804C000    F804C3FF         1,024  BIN_DATA        0
+F804C400    F804C7FF         1,024  X86_DATA        0
+F804C800    F804CBFF         1,024  X86_CODE        0
+F804CC00    F804D3FF         2,048  X86_DATA        0
+F804D400    F804D7FF         1,024  M68K_DATA       0
+F804D800    F804DBFF         1,024  ASCII_TEXT      0
+F804DC00    F804DFFF         1,024  BIN_DATA        0
+F804E000    F804FBFF         7,168  NULL_PAD        0
+F804FC00    F80503FF         2,048  X86_DATA        0
+F8050400    F8050BFF         2,048  BIN_DATA        0
+F8050C00    F80527FF         7,168  ASCII_TEXT      0
+F8052800    F8053BFF         5,120  NULL_PAD        0
+F8053C00    F80543FF         2,048  BIN_DATA        0
+F8054400    F8054BFF         2,048  X86_CODE        0
+F8054C00    F80553FF         2,048  BIN_DATA        0
+F8055400    F8055BFF         2,048  X86_DATA        0
+F8055C00    F80563FF         2,048  BIN_DATA        0
+F8056400    F8057BFF         6,144  NULL_PAD        0
+F8057C00    F8057FFF         1,024  BIN_DATA        0
+F8058000    F80583FF         1,024  NULL_PAD        0
+F8058400    F8058BFF         2,048  BIN_DATA        0
+F8058C00    F80593FF         2,048  NULL_PAD        0
+F8059400    F80597FF         1,024  M68K_DATA       0
+F8059800    F8059BFF         1,024  NULL_PAD        0
+F8059C00    F8059FFF         1,024  BIN_DATA        0
+F805A000    F805A3FF         1,024  X86_DATA        0
+F805A400    F805ABFF         2,048  NULL_PAD        0
+F805AC00    F805AFFF         1,024  ASCII_TEXT      0
+F805B000    F805DBFF        11,264  NULL_PAD        0
+F805DC00    F805DFFF         1,024  MACHO_X86       0
+F805E000    F805E3FF         1,024  BIN_DATA        0
+F805E400    F805E7FF         1,024  M68K_CODE       0
+F805E800    F805EFFF         2,048  NULL_PAD        0
+F805F000    F8069FFF        45,056  X86_CODE        0
+F806A000    F806ABFF         3,072  X86_DATA        0
+F806AC00    F806AFFF         1,024  X86_CODE        0
+F806B000    F806B3FF         1,024  BIN_DATA        0
+F806B400    F806B7FF         1,024  X86_DATA        0
+F806B800    F806BFFF         2,048  M68K_DATA       0
+F806C000    F806DBFF         7,168  NULL_PAD        0
+F806DC00    F806DFFF         1,024  BIN_DATA        0
+F806E000    F806E3FF         1,024  M68K_DATA       0
+F806E400    F806E7FF         1,024  X86_CODE        0
+F806E800    F806EFFF         2,048  X86_DATA        0
+F806F000    F80707FF         6,144  ASCII_TEXT      0
+F8070800    F8071BFF         5,120  NULL_PAD        0
+F8071C00    F8071FFF         1,024  X86_DATA        0
+F8072000    F8072BFF         3,072  X86_CODE        0
+F8072C00    F8072FFF         1,024  X86_DATA        0
+F8073000    F80733FF         1,024  X86_CODE        0
+F8073400    F8073BFF         2,048  NULL_PAD        0
+F8073C00    F8077BFF        16,384  X86_CODE        0
+F8077C00    F8077FFF         1,024  I860_SPARSE     5
+F8078000    F80783FF         1,024  NULL_PAD        0
+F8078400    F80787FF         1,024  BIN_DATA        0
+F8078800    F80793FF         3,072  NULL_PAD        0
+F8079400    F80797FF         1,024  X86_CODE        0
+F8079800    F8079BFF         1,024  NULL_PAD        0
+F8079C00    F8079FFF         1,024  BIN_DATA        0
+F807A000    F807A3FF         1,024  NULL_PAD        0
+F807A400    F807AFFF         3,072  BIN_DATA        0
+F807B000    F807B3FF         1,024  NULL_PAD        0
+F807B400    F807BBFF         2,048  BIN_DATA        0
+F807BC00    F807C3FF         2,048  NULL_PAD        0
+F807C400    F807C7FF         1,024  ASCII_TEXT      0
+F807C800    F807CBFF         1,024  NULL_PAD        0
+F807CC00    F807CFFF         1,024  X86_DATA        0
+F807D000    F807D3FF         1,024  X86_CODE        0
+F807D400    F807DBFF         2,048  NULL_PAD        0
+F807DC00    F807E7FF         3,072  BIN_DATA        0
+F807E800    F807EBFF         1,024  X86_DATA        0
+F807EC00    F807EFFF         1,024  I860_SPARSE     18
+F807F000    F807FBFF         3,072  ASCII_TEXT      4
+F807FC00    F807FFFF         1,024  BIN_DATA        0
+F8080000    F8081BFF         7,168  NULL_PAD        0
+F8081C00    F8083FFF         9,216  X86_CODE        0
+F8084000    F8084BFF         3,072  ASCII_TEXT      0
+F8084C00    F8084FFF         1,024  M68K_DATA       0
+F8085000    F80867FF         6,144  X86_CODE        0
+F8086800    F8086BFF         1,024  X86_DATA        0
+F8086C00    F8086FFF         1,024  X86_CODE        0
+F8087000    F80873FF         1,024  X86_DATA        0
+F8087400    F80887FF         5,120  X86_CODE        0
+F8088800    F8088FFF         2,048  X86_DATA        0
+F8089000    F808ABFF         7,168  X86_CODE        0
+F808AC00    F808AFFF         1,024  M68K_DATA       0
+F808B000    F808B3FF         1,024  X86_DATA        0
+F808B400    F808B7FF         1,024  BIN_DATA        0
+F808B800    F808DFFF        10,240  X86_CODE        0
+F808E000    F808E3FF         1,024  X86_DATA        0
+F808E400    F80903FF         8,192  X86_CODE        0
+F8090400    F8090BFF         2,048  X86_DATA        0
+F8090C00    F8090FFF         1,024  X86_CODE        0
+F8091000    F80913FF         1,024  M68K_DATA       0
+F8091400    F80917FF         1,024  X86_DATA        0
+F8091800    F80937FF         8,192  X86_CODE        0
+F8093800    F8093BFF         1,024  X86_DATA        0
+F8093C00    F80953FF         6,144  X86_CODE        0
+F8095400    F80957FF         1,024  X86_DATA        0
+F8095800    F8098FFF        14,336  X86_CODE        0
+F8099000    F809A3FF         5,120  NULL_PAD        17
+F809A400    F809A7FF         1,024  BIN_DATA        0
+F809A800    F809ABFF         1,024  NULL_PAD        0
+F809AC00    F809B3FF         2,048  BIN_DATA        0
+F809B400    F809BBFF         2,048  NULL_PAD        0
+F809BC00    F809BFFF         1,024  BIN_DATA        0
+F809C000    F809C3FF         1,024  NULL_PAD        0
+F809C400    F809C7FF         1,024  BIN_DATA        0
+F809C800    F809CBFF         1,024  X86_CODE        0
+F809CC00    F809DBFF         4,096  NULL_PAD        0
+F809DC00    F809DFFF         1,024  X86_DATA        0
+F809E000    F809EBFF         3,072  NULL_PAD        0
+F809EC00    F809EFFF         1,024  M68K_DATA       0
+F809F000    F809F3FF         1,024  NULL_PAD        0
+F809F400    F809F7FF         1,024  BIN_DATA        0
+F809F800    F809FBFF         1,024  X86_CODE        0
+F809FC00    F80A0FFF         5,120  X86_DATA        0
+F80A1000    F80A33FF         9,216  X86_CODE        16
+F80A3400    F80A37FF         1,024  M68K_DATA       0
+F80A3800    F80A3BFF         1,024  X86_CODE        0
+F80A3C00    F80AFBFF        49,152  ASCII_TEXT      6
+F80AFC00    F80B0FFF         5,120  X86_CODE        0
+F80B1000    F80B13FF         1,024  X86_DATA        0
+F80B1400    F80B2547         4,424  X86_CODE        16
+
+--- Type Summary for __text ---
+Type                 Bytes       %  i860 Insns
+--------------  ----------  ------  ----------
+X86_CODE           298,312   40.8%  58
+NULL_PAD           115,712   15.8%  117
+ASCII_TEXT         108,544   14.9%  136
+X86_DATA            71,680    9.8%  0
+BIN_DATA            54,272    7.4%  2
+M68K_CODE           41,984    5.7%  10
+M68K_DATA           27,648    3.8%  0
+I860_SPARSE          8,192    1.1%  115
+MACHO_X86            3,072    0.4%  0
+I860_CODE            1,024    0.1%  88
+TOTAL              730,440  100.0%  526
+
+Block: __TEXT  F80B2548-F80B3FFF  6,840 bytes
+
+Start       End               Size  Type            i860 Insns
+----------  ----------  ----------  --------------  ----------
+F80B2548    F80B3FFF         6,840  X86_CODE        23
+
+--- Type Summary for __TEXT ---
+Type                 Bytes       %  i860 Insns
+--------------  ----------  ------  ----------
+X86_CODE             6,840  100.0%  23
+TOTAL                6,840  100.0%  23
+
+Block: __DATA  F80C1C50-F80C1CFF  176 bytes
+
+Start       End               Size  Type            i860 Insns
+----------  ----------  ----------  --------------  ----------
+F80C1C50    F80C1CFF           176  ASCII_TEXT      0
+
+--- Type Summary for __DATA ---
+Type                 Bytes       %  i860 Insns
+--------------  ----------  ------  ----------
+ASCII_TEXT             176  100.0%  0
+TOTAL                  176  100.0%  0
+
+
+=== Per-Block Detail (1KB) ===
+Address     Type            i860  asc%  nul%  m68k   x86  ent
+----------  --------------  ----  ----  ----  ----  ----  ---
+F8000000    NULL_PAD          69    3%   86%     0     1  1.3
+F8000400    NULL_PAD           0    0%  100%     0     0  0.0
+F8000800    NULL_PAD           0    0%  100%     0     0  0.0
+F8000C00    NULL_PAD           0    0%  100%     0     0  0.0
+F8001000    M68K_CODE          0   27%   20%    17     5  5.9
+F8001400    M68K_CODE          4   29%   27%    16     4  5.5
+F8001800    X86_CODE           0   16%   39%     1    13  4.4
+F8001C00    X86_DATA           0   20%   37%     0     8  4.6
+F8002000    M68K_DATA          0   19%   30%     4     1  4.8
+F8002400    BIN_DATA           0   21%   31%     2     2  4.9
+F8002800    M68K_CODE          0   19%   26%    15     3  5.3
+F8002C00    M68K_DATA          0   19%   20%     6     3  5.7
+F8003000    M68K_DATA          0   20%   24%     9     2  5.5
+F8003400    M68K_DATA          0   22%   23%     7     1  5.4
+F8003800    M68K_DATA          0   20%   25%     5     2  5.5
+F8003C00    BIN_DATA           0   22%   25%     1     2  5.5
+F8004000    X86_DATA           0   40%   17%    23    33  5.6
+F8004400    X86_DATA           0   30%   21%     7    11  5.4
+F8004800    BIN_DATA           0   20%   30%     3     2  5.0
+F8004C00    I860_SPARSE       25   15%   32%     3     1  4.9
+F8005000    M68K_DATA          0   21%   23%    10     6  5.6
+F8005400    X86_DATA           0   24%   23%     1     5  5.3
+F8005800    M68K_CODE          0   26%   20%    13     4  5.7
+F8005C00    M68K_CODE          2   24%   19%    12     5  5.9
+F8006000    M68K_DATA          0   22%   21%     6     3  5.4
+F8006400    M68K_DATA          0   19%   20%     4     0  5.6
+F8006800    BIN_DATA           0   19%   11%     4     4  5.9
+F8006C00    X86_DATA           0   21%   16%     4     5  5.8
+F8007000    M68K_DATA          0   20%   17%     5     2  5.9
+F8007400    X86_DATA           0   19%   18%     5     9  5.9
+F8007800    X86_CODE           0   19%   25%     5    12  5.5
+F8007C00    X86_DATA           0   18%   26%     2     6  4.9
+F8008000    X86_CODE           0   18%   19%     4    11  5.9
+F8008400    X86_DATA           0   21%   20%     0     8  5.7
+F8008800    X86_CODE           4   19%   22%     2    57  5.6
+F8008C00    I860_CODE         88   19%   19%     6     7  5.8
+F8009000    X86_DATA           0   20%   20%     0     4  5.4
+F8009400    M68K_DATA          0   16%   27%     4     1  5.3
+F8009800    X86_DATA           0   21%   22%     7    13  5.8
+F8009C00    X86_DATA           0   21%   15%     2     6  5.9
+F800A000    X86_DATA           0   21%   20%     1     8  5.8
+F800A400    X86_DATA           0   18%   19%     1     8  5.6
+F800A800    X86_DATA           0   18%   19%     2     4  5.5
+F800AC00    X86_DATA           0   19%   25%     7     8  5.2
+F800B000    X86_DATA           0   21%   24%     6     8  5.5
+F800B400    X86_DATA           0   18%   23%     2     5  5.6
+F800B800    BIN_DATA           0   20%   20%     0     1  5.6
+F800BC00    I860_SPARSE        4   21%   18%     0     1  5.7
+F800C000    I860_SPARSE       19   22%   21%     0     0  5.6
+F800C400    BIN_DATA           0   22%   20%     0     1  5.7
+F800C800    X86_DATA           0   22%   18%     0     4  5.5
+F800CC00    BIN_DATA           0   22%   19%     0     2  5.6
+F800D000    I860_SPARSE       17   21%   17%     0     4  5.6
+F800D400    X86_DATA           0   17%   24%    10    11  5.6
+F800D800    M68K_DATA          0   23%   23%    19    10  5.6
+F800DC00    X86_CODE           1   15%   23%     2    18  5.7
+F800E000    M68K_DATA          0   23%   20%     9     6  5.7
+F800E400    X86_DATA           0   15%   25%     0     7  5.4
+F800E800    BIN_DATA           0   19%   28%     2     1  5.1
+F800EC00    X86_DATA           0   24%   21%     3     8  5.4
+F800F000    I860_SPARSE       15   21%   22%     8     8  5.7
+F800F400    X86_CODE           0   21%   22%     6    14  5.6
+F800F800    BIN_DATA           0   19%   23%     5     5  5.5
+F800FC00    ASCII_TEXT         3   85%    3%    20     1  5.2
+F8010000    ASCII_TEXT         0  100%    0%    16     0  4.6
+F8010400    ASCII_TEXT         0  100%    0%    19     0  4.7
+F8010800    ASCII_TEXT         0  100%    0%    19     0  4.6
+F8010C00    ASCII_TEXT         0  100%    0%    34     0  5.0
+F8011000    ASCII_TEXT         0  100%    0%    66     0  4.7
+F8011400    ASCII_TEXT         0  100%    0%    32     0  4.8
+F8011800    ASCII_TEXT        43  100%    0%     7     0  3.9
+F8011C00    ASCII_TEXT        32  100%    0%     5     0  4.2
+F8012000    ASCII_TEXT         0  100%    0%     7     0  3.8
+F8012400    ASCII_TEXT         1  100%    0%     5     0  4.0
+F8012800    ASCII_TEXT         0  100%    0%     9     0  4.0
+F8012C00    ASCII_TEXT         0  100%    0%     4     0  3.9
+F8013000    ASCII_TEXT         0  100%    0%     7     0  4.1
+F8013400    ASCII_TEXT         0  100%    0%     6     0  3.8
+F8013800    ASCII_TEXT         0  100%    0%     6     0  4.0
+F8013C00    ASCII_TEXT        19  100%    0%     8     0  4.1
+F8014000    ASCII_TEXT         0  100%    0%     7     0  3.8
+F8014400    ASCII_TEXT         0  100%    0%     3     0  4.1
+F8014800    ASCII_TEXT         3  100%    0%     7     0  3.8
+F8014C00    ASCII_TEXT         0  100%    0%     4     0  4.1
+F8015000    ASCII_TEXT         3  100%    0%     6     0  4.1
+F8015400    ASCII_TEXT         0  100%    0%     3     0  3.7
+F8015800    ASCII_TEXT         0  100%    0%     4     0  4.0
+F8015C00    ASCII_TEXT        22  100%    0%     7     0  3.8
+F8016000    ASCII_TEXT         0  100%    0%     8     0  4.0
+F8016400    ASCII_TEXT         0  100%    0%     5     0  4.0
+F8016800    ASCII_TEXT         0  100%    0%     3     0  3.8
+F8016C00    ASCII_TEXT         0  100%    0%     5     0  4.1
+F8017000    ASCII_TEXT         0  100%    0%     7     0  3.9
+F8017400    ASCII_TEXT         0  100%    0%     6     0  3.9
+F8017800    ASCII_TEXT         0  100%    0%     3     0  4.1
+F8017C00    MACHO_*            0   38%   43%   107     5  4.2
+F8018000    M68K_CODE          4   49%   17%   302     9  5.2
+F8018400    M68K_CODE          0   48%   16%   125     3  5.8
+F8018800    M68K_CODE          0   50%   20%   218     5  5.4
+F8018C00    M68K_CODE          0   45%   19%   169     6  5.6
+F8019000    M68K_CODE          0   46%   14%   117    18  5.9
+F8019400    M68K_CODE          0   49%   18%   145    17  5.9
+F8019800    M68K_CODE          0   48%   17%    75    28  5.8
+F8019C00    M68K_CODE          0   46%   24%    60    12  5.5
+F801A000    M68K_CODE          0   49%   18%   115    30  5.7
+F801A400    M68K_CODE          0   42%   22%   139     7  5.8
+F801A800    M68K_CODE          0   38%   19%    78    12  5.9
+F801AC00    M68K_CODE          0   45%   17%   138    25  5.9
+F801B000    M68K_CODE          0   44%   14%   105    11  6.2
+F801B400    M68K_CODE          0   45%   13%    76    13  5.9
+F801B800    M68K_CODE          0   47%   12%    80    10  6.1
+F801BC00    M68K_CODE          0   44%   12%   106    12  5.9
+F801C000    M68K_CODE          0   43%   13%    75    21  5.8
+F801C400    M68K_CODE          0   44%   12%    76    28  5.4
+F801C800    M68K_DATA          0   40%   10%   102    54  5.5
+F801CC00    M68K_CODE          0   39%   11%    95    29  5.6
+F801D000    M68K_CODE          0   38%   13%    71    24  5.7
+F801D400    M68K_CODE          0   40%   11%    67    16  5.8
+F801D800    M68K_CODE          0   38%   13%    52    19  5.7
+F801DC00    M68K_DATA          0   39%   13%    41    24  5.7
+F801E000    M68K_CODE          0   41%   14%    55    23  5.7
+F801E400    M68K_CODE          0   38%   13%    55    26  5.9
+F801E800    M68K_DATA          0   39%   13%    58    31  5.8
+F801EC00    M68K_CODE          0   40%   16%    54    24  5.8
+F801F000    M68K_CODE          0   45%   16%   143     7  5.7
+F801F400    M68K_CODE          0   40%   13%   100    11  5.8
+F801F800    M68K_CODE          0   42%   15%    64    12  5.7
+F801FC00    M68K_CODE          0   39%   13%    75    15  5.8
+F8020000    M68K_CODE          0   38%   21%    28     7  5.4
+F8020400    M68K_CODE          0   23%   35%    19     4  3.7
+F8020800    BIN_DATA           0   42%   26%     3     0  4.3
+F8020C00    ASCII_TEXT         0   96%    3%     3     0  4.9
+F8021000    ASCII_TEXT         0   57%   30%     2     0  4.6
+F8021400    X86_DATA           0   11%   50%     1     6  3.7
+F8021800    X86_DATA           0   14%   49%     0     4  3.9
+F8021C00    M68K_CODE          0   22%   46%    11     1  4.1
+F8022000    M68K_CODE          0   20%   50%    16     6  3.6
+F8022400    M68K_DATA          0   26%   48%    14     7  3.7
+F8022800    M68K_CODE          0   29%   50%    27     1  3.7
+F8022C00    BIN_DATA           0   29%   49%     0     2  3.5
+F8023000    M68K_DATA          0   24%   49%    12     7  3.9
+F8023400    BIN_DATA           2   24%   53%     0     1  3.2
+F8023800    X86_DATA           0    4%   74%     0     9  1.9
+F8023C00    X86_CODE           0   47%    6%     2    14  7.4
+F8024000    X86_CODE           0   39%    0%     3    28  7.6
+F8024400    X86_DATA           0   38%    0%    12    20  7.8
+F8024800    X86_CODE           0   40%    0%     4    21  7.7
+F8024C00    X86_CODE           0   38%    0%    10    26  7.7
+F8025000    X86_CODE           0   41%    0%     4    29  7.7
+F8025400    X86_CODE           0   37%    0%     4    33  7.8
+F8025800    X86_CODE           0   38%    0%     9    34  7.8
+F8025C00    X86_CODE          13   36%    3%     7    24  7.6
+F8026000    X86_CODE           0   41%    0%     8    27  7.8
+F8026400    X86_CODE           0   39%    0%     3    25  7.7
+F8026800    X86_CODE           3   38%    0%     2    21  7.7
+F8026C00    X86_CODE           0   40%    0%     7    25  7.7
+F8027000    X86_CODE           0   39%    0%     5    36  7.7
+F8027400    X86_CODE           0   40%    0%     6    22  7.7
+F8027800    X86_CODE           0   41%    0%     8    24  7.7
+F8027C00    X86_DATA           0   26%   20%     6    12  6.5
+F8028000    X86_CODE           0   22%   28%     3    23  5.7
+F8028400    X86_CODE           0   28%   18%     0    19  6.7
+F8028800    X86_CODE           0   38%    0%     5    31  7.7
+F8028C00    X86_CODE           0   40%    0%     5    20  7.7
+F8029000    X86_CODE           0   40%    0%     3    19  7.7
+F8029400    X86_CODE           0   39%    0%     3    18  7.7
+F8029800    X86_CODE           0   41%    0%     8    24  7.8
+F8029C00    X86_CODE           0   35%    5%     4    27  7.6
+F802A000    X86_CODE           4   32%   10%     3    15  7.2
+F802A400    X86_CODE           0   39%    0%     7    28  7.8
+F802A800    X86_CODE           0   45%    0%     5    21  7.7
+F802AC00    X86_DATA           0   42%    0%    10    18  7.6
+F802B000    X86_CODE           0   30%   12%     7    15  7.2
+F802B400    X86_DATA           0   27%   24%     5    10  6.2
+F802B800    X86_CODE           0   20%   30%     1    14  5.6
+F802BC00    X86_CODE           0   33%    9%    10    25  7.3
+F802C000    X86_CODE           0   41%    0%     2    27  7.8
+F802C400    X86_DATA           0   41%    0%     8    14  7.7
+F802C800    X86_CODE           0   37%    0%     3    14  7.7
+F802CC00    X86_CODE           0   33%    0%     9    30  7.7
+F802D000    X86_CODE           0   35%    0%     7    22  7.8
+F802D400    X86_CODE           0   40%    0%     8    29  7.7
+F802D800    X86_CODE           0   42%    0%     9    19  7.8
+F802DC00    X86_CODE           0   38%    4%     6    23  7.7
+F802E000    X86_CODE           0   40%    0%     7    19  7.8
+F802E400    X86_CODE           0   38%    0%     6    13  7.8
+F802E800    X86_CODE           0   25%   20%     3    18  6.5
+F802EC00    X86_CODE           0   41%    0%     2    28  7.8
+F802F000    X86_CODE           0   41%    0%     5    32  7.8
+F802F400    X86_CODE           0   41%    0%     5    23  7.8
+F802F800    X86_CODE           0   42%    1%     6    20  7.7
+F802FC00    X86_CODE           0   35%   13%     4    18  7.2
+F8030000    X86_CODE           0   37%    0%     3    31  7.8
+F8030400    X86_CODE           0   40%    0%     7    27  7.8
+F8030800    X86_CODE           0   42%    0%     7    19  7.8
+F8030C00    X86_CODE           0   46%    0%     7    24  7.6
+F8031000    X86_CODE           0   38%    0%     3    31  7.8
+F8031400    X86_CODE           0   39%    0%    10    23  7.7
+F8031800    X86_CODE           0   38%    0%     5    32  7.8
+F8031C00    X86_CODE           0   31%   13%     6    25  7.1
+F8032000    X86_CODE           0   38%    0%     9    33  7.8
+F8032400    X86_CODE           0   38%    0%     7    17  7.7
+F8032800    X86_CODE           0   39%    0%     5    27  7.7
+F8032C00    X86_CODE           0   38%    1%     2    14  7.8
+F8033000    X86_CODE           0   34%    1%     5    26  7.6
+F8033400    X86_CODE           0   40%    0%     8    21  7.6
+F8033800    X86_CODE           0   37%    0%     5    25  7.7
+F8033C00    X86_DATA           0   31%   13%     5     9  7.2
+F8034000    X86_DATA           0   39%    0%     6     9  7.7
+F8034400    X86_CODE           0   41%    0%     7    24  7.7
+F8034800    X86_CODE           0   38%    0%     7    20  7.7
+F8034C00    X86_CODE           0   41%    0%     4    21  7.7
+F8035000    X86_CODE           0   37%    0%     5    22  7.7
+F8035400    X86_CODE           0   41%    0%     3    31  7.8
+F8035800    X86_CODE           0   45%    0%     6    30  7.7
+F8035C00    X86_CODE           0   33%   13%     3    17  7.1
+F8036000    X86_CODE           0   41%    0%     6    19  7.8
+F8036400    X86_CODE           0   33%    0%     3    23  7.8
+F8036800    X86_CODE           0   40%    0%     6    25  7.7
+F8036C00    X86_CODE           1   44%    0%     5    14  7.8
+F8037000    X86_CODE           0   42%    0%     4    13  7.7
+F8037400    X86_CODE           0   36%    0%     3    28  7.8
+F8037800    X86_DATA           0   39%    0%    13    14  7.5
+F8037C00    ASCII_TEXT         0   82%    9%     6     3  5.2
+F8038000    ASCII_TEXT         0   61%   38%     4     0  4.2
+F8038400    NULL_PAD          31    2%   95%     0     0  0.4
+F8038800    NULL_PAD           0    0%  100%     0     0  0.0
+F8038C00    BIN_DATA           0   34%   65%     3     0  2.6
+F8039000    NULL_PAD           0    0%  100%     0     0  0.0
+F8039400    BIN_DATA           0   34%   24%     1     0  5.2
+F8039800    NULL_PAD           0    6%   87%     0     0  1.1
+F8039C00    NULL_PAD           0    2%   95%     0     0  0.4
+F803A000    NULL_PAD           0    0%  100%     0     0  0.0
+F803A400    BIN_DATA           0   20%   79%     3     0  1.7
+F803A800    NULL_PAD           0    0%  100%     0     0  0.0
+F803AC00    BIN_DATA           0   30%   26%     2     0  5.1
+F803B000    BIN_DATA           0   13%   64%     0     0  3.0
+F803B400    NULL_PAD           0    2%   95%     0     0  0.4
+F803B800    NULL_PAD           0    0%  100%     0     0  0.0
+F803BC00    I860_SPARSE       12   29%   31%     0     0  4.3
+F803C000    BIN_DATA           0   23%   33%     0     0  4.0
+F803C400    NULL_PAD           0    1%   91%     0     0  0.7
+F803C800    NULL_PAD           0    0%  100%     0     0  0.0
+F803CC00    NULL_PAD           0    0%  100%     0     0  0.0
+F803D000    NULL_PAD           0    0%  100%     0     0  0.0
+F803D400    NULL_PAD           0    0%  100%     0     0  0.0
+F803D800    NULL_PAD           0    0%  100%     0     0  0.0
+F803DC00    MACHO_*            0   18%   73%     0     0  2.2
+F803E000    X86_DATA           0   29%   63%     2     4  2.7
+F803E400    M68K_CODE          0   27%   64%    14     5  2.9
+F803E800    NULL_PAD           0    0%  100%     0     0  0.0
+F803EC00    NULL_PAD           0    0%  100%     0     0  0.0
+F803F000    NULL_PAD           0    0%  100%     0     0  0.0
+F803F400    NULL_PAD           0    0%  100%     0     0  0.0
+F803F800    NULL_PAD           0    0%  100%     0     0  0.0
+F803FC00    NULL_PAD           0    0%  100%     0     0  0.0
+F8040000    NULL_PAD           0    0%  100%     0     0  0.0
+F8040400    X86_CODE           0   12%   53%     5   103  3.7
+F8040800    X86_CODE           0   23%   12%     8   183  5.6
+F8040C00    X86_CODE           0   28%    9%     2   186  5.9
+F8041000    X86_CODE           0   27%    8%     2   186  5.9
+F8041400    X86_CODE           0   24%   11%     3   175  5.7
+F8041800    X86_CODE           0   30%    8%     1   139  6.1
+F8041C00    X86_CODE           0   26%   11%     3   174  5.8
+F8042000    X86_CODE           0   28%   11%     1   173  6.0
+F8042400    X86_CODE           0   27%   12%     1   126  6.0
+F8042800    X86_CODE           0   28%    5%     0   152  6.1
+F8042C00    X86_CODE           0   21%    8%     0   196  5.7
+F8043000    X86_CODE           0   27%    9%     3   164  6.0
+F8043400    X86_CODE           0   29%   10%     6   136  5.6
+F8043800    X86_CODE           0   26%    6%     1   170  5.9
+F8043C00    X86_CODE           0   35%    8%     6   166  5.7
+F8044000    X86_CODE           0   26%    8%     4   160  6.0
+F8044400    X86_CODE           0   26%    7%     1   205  6.1
+F8044800    X86_CODE           0   30%    7%     1   211  6.0
+F8044C00    X86_CODE           0   17%    8%     1   153  5.5
+F8045000    X86_CODE           0   29%    9%     2   190  6.1
+F8045400    X86_CODE           0   27%    7%     8   184  6.1
+F8045800    X86_CODE           0   25%   15%     1   125  5.8
+F8045C00    X86_CODE           0   24%    7%     4   189  5.4
+F8046000    X86_CODE           0   29%   12%     4   101  5.5
+F8046400    X86_CODE           0   29%    4%     0   108  6.2
+F8046800    X86_CODE           0   26%   14%     1   168  5.8
+F8046C00    X86_CODE           0   28%    7%     1   111  6.1
+F8047000    X86_CODE           0   27%    8%     2   162  5.8
+F8047400    X86_CODE           0   37%    8%    13   102  5.9
+F8047800    X86_CODE           0   39%    6%    10    93  5.9
+F8047C00    X86_CODE           0   39%    4%     2    69  6.3
+F8048000    X86_CODE           0   30%    7%     0   160  6.0
+F8048400    X86_CODE           0   26%   10%     0   121  5.9
+F8048800    X86_CODE           0   22%   11%     2   116  6.0
+F8048C00    X86_CODE           0   22%    7%     2    42  6.0
+F8049000    X86_CODE           0   29%    0%     1   105  6.0
+F8049400    X86_CODE           0   25%    8%     2   105  6.3
+F8049800    X86_CODE           0   26%   10%     0   122  6.0
+F8049C00    X86_CODE           0   26%   12%     2   100  6.0
+F804A000    X86_CODE           0   31%    7%     1   124  6.2
+F804A400    X86_CODE           0   35%    3%     1   103  6.3
+F804A800    X86_CODE           0   31%    8%     2    72  6.1
+F804AC00    X86_CODE           0   35%    6%     1    73  5.8
+F804B000    X86_CODE           0   34%    8%     0    71  5.9
+F804B400    X86_CODE           0   29%   13%     1    37  5.9
+F804B800    X86_CODE           0   29%   10%     1    83  6.2
+F804BC00    X86_DATA           0   35%   15%     6    11  5.0
+F804C000    BIN_DATA           0   26%   15%     4     4  5.2
+F804C400    X86_DATA           0   21%   12%     5     8  5.1
+F804C800    X86_CODE           0   19%   12%     4    12  5.1
+F804CC00    X86_DATA           0   25%   12%     4     7  5.2
+F804D000    X86_DATA           0   33%   15%     6     7  4.9
+F804D400    M68K_DATA          0   50%   16%     9     4  5.5
+F804D800    ASCII_TEXT         0   58%   31%    11     5  4.8
+F804DC00    BIN_DATA           0   15%   79%     1     0  1.9
+F804E000    NULL_PAD           0    0%  100%     0     0  0.0
+F804E400    NULL_PAD           0    0%  100%     0     0  0.0
+F804E800    NULL_PAD           0    0%  100%     0     0  0.0
+F804EC00    NULL_PAD           0    0%  100%     0     0  0.0
+F804F000    NULL_PAD           0    0%  100%     0     0  0.0
+F804F400    NULL_PAD           0    0%  100%     0     0  0.0
+F804F800    NULL_PAD           0    0%  100%     0     0  0.0
+F804FC00    X86_DATA           0   13%   68%     1     4  2.4
+F8050000    X86_DATA           0   33%   36%     4     9  4.4
+F8050400    BIN_DATA           0   31%   29%     3     3  4.7
+F8050800    BIN_DATA           0   22%   43%     3     3  3.7
+F8050C00    ASCII_TEXT         0   63%   23%     4     0  4.9
+F8051000    ASCII_TEXT         0   93%    6%     0     0  4.6
+F8051400    ASCII_TEXT         0   93%    6%     0     0  4.8
+F8051800    ASCII_TEXT         0   93%    6%     0     0  4.7
+F8051C00    ASCII_TEXT         0   92%    7%     2     0  4.7
+F8052000    ASCII_TEXT         0   95%    4%     4     0  5.2
+F8052400    ASCII_TEXT         0   86%   10%     4     2  5.0
+F8052800    NULL_PAD           0    0%  100%     0     0  0.0
+F8052C00    NULL_PAD           0    0%  100%     0     0  0.0
+F8053000    NULL_PAD           0    0%  100%     0     0  0.0
+F8053400    NULL_PAD           0    0%  100%     0     0  0.0
+F8053800    NULL_PAD           0    0%  100%     0     0  0.0
+F8053C00    BIN_DATA           0   35%   35%     0     0  4.7
+F8054000    BIN_DATA           0   36%   20%     0     0  5.2
+F8054400    X86_CODE           0   37%    5%     0    48  5.6
+F8054800    X86_CODE           0   16%   21%     1    10  5.0
+F8054C00    BIN_DATA           0   24%   18%     1     0  5.4
+F8055000    BIN_DATA           0   25%   33%     2     3  5.5
+F8055400    X86_DATA           0   15%   11%     0     6  2.8
+F8055800    X86_DATA           0   12%   15%     0     4  3.3
+F8055C00    BIN_DATA           0   35%   17%     0     0  4.8
+F8056000    BIN_DATA           0   23%   33%     0     0  4.0
+F8056400    NULL_PAD           0    1%   91%     0     0  0.7
+F8056800    NULL_PAD           0    0%  100%     0     0  0.0
+F8056C00    NULL_PAD           0    0%  100%     0     0  0.0
+F8057000    NULL_PAD           0    0%  100%     0     0  0.0
+F8057400    NULL_PAD           0    0%  100%     0     0  0.0
+F8057800    NULL_PAD           0    0%  100%     0     0  0.0
+F8057C00    BIN_DATA           0   29%   70%     0     0  2.3
+F8058000    NULL_PAD           0    0%  100%     0     0  0.0
+F8058400    BIN_DATA           0   30%   24%     2     0  5.1
+F8058800    BIN_DATA           0   25%   38%     0     2  4.6
+F8058C00    NULL_PAD           0    2%   95%     0     0  0.4
+F8059000    NULL_PAD           0    0%  100%     0     0  0.0
+F8059400    M68K_DATA          0   45%   54%     6     0  3.1
+F8059800    NULL_PAD           0    0%  100%     0     0  0.0
+F8059C00    BIN_DATA           0   31%   25%     0     0  5.2
+F805A000    X86_DATA           0   15%   71%     0     6  2.4
+F805A400    NULL_PAD           0   13%   83%     0     0  1.5
+F805A800    NULL_PAD           0    0%  100%     0     0  0.0
+F805AC00    ASCII_TEXT         0   73%   26%     5     0  4.3
+F805B000    NULL_PAD           0    0%  100%     0     0  0.0
+F805B400    NULL_PAD           0    2%   95%     0     0  0.4
+F805B800    NULL_PAD           0    0%  100%     0     0  0.0
+F805BC00    NULL_PAD           0    0%   97%     0     2  0.2
+F805C000    NULL_PAD           0    0%  100%     0     0  0.0
+F805C400    NULL_PAD           0    0%  100%     0     0  0.0
+F805C800    NULL_PAD           0    0%  100%     0     0  0.0
+F805CC00    NULL_PAD           0    0%  100%     0     0  0.0
+F805D000    NULL_PAD           0    0%  100%     0     0  0.0
+F805D400    NULL_PAD           0    0%  100%     0     0  0.0
+F805D800    NULL_PAD           0    0%  100%     0     0  0.0
+F805DC00    MACHO_*            0   18%   74%     0     1  2.1
+F805E000    BIN_DATA           0   27%   63%     0     0  2.7
+F805E400    M68K_CODE          0   24%   67%    10     1  2.7
+F805E800    NULL_PAD           0    0%  100%     0     0  0.0
+F805EC00    NULL_PAD           0    0%  100%     0     0  0.0
+F805F000    X86_CODE           0    7%   64%     0    44  3.1
+F805F400    X86_CODE           0   25%    6%     1   105  5.9
+F805F800    X86_CODE           0   26%    7%     0   159  6.0
+F805FC00    X86_CODE           0   30%    9%     0   155  5.9
+F8060000    X86_CODE           0   30%    9%     2   187  5.9
+F8060400    X86_CODE           0   29%    6%     1   150  5.7
+F8060800    X86_CODE           0   27%   17%     0   131  5.7
+F8060C00    X86_CODE           0   31%   15%     0   133  5.7
+F8061000    X86_CODE           0   23%   11%     3   194  5.4
+F8061400    X86_CODE           0   23%   16%     1   167  5.6
+F8061800    X86_CODE           0   22%   17%     0   146  5.7
+F8061C00    X86_CODE           0   24%   12%     0   179  5.8
+F8062000    X86_CODE           0   23%   14%     0   129  5.8
+F8062400    X86_CODE           0   23%   17%     1   146  5.5
+F8062800    X86_CODE           0   27%    8%     1   172  5.8
+F8062C00    X86_CODE           0   28%   10%     1   180  5.7
+F8063000    X86_CODE           0   21%   16%     2   166  5.6
+F8063400    X86_CODE           0   23%   16%     0   162  5.3
+F8063800    X86_CODE           0   27%   12%     1   184  5.6
+F8063C00    X86_CODE           0   28%   12%     3   113  6.2
+F8064000    X86_CODE           0   23%    7%     0   147  5.8
+F8064400    X86_CODE           0   32%   16%     0   137  5.1
+F8064800    X86_CODE           0   29%   15%     0   140  5.3
+F8064C00    X86_CODE           0   26%    9%     0   180  5.9
+F8065000    X86_CODE           0   18%   16%     0   150  5.6
+F8065400    X86_CODE           0   23%    3%     2   114  6.1
+F8065800    X86_CODE           0   23%    5%     0   136  6.2
+F8065C00    X86_CODE           0   21%    3%     0   169  6.0
+F8066000    X86_CODE           0   21%    6%     2   102  6.0
+F8066400    X86_CODE           0   23%   15%     1   116  5.7
+F8066800    X86_CODE           0   27%    8%     2   110  5.9
+F8066C00    X86_CODE           0   25%   15%     2    87  5.8
+F8067000    X86_CODE           0   23%   14%     2    87  5.8
+F8067400    X86_CODE           0   22%   12%     0    69  5.9
+F8067800    X86_CODE           0   34%    8%     1   193  6.0
+F8067C00    X86_CODE           0   32%    8%     1   207  5.8
+F8068000    X86_CODE           0   25%   11%     1   189  5.9
+F8068400    X86_CODE           0   28%   12%     1   178  5.9
+F8068800    X86_CODE           0   29%   14%     2   181  5.9
+F8068C00    X86_CODE           0   26%   13%     0   173  5.7
+F8069000    X86_CODE           0   25%   17%     1   171  5.7
+F8069400    X86_CODE           0   24%   15%     0   133  5.6
+F8069800    X86_CODE           0   25%   14%     0   156  5.5
+F8069C00    X86_CODE           0   30%    8%     2   108  6.0
+F806A000    X86_DATA           0   36%   15%     6     9  4.9
+F806A400    X86_DATA           0   26%   16%     4     6  5.2
+F806A800    X86_DATA           0   22%   12%     5     7  5.1
+F806AC00    X86_CODE           0   20%   12%     4    13  5.1
+F806B000    BIN_DATA           0   21%   12%     5     5  5.1
+F806B400    X86_DATA           0   17%   53%     3     6  3.6
+F806B800    M68K_DATA          0   34%   47%     7     2  3.6
+F806BC00    M68K_DATA          0   27%   64%     7     3  2.8
+F806C000    NULL_PAD           0    0%  100%     0     0  0.0
+F806C400    NULL_PAD           0    0%  100%     0     0  0.0
+F806C800    NULL_PAD           0    0%  100%     0     0  0.0
+F806CC00    NULL_PAD           0    0%  100%     0     0  0.0
+F806D000    NULL_PAD           0    0%  100%     0     0  0.0
+F806D400    NULL_PAD           0    0%  100%     0     0  0.0
+F806D800    NULL_PAD           0    0%  100%     0     0  0.0
+F806DC00    BIN_DATA           0   18%   60%     1     3  3.0
+F806E000    M68K_DATA          0   33%   35%     5     0  4.5
+F806E400    X86_CODE           0   31%   29%     3    13  4.7
+F806E800    X86_DATA           0   29%   37%     3     9  4.1
+F806EC00    X86_DATA           0   37%   35%     3     6  4.4
+F806F000    ASCII_TEXT         0   91%    8%     6     0  4.8
+F806F400    ASCII_TEXT         0   92%    7%     0     0  4.6
+F806F800    ASCII_TEXT         0   93%    6%     2     0  4.6
+F806FC00    ASCII_TEXT         0   93%    6%     4     0  4.6
+F8070000    ASCII_TEXT         0   92%    7%     1     0  4.7
+F8070400    ASCII_TEXT         0   96%    3%     0     0  5.0
+F8070800    NULL_PAD           0   10%   87%     0     0  1.1
+F8070C00    NULL_PAD           0    0%  100%     0     0  0.0
+F8071000    NULL_PAD           0    0%  100%     0     0  0.0
+F8071400    NULL_PAD           0    0%  100%     0     0  0.0
+F8071800    NULL_PAD           0    0%  100%     0     0  0.0
+F8071C00    X86_DATA           0   31%   19%     8    14  6.9
+F8072000    X86_CODE           0   37%    0%     4    19  7.7
+F8072400    X86_CODE           0   35%    1%     6    31  7.7
+F8072800    X86_CODE           0   36%    0%     6    23  7.6
+F8072C00    X86_DATA           0   39%    0%     5    10  7.7
+F8073000    X86_CODE           0   35%   29%     1    18  5.9
+F8073400    NULL_PAD           0    0%  100%     0     0  0.0
+F8073800    NULL_PAD           0    0%  100%     0     0  0.0
+F8073C00    X86_CODE           0   31%   20%     3    20  6.7
+F8074000    X86_CODE           0   41%    0%     4    19  7.7
+F8074400    X86_CODE           0   37%    0%     5    31  7.8
+F8074800    X86_CODE           0   38%    0%    11    25  7.7
+F8074C00    X86_CODE           0   39%    0%     8    27  7.8
+F8075000    X86_CODE           0   40%    0%     8    18  7.8
+F8075400    X86_CODE           0   36%    0%     8    20  7.7
+F8075800    X86_CODE           0   36%    0%     2    34  7.7
+F8075C00    X86_CODE           0   33%   12%     6    25  7.1
+F8076000    X86_CODE           0   38%    0%     8    18  7.8
+F8076400    X86_CODE           0   42%    0%     4    23  7.8
+F8076800    X86_CODE           0   37%    0%     5    24  7.8
+F8076C00    X86_CODE           0   51%    0%     6    20  7.7
+F8077000    X86_CODE           0   33%    9%     8    21  7.3
+F8077400    X86_CODE           0   40%    0%     7    17  7.7
+F8077800    X86_CODE           0   41%    0%     5    21  7.8
+F8077C00    I860_SPARSE        5   45%   44%     8     6  4.4
+F8078000    NULL_PAD           0    0%  100%     0     0  0.0
+F8078400    BIN_DATA           0   31%   25%     1     0  5.2
+F8078800    NULL_PAD           0    8%   84%     0     5  1.4
+F8078C00    NULL_PAD           0    5%   91%     0     0  0.8
+F8079000    NULL_PAD           0    0%  100%     0     0  0.0
+F8079400    X86_CODE           0   28%   25%     2    27  6.4
+F8079800    NULL_PAD           0    0%   94%     0     0  0.5
+F8079C00    BIN_DATA           0   38%   61%     2     0  2.8
+F807A000    NULL_PAD           0    0%  100%     0     0  0.0
+F807A400    BIN_DATA           0   29%   27%     2     0  5.0
+F807A800    BIN_DATA           0   31%    8%     0     1  5.9
+F807AC00    BIN_DATA           0   27%   69%     1     0  2.5
+F807B000    NULL_PAD           0    0%  100%     0     0  0.0
+F807B400    BIN_DATA           0   29%   26%     1     0  5.1
+F807B800    BIN_DATA           0   16%   62%     0     0  3.1
+F807BC00    NULL_PAD           0    2%   96%     0     0  0.4
+F807C000    NULL_PAD           0    0%  100%     0     0  0.0
+F807C400    ASCII_TEXT         0   79%   20%     4     0  4.7
+F807C800    NULL_PAD           0    0%  100%     0     0  0.0
+F807CC00    X86_DATA           0   40%   21%     2     4  5.6
+F807D000    X86_CODE           0   48%    7%     1    20  5.5
+F807D400    NULL_PAD           0    9%   84%     0     3  1.4
+F807D800    NULL_PAD           0    0%  100%     0     0  0.0
+F807DC00    BIN_DATA           0   35%   24%     2     0  5.2
+F807E000    BIN_DATA           0   24%   13%     0     0  5.7
+F807E400    BIN_DATA           0   20%   11%     0     0  5.7
+F807E800    X86_DATA           0   17%   13%     2     6  5.5
+F807EC00    I860_SPARSE       18   22%   11%     1     4  5.7
+F807F000    ASCII_TEXT         4   96%    0%     2     0  5.2
+F807F400    ASCII_TEXT         0  100%    0%     0     0  4.4
+F807F800    ASCII_TEXT         0   99%    0%     0     0  4.5
+F807FC00    BIN_DATA           0   20%   71%     0     2  2.3
+F8080000    NULL_PAD           0    0%  100%     0     0  0.0
+F8080400    NULL_PAD           0    0%  100%     0     0  0.0
+F8080800    NULL_PAD           0    0%  100%     0     0  0.0
+F8080C00    NULL_PAD           0    0%  100%     0     0  0.0
+F8081000    NULL_PAD           0    0%  100%     0     0  0.0
+F8081400    NULL_PAD           0    0%  100%     0     0  0.0
+F8081800    NULL_PAD           0    0%  100%     0     0  0.0
+F8081C00    X86_CODE           0   25%   29%     5    18  6.2
+F8082000    X86_CODE           0   40%    1%     6    22  7.7
+F8082400    X86_CODE           0   34%   10%     6    22  7.3
+F8082800    X86_CODE           0   37%    1%     3    23  7.7
+F8082C00    X86_CODE           0   34%   10%     3    20  7.3
+F8083000    X86_CODE           0   37%    1%     5    29  7.7
+F8083400    X86_CODE           0   33%   10%     1    17  7.2
+F8083800    X86_CODE           0   33%   10%     9    28  7.3
+F8083C00    X86_CODE           0   41%    4%     2    20  7.2
+F8084000    ASCII_TEXT         0   66%    0%     0     0  1.6
+F8084400    ASCII_TEXT         0   66%    0%     0     0  1.6
+F8084800    ASCII_TEXT         0   66%    0%     0     0  1.6
+F8084C00    M68K_DATA          0   43%   19%     6     0  5.2
+F8085000    X86_CODE           0   33%   10%     1    17  7.2
+F8085400    X86_CODE           0   32%   11%     6    14  7.3
+F8085800    X86_CODE           0   38%    0%     3    19  7.7
+F8085C00    X86_CODE           0   29%   18%     1    25  6.7
+F8086000    X86_CODE           0   33%   10%     1    20  7.2
+F8086400    X86_CODE           0   37%    0%     7    26  7.7
+F8086800    X86_DATA           0   32%   11%     8    16  7.3
+F8086C00    X86_CODE           0   39%    0%     2    29  7.7
+F8087000    X86_DATA           0   33%   10%     6     9  7.3
+F8087400    X86_CODE           0   38%    0%     8    21  7.8
+F8087800    X86_CODE           0   32%   10%     3    20  7.3
+F8087C00    X86_CODE           0   37%    3%     5    22  7.6
+F8088000    X86_CODE           0   38%    0%     4    27  7.8
+F8088400    X86_CODE           0   32%   15%     5    14  6.9
+F8088800    X86_DATA           0   23%   29%     7    10  5.7
+F8088C00    X86_DATA           0   29%   21%     3     9  6.5
+F8089000    X86_CODE           0   40%    0%     3    25  7.7
+F8089400    X86_CODE           0   40%    0%     7    24  7.8
+F8089800    X86_CODE           0   29%   22%     3    19  6.4
+F8089C00    X86_CODE           0   30%   13%     5    17  7.1
+F808A000    X86_CODE           0   31%   11%     4    18  7.3
+F808A400    X86_CODE           0   39%    0%     4    19  7.7
+F808A800    X86_CODE           0   42%    0%     5    19  7.8
+F808AC00    M68K_DATA          0   39%   12%     8     6  7.1
+F808B000    X86_DATA           0   22%   32%     2     4  5.4
+F808B400    BIN_DATA           0   27%   22%     3     3  6.3
+F808B800    X86_CODE           0   25%   22%     4    16  6.4
+F808BC00    X86_CODE           0   41%    4%     3    18  7.6
+F808C000    X86_CODE           0   26%   21%     3    17  6.4
+F808C400    X86_CODE           0   38%    0%     1    22  7.7
+F808C800    X86_CODE           0   40%    0%     7    20  7.8
+F808CC00    X86_CODE           0   28%   21%     1    12  6.4
+F808D000    X86_CODE           0   27%   24%     2    16  6.2
+F808D400    X86_CODE           0   40%    0%     3    22  7.7
+F808D800    X86_CODE           0   28%   19%     6    25  6.6
+F808DC00    X86_CODE           0   38%    7%     5    16  7.5
+F808E000    X86_DATA           0   25%   23%     6    12  6.3
+F808E400    X86_CODE           0   29%   18%     3    12  6.7
+F808E800    X86_CODE           0   38%    1%     2    27  7.7
+F808EC00    X86_CODE           0   33%   10%     6    27  7.3
+F808F000    X86_CODE           0   35%    6%     5    15  7.5
+F808F400    X86_CODE           0   36%    4%     2    33  7.6
+F808F800    X86_CODE           0   33%   10%    11    26  7.3
+F808FC00    X86_CODE           0   37%    3%     5    22  7.6
+F8090000    X86_CODE           0   33%    8%     6    16  7.4
+F8090400    X86_DATA           0   26%   25%     0     4  6.0
+F8090800    X86_DATA           0   21%   31%     1     9  5.4
+F8090C00    X86_CODE           0   32%   14%     9    19  7.1
+F8091000    M68K_DATA          0   21%   32%     4     3  5.4
+F8091400    X86_DATA           0   28%   21%     8    11  6.5
+F8091800    X86_CODE           0   36%    0%     9    22  7.8
+F8091C00    X86_CODE           0   30%   15%     3    20  7.1
+F8092000    X86_CODE           0   40%    0%     2    20  7.7
+F8092400    X86_CODE           0   34%   10%     4    19  7.3
+F8092800    X86_CODE           0   39%    1%     2    16  7.7
+F8092C00    X86_CODE           0   34%   10%     3    17  7.3
+F8093000    X86_CODE           0   40%    1%     7    29  7.8
+F8093400    X86_CODE           0   32%   11%     5    19  7.3
+F8093800    X86_DATA           0   42%    0%     4     9  7.7
+F8093C00    X86_CODE           0   38%    3%     0    30  7.4
+F8094000    X86_CODE           0   38%    0%     4    26  7.7
+F8094400    X86_CODE           0   38%    0%     6    13  7.7
+F8094800    X86_CODE           0   40%    0%     1    31  7.6
+F8094C00    X86_CODE           0   37%    1%    10    32  7.7
+F8095000    X86_CODE           0   33%   10%     5    23  7.3
+F8095400    X86_DATA           0   35%   10%     7    10  7.3
+F8095800    X86_CODE           0   38%    1%     7    17  7.7
+F8095C00    X86_CODE           0   38%    3%     1    28  7.5
+F8096000    X86_CODE           0   38%    0%     3    36  7.7
+F8096400    X86_CODE           0   36%    0%     5    34  7.8
+F8096800    X86_CODE           0   37%    0%     7    24  7.7
+F8096C00    X86_CODE           0   39%    0%     8    26  7.7
+F8097000    X86_CODE           0   38%    0%     4    40  7.7
+F8097400    X86_CODE           0   41%    0%     3    24  7.7
+F8097800    X86_CODE           0   37%    0%     6    15  7.7
+F8097C00    X86_CODE           0   32%   11%     8    23  7.2
+F8098000    X86_CODE           0   36%    0%     5    27  7.7
+F8098400    X86_CODE           0   35%    0%     6    31  7.8
+F8098800    X86_CODE           0   32%    1%     3    30  7.5
+F8098C00    X86_CODE           0   36%   11%     3    12  7.1
+F8099000    NULL_PAD           0    0%  100%     0     0  0.0
+F8099400    NULL_PAD           0    2%   95%     0     2  0.4
+F8099800    NULL_PAD           0    0%  100%     0     0  0.0
+F8099C00    NULL_PAD          17    2%   95%     0     1  0.4
+F809A000    NULL_PAD           0    0%  100%     0     0  0.0
+F809A400    BIN_DATA           0   23%   76%     2     0  1.9
+F809A800    NULL_PAD           0    0%  100%     0     0  0.0
+F809AC00    BIN_DATA           0   38%   25%     3     0  5.2
+F809B000    BIN_DATA           0   35%   10%     2     2  5.8
+F809B400    NULL_PAD           0    0%   98%     0     0  0.1
+F809B800    NULL_PAD           0    0%  100%     0     0  0.0
+F809BC00    BIN_DATA           0   39%   60%     3     0  2.9
+F809C000    NULL_PAD           0    0%  100%     0     0  0.0
+F809C400    BIN_DATA           0   28%   26%     1     0  5.0
+F809C800    X86_CODE           0   42%    4%     2    17  6.1
+F809CC00    NULL_PAD           0    9%   85%     1     1  1.3
+F809D000    NULL_PAD           0    0%  100%     0     0  0.0
+F809D400    NULL_PAD           0   14%   85%     3     0  1.3
+F809D800    NULL_PAD           0    0%  100%     0     0  0.0
+F809DC00    X86_DATA           0   39%   24%     1     6  5.3
+F809E000    NULL_PAD           0    4%   91%     0     0  0.8
+F809E400    NULL_PAD           0    2%   96%     0     0  0.4
+F809E800    NULL_PAD           0    0%  100%     0     0  0.0
+F809EC00    M68K_DATA          0   43%   56%     7     0  3.0
+F809F000    NULL_PAD           0    0%  100%     0     0  0.0
+F809F400    BIN_DATA           0   27%   27%     2     0  5.1
+F809F800    X86_CODE           0   30%   27%     4    26  5.2
+F809FC00    X86_DATA           0   22%   33%     6     9  5.8
+F80A0000    X86_DATA           0   22%   29%     4     8  5.7
+F80A0400    X86_DATA           0   22%   25%     3     9  6.0
+F80A0800    X86_DATA           0   22%   32%     2     7  5.4
+F80A0C00    X86_DATA           0   27%   22%     2     8  6.4
+F80A1000    X86_CODE           0   27%   21%     0    18  6.5
+F80A1400    X86_CODE           2   38%    0%     7    19  7.7
+F80A1800    X86_CODE           0   36%    0%     7    26  7.7
+F80A1C00    X86_CODE           0   37%    3%     4    16  7.7
+F80A2000    X86_CODE          14   38%    1%     5    22  7.8
+F80A2400    X86_CODE           0   39%    0%     5    22  7.8
+F80A2800    X86_CODE           0   44%    0%     4    20  7.8
+F80A2C00    X86_CODE           0   34%   10%     3    24  7.2
+F80A3000    X86_CODE           0   38%    0%     8    23  7.8
+F80A3400    M68K_DATA          0   39%    0%    11    10  7.8
+F80A3800    X86_CODE           0   42%    0%     8    32  7.6
+F80A3C00    ASCII_TEXT         0   87%    0%     5     5  6.0
+F80A4000    ASCII_TEXT         0  100%    0%     7     0  4.9
+F80A4400    ASCII_TEXT         0  100%    0%     9     0  4.8
+F80A4800    ASCII_TEXT         0  100%    0%    25     0  5.0
+F80A4C00    ASCII_TEXT         0  100%    0%    26     0  4.7
+F80A5000    ASCII_TEXT         0  100%    0%    10     0  4.9
+F80A5400    ASCII_TEXT         0  100%    0%    11     0  5.1
+F80A5800    ASCII_TEXT         0  100%    0%    13     0  4.9
+F80A5C00    ASCII_TEXT         0  100%    0%     6     0  5.1
+F80A6000    ASCII_TEXT         0  100%    0%     0     0  1.7
+F80A6400    ASCII_TEXT         0  100%    0%     0     0  1.4
+F80A6800    ASCII_TEXT         0  100%    0%     0     0  1.9
+F80A6C00    ASCII_TEXT         0  100%    0%     0     0  1.7
+F80A7000    ASCII_TEXT         5  100%    0%     0     0  2.4
+F80A7400    ASCII_TEXT         0  100%    0%     0     0  2.4
+F80A7800    ASCII_TEXT         0  100%    0%     0     0  2.2
+F80A7C00    ASCII_TEXT         0  100%    0%     0     0  2.5
+F80A8000    ASCII_TEXT         0  100%    0%     0     0  2.6
+F80A8400    ASCII_TEXT         0  100%    0%     0     0  2.5
+F80A8800    ASCII_TEXT         0  100%    0%     0     0  2.2
+F80A8C00    ASCII_TEXT         0  100%    0%     0     0  3.0
+F80A9000    ASCII_TEXT         0  100%    0%     0     0  2.2
+F80A9400    ASCII_TEXT         0  100%    0%     0     0  1.9
+F80A9800    ASCII_TEXT         0  100%    0%     0     0  2.4
+F80A9C00    ASCII_TEXT         0  100%    0%     0     0  2.8
+F80AA000    ASCII_TEXT         0  100%    0%     0     0  2.6
+F80AA400    ASCII_TEXT         0  100%    0%     0     0  2.3
+F80AA800    ASCII_TEXT         0  100%    0%     0     0  2.6
+F80AAC00    ASCII_TEXT         0  100%    0%     0     0  2.8
+F80AB000    ASCII_TEXT         0  100%    0%     0     0  2.5
+F80AB400    ASCII_TEXT         0  100%    0%     0     0  2.7
+F80AB800    ASCII_TEXT         0  100%    0%     0     0  2.5
+F80ABC00    ASCII_TEXT         0  100%    0%     0     0  2.7
+F80AC000    ASCII_TEXT         0  100%    0%     0     0  2.3
+F80AC400    ASCII_TEXT         0  100%    0%     0     0  2.6
+F80AC800    ASCII_TEXT         0  100%    0%     0     0  2.8
+F80ACC00    ASCII_TEXT         0  100%    0%     0     0  2.9
+F80AD000    ASCII_TEXT         0  100%    0%     0     0  2.7
+F80AD400    ASCII_TEXT         0  100%    0%     0     0  2.7
+F80AD800    ASCII_TEXT         0  100%    0%     0     0  2.5
+F80ADC00    ASCII_TEXT         0  100%    0%     0     0  2.6
+F80AE000    ASCII_TEXT         1  100%    0%     0     0  2.4
+F80AE400    ASCII_TEXT         0  100%    0%     0     0  1.3
+F80AE800    ASCII_TEXT         0  100%    0%     0     0  1.0
+F80AEC00    ASCII_TEXT         0  100%    0%     0     0  1.1
+F80AF000    ASCII_TEXT         0  100%    0%     0     0  1.2
+F80AF400    ASCII_TEXT         0  100%    0%     0     0  1.1
+F80AF800    ASCII_TEXT         0  100%    0%     0     0  0.9
+F80AFC00    X86_CODE           0   50%    3%     3    34  6.9
+F80B0000    X86_CODE           0   42%    0%     5    16  7.8
+F80B0400    X86_CODE           0   37%    1%     3    20  7.7
+F80B0800    X86_CODE           0   41%    0%     4    13  7.8
+F80B0C00    X86_CODE           0   35%    0%     6    29  7.8
+F80B1000    X86_DATA           0   42%    0%    12    19  7.6
+F80B1400    X86_CODE          16   45%    0%     3    24  7.7
+F80B1800    X86_CODE           0   40%    0%     7    17  7.7
+F80B1C00    X86_CODE           0   29%   13%     5    13  7.1
+F80B2000    X86_CODE           0   38%    0%     5    27  7.8
+F80B2400    X86_CODE           0   36%    2%     1    11  7.3
+F80B2548    X86_CODE           0   39%    0%     3    25  7.8
+F80B2948    X86_CODE           0   35%    0%     8    28  7.8
+F80B2D48    X86_CODE           0   33%   10%     0    15  7.3
+F80B3148    X86_CODE           0   40%    0%    11    28  7.8
+F80B3548    X86_CODE           0   36%    0%     2    27  7.6
+F80B3948    X86_CODE          23   29%   12%     4    11  7.2
+F80B3D48    X86_CODE           0   42%    0%     2    16  7.5
+F80C1C50    ASCII_TEXT         0  100%    0%     0     0  4.8

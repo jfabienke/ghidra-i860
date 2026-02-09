@@ -1,0 +1,225 @@
+=== i860 Kernel Decompiler Quality Check ===
+
+Selected 8 target functions (requested 12)
+
+════════════════════════════════════════════════════════════════
+  entry (276 bytes)
+  @ f8000000  [entry]
+  first: ld.b r0(r0),r0
+════════════════════════════════════════════════════════════════
+
+  KPI: halt_baddata=1, halt_unimplemented=0, unaff=9, unreachable=0, unrecovered_jumptable=0
+
+
+/* WARNING: Control flow encountered bad instruction data */
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void entry(undefined4 param_1,undefined4 param_2,undefined1 *param_3)
+
+{
+  int unaff_retaddr;
+  int unaff_r7;
+  int unaff_r13;
+  int in_r24;
+  
+  *(char *)(in_r24 + 0x6c4) = (char)in_r24;
+  _DAT_000006a4 = (undefined2)in_r24;
+  *(undefined1 *)(unaff_r7 + -0x3f14) = 0;
+  *(byte *)(*(byte *)((uint)(byte)(&stack0x00000000)[unaff_retaddr] + unaff_retaddr) + 0x1c) =
+       *(byte *)((uint)(byte)(&stack0x00000000)[unaff_retaddr] + unaff_retaddr);
+  *(undefined1 *)(unaff_r13 + -0x3fe2) = *param_3;
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+════════════════════════════════════════════════════════════════
+  FUN_f8037b70 (508 bytes)
+  @ f8037b70  [largest]
+  first: flush -0x15c4(r17)
+════════════════════════════════════════════════════════════════
+
+  [decompilation failed: Exception while decompiling f8037b70: process: timeout
+]
+
+════════════════════════════════════════════════════════════════
+  FUN_f8021a20 (124 bytes)
+  @ f8021a20  [largest]
+  first: subs 0x0,r1,r6
+════════════════════════════════════════════════════════════════
+
+  KPI: halt_baddata=3, halt_unimplemented=0, unaff=2, unreachable=6, unrecovered_jumptable=0
+
+
+/* WARNING: Control flow encountered bad instruction data */
+/* WARNING: Removing unreachable block (ram,0xf8037ee4) */
+/* WARNING: Removing unreachable block (ram,0xf8037eec) */
+/* WARNING: Removing unreachable block (ram,0xf5894838) */
+/* WARNING: Removing unreachable block (ram,0xf8021c5c) */
+/* WARNING: Removing unreachable block (ram,0xf8021c64) */
+/* WARNING: Removing unreachable block (ram,0xf1a918a8) */
+
+void FUN_f8021a20(int param_1,int param_2,int param_3,int param_4)
+
+{
+  int in_r0;
+  int unaff_retaddr;
+  int in_r26;
+  undefined8 in_f0f1;
+  undefined4 in_f4;
+  undefined4 in_f14;
+  undefined4 in_f23;
+  int in_CC;
+  
+  if (unaff_retaddr != 0) {
+    *(undefined8 *)(in_r0 + param_2) = in_f0f1;
+    if (in_CC != 0) {
+                    /* WARNING: Bad instruction - Truncating control flow here */
+      halt_baddata();
+    }
+    (*(code *)0x0)();
+    return;
+  }
+  if (param_3 != param_1) {
+    *(undefined4 *)(param_4 + 0x7473) = in_f14;
+                    /* WARNING: Bad instruction - Truncating control flow here */
+    halt_baddata();
+  }
+  *(char *)(in_r26 + 0x44b0) = (char)param_3;
+  fp_dualop(in_f4,in_f23);
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+════════════════════════════════════════════════════════════════
+  FUN_f807ee1c (72 bytes)
+  @ f807ee1c  [largest]
+  first: addu 0x19c8,r13,r12
+════════════════════════════════════════════════════════════════
+
+  KPI: halt_baddata=2, halt_unimplemented=0, unaff=0, unreachable=0, unrecovered_jumptable=0
+
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void FUN_f807ee1c(void)
+
+{
+  int in_r19;
+  undefined4 in_f16;
+  
+  fp_dualop(in_f16,0);
+  if (in_r19 == 0xc) {
+                    /* WARNING: Bad instruction - Truncating control flow here */
+    halt_baddata();
+  }
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+════════════════════════════════════════════════════════════════
+  FUN_f80385b8 (68 bytes)
+  @ f80385b8  [fill]
+  first: ld.b r0(r0),r0
+════════════════════════════════════════════════════════════════
+
+  KPI: halt_baddata=1, halt_unimplemented=0, unaff=0, unreachable=3, unrecovered_jumptable=1
+
+
+/* WARNING: Control flow encountered bad instruction data */
+/* WARNING: Removing unreachable block (ram,0xf145567c) */
+/* WARNING: Removing unreachable block (ram,0xf5991a80) */
+/* WARNING: Removing unreachable block (ram,0xf5d12284) */
+
+void FUN_f80385b8(void)
+
+{
+  code *UNRECOVERED_JUMPTABLE;
+  int in_CC;
+  
+  if (in_CC == 0) {
+                    /* WARNING: Could not recover jumptable at 0xf8038cd0. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    i860_intovr();
+    (*UNRECOVERED_JUMPTABLE)();
+    return;
+  }
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+════════════════════════════════════════════════════════════════
+  FUN_f80384a0 (56 bytes)
+  @ f80384a0  [fill]
+  first: ld.b r0(r0),r0
+════════════════════════════════════════════════════════════════
+
+  KPI: halt_baddata=1, halt_unimplemented=0, unaff=2, unreachable=0, unrecovered_jumptable=0
+
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void FUN_f80384a0(void)
+
+{
+  undefined1 unaff_r3;
+  
+  uRam00000000 = unaff_r3;
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+════════════════════════════════════════════════════════════════
+  FUN_f8049464 (28 bytes)
+  @ f8049464  [fill]
+  first: subu r17,r0,r19
+════════════════════════════════════════════════════════════════
+
+  KPI: halt_baddata=0, halt_unimplemented=0, unaff=2, unreachable=0, unrecovered_jumptable=0
+
+
+void FUN_f8049464(void)
+
+{
+  int unaff_r3;
+  
+  *(undefined1 *)(unaff_r3 + -0x5508) = 0;
+  (*(code *)0x0)();
+  return;
+}
+
+
+════════════════════════════════════════════════════════════════
+  FUN_f8004e44 (24 bytes)
+  @ f8004e44  [fill]
+  first: ld.b r4(r4),r0
+════════════════════════════════════════════════════════════════
+
+  KPI: halt_baddata=1, halt_unimplemented=0, unaff=0, unreachable=0, unrecovered_jumptable=0
+
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void FUN_f8004e44(void)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+════════════════════════════════════════════════════════════════
+  Summary: 7/8 functions decompiled successfully
+  Timeouts: 1
+
+  Aggregate KPIs
+    halt_baddata(): 9 across 6/7 successful decompilations
+    halt_unimplemented(): 0 across 0/7 successful decompilations
+    unaff_* variables: 15 across 4/7 successful decompilations
+    Unreachable block warnings: 9 across 2/7 successful decompilations
+    Unrecovered jumptable warnings: 1 across 1/7 successful decompilations
+════════════════════════════════════════════════════════════════

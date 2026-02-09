@@ -1,0 +1,175 @@
+=== i860 Kernel Analysis Report (Recursive Descent) ===
+
+--- Summary ---
+Program:      i860_kernel.bin
+Language:     i860:LE:32:XR
+Compiler:     gcc
+Instructions: 735
+Functions:    8
+Code bytes:   2,940
+Data bytes:   742,568 (in executable blocks)
+Coverage:     0.4%
+
+--- Seed Discovery ---
+Decoded flows:     2
+Call/br targets:   0
+Address loads:     0
+Prologue seeds:    2
+Pointer seeds:     1
+Post-return seeds: 0
+
+--- Function Discovery ---
+Call targets:       0
+Prologue patterns:  0
+Post-return:        1
+Data pointers:      0
+Total new:          5
+Pruned (bad start): 2
+
+--- Functions ---
+Address       Size      Name                            First Insn
+-------       ----      ----                            ----------
+f8000000      276       entry                           ld.b r0(r0),r0
+f8004e44      24        FUN_f8004e44                    ld.b r4(r4),r0
+f8021a20      124       FUN_f8021a20                    subs 0x0,r1,r6
+f8037b70      508       FUN_f8037b70                    flush -0x15c4(r17)
+f80384a0      56        FUN_f80384a0                    ld.b r0(r0),r0
+f80385b8      68        FUN_f80385b8                    ld.b r0(r0),r0
+f8049464      28        FUN_f8049464                    subu r17,r0,r19
+f807ee1c      72        FUN_f807ee1c                    addu 0x19c8,r13,r12
+
+--- Code/Data Regions (executable blocks) ---
+Start         End           Size        Type
+-----         ---           ----        ----
+F8000000      F8000110      276         CODE
+F8000114      F80014AC      5020        DATA
+F80014B0      F80014BC      16          CODE
+F80014C0      F8004DF4      14648       DATA
+F8004DF8      F8004E58      100         CODE
+F8004E5C      F8005CA0      3656        DATA
+F8005CA4      F8005CA8      8           CODE
+F8005CAC      F8008BEC      12100       DATA
+F8008BF0      F8008D5C      368         CODE
+F8008D60      F800BFD0      12916       DATA
+F800BFD4      F800BFE0      16          CODE
+F800BFE4      F800C098      184         DATA
+F800C09C      F800C0E4      76          CODE
+F800C0E8      F800D1F8      4372        DATA
+F800D1FC      F800D23C      68          CODE
+F800D240      F800DE48      3084        DATA
+F800DE4C      F800DE4C      4           CODE
+F800DE50      F800F2EC      5280        DATA
+F800F2F0      F800F328      60          CODE
+F800F32C      F800FF7C      3156        DATA
+F800FF80      F800FF88      12          CODE
+F800FF8C      F8011B50      7112        DATA
+F8011B54      F8011C00      176         CODE
+F8011C04      F8011C08      8           DATA
+F8011C0C      F8011C18      16          CODE
+F8011C1C      F8011C48      48          DATA
+F8011C4C      F8011C84      60          CODE
+F8011C88      F8011CA0      28          DATA
+F8011CA4      F8011CA8      8           CODE
+F8011CAC      F8011CC0      24          DATA
+F8011CC4      F8011CD4      20          CODE
+F8011CD8      F8011CE0      12          DATA
+F8011CE4      F8011CF4      20          CODE
+F8011CF8      F80125B0      2236        DATA
+F80125B4      F80125B4      4           CODE
+F80125B8      F8013F7C      6600        DATA
+F8013F80      F8013FC8      76          CODE
+F8013FCC      F80149FC      2612        DATA
+F8014A00      F8014A08      12          CODE
+F8014A0C      F8015048      1600        DATA
+F801504C      F8015054      12          CODE
+F8015058      F8015CE0      3212        DATA
+F8015CE4      F8015D38      88          CODE
+F8015D3C      F80182B0      9592        DATA
+F80182B4      F80182C0      16          CODE
+F80182C4      F80219DC      38684       DATA
+F80219E0      F80219E8      12          CODE
+F80219EC      F8021A1C      52          DATA
+F8021A20      F8021A54      56          CODE
+F8021A58      F8021C54      512         DATA
+F8021C58      F8021C64      16          CODE
+F8021C68      F8023644      6624        DATA
+F8023648      F8023648      4           CODE
+F802364C      F8023654      12          DATA
+F8023658      F8023658      4           CODE
+F802365C      F8025E58      10240       DATA
+F8025E5C      F8025E8C      52          CODE
+F8025E90      F80268A4      2584        DATA
+F80268A8      F80268B0      12          CODE
+F80268B4      F802A2F0      14912       DATA
+F802A2F4      F802A300      16          CODE
+F802A304      F802DA28      14120       DATA
+F802DA2C      F802DA44      28          CODE
+F802DA48      F8036EC0      38012       DATA
+F8036EC4      F8036EC4      4           CODE
+F8036EC8      F8037B6C      3240        DATA
+F8037B70      F8037B94      40          CODE
+F8037B98      F8037ED8      836         DATA
+F8037EDC      F8037EF0      24          CODE
+F8037EF4      F803849C      1452        DATA
+F80384A0      F80384D4      56          CODE
+F80384D8      F80385B4      224         DATA
+F80385B8      F80385F8      68          CODE
+F80385FC      F803BE28      14384       DATA
+F803BE2C      F803BE58      48          CODE
+F803BE5C      F8045048      37360       DATA
+F804504C      F8045050      8           CODE
+F8045054      F80476B0      9824        DATA
+F80476B4      F80476D4      36          CODE
+F80476D8      F8047958      644         DATA
+F804795C      F804797C      36          CODE
+F8047980      F8049460      6884        DATA
+F8049464      F804947C      28          CODE
+F8049480      F804D5A8      16684       DATA
+F804D5AC      F804D690      232         CODE
+F804D694      F8052FF0      22880       DATA
+F8052FF4      F8053034      68          CODE
+F8053038      F805DAAC      43640       DATA
+F805DAB0      F805DAF0      68          CODE
+F805DAF4      F8061038      13640       DATA
+F806103C      F8061054      28          CODE
+F8061058      F80614F4      1184        DATA
+F80614F8      F80614F8      4           CODE
+F80614FC      F80619A0      1192        DATA
+F80619A4      F80619D8      56          CODE
+F80619DC      F8061E7C      1188        DATA
+F8061E80      F8061E80      4           CODE
+F8061E84      F8077C60      89568       DATA
+F8077C64      F8077C74      20          CODE
+F8077C78      F807EE18      29092       DATA
+F807EE1C      F807EE60      72          CODE
+F807EE64      F807F394      1332        DATA
+F807F398      F807F3A4      16          CODE
+F807F3A8      F8099EC4      109344      DATA
+F8099EC8      F8099F08      68          CODE
+F8099F0C      F80A1534      30252       DATA
+F80A1538      F80A153C      8           CODE
+F80A1540      F80A2068      2860        DATA
+F80A206C      F80A20A0      56          CODE
+F80A20A4      F80A7070      20432       DATA
+F80A7074      F80A7084      20          CODE
+F80A7088      F80AE2F0      29292       DATA
+F80AE2F4      F80AE2F4      4           CODE
+F80AE2F8      F80B1418      12580       DATA
+F80B141C      F80B1458      64          CODE
+F80B145C      F80B2547      4335        DATA
+F80B2548      F80B39D4      5264        DATA
+F80B39D8      F80B3A30      92          CODE
+F80B3A34      F80B3FFF      1487        DATA
+F80C1C50      F80C1CFF      179         DATA
+F80C4098      F80C5FFF      8043        DATA
+
+--- Memory Blocks ---
+  __text               f8000000-f80b2547   730,440 bytes  r-x
+  __TEXT               f80b2548-f80b3fff     6,840 bytes  r-x
+  __data               f80b4000-f80c1c4f    56,400 bytes  rw-
+  __DATA               f80c1c50-f80c1cff       176 bytes  rwx
+  __bss                f80c1d00-f80c1fff       768 bytes  rw-
+  __bss                f80c2000-f80c27bf     1,984 bytes  rw-
+  __common             f80c27c0-f80c4097     6,360 bytes  rw-
+  __DATA               f80c4098-f80c5fff     8,040 bytes  rwx
+  HEADER               00000000-00000347       840 bytes  ---

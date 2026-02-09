@@ -1,0 +1,13 @@
+Hard Mask Recovery Map Generation
+text_bin: re/nextdimension/firmware/extracted/ND_MachDriver___TEXT_section.bin
+clean_bin: re/nextdimension/firmware/ND_i860_VERIFIED_clean.bin
+base: 0xF8000000
+text_end: 0xF80B2547
+text_size: 730,440 bytes
+embedded_macho_ranges: 3
+byte_heuristic_ranges: 45
+merged_deny_ranges: 36
+denied_bytes: 391,814
+out_of_range_targets: 230
+seeds_appended: 230
+final_seed_count: 309
