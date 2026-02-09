@@ -95,22 +95,25 @@
 # ==================================================================
 
 # ret — bri r1 recognized as function return (most specific match)
-:ret  is op6=0x10 & src1_zero=1 & src2_zero=0 & dest_zero=0  {
+# Only constrain src1=1 (r1). The src2/dest fields are unused in bri encoding;
+# real binaries often have non-zero values in these fields.
+:ret  is op6=0x10 & src1_zero=1  {
     delayslot(1);
     return [r1];
 }
 
 # bri src1 — indirect branch, WITH delay slot
-# No src1_zero constraint: catches all bri including r1 with non-zero src2/dest
+# Catches bri with src1 != r1. When src1=r1, the more-specific ret matches.
 :bri R1src  is op6=0x10 & R1src  {
     delayslot(1);
     goto [R1src];
 }
 
 # calli src1 — call indirect (core escape 0x13, sub-opcode 0x02)
-# In XP mode, escop=0x02 with dest!=0 & src2=0 is ldint (see i860_xp.sinc).
-# Constrain calli to src2=0 & dest=0 (unused fields should be 0 for calli).
-:calli R1src  is op6=0x13 & escop=0x02 & R1src & src2_zero=0 & dest_zero=0  {
+# In XP mode, escop=0x02 with dest!=0 is ldint (see i860_xp.sinc), which is
+# more specific and wins. No constraints on unused src2/dest fields — real
+# binaries often have non-zero values.
+:calli R1src  is op6=0x13 & escop=0x02 & R1src  {
     r1 = inst_next;
     delayslot(1);
     call [R1src];
