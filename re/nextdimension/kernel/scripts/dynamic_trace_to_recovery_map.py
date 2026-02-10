@@ -90,8 +90,8 @@ def norm_event_name(e: dict) -> str:
     return " ".join(parts)
 
 
-def extract_indirect_record(e: dict) -> Optional[Tuple[int, int, str, Optional[str], dict]]:
-    """Return (pc, target, kind, reg, evidence) for recognized indirect branch events."""
+def extract_indirect_record(e: dict) -> Optional[Tuple[int, int, str, Optional[str], dict, Optional[int]]]:
+    """Return (pc, target, kind, reg, evidence, src_word) for recognized indirect branch events."""
     name = norm_event_name(e)
 
     is_indirect = any(tok in name for tok in (
@@ -147,7 +147,19 @@ def extract_indirect_record(e: dict) -> Optional[Tuple[int, int, str, Optional[s
     if delay is not None:
         ev["delay_slot_pc"] = f"0x{delay:08x}"
 
-    return pc, target, kind, reg, ev
+    target_word = parse_u32(e.get("target_word") or e.get("target_u32") or e.get("target_peek"))
+    if target_word is not None:
+        ev["target_word"] = f"0x{target_word:08x}"
+
+    target_next_word = parse_u32(e.get("target_next_word") or e.get("target_next_u32"))
+    if target_next_word is not None:
+        ev["target_next_word"] = f"0x{target_next_word:08x}"
+
+    src_word = parse_u32(e.get("src_word") or e.get("src_u32") or e.get("src_ptr_word"))
+    if src_word is not None:
+        ev["src_word"] = f"0x{src_word:08x}"
+
+    return pc, target, kind, reg, ev, src_word
 
 
 def load_base_map(path: Optional[str]) -> dict:
@@ -209,6 +221,7 @@ def convert(
 ) -> Tuple[dict, TraceSummary, dict]:
     summary = TraceSummary(files=list(traces))
     target_map: Dict[int, TargetStats] = {}
+    derived_src_word_targets = 0
 
     for path in traces:
         with open(path, "r", encoding="utf-8") as f:
@@ -243,7 +256,7 @@ def convert(
                     continue
 
                 summary.indirect_events += 1
-                pc, target, kind, reg, ev = rec
+                pc, target, kind, reg, ev, src_word = rec
 
                 st = target_map.get(target)
                 if st is None:
@@ -258,6 +271,32 @@ def convert(
                     st.bri_hits += 1
                 if reg:
                     st.regs[reg] += 1
+
+                # Fallback: if runtime target is out-of-range but src_word points to executable code,
+                # treat src_word as a derived indirect target candidate.
+                if (
+                    src_word is not None
+                    and src_word != target
+                    and not in_exec_range(target, exec_start, exec_end)
+                    and in_exec_range(src_word, exec_start, exec_end)
+                ):
+                    derived_src_word_targets += 1
+                    st_alt = target_map.get(src_word)
+                    if st_alt is None:
+                        st_alt = TargetStats(target=src_word)
+                        target_map[src_word] = st_alt
+                    st_alt.hits += 1
+                    st_alt.sites.add(pc)
+                    ev_alt = dict(ev)
+                    ev_alt["derived_from"] = "src_word"
+                    ev_alt["derived_target"] = f"0x{src_word:08x}"
+                    st_alt.examples.append(ev_alt)
+                    if kind == "calli":
+                        st_alt.calli_hits += 1
+                    elif kind == "bri":
+                        st_alt.bri_hits += 1
+                    if reg:
+                        st_alt.regs[f"{reg}:src_word"] += 1
 
     seeds = list(base_map.get("seeds", []))
     base_seed_addrs = {
@@ -309,6 +348,7 @@ def convert(
             "targets_seen": len(target_map),
             "dynamic_candidates": len(candidates),
             "dynamic_added": dynamic_added,
+            "derived_src_word_targets": derived_src_word_targets,
             "exec_range": {
                 "start": f"0x{exec_start:08X}",
                 "end": f"0x{exec_end:08X}",
@@ -348,6 +388,7 @@ def write_report(path: str, out: dict, summary: TraceSummary, details: dict) -> 
         f.write(f"Memory events:      {summary.mem_events}\n")
         f.write(f"MMIO events:        {summary.mmio_events}\n")
         f.write(f"Targets seen:       {out['meta']['targets_seen']}\n")
+        f.write(f"Derived src_word:   {out['meta'].get('derived_src_word_targets', 0)}\n")
         f.write(f"Candidates:         {out['meta']['dynamic_candidates']}\n")
         f.write(f"Dynamic seeds add:  {out['meta']['dynamic_added']}\n")
         f.write(f"Total seeds output: {len(out['seeds'])}\n")
