@@ -1,0 +1,89 @@
+{
+  "subsystems": [],
+  "cross_subsystem_flows": [],
+  "data_model_hypotheses": [
+    {
+      "structure_name": "unknown_struct_r8_based",
+      "base_register": "r8",
+      "fields": [
+        {
+          "offset": "0x16",
+          "size": 1,
+          "access_pattern": "write",
+          "interpretation": "Byte field written by 14 functions (0xf800bc68, 0xf800916c, 0xf800c79c, 0xf800bf74, 0xf8008274, 0xf800cc00, 0xf800bb60, 0xf800b83c, 0xf800b504, 0xf800b3fc, 0xf800b9e0, 0xf800bd9c, 0xf800f80c, 0xf800c458); all stores use uninitialized r8 base pointer"
+        },
+        {
+          "offset": "0x116",
+          "size": 2,
+          "access_pattern": "write",
+          "interpretation": "Short field at +274 bytes; 8 functions write here (0xf800bc68, 0xf800916c, 0xf800c79c, 0xf800bf74, 0xf800cc00, 0xf800bb60, 0xf800b83c, 0xf800b504); 256-byte stride from 0x16 suggests array or table"
+        },
+        {
+          "offset": "0x1c",
+          "size": 2,
+          "access_pattern": "write",
+          "interpretation": "Short field at +28 bytes; written by 3 functions (0xf800b83c, 0xf800c458, unknown); overlaps with 0x16 region"
+        }
+      ],
+      "evidence_count": 14,
+      "confidence": 25
+    },
+    {
+      "structure_name": "unknown_struct_r7_based",
+      "base_register": "r7",
+      "fields": [
+        {
+          "offset": "-0x3814",
+          "size": 1,
+          "access_pattern": "write",
+          "interpretation": "Byte field at r7-14356; written by 11 functions (0xf8008ee4, 0xf800bc68, 0xf800916c, 0xf8009270, 0xf80094fc, 0xf8009420, 0xf800cc00, 0xf800f80c, 0xf800c79c, 0xf800bf74, 0xf8008274); negative offset suggests stack frame or downward-growing structure"
+        }
+      ],
+      "evidence_count": 11,
+      "confidence": 20
+    },
+    {
+      "structure_name": "unknown_struct_r13_based",
+      "base_register": "r13",
+      "fields": [
+        {
+          "offset": "-0x7fe4",
+          "size": 2,
+          "access_pattern": "write",
+          "interpretation": "Short field at r13-32740; written by 6 functions (0xf800bc68, 0xf800bf74, 0xf800b83c, 0xf800b504, 0xf800b3fc, 0xf800c458); consistent negative offset suggests stack frame if r13=fp"
+        }
+      ],
+      "evidence_count": 6,
+      "confidence": 15
+    }
+  ],
+  "control_flow_summary": "NO COHERENT EXECUTION MODEL IDENTIFIED. All 52 accepted functions have zero callers and exhibit dead code signatures: 70-95% writes to hardwired-zero registers (r0, f0/f1), undefined input registers, no return instructions, and no integration into known firmware patterns (PostScript dispatch, MMIO 0x401C token read, r15 GState flags). The functions contain recognizable code fragments (hash constants 0x10c6/0x31c6, MMIO offset patterns, structured memory accesses) suggesting they were once operational, but zero call graph connectivity proves they are unreachable in the current binary. No entry points, no dispatch tables, no exception vectors reference any of these 52 functions. The firmware's actual execution logic resides in the 1.4% execution-proven code (2,536 instructions across 60 functions) that was NOT included in this synthesis batch, with runtime dispatch occurring via 616 unresolved bri (indirect branch) sites that Phase 2 static analysis could not seed. The accepted functions represent either: (1) compiler-generated dead code from aggressive optimization, (2) linker artifacts from merged object files, (3) debug/test stubs compiled but never invoked, or (4) remnants of features removed during development. Zero subsystems can be synthesized from isolated, unreachable code with no inter-function communication.",
+  "unresolved_runtime_dependencies": [
+    "ALL 52 functions require emulation/dynamic tracing to confirm zero execution count (static analysis shows zero callers but cannot prove unreachability via 616 unresolved bri sites)",
+    "r8/r13/r7 base pointer runtime values needed to validate hypothesized structure offsets (all stores use uninitialized registers in isolated functions)",
+    "MMIO register 0x401C runtime behavior (16 functions contain offset references but no confirmed reads/writes due to uninitialized base registers)",
+    "Hash constants 0x10c6/0x31c6/0x1887/0x94f6 semantic meaning (appear in 18 functions but results written to r0 sink or unresolved registers)",
+    "Branch targets for 14 conditional branches to out-of-range addresses (0xf7ff7b80, 0xf8961a48, 0xfce851f0, etc.) to determine if valid code or corruption",
+    "Runtime data zone (0xF80B7C00-0xF80C4097) membership for absolute load addresses (0x19e4, 0x10e4, 0xb586, 0x6b85, etc.)",
+    "Compiler toolchain identification (GCC version, optimization flags) to explain dead code generation patterns",
+    "Source code or build artifacts to distinguish intentional dead code from compiler bugs",
+    "Complete binary call graph after resolving all 616 bri dispatch sites (static analysis ceiling confirmed)"
+  ],
+  "coverage_assessment": {
+    "functions_analyzed": 52,
+    "subsystems_identified": 0,
+    "functions_unclassified": 52,
+    "key_gaps": [
+      "CRITICAL: Zero call graph connectivity - all 52 functions are isolated dead code with no callers/callees",
+      "CRITICAL: No entry points - zero functions have return instructions, exception handlers, or MMIO dispatch integration",
+      "CRITICAL: 70-95% of instructions write to hardwired-zero sinks (r0, f0/f1) - operationally equivalent to NOPs",
+      "All meaningful firmware logic exists in the 1.4% execution-proven code (60 functions, 2,536 instructions) NOT included in this batch",
+      "Cannot synthesize subsystems from code that never executes and has no inter-function communication",
+      "Static analysis has reached ceiling - 616 unresolved bri sites require emulation for deeper understanding",
+      "Data structure hypotheses based on memory access patterns are unvalidable without runtime register values",
+      "No relationship established between accepted functions and known firmware patterns (PostScript dispatch, GState flags)",
+      "Zero cross-subsystem flows because zero subsystems can be identified",
+      "Confidence in all accepted claims capped at 5-25% due to lack of runtime context and call graph isolation"
+    ]
+  }
+}

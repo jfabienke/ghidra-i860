@@ -62,12 +62,68 @@ All 944 bytes are 100% printable ASCII: GNU Emacs ChangeLog entries (October 198
 3. Static cross-block BRI resolution hit the structural limit (no valid new targets).
 4. \_\_DATA tail (944 B) fully mapped: alignment padding + segment file padding, all ChangeLog text.
 
+## LLM Swarm Analysis (60 Promoted Functions)
+
+A 4-stage LLM pipeline (intent claim → verification → contrarian challenge → synthesis) analyzed all 60 promoted functions using Claude via the Agent SDK Max backend.
+
+### Pipeline
+
+| Stage | Purpose | Model |
+|-------|---------|-------|
+| Intent | Classify function purpose, identify evidence | Claude (Max) |
+| Verification | Cross-check claims against disassembly evidence | Claude (Max) |
+| Contrarian | Challenge primary intent, propose alternatives | Claude (Max) |
+| Synthesis | Group accepted functions into subsystems | Claude (Max) |
+
+### Results (Combined Prod + Retry)
+
+| Metric | Value |
+|--------|-------|
+| Functions analyzed | 60 |
+| Accepted | 32 (53%) |
+| Revise | 22 (37%) |
+| Reject | 6 (10%) |
+| Subsystems identified | 0 |
+| Total tokens | 1.67M |
+| API-equivalent cost | $11.24 ($0 actual via Max subscription) |
+
+### Key Findings
+
+1. **30/32 accepted functions are dead code or compiler artifacts**: zero callers in the promoted execution set, 70–95% of instructions write to hardwired-zero sink registers (r0, f0, f1), missing or invalid return mechanisms.
+2. **Zero subsystems identified**: no call graph edges connect the analyzed functions — all are isolated.
+3. **No known firmware patterns matched**: PostScript dispatch signatures (r15 GState, xorh 0x10c6 hash, 0xe827 classify), MMIO token reads (0x401C), and threaded interpreter chains were absent.
+4. **Confirms static analysis ceiling**: the 60 promoted functions are execution-proven but represent the discoverable fringe of the firmware. Real functional logic sits behind 616 unresolved `bri rN` dynamic dispatch sites that require emulation to resolve.
+
+### Outputs
+
+- Production run: `re/nextdimension/kernel/reports/factpack/swarm_prod_20260209/`
+- Retry run: `re/nextdimension/kernel/reports/factpack/swarm_retry_20260209/`
+- Synthesis report: `re/nextdimension/kernel/reports/factpack/swarm_retry_20260209/synthesis.json`
+- Claims database: `re/nextdimension/kernel/reports/factpack/swarm_prod_20260209/claims.db`
+
 ## What Is Still Open
 
 1. True executable i860 extent inside \_\_text contamination-heavy regions.
 2. Where/when dispatch targets are materialized at runtime (BSS/common/init path).
 3. Operator-to-handler mapping for dynamic `bri rN` dispatch.
 4. Precise role of embedded m68k/x86 payloads in final board runtime.
+
+## Closing The Open Questions
+
+Use runtime evidence as the primary driver, then feed it back into static analysis:
+
+1. Run emulator/simulator with JSONL tracing enabled for indirect control flow (`bri`, `calli`) and memory access.
+2. Convert trace evidence to curated seeds using `re/nextdimension/kernel/scripts/dynamic_trace_to_recovery_map.py`.
+3. Re-run headless analysis with `run_analysis.sh` using the dynamic trace as the 5th argument (or `DYNAMIC_TRACE_JSONL` env var).
+4. Compare deltas against baseline (instructions/functions/coverage, plus new resolved targets).
+5. Promote only repeatable targets (multi-hit, in-range, aligned) into the persistent recovery map.
+
+Minimum acceptance criteria for progress:
+
+- New dynamic seeds added to recovery map (non-zero `dynamic_added`).
+- Increase in execution-proven instructions/functions without reopening deny-range contamination.
+- At least one resolved operator-dispatch edge (`dispatch site -> concrete handler addr`) from runtime traces.
+- Stable results across at least two independent emulator runs.
 
 ## Sources
 
@@ -79,3 +135,5 @@ All 944 bytes are 100% printable ASCII: GNU Emacs ChangeLog entries (October 198
 - `re/nextdimension/firmware/analysis/phase2/cross_block_results.json`
 - `re/nextdimension/firmware/analysis/phase2/phase2_seeds.json`
 - `re/nextdimension/firmware/analysis/provenance/data_tail_map.json`
+- `re/nextdimension/kernel/reports/factpack/swarm_prod_20260209/claims.db`
+- `re/nextdimension/kernel/reports/factpack/swarm_retry_20260209/synthesis.json`

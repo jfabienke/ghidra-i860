@@ -1,0 +1,210 @@
+{
+  "schema_version": "shard-v1",
+  "factpack_source": "re/nextdimension/kernel/reports/factpack/retagged",
+  "function": {
+    "entry": "0xf8004e44",
+    "name": "FUN_f8004e44",
+    "size": 24,
+    "in_exec": true,
+    "in_allow": true,
+    "in_deny": false,
+    "confidence_source": "default",
+    "has_unresolved_bri": false
+  },
+  "blocks": [
+    {
+      "func_entry": "0xf8004e44",
+      "block_start": "0xf8004e44",
+      "block_end": "0xf8004e5b",
+      "insn_count": 6
+    }
+  ],
+  "edges": [
+    {
+      "src": "0xf8004e44",
+      "dst": "0xf8004e48",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8004e40",
+      "dst": "0xf8004e44",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8004e48",
+      "dst": "0xf8004e4c",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8004e4c",
+      "dst": "0xf8004e50",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8004e50",
+      "dst": "0xf8004e54",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8004e54",
+      "dst": "0xf8004e58",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8004e58",
+      "dst": "0xf8004e5c",
+      "kind": "fallthrough",
+      "delay_slot": false
+    }
+  ],
+  "insns": [
+    {
+      "addr": "0xf8004e44",
+      "func_entry": "0xf8004e44",
+      "word": "0x0080209a",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r4(r4),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "r4"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8004e48",
+      "func_entry": "0xf8004e44",
+      "word": "0x03000070",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r0(r24),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "0x0",
+        "r24"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8004e4c",
+      "func_entry": "0xf8004e44",
+      "word": "0x0200d014",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r26(r16),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "r16",
+        "r26"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8004e50",
+      "func_entry": "0xf8004e44",
+      "word": "0x1280a01c",
+      "mnemonic": "ld.s",
+      "operands": "ld.s r20(r20),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "r20"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8004e54",
+      "func_entry": "0xf8004e44",
+      "word": "0x1080a01c",
+      "mnemonic": "ld.s",
+      "operands": "ld.s r20(r4),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "r20",
+        "r4"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8004e58",
+      "func_entry": "0xf8004e44",
+      "word": "0x020010e4",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r2(r16),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "r16",
+        "r2"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    }
+  ],
+  "refs": [],
+  "strings": [],
+  "dispatch_unresolved": [],
+  "callees": [],
+  "callers": [],
+  "context": {
+    "r15_cluster": false,
+    "mmio_accesses": [],
+    "nearby_deny_ranges": [],
+    "nearby_embedded_objects": [],
+    "priority_tags": []
+  }
+}

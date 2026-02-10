@@ -35,6 +35,13 @@ import java.util.*;
 import java.util.regex.*;
 
 public class ExportFactPack extends GhidraScript {
+    private static final long U32_MASK = 0xFFFF_FFFFL;
+    private static final long I860_MMIO_BASE = 0x0200_0000L;
+    private static final long I860_MMIO_END = 0x0200_0FFFL;
+    private static final long HOST_IO_BASE = 0xFF80_0000L;
+    private static final long HOST_IO_END = 0xFF80_3FFFL;
+    private static final long DP_BASE = 0xF000_0000L;
+    private static final long DP_END = 0xF000_0FFFL;
 
     private Listing listing;
     private Memory memory;
@@ -563,19 +570,58 @@ public class ExportFactPack extends GhidraScript {
         int nops = insn.getNumOperands();
         for (int i = 0; i < nops; i++) {
             Object[] objs = insn.getOpObjects(i);
+            boolean hasR0 = false;
+
+            for (Object o : objs) {
+                if (o instanceof Register) {
+                    String rn = ((Register) o).getName();
+                    if ("r0".equalsIgnoreCase(rn)) {
+                        hasR0 = true;
+                    }
+                }
+            }
+
             for (Object o : objs) {
                 if (o instanceof Scalar) {
-                    long v = ((Scalar) o).getUnsignedValue();
-                    if (v == 0x401c) tags.add("mmio_offset_0x401c");
-                    if (v == 0x401e) tags.add("mmio_offset_0x401e");
-                    if (v >= 0x02000000L && v <= 0x02ffffffL) tags.add("mmio_io_space");
-                    if (v >= 0xff800000L && v <= 0xffffffffL) tags.add("mmio_high_space");
+                    Scalar s = (Scalar) o;
+                    long unsigned = s.getUnsignedValue() & U32_MASK;
+                    long signedU32 = s.getSignedValue() & U32_MASK;
+
+                    // Literal displacements are unresolved without a base register value.
+                    if (unsigned == 0x401cL) {
+                        if (hasR0) tags.add("mmio_abs_0000401c_r0");
+                        else tags.add("mmio_offset_0x401c_unresolved");
+                    }
+                    if (unsigned == 0x401eL) {
+                        if (hasR0) tags.add("mmio_abs_0000401e_r0");
+                        else tags.add("mmio_offset_0x401e_unresolved");
+                    }
+
+                    // Absolute immediates (e.g. orh/or constants).
+                    addAbsoluteMmioTags(tags, unsigned);
+
+                    // r0-base addressing computes absolute effective addresses.
+                    if (hasR0) {
+                        addAbsoluteMmioTags(tags, signedU32);
+                    }
+                }
+                else if (o instanceof Address) {
+                    addAbsoluteMmioTags(tags, ((Address) o).getOffset());
                 }
             }
         }
 
         if (tags.isEmpty()) return null;
         return String.join(",", tags);
+    }
+
+    private void addAbsoluteMmioTags(Set<String> tags, long rawAddr) {
+        long addr = rawAddr & U32_MASK;
+        if (addr >= I860_MMIO_BASE && addr <= I860_MMIO_END) tags.add("mmio_abs_i860_0200xxxx");
+        if (addr >= HOST_IO_BASE && addr <= HOST_IO_END) tags.add("mmio_abs_host_ff800xxx");
+        if (addr >= DP_BASE && addr <= DP_END) tags.add("mmio_abs_dp_f000xxxx");
+        if (addr == 0x0000401cL) tags.add("mmio_abs_0000401c");
+        if (addr == 0x0000401eL) tags.add("mmio_abs_0000401e");
     }
 
     private String classifyEdgeKind(FlowType ft, String mnemonic) {

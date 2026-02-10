@@ -105,7 +105,17 @@ For Mach-O binaries where Ghidra can't parse the i860 thread command (e.g., NeXT
 ./re/nextdimension/kernel/scripts/run_analysis.sh [binary] [xrefs_json] [recovery_map_json]
 ```
 
-This runs `I860Import.java` (entry point + recursive descent with iterative call/branch seeding) as a preScript, followed by `I860Analyze.java` (worklist-based seed discovery, function creation, code/data classification, optional range filtering) as a postScript. Baseline recovery (no xrefs/map) currently yields 735 instructions across 8 functions (0.4% coverage). With the bundled `recovery_map.json` (allow/deny ranges + curated seeds), the same 784 KB kernel run produced 1,663 instructions across 64 functions (0.9% coverage on February 8, 2026). The kernel still relies heavily on indirect calls (`calli`) through dispatch tables, limiting static discovery.
+This runs `I860Import.java` (entry point + recursive descent with iterative call/branch seeding) as a preScript, followed by `I860Analyze.java` (worklist-based seed discovery, function creation, code/data classification, optional range filtering) as a postScript. With the bundled recovery map (311 seeds, 43 deny ranges), the 784 KB kernel yields 2,536 instructions across 60 functions (1.4% coverage). Phase 2 cross-block BRI resolution and LLM swarm analysis of all 60 promoted functions confirmed a static analysis ceiling: real firmware logic sits behind 616 unresolved `bri rN` dynamic dispatch sites that require emulation to resolve.
+
+Runtime-assisted pass:
+
+```bash
+./re/nextdimension/kernel/scripts/run_emu_trace_seed_pass.sh \
+  re/nextdimension/kernel/i860_kernel.bin \
+  0xF8000000 0xF8000000 200000
+```
+
+Then feed the generated trace into `run_analysis.sh` as the optional 5th argument (`dynamic_trace_jsonl`) to auto-merge runtime-discovered targets into the recovery map.
 
 See [`re/nextdimension/kernel/`](re/nextdimension/kernel/) for results, findings, and scripts.
 
@@ -130,7 +140,12 @@ ghidra-i860/
 │   └── spea.cspec             # SPEA/APX2 calling convention
 ├── scripts/
 │   ├── DisassembleAll.java    # Raw binary linear sweep + export
-│   └── AnalysisStats.java     # Analysis statistics utility
+│   ├── AnalysisStats.java     # Analysis statistics utility
+│   └── swarm/                 # LLM multi-agent analysis pipeline
+│       ├── orchestrate.py     #   Intent → verify → contrarian → synthesis
+│       ├── schemas.py         #   Response schema validation
+│       ├── store.py           #   SQLite claim store
+│       └── report.py          #   Run summary reporter
 ├── re/                        # Reverse engineering targets
 │   └── nextdimension/
 │       ├── kernel/
@@ -146,7 +161,10 @@ ghidra-i860/
 │   ├── 03-ghidra-sleigh-development-guide.md
 │   ├── 04-instruction-set-status.md
 │   ├── 05-binary-formats-and-platforms.md
-│   └── 06-local-resources-inventory.md
+│   ├── 06-local-resources-inventory.md
+│   ├── 07-lessons-learned.md
+│   ├── 08-coverage-analysis.md
+│   └── 09-dynamic-trace-integration.md
 └── README.md
 ```
 
@@ -162,9 +180,15 @@ The `docs/` directory contains detailed reference material:
 | [04-instruction-set-status.md](docs/04-instruction-set-status.md) | Complete instruction inventory (~172 instructions) |
 | [05-binary-formats-and-platforms.md](docs/05-binary-formats-and-platforms.md) | Mach-O, COFF, ELF format details and calling conventions |
 | [06-local-resources-inventory.md](docs/06-local-resources-inventory.md) | Index of reference material and test binaries |
+| [07-lessons-learned.md](docs/07-lessons-learned.md) | Consolidated implementation gotchas and analysis pitfalls |
+| [08-coverage-analysis.md](docs/08-coverage-analysis.md) | Byte-accounting and execution-proven coverage status |
+| [09-dynamic-trace-integration.md](docs/09-dynamic-trace-integration.md) | Emulator trace schema and trace→seed headless workflow |
 
 ## Roadmap
 
+- [x] Phase 2 cross-block BRI resolution (0 new seeds — static ceiling confirmed)
+- [x] LLM swarm analysis of 60 promoted functions (30/32 accepted = dead code)
+- [ ] Emulation/symbolic execution for runtime `bri rN` dispatch resolution
 - [ ] COFF loader extension for i860 magic values (`0x014D`, `0x0090`)
 - [ ] Decompiler quality tuning on real-world binaries
 - [ ] GUI testing and usability review

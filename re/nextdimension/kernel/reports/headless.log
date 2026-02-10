@@ -6,12 +6,12 @@ INFO  Using log file: /Users/jvindahl/Library/ghidra/ghidra_12.0.2_PUBLIC/applic
 INFO  Loading user preferences: /Users/jvindahl/Library/ghidra/ghidra_12.0.2_PUBLIC/preferences (Preferences)  
 INFO  Loading previous preferences: /Users/jvindahl/Library/ghidra/ghidra_11.4.2_PUBLIC/preferences (Preferences)  
 INFO  Searching for classes... (ClassSearcher)  
-INFO  Class search complete (746 ms) (ClassSearcher)  
+INFO  Class search complete (752 ms) (ClassSearcher)  
 INFO  Initializing SSL Context (DefaultSSLContextInitializer)  
 INFO  Initializing Random Number Generator... (SecureRandomFactory)  
 INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
 INFO  Trust manager disabled, cacerts have not been set (DefaultTrustManagerFactory)  
-INFO  Headless startup complete (1415 ms) (AnalyzeHeadless)  
+INFO  Headless startup complete (1624 ms) (AnalyzeHeadless)  
 INFO  Class searcher loaded 58 extension points (18 false positives) (ClassSearcher)  
 WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
 WARNING: sun.misc.Unsafe::staticFieldOffset has been called by org.apache.felix.framework.util.SecureAction (file:/opt/homebrew/Cellar/ghidra/12.0.2/libexec/Ghidra/Features/Base/lib/org.apache.felix.framework-7.0.5.jar)
@@ -655,10 +655,10 @@ F80C4098      F80C5FFF      8043        DATA
   __DATA               f80c4098-f80c5fff     8,040 bytes  rwx
   HEADER               00000000-00000347       840 bytes  --- (GhidraScript)  
 INFO  Report written to: /tmp/i860_kernel_report.txt (GhidraScript)  
-INFO  REPORT: Execute script: /Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/scripts/ExportFactPack.java '--out=/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/factpack/20260209-162613' '--seed-map=re/nextdimension/kernel/docs/recovery_map_hardmask_pcode.json' '--phase2=/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/../firmware/analysis/phase2/cross_block_results.json'  (HeadlessAnalyzer)  
+INFO  REPORT: Execute script: /Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/scripts/ExportFactPack.java '--out=re/nextdimension/kernel/reports/factpack/retagged' '--seed-map=re/nextdimension/kernel/docs/recovery_map_hardmask_pcode.json' '--phase2=/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/../firmware/analysis/phase2/cross_block_results.json'  (HeadlessAnalyzer)  
 INFO  SCRIPT: /Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/scripts/ExportFactPack.java (HeadlessAnalyzer)  
 INFO  ExportFactPack.java> === ExportFactPack === (GhidraScript)  
-INFO  ExportFactPack.java> Output directory: /Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/factpack/20260209-162613 (GhidraScript)  
+INFO  ExportFactPack.java> Output directory: /Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/factpack/retagged (GhidraScript)  
 INFO  ExportFactPack.java> Seed map: re/nextdimension/kernel/docs/recovery_map_hardmask_pcode.json (GhidraScript)  
 INFO  ExportFactPack.java> Phase2 hints: /Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/../firmware/analysis/phase2/cross_block_results.json (GhidraScript)  
 INFO  ExportFactPack.java> Fact pack export complete: (GhidraScript)  
@@ -673,7 +673,6 @@ INFO  ExportFactPack.java>   code_bytes (decoded): 10144 (GhidraScript)
 INFO  ANALYZING changes made by post scripts: file:///Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/i860_kernel.bin (HeadlessAnalyzer)  
 WARN  Decompiling f800c584, pcode error at fdec89f4: Could not follow disassembly flow into non-existing memory at fdec89f4 (DecompileCallback)  
 WARN  Decompiling f800c584, pcode error at fdec89e4: Could not follow disassembly flow into non-existing memory at fdec89e4 (DecompileCallback)  
-WARN  Decompiling f800c630, pcode error at f800c670: Unable to resolve constructor at f800c670 (DecompileCallback)  
 WARN  Decompiling f8021a20, pcode error at f8961a48: Could not follow disassembly flow into non-existing memory at f8961a48 (DecompileCallback)  
 WARN  Decompiling f8021a20, pcode error at f802da48: Unable to resolve constructor at f802da48 (DecompileCallback)  
 WARN  Decompiling f8021a20, pcode error at f8021c68: Unable to resolve constructor at f8021c68 (DecompileCallback)  
@@ -681,16 +680,17 @@ WARN  Decompiling f8021a20, pcode error at f8037ef4: Failed to resolve varnode <
 WARN  Decompiling f8021a20, pcode error at f1a918a8: Could not follow disassembly flow into non-existing memory at f1a918a8 (DecompileCallback)  
 WARN  Decompiling f8021a20, pcode error at f5894838: Could not follow disassembly flow into non-existing memory at f5894838 (DecompileCallback)  
 WARN  Decompiling f8021a20, pcode error at fde5135c: Could not follow disassembly flow into non-existing memory at fde5135c (DecompileCallback)  
+WARN  Decompiling f800c630, pcode error at f800c670: Unable to resolve constructor at f800c670 (DecompileCallback)  
 INFO  -----------------------------------------------------
-    Basic Constant Reference Analyzer          0.044 secs
+    Basic Constant Reference Analyzer          0.041 secs
     Call-Fixup Installer                       0.001 secs
     Create Function                            0.001 secs
-    Decompiler Switch Analysis                 2.091 secs
+    Decompiler Switch Analysis                 2.107 secs
     Non-Returning Functions - Discovered       0.002 secs
     Reference                                  0.001 secs
-    Shared Return Calls                        0.004 secs
-    Stack                                      0.018 secs
-    Subroutine References                      0.001 secs
+    Shared Return Calls                        0.003 secs
+    Stack                                      0.016 secs
+    Subroutine References                      0.002 secs
 -----------------------------------------------------
      Total Time   2 secs
 -----------------------------------------------------

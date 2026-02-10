@@ -1,0 +1,438 @@
+{
+  "run_id": "3f574718",
+  "model": "claude-sonnet-4-5-20250929",
+  "backend": "max",
+  "stats": {
+    "claims": 60,
+    "verified_accept": 52,
+    "verified_revise": 6,
+    "verified_reject": 2,
+    "gatekeeper_passed": 60,
+    "gatekeeper_failed": 0,
+    "total_tokens_in": 1129262,
+    "total_tokens_out": 392671
+  },
+  "results": [
+    {
+      "function_id": "0xf800c630",
+      "status": "reject",
+      "confidence": 35,
+      "primary_intent": "PostScript token fetch and dispatch handler with dual-path conditional branch based on classification result",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf8008ee4",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "UNKNOWN - unresolved runtime dispatch with MMIO token read suggests PostScript handler stub, but insufficient evidence to confirm intent or handler type",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800c2a4",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Dead code fragment: compiler artifact containing unreachable mixed load/store sequences with no coherent semantic purpose",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800f77c",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Dead code fragment: unreachable multi-block sequence with PostScript token hash pattern and MMIO 0x401C read, never executed",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf8009270",
+      "status": "accept",
+      "confidence": 25,
+      "primary_intent": "Dead code loop artifact: repeated MMIO write attempts to 0x401C with computed values, zero callers, all loads write to r0 sink register",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf80094fc",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Dead code or compiler artifact: linear sequence with 36/60 writes to hardwired r0 sink, no control flow, no meaningful computation",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800916c",
+      "status": "accept",
+      "confidence": 5,
+      "primary_intent": "Dead code artifact: three identical MMIO token-write sequences (r8 xor r7, ixfr to f24, st.b to 0x401C) followed by nonsensical byte loads to r0_sink, never called, no runtime reachability",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800c964",
+      "status": "accept",
+      "confidence": 5,
+      "primary_intent": "Dead code fragment or compiler artifact: 100% r0 sink writes, zero live outputs, unnatural control flow",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800a44c",
+      "status": "accept",
+      "confidence": 95,
+      "primary_intent": "Dead code artifact: writes hardwired-zero r0 to all 28 destinations, performs no useful computation",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800d0ec",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Dead code artifact: writes all results to hardwired-zero r0 sink (20/23 instructions), never called, contains MMIO store to 0x401C but no viable control flow path",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800c8bc",
+      "status": "revise",
+      "confidence": 5,
+      "primary_intent": "Dead code stub containing corrupted or misinterpreted instruction sequence with MMIO token store and nonsensical arithmetic to r0 sink",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800842c",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Dead code artifact with MMIO write to 0x401C (PostScript token port) and incoherent register shuffling",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800c520",
+      "status": "accept",
+      "confidence": 95,
+      "primary_intent": "Dead code fragment: performs meaningless byte loads into hardwired r0 with no observable side effects except one MMIO write and a trap termination",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800cf8c",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Dead code artifact: multiple sink writes to r0 with MMIO store, no computational output",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf80014c4",
+      "status": "accept",
+      "confidence": 25,
+      "primary_intent": "Dead code fragment with MMIO read at 0x401C and data movement producing zero side effects",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf80080f4",
+      "status": "accept",
+      "confidence": 25,
+      "primary_intent": "Dead code / compiler artifact performing nonsensical MMIO and register operations with no side effects",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800a554",
+      "status": "accept",
+      "confidence": 25,
+      "primary_intent": "Dead code fragment performing sink-only loads with MMIO write to 0x401C token register",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800a680",
+      "status": "revise",
+      "confidence": 15,
+      "primary_intent": "Computed indirect dispatch or data structure traversal with runtime-resolved branch target",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf8021a20",
+      "status": "accept",
+      "confidence": 5,
+      "primary_intent": "Compiler-generated dead code or unreachable error path with degenerate register operations and unresolved computed dispatch",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf8008274",
+      "status": "accept",
+      "confidence": 25,
+      "primary_intent": "Computed indirect branch dispatcher with array-indexed target resolution, dead code with no callers",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800f70c",
+      "status": "accept",
+      "confidence": 5,
+      "primary_intent": "UNKNOWN - appears to be compiler-generated data or junk code with no coherent operational logic",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800c584",
+      "status": "revise",
+      "confidence": 25,
+      "primary_intent": "Conditional floating-point register initialization with runtime-computed indirect dispatch",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800cb9c",
+      "status": "revise",
+      "confidence": 25,
+      "primary_intent": "Delay-slot-wrapped indirect dispatch thunk, possibly for computed jump table or runtime-resolved branch target with integer-to-FP register transfer side effect",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800a0bc",
+      "status": "accept",
+      "confidence": 25,
+      "primary_intent": "Dead code or compiler artifact \u2014 sequence of sink writes with no control flow or meaningful side effects",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800df78",
+      "status": "revise",
+      "confidence": 35,
+      "primary_intent": "MMIO token writer with multiple dead-code memory reads draining to r0 sink",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf8000000",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Reset/exception vector table containing invalid instruction encodings that trap or serve as placeholder data; not executable code",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf80017cc",
+      "status": "accept",
+      "confidence": 95,
+      "primary_intent": "Dead code artifact: compiler padding or unreachable test stub that performs no meaningful computation",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800bf74",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Dead code artifact: register churn with no-op side effects and unreachable call",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800cd64",
+      "status": "accept",
+      "confidence": 5,
+      "primary_intent": "Dead code / compiler artifact with repetitive nonsensical ALU operations writing to hardwired-zero sinks",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800d00c",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Dead code artifact: executes nonsensical zero-register writes with no computational outcome or externally visible effects",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf8008098",
+      "status": "accept",
+      "confidence": 20,
+      "primary_intent": "Dead code artifact or compiler-generated stub: performs 17 sink writes to r0 with no output registers, no callers, no control flow, no side effects",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf8008dd4",
+      "status": "accept",
+      "confidence": 90,
+      "primary_intent": "Dead code artifact: sequence of sink-only operations with no side effects or control flow",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf8008f5c",
+      "status": "accept",
+      "confidence": 95,
+      "primary_intent": "Dead code artifact: writes 100% to r0 sink (16/17 instructions), reads from uninitialized caller-saved registers, no I/O side effects",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800b83c",
+      "status": "accept",
+      "confidence": 5,
+      "primary_intent": "Dead code artifact: sink-only linear sequence with no callers, no output, and semantically incoherent memory operations",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf807ee1c",
+      "status": "accept",
+      "confidence": 95,
+      "primary_intent": "Dead code / compiler artifact with nonsensical instruction sequence producing no observable effects",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf8000348",
+      "status": "accept",
+      "confidence": 95,
+      "primary_intent": "Compiler-generated padding or alignment function with zero operational effect",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800a1c8",
+      "status": "accept",
+      "confidence": 95,
+      "primary_intent": "Dead code artifact containing write-only computation and sink stores with unconditional branch to unreachable code segment",
+      "contrarian_verdict": "primary_stands"
+    },
+    {
+      "function_id": "0xf8009ae8",
+      "status": "accept",
+      "confidence": 95,
+      "primary_intent": "Dead code artifact - compiler-generated unreachable stub writing sinks and containing nonsensical operations",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800c79c",
+      "status": "accept",
+      "confidence": 95,
+      "primary_intent": "Dead code or compiler artifact with no functional purpose",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800dc7c",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Dead code artifact: computes hash values and performs sink writes to r0 with no observable side effects",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800bc68",
+      "status": "accept",
+      "confidence": 25,
+      "primary_intent": "Dead code fragment: compiler artifact performing isolated register-to-register/memory operations with no observable side effects",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800af6c",
+      "status": "accept",
+      "confidence": 95,
+      "primary_intent": "Dead code artifact: 11/12 instructions write to hardwired r0 sink, no side effects, zero callers",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800f4d4",
+      "status": "accept",
+      "confidence": 95,
+      "primary_intent": "Dead code artifact - compiler-generated unreachable function with no side effects and all writes to hardwired-zero registers",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800bb60",
+      "status": "accept",
+      "confidence": 95,
+      "primary_intent": "Dead code artifact: series of sink writes with no callers, no observable side effects, and no return value computation",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800cef0",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Dead code artifact: unreachable compiler-generated instruction sequence with no coherent purpose",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800db54",
+      "status": "accept",
+      "confidence": 95,
+      "primary_intent": "Dead code or compiler artifact: all writes target hardwired-zero registers, producing no computational effect",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf8008000",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Dead code artifact or unreachable function containing semantically meaningless instruction sequence with sink writes and no return path",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800b3fc",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Dead code artifact: performs nonsensical operations with hardcoded zero loads and writes to register-zero sink",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800b504",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Null-sink function performing byte loads into hardwired-zero register r0; likely dead code or compiler artifact with no operational effect",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf8008e20",
+      "status": "accept",
+      "confidence": 95,
+      "primary_intent": "Dead code artifact or compiler-generated stub with no computational purpose",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf8008e70",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Dead code artifact with undefined behavior: zero-input FP transfer, multiple r0-targeted loads, one data hash computation (xorh 0x1887,r31,r31)",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf80090d4",
+      "status": "reject",
+      "confidence": 85,
+      "primary_intent": "Dead code artifact: register shuffling and redundant memory operations with no computational effect",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf8009420",
+      "status": "accept",
+      "confidence": 90,
+      "primary_intent": "Dead code / compiler artifact with no functional purpose; writes to caller-saved temporaries that are never consumed",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800c194",
+      "status": "revise",
+      "confidence": 35,
+      "primary_intent": "FPU context save fragment: store FIR control register and transfer GPR to FP register, followed by synchronization unlock and conditional error trap",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800cc00",
+      "status": "accept",
+      "confidence": 95,
+      "primary_intent": "Dead code artifact: register test sequence with no callers, no control flow, and all outputs sink-written or overwritten",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf8004e44",
+      "status": "accept",
+      "confidence": 90,
+      "primary_intent": "Dead code artifact: all loads write to hardwired-zero r0, producing no computational effect",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800b9e0",
+      "status": "accept",
+      "confidence": 85,
+      "primary_intent": "Dead code fragment: performs index-based load, hash computation, conditional branch to 0xf800bdc4, followed by sink operations writing to r0",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800f80c",
+      "status": "accept",
+      "confidence": 95,
+      "primary_intent": "Dead code artifact: writes to hardwired-zero register (r0), performs effectless register moves, and has zero callers in the entire binary",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800bd9c",
+      "status": "accept",
+      "confidence": 95,
+      "primary_intent": "Dead code / compiler artifact performing meaningless register operations with zero sinks",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800c458",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Dead code fragment or compiler artifact performing incoherent register operations with no observable effect",
+      "contrarian_verdict": "alternative_competitive"
+    }
+  ],
+  "errors": []
+}

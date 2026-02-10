@@ -77,3 +77,15 @@ the i860 Ghidra module and analyzing the NeXTdimension firmware.
 49. "No dispatch table found" should be stated as "no static flat table found"; runtime-built BSS tables remain possible.
 50. Heuristic architecture tagging can misclassify compressed data (e.g., TIFF/LZW as x86); require format-signature confirmation before conclusions.
 51. Headless logs are first-class outputs: always check for skipped scripts/compile errors (e.g., RecoverRuntimeDispatchSeeds.java) before trusting metrics.
+
+## LLM Swarm Pipeline
+
+52. Claude Agent SDK subprocess model has higher per-call overhead than raw API — use concurrency 2-3 with retry/backoff and a warmup call before batch processing.
+53. LLM schema validation should coerce recoverable formatting issues (verbose enum values, non-hex evidence addresses) rather than hard-rejecting entire responses — 13/60 functions failed before coercion, 0 after.
+54. Models append free-text commentary after JSON objects ("Extra data") — truncate at `JSONDecodeError.pos` boundary instead of rejecting; 12/60 contrarian responses needed this fix.
+55. Token accounting must include ALL pipeline stages (intent + verification + contrarian + synthesis) — omitting contrarian/synthesis understated totals by 30-40%.
+56. LLM analysis of structurally-limited input (dead-code island functions) mirrors static findings — 30/32 accepted claims confirmed dead code/compiler artifacts with zero call graph connectivity, validating the static analysis ceiling.
+57. MMIO tagging must compute effective addresses (base + displacement), not match raw sign-extended immediates against scalar thresholds — the old heuristic tagged 6 offsets as MMIO that couldn't map to the 4KB MMIO space (0x02000000) for any consistent base register value, biasing downstream LLM analysis.
+58. Always cross-reference analysis claims against existing hardware documentation before accepting — `nextdimension.h` (1,071 lines of MMIO register definitions), NDserver RE (97 functions), and a full Rust i860 emulator were available but never consulted during the swarm pipeline, leading to fabricated MMIO interpretations.
+59. Noisy input context dominates LLM verdict quality — removing 219 false `mmio_high_space` tags from shards swung accept rate from 53% (32/60) to 87% (52/60), a +20 accept delta from input cleanup alone with no prompt changes.
+60. Label multi-run baselines explicitly — "32 accept, 22 revise, 6 reject" was a combined prod+retry result across two runs with overlapping function sets, not a single-pass metric. Always state whether a baseline is single-run or combined.

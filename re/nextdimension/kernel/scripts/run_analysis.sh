@@ -1,6 +1,7 @@
 #!/bin/bash
 # One-command pipeline for NeXTdimension i860 kernel analysis.
-# Usage: ./re/nextdimension/kernel/scripts/run_analysis.sh [binary] [xrefs_json] [recovery_map_json] [factpack_out_dir]
+# Usage: ./re/nextdimension/kernel/scripts/run_analysis.sh \
+#   [binary] [xrefs_json] [recovery_map_json] [factpack_out_dir] [dynamic_trace_jsonl]
 #
 # Runs I860Import.java (preScript) + auto-analysis + I860Analyze.java (postScript),
 # then exports swarm-ready fact-pack JSONL via ExportFactPack.java.
@@ -15,6 +16,7 @@ BINARY="${1:-$KERNEL_DIR/i860_kernel.bin}"
 XREFS_JSON="${2:-}"
 RECOVERY_MAP_JSON="${3:-$KERNEL_DIR/docs/recovery_map.json}"
 FACTPACK_OUT_DIR="${4:-}"
+DYNAMIC_TRACE_JSONL="${5:-${DYNAMIC_TRACE_JSONL:-}}"
 if [[ ! -f "$RECOVERY_MAP_JSON" ]]; then
     RECOVERY_MAP_JSON=""
 fi
@@ -36,6 +38,9 @@ fi
 if [[ -n "$RECOVERY_MAP_JSON" ]]; then
     echo "Recovery:   $RECOVERY_MAP_JSON"
 fi
+if [[ -n "$DYNAMIC_TRACE_JSONL" ]]; then
+    echo "Dyn trace:  $DYNAMIC_TRACE_JSONL"
+fi
 echo "Scripts:    $SCRIPT_DIR"
 echo "Reports:    $REPORT_DIR"
 echo "Fact pack:  $FACTPACK_OUT_DIR"
@@ -46,6 +51,23 @@ rm -rf /tmp/ghidra_i860_kernel /tmp/ghidra_i860_kernel.rep /tmp/ghidra_i860_kern
 
 POST_ARGS=()
 PRE_ARGS=()
+
+if [[ -n "$DYNAMIC_TRACE_JSONL" ]]; then
+    if [[ ! -f "$DYNAMIC_TRACE_JSONL" ]]; then
+        echo "ERROR: dynamic trace file not found: $DYNAMIC_TRACE_JSONL" >&2
+        exit 1
+    fi
+    TRACE_MAP_JSON="/tmp/i860_dynamic_recovery_${RUN_TS}.json"
+    TRACE_REPORT_TXT="$REPORT_DIR/dynamic_trace_seed_report.txt"
+    python3 "$SCRIPT_DIR/dynamic_trace_to_recovery_map.py" \
+        --trace "$DYNAMIC_TRACE_JSONL" \
+        --base-map "${RECOVERY_MAP_JSON:-}" \
+        --out "$TRACE_MAP_JSON" \
+        --report "$TRACE_REPORT_TXT"
+    RECOVERY_MAP_JSON="$TRACE_MAP_JSON"
+    echo "Dynamic recovery map: $RECOVERY_MAP_JSON"
+fi
+
 if [[ -n "$XREFS_JSON" ]]; then
     POST_ARGS+=("$XREFS_JSON")
 elif [[ -n "$RECOVERY_MAP_JSON" ]]; then

@@ -76,30 +76,14 @@ def is_r15_cluster_insn(insn):
 
 # ---------- MMIO detection ----------
 
-# Known ND MMIO ranges
-MMIO_RANGES = [
-    (0x00004000, 0x00007FFF, "ND_CSR"),  # ND board CSR
-    (0xF80B4000, 0xF80C5FFF, "ND_DATA"),  # __DATA segment
-]
-
-MMIO_TAG_ADDRS = {
-    0x0000401C: "MMIO_401C_token_read",
-    0x00004018: "MMIO_4018",
-    0x00004020: "MMIO_4020",
-}
-
 
 def detect_mmio(insn):
-    """Return MMIO tag if instruction accesses a known MMIO address."""
+    """Return normalized MMIO tag string, if present."""
     tag = insn.get("mmio_tag")
-    if tag:
-        return tag
-    # Check operands for known MMIO addresses
-    operands = insn.get("operands", "")
-    for addr_val, tag_name in MMIO_TAG_ADDRS.items():
-        if f"0x{addr_val:x}" in operands or f"0x{addr_val:04x}" in operands:
-            return tag_name
-    return None
+    if not tag:
+        return None
+    parts = [p.strip() for p in tag.split(",") if p.strip()]
+    return ",".join(parts) if parts else None
 
 
 # ---------- main sharding logic ----------
@@ -304,8 +288,12 @@ class FactPackSharder:
             priority_tags.append("unresolved_bri")
         if mmio_accesses:
             priority_tags.append("mmio_access")
-        if any("MMIO_401C" in m.get("tag", "") for m in mmio_accesses):
-            priority_tags.append("postscript_dispatch")
+        if any("unresolved" in m.get("tag", "") for m in mmio_accesses):
+            priority_tags.append("mmio_offset_unresolved")
+        if any("mmio_abs_0000401c" in m.get("tag", "") or
+               "mmio_abs_i860_0200xxxx" in m.get("tag", "")
+               for m in mmio_accesses):
+            priority_tags.append("postscript_dispatch_candidate")
         # FP-heavy detection
         fp_mnemonics = {"fadd", "fsub", "fmul", "pfadd", "pfsub", "pfmul",
                         "fmlow", "frcp", "frsqr", "fix", "ftrunc",
@@ -376,7 +364,7 @@ class FactPackSharder:
             score = 0
             if "r15_gstate_cluster" in tags:
                 score -= 100
-            if "postscript_dispatch" in tags:
+            if "postscript_dispatch" in tags or "postscript_dispatch_candidate" in tags:
                 score -= 90
             if "unresolved_bri" in tags:
                 score -= 50
