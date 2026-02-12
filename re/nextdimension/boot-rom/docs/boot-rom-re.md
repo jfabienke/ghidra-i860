@@ -618,13 +618,16 @@ Reset Vector (0xFFF1FF20)
 
 ## 11. Open Questions
 
-1. **DRAM bank addresses**: What determines the values 0x2E3A8000, 0x4E3A8000,
-   0x6E3A8000? These don't map to standard power-of-two DRAM regions. Are they
-   memory controller configuration ports rather than test addresses?
+1. ~~**DRAM bank addresses**~~: **Answered**. The `FIX_ADDR` macro in
+   `ND_rom.c` reveals that physical address lines A0 and A1 are mapped to A17
+   and A18 as a hardware workaround. This non-linear swizzling makes standard
+   DRAM regions appear at fragmented, non-power-of-two addresses (0x2E3A8000,
+   0x4E3A8000, 0x6E3A8000) during test and configuration.
 
-2. **SID register interpretation**: The 4-bit value from 0xFF800030 is shifted
-   to bits [31:28] and used as a DIRBASE page-directory-base tag. What do the
-   16 possible slot ID values mean? Are they NuBus slot numbers?
+2. ~~**SID register interpretation**~~: **Answered**. 0xFF800030 returns the
+   4-bit NextBus slot ID. The value is shifted to bits [31:28] to uniquely tag
+   the DIRBASE, ensuring every board in a multi-board system has a unique
+   physical address space for its kernel and resources based on slot position.
 
 3. **0xFF000341 writes**: The service wrapper writes 0x91 to an address in the
    dither memory region (but beyond the documented 512-byte range). Is this a
@@ -633,17 +636,27 @@ Reset Vector (0xFFF1FF20)
 4. **0xFF400004 access**: FUN_fff01a98 conditionally reads and modifies a
    register in the "unknown" MMIO range. What device lives at 0xFF400000?
 
-5. **Virtual entry point**: After enabling paging, the ROM returns to virtual
-   address 0xFFFE0204. What page table mapping makes this work? The ROM must
-   set up at least one page directory entry before enabling ATE.
+5. ~~**Virtual entry point**~~: **Answered**. The ROM executes the
+   transition from the instruction cache. It sets dirbase, then performs a `bri`
+   (branch indirect). Since the code is already in the i-cache, the i860
+   completes the jump to the new virtual address (0xFFFE0204) even as the MMU
+   changes the underlying mapping. No explicit page table entry is needed for
+   the transition itself — the cache carries execution across the ATE enable.
 
-6. **Kernel entry protocol**: The ROM copies the raw binary to DRAM at
-   0x00000000 and jumps there. With a Mach-O kernel, offset 0 is the Mach-O
-   header (not code). Does the host (NDserver) strip headers before DMA, or
-   does the kernel header contain a branch instruction at offset 0?
+6. ~~**Kernel entry protocol**~~: **Answered**. The host-side `NDLoadCode`
+   utility (`code.c`) parses the Mach-O `LC_THREAD` command to extract the
+   entry point. Segments are loaded individually to their correct VAs using
+   mixed-endian writes: `LOADTEXT(addr, data)` uses `addr ^ 4` (XOR-4 byte
+   swap for i860 big-endian instruction fetch in little-endian data mode),
+   while `LOADDATA(addr, data)` writes directly. The ROM does not strip
+   headers — NDserver handles all Mach-O parsing on the host side.
 
-7. **GState structure**: Only 3 fields identified (offsets +0, +68, +80).
-   What other fields exist? Is this the same structure the kernel uses?
+7. ~~**GState structure**~~: **Partially answered**. In the boot ROM, r15 is
+   explicitly reserved as a global pointer to `ROMGlobals` (defined in
+   `NDrom.h`). In the kernel, this role expands to a larger GState structure.
+   The 25 `orh 0x6514,r15,r31` references suggest r15 anchors all graphics
+   state (transformation matrices, clipping bounds, color parameters). Full
+   field layout remains unresolved for the 3.3 binary.
 
 8. **Command dispatch**: The ROM handles multiple mailbox commands beyond
    CMD_LOAD_KERNEL. Which other commands does it implement? Are graphics
