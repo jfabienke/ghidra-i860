@@ -17,6 +17,11 @@ XREFS_JSON="${2:-}"
 RECOVERY_MAP_JSON="${3:-$KERNEL_DIR/docs/recovery_map.json}"
 FACTPACK_OUT_DIR="${4:-}"
 DYNAMIC_TRACE_JSONL="${5:-${DYNAMIC_TRACE_JSONL:-}}"
+TRACE_MIN_HITS="${TRACE_MIN_HITS:-1}"
+TRACE_MIN_SITES="${TRACE_MIN_SITES:-1}"
+TRACE_MIN_SEED_SCORE="${TRACE_MIN_SEED_SCORE:-50}"
+TRACE_MIN_CREATE_SCORE="${TRACE_MIN_CREATE_SCORE:-70}"
+TRACE_ALLOW_SELF_LOOP_ONLY="${TRACE_ALLOW_SELF_LOOP_ONLY:-0}"
 if [[ ! -f "$RECOVERY_MAP_JSON" ]]; then
     RECOVERY_MAP_JSON=""
 fi
@@ -40,6 +45,7 @@ if [[ -n "$RECOVERY_MAP_JSON" ]]; then
 fi
 if [[ -n "$DYNAMIC_TRACE_JSONL" ]]; then
     echo "Dyn trace:  $DYNAMIC_TRACE_JSONL"
+    echo "Thresholds: hits>=$TRACE_MIN_HITS sites>=$TRACE_MIN_SITES seed>=$TRACE_MIN_SEED_SCORE create>=$TRACE_MIN_CREATE_SCORE self_loop_only=$TRACE_ALLOW_SELF_LOOP_ONLY"
 fi
 echo "Scripts:    $SCRIPT_DIR"
 echo "Reports:    $REPORT_DIR"
@@ -59,9 +65,18 @@ if [[ -n "$DYNAMIC_TRACE_JSONL" ]]; then
     fi
     TRACE_MAP_JSON="/tmp/i860_dynamic_recovery_${RUN_TS}.json"
     TRACE_REPORT_TXT="$REPORT_DIR/dynamic_trace_seed_report.txt"
+    ALLOW_SELF_LOOP_ARG=""
+    if [[ "$TRACE_ALLOW_SELF_LOOP_ONLY" == "1" || "$TRACE_ALLOW_SELF_LOOP_ONLY" == "true" || "$TRACE_ALLOW_SELF_LOOP_ONLY" == "TRUE" ]]; then
+        ALLOW_SELF_LOOP_ARG="--allow-self-loop-only"
+    fi
     python3 "$SCRIPT_DIR/dynamic_trace_to_recovery_map.py" \
         --trace "$DYNAMIC_TRACE_JSONL" \
         --base-map "${RECOVERY_MAP_JSON:-}" \
+        --min-hits "$TRACE_MIN_HITS" \
+        --min-sites "$TRACE_MIN_SITES" \
+        --min-seed-score "$TRACE_MIN_SEED_SCORE" \
+        --min-create-score "$TRACE_MIN_CREATE_SCORE" \
+        $ALLOW_SELF_LOOP_ARG \
         --out "$TRACE_MAP_JSON" \
         --report "$TRACE_REPORT_TXT"
     RECOVERY_MAP_JSON="$TRACE_MAP_JSON"

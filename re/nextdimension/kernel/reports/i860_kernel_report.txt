@@ -11,7 +11,7 @@ Data bytes:   735,364 (in executable blocks)
 Coverage:     1.4%
 
 --- Seed Discovery ---
-Recovery map:      re/nextdimension/kernel/docs/recovery_map_hardmask_pcode.json
+Recovery map:      /tmp/i860_closure_xor4_resetrange_on/iter_1/sweep/dynamic_recovery_map.json
 Allow ranges:      1
 Deny ranges:       43
 Curated seed defs: 311

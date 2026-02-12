@@ -147,7 +147,7 @@ All three methods converge on ~1.3% real i860 code in __text.
 | Data pointers | 0 | No __data values pointing into recovered code |
 | **Total new** | 69 | 12 pruned (bad start) → 60 surviving |
 
-The near-zero automated discovery reflects the kernel's reliance on indirect calls (`calli` via register) and dispatch tables (`bri r8`) rather than direct `call` instructions.
+The near-zero automated discovery reflects the kernel's reliance on indirect calls (`calli` via register) and `bri`-based runtime dispatch tables rather than direct `call` instructions.
 
 ### Runtime Trace Closure Status (Current)
 
@@ -186,7 +186,14 @@ Recent emulator diagnostics narrowed the failure mode further:
 | MMIO activity in looping kernel replay | Minimal and non-progressing | Reads only `0xFF800000` and `0xFF800008` once each |
 | MMIO scalar sensitivity (`0xFF800000`,`0xFF800008`) | No behavioral change across 49 value pairs | Every run still traps at `0xF800138C` with exception `0x00000001` |
 
-The word at `0xF800138C` is `0x19B8801E` (primary opcode `0x06`, reserved in MAME's primary decode table). Trap behavior at this PC is therefore expected; the unresolved issue is why execution falls into this reserved-opcode region before reaching dispatch-producing code.
+**Root cause identified**: The word at `0xF800138C` is `0x19B8801E` (primary opcode `0x06`, reserved). Byte-swapping this to `0x1E80B819` yields bits [31:26] = `000111` (opcode `0x07` = `st.s`), a valid instruction. This strongly indicates an **XOR-4 byte-ordering mismatch**: the emulator loads the kernel binary without applying the `LOADTEXT(addr ^ 4)` swap that the host driver (`libND/code.c`) uses during real kernel loading. The i860's 64-bit instruction bus in big-endian mode expects 32-bit words in the opposite half of each 64-bit pair.
+
+Additionally, the kernel requires:
+- **Trap vector at 0xFFFFFF00**: The kernel maps a physical page behind 0xFFFFFF00 during `early_start`/`config_memory` before enabling interrupts. If the emulator lacks this mapping, any exception becomes fatal.
+- **TLB/ATE enable**: `dirbase` must enable address translation to map the uncacheable DRAM region (0xF80C0000) and the trap vector correctly.
+
+The hard self-loop at `0xF800138C` is likely the kernel re-executing a faulting instruction (trap handler jumps back to PC of the reserved opcode, which traps again indefinitely).
+
 `nd_trace` now supports `mmio_sequences` in state JSON for per-address read sequencing (hold-last semantics), which enables richer MMIO modeling experiments without changing emulator code.
 
 ## Loader Workarounds
@@ -233,7 +240,7 @@ Coverage denominator: 50,176 instructions (200,704 bytes linear sweep).
 
 Both tools converge at ~10.9% with seeds. Ghidra discovers 436 functions (vs Rust's 16) through multi-strategy function discovery (prologues, post-return boundaries, orphan code detection).
 
-The 10.9% ceiling vs the 57.7% I860_CODE classification reflects the `bri r8` dispatch table problem: the firmware uses indirect jumps through register-loaded handler tables, and neither tool can follow the control flow without knowing the table contents.
+The 10.9% ceiling vs the 57.7% I860_CODE classification reflects the `bri` dispatch-table problem: the firmware uses indirect jumps through register-loaded handler tables, and neither tool can follow the control flow without knowing the table contents.
 
 ### Clean Firmware Structure
 
@@ -259,7 +266,7 @@ Sample of 12 functions:
 
 - **`halt_baddata`**: Linear sweep forces decoding of data-as-code in null padding and ASCII regions (42% of image). These "instructions" produce garbage pcode that truncates control flow.
 - **`halt_unimplemented: 0`**: All 172 SLEIGH instructions have working pcode semantics.
-- **`unaff_*`**: Many firmware routines use non-standard register conventions (dispatch via `bri r8`, non-GCC callee-saved registers).
+- **`unaff_*`**: Many firmware routines use non-standard register conventions (dispatch via indirect `bri`, non-GCC callee-saved registers).
 
 ## Base Address
 
@@ -268,14 +275,14 @@ The kernel is loaded at `F8000000`, which matches the NeXTdimension board's memo
 ## Key Conclusions
 
 1. **The kernel binary is a fat container**, not a pure i860 image. It bundles m68k host driver code, x86 application objects (including PhotoAlbum.app/Kodak 1991), ASCII resources, and build artifacts (Emacs changelog) alongside a small i860 slice (~1.3% heuristic, ~1.4% execution-proven).
-2. **Static analysis is severely limited** by indirect dispatch. The i860 firmware relies on `calli` (register indirect call) and `bri r8` (handler dispatch) rather than direct `call` instructions. Without dispatch table reconstruction, most code is unreachable to both Ghidra and the Rust disassembler.
+2. **Static analysis is severely limited** by indirect dispatch. The i860 firmware relies on `calli` (register indirect call) and `bri`-based handler dispatch rather than direct `call` instructions. Without dispatch table reconstruction, most code is unreachable to both Ghidra and the Rust disassembler.
 3. **The clean firmware is the better target**. At 57.7% i860 code with zero foreign-architecture contamination, `ND_i860_VERIFIED_clean.bin` is far more amenable to analysis (10.9% recovery vs 1.3%).
 4. **The Rust disassembler's Mach-O parser cannot handle this binary** — it fails with "Invalid Mach-O load command size", independently confirming the anomalous container structure.
 5. **The firmware is bare-metal** — not a Mach kernel. OS-like primitives (VM init, exception handling, cache coherency) are present but Mach API strings belong to the host-side m68k driver code.
-6. **No dispatch tables exist in `__DATA`** — the 56,400-byte section contains TIFF images, zero-fill BSS, and GNU Emacs ChangeLog linker padding. The 10.9% ceiling is structural (dynamic register-relative dispatch), not informational.
+6. **Dispatch tables are in `__text` and BSS, not `__DATA`** — the `__data` section (56,400 B) contains TIFF images, zero-fill, and linker padding. However, the **PS registration table at 0x1FC00** (28 entries x 156 bytes in `__text`) contains operator names and handler pointers (e.g., `setcolor` → 0xF80045A0, `moveto` → 0xF80048C0, `lineto` → 0xF8004B20). BSS-resident tables are populated at runtime by `InitMessages()` and `AddPortToList()`.
 7. **Delay-slot pcode errors eliminated** — hard-mask v3 with pcode map produces zero missing-delay-slot pcode errors (down from 19 in v2), confirming the SLEIGH specification correctly handles all delay-slot variants encountered in real firmware.
 8. **Runtime closure is operational but not yet productive** — iterative sweep/convert/analyze currently adds zero dynamic seeds (`dynamic_added=0`), so coverage remains 1.4% until traces reach meaningful indirect-dispatch paths.
-9. **Boot ROM handoff is now reproducible in emulator**, but kernel replay still stalls before dispatch: baseline replay faults unaligned at `0xF8001388`; unaligned-bypass replay self-loops at `0xF800138C` with no indirect events.
+9. **Boot ROM handoff is now reproducible in emulator**, but kernel replay stalls due to **XOR-4 byte-ordering mismatch**: the emulator loads the binary without applying `LOADTEXT(addr ^ 4)` swap. The "reserved opcode" at `0xF800138C` (`0x19B8801E`) becomes valid `st.s` (`0x1E80B819`) when byte-swapped. Fix requires applying XOR-4 to `__TEXT` segments during emulator load plus trap vector (0xFFFFFF00) page mapping.
 
 ## Boot ROM Findings Applied To Kernel RE
 
@@ -352,14 +359,16 @@ Source-backed interpretation:
 
 ### PS Symbol -> Kernel Cluster Cross-Reference
 
-These mappings are analytic hypotheses to guide naming and triage, not yet runtime-proven call edges.
+These mappings are partially confirmed by PS registration table extraction.
 
 | PS symbol/pattern | Segment evidence | Candidate kernel cluster | Confidence |
 |-------------------|------------------|--------------------------|------------|
 | `_pola`, `_doClip`, `CRender` | wrappers in early prolog body | central operator/classify logic near `FUN_000033c8` | medium |
-| `moveto`, `lineto`, `curveto`, `closepath` wrappers | path operator aliases and `pl` forms | path geometry handlers around `0xF80080D4` and FP-heavy path blocks | medium |
-| `setdash`, `setlinejoin`, `setlinecap`, `setmiterlimit`, `setlinewidth` | `% graphic state operators` section | graphics-state update routines in MAIN_CODE/BLOCK2 | low-medium |
-| `setgray`, `setcmykcolor`, `setcustomcolor` wrappers (`_fc`, `_sc`) | `% color operators` section | color/compositing routines (render output cluster near `0xF800882C`) | low-medium |
+| `moveto` | PS table entry 2 at 0x1FC9C | **0xF80048C0** (confirmed handler address) | **verified** |
+| `lineto` | PS table entry 3 at 0x1FD38 | **0xF8004B20** (confirmed handler address) | **verified** |
+| `setcolor` | PS table entry 1 at 0x1FC00 | **0xF80045A0** (confirmed handler address) | **verified** |
+| `setdash`, `setlinejoin`, `setlinecap`, etc. | `% graphic state operators` section | graphics-state update routines — likely in remaining 25 PS table entries | medium-high |
+| `setgray`, `setcmykcolor`, `setcustomcolor` wrappers (`_fc`, `_sc`) | `% color operators` section | color/compositing routines — likely in remaining 25 PS table entries | medium-high |
 | `%%BeginSetup`, Symbol encoding vectors | AI3 setup/encoding region | static resource data only (non-executable) | high |
 
 Detailed operator-family worklist and runtime proof criteria:
@@ -368,7 +377,8 @@ Detailed operator-family worklist and runtime proof criteria:
 ### PS Registration Table (0x1FC00) — Structure Decoded
 
 The 4,328-byte table at clean-firmware offset 0x1FC00 contains 28 entries at
-~154 bytes per entry stride. Per-entry format (from NextDimension-21 source):
+**156 bytes** per entry stride (confirmed by ASCII string scanning). Per-entry
+format (from NextDimension-21 source):
 
 | Offset | Size | Field | Description |
 |--------|------|-------|-------------|
@@ -377,9 +387,34 @@ The 4,328-byte table at clean-firmware offset 0x1FC00 contains 28 entries at
 | 0x84 | 4 | `flags` | Operator flags (type classification) |
 | 0x88 | 16 | `signature` | Argument type signature |
 
-This table provides the mapping from host-side operator IDs (0xC0-0xE3) to the
-i860 implementation functions. Extracting the 28 handler pointers from this table
-would directly resolve the operator-to-function mapping open question.
+**Extracted entries** (first three confirmed by hex dump):
+
+| Entry | Offset | Name | Handler | Flags |
+|-------|--------|------|---------|-------|
+| 1 | 0x1FC00 | `setcolor` | 0xF80045A0 | 0x00000001 |
+| 2 | 0x1FC9C | `moveto` | 0xF80048C0 | 0x00000001 |
+| 3 | 0x1FD38 | `lineto` | 0xF8004B20 | 0x00000001 |
+
+**Critical finding**: These handler addresses (0xF8004xxx) fall within the code
+region recovered by Ghidra, confirming that the "orphaned" functions identified
+by swarm analysis are **real PostScript operator handlers** reached through
+runtime dispatch, not dead code or linker artifacts. This resolves the
+operator-to-function mapping question and provides 28 named entry points for the
+i860 code.
+
+### Dispatch Mechanism (Source + Binary Correlation)
+
+Source evidence separates responsibilities:
+
+- `NDkernel/ND/messages.c` is queue transport/port matching for host↔board
+  Mach-style messages (`ToND`/`FromND`), plus early queue initialization via
+  `InitMessages()` / `AddPortToList()`.
+- `PSDriver/server/server.c` performs message ID dispatch (`PSMARKID`,
+  `ps_server`, etc.) into PostScript/rendering service paths.
+
+Binary evidence still shows heavy indirect control flow (`bri` sites), but the
+exact register-level dispatch chain for the 3.3 image remains a runtime-trace
+task rather than a fully source-proven one-to-one mapping.
 
 ## Source Architecture Reference (NextDimension-21)
 
@@ -397,12 +432,16 @@ Use it as the primary design reference for emulator instrumentation, trace taxon
 ## Open Questions
 
 - ~~What is `__TEXT` (F80B2548–F80B3FFF, 6.8 KB)?~~ **Answered**: Segment padding/alignment, not proven C runtime or symbol/reloc content.
-- The two `__DATA` rwx sections at F80C1C50 and F80C4098 — are the trampolines in the small one dynamically patched?
+- `__DATA` rwx sections at F80C1C50 and F80C4098: **Partially explained, not fully proven**. `ND_WriteBranchInstruction` in `code.c` shows host-side instruction patching does occur, and rwx permissions are consistent with patchable stubs/trampolines. However, exact occupancy split (jump islands vs queue/lock data vs other payload) is still a runtime-validation item. Dump these ranges after `MSGFLAG_MSG_SYS_READY` to confirm.
 - ~~Can dispatch tables be reconstructed from the `__data` section?~~ **Answered**: No — `__DATA` contains TIFF images (27%), zero-fill BSS (15%), and GNU Emacs ChangeLog linker padding (58%). Zero dispatch tables found.
 - ~~The clean firmware is 196 KB vs the 64 KB described in prior documentation?~~ **Answered**: Different binaries — 64 KB is the boot ROM (`ND_i860_CLEAN.bin` at 0xFFF00000), 196 KB is the DPS kernel (`ND_i860_VERIFIED_clean.bin` at 0xF8000000).
-- Why does kernel replay enter the `0xF800138C` trap-loop (word `0x19B8801E`, opcode `0x06`) under unaligned-bypass mode, i.e., what preceding control-flow/state mismatch leads into this reserved-opcode region?
+- ~~Why does kernel replay enter the `0xF800138C` trap-loop~~ **Answered**: Root cause is XOR-4 byte-ordering mismatch. The emulator loads the kernel binary without applying `LOADTEXT(addr ^ 4)` swap. Word `0x19B8801E` byte-swapped to `0x1E80B819` yields opcode `0x07` (`st.s`), a valid instruction. Additionally, the trap vector at 0xFFFFFF00 must be mapped and TLB/ATE must be enabled before any exception can be handled correctly. Fix: apply XOR-4 to `__TEXT` segments during emulator binary load, and ensure trap vector page mapping.
 - Should the trace harness stop/emit explicit trap events on `ExecutionResult.trapped` to avoid silent self-looping behavior?
 - ~~Which MMIO stub values/behavior are required to drive firmware execution past poll loops and into real dispatch sites?~~ **Answered**: The host must (1) populate the shared memory message queues (`ToND` at `ND_START_UNCACHEABLE_DRAM=0xF80C0000`), and (2) set the `NDCSR_INT860` bit in the MC CSR (0xFF800000) to signal the i860. The message queues use Lamport locks (`Lock_x`, `Lock_y`, `Lock_b`) for lock-free host↔i860 communication, bypassing Mach kernel IPC for performance. Scalar MMIO sensitivity sweeps failed because they tested register values in isolation rather than modeling the queue+interrupt protocol.
 - Converter enhancement: provenance-driven pointer chase in `dynamic_trace_to_recovery_map.py` to extract candidates from load chains once trace events are present.
+- Extract all 28 PS registration table entries from 0x1FC00 (156-byte stride) — only first 3 hex-dumped so far; remaining 25 handler pointers yield named entry points.
+- Signature-match 2.0 NDkernel utility functions (`readqueue`, `AddPortToList`, `is_empty`, `SpawnProc`, `Sleep`, `Wakeup`) against 3.3 binary using instruction sequence hashing or BinDiff.
+- Search `__data` for `sysent` table pattern (array of `{n_args, handler()}` structs with mostly-`nosys` entries) to locate kernel syscall entry points.
+- Dump rwx sections (F80C1C50 / 176 B and F80C4098 / 8,040 B) at runtime after `MSGFLAG_MSG_SYS_READY` to verify jump island / trampoline contents.
 - ~~Kernel entry protocol~~ **Answered**: NDLoadCode (`code.c`) parses `LC_THREAD`/`LC_UNIXTHREAD` for entry point, loads segments individually with mixed-endian writes (`LOADTEXT` uses `addr ^ 4` XOR-4 swap for i860 big-endian instruction fetch). Entry point is extracted from Mach-O headers on the host side, not inferred by the ROM.
 - ~~Mixed-endian text loading~~ **Answered**: The XOR-4 swap is required because the i860 instruction bus is 64 bits wide but instruction words are 32 bits. The XOR ensures words are placed in the correct half of the 64-bit bus when the processor is in Big-Endian mode.

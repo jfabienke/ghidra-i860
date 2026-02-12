@@ -17,9 +17,12 @@
 | Disassembly tools | MAME i860 disassembler, Ghidra i860 SLEIGH module |
 
 The ROM is a minimal first-stage bootloader. It initializes the i860 from cold
-reset, configures memory and video hardware, then downloads the GaCK (Graphics
-and Core Kernel) operating system from the host NeXTcube over the NuBus mailbox
-interface. After DMA transfer, it jumps to DRAM and never returns.
+reset, configures memory and video hardware, then waits for a host-triggered
+interrupt (`EPSR_INT` bit). The host independently loads the GaCK (Graphics
+and Core Kernel) binary into DRAM via direct NuBus memory writes, then signals
+the i860. The ROM jumps to DRAM address 0x00000000 and never returns. There is
+no mailbox command dispatcher in the ROM — the host controls the entire load
+sequence.
 
 ---
 
@@ -34,13 +37,14 @@ interface. After DMA transfer, it jumps to DRAM and never returns.
 | 0xF0000000–0xF0000FFF | 4 KB | Data path controller | CL550-related |
 | 0xFF000000–0xFF0001FF | 512 B | Dither memory | Video dithering tables |
 | 0xFF200000–0xFF200FFF | 4 KB | RAMDAC (Bt463) | 4-port interface: addr, palette, command, control |
-| 0xFF400000–0xFF4001FF | 512 B | Unknown registers | MC step 1 (undocumented) |
+| 0xFF400000–0xFF4001FF | 512 B | Framestore (Prototype) | VRAM base for pre-production boards; production uses 0x0E000000 |
 | 0xFF800000–0xFF803FFF | 16 KB | I/O devices | Memory controller CSRs, board ID |
 | 0xFFF00000–0xFFF1FFFF | 128 KB | Boot ROM (EEPROM) | This image |
 
 **No serial UART is present on the NeXTdimension board.** The i860 has no
-direct serial I/O path; all host communication goes through the mailbox
-registers at 0x02000000.
+direct serial I/O path. Host↔i860 coordination uses board control interrupts
+(`ND_INT860`) and shared DRAM queues in kernel phase; the mailbox MMIO block at
+0x02000000 is only one control surface and is not used by this ROM wait loop.
 
 ---
 
@@ -94,10 +98,10 @@ The ROM contains 9 code/data regions separated by zero-filled gaps:
           │  (zero-filled gap, 16 bytes)            │
 0x01580 ──┼─────────────────────────────────────────┤
           │  Region 6: Main Runtime        ★        │ 4,048 bytes
-          │    Mailbox polling loop                 │
-          │    Command dispatcher                   │
-          │    Kernel loader (word-by-word DMA)     │
-          │    Error recovery (3-level retry)       │
+          │    Initialization tail + wait loop      │
+          │    Poll EPSR_INT for host interrupt     │
+          │    No ROM command/mailbox dispatcher    │
+          │    Host preloads kernel into DRAM       │
           │    bri to kernel entry (never returns)  │
 0x02550 ──┼─────────────────────────────────────────┤
           │  (zero-filled gap, 16 bytes)            │
@@ -262,46 +266,49 @@ Color depth: 32-bit RGBA (8:8:8:8)
 Frame buffer: 1120 x 832 x 4 = 3,727,360 bytes (~3.73 MB in 4 MB VRAM)
 ```
 
-### 4.6 Main Loop and Kernel Loading (0xFFF01580–0xFFF02550)
+### 4.6 Main Loop and Interrupt Wait (0xFFF01580–0xFFF02550)
 
 The main runtime is the largest code region (4,048 bytes). After all
-initialization, the i860 enters an infinite mailbox polling loop:
+initialization, the i860 enters an interrupt-wait loop — **not** a mailbox
+command dispatcher:
 
 ```
 ┌────────────────────────────────────┐
 │  Pre-loader init calls (4x)        │
 │  - FUN_fff00b78 (GState clear)     │
-│  - FUN_fff01a98 (HW register)      │
+│  - FUN_fff01a98 (board rev detect) │
 │  - FUN_fff00b2c (stub)             │
 │  - FUN_fff017f4 (table scan)       │
 └──────────┬─────────────────────────┘
            ▼
 ┌────────────────────────────────────┐
-│  Poll MAILBOX_STATUS (0x02000000)  │◄──┐
-│  if CMD_READY bit clear: loop      │───┘
-│  Read MAILBOX_COMMAND (0x02000004) │
-│  Dispatch on command type          │
+│  Poll EPSR_INT bit:                │◄──┐
+│    ld.c  epsr, r2                  │   │
+│    and   r2, r3, r0               │   │
+│    bc.t  wait_here                 │───┘
+│  (wait for host interrupt signal)  │
 └──────────┬─────────────────────────┘
            ▼
 ┌────────────────────────────────────┐
-│  CMD_LOAD_KERNEL handler:          │
-│  1. Read DATA_PTR (0x02000008)     │
-│  2. Read DATA_LEN (0x0200000C)     │
-│  3. Word-by-word copy to DRAM      │
-│     (manual DMA — no HW DMA)       │
-│  4. Set CMD_COMPLETE in STATUS     │
-│  5. bri %r24 → 0x00000000          │
-│     (jump to kernel, never return) │
+│  Host interrupt received:          │
+│  bri %r24 → 0x00000000            │
+│  (jump to kernel, never return)    │
 └────────────────────────────────────┘
 ```
 
-**Critical detail**: The kernel loader uses a software DMA loop (word-by-word
-`ld.l`/`st.l`), not hardware DMA. Transfer rate is limited by NuBus bandwidth
-(~25 MB/s theoretical, ~10 MB/s practical). A 784 KB kernel takes approximately
-80 ms to transfer.
+**Critical detail**: The ROM does not load the kernel — the **host** does.
+The host driver (`libND/boot.c`, `libND/code.c`) halts the i860 via
+`NDCSR_RESET860`, copies the kernel binary to DRAM via direct NuBus memory
+writes (segment-by-segment with XOR-4 text swap), then releases reset and
+sends `ND_INT860` to signal the ROM. The ROM's only role after init is to
+detect this interrupt and jump to DRAM.
 
-**Error recovery**: The command dispatcher includes a 3-level retry mechanism
-for failed operations.
+**ROM vs kernel phase distinction**: The mailbox command codes in the Previous
+emulator (0x01 LOAD_KERNEL, 0x07 SET_PALETTE, etc.) do **not** belong to the
+ROM. They are part of the GaCK kernel's shared memory message system
+(`NDkernel/ND/messages.c`), which uses Lamport-locked circular buffers at
+`0xF80C0000` (production) or `0xFFFC0000` (prototype). The Previous emulator
+may abstract this kernel-level protocol as "mailbox commands."
 
 ### 4.7 Service Routines (0xFFF02560–0xFFF02900)
 
@@ -339,9 +346,9 @@ the detailed ROM disassembly documents.
 | 0xFFF00BE0 | ramdac_init | 120 B | System init sequence entry: clear graphics controller registers at 0xFF801000 and 0xFF802000, then call chain of 5 initialization subroutines for RAMDAC programming. |
 | 0xFFF00CB8 | ramdac_program | 1,236 B | **Bt463 RAMDAC programming** (NOT a UART): 12 direct register writes + 3 table loops (16 LUT + 4 cursor + 512 palette) = 544 total writes. Each write uses address→delay→data protocol. Base address 0xFF200000. |
 | 0xFFF013A4 | ramdac_reconfig | 316 B | **Bt463 RAMDAC reconfiguration** (NOT a UART): saves 0xFF802004, writes control bit, triple-phase sync poll on 0xFF800004 bit 0x100, then writes 3 register programming cycles to Bt463 ports. Tests bit 3 of readback, returns 0/1 success status. Restores saved register. |
-| 0xFFF01580 | main_loop | 152 B | Multi-phase initialization entry point: calls chain of subsystem init functions checking return status after each. Transitions to mailbox polling when ready. |
+| 0xFFF01580 | main_loop | 152 B | Multi-phase initialization entry point: calls chain of subsystem init functions checking return status after each. Enters `EPSR_INT` polling loop waiting for host interrupt to jump to DRAM. |
 | 0xFFF017F4 | table_scan | 476 B | Scan 3 array-of-structs (indexed via r15 table) across 2 iterations, zero-fill each with f0/f1 (FP zero registers), then verify written values. |
-| 0xFFF01A98 | hw_reg_rw | 92 B | Call subroutine, then conditionally read and modify hardware register at 0xFF400004 (undocumented region). |
+| 0xFFF01A98 | hw_reg_rw | 92 B | Board revision detection: probes 0xFF400004 (Prototype VRAM/Framestore) with 0x55555555/0xAAAAAAAA write-readback pattern (`is_empty` connectivity test). Detects Prototype vs Production board. |
 | 0xFFF0021C | dirbase_tag | 52 B | Merge 4-bit page-directory-base tag into bits [31:28] of r16: reads DIRBASE, checks ATE bit; if paging disabled, skip; if enabled, read 4-bit tag from 0xFF800031, mask r16 to 28 bits, merge tag. |
 | 0xFFF00260 | get_int_level | 48 B | Read EPSR, extract 5-bit interrupt level field from bits [12:8], return in r16. |
 | 0xFFF02560 | svc_wrapper | 48 B | Service routine wrapper: writes command byte 0x91 to hardware register at 0xFF000341 (dither memory region), then executes service function. |
@@ -376,37 +383,44 @@ These stubs inflated the function count from ~18 real functions to 30.
 All register addresses confirmed from ROM disassembly cross-referenced with
 the Previous emulator source (`nd_devs.c`, `nd_mem.c`) and ROM analysis documents.
 
-### 6.1 Mailbox Registers (0x02000000)
+### 6.1 Mailbox / CSR Registers (0x02000000)
 
 Host-i860 communication interface. All 32-bit aligned.
 
 | Offset | Address | Name | R/W | Function |
 |--------|---------|------|-----|----------|
-| 0x000 | 0x02000000 | STATUS | RW | Command ready flag (poll target) |
-| 0x004 | 0x02000004 | COMMAND | R | Command opcode from host |
-| 0x008 | 0x02000008 | DATA_PTR | R | DMA source address in shared memory |
-| 0x00C | 0x0200000C | DATA_LEN | R | Transfer size in bytes |
+| 0x000 | 0x02000000 | STATUS | RW | Board status / control |
+| 0x004 | 0x02000004 | COMMAND | R | (Kernel phase only — not used by ROM) |
+| 0x008 | 0x02000008 | DATA_PTR | R | (Kernel phase only — not used by ROM) |
+| 0x00C | 0x0200000C | DATA_LEN | R | (Kernel phase only — not used by ROM) |
 | 0x010 | 0x02000010 | RESULT | W | Return value to host |
 | 0x014 | 0x02000014 | ERROR_CODE | W | Error status to host |
 | 0x018 | 0x02000018 | HOST_SIGNAL | R | Signal from host |
 | 0x01C | 0x0200001C | I860_SIGNAL | RW | Signal from i860 |
 
-**Mailbox command codes** (from Previous emulator `nd_mailbox.c`):
+**Important**: The ROM does **not** poll these registers for commands. It polls
+the `EPSR_INT` bit (i860 control register) waiting for a host-triggered
+interrupt. The host loads the kernel directly into DRAM via NuBus memory
+writes, then signals via `ND_INT860`.
+
+**Kernel-phase command codes** (from Previous emulator `nd_mailbox.c`):
+
+The following command codes belong to the **GaCK kernel's** shared memory
+message system, not the ROM. They are listed here for cross-reference only:
 
 | Code | Name | Description |
 |------|------|-------------|
-| 0x01 | LOAD_KERNEL | DMA kernel binary to DRAM, jump to entry |
+| 0x01 | LOAD_KERNEL | (Kernel reload / hot restart) |
 | 0x07 | SET_PALETTE | Load RAMDAC palette colors |
 | 0x0B | DPS_EXECUTE | Execute Display PostScript program |
 | 0x0C | VIDEO_CAPTURE | Capture video frame |
 | 0x10 | GET_INFO | Return board info |
 | 0x11 | MEMORY_TEST | Run memory diagnostics |
 
-**Note**: A previously circulated speculative header (`nextdimension.h`) had
-different command code assignments (e.g. DPS_EXECUTE=0x01, SET_PALETTE=0x08).
-The values above are from the actual Previous emulator implementation and should
-be considered authoritative until verified against ROM disassembly of the
-command dispatcher at 0xFFF01580.
+**Note**: The Previous emulator likely abstracts the kernel's Lamport-locked
+shared memory queue system (`ToND`/`FromND` at 0xF80C0000) as these high-level
+command codes. A previously circulated speculative header (`nextdimension.h`)
+had different assignments (e.g. DPS_EXECUTE=0x01, SET_PALETTE=0x08).
 
 ### 6.2 Video/Graphics Registers
 
@@ -452,7 +466,7 @@ Brooktree Bt463 168 MHz Triple DAC. Byte-wide port interface.
 | Address | Name | R/W | Function |
 |---------|------|-----|----------|
 | 0xFF000341 | DP_CSR+1 | W | DataPath Controller CSR (second byte, big-endian). `OFFSET_DP_CSR = 0x340` per `locore.s`. Writing 0x91 sets graphics data path control bits (video alpha / DMA enable). |
-| 0xFF400004 | UNKNWN+4 | RW | Undocumented register. Conditionally read/modified by FUN_fff01a98. |
+| 0xFF400004 | FRAMESTORE+4 | RW | Prototype board VRAM/Framestore (`ADDR_FRAMESTORE` in `NDreg.h`). FUN_fff01a98 probes with 0x55555555/0xAAAAAAAA write-readback to detect Prototype vs Production board revision. Production boards use `0x0E000000 | SLOT_ID`. |
 
 ---
 
@@ -607,11 +621,9 @@ Reset Vector (0xFFF1FF20)
                                 ├─► call signal_notify (0xFFF00B78)
                                 ├─► call hw_reg_rw (0xFFF01A98)
                                 ├─► call table_scan (0xFFF017F4)
-                                └─► mailbox_poll
-                                     ├─► CMD_LOAD_KERNEL
-                                     │     ├─► word-by-word DMA loop
-                                     │     └─► bri %r24 → 0x00000000 (kernel)
-                                     └─► other commands → loop
+                                └─► EPSR_INT poll (wait for host interrupt)
+                                     └─► bri %r24 → 0x00000000 (kernel)
+                                           (host loaded kernel to DRAM already)
 ```
 
 ---
@@ -637,8 +649,14 @@ Reset Vector (0xFFF1FF20)
    the 32-bit CSR in big-endian mode) sets control bits for the graphics data
    path — likely video alpha or DMA enable.
 
-4. **0xFF400004 access**: FUN_fff01a98 conditionally reads and modifies a
-   register in the "unknown" MMIO range. What device lives at 0xFF400000?
+4. ~~**0xFF400004 access**~~: **Answered**. 0xFF400000 is the
+   VRAM/Framestore base address for the **Prototype** NeXTdimension board
+   (`ADDR_FRAMESTORE` in `NDreg.h`). FUN_fff01a98 performs an `is_empty`
+   connectivity test: writes 0x55555555 then 0xAAAAAAAA patterns and reads
+   back to detect whether VRAM is present at this address. If the Prototype
+   VRAM responds, the board is a pre-production revision; production boards
+   use `0x0E000000 | SLOT_ID` (`ND_BASE_VRAM` macro) instead. This is a
+   board-revision detection probe, not a functional register access.
 
 5. ~~**Virtual entry point**~~: **Answered**. The ROM executes the
    transition from the instruction cache. It sets dirbase, then performs a `bri`
@@ -669,10 +687,17 @@ Reset Vector (0xFFF1FF20)
    all graphics state. Additional field offsets remain to be decoded for the
    3.3 binary.
 
-8. **Command dispatch**: The ROM handles multiple mailbox commands beyond
-   CMD_LOAD_KERNEL. Which other commands does it implement? Are graphics
-   commands (DRAW_RECT, CLEAR_SCREEN, SET_PALETTE) handled in ROM or only
-   by the kernel?
+8. ~~**Command dispatch**~~: **Answered**. The ROM has **no command
+   dispatcher**. The NextDimension-21 source (`locore.s`, `i860_init.c`)
+   confirms the ROM simply polls the `EPSR_INT` bit waiting for a host
+   interrupt. The host driver (`libND/boot.c`) halts the i860, copies the
+   kernel to DRAM via direct NuBus writes, then sends `ND_INT860` to trigger
+   the ROM's jump to 0x00000000. The "mailbox command codes" in the Previous
+   emulator (0x01, 0x07, 0x0B, etc.) belong to the **GaCK kernel's** shared
+   memory message system (`NDkernel/ND/messages.c`), which uses Lamport-locked
+   circular buffers (`ToND`/`FromND`) — not the ROM. The Previous emulator
+   may represent a later ROM revision with an interactive monitor, but the
+   analyzed 2.0-era source shows a pure hardware interrupt handshake.
 
 ---
 

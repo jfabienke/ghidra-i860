@@ -810,6 +810,9 @@ NeXTcube via shared NuBus mailbox MMIO and DMA.
 | 0x02000000 range         | —        | Mailbox/DMA/interrupt registers |
 | 0xFFF00000-0xFFF1FFFF    | 128 KB   | Boot ROM (28F010 flash) |
 
+| 0xFF400000-0xFF4001FF    | 512 B   | Framestore (Prototype VRAM) |
+| 0x0E000000 | SLOT_ID    | 4 MB    | VRAM (Production boards, slot-relative) |
+
 - **No UART**: All debugging/logging via host mailbox (no serial console).
 
 ### G.2 Memory Subsystem
@@ -841,9 +844,9 @@ NeXTcube via shared NuBus mailbox MMIO and DMA.
   - Cold-start init: PSR/EPSR setup, FPU warmup, cache/TLB flush, slot ID
     detection, paging enable.
   - RAMDAC full programming (clears, controls, WTT, cursor, palette).
-  - Mailbox polling loop: Receives commands from host (NDserver driver),
-    DMA-loads GaCK (Graphics and Core Kernel) to DRAM @0x00000000, jumps to
-    it.
+  - Interrupt wait: polls `EPSR_INT` bit while host loads kernel to DRAM via
+    direct NuBus writes; on interrupt, jumps to 0x00000000. No mailbox command
+    dispatcher — the ROM is a pure hardware handshake.
 - **Kernel**: GaCK runs on i860, handles Display PostScript acceleration,
   compositing, and host offload.
 
@@ -886,8 +889,10 @@ due to cost (~$3,995) and fixed design.
 The i860 kernel binary — variously called "GaCK" (Graphics and Core Kernel) in
 community sources, or `ND_MachDriver` in the host-side NDserver driver — runs on
 the Intel i860XR processor after the boot ROM completes initialization. It is
-loaded by the host NDserver driver via mailbox DMA and handles Display PostScript
-acceleration, graphics rendering, and video tasks.
+loaded by the host NDserver driver via direct mapped writes (`LOADTEXT` /
+`LOADDATA`), then runtime communication proceeds via shared DRAM queues and
+interrupt signaling. It handles Display PostScript acceleration, graphics
+rendering, and video tasks.
 
 > **Epistemic status**: This section distinguishes RE-verified facts from
 > inferences and community speculation. Claims are tagged **[verified]**,
@@ -946,7 +951,7 @@ Server and the board:
 Window Server (Display PostScript)
     -> NDserver (m68k user-space, 48-byte message protocol, magic 0xd9)
         -> Kernel driver (NeXTdimension.driver)
-            -> i860 mailbox (0x02000000 MMIO)
+            -> i860 shared DRAM queues + CSR interrupt handshake
 ```
 
 **Message format** (48 bytes):
@@ -1024,33 +1029,37 @@ and vector path payloads.
 | Statically resolved bri targets | **0** |
 
 **Why the ceiling is absolute**:
-- The kernel relies on `calli` (register indirect call) and `bri r8` (handler
-  dispatch) rather than direct `call` instructions.
+- The kernel relies on `calli` (register indirect call) and `bri`-based handler
+  dispatch rather than direct `call` instructions.
 - Phase 2 cross-block analysis (reverse CFG: 5,642 blocks / 5,984 edges)
   proved bri dispatch addresses are runtime-computed via ALU chains.
 - r7/r13/r18 are NOT persistent base pointers (160-337 writes each, all ALU).
 - Zero automated function discovery: no direct calls, no recognizable
   prologues, no data pointers into code.
 
-### H.6 Swarm Analysis Results [verified]
+### H.6 Swarm Analysis Results [verified, partially corrected]
 
 LLM swarm analysis (run 3f574718, 60 shards, 1.52M tokens):
 
 - 52 accept (87%), 6 revise (10%), 2 reject (3%)
-- **All 52 accepted functions are orphaned dead code** with zero callers and
-  zero callees
-- 77-100% of instructions write to hardwired-zero registers (r0/f0)
-- Common patterns: loads into r0 sink, missing returns, self-contradictory
-  register usage, duplicate sequences suggesting misalignment
-- **Zero subsystems identified**; no call graph connectivity
-- Three functions touch MMIO 0x401C (possible PostScript token register) but
-  surrounding context is structurally invalid
+- Many functions showed apparent zero callers, loads into r0 sink, and
+  self-contradictory register usage
 
-**Conclusion**: The analyzed set represents linker artifacts, dead code from
-elimination, test stubs, or data misinterpreted as code. Real firmware logic
-is behind the 616 unresolved bri sites.
+**Correction**: PS registration table extraction (0x1FC00, 28 entries x 156
+bytes) proves that functions in the 0xF8004xxx range (e.g., `setcolor` →
+0xF80045A0, `moveto` → 0xF80048C0, `lineto` → 0xF8004B20) are **real
+PostScript operator handlers** reached through runtime dispatch paths. The
+"orphaned dead code" classification was incorrect for these entries — they have
+few/no direct callers because dispatch is data-driven. The exact 3.3
+register-level branch chain and precise semantics of the `0x401C` displacement
+remain under active runtime validation.
 
-### H.7 Emulation Status [verified]
+The remaining functions (those not matching PS table handler addresses) may
+still represent linker artifacts or data misinterpreted as code. A full
+crosswalk of all 28 handler pointers against the recovered function set is
+needed to determine which swarm-analyzed functions are real vs artifacts.
+
+### H.7 Emulation Status [verified, root cause identified]
 
 | Scenario | Result |
 |----------|--------|
@@ -1059,9 +1068,15 @@ is behind the 616 unresolved bri sites.
 | Kernel with unaligned-bypass | Self-loops at 0xF800138C (~48,959 hits), no dispatch events |
 | MMIO scalar sensitivity (49 value pairs) | No behavioral change; all trap at 0xF800138C |
 
-The word at 0xF800138C is 0x19B8801E (primary opcode 0x06, reserved). Trap
-behavior is expected; the unresolved issue is why execution reaches this
-reserved-opcode region before dispatch-producing code.
+**Root cause**: XOR-4 byte-ordering mismatch. The emulator loads the kernel
+binary without applying `LOADTEXT(addr ^ 4)` swap. Word `0x19B8801E` at
+0xF800138C byte-swapped to `0x1E80B819` yields opcode `0x07` (`st.s`), a
+valid instruction. The first ~1,040 instructions (`locore.s` → `i860_init`)
+read `ND_CSR0` (0xFF800000) and `ND_SLOTID` (0xFF800030) for cache/interrupt
+enable and DRAM address configuration. Fix requires: (1) apply XOR-4 to
+`__TEXT` segments during emulator binary load, (2) map trap vector page at
+0xFFFFFF00 (set up by `early_start`/`config_memory`), (3) enable TLB/ATE in
+`dirbase` for uncacheable DRAM region mapping.
 
 ### H.8 Resolved Questions [from source analysis]
 
@@ -1090,18 +1105,46 @@ The following were resolved via NextDimension-21 source code analysis:
   DP_CSR (0x340): `JPEG_IN`, `JPEG_OUT`, `JPEG_OE` bits.
 - **Board variant detection**: `ND_init` in `ND_server.c` probes for the NBIC
   (NextBus Interface Chip) and checks `machine_type` (NeXT_CUBE vs
-  NeXT_WARP9) before locating the Dimension board.
+  NeXT_WARP9) before locating the Dimension board. The boot ROM additionally
+  probes 0xFF400000 (`ADDR_FRAMESTORE`) with 0x55555555/0xAAAAAAAA
+  write-readback patterns to distinguish Prototype boards (VRAM at
+  0xFF400000) from Production boards (VRAM at `0x0E000000 | SLOT_ID`).
 - **0xFF000341 (DataPath CSR)**: Address is in the DataPath Controller CSR
   block (`OFFSET_DP_CSR = 0x340`; 0xFF000200 = top of Dither RAM). Writing
   0x91 sets control bits for the graphics data path (video alpha / DMA enable).
 - **Bt463 register 0x0D**: Mode commit latch. Writing during blanking latches
   new colormap/config data into active display logic simultaneously,
   preventing tearing. Bit 3 readback confirms acceptance.
-- **PS registration table (0x1FC00)**: 4,328 bytes, 28 entries, ~154 byte
-  stride. Per-entry format: `char name[128]` (operator name) + `void
-  (*handler)()` (4-byte i860 address) + `int flags` (4 bytes) + `char
-  signature[16]` (argument type signature). Maps host-side operator IDs
-  0xC0-0xE3 to i860 handler functions.
+- **PS registration table (0x1FC00)**: 4,328 bytes, 28 entries, **156 byte
+  stride** (confirmed). Per-entry format: `char name[128]` + `void
+  (*handler)()` (4 bytes) + `int flags` (4 bytes) + `char signature[16]`.
+  First three entries extracted: `setcolor` → 0xF80045A0, `moveto` →
+  0xF80048C0, `lineto` → 0xF8004B20. Handler addresses fall in recovered
+  code region — proves "orphaned" swarm functions are real PS handlers.
+- **Dispatch mechanism**: Source evidence shows `NDkernel/ND/messages.c`
+  manages queue transport/port matching, while `PSDriver/server/server.c`
+  dispatches by `msg_id` (`PSMARKID`, `ps_server`, etc.). Binary shows heavy
+  indirect branching, but the exact 3.3 register-level dispatch register is
+  still being proven by runtime traces.
+- **MMIO 0x401C**: **Tentative** mapping only. This displacement appears in
+  relevant code regions, but exact function (DataPath counter/FIFO vs other) is
+  not yet source-proven for 3.3 and must remain inferred pending stronger trace
+  evidence.
+- **0xF800138C trap-loop**: Root cause is XOR-4 byte-ordering mismatch in
+  emulator binary load. `0x19B8801E` swapped to `0x1E80B819` = valid `st.s`
+  instruction. Trap vector (0xFFFFFF00) and TLB/ATE also required.
+- **__DATA rwx sections**: **Inferred** as patchable/trampoline-capable regions
+  because host-side branch patching exists (`ND_WriteBranchInstruction`), but
+  exact content composition in 3.3 (stubs vs data/queues/locks) still needs
+  runtime dumps for confirmation.
+- **ROM has no command dispatcher**: `locore.s` polls `EPSR_INT` bit; host
+  copies kernel to DRAM via direct NuBus writes, then sends `ND_INT860`.
+  Previous emulator "mailbox commands" belong to the GaCK kernel messaging
+  system, not the ROM.
+- **GaCK naming**: Official NeXT internal codename (Graphics and Core
+  Kernel), used by Mike Paquette and Rick Page. `ND_MachDriver` is the
+  canonical 3.x engineering name. Evolution: 2.0 "NDkernel" → 3.x
+  "ND_MachDriver" / "GaCK" (architecture nickname).
 - **NDkernel-21 source confirms cooperative scheduler**: `SpawnProc`,
   `Sleep`/`Wakeup` in `switch.c`; no preemptive task model. Syscall table
   (`init_sysent.c`) dominated by `nosys` entries — purpose-built, narrow
@@ -1109,18 +1152,22 @@ The following were resolved via NextDimension-21 source code analysis:
 
 ### H.9 What Is NOT Known [remaining unknowns]
 
-- Internal function names for the 3.3 binary (no symbols recovered;
-  NextDimension-21 names are 2.0-era and may not match)
+- Full extraction of all 28 PS registration table entries (only first 3
+  hex-dumped so far; remaining 25 handler pointers not yet decoded)
+- Whether 2.0-era utility functions (`readqueue`, `AddPortToList`,
+  `is_empty`) survive in 3.3 binary in recognizable form (instruction
+  sequence hashing / BinDiff needed)
+- Identification of `sysent` table in `__data` (array of `{n_args,
+  handler()}` structs with mostly-`nosys` entries)
+- Contents of `__la_symbol_ptr` / `__symbol_stub` sections (if surviving
+  in the Mach-O without `LC_SYMTAB`)
 - Whether the 3.3 binary still uses the same cooperative scheduler or has
-  evolved
-- Precise PostScript operator-to-handler binding in 3.3 firmware (0xC0-0xE3
-  host-side operators are known; i860-side handlers are behind bri dispatch)
-- Runtime BSS dispatch table contents (presumably built at startup in
-  0xF80B7C00+, not yet traced)
-- Whether GaCK is the official NeXT-internal name (NDkernel-21 source uses
-  "NDkernel")
-- External repositories (e.g., `johnsonjh/NeXTDimension`) — contents not
-  verified against this RE effort
+  evolved to preemptive
+- Full crosswalk of 28 PS handler addresses against swarm-analyzed function
+  set (which "orphaned" functions are real vs artifacts)
+- Runtime BSS dispatch table contents after `MSGFLAG_MSG_SYS_READY` is set
+- NeXT Dimension Developer's Kit (NDDK) materials on archive.org — CL550
+  technical notes and `libND` headers not yet incorporated
 
 ### H.10 Verified Architecture Summary
 
@@ -1130,18 +1177,29 @@ What IS firmly established:
   VM wrappers, message queues, cooperative scheduler), not a full Mach kernel
   — confirmed by NextDimension-21 source (`kern_main.c`, `switch.c`,
   `init_sysent.c`)
+- **"GaCK"** (Graphics and Core Kernel) is the official NeXT internal
+  codename; `ND_MachDriver` is the canonical 3.x engineering name
 - **Fat Mach-O container** with ~1.3% real i860 code
-- **Indirect dispatch architecture** using `bri r8` handler tables and `calli`
-  — no direct call graph discoverable by static analysis
-- **28 DPS operator types** dispatched from host via NDserver
-- **Mailbox protocol** with 48-byte messages, magic 0xd9, three-level
-  validation, Lamport-locked shared queues
+- **Indirect dispatch architecture** with table-driven runtime targets and
+  `calli`/`bri` in the recovered binary; source separates queue transport
+  (`messages.c`) from message-ID dispatch (`PSDriver/server/server.c`)
+- **28 DPS operators** with named handlers extracted from PS table at 0x1FC00:
+  `setcolor` → 0xF80045A0, `moveto` → 0xF80048C0, `lineto` → 0xF8004B20
+  (stride 156 bytes, 28 entries)
+- **Kernel-phase messaging** with 48-byte messages, magic 0xd9, three-level
+  validation, Lamport-locked shared queues (`ToND`/`FromND` at 0xF80C0000)
+- **ROM phase is pure hardware handshake** — no command dispatcher; host
+  copies kernel to DRAM directly, ROM polls `EPSR_INT` then jumps to DRAM
 - **802,816 bytes** loaded segment-by-segment with XOR-4 text swap, branch
-  patching, and checksum verification
+  patching (`ND_WriteBranchInstruction`), and checksum verification
 - **Entry point extracted from LC_THREAD** by host-side NDLoadCode
 - GCC ABI (r2=sp, r3=fp) confirmed from Mach-O load commands
 - **32 KB PostScript resource data** embedded (not executable)
 - **CL550 JPEG** controlled via DP_CSR bit-banging, not memory-mapped I/O
-- **0xF8000348** appears to be real code entry (past Mach-O header), but
-  execution stalls before reaching dispatch code — likely because emulator
-  does not model the queue+interrupt wake protocol
+- **MMIO 0x401C mapping remains tentative**; currently treated as an inferred
+  DataPath-adjacent displacement pending stronger runtime/source correlation
+- **Emulator stall at 0xF800138C** caused by missing XOR-4 byte swap in
+  binary load; also requires trap vector mapping (0xFFFFFF00) and TLB/ATE
+  enable
+- **__DATA rwx sections are not fully resolved**; host patching support exists,
+  but exact 3.3 contents remain a runtime-validation task

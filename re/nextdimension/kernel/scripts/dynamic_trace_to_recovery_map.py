@@ -41,6 +41,8 @@ class TargetStats:
     hits: int = 0
     calli_hits: int = 0
     bri_hits: int = 0
+    self_loop_hits: int = 0
+    non_self_hits: int = 0
     sites: set = field(default_factory=set)
     regs: Counter = field(default_factory=Counter)
     examples: List[dict] = field(default_factory=list)
@@ -216,8 +218,10 @@ def convert(
     exec_start: int,
     exec_end: int,
     min_hits: int,
+    min_sites: int,
     min_seed_score: int,
     min_create_score: int,
+    reject_self_loop_only: bool,
 ) -> Tuple[dict, TraceSummary, dict]:
     summary = TraceSummary(files=list(traces))
     target_map: Dict[int, TargetStats] = {}
@@ -265,6 +269,10 @@ def convert(
                 st.hits += 1
                 st.sites.add(pc)
                 st.examples.append(ev)
+                if pc == target:
+                    st.self_loop_hits += 1
+                else:
+                    st.non_self_hits += 1
                 if kind == "calli":
                     st.calli_hits += 1
                 elif kind == "bri":
@@ -287,6 +295,10 @@ def convert(
                         target_map[src_word] = st_alt
                     st_alt.hits += 1
                     st_alt.sites.add(pc)
+                    if pc == src_word:
+                        st_alt.self_loop_hits += 1
+                    else:
+                        st_alt.non_self_hits += 1
                     ev_alt = dict(ev)
                     ev_alt["derived_from"] = "src_word"
                     ev_alt["derived_target"] = f"0x{src_word:08x}"
@@ -312,8 +324,19 @@ def convert(
         if st.hits < min_hits:
             rejected.append((target, "hits"))
             continue
+        if len(st.sites) < min_sites:
+            rejected.append((target, "sites"))
+            continue
         if not in_exec_range(target, exec_start, exec_end):
             rejected.append((target, "range_or_align"))
+            continue
+        if (
+            reject_self_loop_only
+            and st.non_self_hits == 0
+            and st.self_loop_hits > 0
+            and st.calli_hits == 0
+        ):
+            rejected.append((target, "self_loop_only"))
             continue
 
         score = score_target(st)
@@ -355,8 +378,10 @@ def convert(
             },
             "thresholds": {
                 "min_hits": min_hits,
+                "min_sites": min_sites,
                 "min_seed_score": min_seed_score,
                 "min_create_score": min_create_score,
+                "reject_self_loop_only": reject_self_loop_only,
             },
         },
         "allow_ranges": base_map.get("allow_ranges", []),
@@ -404,7 +429,7 @@ def write_report(path: str, out: dict, summary: TraceSummary, details: dict) -> 
                 kind_txt = ", ".join(kinds) if kinds else "indirect"
                 f.write(
                     f"  0x{target:08X} score={score:3d} hits={st.hits:3d} sites={len(st.sites):3d} "
-                    f"create={str(create_function).lower()} [{kind_txt}] regs={dict(st.regs)}\n"
+                    f"self_loops={st.self_loop_hits:3d} create={str(create_function).lower()} [{kind_txt}] regs={dict(st.regs)}\n"
                 )
 
         if rejected:
@@ -425,8 +450,11 @@ def main() -> int:
     ap.add_argument("--exec-start", default="0xF8000000", help="Executable range start")
     ap.add_argument("--exec-end", default="0xF80B2547", help="Executable range end")
     ap.add_argument("--min-hits", type=int, default=1)
+    ap.add_argument("--min-sites", type=int, default=1)
     ap.add_argument("--min-seed-score", type=int, default=50)
     ap.add_argument("--min-create-score", type=int, default=70)
+    ap.add_argument("--allow-self-loop-only", action="store_true",
+                    help="Allow targets observed only as pc==target self-loops (default: reject)")
 
     args = ap.parse_args()
 
@@ -450,8 +478,10 @@ def main() -> int:
         exec_start=exec_start,
         exec_end=exec_end,
         min_hits=max(args.min_hits, 1),
+        min_sites=max(args.min_sites, 1),
         min_seed_score=max(args.min_seed_score, 0),
         min_create_score=max(args.min_create_score, 0),
+        reject_self_loop_only=not args.allow_self_loop_only,
     )
 
     os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True)

@@ -284,6 +284,67 @@ Additional references: `CRender` (compositing renderer), `_pola` (PostScript ope
 
 This prolog is characteristic of **Adobe Illustrator EPS compatibility** — it defines the same shortcut alphabet used in AI-generated EPS files, enabling the NeXTdimension to directly render Illustrator artwork.
 
+## Normalized PostScript Payload Analysis (Source-Backed)
+
+The PostScript payload has now been extracted and normalized from the clean firmware window:
+
+- Source binary: `extracted/ND_MachDriver___TEXT_clean_window.bin`
+- Raw payload slice: `extracted/postscript/ND_MachDriver_postscript_payload_raw_off0xFCB8_len0x7F48.bin`
+- Normalized text: `extracted/postscript/ND_MachDriver_postscript_payload_normalized.ps`
+- Scope: file offset `0xFCB8-0x17BFF` (VA `0xF800FCB8-0xF8017BFF`)
+- Size: 32,584 bytes, 1,749 lines
+
+### Structural Phases
+
+| Phase | Line Range | Evidence |
+|------|------------|----------|
+| Procset/operator body | 1-431 | operator wrappers and state helpers (`/N`, `/F`, `/S`, `/B`, `/W`, `_doClip`, `_lp`) |
+| Setup + encoding | 435-615 | `%%BeginSetup`, Adobe `initialize get exec`, Symbol encoding vectors |
+| Artwork payload | 623-1749 | `%AI3_Note:` followed by dense numeric drawing commands (`m/L/C`, text placement operators) |
+
+Key markers in normalized file:
+
+- `%%EndResource`: line 432
+- `%%EndProlog`: line 434
+- `%%BeginSetup`: line 435
+- `%AI3_BeginEncoding: _Symbol Symbol`: line 461
+- `%AI3_EndEncoding`: line 614
+- `%%EndSetup`: line 615
+- `%AI3_Note:`: line 623
+
+### Operator/Macro Inventory
+
+A total of **65 local procedures/macros** are defined in the extracted payload, including:
+
+- Path construction/paint aliases: `/y /l /m /c /v /N /F /S /B /W` and lowercase variants (`/f /s /b /n`)
+- Group/polarization controls: `/u /U /q /Q /*u /*U /D`
+- Placement wrappers: ``/` `` and `/~`
+- Color wrappers: `/g /G /k /K /x /X` with cached helper procedures (`/_fc`, `/_sc`, `/_pf`, `/_ps`, `/_psf`, `/_pjsf`, `/_pss`, `/_pjss`)
+
+### Artwork Payload Metrics (line 623+)
+
+- Path geometry commands: `L=284`, `C=270`, `m=69`
+- Paint/closure commands: `f=31`, `b=15`, `n=15`, `s=1`
+- Text placement calls: `Tx=58`, with `To/Tp/Tr` each appearing 30 times
+- Geometric coordinate bounds (path lines only): `x=115.9384..475.0616`, `y=289.6996..511.3004`
+
+### Completeness & Dependencies
+
+This payload is **not standalone PostScript**. It is an embedded resource fragment:
+
+- Starts mid-resource (`ad def` at line 1; no matching `%%BeginResource` in the extracted slice)
+- Ends mid-stream at line 1749/1750
+- Uses external helper operators/procset symbols that are not defined in this slice (`ddef`, `npop`, `ss`, `jss`, `TP`, `TO`, `_pola`, `_cf`, `_cs`)
+
+### Reverse Engineering Implications
+
+1. The `0xFC00-0x17BFF` ASCII-dense region is confirmed as PS/AI resource+payload data, not executable i860 code.
+2. The wrapper symbols (`_doClip`, `CRender`, `_lp`, color wrappers) are high-value anchors for naming and classifying nearby i860 handler clusters.
+3. This segment does not provide a direct static dispatch-table solution; it informs semantic labeling and runtime instrumentation targets.
+
+Operator-family mapping worklist:
+`re/nextdimension/kernel/docs/postscript-operator-mapping.md`
+
 ## Decompiler Quality
 
 ### KPIs (12-function sample from seeded analysis)
@@ -874,6 +935,10 @@ The clean firmware is dramatically better for analysis: zero foreign-architectur
 | `contamination_survey_clean.txt` | Block-level content classification |
 | `extracted/ND_MachDriver___TEXT_section.bin` | Full __TEXT section (730,440 B) |
 | `extracted/ND_MachDriver___DATA_section.bin` | Full __DATA section (56,400 B) |
+| `extracted/postscript/ND_MachDriver_postscript_payload_raw_off0xFCB8_len0x7F48.bin` | Raw extracted PostScript payload slice |
+| `extracted/postscript/ND_MachDriver_postscript_payload_normalized.ps` | Normalized PostScript text used for semantic analysis |
+| `extracted/postscript/operator_catalog.json` | Machine-readable PostScript operator catalog (name/signature/line) |
+| `extracted/postscript/SHA256SUMS.txt` | Checksums for PostScript payload artifacts |
 | `extracted/GHIDRA_DATA_SURVEY.txt` | Ghidra contamination survey of __DATA |
 | `extracted/ANALYSIS.txt` | __DATA pointer scan and density analysis |
 | `extracted/RUST_DATA_STATS.txt` | Rust disassembler stats on __DATA |
