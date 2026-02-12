@@ -365,6 +365,22 @@ These mappings are analytic hypotheses to guide naming and triage, not yet runti
 Detailed operator-family worklist and runtime proof criteria:
 `re/nextdimension/kernel/docs/postscript-operator-mapping.md`
 
+### PS Registration Table (0x1FC00) — Structure Decoded
+
+The 4,328-byte table at clean-firmware offset 0x1FC00 contains 28 entries at
+~154 bytes per entry stride. Per-entry format (from NextDimension-21 source):
+
+| Offset | Size | Field | Description |
+|--------|------|-------|-------------|
+| 0x00 | 128 | `name` | Operator name string (null-terminated) |
+| 0x80 | 4 | `handler` | i860 handler function pointer |
+| 0x84 | 4 | `flags` | Operator flags (type classification) |
+| 0x88 | 16 | `signature` | Argument type signature |
+
+This table provides the mapping from host-side operator IDs (0xC0-0xE3) to the
+i860 implementation functions. Extracting the 28 handler pointers from this table
+would directly resolve the operator-to-function mapping open question.
+
 ## Source Architecture Reference (NextDimension-21)
 
 A detailed source-grounded architecture document is now available at:

@@ -451,7 +451,7 @@ Brooktree Bt463 168 MHz Triple DAC. Byte-wide port interface.
 
 | Address | Name | R/W | Function |
 |---------|------|-----|----------|
-| 0xFF000341 | DMEM+0x341 | W | Dither memory region. Written with 0x91 by service wrapper. Purpose unclear — possibly dither mode select or debug marker. |
+| 0xFF000341 | DP_CSR+1 | W | DataPath Controller CSR (second byte, big-endian). `OFFSET_DP_CSR = 0x340` per `locore.s`. Writing 0x91 sets graphics data path control bits (video alpha / DMA enable). |
 | 0xFF400004 | UNKNWN+4 | RW | Undocumented register. Conditionally read/modified by FUN_fff01a98. |
 
 ---
@@ -620,18 +620,22 @@ Reset Vector (0xFFF1FF20)
 
 1. ~~**DRAM bank addresses**~~: **Answered**. The `FIX_ADDR` macro in
    `ND_rom.c` reveals that physical address lines A0 and A1 are mapped to A17
-   and A18 as a hardware workaround. This non-linear swizzling makes standard
-   DRAM regions appear at fragmented, non-power-of-two addresses (0x2E3A8000,
-   0x4E3A8000, 0x6E3A8000) during test and configuration.
+   and A18 as a hardware workaround for first-generation MC chips. This
+   non-linear swizzling makes standard DRAM regions appear at fragmented,
+   non-power-of-two addresses. The high nibble (0x2, 0x4, 0x6) is the NextBus
+   Slot ID tag, so 0x2E3A8000/0x4E3A8000/0x6E3A8000 represent three banks
+   differentiated by slot position.
 
 2. ~~**SID register interpretation**~~: **Answered**. 0xFF800030 returns the
    4-bit NextBus slot ID. The value is shifted to bits [31:28] to uniquely tag
    the DIRBASE, ensuring every board in a multi-board system has a unique
    physical address space for its kernel and resources based on slot position.
 
-3. **0xFF000341 writes**: The service wrapper writes 0x91 to an address in the
-   dither memory region (but beyond the documented 512-byte range). Is this a
-   debug marker, a hardware trigger, or an undocumented register?
+3. ~~**0xFF000341 writes**~~: **Answered**. This address is in the DataPath
+   Controller CSR block (`OFFSET_DP_CSR = 0x340` from `locore.s`; 0xFF000200
+   is the top of Dither RAM). Writing 0x91 to 0xFF000341 (the second byte of
+   the 32-bit CSR in big-endian mode) sets control bits for the graphics data
+   path — likely video alpha or DMA enable.
 
 4. **0xFF400004 access**: FUN_fff01a98 conditionally reads and modifies a
    register in the "unknown" MMIO range. What device lives at 0xFF400000?
@@ -651,12 +655,19 @@ Reset Vector (0xFFF1FF20)
    while `LOADDATA(addr, data)` writes directly. The ROM does not strip
    headers — NDserver handles all Mach-O parsing on the host side.
 
-7. ~~**GState structure**~~: **Partially answered**. In the boot ROM, r15 is
-   explicitly reserved as a global pointer to `ROMGlobals` (defined in
-   `NDrom.h`). In the kernel, this role expands to a larger GState structure.
-   The 25 `orh 0x6514,r15,r31` references suggest r15 anchors all graphics
-   state (transformation matrices, clipping bounds, color parameters). Full
-   field layout remains unresolved for the 3.3 binary.
+7. ~~**GState structure**~~: **Answered**. In the boot ROM, r15 is explicitly
+   reserved as a global pointer to `ROMGlobals` (per `NDrom.h`). In the
+   kernel/DPS server, r15 expands to the Graphics State (GState) anchor:
+
+   | Offset | Size | Field | Source |
+   |--------|------|-------|--------|
+   | +0 | 4 | Pointer to current Device structure | NDkernel source |
+   | +68 | 4 | `MarkProcs` dispatch table pointer (MarkArgs/ImageArgs) | NDkernel source |
+   | +80 | 4 | `ImageArgs->data` or pattern pointer | NDkernel source |
+
+   The 25 `orh 0x6514,r15,r31` references in the kernel confirm r15 anchors
+   all graphics state. Additional field offsets remain to be decoded for the
+   3.3 binary.
 
 8. **Command dispatch**: The ROM handles multiple mailbox commands beyond
    CMD_LOAD_KERNEL. Which other commands does it implement? Are graphics

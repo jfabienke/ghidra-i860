@@ -155,9 +155,10 @@ interval:
 7. Restore saved r20 to 0xFF802004
 ```
 
-Register index 0x0D targets a Bt463 control register — likely one governing
-sync configuration, PLL parameters, or a mode-commit latch that must be updated
-during blanking to avoid visual artifacts.
+Register index 0x0D is a **mode commit latch**. Writing to it during blanking
+ensures that new colormap or configuration data is latched into the active
+display logic simultaneously, preventing visual tearing. The bit 3 readback
+test confirms the latch has been accepted.
 
 ## Write Count Summary
 
@@ -1081,14 +1082,26 @@ The following were resolved via NextDimension-21 source code analysis:
   in the MC CSR (0xFF800000). Queues use Lamport locks (`Lock_x`, `Lock_y`,
   `Lock_b`) for lock-free host-i860 communication.
 - **r15 / GState**: In the boot ROM, r15 points to `ROMGlobals` (per
-  `NDrom.h`). In the kernel, it expands to a larger graphics state structure
-  anchoring transformation matrices, clipping bounds, and color parameters.
+  `NDrom.h`). In the kernel, it expands to the Graphics State anchor:
+  +0 = current Device pointer, +68 = `MarkProcs` dispatch table pointer
+  (MarkArgs/ImageArgs), +80 = `ImageArgs->data` or pattern pointer.
 - **CL550 JPEG codec**: Present at 0xF0000000 (DataPath) but not
   memory-mapped intelligent device. Controlled via bit-banging registers in
   DP_CSR (0x340): `JPEG_IN`, `JPEG_OUT`, `JPEG_OE` bits.
 - **Board variant detection**: `ND_init` in `ND_server.c` probes for the NBIC
   (NextBus Interface Chip) and checks `machine_type` (NeXT_CUBE vs
   NeXT_WARP9) before locating the Dimension board.
+- **0xFF000341 (DataPath CSR)**: Address is in the DataPath Controller CSR
+  block (`OFFSET_DP_CSR = 0x340`; 0xFF000200 = top of Dither RAM). Writing
+  0x91 sets control bits for the graphics data path (video alpha / DMA enable).
+- **Bt463 register 0x0D**: Mode commit latch. Writing during blanking latches
+  new colormap/config data into active display logic simultaneously,
+  preventing tearing. Bit 3 readback confirms acceptance.
+- **PS registration table (0x1FC00)**: 4,328 bytes, 28 entries, ~154 byte
+  stride. Per-entry format: `char name[128]` (operator name) + `void
+  (*handler)()` (4-byte i860 address) + `int flags` (4 bytes) + `char
+  signature[16]` (argument type signature). Maps host-side operator IDs
+  0xC0-0xE3 to i860 handler functions.
 - **NDkernel-21 source confirms cooperative scheduler**: `SpawnProc`,
   `Sleep`/`Wakeup` in `switch.c`; no preemptive task model. Syscall table
   (`init_sysent.c`) dominated by `nosys` entries — purpose-built, narrow
