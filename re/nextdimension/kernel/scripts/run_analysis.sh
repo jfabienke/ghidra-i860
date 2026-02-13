@@ -8,7 +8,23 @@
 
 set -euo pipefail
 
-GHIDRA_HOME=/opt/homebrew/Cellar/ghidra/12.0.2/libexec
+# Allow explicit override, then fall back to known Homebrew locations.
+GHIDRA_HOME="${GHIDRA_HOME:-}"
+if [[ -z "$GHIDRA_HOME" ]]; then
+    for d in \
+        /opt/homebrew/Cellar/ghidra/12.0.3/libexec \
+        /opt/homebrew/Cellar/ghidra/12.0.2/libexec
+    do
+        if [[ -x "$d/support/analyzeHeadless" ]]; then
+            GHIDRA_HOME="$d"
+            break
+        fi
+    done
+fi
+if [[ -z "$GHIDRA_HOME" || ! -x "$GHIDRA_HOME/support/analyzeHeadless" ]]; then
+    echo "ERROR: analyzeHeadless not found. Set GHIDRA_HOME to your Ghidra libexec path." >&2
+    exit 1
+fi
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 KERNEL_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 REPORT_DIR="$KERNEL_DIR/reports"
@@ -96,6 +112,7 @@ fi
 "$GHIDRA_HOME/support/analyzeHeadless" \
     /tmp ghidra_i860_kernel \
     -import "$BINARY" \
+    -processor i860:LE:32:XR \
     -preScript "$SCRIPT_DIR/I860Import.java" "${PRE_ARGS[@]}" \
     -postScript "$SCRIPT_DIR/I860Analyze.java" "${POST_ARGS[@]}" \
     -postScript "$SCRIPT_DIR/ExportFactPack.java" \
