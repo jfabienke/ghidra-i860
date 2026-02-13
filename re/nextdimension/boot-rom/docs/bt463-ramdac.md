@@ -1045,19 +1045,18 @@ LLM swarm analysis (run 3f574718, 60 shards, 1.52M tokens):
 - Many functions showed apparent zero callers, loads into r0 sink, and
   self-contradictory register usage
 
-**Correction**: PS registration table extraction (0x1FC00, 28 entries x 156
-bytes) proves that functions in the 0xF8004xxx range (e.g., `setcolor` →
-0xF80045A0, `moveto` → 0xF80048C0, `lineto` → 0xF8004B20) are **real
-PostScript operator handlers** reached through runtime dispatch paths. The
-"orphaned dead code" classification was incorrect for these entries — they have
-few/no direct callers because dispatch is data-driven. The exact 3.3
-register-level branch chain and precise semantics of the `0x401C` displacement
-remain under active runtime validation.
-
-The remaining functions (those not matching PS table handler addresses) may
-still represent linker artifacts or data misinterpreted as code. A full
-crosswalk of all 28 handler pointers against the recovered function set is
-needed to determine which swarm-analyzed functions are real vs artifacts.
+**Correction (updated)**: Binary verification found **no C-level PS
+registration table** in the 3.3 binary. The earlier claim (Prompt 6) of a table
+at 0x1FC00 with entries like `setcolor` → 0xF80045A0 was LLM-interpolated from
+NDkernel-21 source, not verified against the binary. The 3.3 architecture uses
+DPS where core PS operators are compiled into the interpreter engine and
+extended operators are defined via embedded PostScript prolog source code
+(printPackage.ps, 48 definitions). Without a discoverable name-to-handler
+table, the "orphaned dead code" classification may or may not be correct — the
+functions could be DPS rendering internals reached via compiled dispatch, but
+this cannot be proven without runtime traces. The exact 3.3 dispatch mechanism
+and precise semantics of the `0x401C` displacement remain under active runtime
+validation.
 
 ### H.7 Emulation Status [verified, root cause identified]
 
@@ -1115,12 +1114,15 @@ The following were resolved via NextDimension-21 source code analysis:
 - **Bt463 register 0x0D**: Mode commit latch. Writing during blanking latches
   new colormap/config data into active display logic simultaneously,
   preventing tearing. Bit 3 readback confirms acceptance.
-- **PS registration table (0x1FC00)**: 4,328 bytes, 28 entries, **156 byte
-  stride** (confirmed). Per-entry format: `char name[128]` + `void
-  (*handler)()` (4 bytes) + `int flags` (4 bytes) + `char signature[16]`.
-  First three entries extracted: `setcolor` → 0xF80045A0, `moveto` →
-  0xF80048C0, `lineto` → 0xF8004B20. Handler addresses fall in recovered
-  code region — proves "orphaned" swarm functions are real PS handlers.
+- **PS registration table (0x1FC00)**: **RETRACTED**. Binary verification
+  found no C-level table at this offset. In the clean firmware image,
+  `0x1FC00` is an unrelated 40-byte-stride structure; in the shipped 3.3
+  `i860_kernel.bin`, `0x1FC00` is inside contamination-heavy content and is not
+  a reliable PS-table anchor. The claimed entries (`setcolor` → 0xF80045A0,
+  `moveto` → 0xF80048C0, `lineto` → 0xF8004B20) were LLM-interpolated from
+  NDkernel-21 source, not hex-dump verified. The 3.3 binary uses DPS where
+  operators are compiled into the interpreter or defined via embedded
+  PostScript prolog source (printPackage.ps region at VA 0xF80A3CB8, 48 defs).
 - **Dispatch mechanism**: Source evidence shows `NDkernel/ND/messages.c`
   manages queue transport/port matching, while `PSDriver/server/server.c`
   dispatches by `msg_id` (`PSMARKID`, `ps_server`, etc.). Binary shows heavy
@@ -1152,8 +1154,9 @@ The following were resolved via NextDimension-21 source code analysis:
 
 ### H.9 What Is NOT Known [remaining unknowns]
 
-- Full extraction of all 28 PS registration table entries (only first 3
-  hex-dumped so far; remaining 25 handler pointers not yet decoded)
+- How the DPS interpreter dispatches to native C rendering functions (12
+  known symbols at VA 0xF8023C1C: `_Start`, `_ConvertColor`, `_LFlushBits`,
+  etc.) — the compiled dispatch mechanism is not yet understood
 - Whether 2.0-era utility functions (`readqueue`, `AddPortToList`,
   `is_empty`) survive in 3.3 binary in recognizable form (instruction
   sequence hashing / BinDiff needed)
@@ -1163,8 +1166,8 @@ The following were resolved via NextDimension-21 source code analysis:
   in the Mach-O without `LC_SYMTAB`)
 - Whether the 3.3 binary still uses the same cooperative scheduler or has
   evolved to preemptive
-- Full crosswalk of 28 PS handler addresses against swarm-analyzed function
-  set (which "orphaned" functions are real vs artifacts)
+- Whether swarm-analyzed "orphaned" functions are DPS rendering internals or
+  true linker artifacts (no name-to-handler table available for crosswalk)
 - Runtime BSS dispatch table contents after `MSGFLAG_MSG_SYS_READY` is set
 - NeXT Dimension Developer's Kit (NDDK) materials on archive.org — CL550
   technical notes and `libND` headers not yet incorporated
@@ -1183,9 +1186,13 @@ What IS firmly established:
 - **Indirect dispatch architecture** with table-driven runtime targets and
   `calli`/`bri` in the recovered binary; source separates queue transport
   (`messages.c`) from message-ID dispatch (`PSDriver/server/server.c`)
-- **28 DPS operators** with named handlers extracted from PS table at 0x1FC00:
-  `setcolor` → 0xF80045A0, `moveto` → 0xF80048C0, `lineto` → 0xF8004B20
-  (stride 156 bytes, 28 entries)
+- **No C-level PS registration table** in the 3.3 binary (earlier claim
+  retracted after binary verification). PS operators are defined via embedded
+  printPackage.ps prolog (48 `__NXbdef`/`def` defs in the VA 0xF80A3CB8 region)
+  and Adobe Illustrator EPS prolog (at VA 0xF800FCB7). Core operators are
+  built into the DPS interpreter engine. 12 C rendering function symbols are at
+  VA 0xF8023C1C. `setcolor` appears as a prolog token (`... setcolorspace setcolor`)
+  rather than a standalone C registration-table entry.
 - **Kernel-phase messaging** with 48-byte messages, magic 0xd9, three-level
   validation, Lamport-locked shared queues (`ToND`/`FromND` at 0xF80C0000)
 - **ROM phase is pure hardware handshake** — no command dispatcher; host

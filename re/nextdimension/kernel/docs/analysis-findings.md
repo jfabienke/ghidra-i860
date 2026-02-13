@@ -96,7 +96,7 @@ The `...CB8` offsets (not page-aligned) reflect the Mach-O header + load command
 | F8024800–F80377FF | 77 KB | Mixed x86 code/data |
 | F8040400–F804BBFF | 46 KB | x86 code |
 | F805F000–F8098FFF | 233 KB | x86 code/data (largest zone) |
-| F80A3C00–F80AFBFF | 49 KB | x86 data, null padding |
+| F80A3C00–F80AFBFF | 49 KB | NeXT printPackage.ps prolog (PostScript source text, 48 operator defs) |
 
 Across these 6 zones (479,232 bytes, 65.6% of __text), the Rust CFG recovered only 79 unique instructions (0.07% density).
 
@@ -272,6 +272,8 @@ Sample of 12 functions:
 
 The kernel is loaded at `F8000000`, which matches the NeXTdimension board's memory-mapped region for kernel code. The Mach-O sections specify this base address, and Ghidra honors it during import.
 
+Companion durable-rules document: `re/nextdimension/kernel/docs/lessons-learned.md`.
+
 ## Key Conclusions
 
 1. **The kernel binary is a fat container**, not a pure i860 image. It bundles m68k host driver code, x86 application objects (including PhotoAlbum.app/Kodak 1991), ASCII resources, and build artifacts (Emacs changelog) alongside a small i860 slice (~1.3% heuristic, ~1.4% execution-proven).
@@ -279,7 +281,7 @@ The kernel is loaded at `F8000000`, which matches the NeXTdimension board's memo
 3. **The clean firmware is the better target**. At 57.7% i860 code with zero foreign-architecture contamination, `ND_i860_VERIFIED_clean.bin` is far more amenable to analysis (10.9% recovery vs 1.3%).
 4. **The Rust disassembler's Mach-O parser cannot handle this binary** — it fails with "Invalid Mach-O load command size", independently confirming the anomalous container structure.
 5. **The firmware is bare-metal** — not a Mach kernel. OS-like primitives (VM init, exception handling, cache coherency) are present but Mach API strings belong to the host-side m68k driver code.
-6. **Dispatch tables are in `__text` and BSS, not `__DATA`** — the `__data` section (56,400 B) contains TIFF images, zero-fill, and linker padding. However, the **PS registration table at 0x1FC00** (28 entries x 156 bytes in `__text`) contains operator names and handler pointers (e.g., `setcolor` → 0xF80045A0, `moveto` → 0xF80048C0, `lineto` → 0xF8004B20). BSS-resident tables are populated at runtime by `InitMessages()` and `AddPortToList()`.
+6. **No C-level PS registration table exists in the 3.3 binary**. The `__data` section (56,400 B) contains no table-like code-pointer arrays (only 3 isolated aligned values in the `0xF800xxxx` range), and the `__text` section contains zero pointer clusters. The NDkernel-21 source table format (`name[128]+handler+flags+signature` at 156-byte stride) does not appear anywhere in the 3.3 binary. Instead, PS operators are defined via **embedded PostScript prolog source code** (printPackage.ps region at VA 0xF80A3CB8, 49 KB, 48 operator definitions via `__NXbdef`/`def`) and an **Adobe Illustrator EPS prolog** (at VA 0xF800FCB7, 33 KB). Core operators (moveto, lineto, stroke, fill) are built into the DPS interpreter engine. BSS-resident tables are populated at runtime by `InitMessages()` and `AddPortToList()`.
 7. **Delay-slot pcode errors eliminated** — hard-mask v3 with pcode map produces zero missing-delay-slot pcode errors (down from 19 in v2), confirming the SLEIGH specification correctly handles all delay-slot variants encountered in real firmware.
 8. **Runtime closure is operational but not yet productive** — iterative sweep/convert/analyze currently adds zero dynamic seeds (`dynamic_added=0`), so coverage remains 1.4% until traces reach meaningful indirect-dispatch paths.
 9. **Boot ROM handoff is now reproducible in emulator**, but kernel replay stalls due to **XOR-4 byte-ordering mismatch**: the emulator loads the binary without applying `LOADTEXT(addr ^ 4)` swap. The "reserved opcode" at `0xF800138C` (`0x19B8801E`) becomes valid `st.s` (`0x1E80B819`) when byte-swapped. Fix requires applying XOR-4 to `__TEXT` segments during emulator load plus trap vector (0xFFFFFF00) page mapping.
@@ -359,48 +361,68 @@ Source-backed interpretation:
 
 ### PS Symbol -> Kernel Cluster Cross-Reference
 
-These mappings are partially confirmed by PS registration table extraction.
+These mappings are based on embedded PostScript prolog content (source text, not C registration tables).
 
 | PS symbol/pattern | Segment evidence | Candidate kernel cluster | Confidence |
 |-------------------|------------------|--------------------------|------------|
-| `_pola`, `_doClip`, `CRender` | wrappers in early prolog body | central operator/classify logic near `FUN_000033c8` | medium |
-| `moveto` | PS table entry 2 at 0x1FC9C | **0xF80048C0** (confirmed handler address) | **verified** |
-| `lineto` | PS table entry 3 at 0x1FD38 | **0xF8004B20** (confirmed handler address) | **verified** |
-| `setcolor` | PS table entry 1 at 0x1FC00 | **0xF80045A0** (confirmed handler address) | **verified** |
-| `setdash`, `setlinejoin`, `setlinecap`, etc. | `% graphic state operators` section | graphics-state update routines — likely in remaining 25 PS table entries | medium-high |
-| `setgray`, `setcmykcolor`, `setcustomcolor` wrappers (`_fc`, `_sc`) | `% color operators` section | color/compositing routines — likely in remaining 25 PS table entries | medium-high |
+| `_pola`, `_doClip`, `CRender` | wrappers in AI prolog (0xF800FCB7) | central operator/classify logic near `FUN_000033c8` | medium |
+| `rectfill`, `rectclip`, `rectstroke` | `__NXbdef` in printPackage.ps (0xF80A3CB8) | runtime PS prolog execution, not compiled handlers | medium |
+| `setrgbcolor`, `setgray`, `setcmykcolor` | `bind def` / `__NXbdef` in printPackage.ps | DPS interpreter built-in + prolog override | medium |
+| `setalpha`, `alphaimage`, `colorimage` | `def` in printPackage.ps | DPS extensions for NeXT compositing | medium |
+| `_Start`, `_ConvertColor`, `_LFlushBits` | C function symbols at 0xF8023C1C | DPS rendering engine internals (12 functions) | medium-high |
+| `setdash`, `setlinejoin`, `setlinecap`, etc. | `% graphic state operators` section in AI prolog | core DPS interpreter built-ins (no handler table) | inferred |
 | `%%BeginSetup`, Symbol encoding vectors | AI3 setup/encoding region | static resource data only (non-executable) | high |
+
+**Note**: The earlier Prompt 6 claim of a C registration table at 0x1FC00 with entries
+like `setcolor` → 0xF80045A0 was LLM-interpolated from NDkernel-21 source, not verified
+against the binary. Binary examination found no such table (see section below).
 
 Detailed operator-family worklist and runtime proof criteria:
 `re/nextdimension/kernel/docs/postscript-operator-mapping.md`
 
-### PS Registration Table (0x1FC00) — Structure Decoded
+### PS Operator Architecture — Binary Verification (Corrected)
 
-The 4,328-byte table at clean-firmware offset 0x1FC00 contains 28 entries at
-**156 bytes** per entry stride (confirmed by ASCII string scanning). Per-entry
-format (from NextDimension-21 source):
+**Previous claim (Prompt 6, LLM-interpolated, RETRACTED)**: A C registration
+table at clean-firmware offset 0x1FC00 with 28 entries at 156-byte stride
+(`name[128]` + `handler` + `flags` + `signature`), containing entries like
+`setcolor` → 0xF80045A0, `moveto` → 0xF80048C0, `lineto` → 0xF8004B20.
 
-| Offset | Size | Field | Description |
-|--------|------|-------|-------------|
-| 0x00 | 128 | `name` | Operator name string (null-terminated) |
-| 0x80 | 4 | `handler` | i860 handler function pointer |
-| 0x84 | 4 | `flags` | Operator flags (type classification) |
-| 0x88 | 16 | `signature` | Argument type signature |
+**Binary verification result**: This table **does not exist**.
 
-**Extracted entries** (first three confirmed by hex dump):
+Evidence:
+1. **`0x1FC00` in the clean firmware contains an unrelated data structure** —
+   40-byte stride entries with small LE pointer values (0x00014168, 0x00014190, ...)
+   pointing to binary data, not ASCII operator names. In the shipped 3.3
+   `i860_kernel.bin`, `0x1FC00` falls in a contamination-heavy region and is not a
+   reliable PS table anchor.
+2. **No table-like code-pointer arrays in `__data`** — scanning the entire
+   56,400-byte section finds only 3 isolated aligned values in the `0xF800xxxx`
+   range, with no stride/cluster structure consistent with a registration table.
+3. **Zero pointer clusters in `__text` section** — scanning for runs of 8+
+   consecutive BE values in the 0xF8000348–0xF80B2548 range yields no results.
+4. **PS operator names exist as PostScript source text**, not null-terminated C
+   strings in a structured registration table:
+   - `moveto`/`lineto`/`curveto` appear in the AI prolog (0xF800FCB7) as
+     `/l{lineto}def`, `/m{moveto}def`
+   - `setcolor` appears only as a token inside prolog code (`... setcolorspace setcolor`),
+     not as a standalone `/setcolor` table entry
+5. **No `LC_SYMTAB` data** — `nsyms=0`, `stroff=0`; binary is fully stripped.
 
-| Entry | Offset | Name | Handler | Flags |
-|-------|--------|------|---------|-------|
-| 1 | 0x1FC00 | `setcolor` | 0xF80045A0 | 0x00000001 |
-| 2 | 0x1FC9C | `moveto` | 0xF80048C0 | 0x00000001 |
-| 3 | 0x1FD38 | `lineto` | 0xF8004B20 | 0x00000001 |
+**Actual PS operator mechanisms in the 3.3 binary**:
 
-**Critical finding**: These handler addresses (0xF8004xxx) fall within the code
-region recovered by Ghidra, confirming that the "orphaned" functions identified
-by swarm analysis are **real PostScript operator handlers** reached through
-runtime dispatch, not dead code or linker artifacts. This resolves the
-operator-to-function mapping question and provides 28 named entry points for the
-i860 code.
+| Mechanism | Location | Size | Operators |
+|-----------|----------|------|-----------|
+| Adobe Illustrator EPS prolog | VA 0xF800FCB7 | 33 KB | AI shortcut operators: `c`, `v`, `y`, `l`, `m`, `d`, `j`, `J`, `M`, `w`, `H`, `h`, `N`, `F`, `f`, `S`, `s`, `B`, `b`, `W`, paint operators (`_fc`, `_pf`, `_sc`, `_ps`), `showpage` |
+| NeXT printPackage.ps prolog | VA 0xF80A3CB8 | 49 KB | 48 operator definitions via `__NXbdef`/`def`: `rectfill`, `rectclip`, `rectstroke`, `xyshow`, `xshow`, `yshow`, `selectfont`, `nxsetrgbcolor`, `nxsetgray`, `setcmykcolor`, `currentcmykcolor`, `setpattern`, `alphaimage`, `colorimage`, `setrgbcolor`, `setgray`, `setalpha`, `flushgraphics`, etc. |
+| DPS rendering engine C functions | VA 0xF8023C1C (symbols) | 12 entries | `_Start`, `_CIEABCImageInit`, `_CIEASampleProc`, `_CantHappen`, `_ConvertColor`, `_CrCMYKAdjustParams`, `_FindDiffBounds`, `_FindRCacheFor`, `_LAddToDirty`, `_LFlushBits`, `_Mark`, `_NXGetWi` |
+
+**Interpretation**: The 3.3 binary uses **Display PostScript** (DPS), where core
+operators (moveto, lineto, stroke, fill, etc.) are **compiled into the DPS
+interpreter engine** — not registered via an external name-to-pointer table.
+Extended operators are defined in PostScript prolog source code using
+`__NXbdef`/`def`. Native C rendering functions are called through internal
+dispatch compiled into the i860 code. This is architecturally different from the
+2.0-era NDkernel-21 `registerOps()` pattern.
 
 ### Dispatch Mechanism (Source + Binary Correlation)
 
@@ -439,7 +461,7 @@ Use it as the primary design reference for emulator instrumentation, trace taxon
 - Should the trace harness stop/emit explicit trap events on `ExecutionResult.trapped` to avoid silent self-looping behavior?
 - ~~Which MMIO stub values/behavior are required to drive firmware execution past poll loops and into real dispatch sites?~~ **Answered**: The host must (1) populate the shared memory message queues (`ToND` at `ND_START_UNCACHEABLE_DRAM=0xF80C0000`), and (2) set the `NDCSR_INT860` bit in the MC CSR (0xFF800000) to signal the i860. The message queues use Lamport locks (`Lock_x`, `Lock_y`, `Lock_b`) for lock-free host↔i860 communication, bypassing Mach kernel IPC for performance. Scalar MMIO sensitivity sweeps failed because they tested register values in isolation rather than modeling the queue+interrupt protocol.
 - Converter enhancement: provenance-driven pointer chase in `dynamic_trace_to_recovery_map.py` to extract candidates from load chains once trace events are present.
-- Extract all 28 PS registration table entries from 0x1FC00 (156-byte stride) — only first 3 hex-dumped so far; remaining 25 handler pointers yield named entry points.
+- ~~Extract all 28 PS registration table entries from 0x1FC00~~ **Answered**: No C-level PS registration table exists in the 3.3 binary. The NDkernel-21 156-byte-stride format was not carried forward; the 3.3 architecture uses DPS with operators compiled into the interpreter engine and extended via embedded PostScript prolog source. In the clean firmware, data at `0x1FC00` is an unrelated 40-byte-stride structure; in the shipped 3.3 binary, that offset is inside contamination-heavy content and is not a stable anchor.
 - Signature-match 2.0 NDkernel utility functions (`readqueue`, `AddPortToList`, `is_empty`, `SpawnProc`, `Sleep`, `Wakeup`) against 3.3 binary using instruction sequence hashing or BinDiff.
 - Search `__data` for `sysent` table pattern (array of `{n_args, handler()}` structs with mostly-`nosys` entries) to locate kernel syscall entry points.
 - Dump rwx sections (F80C1C50 / 176 B and F80C4098 / 8,040 B) at runtime after `MSGFLAG_MSG_SYS_READY` to verify jump island / trampoline contents.
