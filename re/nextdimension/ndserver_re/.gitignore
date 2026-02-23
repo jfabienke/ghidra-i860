@@ -1,0 +1,15 @@
+# External binary artifacts (not tracked)
+artifacts/incoming/*
+!artifacts/incoming/.gitkeep
+
+# Generated extraction products
+artifacts/extracted/*
+!artifacts/extracted/.gitkeep
+
+# Generated reports
+reports/*
+!reports/.gitkeep
+
+# Python cache
+__pycache__/
+*.pyc

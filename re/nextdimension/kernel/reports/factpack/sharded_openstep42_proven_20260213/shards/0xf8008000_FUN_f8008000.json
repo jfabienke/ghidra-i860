@@ -1,0 +1,1644 @@
+{
+  "schema_version": "shard-v1",
+  "factpack_source": "/tmp/factpack_openstep42_proven_20260213",
+  "function": {
+    "entry": "0xf8008000",
+    "name": "FUN_f8008000",
+    "size": 220,
+    "in_exec": true,
+    "in_allow": true,
+    "in_deny": false,
+    "confidence_source": "curated",
+    "has_unresolved_bri": true
+  },
+  "blocks": [
+    {
+      "func_entry": "0xf8008000",
+      "block_start": "0xf8008000",
+      "block_end": "0xf8008027",
+      "insn_count": 10
+    },
+    {
+      "func_entry": "0xf8008000",
+      "block_start": "0xf8008028",
+      "block_end": "0xf8008057",
+      "insn_count": 12
+    },
+    {
+      "func_entry": "0xf8008000",
+      "block_start": "0xf8008058",
+      "block_end": "0xf8008073",
+      "insn_count": 7
+    },
+    {
+      "func_entry": "0xf8008000",
+      "block_start": "0xf8008074",
+      "block_end": "0xf80080bf",
+      "insn_count": 19
+    },
+    {
+      "func_entry": "0xf8008000",
+      "block_start": "0xf80084b0",
+      "block_end": "0xf80084c3",
+      "insn_count": 5
+    },
+    {
+      "func_entry": "0xf8008000",
+      "block_start": "0xf80084c4",
+      "block_end": "0xf80084cb",
+      "insn_count": 2
+    }
+  ],
+  "edges": [
+    {
+      "src": "0xf8008000",
+      "dst": "0xf8008004",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008080",
+      "dst": "0xf8008084",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf800807c",
+      "dst": "0xf8008080",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008004",
+      "dst": "0xf8008008",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008084",
+      "dst": "0xf8008088",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008008",
+      "dst": "0xf800800c",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008088",
+      "dst": "0xf800808c",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf800800c",
+      "dst": "0xf8008010",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf800808c",
+      "dst": "0xf8008090",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008010",
+      "dst": "0xf8008014",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008090",
+      "dst": "0xf8008094",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008014",
+      "dst": "0xf8008018",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008094",
+      "dst": "0xf8008098",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008018",
+      "dst": "0xf800801c",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008098",
+      "dst": "0xf800809c",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf800801c",
+      "dst": "0xf8008020",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf800809c",
+      "dst": "0xf80080a0",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008020",
+      "dst": "0xf8008024",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf80080a0",
+      "dst": "0xf80080a4",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008024",
+      "dst": "0xfbd5ebc0",
+      "kind": "branch_cond",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008024",
+      "dst": "0xf8008028",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf80080a4",
+      "dst": "0xf80080a8",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008028",
+      "dst": "0xf800802c",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf80080a8",
+      "dst": "0xf80080ac",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf800802c",
+      "dst": "0xf8008030",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf80080ac",
+      "dst": "0xf80080b0",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008030",
+      "dst": "0xf8008034",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf80080b0",
+      "dst": "0xf80080b4",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf80084b0",
+      "dst": "0xf80084b4",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008054",
+      "dst": "0xf80084b0",
+      "kind": "branch_cond",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008034",
+      "dst": "0xf8008038",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf80080b4",
+      "dst": "0xf80080b8",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf80084b4",
+      "dst": "0xf80084b8",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008038",
+      "dst": "0xf800803c",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf80080b8",
+      "dst": "0xf80080bc",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf80084b8",
+      "dst": "0xf80084bc",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf800803c",
+      "dst": "0xf8008040",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf80080bc",
+      "dst": "0xf80080c0",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf80084bc",
+      "dst": "0xf80084c0",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008040",
+      "dst": "0xf8008044",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf80084c0",
+      "dst": "0xff48451c",
+      "kind": "branch_cond",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf80084c0",
+      "dst": "0xf80084c4",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008044",
+      "dst": "0xf8008048",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf80084c4",
+      "dst": null,
+      "kind": "indirect",
+      "delay_slot": true
+    },
+    {
+      "src": "0xf8008048",
+      "dst": "0xf800804c",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf80084c8",
+      "dst": "0xf80084cc",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf800804c",
+      "dst": "0xf8008050",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008050",
+      "dst": "0xf8008054",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008054",
+      "dst": "0xf8008058",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008058",
+      "dst": "0xf800805c",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf800805c",
+      "dst": "0xf8008060",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008060",
+      "dst": "0xf8008064",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008064",
+      "dst": "0xf8008068",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008068",
+      "dst": "0xf800806c",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf800806c",
+      "dst": "0xf8008070",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008070",
+      "dst": "0x00007e2c",
+      "kind": "branch_cond",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008070",
+      "dst": "0xf8008074",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008074",
+      "dst": "0xf8008078",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8008078",
+      "dst": "0xf800807c",
+      "kind": "fallthrough",
+      "delay_slot": false
+    }
+  ],
+  "insns": [
+    {
+      "addr": "0xf8008000",
+      "func_entry": "0xf8008000",
+      "word": "0x000045a2",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r8(r0),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "r8",
+        "0x0"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008004",
+      "func_entry": "0xf8008000",
+      "word": "0x000067a2",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r12(r0),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "r12",
+        "0x0"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008008",
+      "func_entry": "0xf8008000",
+      "word": "0x01009014",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r18(r8),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "r8",
+        "r18"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf800800c",
+      "func_entry": "0xf8008000",
+      "word": "0xe4ff11e4",
+      "mnemonic": "or",
+      "operands": "or 0x11e4,r7,r31",
+      "defs": [
+        "r31"
+      ],
+      "uses": [
+        "0x11e4",
+        "r7"
+      ],
+      "pcode_ops": [
+        "INT_ZEXT",
+        "INT_OR"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008010",
+      "func_entry": "0xf8008000",
+      "word": "0x0df831ee",
+      "mnemonic": "st.b",
+      "operands": "st.b r6,-0x3e12(r15)",
+      "defs": [],
+      "uses": [
+        "0xffffc1ee",
+        "r6",
+        "r15"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "STORE"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008014",
+      "func_entry": "0xf8008000",
+      "word": "0x0480205a",
+      "mnemonic": "ld.b",
+      "operands": "ld.b 0x205a(r4),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "r4",
+        "0x205a"
+      ],
+      "pcode_ops": [
+        "INT_SEXT",
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008018",
+      "func_entry": "0xf8008000",
+      "word": "0xf0ff4284",
+      "mnemonic": "xor",
+      "operands": "xor r8,r7,r31",
+      "defs": [
+        "r31"
+      ],
+      "uses": [
+        "r8",
+        "r7"
+      ],
+      "pcode_ops": [
+        "INT_XOR"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf800801c",
+      "func_entry": "0xf8008000",
+      "word": "0x0df81aec",
+      "mnemonic": "st.b",
+      "operands": "st.b r3,-0x3d14(r15)",
+      "defs": [],
+      "uses": [
+        "0xffffc2ec",
+        "r15",
+        "r3"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "STORE"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008020",
+      "func_entry": "0xf8008000",
+      "word": "0xbd000068",
+      "mnemonic": "shra",
+      "operands": "shra 0x68,r8,r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "r8",
+        "0x68"
+      ],
+      "pcode_ops": [
+        "INT_SRIGHT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008024",
+      "func_entry": "0xf8008000",
+      "word": "0x78f55ae7",
+      "mnemonic": "bnc",
+      "operands": "bnc 0xfbd5ebc0",
+      "defs": [],
+      "uses": [
+        "0x0",
+        "CC"
+      ],
+      "pcode_ops": [
+        "INT_EQUAL",
+        "CBRANCH"
+      ],
+      "flows": [
+        "0xfbd5ebc0"
+      ],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008028",
+      "func_entry": "0xf8008000",
+      "word": "0x1c009004",
+      "mnemonic": "st.s",
+      "operands": "st.s r18,0x4(r0)",
+      "defs": [],
+      "uses": [
+        "0x0",
+        "0x4",
+        "r18"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "STORE"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf800802c",
+      "func_entry": "0xf8008000",
+      "word": "0x200010e6",
+      "mnemonic": "fld.l",
+      "operands": "fld.l r2(r0),f0",
+      "defs": [
+        "f0_sink"
+      ],
+      "uses": [
+        "0x0",
+        "r2"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008030",
+      "func_entry": "0xf8008000",
+      "word": "0x1c80800c",
+      "mnemonic": "st.s",
+      "operands": "st.s r16,0xc(r4)",
+      "defs": [],
+      "uses": [
+        "r4",
+        "r16",
+        "0xc"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "STORE"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008034",
+      "func_entry": "0xf8008000",
+      "word": "0xfd0010c6",
+      "mnemonic": "xorh",
+      "operands": "xorh 0x10c6,r8,r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "0x10",
+        "r8",
+        "0x10c6"
+      ],
+      "pcode_ops": [
+        "INT_ZEXT",
+        "INT_LEFT",
+        "INT_XOR"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008038",
+      "func_entry": "0xf8008000",
+      "word": "0x1c80800c",
+      "mnemonic": "st.s",
+      "operands": "st.s r16,0xc(r4)",
+      "defs": [],
+      "uses": [
+        "r4",
+        "r16",
+        "0xc"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "STORE"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf800803c",
+      "func_entry": "0xf8008000",
+      "word": "0x1d009004",
+      "mnemonic": "st.s",
+      "operands": "st.s r18,0x4(r8)",
+      "defs": [],
+      "uses": [
+        "r8",
+        "0x4",
+        "r18"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "STORE"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008040",
+      "func_entry": "0xf8008000",
+      "word": "0xff0010c6",
+      "mnemonic": "xorh",
+      "operands": "xorh 0x10c6,r24,r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "0x10",
+        "r24",
+        "0x10c6"
+      ],
+      "pcode_ops": [
+        "INT_ZEXT",
+        "INT_LEFT",
+        "INT_XOR"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008044",
+      "func_entry": "0xf8008000",
+      "word": "0x060010ae",
+      "mnemonic": "ld.b",
+      "operands": "ld.b 0x10ae(r16),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "r16",
+        "0x10ae"
+      ],
+      "pcode_ops": [
+        "INT_SEXT",
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008048",
+      "func_entry": "0xf8008000",
+      "word": "0x05800058",
+      "mnemonic": "ld.b",
+      "operands": "ld.b 0x58(r12),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "r12",
+        "0x58"
+      ],
+      "pcode_ops": [
+        "INT_SEXT",
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf800804c",
+      "func_entry": "0xf8008000",
+      "word": "0x01009114",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r18(r8),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "r8",
+        "r18"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008050",
+      "func_entry": "0xf8008000",
+      "word": "0x000090a0",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r18(r0),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "0x0",
+        "r18"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008054",
+      "func_entry": "0xf8008000",
+      "word": "0x55003116",
+      "mnemonic": "btne",
+      "operands": "btne 0x6,r8,0xf80084b0",
+      "defs": [],
+      "uses": [
+        "r8",
+        "0x6"
+      ],
+      "pcode_ops": [
+        "INT_NOTEQUAL",
+        "CBRANCH"
+      ],
+      "flows": [
+        "0xf80084b0"
+      ],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008058",
+      "func_entry": "0xf8008000",
+      "word": "0x0288004c",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r0(r20),r8",
+      "defs": [
+        "r8"
+      ],
+      "uses": [
+        "0x0",
+        "r20"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf800805c",
+      "func_entry": "0xf8008000",
+      "word": "0x000000a0",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r0(r0),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "0x0"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008060",
+      "func_entry": "0xf8008000",
+      "word": "0x05380050",
+      "mnemonic": "ld.b",
+      "operands": "ld.b 0x50(r9),r24",
+      "defs": [
+        "r24"
+      ],
+      "uses": [
+        "0x50",
+        "r9"
+      ],
+      "pcode_ops": [
+        "INT_SEXT",
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008064",
+      "func_entry": "0xf8008000",
+      "word": "0x0ff81fec",
+      "mnemonic": "st.b",
+      "operands": "st.b r3,-0x3814(r31)",
+      "defs": [],
+      "uses": [
+        "0xffffc7ec",
+        "r31",
+        "r3"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "STORE"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008068",
+      "func_entry": "0xf8008000",
+      "word": "0xe1d1e817",
+      "mnemonic": "or",
+      "operands": "or r29,r14,r17",
+      "defs": [
+        "r17"
+      ],
+      "uses": [
+        "r29",
+        "r14"
+      ],
+      "pcode_ops": [
+        "INT_OR"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf800806c",
+      "func_entry": "0xf8008000",
+      "word": "0x02400058",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r0(r18),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "0x0",
+        "r18"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008070",
+      "func_entry": "0xf8008000",
+      "word": "0x71ffff6f",
+      "mnemonic": "bc",
+      "operands": "bc 0x00007e2c",
+      "defs": [],
+      "uses": [
+        "0x0",
+        "CC"
+      ],
+      "pcode_ops": [
+        "INT_NOTEQUAL",
+        "CBRANCH"
+      ],
+      "flows": [
+        "0x00007e2c"
+      ],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008074",
+      "func_entry": "0xf8008000",
+      "word": "0x000010e4",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r2(r0),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "0x0",
+        "r2"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008078",
+      "func_entry": "0xf8008000",
+      "word": "0xc4d110e4",
+      "mnemonic": "and",
+      "operands": "and 0x10e4,r6,r17",
+      "defs": [
+        "r17"
+      ],
+      "uses": [
+        "0x10e4",
+        "r6"
+      ],
+      "pcode_ops": [
+        "INT_ZEXT",
+        "INT_AND"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf800807c",
+      "func_entry": "0xf8008000",
+      "word": "0x0ef810ee",
+      "mnemonic": "st.b",
+      "operands": "st.b r2,-0x3f12(r23)",
+      "defs": [],
+      "uses": [
+        "0xffffc0ee",
+        "r2",
+        "r23"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "STORE"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008080",
+      "func_entry": "0xf8008000",
+      "word": "0x0130001e",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r0(r9),r16",
+      "defs": [
+        "r16"
+      ],
+      "uses": [
+        "0x0",
+        "r9"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008084",
+      "func_entry": "0xf8008000",
+      "word": "0x0528001e",
+      "mnemonic": "ld.b",
+      "operands": "ld.b 0x1e(r9),r8",
+      "defs": [
+        "r8"
+      ],
+      "uses": [
+        "r9",
+        "0x1e"
+      ],
+      "pcode_ops": [
+        "INT_SEXT",
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008088",
+      "func_entry": "0xf8008000",
+      "word": "0x80d110e4",
+      "mnemonic": "addu",
+      "operands": "addu r2,r6,r17",
+      "defs": [
+        "r17"
+      ],
+      "uses": [
+        "r2",
+        "r6"
+      ],
+      "pcode_ops": [
+        "INT_ADD"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf800808c",
+      "func_entry": "0xf8008000",
+      "word": "0x0ef810ee",
+      "mnemonic": "st.b",
+      "operands": "st.b r2,-0x3f12(r23)",
+      "defs": [],
+      "uses": [
+        "0xffffc0ee",
+        "r2",
+        "r23"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "STORE"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008090",
+      "func_entry": "0xf8008000",
+      "word": "0x000011a2",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r2(r0),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "0x0",
+        "r2"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008094",
+      "func_entry": "0xf8008000",
+      "word": "0x000092a0",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r18(r0),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "0x0",
+        "r18"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8008098",
+      "func_entry": "0xf8008000",
+      "word": "0x340013e4",
+      "mnemonic": "flush",
+      "operands": "flush 0x13e4(r0)",
+      "defs": [],
+      "uses": [
+        "0x0",
+        "0x13e4",
+        "0x4"
+      ],
+      "pcode_ops": [
+        "INT_SEXT",
+        "INT_ADD",
+        "CALLOTHER"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf800809c",
+      "func_entry": "0xf8008000",
+      "word": "0xfcff1494",
+      "mnemonic": "xorh",
+      "operands": "xorh 0x1494,r7,r31",
+      "defs": [
+        "r31"
+      ],
+      "uses": [
+        "0x10",
+        "0x1494",
+        "r7"
+      ],
+      "pcode_ops": [
+        "INT_ZEXT",
+        "INT_LEFT",
+        "INT_XOR"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf80080a0",
+      "func_entry": "0xf8008000",
+      "word": "0x00887592",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r14(r4),r8",
+      "defs": [
+        "r8"
+      ],
+      "uses": [
+        "r4",
+        "r14"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf80080a4",
+      "func_entry": "0xf8008000",
+      "word": "0x00a07392",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r14(r5),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "r5",
+        "r14"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf80080a8",
+      "func_entry": "0xf8008000",
+      "word": "0x01a060b6",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r12(r13),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "r12",
+        "r13"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf80080ac",
+      "func_entry": "0xf8008000",
+      "word": "0x0090928a",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r18(r4),r16",
+      "defs": [
+        "r16"
+      ],
+      "uses": [
+        "r4",
+        "r18"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf80080b0",
+      "func_entry": "0xf8008000",
+      "word": "0x01907f12",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r15(r12),r16",
+      "defs": [
+        "r16"
+      ],
+      "uses": [
+        "r12",
+        "r15"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf80080b4",
+      "func_entry": "0xf8008000",
+      "word": "0xfdffbf1e",
+      "mnemonic": "xorh",
+      "operands": "xorh 0xbf1e,r15,r31",
+      "defs": [
+        "r31"
+      ],
+      "uses": [
+        "0x10",
+        "r15",
+        "0xbf1e"
+      ],
+      "pcode_ops": [
+        "INT_ZEXT",
+        "INT_LEFT",
+        "INT_XOR"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf80080b8",
+      "func_entry": "0xf8008000",
+      "word": "0xfda77fb6",
+      "mnemonic": "xorh",
+      "operands": "xorh 0x7fb6,r13,r7",
+      "defs": [
+        "r7"
+      ],
+      "uses": [
+        "0x10",
+        "r13",
+        "0x7fb6"
+      ],
+      "pcode_ops": [
+        "INT_ZEXT",
+        "INT_LEFT",
+        "INT_XOR"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf80080bc",
+      "func_entry": "0xf8008000",
+      "word": "0x00a0b592",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r22(r5),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "r5",
+        "r22"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf80084b0",
+      "func_entry": "0xf8008000",
+      "word": "0x001017e4",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r2(r0),r16",
+      "defs": [
+        "r16"
+      ],
+      "uses": [
+        "0x0",
+        "r2"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf80084b4",
+      "func_entry": "0xf8008000",
+      "word": "0x80fff7ee",
+      "mnemonic": "addu",
+      "operands": "addu r30,r7,r31",
+      "defs": [
+        "r31"
+      ],
+      "uses": [
+        "r30",
+        "r7"
+      ],
+      "pcode_ops": [
+        "INT_ADD"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf80084b8",
+      "func_entry": "0xf8008000",
+      "word": "0x0100e01e",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r28(r8),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "r28",
+        "r8"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf80084bc",
+      "func_entry": "0xf8008000",
+      "word": "0x0ff81fec",
+      "mnemonic": "st.b",
+      "operands": "st.b r3,-0x3814(r31)",
+      "defs": [],
+      "uses": [
+        "0xffffc7ec",
+        "r31",
+        "r3"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "STORE"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf80084c0",
+      "func_entry": "0xf8008000",
+      "word": "0x71d1f017",
+      "mnemonic": "bc",
+      "operands": "bc 0xff48451c",
+      "defs": [],
+      "uses": [
+        "0x0",
+        "CC"
+      ],
+      "pcode_ops": [
+        "INT_NOTEQUAL",
+        "CBRANCH"
+      ],
+      "flows": [
+        "0xff48451c"
+      ],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf80084c4",
+      "func_entry": "0xf8008000",
+      "word": "0x41031116",
+      "mnemonic": "bri",
+      "operands": "bri r2",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "r8",
+        "r6",
+        "r2"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT",
+        "BRANCHIND"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf80084c8",
+      "func_entry": "0xf8008000",
+      "word": "0x010031d6",
+      "mnemonic": "_ld.b",
+      "operands": "_ld.b r6(r8),r0",
+      "defs": [
+        "r0_sink"
+      ],
+      "uses": [
+        "r8",
+        "r6"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    }
+  ],
+  "refs": [
+    {
+      "from": "0xf8008024",
+      "to": "0xfbd5ebc0",
+      "type": "CONDITIONAL_JUMP",
+      "is_flow": true,
+      "is_primary": true
+    },
+    {
+      "from": "0xf80084c0",
+      "to": "0xff48451c",
+      "type": "CONDITIONAL_JUMP",
+      "is_flow": true,
+      "is_primary": true
+    },
+    {
+      "from": "0xf8008054",
+      "to": "0xf80084b0",
+      "type": "CONDITIONAL_JUMP",
+      "is_flow": true,
+      "is_primary": true
+    },
+    {
+      "from": "0xf8008070",
+      "to": "0x00007e2c",
+      "type": "CONDITIONAL_JUMP",
+      "is_flow": true,
+      "is_primary": true
+    }
+  ],
+  "strings": [],
+  "dispatch_unresolved": [
+    {
+      "addr": "0xf80084c4",
+      "func_entry": "0xf8008000",
+      "mnemonic": "bri",
+      "flow_type": "COMPUTED_JUMP",
+      "phase2_classification": null
+    }
+  ],
+  "callees": [],
+  "callers": [],
+  "context": {
+    "r15_cluster": false,
+    "mmio_accesses": [],
+    "nearby_deny_ranges": [],
+    "nearby_embedded_objects": [],
+    "priority_tags": [
+      "unresolved_bri"
+    ]
+  }
+}

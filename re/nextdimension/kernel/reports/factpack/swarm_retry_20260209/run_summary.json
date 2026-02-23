@@ -1,0 +1,263 @@
+{
+  "run_id": "3b9bad9d",
+  "model": "claude-sonnet-4-5-20250929",
+  "backend": "max",
+  "stats": {
+    "claims": 35,
+    "verified_accept": 11,
+    "verified_revise": 22,
+    "verified_reject": 2,
+    "gatekeeper_passed": 35,
+    "gatekeeper_failed": 0,
+    "total_tokens_in": 444260,
+    "total_tokens_out": 204792
+  },
+  "results": [
+    {
+      "function_id": "0xf800a680",
+      "status": "revise",
+      "confidence": 35,
+      "primary_intent": "Runtime-computed dispatch function with MMIO interactions and potential token/state processing",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800c630",
+      "status": "revise",
+      "confidence": 35,
+      "primary_intent": "MMIO-driven dispatch entry point with token read and hash-based classification, leading to runtime-computed indirect branch",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf8008ee4",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "MMIO test sequence or diagnostic stub with unresolved runtime dispatch exit",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf8008274",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Byte-accessor validation or dispatch preparation with single MMIO store side-effect",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800f70c",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "UNKNOWN - Possible corrupt/misinterpreted data sequence or obfuscated thunk with runtime-computed dispatch target",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800c584",
+      "status": "revise",
+      "confidence": 35,
+      "primary_intent": "Conditional MMIO high-space flush with trap-based indirect return dispatch",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800cb9c",
+      "status": "revise",
+      "confidence": 35,
+      "primary_intent": "Dispatch stub performing arithmetic shift and byte load before computed indirect branch",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800f77c",
+      "status": "revise",
+      "confidence": 72,
+      "primary_intent": "PostScript bytecode dispatch handler with MMIO token fetch and handler jump table routing",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf8009270",
+      "status": "reject",
+      "confidence": 35,
+      "primary_intent": "MMIO polling loop with repeated PostScript token read attempts and cryptic side-effects to unknown memory region",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf80094fc",
+      "status": "revise",
+      "confidence": 55,
+      "primary_intent": "MMIO token exchange sequence with delay padding, likely device synchronization or handshake protocol",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800916c",
+      "status": "revise",
+      "confidence": 45,
+      "primary_intent": "MMIO token write loop with busy-wait synchronization and floating-point staging register usage",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800c964",
+      "status": "reject",
+      "confidence": 42,
+      "primary_intent": "Byte-granular memory operation loop with MMIO status probe and conditional iteration control",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800d00c",
+      "status": "revise",
+      "confidence": 45,
+      "primary_intent": "Repetitive byte-load test sequence writing MMIO result to high address space, likely a memory or bus diagnostic routine",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf8008098",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Dead code or decryption stub with noise pattern: writes r16 to MMIO 0x801e, but 16 of 18 instructions write to r0 sink with no control flow",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf8008f5c",
+      "status": "revise",
+      "confidence": 20,
+      "primary_intent": "Likely defunct or dead code block containing semantically meaningless byte loads that discard results to r0 sink",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800b83c",
+      "status": "revise",
+      "confidence": 15,
+      "primary_intent": "Test/fuzzing harness that exercises diverse memory and MMIO access patterns without functional side effects",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800c8bc",
+      "status": "revise",
+      "confidence": 72,
+      "primary_intent": "MMIO write orchestration with token write (0x401c) and status write (0xc01c), surrounded by defensive/diagnostic memory reads",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800842c",
+      "status": "revise",
+      "confidence": 45,
+      "primary_intent": "MMIO transaction sequence with mixed integer-to-FP register staging and conditional data load-store chain",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800cf8c",
+      "status": "revise",
+      "confidence": 35,
+      "primary_intent": "Diagnostic or test routine: loads from multiple memory regions, performs XOR operations, writes to MMIO 0x401C, and sinks all computation results to r0",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf80014c4",
+      "status": "accept",
+      "confidence": 25,
+      "primary_intent": "Uncalled diagnostic/test stub performing nonsensical operations: loads to hardwired-zero r0, dead arithmetic, MMIO read without use, illegal ixfr to hardwired-zero f0",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800dc7c",
+      "status": "revise",
+      "confidence": 45,
+      "primary_intent": "MMIO write-only operation performing hardwired zero write to high-space register, guarded by r6 zero-check conditional exit",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800bc68",
+      "status": "revise",
+      "confidence": 45,
+      "primary_intent": "MMIO conditional write sequence with split control flow handling register state transfer",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf80080f4",
+      "status": "revise",
+      "confidence": 35,
+      "primary_intent": "MMIO test sequence or diagnostic routine performing mixed-type memory/MMIO accesses with FP register side-channel operations",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800a554",
+      "status": "revise",
+      "confidence": 45,
+      "primary_intent": "MMIO transaction orchestrator: performs byte read from computed address (r12+r8), writes result to MMIO port 0x401C, possibly for hardware command dispatch or DMA trigger",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800cef0",
+      "status": "accept",
+      "confidence": 10,
+      "primary_intent": "Unknown orphan code sequence - disconnected instruction fragment with incoherent register usage patterns",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf8008e70",
+      "status": "revise",
+      "confidence": 15,
+      "primary_intent": "Dead code or development stub: performs MMIO read and register manipulation with all results discarded to r0 sink",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf80090d4",
+      "status": "revise",
+      "confidence": 45,
+      "primary_intent": "MMIO write sequence with conditional retry, likely hardware register programming or status acknowledgment",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800a0bc",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Embedded test stub or unreachable debug sequence performing isolated MMIO flush and nonsensical FP/control register operations",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800df78",
+      "status": "revise",
+      "confidence": 35,
+      "primary_intent": "MMIO byte write operation with preceding indexed reads and possible dead-code artifact from register allocation or inlining",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf8000348",
+      "status": "accept",
+      "confidence": 95,
+      "primary_intent": "NOP sled or alignment padding; performs 17 identical no-op memory reads from hardwired zero address into hardwired zero register",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800bb60",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Dead code fragment or corrupted instruction sequence with no computational purpose",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800db54",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Dead code or test artifact: performs 11 load operations with all results discarded to hardwired-zero registers",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800c194",
+      "status": "revise",
+      "confidence": 60,
+      "primary_intent": "Floating-point state setup followed by conditional error trap with pipeline unlock",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800b9e0",
+      "status": "revise",
+      "confidence": 55,
+      "primary_intent": "PostScript token validation or hash probe that branches on byte-equality check against constant 0x4",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800bd9c",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Double-precision floating-point computation fragment (dead code): loads two 64-bit FP values, writes to hardwired zero registers",
+      "contrarian_verdict": "alternative_competitive"
+    }
+  ],
+  "errors": []
+}

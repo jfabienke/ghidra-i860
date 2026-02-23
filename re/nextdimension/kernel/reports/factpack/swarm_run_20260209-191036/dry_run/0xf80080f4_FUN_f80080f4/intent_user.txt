@@ -1,0 +1,73 @@
+Analyze the following function and return a structured JSON intent dossier.
+
+FUNCTION: FUN_f80080f4 at 0xf80080f4
+SIZE: 48 bytes (12 instructions)
+CONFIDENCE SOURCE: curated
+HAS UNRESOLVED BRI: False
+PRIORITY TAGS: mmio_access
+
+CALLERS (0): (none)
+CALLEES (0): (none)
+
+BLOCKS (1):
+  0xf80080f4..0xf8008123 (12 insns)
+
+INSTRUCTIONS:
+  0xf80080f4: ld.b r0(r0),r8                           defs=[r8] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80080f8: ixfr r8,f0                               defs=[] uses=[] pcode=[]
+  0xf80080fc: andnot r8,r7,r31                         defs=[r31] uses=[r8,r7] pcode=[INT_NEGATE,INT_AND]
+  0xf8008100: fst.q f8f9,r8(r8)                        defs=[] uses=[r8,f8f9] pcode=[INT_ADD,STORE]
+  0xf8008104: fst.q f8f9,0x401c(r8)                    defs=[] uses=[r8,f8f9,0x401c] pcode=[INT_SEXT,INT_ADD,STORE] [MMIO:mmio_offset_0x401c]
+  0xf8008108: fst.q f8f9,r8(r0)                        defs=[] uses=[r8,0x0,f8f9] pcode=[INT_ADD,STORE]
+  0xf800810c: ld.b r8(r9),r0                           defs=[r0_sink] uses=[r8,r9] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8008110: ld.b 0x401c(r9),r8                       defs=[r8] uses=[r9,0x401c] pcode=[INT_SEXT,INT_ADD,LOAD,INT_ZEXT] [MMIO:mmio_offset_0x401c]
+  0xf8008114: ixfr r8,f16                              defs=[f16] uses=[r8] pcode=[COPY]
+  0xf8008118: st.b r8,-0x3fe4(r9)                      defs=[] uses=[r8,0xffffc01c,r9] pcode=[INT_ADD,STORE] [MMIO:mmio_high_space]
+  0xf800811c: ld.b r16(r0),r0                          defs=[r0_sink] uses=[r16,0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8008120: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+
+REFERENCES:
+  (none)
+
+STRINGS IN RANGE:
+  (none)
+
+DISPATCH UNRESOLVED:
+  (none)
+
+CONTEXT:
+- R15 cluster (GState flags): False
+- MMIO accesses: 0xf8008104=mmio_offset_0x401c, 0xf8008118=mmio_high_space
+- Nearby deny ranges: (none)
+- Nearby embedded objects: (none)
+
+Return ONLY valid JSON matching this schema:
+{
+  "function_id": "0xf80080f4",
+  "function_name": "FUN_f80080f4",
+  "primary_intent": "<one-line purpose statement>",
+  "intent_category": "<one of: initialization, dispatch, parser, raster, mmio_driver, math_kernel, utility, synchronization, error_handler, unknown>",
+  "evidence": [
+    {"addr": "0x...", "fact": "<what this instruction/pattern proves>"}
+  ],
+  "register_protocol": {
+    "inputs": ["<rN = description>"],
+    "outputs": ["<rN = description>"],
+    "side_effects": ["<memory write / MMIO / control reg change>"]
+  },
+  "data_accesses": [
+    {"addr": "0x...", "target": "0x...", "kind": "read|write|mmio", "interpretation": "..."}
+  ],
+  "control_flow_summary": "<how the function flows: linear, loop, conditional tree, dispatch, etc.>",
+  "confidence": <0-100>,
+  "confidence_factors": {
+    "supporting": ["<what raises confidence>"],
+    "limiting": ["<what caps confidence>"]
+  },
+  "alternatives": [
+    {"intent": "<alternative purpose>", "why_not_primary": "<evidence against>"}
+  ],
+  "open_questions": ["<what remains unknown>"],
+  "required_next_evidence": ["<what would resolve open questions>"],
+  "subsystem_hint": "<suggested subsystem: postscript_dispatch, pixel_pipeline, memory_management, board_init, interrupt_handling, unknown>"
+}

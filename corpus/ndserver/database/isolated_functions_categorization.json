@@ -1,0 +1,1399 @@
+{
+  "metadata": {
+    "total_isolated": 59,
+    "analysis_date": "2025-11-08",
+    "categories_used": [
+      "Callback",
+      "Error/Logging",
+      "Utility/Helper",
+      "Hardware",
+      "Initialization",
+      "IPC/Protocol",
+      "i860 Communication",
+      "Dead Code",
+      "Unknown"
+    ],
+    "confidence_note": "Based on static analysis without runtime traces"
+  },
+  "by_category": {
+    "Callback": [
+      "0x0000366e",
+      "0x0000368c",
+      "0x00003820",
+      "0x00003eae",
+      "0x000056f0",
+      "0x000059f8",
+      "0x00005d26",
+      "0x00005d60",
+      "0x00005da6",
+      "0x000061f4",
+      "0x0000627a",
+      "0x000062b8",
+      "0x000062e8",
+      "0x00006318",
+      "0x00006340",
+      "0x0000636c",
+      "0x00006398",
+      "0x000063c0",
+      "0x000063e8",
+      "0x00006414",
+      "0x00006444",
+      "0x00006de4",
+      "0x000075cc",
+      "0x000075e2"
+    ],
+    "Error/Logging": [],
+    "Utility/Helper": [
+      "0x0000305c",
+      "0x000030c2",
+      "0x00003200",
+      "0x00003614",
+      "0x00003874",
+      "0x00003cdc",
+      "0x00003dde",
+      "0x00003f3a",
+      "0x00004024",
+      "0x000040f4",
+      "0x000041fe",
+      "0x000042e8",
+      "0x000043c6",
+      "0x000044da",
+      "0x000045f2",
+      "0x0000470a",
+      "0x00004822",
+      "0x0000493a",
+      "0x00004a52",
+      "0x00004b70",
+      "0x00004c88",
+      "0x00004da0",
+      "0x00004ea0",
+      "0x00004f64",
+      "0x00005078",
+      "0x00005178",
+      "0x00005256",
+      "0x0000535c",
+      "0x00005454",
+      "0x00005540",
+      "0x0000561e",
+      "0x0000577c",
+      "0x00005dea"
+    ],
+    "Hardware": [
+      "0x00003874",
+      "0x0000627a",
+      "0x000062b8",
+      "0x000062e8",
+      "0x00006318",
+      "0x00006340",
+      "0x0000636c",
+      "0x00006398",
+      "0x000063c0",
+      "0x000063e8",
+      "0x00006414",
+      "0x00006444"
+    ],
+    "Initialization": [],
+    "IPC/Protocol": [],
+    "i860 Communication": [],
+    "Dead Code": [],
+    "Unknown": [
+      "0x000030c2",
+      "0x00003cdc",
+      "0x000040f4",
+      "0x000043c6",
+      "0x000044da",
+      "0x000045f2",
+      "0x0000470a",
+      "0x00004822",
+      "0x0000493a",
+      "0x00004a52",
+      "0x00004b70",
+      "0x00004c88",
+      "0x00004da0",
+      "0x00004f64",
+      "0x00005078",
+      "0x00005256",
+      "0x0000577c",
+      "0x0000594a",
+      "0x00005c70",
+      "0x00005dea"
+    ]
+  },
+  "by_priority": {
+    "Critical": [],
+    "High": [
+      "0x0000366e",
+      "0x0000368c",
+      "0x00003820",
+      "0x00003874",
+      "0x00003eae",
+      "0x000056f0",
+      "0x000059f8",
+      "0x00005d26",
+      "0x00005d60",
+      "0x00005da6",
+      "0x000061f4",
+      "0x0000627a",
+      "0x000062b8",
+      "0x000062e8",
+      "0x00006318",
+      "0x00006340",
+      "0x0000636c",
+      "0x00006398",
+      "0x000063c0",
+      "0x000063e8",
+      "0x00006414",
+      "0x00006444",
+      "0x00006de4",
+      "0x000075cc",
+      "0x000075e2"
+    ],
+    "Medium": [
+      "0x0000305c",
+      "0x000030c2",
+      "0x00003200",
+      "0x00003614",
+      "0x00003cdc",
+      "0x00003dde",
+      "0x00003f3a",
+      "0x00004024",
+      "0x000040f4",
+      "0x000041fe",
+      "0x000042e8",
+      "0x000043c6",
+      "0x000044da",
+      "0x000045f2",
+      "0x0000470a",
+      "0x00004822",
+      "0x0000493a",
+      "0x00004a52",
+      "0x00004b70",
+      "0x00004c88",
+      "0x00004da0",
+      "0x00004ea0",
+      "0x00004f64",
+      "0x00005078",
+      "0x00005178",
+      "0x00005256",
+      "0x0000535c",
+      "0x00005454",
+      "0x00005540",
+      "0x0000561e",
+      "0x0000577c",
+      "0x0000594a",
+      "0x00005c70",
+      "0x00005dea"
+    ],
+    "Low": []
+  },
+  "functions": [
+    {
+      "address": "0x0000305c",
+      "address_decimal": 12380,
+      "name": "FUN_0000305c",
+      "size": 102,
+      "categories": [
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 102 bytes. Makes 6 external function call(s). Has stack frame (link instruction)",
+      "key_evidence": [
+        "Makes 6 external function call(s)",
+        "Has stack frame (link instruction)"
+      ],
+      "suggested_name": "FUN_0000305c",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x000030c2",
+      "address_decimal": 12482,
+      "name": "FUN_000030c2",
+      "size": 318,
+      "categories": [
+        "Unknown",
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 318 bytes. Makes 11 external function call(s). Has stack frame (link instruction). Has 6 conditional branches. Large function (likely operational)",
+      "key_evidence": [
+        "Makes 11 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Has 6 conditional branches",
+        "Large function (likely operational)"
+      ],
+      "suggested_name": "FUN_000030c2",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00003200",
+      "address_decimal": 12800,
+      "name": "FUN_00003200",
+      "size": 132,
+      "categories": [
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 132 bytes. Makes 3 external function call(s). Has stack frame (link instruction)",
+      "key_evidence": [
+        "Makes 3 external function call(s)",
+        "Has stack frame (link instruction)"
+      ],
+      "suggested_name": "FUN_00003200",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00003614",
+      "address_decimal": 13844,
+      "name": "FUN_00003614",
+      "size": 90,
+      "categories": [
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Low",
+      "reasoning": "Size: 90 bytes. Makes 3 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 3 conditional branches",
+      "key_evidence": [
+        "Makes 3 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 3 conditional branches"
+      ],
+      "suggested_name": "FUN_00003614",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x0000366e",
+      "address_decimal": 13934,
+      "name": "FUN_0000366e",
+      "size": 30,
+      "categories": [
+        "Callback"
+      ],
+      "priority": "High",
+      "complexity": "Low",
+      "reasoning": "Size: 30 bytes. Makes 2 external function call(s). Has stack frame (link instruction). Small function with stack frame (callback pattern)",
+      "key_evidence": [
+        "Makes 2 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Small function with stack frame (callback pattern)"
+      ],
+      "suggested_name": "FUN_0000366e",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x0000368c",
+      "address_decimal": 13964,
+      "name": "FUN_0000368c",
+      "size": 38,
+      "categories": [
+        "Callback"
+      ],
+      "priority": "High",
+      "complexity": "Low",
+      "reasoning": "Size: 38 bytes. Makes 2 external function call(s). Has stack frame (link instruction). Small function with stack frame (callback pattern)",
+      "key_evidence": [
+        "Makes 2 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Small function with stack frame (callback pattern)"
+      ],
+      "suggested_name": "FUN_0000368c",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00003820",
+      "address_decimal": 14368,
+      "name": "FUN_00003820",
+      "size": 84,
+      "categories": [
+        "Callback"
+      ],
+      "priority": "High",
+      "complexity": "Low",
+      "reasoning": "Size: 84 bytes. Has stack frame (link instruction). Has 4 conditional branches. Small function with stack frame (callback pattern)",
+      "key_evidence": [
+        "Has stack frame (link instruction)",
+        "Has 4 conditional branches",
+        "Small function with stack frame (callback pattern)"
+      ],
+      "suggested_name": "FUN_00003820",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00003874",
+      "address_decimal": 14452,
+      "name": "FUN_00003874",
+      "size": 296,
+      "categories": [
+        "Hardware",
+        "Utility/Helper"
+      ],
+      "priority": "High",
+      "complexity": "Medium",
+      "reasoning": "Size: 296 bytes. Makes 9 external function call(s). Has stack frame (link instruction). Accesses 1 hardware/memory address(es): 0x04010290. Has 12 conditional branches",
+      "key_evidence": [
+        "Makes 9 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Accesses 1 hardware/memory address(es): 0x04010290",
+        "Has 12 conditional branches"
+      ],
+      "suggested_name": "HardwareAccess_0x00003874",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00003cdc",
+      "address_decimal": 15580,
+      "name": "FUN_00003cdc",
+      "size": 258,
+      "categories": [
+        "Unknown",
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 258 bytes. Makes 3 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 11 conditional branches. Large function (likely operational)",
+      "key_evidence": [
+        "Makes 3 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 11 conditional branches",
+        "Large function (likely operational)"
+      ],
+      "suggested_name": "FUN_00003cdc",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00003dde",
+      "address_decimal": 15838,
+      "name": "FUN_00003dde",
+      "size": 208,
+      "categories": [
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 208 bytes. Makes 3 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 7 conditional branches",
+      "key_evidence": [
+        "Makes 3 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 7 conditional branches"
+      ],
+      "suggested_name": "FUN_00003dde",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00003eae",
+      "address_decimal": 16046,
+      "name": "FUN_00003eae",
+      "size": 140,
+      "categories": [
+        "Callback"
+      ],
+      "priority": "High",
+      "complexity": "Medium",
+      "reasoning": "Size: 140 bytes. Makes 2 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Small function with stack frame (callback pattern)",
+      "key_evidence": [
+        "Makes 2 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Small function with stack frame (callback pattern)"
+      ],
+      "suggested_name": "FUN_00003eae",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00003f3a",
+      "address_decimal": 16186,
+      "name": "FUN_00003f3a",
+      "size": 234,
+      "categories": [
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 234 bytes. Makes 3 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 11 conditional branches",
+      "key_evidence": [
+        "Makes 3 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 11 conditional branches"
+      ],
+      "suggested_name": "FUN_00003f3a",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00004024",
+      "address_decimal": 16420,
+      "name": "FUN_00004024",
+      "size": 208,
+      "categories": [
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 208 bytes. Makes 3 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 7 conditional branches",
+      "key_evidence": [
+        "Makes 3 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 7 conditional branches"
+      ],
+      "suggested_name": "FUN_00004024",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x000040f4",
+      "address_decimal": 16628,
+      "name": "FUN_000040f4",
+      "size": 266,
+      "categories": [
+        "Unknown",
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 266 bytes. Makes 3 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 7 conditional branches. Large function (likely operational)",
+      "key_evidence": [
+        "Makes 3 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 7 conditional branches",
+        "Large function (likely operational)"
+      ],
+      "suggested_name": "FUN_000040f4",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x000041fe",
+      "address_decimal": 16894,
+      "name": "FUN_000041fe",
+      "size": 234,
+      "categories": [
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 234 bytes. Makes 3 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 11 conditional branches",
+      "key_evidence": [
+        "Makes 3 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 11 conditional branches"
+      ],
+      "suggested_name": "FUN_000041fe",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x000042e8",
+      "address_decimal": 17128,
+      "name": "FUN_000042e8",
+      "size": 222,
+      "categories": [
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 222 bytes. Makes 3 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 11 conditional branches",
+      "key_evidence": [
+        "Makes 3 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 11 conditional branches"
+      ],
+      "suggested_name": "FUN_000042e8",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x000043c6",
+      "address_decimal": 17350,
+      "name": "FUN_000043c6",
+      "size": 276,
+      "categories": [
+        "Unknown",
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 276 bytes. Makes 3 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 11 conditional branches. Large function (likely operational)",
+      "key_evidence": [
+        "Makes 3 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 11 conditional branches",
+        "Large function (likely operational)"
+      ],
+      "suggested_name": "FUN_000043c6",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x000044da",
+      "address_decimal": 17626,
+      "name": "FUN_000044da",
+      "size": 280,
+      "categories": [
+        "Unknown",
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 280 bytes. Makes 3 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 12 conditional branches. Large function (likely operational)",
+      "key_evidence": [
+        "Makes 3 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 12 conditional branches",
+        "Large function (likely operational)"
+      ],
+      "suggested_name": "FUN_000044da",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x000045f2",
+      "address_decimal": 17906,
+      "name": "FUN_000045f2",
+      "size": 280,
+      "categories": [
+        "Unknown",
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 280 bytes. Makes 3 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 12 conditional branches. Large function (likely operational)",
+      "key_evidence": [
+        "Makes 3 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 12 conditional branches",
+        "Large function (likely operational)"
+      ],
+      "suggested_name": "FUN_000045f2",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x0000470a",
+      "address_decimal": 18186,
+      "name": "FUN_0000470a",
+      "size": 280,
+      "categories": [
+        "Unknown",
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 280 bytes. Makes 3 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 12 conditional branches. Large function (likely operational)",
+      "key_evidence": [
+        "Makes 3 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 12 conditional branches",
+        "Large function (likely operational)"
+      ],
+      "suggested_name": "FUN_0000470a",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00004822",
+      "address_decimal": 18466,
+      "name": "FUN_00004822",
+      "size": 280,
+      "categories": [
+        "Unknown",
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 280 bytes. Makes 3 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 12 conditional branches. Large function (likely operational)",
+      "key_evidence": [
+        "Makes 3 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 12 conditional branches",
+        "Large function (likely operational)"
+      ],
+      "suggested_name": "FUN_00004822",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x0000493a",
+      "address_decimal": 18746,
+      "name": "FUN_0000493a",
+      "size": 280,
+      "categories": [
+        "Unknown",
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 280 bytes. Makes 3 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 12 conditional branches. Large function (likely operational)",
+      "key_evidence": [
+        "Makes 3 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 12 conditional branches",
+        "Large function (likely operational)"
+      ],
+      "suggested_name": "FUN_0000493a",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00004a52",
+      "address_decimal": 19026,
+      "name": "FUN_00004a52",
+      "size": 286,
+      "categories": [
+        "Unknown",
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 286 bytes. Makes 4 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 11 conditional branches. Large function (likely operational)",
+      "key_evidence": [
+        "Makes 4 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 11 conditional branches",
+        "Large function (likely operational)"
+      ],
+      "suggested_name": "FUN_00004a52",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00004b70",
+      "address_decimal": 19312,
+      "name": "FUN_00004b70",
+      "size": 280,
+      "categories": [
+        "Unknown",
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 280 bytes. Makes 3 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 12 conditional branches. Large function (likely operational)",
+      "key_evidence": [
+        "Makes 3 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 12 conditional branches",
+        "Large function (likely operational)"
+      ],
+      "suggested_name": "FUN_00004b70",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00004c88",
+      "address_decimal": 19592,
+      "name": "FUN_00004c88",
+      "size": 280,
+      "categories": [
+        "Unknown",
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 280 bytes. Makes 3 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 12 conditional branches. Large function (likely operational)",
+      "key_evidence": [
+        "Makes 3 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 12 conditional branches",
+        "Large function (likely operational)"
+      ],
+      "suggested_name": "FUN_00004c88",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00004da0",
+      "address_decimal": 19872,
+      "name": "FUN_00004da0",
+      "size": 256,
+      "categories": [
+        "Unknown",
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 256 bytes. Makes 3 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 12 conditional branches. Large function (likely operational)",
+      "key_evidence": [
+        "Makes 3 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 12 conditional branches",
+        "Large function (likely operational)"
+      ],
+      "suggested_name": "FUN_00004da0",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00004ea0",
+      "address_decimal": 20128,
+      "name": "FUN_00004ea0",
+      "size": 196,
+      "categories": [
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 196 bytes. Makes 3 external function call(s). Has stack frame (link instruction). Has 7 conditional branches",
+      "key_evidence": [
+        "Makes 3 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Has 7 conditional branches"
+      ],
+      "suggested_name": "FUN_00004ea0",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00004f64",
+      "address_decimal": 20324,
+      "name": "FUN_00004f64",
+      "size": 276,
+      "categories": [
+        "Unknown",
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 276 bytes. Makes 4 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 7 conditional branches. Large function (likely operational)",
+      "key_evidence": [
+        "Makes 4 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 7 conditional branches",
+        "Large function (likely operational)"
+      ],
+      "suggested_name": "FUN_00004f64",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00005078",
+      "address_decimal": 20600,
+      "name": "FUN_00005078",
+      "size": 256,
+      "categories": [
+        "Unknown",
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 256 bytes. Makes 3 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 12 conditional branches. Large function (likely operational)",
+      "key_evidence": [
+        "Makes 3 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 12 conditional branches",
+        "Large function (likely operational)"
+      ],
+      "suggested_name": "FUN_00005078",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00005178",
+      "address_decimal": 20856,
+      "name": "FUN_00005178",
+      "size": 222,
+      "categories": [
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 222 bytes. Makes 3 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 7 conditional branches",
+      "key_evidence": [
+        "Makes 3 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 7 conditional branches"
+      ],
+      "suggested_name": "FUN_00005178",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00005256",
+      "address_decimal": 21078,
+      "name": "FUN_00005256",
+      "size": 262,
+      "categories": [
+        "Unknown",
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 262 bytes. Makes 4 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 7 conditional branches. Large function (likely operational)",
+      "key_evidence": [
+        "Makes 4 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 7 conditional branches",
+        "Large function (likely operational)"
+      ],
+      "suggested_name": "FUN_00005256",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x0000535c",
+      "address_decimal": 21340,
+      "name": "FUN_0000535c",
+      "size": 248,
+      "categories": [
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 248 bytes. Makes 4 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 7 conditional branches",
+      "key_evidence": [
+        "Makes 4 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 7 conditional branches"
+      ],
+      "suggested_name": "FUN_0000535c",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00005454",
+      "address_decimal": 21588,
+      "name": "FUN_00005454",
+      "size": 236,
+      "categories": [
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 236 bytes. Makes 3 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 11 conditional branches",
+      "key_evidence": [
+        "Makes 3 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 11 conditional branches"
+      ],
+      "suggested_name": "FUN_00005454",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00005540",
+      "address_decimal": 21824,
+      "name": "FUN_00005540",
+      "size": 222,
+      "categories": [
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 222 bytes. Makes 3 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 11 conditional branches",
+      "key_evidence": [
+        "Makes 3 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 11 conditional branches"
+      ],
+      "suggested_name": "FUN_00005540",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x0000561e",
+      "address_decimal": 22046,
+      "name": "FUN_0000561e",
+      "size": 210,
+      "categories": [
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 210 bytes. Makes 3 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 7 conditional branches",
+      "key_evidence": [
+        "Makes 3 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 7 conditional branches"
+      ],
+      "suggested_name": "FUN_0000561e",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x000056f0",
+      "address_decimal": 22256,
+      "name": "FUN_000056f0",
+      "size": 140,
+      "categories": [
+        "Callback"
+      ],
+      "priority": "High",
+      "complexity": "Medium",
+      "reasoning": "Size: 140 bytes. Makes 2 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Small function with stack frame (callback pattern)",
+      "key_evidence": [
+        "Makes 2 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Small function with stack frame (callback pattern)"
+      ],
+      "suggested_name": "FUN_000056f0",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x0000577c",
+      "address_decimal": 22396,
+      "name": "FUN_0000577c",
+      "size": 462,
+      "categories": [
+        "Unknown",
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 462 bytes. Makes 3 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 21 conditional branches. Large function (likely operational)",
+      "key_evidence": [
+        "Makes 3 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 21 conditional branches",
+        "Large function (likely operational)"
+      ],
+      "suggested_name": "FUN_0000577c",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x0000594a",
+      "address_decimal": 22858,
+      "name": "FUN_0000594a",
+      "size": 174,
+      "categories": [
+        "Unknown"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 174 bytes. Makes 1 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. No clear patterns detected",
+      "key_evidence": [
+        "Makes 1 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "No clear patterns detected"
+      ],
+      "suggested_name": "FUN_0000594a",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x000059f8",
+      "address_decimal": 23032,
+      "name": "FUN_000059f8",
+      "size": 70,
+      "categories": [
+        "Callback"
+      ],
+      "priority": "High",
+      "complexity": "Low",
+      "reasoning": "Size: 70 bytes. Makes 1 external function call(s). Has stack frame (link instruction). Small function with stack frame (callback pattern)",
+      "key_evidence": [
+        "Makes 1 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Small function with stack frame (callback pattern)"
+      ],
+      "suggested_name": "FUN_000059f8",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00005c70",
+      "address_decimal": 23664,
+      "name": "FUN_00005c70",
+      "size": 182,
+      "categories": [
+        "Unknown"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 182 bytes. Makes 2 external function call(s). Has stack frame (link instruction). Has 7 conditional branches. No clear patterns detected",
+      "key_evidence": [
+        "Makes 2 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Has 7 conditional branches",
+        "No clear patterns detected"
+      ],
+      "suggested_name": "FUN_00005c70",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00005d26",
+      "address_decimal": 23846,
+      "name": "FUN_00005d26",
+      "size": 58,
+      "categories": [
+        "Callback"
+      ],
+      "priority": "High",
+      "complexity": "Low",
+      "reasoning": "Size: 58 bytes. Makes 1 external function call(s). Has stack frame (link instruction). Small function with stack frame (callback pattern)",
+      "key_evidence": [
+        "Makes 1 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Small function with stack frame (callback pattern)"
+      ],
+      "suggested_name": "FUN_00005d26",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00005d60",
+      "address_decimal": 23904,
+      "name": "FUN_00005d60",
+      "size": 70,
+      "categories": [
+        "Callback"
+      ],
+      "priority": "High",
+      "complexity": "Low",
+      "reasoning": "Size: 70 bytes. Makes 1 external function call(s). Has stack frame (link instruction). Small function with stack frame (callback pattern)",
+      "key_evidence": [
+        "Makes 1 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Small function with stack frame (callback pattern)"
+      ],
+      "suggested_name": "FUN_00005d60",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00005da6",
+      "address_decimal": 23974,
+      "name": "FUN_00005da6",
+      "size": 68,
+      "categories": [
+        "Callback"
+      ],
+      "priority": "High",
+      "complexity": "Low",
+      "reasoning": "Size: 68 bytes. Makes 1 external function call(s). Has stack frame (link instruction). Small function with stack frame (callback pattern)",
+      "key_evidence": [
+        "Makes 1 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Small function with stack frame (callback pattern)"
+      ],
+      "suggested_name": "FUN_00005da6",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00005dea",
+      "address_decimal": 24042,
+      "name": "FUN_00005dea",
+      "size": 256,
+      "categories": [
+        "Unknown",
+        "Utility/Helper"
+      ],
+      "priority": "Medium",
+      "complexity": "Medium",
+      "reasoning": "Size: 256 bytes. Makes 3 external function call(s). Has stack frame (link instruction). Saves/restores multiple registers. Has 11 conditional branches. Large function (likely operational)",
+      "key_evidence": [
+        "Makes 3 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Saves/restores multiple registers",
+        "Has 11 conditional branches",
+        "Large function (likely operational)"
+      ],
+      "suggested_name": "FUN_00005dea",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x000061f4",
+      "address_decimal": 25076,
+      "name": "FUN_000061f4",
+      "size": 134,
+      "categories": [
+        "Callback"
+      ],
+      "priority": "High",
+      "complexity": "Medium",
+      "reasoning": "Size: 134 bytes. Has stack frame (link instruction). Small function with stack frame (callback pattern)",
+      "key_evidence": [
+        "Has stack frame (link instruction)",
+        "Small function with stack frame (callback pattern)"
+      ],
+      "suggested_name": "FUN_000061f4",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x0000627a",
+      "address_decimal": 25210,
+      "name": "FUN_0000627a",
+      "size": 62,
+      "categories": [
+        "Callback",
+        "Hardware"
+      ],
+      "priority": "High",
+      "complexity": "Low",
+      "reasoning": "Size: 62 bytes. Makes 1 external function call(s). Has stack frame (link instruction). Accesses 1 hardware/memory address(es): 0x040105b0. Small function with stack frame (callback pattern)",
+      "key_evidence": [
+        "Makes 1 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Accesses 1 hardware/memory address(es): 0x040105b0",
+        "Small function with stack frame (callback pattern)"
+      ],
+      "suggested_name": "HardwareAccess_0x0000627a",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x000062b8",
+      "address_decimal": 25272,
+      "name": "FUN_000062b8",
+      "size": 48,
+      "categories": [
+        "Callback",
+        "Hardware"
+      ],
+      "priority": "High",
+      "complexity": "Low",
+      "reasoning": "Size: 48 bytes. Makes 1 external function call(s). Has stack frame (link instruction). Accesses 1 hardware/memory address(es): 0x040105b0. Small function with stack frame (callback pattern)",
+      "key_evidence": [
+        "Makes 1 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Accesses 1 hardware/memory address(es): 0x040105b0",
+        "Small function with stack frame (callback pattern)"
+      ],
+      "suggested_name": "HardwareAccess_0x000062b8",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x000062e8",
+      "address_decimal": 25320,
+      "name": "FUN_000062e8",
+      "size": 48,
+      "categories": [
+        "Callback",
+        "Hardware"
+      ],
+      "priority": "High",
+      "complexity": "Low",
+      "reasoning": "Size: 48 bytes. Makes 1 external function call(s). Has stack frame (link instruction). Accesses 1 hardware/memory address(es): 0x040105b0. Small function with stack frame (callback pattern)",
+      "key_evidence": [
+        "Makes 1 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Accesses 1 hardware/memory address(es): 0x040105b0",
+        "Small function with stack frame (callback pattern)"
+      ],
+      "suggested_name": "HardwareAccess_0x000062e8",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00006318",
+      "address_decimal": 25368,
+      "name": "FUN_00006318",
+      "size": 40,
+      "categories": [
+        "Callback",
+        "Hardware"
+      ],
+      "priority": "High",
+      "complexity": "Low",
+      "reasoning": "Size: 40 bytes. Makes 1 external function call(s). Has stack frame (link instruction). Accesses 1 hardware/memory address(es): 0x040105b0. Small function with stack frame (callback pattern)",
+      "key_evidence": [
+        "Makes 1 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Accesses 1 hardware/memory address(es): 0x040105b0",
+        "Small function with stack frame (callback pattern)"
+      ],
+      "suggested_name": "HardwareAccess_0x00006318",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00006340",
+      "address_decimal": 25408,
+      "name": "FUN_00006340",
+      "size": 44,
+      "categories": [
+        "Callback",
+        "Hardware"
+      ],
+      "priority": "High",
+      "complexity": "Low",
+      "reasoning": "Size: 44 bytes. Makes 1 external function call(s). Has stack frame (link instruction). Accesses 1 hardware/memory address(es): 0x040105b0. Small function with stack frame (callback pattern)",
+      "key_evidence": [
+        "Makes 1 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Accesses 1 hardware/memory address(es): 0x040105b0",
+        "Small function with stack frame (callback pattern)"
+      ],
+      "suggested_name": "HardwareAccess_0x00006340",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x0000636c",
+      "address_decimal": 25452,
+      "name": "FUN_0000636c",
+      "size": 44,
+      "categories": [
+        "Callback",
+        "Hardware"
+      ],
+      "priority": "High",
+      "complexity": "Low",
+      "reasoning": "Size: 44 bytes. Makes 1 external function call(s). Has stack frame (link instruction). Accesses 1 hardware/memory address(es): 0x040105b0. Small function with stack frame (callback pattern)",
+      "key_evidence": [
+        "Makes 1 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Accesses 1 hardware/memory address(es): 0x040105b0",
+        "Small function with stack frame (callback pattern)"
+      ],
+      "suggested_name": "HardwareAccess_0x0000636c",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00006398",
+      "address_decimal": 25496,
+      "name": "FUN_00006398",
+      "size": 40,
+      "categories": [
+        "Callback",
+        "Hardware"
+      ],
+      "priority": "High",
+      "complexity": "Low",
+      "reasoning": "Size: 40 bytes. Makes 1 external function call(s). Has stack frame (link instruction). Accesses 1 hardware/memory address(es): 0x040105b0. Small function with stack frame (callback pattern)",
+      "key_evidence": [
+        "Makes 1 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Accesses 1 hardware/memory address(es): 0x040105b0",
+        "Small function with stack frame (callback pattern)"
+      ],
+      "suggested_name": "HardwareAccess_0x00006398",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x000063c0",
+      "address_decimal": 25536,
+      "name": "FUN_000063c0",
+      "size": 40,
+      "categories": [
+        "Callback",
+        "Hardware"
+      ],
+      "priority": "High",
+      "complexity": "Low",
+      "reasoning": "Size: 40 bytes. Makes 1 external function call(s). Has stack frame (link instruction). Accesses 1 hardware/memory address(es): 0x040105b0. Small function with stack frame (callback pattern)",
+      "key_evidence": [
+        "Makes 1 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Accesses 1 hardware/memory address(es): 0x040105b0",
+        "Small function with stack frame (callback pattern)"
+      ],
+      "suggested_name": "HardwareAccess_0x000063c0",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x000063e8",
+      "address_decimal": 25576,
+      "name": "FUN_000063e8",
+      "size": 44,
+      "categories": [
+        "Callback",
+        "Hardware"
+      ],
+      "priority": "High",
+      "complexity": "Low",
+      "reasoning": "Size: 44 bytes. Makes 1 external function call(s). Has stack frame (link instruction). Accesses 1 hardware/memory address(es): 0x040105b0. Small function with stack frame (callback pattern)",
+      "key_evidence": [
+        "Makes 1 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Accesses 1 hardware/memory address(es): 0x040105b0",
+        "Small function with stack frame (callback pattern)"
+      ],
+      "suggested_name": "HardwareAccess_0x000063e8",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00006414",
+      "address_decimal": 25620,
+      "name": "FUN_00006414",
+      "size": 48,
+      "categories": [
+        "Callback",
+        "Hardware"
+      ],
+      "priority": "High",
+      "complexity": "Low",
+      "reasoning": "Size: 48 bytes. Makes 1 external function call(s). Has stack frame (link instruction). Accesses 1 hardware/memory address(es): 0x040105b0. Small function with stack frame (callback pattern)",
+      "key_evidence": [
+        "Makes 1 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Accesses 1 hardware/memory address(es): 0x040105b0",
+        "Small function with stack frame (callback pattern)"
+      ],
+      "suggested_name": "HardwareAccess_0x00006414",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00006444",
+      "address_decimal": 25668,
+      "name": "FUN_00006444",
+      "size": 48,
+      "categories": [
+        "Callback",
+        "Hardware"
+      ],
+      "priority": "High",
+      "complexity": "Low",
+      "reasoning": "Size: 48 bytes. Makes 1 external function call(s). Has stack frame (link instruction). Accesses 1 hardware/memory address(es): 0x040105b0. Small function with stack frame (callback pattern)",
+      "key_evidence": [
+        "Makes 1 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Accesses 1 hardware/memory address(es): 0x040105b0",
+        "Small function with stack frame (callback pattern)"
+      ],
+      "suggested_name": "HardwareAccess_0x00006444",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x00006de4",
+      "address_decimal": 28132,
+      "name": "FUN_00006de4",
+      "size": 136,
+      "categories": [
+        "Callback"
+      ],
+      "priority": "High",
+      "complexity": "Medium",
+      "reasoning": "Size: 136 bytes. Has stack frame (link instruction). Small function with stack frame (callback pattern)",
+      "key_evidence": [
+        "Has stack frame (link instruction)",
+        "Small function with stack frame (callback pattern)"
+      ],
+      "suggested_name": "FUN_00006de4",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x000075cc",
+      "address_decimal": 30156,
+      "name": "FUN_000075cc",
+      "size": 22,
+      "categories": [
+        "Callback"
+      ],
+      "priority": "High",
+      "complexity": "Low",
+      "reasoning": "Size: 22 bytes. Makes 1 external function call(s). Has stack frame (link instruction). Small function with stack frame (callback pattern)",
+      "key_evidence": [
+        "Makes 1 external function call(s)",
+        "Has stack frame (link instruction)",
+        "Small function with stack frame (callback pattern)"
+      ],
+      "suggested_name": "FUN_000075cc",
+      "recommended_analysis_wave": 5
+    },
+    {
+      "address": "0x000075e2",
+      "address_decimal": 30178,
+      "name": "FUN_000075e2",
+      "size": 22,
+      "categories": [
+        "Callback"
+      ],
+      "priority": "High",
+      "complexity": "Low",
+      "reasoning": "Size: 22 bytes. Has stack frame (link instruction). Small function with stack frame (callback pattern)",
+      "key_evidence": [
+        "Has stack frame (link instruction)",
+        "Small function with stack frame (callback pattern)"
+      ],
+      "suggested_name": "FUN_000075e2",
+      "recommended_analysis_wave": 5
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "registers": {
+    "r8": "0xF8008100"
+  },
+  "memory_u32": {},
+  "mmio_stubs": {},
+  "note": "Empirical dispatch hint: entry bri at 0xF80014C4 reaches code island 0xF8008100 when r8 is seeded."
+}

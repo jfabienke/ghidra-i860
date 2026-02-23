@@ -1,0 +1,13 @@
+{
+  "runs": [
+    {
+      "entry": "0xF80014C4",
+      "trace_file": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260211-020258/iter_1/sweep/traces/trace_F80014C4.jsonl",
+      "log_file": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260211-020258/iter_1/sweep/logs/run_F80014C4.log",
+      "lines": "1",
+      "executed": "200",
+      "final_pc": "0x0000031C",
+      "status": "ok"
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+{
+  "schema_version": "manifest-v1",
+  "factpack_source": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/boot-rom/reports/factpack",
+  "binary_sha256": "46dea61c6c5278ad324c7a804a792f163e79bdf5a2ecc3c02d058f2d1605cb92",
+  "language_id": "i860:LE:32:XR",
+  "compiler_spec": "gcc",
+  "function_count": 30,
+  "shards": [
+    {
+      "entry": "0xfff0048c",
+      "name": "FUN_fff0048c",
+      "size": 156,
+      "insn_count": 39,
+      "priority_tags": [
+        "unresolved_bri"
+      ],
+      "file": "shards/0xfff0048c_FUN_fff0048c.json"
+    },
+    {
+      "entry": "0xfff0037c",
+      "name": "FUN_fff0037c",
+      "size": 116,
+      "insn_count": 29,
+      "priority_tags": [
+        "unresolved_bri"
+      ],
+      "file": "shards/0xfff0037c_FUN_fff0037c.json"
+    },
+    {
+      "entry": "0xfff00cb8",
+      "name": "FUN_fff00cb8",
+      "size": 1236,
+      "insn_count": 309,
+      "priority_tags": [],
+      "file": "shards/0xfff00cb8_FUN_fff00cb8.json"
+    },
+    {
+      "entry": "0xfff0079c",
+      "name": "FUN_fff0079c",
+      "size": 524,
+      "insn_count": 131,
+      "priority_tags": [],
+      "file": "shards/0xfff0079c_FUN_fff0079c.json"
+    },
+    {
+      "entry": "0xfff017f4",
+      "name": "FUN_fff017f4",
+      "size": 476,
+      "insn_count": 119,
+      "priority_tags": [],
+      "file": "shards/0xfff017f4_FUN_fff017f4.json"
+    },
+    {
+      "entry": "0xfff00020",
+      "name": "FUN_fff00020",
+      "size": 464,
+      "insn_count": 116,
+      "priority_tags": [],
+      "file": "shards/0xfff00020_FUN_fff00020.json"
+    },
+    {
+      "entry": "0xfff013a4",
+      "name": "FUN_fff013a4",
+      "size": 316,
+      "insn_count": 79,
+      "priority_tags": [],
+      "file": "shards/0xfff013a4_FUN_fff013a4.json"
+    },
+    {
+      "entry": "0xfff006c0",
+      "name": "FUN_fff006c0",
+      "size": 220,
+      "insn_count": 55,
+      "priority_tags": [],
+      "file": "shards/0xfff006c0_FUN_fff006c0.json"
+    },
+    {
+      "entry": "0xfff00540",
+      "name": "FUN_fff00540",
+      "size": 160,
+      "insn_count": 40,
+      "priority_tags": [],
+      "file": "shards/0xfff00540_FUN_fff00540.json"
+    },
+    {
+      "entry": "0xfff01580",
+      "name": "FUN_fff01580",
+      "size": 152,
+      "insn_count": 38,
+      "priority_tags": [],
+      "file": "shards/0xfff01580_FUN_fff01580.json"
+    },
+    {
+      "entry": "0xfff009c0",
+      "name": "FUN_fff009c0",
+      "size": 148,
+      "insn_count": 37,
+      "priority_tags": [],
+      "file": "shards/0xfff009c0_FUN_fff009c0.json"
+    },
+    {
+      "entry": "0xfff00ab0",
+      "name": "FUN_fff00ab0",
+      "size": 124,
+      "insn_count": 31,
+      "priority_tags": [],
+      "file": "shards/0xfff00ab0_FUN_fff00ab0.json"
+    },
+    {
+      "entry": "0xfff00be0",
+      "name": "FUN_fff00be0",
+      "size": 120,
+      "insn_count": 30,
+      "priority_tags": [],
+      "file": "shards/0xfff00be0_FUN_fff00be0.json"
+    },
+    {
+      "entry": "0xfff01a98",
+      "name": "FUN_fff01a98",
+      "size": 92,
+      "insn_count": 23,
+      "priority_tags": [],
+      "file": "shards/0xfff01a98_FUN_fff01a98.json"
+    },
+    {
+      "entry": "0xfff00b78",
+      "name": "FUN_fff00b78",
+      "size": 88,
+      "insn_count": 22,
+      "priority_tags": [],
+      "file": "shards/0xfff00b78_FUN_fff00b78.json"
+    },
+    {
+      "entry": "0xfff0021c",
+      "name": "FUN_fff0021c",
+      "size": 52,
+      "insn_count": 13,
+      "priority_tags": [],
+      "file": "shards/0xfff0021c_FUN_fff0021c.json"
+    },
+    {
+      "entry": "0xfff00260",
+      "name": "FUN_fff00260",
+      "size": 48,
+      "insn_count": 12,
+      "priority_tags": [],
+      "file": "shards/0xfff00260_FUN_fff00260.json"
+    },
+    {
+      "entry": "0xfff02560",
+      "name": "FUN_fff02560",
+      "size": 48,
+      "insn_count": 12,
+      "priority_tags": [],
+      "file": "shards/0xfff02560_FUN_fff02560.json"
+    },
+    {
+      "entry": "0xfff0001c",
+      "name": "FUN_fff0001c",
+      "size": 4,
+      "insn_count": 1,
+      "priority_tags": [],
+      "file": "shards/0xfff0001c_FUN_fff0001c.json"
+    },
+    {
+      "entry": "0xfff00250",
+      "name": "FUN_fff00250",
+      "size": 4,
+      "insn_count": 1,
+      "priority_tags": [],
+      "file": "shards/0xfff00250_FUN_fff00250.json"
+    },
+    {
+      "entry": "0xfff00290",
+      "name": "FUN_fff00290",
+      "size": 4,
+      "insn_count": 1,
+      "priority_tags": [],
+      "file": "shards/0xfff00290_FUN_fff00290.json"
+    },
+    {
+      "entry": "0xfff005e0",
+      "name": "FUN_fff005e0",
+      "size": 4,
+      "insn_count": 1,
+      "priority_tags": [],
+      "file": "shards/0xfff005e0_FUN_fff005e0.json"
+    },
+    {
+      "entry": "0xfff00a54",
+      "name": "FUN_fff00a54",
+      "size": 4,
+      "insn_count": 1,
+      "priority_tags": [],
+      "file": "shards/0xfff00a54_FUN_fff00a54.json"
+    },
+    {
+      "entry": "0xfff00b2c",
+      "name": "FUN_fff00b2c",
+      "size": 4,
+      "insn_count": 1,
+      "priority_tags": [],
+      "file": "shards/0xfff00b2c_FUN_fff00b2c.json"
+    },
+    {
+      "entry": "0xfff00c58",
+      "name": "FUN_fff00c58",
+      "size": 4,
+      "insn_count": 1,
+      "priority_tags": [],
+      "file": "shards/0xfff00c58_FUN_fff00c58.json"
+    },
+    {
+      "entry": "0xfff014e0",
+      "name": "FUN_fff014e0",
+      "size": 4,
+      "insn_count": 1,
+      "priority_tags": [],
+      "file": "shards/0xfff014e0_FUN_fff014e0.json"
+    },
+    {
+      "entry": "0xfff01618",
+      "name": "FUN_fff01618",
+      "size": 4,
+      "insn_count": 1,
+      "priority_tags": [],
+      "file": "shards/0xfff01618_FUN_fff01618.json"
+    },
+    {
+      "entry": "0xfff019d0",
+      "name": "FUN_fff019d0",
+      "size": 4,
+      "insn_count": 1,
+      "priority_tags": [],
+      "file": "shards/0xfff019d0_FUN_fff019d0.json"
+    },
+    {
+      "entry": "0xfff01b04",
+      "name": "FUN_fff01b04",
+      "size": 4,
+      "insn_count": 1,
+      "priority_tags": [],
+      "file": "shards/0xfff01b04_FUN_fff01b04.json"
+    },
+    {
+      "entry": "0xfff02590",
+      "name": "FUN_fff02590",
+      "size": 4,
+      "insn_count": 1,
+      "priority_tags": [],
+      "file": "shards/0xfff02590_FUN_fff02590.json"
+    }
+  ]
+}

@@ -154,6 +154,7 @@ ghidra-i860/
 │       │   ├── reports/               # Analysis reports + logs
 │       │   └── docs/                  # Findings + memory map
 │       ├── firmware/                  # ND firmware binaries
+│       ├── ndserver_re/               # Host-side NDserver reverse engineering workspace
 │       └── boot-rom/                  # ND boot ROM
 ├── docs/                      # Architecture & development reference
 │   ├── 01-i860-architecture-reference.md
@@ -165,8 +166,30 @@ ghidra-i860/
 │   ├── 07-lessons-learned.md
 │   ├── 08-coverage-analysis.md
 │   └── 09-dynamic-trace-integration.md
+├── corpus/                    # Consolidated RE reference corpus
+│   ├── ndserver/              # NeXTdimension server RE (~540 files)
+│   ├── firmware-analysis/     # i860 firmware analysis (~75 files)
+│   ├── embassy-research/      # Embassy framework research (~92 files)
+│   ├── boot-rom/              # ROM binaries + analysis
+│   ├── hardware/              # NeXTcube hardware reference (3 volumes)
+│   ├── nextstep-dev/          # NeXTSTEP dev docs + scraping tools
+│   └── llvm-re/               # RE-specific LLVM docs (6 files)
 └── README.md
 ```
+
+## RE Corpus
+
+The `corpus/` directory consolidates reverse engineering reference material previously scattered across multiple repositories:
+
+| Directory | Source | Contents |
+|-----------|--------|----------|
+| `ndserver/` | `nextdimension/docs/refs/ndserver-re/` | Per-function analyses, methodology, indexes |
+| `firmware-analysis/` | `nextdimension/docs/refs/firmware-analysis/` | ROM analysis, binary extracts |
+| `embassy-research/` | `nextdimension/docs/refs/embassy-research/` | HAL patterns, protocol specs |
+| `boot-rom/` | `previous/reverse-engineering/nextdimension-files/` | ROM images, disassembly, emulation docs |
+| `hardware/` | `previous/docs/hardware/` | 3-volume NeXTcube hardware reference |
+| `nextstep-dev/` | `nextdimension/docs/refs/nextstep-dev/` | NeXTSTEP API docs + scraping tools |
+| `llvm-re/` | `nextdimension/llvm-i860/docs/_archive/` | Boot ROM review, MAME review, VLIW analysis |
 
 ## Documentation
 

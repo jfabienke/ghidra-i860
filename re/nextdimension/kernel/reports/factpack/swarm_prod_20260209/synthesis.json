@@ -1,0 +1,127 @@
+{
+  "subsystems": [],
+  "cross_subsystem_flows": [],
+  "data_model_hypotheses": [
+    {
+      "structure_name": "unknown_struct_r8_based",
+      "base_register": "r8",
+      "fields": [
+        {
+          "offset": "0x16",
+          "size": 1,
+          "access_pattern": "write",
+          "interpretation": "Byte field written by multiple functions (0xf800bf74, 0xf800cc00, 0xf800cd64)"
+        },
+        {
+          "offset": "0x116",
+          "size": 2,
+          "access_pattern": "write",
+          "interpretation": "Short field at 256-byte stride from 0x16, suggesting array element or separate structure (0xf800bf74, 0xf800cc00, 0xf800cd64)"
+        },
+        {
+          "offset": "0x58",
+          "size": 1,
+          "access_pattern": "read",
+          "interpretation": "Byte field read by 0xf800af6c, 0xf8004e44"
+        },
+        {
+          "offset": "0x68",
+          "size": 1,
+          "access_pattern": "write",
+          "interpretation": "Byte field written by 0xf800cd64"
+        },
+        {
+          "offset": "0x3000",
+          "size": 4,
+          "access_pattern": "write",
+          "interpretation": "MMIO register offset written by 0xf8021a20 (duplicate paths)"
+        }
+      ],
+      "evidence_count": 8,
+      "confidence": 25
+    },
+    {
+      "structure_name": "mmio_high_space_registers",
+      "base_register": "r12 or r13 (context-dependent)",
+      "fields": [
+        {
+          "offset": "0xffffc01c",
+          "size": 4,
+          "access_pattern": "write",
+          "interpretation": "MMIO register at -0x3fe4 offset, written by 0xf800c79c, 0xf800bf74"
+        },
+        {
+          "offset": "0xffff800e",
+          "size": 4,
+          "access_pattern": "write",
+          "interpretation": "High memory space register at -0x7ff2 offset, written by 0xf800a44c"
+        },
+        {
+          "offset": "0x801c",
+          "size": 2,
+          "access_pattern": "read",
+          "interpretation": "MMIO read at -0x7fe4 offset from r12, accessed by 0xf800af6c"
+        }
+      ],
+      "evidence_count": 4,
+      "confidence": 20
+    },
+    {
+      "structure_name": "postscript_token_interface",
+      "base_register": "r8 (variable) or fixed MMIO",
+      "fields": [
+        {
+          "offset": "0x401c",
+          "size": 1,
+          "access_pattern": "write",
+          "interpretation": "PostScript token dispatch register written by 0xf800bf74, 0xf800d0ec, 0xf800c520"
+        }
+      ],
+      "evidence_count": 3,
+      "confidence": 35
+    },
+    {
+      "structure_name": "frame_or_global_struct_r3_based",
+      "base_register": "r3 (frame pointer)",
+      "fields": [
+        {
+          "offset": "0x26c",
+          "size": 2,
+          "access_pattern": "read",
+          "interpretation": "Stack frame or global data field at offset 620, loaded by 0xf800a1c8"
+        }
+      ],
+      "evidence_count": 1,
+      "confidence": 15
+    }
+  ],
+  "control_flow_summary": "All 21 accepted functions are orphaned dead code with zero callers and zero callees. No execution-proven control flow exists between any analyzed functions. The corpus consists entirely of unreachable code fragments exhibiting severe architectural violations: 77-100% of instructions in most functions write to hardwired-zero registers (r0/f0), producing no observable state changes. Common antipatterns include: (1) loads into r0 sink (discarding results), (2) missing return instructions (functions fall through to undefined memory), (3) self-contradictory register usage (e.g., r1 return address overwritten by shift operations), (4) duplicate instruction sequences suggesting misalignment or data corruption. Three functions (0xf800bf74, 0xf800d0ec, 0xf800c520) contain valid MMIO writes to 0x401C (PostScript token register), but surrounding context is nonsensical. No coherent firmware initialization, dispatch, or driver logic is observable. The analyzed set represents either: (a) linker artifacts from dead code elimination, (b) test/debug stubs never integrated into call graph, (c) data sections misinterpreted as executable code during recovery, or (d) corrupted binary regions. Static analysis has reached absolute ceiling: all functions are structurally invalid and unreachable.",
+  "unresolved_runtime_dependencies": [
+    "Emulation trace to confirm if any of the 21 functions are ever executed at runtime despite zero static callers",
+    "Dynamic analysis of r8, r12, r13 base register values to resolve MMIO address computations (offsets -0x3fe4, -0x7fe4, 0x401c, 0x3000)",
+    "Runtime memory map validation to determine if addresses 0x00, 0x78, 0x87, 0x10e4, 0x19e4, 0x3987 are valid or garbage",
+    "Symbolic execution to determine if any of 616 unresolved bri sites could target these 21 functions via runtime-computed addresses",
+    "Hardware-level bus tracing to detect if loads-to-r0-sink trigger MMIO side effects (status register clears, interrupt acknowledgment)",
+    "Binary section header analysis to confirm if addresses fall within __text (code) or __DATA/__const (data) sections",
+    "Linker map or symbol table inspection to identify original function names and determine if these are deliberate stubs or link-time artifacts"
+  ],
+  "coverage_assessment": {
+    "functions_analyzed": 21,
+    "subsystems_identified": 0,
+    "functions_unclassified": 21,
+    "key_gaps": [
+      "CRITICAL: Zero call-graph connectivity \u2014 all functions are isolated orphans",
+      "77-100% of instructions per function write to hardwired-zero registers (no computational purpose)",
+      "Missing return instructions in all functions (no br/bri r1, functions fall through)",
+      "No conformance to GCC or SPEA ABI conventions (stack frame setup, register preservation)",
+      "MMIO access patterns incomplete: token register writes exist but lack surrounding dispatch logic",
+      "Cannot identify subsystems without inter-function relationships (calls, data sharing, protocol)",
+      "No PostScript threaded interpreter detected (token read + hash + classify + bri dispatch chain absent)",
+      "No raster operations, no framebuffer access, no DMA setup, no interrupt handlers observed",
+      "Zero overlap with known runtime data zone (0xF80B7C00-0xF80C4097) except hypothetical r8/r12/r13 bases",
+      "Phase 2 bri resolution failed: 616 indirect branches, 0 static resolutions, all runtime-computed",
+      "98.6% of binary remains dark matter (only 1.4% execution-proven, 21 orphans in curated set)",
+      "All evidence supports hypothesis that these 21 functions are linker/compiler artifacts, not production firmware"
+    ]
+  }
+}

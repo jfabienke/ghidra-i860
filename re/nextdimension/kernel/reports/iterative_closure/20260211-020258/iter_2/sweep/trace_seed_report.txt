@@ -1,0 +1,18 @@
+=== Dynamic Trace -> Recovery Map Report ===
+Trace files: 1
+  - /Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260211-020258/iter_2/sweep/traces/trace_F80014C4.jsonl
+Lines total:        2
+Bad JSON lines:     0
+Events total:       2
+Indirect events:    2
+Memory events:      0
+MMIO events:        0
+Targets seen:       2
+Derived src_word:   0
+Candidates:         0
+Dynamic seeds add:  0
+Total seeds output: 311
+
+Rejected summary:
+  range_or_align: 1
+  score: 1

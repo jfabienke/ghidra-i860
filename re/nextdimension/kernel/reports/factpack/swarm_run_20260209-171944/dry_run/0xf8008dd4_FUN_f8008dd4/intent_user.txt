@@ -1,0 +1,79 @@
+Analyze the following function and return a structured JSON intent dossier.
+
+FUNCTION: FUN_f8008dd4 at 0xf8008dd4
+SIZE: 72 bytes (18 instructions)
+CONFIDENCE SOURCE: curated
+HAS UNRESOLVED BRI: False
+PRIORITY TAGS: (none)
+
+CALLERS (0): (none)
+CALLEES (0): (none)
+
+BLOCKS (1):
+  0xf8008dd4..0xf8008e1b (18 insns)
+
+INSTRUCTIONS:
+  0xf8008dd4: ld.b r7(r4),r24                          defs=[r24] uses=[r4,r7] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8008dd8: ld.b 0x1016(r16),r0                      defs=[r0_sink] uses=[r16,0x1016] pcode=[INT_SEXT,INT_ADD,LOAD,INT_ZEXT]
+  0xf8008ddc: ld.b r11(r4),r0                          defs=[r0_sink] uses=[r4,r11] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8008de0: ld.b r8(r0),r0                           defs=[r0_sink] uses=[r8,0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8008de4: ld.c fir,r0                              defs=[r0_sink] uses=[fir] pcode=[COPY]
+  0xf8008de8: ld.b r23(r0),r0                          defs=[r0_sink] uses=[0x0,r23] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8008dec: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8008df0: fst.d f0f1,r0(r0)                        defs=[] uses=[r0,0x0,f0f1] pcode=[INT_ADD,STORE]
+  0xf8008df4: ld.b r22(r8),r0                          defs=[r0_sink] uses=[r8,r22] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8008df8: ld.b r12(r12),r0                         defs=[r0_sink] uses=[r12] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8008dfc: ld.b r2(r0),r0                           defs=[r0_sink] uses=[0x0,r2] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8008e00: ld.b 0x7b87(r0),r0                       defs=[r0_sink] uses=[0x0,0x7b87] pcode=[INT_SEXT,INT_ADD,LOAD,INT_ZEXT]
+  0xf8008e04: ld.b r6(r8),r0                           defs=[r0_sink] uses=[r8,r6] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8008e08: ld.b 0x3987(r0),r0                       defs=[r0_sink] uses=[0x0,0x3987] pcode=[INT_SEXT,INT_ADD,LOAD,INT_ZEXT]
+  0xf8008e0c: xorh 0xf4c6,r24,r0                       defs=[r0_sink] uses=[0x10,r24,0xf4c6] pcode=[INT_ZEXT,INT_LEFT,INT_XOR]
+  0xf8008e10: st.s r0,0x58(r5)                         defs=[] uses=[0x0,r5,0x58] pcode=[INT_ADD,STORE]
+  0xf8008e14: xorh 0x80f6,r24,r0                       defs=[r0_sink] uses=[0x10,r24,0x80f6] pcode=[INT_ZEXT,INT_LEFT,INT_XOR]
+  0xf8008e18: ld.b r0(r16),r0                          defs=[r0_sink] uses=[0x0,r16] pcode=[INT_ADD,LOAD,INT_ZEXT]
+
+REFERENCES:
+  (none)
+
+STRINGS IN RANGE:
+  (none)
+
+DISPATCH UNRESOLVED:
+  (none)
+
+CONTEXT:
+- R15 cluster (GState flags): False
+- MMIO accesses: (none)
+- Nearby deny ranges: (none)
+- Nearby embedded objects: (none)
+
+Return ONLY valid JSON matching this schema:
+{
+  "function_id": "0xf8008dd4",
+  "function_name": "FUN_f8008dd4",
+  "primary_intent": "<one-line purpose statement>",
+  "intent_category": "<one of: initialization, dispatch, parser, raster, mmio_driver, math_kernel, utility, synchronization, error_handler, unknown>",
+  "evidence": [
+    {"addr": "0x...", "fact": "<what this instruction/pattern proves>"}
+  ],
+  "register_protocol": {
+    "inputs": ["<rN = description>"],
+    "outputs": ["<rN = description>"],
+    "side_effects": ["<memory write / MMIO / control reg change>"]
+  },
+  "data_accesses": [
+    {"addr": "0x...", "target": "0x...", "kind": "read|write|mmio", "interpretation": "..."}
+  ],
+  "control_flow_summary": "<how the function flows: linear, loop, conditional tree, dispatch, etc.>",
+  "confidence": <0-100>,
+  "confidence_factors": {
+    "supporting": ["<what raises confidence>"],
+    "limiting": ["<what caps confidence>"]
+  },
+  "alternatives": [
+    {"intent": "<alternative purpose>", "why_not_primary": "<evidence against>"}
+  ],
+  "open_questions": ["<what remains unknown>"],
+  "required_next_evidence": ["<what would resolve open questions>"],
+  "subsystem_hint": "<suggested subsystem: postscript_dispatch, pixel_pipeline, memory_management, board_init, interrupt_handling, unknown>"
+}

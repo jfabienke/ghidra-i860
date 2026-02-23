@@ -1,0 +1,16 @@
+{
+  "schema_version": "dispatch-breakthrough-queue-v1",
+  "generated_at_utc": "2026-02-13T01:26:03.065593+00:00",
+  "raw_candidates": 168,
+  "allowed_candidates": 56,
+  "dropped_candidates": 112,
+  "top_n_entries": 50,
+  "added_seed_count": 56,
+  "paths": {
+    "queue_all_json": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/dispatch_breakthrough/20260213-012603/queue_all.json",
+    "queue_ranked_csv": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/dispatch_breakthrough/20260213-012603/queue_ranked.csv",
+    "entries_topN_txt": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/dispatch_breakthrough/20260213-012603/entries_topN.txt",
+    "augmented_recovery_map_json": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/dispatch_breakthrough/20260213-012603/augmented_recovery_map.json",
+    "dropped_json": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/dispatch_breakthrough/20260213-012603/dropped.json"
+  }
+}

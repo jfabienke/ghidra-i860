@@ -1,0 +1,130 @@
+; Function: func_00004c88
+; Address: 0x00004c88 - 0x00004d9f
+; Size: 280 bytes
+; Frame: 48 bytes
+; Purpose: Unknown
+; Description: 280 bytes, frame size 48
+; Confidence: UNKNOWN
+;
+0x00004c88:  linkw %fp,#-48
+0x00004c8a:  .short 0x48e7
+0x00004c8c:  movel 0x0000266e,%d0
+0x00004c8e:  .short 0x0018
+0x00004c90:  moveal %fp@(28),%a4
+0x00004c92:  lea %fp@(-48),%a2
+0x00004c94:  moveq #48,%d2
+0x00004c96:  invalid
+0x00004c98:  .short 0x0000
+0x00004c9a:  mvzb %a0@,%d5
+0x00004c9c:  .short 0xffe8
+0x00004c9e:  invalid
+0x00004ca0:  .short 0x000c
+0x00004ca2:  .short 0xffec
+0x00004ca4:  invalid
+0x00004ca6:  .short 0x0000
+0x00004ca8:  mvzb %a4@,%d5
+0x00004caa:  .short 0xfff0
+0x00004cac:  invalid
+0x00004cae:  .short 0x0010
+0x00004cb0:  .short 0xfff4
+0x00004cb2:  invalid
+0x00004cb4:  .short 0x0000
+0x00004cb6:  mvzb %a0@+,%d5
+0x00004cb8:  .short 0xfff8
+0x00004cba:  invalid
+0x00004cbc:  .short 0x0014
+0x00004cbe:  .short 0xfffc
+0x00004cc0:  clrb %fp@(-45)
+0x00004cc2:  movel %d2,%fp@(-44)
+0x00004cc4:  invalid
+0x00004cc6:  .short 0x0000
+0x00004cc8:  btst %d0,%d0
+0x00004cca:  .short 0xffd8
+0x00004ccc:  invalid
+0x00004cce:  .short 0x0008
+0x00004cd0:  .short 0xffe0
+0x00004cd2:  invalid
+0x00004cd4:  .short 0x04ff
+0x00004cd6:  addl %d0,%d6
+0x00004cd8:  movel %d0,%fp@(-36)
+0x00004cda:  moveq #116,%d1
+0x00004cdc:  movel %d1,%fp@(-28)
+0x00004cde:  clrl %sp@-
+0x00004ce0:  clrl %sp@-
+0x00004ce2:  movel %d2,%sp@-
+0x00004ce4:  clrl %sp@-
+0x00004ce6:  movel %a2,%sp@-
+0x00004ce8:  invalid
+0x00004cea:  .short 0x04ff
+0x00004cec:  .short 0xdcc6
+0x00004cee:  movel %d0,%d2
+0x00004cf0:  .short 0xdefc
+0x00004cf2:  .short 0x0014
+0x00004cf4:  beqs 0x00000090
+0x00004cf6:  invalid
+0x00004cf8:  breakpoint
+0x00004cfa:  .short 0xff36
+0x00004cfc:  bnes 0x0000008c
+0x00004cfe:  invalid
+0x00004d00:  .short 0x04ff
+0x00004d02:  .short 0xdc4a
+0x00004d04:  movel %d2,%d0
+0x00004d06:  bras 0x0000010e
+0x00004d08:  movel %a2@(4),%d2
+0x00004d0a:  .short 0xe9ea
+0x00004d0c:  .short 0x0008
+0x00004d0e:  .short 0x0003
+0x00004d10:  invalid
+0x00004d12:  .short 0x0000
+0x00004d14:  .short 0x00d8
+0x00004d16:  .short 0x0014
+0x00004d18:  beqs 0x000000ac
+0x00004d1a:  invalid
+0x00004d1c:  breakpoint
+0x00004d1e:  .short 0xfed3
+0x00004d20:  bras 0x0000010e
+0x00004d22:  moveq #48,%d1
+0x00004d24:  cmpl %d2,%d1
+0x00004d26:  bnes 0x000000b8
+0x00004d28:  moveq #1,%d1
+0x00004d2a:  cmpl %d0,%d1
+0x00004d2c:  beqs 0x000000ca
+0x00004d2e:  moveq #32,%d1
+0x00004d30:  cmpl %d2,%d1
+0x00004d32:  bnes 0x00000108
+0x00004d34:  moveq #1,%d1
+0x00004d36:  cmpl %d0,%d1
+0x00004d38:  bnes 0x00000108
+0x00004d3a:  tstl %a2@(28)
+0x00004d3c:  beqs 0x00000108
+0x00004d3e:  movel %a2@(24),%d1
+0x00004d40:  invalid
+0x00004d42:  .short 0x0000
+0x00004d44:  mvzb %a4@+,%d5
+0x00004d46:  bnes 0x00000108
+0x00004d48:  tstl %a2@(28)
+0x00004d4a:  beqs 0x000000e2
+0x00004d4c:  movel %a2@(28),%d0
+0x00004d4e:  bras 0x0000010e
+0x00004d50:  movel %a2@(32),%d1
+0x00004d52:  invalid
+0x00004d54:  .short 0x0000
+0x00004d56:  mvzb %a0@-,%d5
+0x00004d58:  bnes 0x00000108
+0x00004d5a:  movel %a2@(36),%a3@
+0x00004d5c:  movel %a2@(40),%d1
+0x00004d5e:  invalid
+0x00004d60:  .short 0x0000
+0x00004d62:  mvzb %a4@-,%d5
+0x00004d64:  bnes 0x00000108
+0x00004d66:  movel %a2@(44),%a4@
+0x00004d68:  movel %a2@(28),%d0
+0x00004d6a:  bras 0x0000010e
+0x00004d6c:  invalid
+0x00004d6e:  breakpoint
+0x00004d70:  .short 0xfed4
+0x00004d72:  invalid
+0x00004d74:  moveb %d4,%d6
+0x00004d76:  .short 0xffc0
+0x00004d78:  unlk %fp
+0x00004d7a:  rts

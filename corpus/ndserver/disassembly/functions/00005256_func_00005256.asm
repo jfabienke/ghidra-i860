@@ -1,0 +1,116 @@
+; Function: func_00005256
+; Address: 0x00005256 - 0x0000535b
+; Size: 262 bytes
+; Frame: 308 bytes
+; Purpose: Unknown
+; Description: 262 bytes, frame size 308
+; Confidence: UNKNOWN
+;
+0x00005256:  linkw %fp,#-308
+0x00005258:  .short 0x48e7
+0x0000525a:  movew %a0@-,%d4
+0x0000525c:  movel %fp@(8),%d3
+0x0000525e:  movel %fp@(20),%d2
+0x00005260:  lea %fp@(-308),%a2
+0x00005262:  invalid
+0x00005264:  .short 0x0000
+0x00005266:  invalid
+0x00005268:  invalid
+0x0000526a:  .short 0x0000
+0x0000526c:  mvzw %a0@(ffffffffffffffe4,%sp:l:8),%d5
+0x0000526e:  invalid
+0x00005270:  .short 0x000c
+0x00005272:  .short 0xfee8
+0x00005274:  invalid
+0x00005276:  .short 0x0000
+0x00005278:  mvzw %a4@(0000000000000020,%d0:w),%d5
+0x0000527a:  invalid
+0x0000527c:  .short 0x0000
+0x0000527e:  mvzw 0x00000024,%d5
+0x00005280:  invalid
+0x00005282:  .short 0x0000
+0x00005284:  mvzw #40,%d5
+0x00005286:  pea 0x00000100
+0x00005288:  movel %fp@(16),%sp@-
+0x0000528a:  pea %a2@(44)
+0x0000528c:  invalid
+0x0000528e:  .short 0x04ff
+0x00005290:  addl %d6,%fp@-
+0x00005292:  clrb %fp@(-9)
+0x00005294:  invalid
+0x00005296:  .short 0x0000
+0x00005298:  moveq #0,%d6
+0x0000529a:  .short 0xfff8
+0x0000529c:  movel %d2,%fp@(-4)
+0x0000529e:  clrb %fp@(-305)
+0x000052a0:  movel %d4,%fp@(-304)
+0x000052a2:  invalid
+0x000052a4:  .short 0x0000
+0x000052a6:  btst %d0,%d0
+0x000052a8:  .short 0xfed4
+0x000052aa:  movel %d3,%fp@(-292)
+0x000052ac:  invalid
+0x000052ae:  .short 0x04ff
+0x000052b0:  addl %a2@,%d3
+0x000052b2:  movel %d0,%fp@(-296)
+0x000052b4:  moveq #122,%d1
+0x000052b6:  movel %d1,%fp@(-288)
+0x000052b8:  clrl %sp@-
+0x000052ba:  clrl %sp@-
+0x000052bc:  pea 0x00000020
+0x000052be:  clrl %sp@-
+0x000052c0:  movel %a2,%sp@-
+0x000052c2:  invalid
+0x000052c4:  .short 0x04ff
+0x000052c6:  .short 0xd6d6
+0x000052c8:  movel %d0,%d2
+0x000052ca:  .short 0xdefc
+0x000052cc:  .short 0x0020
+0x000052ce:  beqs 0x000000b2
+0x000052d0:  invalid
+0x000052d2:  breakpoint
+0x000052d4:  .short 0xff36
+0x000052d6:  bnes 0x000000ae
+0x000052d8:  invalid
+0x000052da:  .short 0x04ff
+0x000052dc:  .short 0xd65a
+0x000052de:  movel %d2,%d0
+0x000052e0:  bras 0x000000fc
+0x000052e2:  movel %a2@(4),%d4
+0x000052e4:  .short 0xe9ea
+0x000052e6:  .short 0x0008
+0x000052e8:  .short 0x0003
+0x000052ea:  invalid
+0x000052ec:  .short 0x0000
+0x000052ee:  .short 0x00de
+0x000052f0:  .short 0x0014
+0x000052f2:  beqs 0x000000ce
+0x000052f4:  invalid
+0x000052f6:  breakpoint
+0x000052f8:  .short 0xfed3
+0x000052fa:  bras 0x000000fc
+0x000052fc:  moveq #32,%d1
+0x000052fe:  cmpl %d4,%d1
+0x00005300:  bnes 0x000000e6
+0x00005302:  moveq #1,%d1
+0x00005304:  cmpl %d0,%d1
+0x00005306:  bnes 0x000000e6
+0x00005308:  movel %a2@(24),%d1
+0x0000530a:  invalid
+0x0000530c:  .short 0x0000
+0x0000530e:  moveq #4,%d6
+0x00005310:  beqs 0x000000ee
+0x00005312:  invalid
+0x00005314:  breakpoint
+0x00005316:  .short 0xfed4
+0x00005318:  bras 0x000000fc
+0x0000531a:  tstl %a2@(28)
+0x0000531c:  bnes 0x000000f8
+0x0000531e:  clrl %d0
+0x00005320:  bras 0x000000fc
+0x00005322:  movel %a2@(28),%d0
+0x00005324:  invalid
+0x00005326:  .short 0x041c
+0x00005328:  .short 0xfebc
+0x0000532a:  unlk %fp
+0x0000532c:  rts

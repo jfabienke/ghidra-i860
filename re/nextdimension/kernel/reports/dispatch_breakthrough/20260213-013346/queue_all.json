@@ -1,0 +1,394 @@
+[
+  {
+    "addr": "0xF8038304",
+    "refs": 3,
+    "score": 355,
+    "priority_reason": "refs=3,region=clean_window,multi_ref_bonus",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF807B6BC",
+    "refs": 3,
+    "score": 325,
+    "priority_reason": "refs=3,region=upper_text,multi_ref_bonus",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF80220E0",
+    "refs": 2,
+    "score": 257,
+    "priority_reason": "refs=2,region=clean_window,near_unresolved=0x690",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF8031C98",
+    "refs": 2,
+    "score": 256,
+    "priority_reason": "refs=2,region=clean_window,near_unresolved=0x75C",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF803249C",
+    "refs": 2,
+    "score": 240,
+    "priority_reason": "refs=2,region=clean_window,near_unresolved=0xF60",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF8032550",
+    "refs": 2,
+    "score": 238,
+    "priority_reason": "refs=2,region=clean_window,near_unresolved=0x1014",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF803017C",
+    "refs": 2,
+    "score": 231,
+    "priority_reason": "refs=2,region=clean_window,near_unresolved=0x13C0",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF80262B0",
+    "refs": 2,
+    "score": 230,
+    "priority_reason": "refs=2,region=clean_window",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF80282CC",
+    "refs": 2,
+    "score": 230,
+    "priority_reason": "refs=2,region=clean_window",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF802AE5C",
+    "refs": 2,
+    "score": 230,
+    "priority_reason": "refs=2,region=clean_window",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF802E474",
+    "refs": 2,
+    "score": 230,
+    "priority_reason": "refs=2,region=clean_window",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF802EB94",
+    "refs": 2,
+    "score": 230,
+    "priority_reason": "refs=2,region=clean_window",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF8033F90",
+    "refs": 2,
+    "score": 230,
+    "priority_reason": "refs=2,region=clean_window",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF80342B0",
+    "refs": 2,
+    "score": 230,
+    "priority_reason": "refs=2,region=clean_window",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF8034454",
+    "refs": 2,
+    "score": 230,
+    "priority_reason": "refs=2,region=clean_window",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF8034568",
+    "refs": 2,
+    "score": 230,
+    "priority_reason": "refs=2,region=clean_window",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF8034A94",
+    "refs": 2,
+    "score": 230,
+    "priority_reason": "refs=2,region=clean_window",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF803543C",
+    "refs": 2,
+    "score": 230,
+    "priority_reason": "refs=2,region=clean_window",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF8035ABC",
+    "refs": 2,
+    "score": 230,
+    "priority_reason": "refs=2,region=clean_window",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF8035E60",
+    "refs": 2,
+    "score": 230,
+    "priority_reason": "refs=2,region=clean_window",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF803619C",
+    "refs": 2,
+    "score": 230,
+    "priority_reason": "refs=2,region=clean_window",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF80362DC",
+    "refs": 2,
+    "score": 230,
+    "priority_reason": "refs=2,region=clean_window",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF8036A9C",
+    "refs": 2,
+    "score": 230,
+    "priority_reason": "refs=2,region=clean_window",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF8036ED4",
+    "refs": 2,
+    "score": 230,
+    "priority_reason": "refs=2,region=clean_window",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF80371BC",
+    "refs": 2,
+    "score": 230,
+    "priority_reason": "refs=2,region=clean_window",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF8037714",
+    "refs": 2,
+    "score": 230,
+    "priority_reason": "refs=2,region=clean_window",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF80380C4",
+    "refs": 2,
+    "score": 230,
+    "priority_reason": "refs=2,region=clean_window",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF80381BC",
+    "refs": 2,
+    "score": 230,
+    "priority_reason": "refs=2,region=clean_window",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF8038F34",
+    "refs": 2,
+    "score": 230,
+    "priority_reason": "refs=2,region=clean_window",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF803B330",
+    "refs": 2,
+    "score": 230,
+    "priority_reason": "refs=2,region=clean_window",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF803BE74",
+    "refs": 2,
+    "score": 230,
+    "priority_reason": "refs=2,region=clean_window",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF805A2A8",
+    "refs": 2,
+    "score": 215,
+    "priority_reason": "refs=2,region=mid_text",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF805A744",
+    "refs": 2,
+    "score": 215,
+    "priority_reason": "refs=2,region=mid_text",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF805A7F4",
+    "refs": 2,
+    "score": 215,
+    "priority_reason": "refs=2,region=mid_text",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF80740A4",
+    "refs": 2,
+    "score": 200,
+    "priority_reason": "refs=2,region=upper_text",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF8074AA8",
+    "refs": 2,
+    "score": 200,
+    "priority_reason": "refs=2,region=upper_text",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF8076440",
+    "refs": 2,
+    "score": 200,
+    "priority_reason": "refs=2,region=upper_text",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF80764B8",
+    "refs": 2,
+    "score": 200,
+    "priority_reason": "refs=2,region=upper_text",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF8076DD4",
+    "refs": 2,
+    "score": 200,
+    "priority_reason": "refs=2,region=upper_text",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF80777A8",
+    "refs": 2,
+    "score": 200,
+    "priority_reason": "refs=2,region=upper_text",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF807864C",
+    "refs": 2,
+    "score": 200,
+    "priority_reason": "refs=2,region=upper_text",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF8079C44",
+    "refs": 2,
+    "score": 200,
+    "priority_reason": "refs=2,region=upper_text",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF807B9F4",
+    "refs": 2,
+    "score": 200,
+    "priority_reason": "refs=2,region=upper_text",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF807CFD0",
+    "refs": 2,
+    "score": 200,
+    "priority_reason": "refs=2,region=upper_text",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF807EEF4",
+    "refs": 2,
+    "score": 200,
+    "priority_reason": "refs=2,region=upper_text",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF8083D1C",
+    "refs": 2,
+    "score": 200,
+    "priority_reason": "refs=2,region=upper_text",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF8087C18",
+    "refs": 2,
+    "score": 200,
+    "priority_reason": "refs=2,region=upper_text",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF8088B34",
+    "refs": 2,
+    "score": 200,
+    "priority_reason": "refs=2,region=upper_text",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF808EDC4",
+    "refs": 2,
+    "score": 200,
+    "priority_reason": "refs=2,region=upper_text",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF8090840",
+    "refs": 2,
+    "score": 200,
+    "priority_reason": "refs=2,region=upper_text",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF8090A78",
+    "refs": 2,
+    "score": 200,
+    "priority_reason": "refs=2,region=upper_text",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF809244C",
+    "refs": 2,
+    "score": 200,
+    "priority_reason": "refs=2,region=upper_text",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF80933B8",
+    "refs": 2,
+    "score": 200,
+    "priority_reason": "refs=2,region=upper_text",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF8097F6C",
+    "refs": 2,
+    "score": 200,
+    "priority_reason": "refs=2,region=upper_text",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF809817C",
+    "refs": 2,
+    "score": 200,
+    "priority_reason": "refs=2,region=upper_text",
+    "already_seeded": false
+  },
+  {
+    "addr": "0xF80A0808",
+    "refs": 2,
+    "score": 200,
+    "priority_reason": "refs=2,region=upper_text",
+    "already_seeded": false
+  }
+]

@@ -1,0 +1,270 @@
+{
+  "run_id": "776c10f9",
+  "model": "claude-opus-4.6",
+  "backend": "api",
+  "stats": {
+    "claims": 0,
+    "verified_accept": 0,
+    "verified_revise": 0,
+    "verified_reject": 0,
+    "gatekeeper_passed": 0,
+    "gatekeeper_failed": 0,
+    "total_tokens_in": 0,
+    "total_tokens_out": 0
+  },
+  "results": [],
+  "errors": [
+    {
+      "function_id": "0xf800c4bc",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHVDF3TFJ5JfUJVdd8'}"
+    },
+    {
+      "function_id": "0xf800a554",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHVW7JTK8b3FBN1dPt'}"
+    },
+    {
+      "function_id": "0xf800b9e0",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHVDVVq5rCGysHvW6c'}"
+    },
+    {
+      "function_id": "0xf80014c4",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHVDVgMhhNqag7LRyi'}"
+    },
+    {
+      "function_id": "0xf80090d4",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHVufTP9ypR9Ggy711'}"
+    },
+    {
+      "function_id": "0xf800c8bc",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHVsvixkbGZiVwCYpU'}"
+    },
+    {
+      "function_id": "0xf8009270",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHVtBKbdz8w2f4EgoR'}"
+    },
+    {
+      "function_id": "0xf800b904",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHWMhWFq8XLo4gwhuk'}"
+    },
+    {
+      "function_id": "0xf800d00c",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHWXd5skwJTYGmdgb4'}"
+    },
+    {
+      "function_id": "0xf800c0e8",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHWZrQt2L6a8EpGkn2'}"
+    },
+    {
+      "function_id": "0xf800cef0",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHWeZnrxHBH7JaGRNT'}"
+    },
+    {
+      "function_id": "0xf800c3f4",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHX2PS9V9LK5jSs8vo'}"
+    },
+    {
+      "function_id": "0xf800f77c",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHX9Kqx3PmxVdz5L8v'}"
+    },
+    {
+      "function_id": "0xf8008dd4",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHXJkhmFLNRR3rzEHw'}"
+    },
+    {
+      "function_id": "0xf8008000",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHXLEjt9ttEPKBnVQG'}"
+    },
+    {
+      "function_id": "0xf800878c",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHXiopaqV2sCE5v48c'}"
+    },
+    {
+      "function_id": "0xf800a08c",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHXnGqjhYkuctZuVuB'}"
+    },
+    {
+      "function_id": "0xf8008274",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHY1v682cwciQmaL7o'}"
+    },
+    {
+      "function_id": "0xf800bc68",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHY4PiwDhUkp9oaQ8h'}"
+    },
+    {
+      "function_id": "0xf800842c",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHYPjZnW2Z9fP4fjsz'}"
+    },
+    {
+      "function_id": "0xf8009420",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHYUSs9JoiJDJPuzb4'}"
+    },
+    {
+      "function_id": "0xf806f4a8",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHYj5Vv93BeGNzRrEZ'}"
+    },
+    {
+      "function_id": "0xf80094fc",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHYpnYQ8G54HXukvrw'}"
+    },
+    {
+      "function_id": "0xf806e5d8",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHZ5R3XCfUoe7m8Qbc'}"
+    },
+    {
+      "function_id": "0xf800c458",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHZA8AqWeo9fVSDGag'}"
+    },
+    {
+      "function_id": "0xf800935c",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHZTyx6HnSaAcbcA2v'}"
+    },
+    {
+      "function_id": "0xf800b38c",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHZh81mK7KcYMdq5J4'}"
+    },
+    {
+      "function_id": "0xf806e89c",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHZrYNzRt9yYyYMUtp'}"
+    },
+    {
+      "function_id": "0xf80017cc",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHZtXWvP7Q1DGztnJz'}"
+    },
+    {
+      "function_id": "0xf800cb1c",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHa9Qc4tznvGCFfxx4'}"
+    },
+    {
+      "function_id": "0xf8008b44",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHaYDq4Hoexro29Yi5'}"
+    },
+    {
+      "function_id": "0xf8008ee4",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHacguZXb5UcGnZicS'}"
+    },
+    {
+      "function_id": "0xf806f76c",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHap6Q9LWn3tdYAgFQ'}"
+    },
+    {
+      "function_id": "0xf800c630",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHaqpqvgGHiGdZhf81'}"
+    },
+    {
+      "function_id": "0xf8012388",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHbEtfdYiGeGZYXv9A'}"
+    },
+    {
+      "function_id": "0xf8000000",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHbPZwbAxN61GErwg3'}"
+    },
+    {
+      "function_id": "0xf80091ec",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHbWku5wyV1q7Rwctg'}"
+    },
+    {
+      "function_id": "0xf8008f98",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHbiAcuiYTT6doibCx'}"
+    },
+    {
+      "function_id": "0xf800cf8c",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHbv5BXzSCUBtwxbMN'}"
+    },
+    {
+      "function_id": "0xf806ea64",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHc5k1mmCp4dWRmEvQ'}"
+    },
+    {
+      "function_id": "0xf800c01c",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHcCBe1sLseEjkA9Au'}"
+    },
+    {
+      "function_id": "0xf800d804",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHcU4LfLeeVaj2ZUAS'}"
+    },
+    {
+      "function_id": "0xf8000348",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHchhSNo8JYnTTaG4K'}"
+    },
+    {
+      "function_id": "0xf800c584",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHcmuhrjMvi9vQHR9d'}"
+    },
+    {
+      "function_id": "0xf800c79c",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHctMfrbvGTdFPgpAd'}"
+    },
+    {
+      "function_id": "0xf800916c",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHdDhSoy8N9QEyt557'}"
+    },
+    {
+      "function_id": "0xf800df78",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHdTqEfR9UNGFroJqp'}"
+    },
+    {
+      "function_id": "0xf800b83c",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHdb2RyLL7q4ApUEVP'}"
+    },
+    {
+      "function_id": "0xf800d0ec",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHdstZGfBiVjCxUNey'}"
+    },
+    {
+      "function_id": "0xf800a44c",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHdwc6mf3Bx2aDn5sa'}"
+    },
+    {
+      "function_id": "0xf800f4d4",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHeDjL4CT2fvreCKWm'}"
+    },
+    {
+      "function_id": "0xf800bb60",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHeFU4VuE6zK7QA9tH'}"
+    },
+    {
+      "function_id": "0xf80054f4",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHea4X2VFCg3VaeE3z'}"
+    },
+    {
+      "function_id": "0xf8009ae8",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHehzvYofqC1CBiiYH'}"
+    },
+    {
+      "function_id": "0xf800bd9c",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHesfhN3hnfnFtBVmG'}"
+    },
+    {
+      "function_id": "0xf800c2a4",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHezrroUnWdZXku7dT'}"
+    },
+    {
+      "function_id": "0xf800c520",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHfEkP2CzjzxbvHiMB'}"
+    },
+    {
+      "function_id": "0xf80068a8",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHff3j7wcEtKJpTnu3'}"
+    },
+    {
+      "function_id": "0xf800a1c8",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHfj1th9dprrrV79uA'}"
+    },
+    {
+      "function_id": "0xf800c194",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHfqxRMYksMd7yVvtV'}"
+    },
+    {
+      "function_id": "0xf800c694",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHftSW2CghtcdcxWYY'}"
+    },
+    {
+      "function_id": "0xf800dc18",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHgMiPYdAwByXyWJx4'}"
+    },
+    {
+      "function_id": "0xf800f80c",
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.6 was not found. Did you mean claude-opus-4-6?'}, 'request_id': 'req_011CY6PHgYNgSDoFHNbBM86o'}"
+    }
+  ]
+}

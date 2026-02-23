@@ -1,0 +1,211 @@
+Analyze the following function and return a structured JSON intent dossier.
+
+FUNCTION: FUN_fff017f4 at 0xfff017f4
+SIZE: 476 bytes (119 instructions)
+CONFIDENCE SOURCE: default
+HAS UNRESOLVED BRI: False
+PRIORITY TAGS: (none)
+
+CALLERS (1): 0xfff01580 FUN_fff01580
+CALLEES (2): 0xfff0048c FUN_fff0048c [BRI], 0xfff019d0 FUN_fff019d0
+
+BLOCKS (0):
+  (none)
+
+INSTRUCTIONS:
+  0xfff017f4: addu 0x8,r2,r2                           defs=[r2] uses=[0x8,r2] pcode=[INT_SEXT,INT_ADD]
+  0xfff017f8: adds -0x30,r2,r2                         defs=[r2] uses=[0xffd0,r2] pcode=[INT_SEXT,INT_ADD]
+  0xfff017fc: st.l r3,0x29(r2)                         defs=[] uses=[r2,0x29,r3] pcode=[INT_ADD,STORE]
+  0xfff01800: st.l r1,0x2d(r2)                         defs=[] uses=[r1,r2,0x2d] pcode=[INT_ADD,STORE]
+  0xfff01804: adds 0x28,r2,r3                          defs=[r3] uses=[0x28,r2] pcode=[INT_SEXT,INT_ADD]
+  0xfff01808: st.l r4,0x1(r2)                          defs=[] uses=[r4,0x1,r2] pcode=[INT_ADD,STORE]
+  0xfff0180c: st.l r5,0x5(r2)                          defs=[] uses=[r5,0x5,r2] pcode=[INT_ADD,STORE]
+  0xfff01810: st.l r6,0x9(r2)                          defs=[] uses=[r2,r6,0x9] pcode=[INT_ADD,STORE]
+  0xfff01814: st.l r7,0xd(r2)                          defs=[] uses=[r2,r7,0xd] pcode=[INT_ADD,STORE]
+  0xfff01818: st.l r8,0x11(r2)                         defs=[] uses=[r8,0x11,r2] pcode=[INT_ADD,STORE]
+  0xfff0181c: or 0x0,r0,r8                             defs=[r8] uses=[0x0] pcode=[INT_ZEXT,INT_OR]
+  0xfff01820: subs 0x2,r8,r0                           defs=[r0_sink] uses=[r8,0x2] pcode=[INT_SEXT,INT_SUB]
+  0xfff01824: bc 0xfff0197c                            defs=[] uses=[0x0,CC] pcode=[INT_NOTEQUAL,CBRANCH]
+  0xfff01828: addu -0x8,r3,r5                          defs=[r5] uses=[0xfff8,r3] pcode=[INT_SEXT,INT_ADD]
+  0xfff0182c: or 0xb6db,r0,r4                          defs=[r4] uses=[0x0,0xb6db] pcode=[INT_ZEXT,INT_OR]
+  0xfff01830: orh 0xdb6d,r4,r4                         defs=[r4] uses=[0x10,r4,0xdb6d] pcode=[INT_ZEXT,INT_LEFT,INT_OR]
+  0xfff01834: or 0x0,r0,r7                             defs=[r7] uses=[0x0] pcode=[INT_ZEXT,INT_OR]
+  0xfff01838: or 0x0,r0,r6                             defs=[r6] uses=[0x0] pcode=[INT_ZEXT,INT_OR]
+  0xfff0183c: st.l r4,0x1(r5)                          defs=[] uses=[r4,0x1,r5] pcode=[INT_ADD,STORE]
+  0xfff01840: st.l r0,0x5(r5)                          defs=[] uses=[0x0,r5,0x5] pcode=[INT_ADD,STORE]
+  0xfff01844: fld.d 0x0(r5),f12f13                     defs=[f12f13] uses=[0x0,r5] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff01848: st.l r0,0x1(r5)                          defs=[] uses=[0x0,0x1,r5] pcode=[INT_ADD,STORE]
+  0xfff0184c: st.l r4,0x5(r5)                          defs=[] uses=[r4,r5,0x5] pcode=[INT_ADD,STORE]
+  0xfff01850: fld.d 0x0(r5),f10f11                     defs=[f10f11] uses=[0x0,r5] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff01854: st.l r0,0x1(r5)                          defs=[] uses=[0x0,0x1,r5] pcode=[INT_ADD,STORE]
+  0xfff01858: st.l r0,0x5(r5)                          defs=[] uses=[0x0,r5,0x5] pcode=[INT_ADD,STORE]
+  0xfff0185c: fld.d 0x0(r5),f8f9                       defs=[f8f9] uses=[0x0,r5] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff01860: or 0x0,r0,r19                            defs=[r19] uses=[0x0] pcode=[INT_ZEXT,INT_OR]
+  0xfff01864: subs 0x3,r19,r0                          defs=[r0_sink] uses=[0x3,r19] pcode=[INT_SEXT,INT_SUB]
+  0xfff01868: bc 0xfff018b8                            defs=[] uses=[0x0,CC] pcode=[INT_NOTEQUAL,CBRANCH]
+  0xfff0186c: shl 0x3,r19,r16                          defs=[r16] uses=[0x3,r19] pcode=[INT_LEFT]
+  0xfff01870: ld.l r16(r15),r17                        defs=[r17] uses=[r16,r15] pcode=[INT_ADD,LOAD]
+  0xfff01874: addu r16,r15,r16                         defs=[r16] uses=[r16,r15] pcode=[INT_ADD]
+  0xfff01878: ld.l 0x5(r16),r16                        defs=[r16] uses=[r16,0x5] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff0187c: addu -0x18,r16,r20                       defs=[r20] uses=[r16,0xffe8] pcode=[INT_SEXT,INT_ADD]
+  0xfff01880: or 0x0,r0,r18                            defs=[r18] uses=[0x0] pcode=[INT_ZEXT,INT_OR]
+  0xfff01884: subs r18,r20,r0                          defs=[r0_sink] uses=[r20,r18] pcode=[INT_SUB]
+  0xfff01888: bnc 0xfff018ac                           defs=[] uses=[0x0,CC] pcode=[INT_EQUAL,CBRANCH]
+  0xfff0188c: fst.d f0f1,0x0(r17)                      defs=[] uses=[0x0,f0f1,r17] pcode=[INT_SEXT,INT_ADD,STORE]
+  0xfff01890: addu 0x8,r17,r17                         defs=[r17] uses=[r17,0x8] pcode=[INT_SEXT,INT_ADD]
+  0xfff01894: fst.d f0f1,0x0(r17)                      defs=[] uses=[0x0,f0f1,r17] pcode=[INT_SEXT,INT_ADD,STORE]
+  0xfff01898: addu 0x8,r17,r17                         defs=[r17] uses=[r17,0x8] pcode=[INT_SEXT,INT_ADD]
+  0xfff0189c: fst.d f0f1,0x0(r17)                      defs=[] uses=[0x0,f0f1,r17] pcode=[INT_SEXT,INT_ADD,STORE]
+  0xfff018a0: addu 0x8,r17,r17                         defs=[r17] uses=[r17,0x8] pcode=[INT_SEXT,INT_ADD]
+  0xfff018a4: addu 0x18,r18,r18                        defs=[r18] uses=[0x18,r18] pcode=[INT_SEXT,INT_ADD]
+  0xfff018a8: subs r18,r20,r0                          defs=[r0_sink] uses=[r20,r18] pcode=[INT_SUB]
+  0xfff018ac: bc 0xfff01888                            defs=[] uses=[0x0,CC] pcode=[INT_NOTEQUAL,CBRANCH]
+  0xfff018b0: addu 0x1,r19,r19                         defs=[r19] uses=[0x1,r19] pcode=[INT_SEXT,INT_ADD]
+  0xfff018b4: subs 0x3,r19,r0                          defs=[r0_sink] uses=[0x3,r19] pcode=[INT_SEXT,INT_SUB]
+  0xfff018b8: bnc 0xfff01868                           defs=[] uses=[0x0,CC] pcode=[INT_EQUAL,CBRANCH]
+  0xfff018bc: call 0xfff0048c                          defs=[r1] uses=[0xfff018c4] pcode=[COPY,CALL]
+  0xfff018c0: _nop                                     defs=[] uses=[] pcode=[]
+  0xfff018c4: or 0x0,r0,r19                            defs=[r19] uses=[0x0] pcode=[INT_ZEXT,INT_OR]
+  0xfff018c8: subs 0x3,r19,r0                          defs=[r0_sink] uses=[0x3,r19] pcode=[INT_SEXT,INT_SUB]
+  0xfff018cc: bc 0xfff01970                            defs=[] uses=[0x0,CC] pcode=[INT_NOTEQUAL,CBRANCH]
+  0xfff018d0: shl 0x4,r8,r21                           defs=[r21] uses=[r8,0x4] pcode=[INT_LEFT]
+  0xfff018d4: or 0x200,r19,r16                         defs=[r16] uses=[0x200,r19] pcode=[INT_ZEXT,INT_OR]
+  0xfff018d8: or r16,r21,r22                           defs=[r22] uses=[r16,r21] pcode=[INT_OR]
+  0xfff018dc: shl 0x3,r19,r16                          defs=[r16] uses=[0x3,r19] pcode=[INT_LEFT]
+  0xfff018e0: ld.l r16(r15),r17                        defs=[r17] uses=[r16,r15] pcode=[INT_ADD,LOAD]
+  0xfff018e4: addu r16,r15,r16                         defs=[r16] uses=[r16,r15] pcode=[INT_ADD]
+  0xfff018e8: ld.l 0x5(r16),r16                        defs=[r16] uses=[r16,0x5] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff018ec: addu -0x18,r16,r20                       defs=[r20] uses=[r16,0xffe8] pcode=[INT_SEXT,INT_ADD]
+  0xfff018f0: or 0x0,r0,r18                            defs=[r18] uses=[0x0] pcode=[INT_ZEXT,INT_OR]
+  0xfff018f4: subs r18,r20,r0                          defs=[r0_sink] uses=[r20,r18] pcode=[INT_SUB]
+  0xfff018f8: bnc 0xfff01964                           defs=[] uses=[0x0,CC] pcode=[INT_EQUAL,CBRANCH]
+  0xfff018fc: ld.l 0x1(r17),r16                        defs=[r16] uses=[0x1,r17] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff01900: addu 0x4,r17,r17                         defs=[r17] uses=[0x4,r17] pcode=[INT_SEXT,INT_ADD]
+  0xfff01904: btne r16,r4,0xfff0192c                   defs=[] uses=[r16,r4] pcode=[INT_NOTEQUAL,CBRANCH]
+  0xfff01908: ld.l 0x1(r17),r16                        defs=[r16] uses=[0x1,r17] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff0190c: addu 0x4,r17,r17                         defs=[r17] uses=[0x4,r17] pcode=[INT_SEXT,INT_ADD]
+  0xfff01910: btne r16,r7,0xfff01940                   defs=[] uses=[r16,r7] pcode=[INT_NOTEQUAL,CBRANCH]
+  0xfff01914: ld.l 0x1(r17),r16                        defs=[r16] uses=[0x1,r17] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff01918: addu 0x4,r17,r17                         defs=[r17] uses=[0x4,r17] pcode=[INT_SEXT,INT_ADD]
+  0xfff0191c: btne r16,r6,0xfff01954                   defs=[] uses=[r16,r6] pcode=[INT_NOTEQUAL,CBRANCH]
+  0xfff01920: ld.l 0x1(r17),r16                        defs=[r16] uses=[0x1,r17] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff01924: addu 0x4,r17,r17                         defs=[r17] uses=[0x4,r17] pcode=[INT_SEXT,INT_ADD]
+  0xfff01928: bte r16,r4,0xfff01934                    defs=[] uses=[r16,r4] pcode=[INT_EQUAL,CBRANCH]
+  0xfff0192c: br 0xfff01984                            defs=[r18] uses=[r4,0x0] pcode=[INT_LEFT,BRANCH]
+  0xfff01930: _shl r0,r4,r18                           defs=[r18] uses=[r4,0x0] pcode=[INT_LEFT]
+  0xfff01934: ld.l 0x1(r17),r16                        defs=[r16] uses=[0x1,r17] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff01938: addu 0x4,r17,r17                         defs=[r17] uses=[0x4,r17] pcode=[INT_SEXT,INT_ADD]
+  0xfff0193c: bte r16,r7,0xfff01948                    defs=[] uses=[r16,r7] pcode=[INT_EQUAL,CBRANCH]
+  0xfff01940: br 0xfff01984                            defs=[r18] uses=[0x0,r7] pcode=[INT_LEFT,BRANCH]
+  0xfff01944: _shl r0,r7,r18                           defs=[r18] uses=[0x0,r7] pcode=[INT_LEFT]
+  0xfff01948: ld.l 0x1(r17),r16                        defs=[r16] uses=[0x1,r17] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff0194c: addu 0x4,r17,r17                         defs=[r17] uses=[0x4,r17] pcode=[INT_SEXT,INT_ADD]
+  0xfff01950: bte r16,r6,0xfff0195c                    defs=[] uses=[r16,r6] pcode=[INT_EQUAL,CBRANCH]
+  0xfff01954: br 0xfff01984                            defs=[r18] uses=[0x0,r6] pcode=[INT_LEFT,BRANCH]
+  0xfff01958: _shl r0,r6,r18                           defs=[r18] uses=[0x0,r6] pcode=[INT_LEFT]
+  0xfff0195c: addu 0x18,r18,r18                        defs=[r18] uses=[0x18,r18] pcode=[INT_SEXT,INT_ADD]
+  0xfff01960: subs r18,r20,r0                          defs=[r0_sink] uses=[r20,r18] pcode=[INT_SUB]
+  0xfff01964: bc 0xfff018f8                            defs=[] uses=[0x0,CC] pcode=[INT_NOTEQUAL,CBRANCH]
+  0xfff01968: addu 0x1,r19,r19                         defs=[r19] uses=[0x1,r19] pcode=[INT_SEXT,INT_ADD]
+  0xfff0196c: subs 0x3,r19,r0                          defs=[r0_sink] uses=[0x3,r19] pcode=[INT_SEXT,INT_SUB]
+  0xfff01970: bnc 0xfff018d0                           defs=[] uses=[0x0,CC] pcode=[INT_EQUAL,CBRANCH]
+  0xfff01974: addu 0x1,r8,r8                           defs=[r8] uses=[r8,0x1] pcode=[INT_SEXT,INT_ADD]
+  0xfff01978: subs 0x2,r8,r0                           defs=[r0_sink] uses=[r8,0x2] pcode=[INT_SEXT,INT_SUB]
+  0xfff0197c: bnc 0xfff01828                           defs=[] uses=[0x0,CC] pcode=[INT_EQUAL,CBRANCH]
+  0xfff01980: br 0xfff019a8                            defs=[r16] uses=[0x0] pcode=[INT_ZEXT,INT_OR,BRANCH]
+  0xfff01984: _or 0x0,r0,r16                           defs=[r16] uses=[0x0] pcode=[INT_ZEXT,INT_OR]
+  0xfff01988: st.l r22,0x3d(r15)                       defs=[] uses=[r22,r15,0x3d] pcode=[INT_ADD,STORE]
+  0xfff0198c: addu -0x4,r17,r17                        defs=[r17] uses=[r17,0xfffc] pcode=[INT_SEXT,INT_ADD]
+  0xfff01990: st.l r17,0x5d(r15)                       defs=[] uses=[r17,r15,0x5d] pcode=[INT_ADD,STORE]
+  0xfff01994: ld.l 0x1(r17),r16                        defs=[r16] uses=[0x1,r17] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff01998: xor r16,r18,r16                          defs=[r16] uses=[r16,r18] pcode=[INT_XOR]
+  0xfff0199c: st.l r16,0x61(r15)                       defs=[] uses=[r16,0x61,r15] pcode=[INT_ADD,STORE]
+  0xfff019a0: call 0xfff019d0                          defs=[r16,r1] uses=[0x0,0x5,0xfff019a8] pcode=[COPY,INT_ZEXT,INT_OR,CALL]
+  0xfff019a4: _or 0x5,r0,r16                           defs=[r16] uses=[0x0,0x5] pcode=[INT_ZEXT,INT_OR]
+  0xfff019a8: or 0x1,r0,r16                            defs=[r16] uses=[0x0,0x1] pcode=[INT_ZEXT,INT_OR]
+  0xfff019ac: ld.l -0x27(r3),r4                        defs=[r4] uses=[0xffd9,r3] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff019b0: ld.l -0x23(r3),r5                        defs=[r5] uses=[r3,0xffdd] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff019b4: ld.l -0x1f(r3),r6                        defs=[r6] uses=[0xffe1,r3] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff019b8: ld.l -0x1b(r3),r7                        defs=[r7] uses=[0xffe5,r3] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff019bc: ld.l -0x17(r3),r8                        defs=[r8] uses=[0xffe9,r3] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff019c0: ld.l 0x5(r3),r1                          defs=[r1] uses=[0x5,r3] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff019c4: shl r0,r3,r2                             defs=[r2] uses=[0x0,r3] pcode=[INT_LEFT]
+  0xfff019c8: ld.l 0x1(r3),r3                          defs=[r3] uses=[0x1,r3] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff019cc: ret                                      defs=[r2] uses=[r1,0x8,r2] pcode=[INT_SEXT,INT_ADD,RETURN]
+
+REFERENCES:
+  0xfff01824 -> 0xfff0197c [CONDITIONAL_JUMP] flow=True
+  0xfff01844 -> 0xfffffffffffffff8 [DATA] flow=False
+  0xfff01850 -> 0xfffffffffffffff8 [DATA] flow=False
+  0xfff0185c -> 0xfffffffffffffff8 [DATA] flow=False
+  0xfff01868 -> 0xfff018b8 [CONDITIONAL_JUMP] flow=True
+  0xfff01888 -> 0xfff018ac [CONDITIONAL_JUMP] flow=True
+  0xfff018ac -> 0xfff01888 [CONDITIONAL_JUMP] flow=True
+  0xfff018b8 -> 0xfff01868 [CONDITIONAL_JUMP] flow=True
+  0xfff018bc -> 0xfff0048c [UNCONDITIONAL_CALL] flow=True
+  0xfff018cc -> 0xfff01970 [CONDITIONAL_JUMP] flow=True
+  0xfff018f8 -> 0xfff01964 [CONDITIONAL_JUMP] flow=True
+  0xfff01904 -> 0xfff0192c [CONDITIONAL_JUMP] flow=True
+  0xfff01910 -> 0xfff01940 [CONDITIONAL_JUMP] flow=True
+  0xfff0191c -> 0xfff01954 [CONDITIONAL_JUMP] flow=True
+  0xfff01928 -> 0xfff01934 [CONDITIONAL_JUMP] flow=True
+  0xfff0192c -> 0xfff01984 [UNCONDITIONAL_JUMP] flow=True
+  0xfff0193c -> 0xfff01948 [CONDITIONAL_JUMP] flow=True
+  0xfff01940 -> 0xfff01984 [UNCONDITIONAL_JUMP] flow=True
+  0xfff01950 -> 0xfff0195c [CONDITIONAL_JUMP] flow=True
+  0xfff01954 -> 0xfff01984 [UNCONDITIONAL_JUMP] flow=True
+  0xfff01964 -> 0xfff018f8 [CONDITIONAL_JUMP] flow=True
+  0xfff01970 -> 0xfff018d0 [CONDITIONAL_JUMP] flow=True
+  0xfff0197c -> 0xfff01828 [CONDITIONAL_JUMP] flow=True
+  0xfff01980 -> 0xfff019a8 [UNCONDITIONAL_JUMP] flow=True
+  0xfff019a0 -> 0xfff019d0 [UNCONDITIONAL_CALL] flow=True
+  0xfff019ac -> 0xffffffffffffffd9 [DATA] flow=False
+  0xfff019b0 -> 0xffffffffffffffdd [DATA] flow=False
+  0xfff019b4 -> 0xffffffffffffffe1 [DATA] flow=False
+  0xfff019b8 -> 0xffffffffffffffe5 [DATA] flow=False
+  0xfff019bc -> 0xffffffffffffffe9 [DATA] flow=False
+  0xfff019c0 -> 0x00000005 [DATA] flow=False
+  0xfff019c8 -> 0x00000001 [DATA] flow=False
+
+STRINGS IN RANGE:
+  (none)
+
+DISPATCH UNRESOLVED:
+  (none)
+
+CONTEXT:
+- R15 cluster (GState flags): False
+- MMIO accesses: (none)
+- Nearby deny ranges: (none)
+- Nearby embedded objects: (none)
+
+Return ONLY valid JSON matching this schema:
+{
+  "function_id": "0xfff017f4",
+  "function_name": "FUN_fff017f4",
+  "primary_intent": "<one-line purpose statement>",
+  "intent_category": "<one of: initialization, dispatch, parser, raster, mmio_driver, math_kernel, utility, synchronization, error_handler, unknown>",
+  "evidence": [
+    {"addr": "0x...", "fact": "<what this instruction/pattern proves>"}
+  ],
+  "register_protocol": {
+    "inputs": ["<rN = description>"],
+    "outputs": ["<rN = description>"],
+    "side_effects": ["<memory write / MMIO / control reg change>"]
+  },
+  "data_accesses": [
+    {"addr": "0x...", "target": "0x...", "kind": "read|write|mmio", "interpretation": "..."}
+  ],
+  "control_flow_summary": "<how the function flows: linear, loop, conditional tree, dispatch, etc.>",
+  "confidence": <0-100>,
+  "confidence_factors": {
+    "supporting": ["<what raises confidence>"],
+    "limiting": ["<what caps confidence>"]
+  },
+  "alternatives": [
+    {"intent": "<alternative purpose>", "why_not_primary": "<evidence against>"}
+  ],
+  "open_questions": ["<what remains unknown>"],
+  "required_next_evidence": ["<what would resolve open questions>"],
+  "subsystem_hint": "<suggested subsystem: postscript_dispatch, pixel_pipeline, memory_management, board_init, interrupt_handling, unknown>"
+}

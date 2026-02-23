@@ -1,0 +1,13 @@
+=== State Gap Report ===
+trace files:      1
+lines total:      1
+bad json:         0
+events total:     1
+indirect events:  1
+
+Top register seed candidates:
+  r8: zero=1 total=1 nonzero=0
+
+Top memory seed candidates:
+
+MMIO terminal provenance:

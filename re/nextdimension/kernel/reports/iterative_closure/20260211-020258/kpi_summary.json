@@ -1,0 +1,41 @@
+{
+  "schema": "iterative-closure-kpi-v1",
+  "iterations": 2,
+  "converged": true,
+  "rows": [
+    {
+      "iteration": "1",
+      "dynamic_added": "0",
+      "targets_seen": "1",
+      "trace_events": "1",
+      "indirect_events": "1",
+      "functions": "60",
+      "instructions": "2536",
+      "code_bytes": "10144",
+      "coverage_pct": "1.4",
+      "state_gap_top": "r8:1",
+      "state_mutations": "1",
+      "state_json": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260211-020258/iter_1/state_next.json",
+      "map_path": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260211-020258/iter_1/sweep/dynamic_recovery_map.json",
+      "trace_path": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260211-020258/iter_1/sweep/runtime_trace_merged.jsonl",
+      "factpack_dir": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260211-020258/iter_1/factpack"
+    },
+    {
+      "iteration": "2",
+      "dynamic_added": "0",
+      "targets_seen": "2",
+      "trace_events": "2",
+      "indirect_events": "2",
+      "functions": "60",
+      "instructions": "2536",
+      "code_bytes": "10144",
+      "coverage_pct": "1.4",
+      "state_gap_top": "r18:1",
+      "state_mutations": "0",
+      "state_json": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260211-020258/iter_2/state_next.json",
+      "map_path": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260211-020258/iter_2/sweep/dynamic_recovery_map.json",
+      "trace_path": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260211-020258/iter_2/sweep/runtime_trace_merged.jsonl",
+      "factpack_dir": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260211-020258/iter_2/factpack"
+    }
+  ]
+}

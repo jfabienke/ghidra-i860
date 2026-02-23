@@ -1,0 +1,459 @@
+{
+  "run_id": "fd383569",
+  "model": "claude-opus-4-6",
+  "backend": "api",
+  "stats": {
+    "claims": 63,
+    "verified_accept": 47,
+    "verified_revise": 15,
+    "verified_reject": 0,
+    "gatekeeper_passed": 62,
+    "gatekeeper_failed": 1,
+    "total_tokens_in": 628197,
+    "total_tokens_out": 286201
+  },
+  "results": [
+    {
+      "function_id": "0xf800c4bc",
+      "status": "revise",
+      "confidence": 25,
+      "primary_intent": "PostScript-related byte-stream processing loop with MMIO token write and indirect dispatch",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800a554",
+      "status": "accept",
+      "confidence": 12,
+      "primary_intent": "UNKNOWN - appears to be a data region or lookup table misidentified as code, not a coherent executable function",
+      "contrarian_verdict": "genuinely_ambiguous"
+    },
+    {
+      "function_id": "0xf800b9e0",
+      "status": "accept",
+      "confidence": 10,
+      "primary_intent": "UNKNOWN \u2014 This region does not appear to be coherent executable code; it is likely misidentified data, a lookup table, or corrupted/non-code bytes",
+      "contrarian_verdict": "primary_stands"
+    },
+    {
+      "function_id": "0xf80014c4",
+      "status": "accept",
+      "confidence": 8,
+      "primary_intent": "UNKNOWN - appears to be non-code data or a corrupted/misidentified code region rather than a coherent function",
+      "contrarian_verdict": "primary_stands"
+    },
+    {
+      "function_id": "0xf80090d4",
+      "status": "accept",
+      "confidence": 8,
+      "primary_intent": "UNKNOWN \u2014 Discontiguous blocks with incoherent instruction sequences suggest misidentified function boundaries or corrupted/non-code data",
+      "contrarian_verdict": "primary_stands"
+    },
+    {
+      "function_id": "0xf800c8bc",
+      "status": "accept",
+      "confidence": 8,
+      "primary_intent": "UNKNOWN - This does not appear to be a coherent function; likely misidentified data or a code fragment embedded in non-executable data",
+      "contrarian_verdict": "primary_stands"
+    },
+    {
+      "function_id": "0xf8009270",
+      "status": "accept",
+      "confidence": 10,
+      "primary_intent": "Non-functional data fragment misidentified as code; likely embedded data or alignment padding rather than executable function",
+      "contrarian_verdict": "genuinely_ambiguous"
+    },
+    {
+      "function_id": "0xf800b904",
+      "status": "accept",
+      "confidence": 8,
+      "primary_intent": "UNKNOWN - appears to be non-executable embedded data misinterpreted as code, with incoherent instruction sequences and dead writes",
+      "contrarian_verdict": "primary_stands"
+    },
+    {
+      "function_id": "0xf800d00c",
+      "status": "accept",
+      "confidence": 10,
+      "primary_intent": "Non-executable embedded data or misaligned code fragment masquerading as a function due to disassembly artifact",
+      "contrarian_verdict": "primary_stands"
+    },
+    {
+      "function_id": "0xf800c0e8",
+      "status": "accept",
+      "confidence": 12,
+      "primary_intent": "Not a real function \u2014 appears to be non-code data or a misidentified region containing fragments of PostScript dispatch patterns and MMIO access patterns",
+      "contrarian_verdict": "genuinely_ambiguous"
+    },
+    {
+      "function_id": "0xf800cef0",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Non-executable data or misaligned code fragment mistakenly disassembled as a function",
+      "contrarian_verdict": "primary_stands"
+    },
+    {
+      "function_id": "0xf800c3f4",
+      "status": "accept",
+      "confidence": 35,
+      "primary_intent": "MMIO token read and echo-back sequence reading from offset 0x401C via two different base registers, with intermediate copy to FP register and write-back",
+      "contrarian_verdict": "genuinely_ambiguous"
+    },
+    {
+      "function_id": "0xf800f77c",
+      "status": "accept",
+      "confidence": 42,
+      "primary_intent": "Read a token byte from MMIO port 0x401c, copy it to an integer-to-FP transfer register, echo it back to a mirrored address, perform a table lookup, and read the next token as a short",
+      "contrarian_verdict": "genuinely_ambiguous"
+    },
+    {
+      "function_id": "0xf8008dd4",
+      "status": "revise",
+      "confidence": 40,
+      "primary_intent": "PostScript threaded interpreter dispatch block that reads 8 token bytes, decodes each via XOR hash and lookup table, loads intermediate results into registers r16/r8/r4/r2/r1, then dispatches via indirect branch",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf8008000",
+      "status": "accept",
+      "confidence": 8,
+      "primary_intent": "UNKNOWN \u2014 appears to be non-executable data or a corrupted/misidentified code region rather than a coherent function",
+      "contrarian_verdict": "primary_stands"
+    },
+    {
+      "function_id": "0xf800878c",
+      "status": "revise",
+      "confidence": 8,
+      "primary_intent": "UNKNOWN \u2014 likely not valid executable code; appears to be misidentified data or a lookup table interpreted as instructions",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800a08c",
+      "status": "accept",
+      "confidence": 8,
+      "primary_intent": "UNKNOWN - appears to be non-code data misinterpreted as instructions, or an encoded/obfuscated block",
+      "contrarian_verdict": "genuinely_ambiguous"
+    },
+    {
+      "function_id": "0xf8008274",
+      "status": "accept",
+      "confidence": 10,
+      "primary_intent": "UNKNOWN \u2014 appears to be non-code data or corrupted/misidentified region masquerading as a function",
+      "contrarian_verdict": "genuinely_ambiguous"
+    },
+    {
+      "function_id": "0xf800bc68",
+      "status": "revise",
+      "confidence": 25,
+      "primary_intent": "PostScript threaded-code dispatch handler that performs byte-level data manipulation and exits via computed indirect branch",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800842c",
+      "status": "revise",
+      "confidence": 25,
+      "primary_intent": "Threaded interpreter fragment performing byte/short loads, a conditional branch, and indirect dispatch via bri r6",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf8009420",
+      "status": "accept",
+      "confidence": 10,
+      "primary_intent": "UNKNOWN - Appears to be non-code data misinterpreted as instructions, given the prevalence of loads into r0 (sink) and incoherent register usage patterns",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf806f4a8",
+      "status": "revise",
+      "confidence": 10,
+      "primary_intent": "UNKNOWN - Appears to be misidentified data or corrupted code masquerading as a function; instruction sequence is incoherent",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf80094fc",
+      "status": "accept",
+      "confidence": 25,
+      "primary_intent": "PostScript threaded-code handler that performs multiple byte loads (some sinking to r0), stores a byte, computes a bitmask via andnot, and dispatches to the next token handler via bri r20",
+      "contrarian_verdict": "genuinely_ambiguous"
+    },
+    {
+      "function_id": "0xf806e5d8",
+      "status": "revise",
+      "confidence": 25,
+      "primary_intent": "Read a byte from offset 0x607 of a structure pointed to by r16, conditionally branch based on r26, and return via indirect branch with the byte value in r1",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800c458",
+      "status": "revise",
+      "confidence": 48,
+      "primary_intent": "PostScript threaded-code primitive that performs a left shift operation and clears specific GState flag bits, then returns via threaded dispatch",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800935c",
+      "status": "gatekeeper_failed",
+      "reasons": [
+        "Confidence 52 exceeds 50 ceiling for unresolved-bri function"
+      ]
+    },
+    {
+      "function_id": "0xf800b38c",
+      "status": "revise",
+      "confidence": 30,
+      "primary_intent": "Trap handler stub that stores a byte to a GState-relative offset and returns via indirect branch through r31",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf806e89c",
+      "status": "revise",
+      "confidence": 20,
+      "primary_intent": "Load a byte from a structure field at offset 0x505 from r8, triggering a side effect (cache touch or hardware probe), then return to the caller's caller via saved return address",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf80017cc",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Not a real executable function \u2014 appears to be misidentified data or padding region decoded as instructions",
+      "contrarian_verdict": "primary_stands"
+    },
+    {
+      "function_id": "0xf800cb1c",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "UNKNOWN \u2014 appears to be non-executable data misinterpreted as code, not a coherent function",
+      "contrarian_verdict": "primary_stands"
+    },
+    {
+      "function_id": "0xf8008b44",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Non-executable data region misidentified as a function; the instruction sequence is incoherent and appears to be encoded data or resource content",
+      "contrarian_verdict": "primary_stands"
+    },
+    {
+      "function_id": "0xf8008ee4",
+      "status": "accept",
+      "confidence": 85,
+      "primary_intent": "Non-functional data region misinterpreted as code \u2014 all instructions write exclusively to r0 (hardwired zero sink), producing no observable side effects",
+      "contrarian_verdict": "primary_stands"
+    },
+    {
+      "function_id": "0xf806f76c",
+      "status": "accept",
+      "confidence": 12,
+      "primary_intent": "UNKNOWN - Appears to be disassembler-misidentified or corrupted function; instructions form incoherent patterns suggesting data misinterpreted as code or a diagnostic/test stub",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800c630",
+      "status": "accept",
+      "confidence": 8,
+      "primary_intent": "UNKNOWN - Non-contiguous blocks with predominantly sink loads (to r0) suggest data prefetch, cache-line touch, or corrupted/misidentified code",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf8012388",
+      "status": "revise",
+      "confidence": 90,
+      "primary_intent": "UNKNOWN - This appears to be non-executable data misinterpreted as code, not a coherent function",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf8000000",
+      "status": "accept",
+      "confidence": 20,
+      "primary_intent": "Non-executable padding or corrupted/misidentified data region at the binary load address, not a coherent function",
+      "contrarian_verdict": "primary_stands"
+    },
+    {
+      "function_id": "0xf80091ec",
+      "status": "accept",
+      "confidence": 10,
+      "primary_intent": "UNKNOWN \u2014 appears to be non-executable data or garbage misidentified as code; the instruction sequence is incoherent with no return, no call, and predominantly sinks to r0",
+      "contrarian_verdict": "genuinely_ambiguous"
+    },
+    {
+      "function_id": "0xf8008f98",
+      "status": "accept",
+      "confidence": 82,
+      "primary_intent": "Non-executable data region misinterpreted as code; likely embedded data or padding bytes, not a real function",
+      "contrarian_verdict": "primary_stands"
+    },
+    {
+      "function_id": "0xf800cf8c",
+      "status": "revise",
+      "confidence": 85,
+      "primary_intent": "Non-executable data or misinterpreted data region decoded as instructions - not a real function",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf806ea64",
+      "status": "accept",
+      "confidence": 10,
+      "primary_intent": "UNKNOWN - Non-contiguous blocks with inconsistent operations suggest possible disassembly artifact, data misinterpreted as code, or a trap/fault handler stub",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800c01c",
+      "status": "revise",
+      "confidence": 20,
+      "primary_intent": "Non-executable data region misinterpreted as code; contains interleaved load/store bytes and ixfr-to-f0 instructions consistent with embedded data or alignment padding",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800d804",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Non-executable data or encoding table misidentified as a function; the instruction sequence is not coherent code",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf8000348",
+      "status": "accept",
+      "confidence": 82,
+      "primary_intent": "NOP sled / padding region consisting of 17 identical no-effect instructions (ld.b from address 0 into hardwired-zero register r0)",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800c584",
+      "status": "accept",
+      "confidence": 12,
+      "primary_intent": "UNKNOWN \u2014 appears to be non-executable data or misaligned code mistakenly disassembled as a function",
+      "contrarian_verdict": "primary_stands"
+    },
+    {
+      "function_id": "0xf800c79c",
+      "status": "accept",
+      "confidence": 10,
+      "primary_intent": "UNKNOWN \u2014 Appears to be non-code data or a misidentified code region; instruction patterns are incoherent as a function",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800916c",
+      "status": "revise",
+      "confidence": 10,
+      "primary_intent": "UNKNOWN - appears to be non-executable data or a corrupted/misidentified code region, not a coherent function",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800df78",
+      "status": "accept",
+      "confidence": 10,
+      "primary_intent": "UNKNOWN \u2014 Appears to be non-executable data or a corrupted/misidentified code region rather than a coherent function",
+      "contrarian_verdict": "genuinely_ambiguous"
+    },
+    {
+      "function_id": "0xf800b83c",
+      "status": "accept",
+      "confidence": 10,
+      "primary_intent": "UNKNOWN - Likely not a coherent function; appears to be non-code data misidentified as executable instructions",
+      "contrarian_verdict": "genuinely_ambiguous"
+    },
+    {
+      "function_id": "0xf800d0ec",
+      "status": "revise",
+      "confidence": 8,
+      "primary_intent": "UNKNOWN \u2014 appears to be non-functional or misidentified data/garbage interpreted as code; the instruction sequence is incoherent",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800a44c",
+      "status": "accept",
+      "confidence": 8,
+      "primary_intent": "UNKNOWN - Appears to be non-code data or corrupted/misidentified code region masquerading as a function",
+      "contrarian_verdict": "primary_stands"
+    },
+    {
+      "function_id": "0xf800f4d4",
+      "status": "accept",
+      "confidence": 10,
+      "primary_intent": "UNKNOWN - Appears to be non-functional code or data misinterpreted as instructions; loads into r0 (hardwired zero sink) dominate, with a single byte store of zero",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800bb60",
+      "status": "accept",
+      "confidence": 8,
+      "primary_intent": "UNKNOWN \u2014 Likely not a coherent function; appears to be misidentified data or a code fragment with no callers, no return, and incoherent instruction semantics",
+      "contrarian_verdict": "genuinely_ambiguous"
+    },
+    {
+      "function_id": "0xf80054f4",
+      "status": "accept",
+      "confidence": 20,
+      "primary_intent": "Non-functional code region: sequence of loads into hardwired-zero register r0, producing no observable effect",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf8009ae8",
+      "status": "accept",
+      "confidence": 82,
+      "primary_intent": "Non-functional data fragment or alignment padding misidentified as code; the instructions form no coherent computation",
+      "contrarian_verdict": "primary_stands"
+    },
+    {
+      "function_id": "0xf800bd9c",
+      "status": "accept",
+      "confidence": 10,
+      "primary_intent": "UNKNOWN \u2014 appears to be non-executable data or misidentified code; all loads target r0 (hardwired zero sink) with no meaningful computation or return",
+      "contrarian_verdict": "genuinely_ambiguous"
+    },
+    {
+      "function_id": "0xf800c2a4",
+      "status": "accept",
+      "confidence": 10,
+      "primary_intent": "UNKNOWN - Appears to be non-functional data or misidentified code; all loads write to hardwired-zero r0 (discarded), suggesting this is not valid executable code",
+      "contrarian_verdict": "primary_stands"
+    },
+    {
+      "function_id": "0xf800c520",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Not a real function \u2014 appears to be non-code data or padding misinterpreted as instructions",
+      "contrarian_verdict": "primary_stands"
+    },
+    {
+      "function_id": "0xf80068a8",
+      "status": "accept",
+      "confidence": 8,
+      "primary_intent": "UNKNOWN - appears to be misidentified data or padding interpreted as code; instructions write only to r0 (hardwired zero sink) with no meaningful output",
+      "contrarian_verdict": "primary_stands"
+    },
+    {
+      "function_id": "0xf800a1c8",
+      "status": "accept",
+      "confidence": 10,
+      "primary_intent": "UNKNOWN \u2014 Fragment of code that reads a byte from fixed address 0x3987, stores a halfword at offset 0x58 of a structure, and reads another byte; all results go to r0 (hardwired zero sink), making this non-functional as a standalone routine",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800c194",
+      "status": "accept",
+      "confidence": 12,
+      "primary_intent": "UNKNOWN \u2014 Fragment of threaded PostScript code performing miscellaneous byte store, arithmetic, and a load with no coherent single purpose discernible from the evidence",
+      "contrarian_verdict": "genuinely_ambiguous"
+    },
+    {
+      "function_id": "0xf800c694",
+      "status": "accept",
+      "confidence": 20,
+      "primary_intent": "Data padding/alignment region consisting of NOP-like loads to r0 (sinking results) followed by a zero-store via f0f1, likely not a real callable function",
+      "contrarian_verdict": "genuinely_ambiguous"
+    },
+    {
+      "function_id": "0xf800dc18",
+      "status": "accept",
+      "confidence": 10,
+      "primary_intent": "UNKNOWN - Fragment of a larger function; performs a byte load, bit masking, a discarded load, and a store, but lacks coherent standalone purpose",
+      "contrarian_verdict": "genuinely_ambiguous"
+    },
+    {
+      "function_id": "0xf800f80c",
+      "status": "accept",
+      "confidence": 12,
+      "primary_intent": "Non-functional data fragment or misidentified code region \u2014 instructions consist of loads into hardwired-zero r0 and an unrelated shift, suggesting this is not coherent executable code",
+      "contrarian_verdict": "primary_stands"
+    }
+  ],
+  "errors": []
+}

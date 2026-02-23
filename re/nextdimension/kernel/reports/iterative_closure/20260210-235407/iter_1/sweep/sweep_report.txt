@@ -1,0 +1,11 @@
+=== Sweep Summary ===
+entries_total:        1
+runs_ok:             1
+runs_failed:         0
+total_trace_lines:   0
+total_executed_insn: 64
+trace_merged_jsonl:  /Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260210-235407/iter_1/sweep/runtime_trace_merged.jsonl
+trace_map:           /Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260210-235407/iter_1/sweep/dynamic_recovery_map.json
+trace_report:        /Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260210-235407/iter_1/sweep/trace_seed_report.txt
+manifest_json:       /Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260210-235407/iter_1/sweep/sweep_manifest.json
+sweep_csv:           /Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260210-235407/iter_1/sweep/sweep.csv

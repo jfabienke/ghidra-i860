@@ -1,0 +1,5248 @@
+{
+  "metadata": {
+    "total_functions": 88,
+    "functions_with_calls": 86,
+    "total_calls": 334,
+    "internal_calls": 72,
+    "library_calls": 232,
+    "external_calls": 30,
+    "max_depth": 3,
+    "code_range": {
+      "start": "0x00002000",
+      "end": "0x00008000"
+    }
+  },
+  "functions": [
+    {
+      "address": 11718,
+      "address_hex": "0x00002dc6",
+      "name": "FUN_00002dc6",
+      "size": 662,
+      "external": false,
+      "thunk": false,
+      "depth": 3,
+      "calls": [
+        {
+          "source_address": 11762,
+          "source_address_hex": "0x00002df2",
+          "target_address": 83898376,
+          "target_address_hex": "0x05003008",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 11786,
+          "source_address_hex": "0x00002e0a",
+          "target_address": 83894686,
+          "target_address_hex": "0x0500219e",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 11798,
+          "source_address_hex": "0x00002e16",
+          "target_address": 12380,
+          "target_address_hex": "0x0000305c",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_0000305c"
+        },
+        {
+          "source_address": 11832,
+          "source_address_hex": "0x00002e38",
+          "target_address": 83896852,
+          "target_address_hex": "0x05002a14",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 11854,
+          "source_address_hex": "0x00002e4e",
+          "target_address": 83896516,
+          "target_address_hex": "0x050028c4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 11864,
+          "source_address_hex": "0x00002e58",
+          "target_address": 83895472,
+          "target_address_hex": "0x050024b0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 11878,
+          "source_address_hex": "0x00002e66",
+          "target_address": 17128,
+          "target_address_hex": "0x000042e8",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_000042e8"
+        },
+        {
+          "source_address": 11898,
+          "source_address_hex": "0x00002e7a",
+          "target_address": 83896516,
+          "target_address_hex": "0x050028c4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 11908,
+          "source_address_hex": "0x00002e84",
+          "target_address": 83895472,
+          "target_address_hex": "0x050024b0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 11954,
+          "source_address_hex": "0x00002eb2",
+          "target_address": 83897572,
+          "target_address_hex": "0x05002ce4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 11964,
+          "source_address_hex": "0x00002ebc",
+          "target_address": 83895472,
+          "target_address_hex": "0x050024b0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 11986,
+          "source_address_hex": "0x00002ed2",
+          "target_address": 83897572,
+          "target_address_hex": "0x05002ce4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 11996,
+          "source_address_hex": "0x00002edc",
+          "target_address": 83895472,
+          "target_address_hex": "0x050024b0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12026,
+          "source_address_hex": "0x00002efa",
+          "target_address": 23286,
+          "target_address_hex": "0x00005af6",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00005af6"
+        },
+        {
+          "source_address": 12048,
+          "source_address_hex": "0x00002f10",
+          "target_address": 83896516,
+          "target_address_hex": "0x050028c4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12058,
+          "source_address_hex": "0x00002f1a",
+          "target_address": 83895472,
+          "target_address_hex": "0x050024b0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12074,
+          "source_address_hex": "0x00002f2a",
+          "target_address": 14368,
+          "target_address_hex": "0x00003820",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00003820"
+        },
+        {
+          "source_address": 12096,
+          "source_address_hex": "0x00002f40",
+          "target_address": 20856,
+          "target_address_hex": "0x00005178",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00005178"
+        },
+        {
+          "source_address": 12118,
+          "source_address_hex": "0x00002f56",
+          "target_address": 83896516,
+          "target_address_hex": "0x050028c4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12128,
+          "source_address_hex": "0x00002f60",
+          "target_address": 83895472,
+          "target_address_hex": "0x050024b0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12140,
+          "source_address_hex": "0x00002f6c",
+          "target_address": 23846,
+          "target_address_hex": "0x00005d26",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00005d26"
+        },
+        {
+          "source_address": 12166,
+          "source_address_hex": "0x00002f86",
+          "target_address": 19026,
+          "target_address_hex": "0x00004a52",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00004a52"
+        },
+        {
+          "source_address": 12188,
+          "source_address_hex": "0x00002f9c",
+          "target_address": 12800,
+          "target_address_hex": "0x00003200",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00003200"
+        },
+        {
+          "source_address": 12208,
+          "source_address_hex": "0x00002fb0",
+          "target_address": 83896516,
+          "target_address_hex": "0x050028c4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12220,
+          "source_address_hex": "0x00002fbc",
+          "target_address": 14452,
+          "target_address_hex": "0x00003874",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00003874"
+        },
+        {
+          "source_address": 12230,
+          "source_address_hex": "0x00002fc6",
+          "target_address": 83895472,
+          "target_address_hex": "0x050024b0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12246,
+          "source_address_hex": "0x00002fd6",
+          "target_address": 12932,
+          "target_address_hex": "0x00003284",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00003284"
+        },
+        {
+          "source_address": 12258,
+          "source_address_hex": "0x00002fe2",
+          "target_address": 23904,
+          "target_address_hex": "0x00005d60",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00005d60"
+        },
+        {
+          "source_address": 12274,
+          "source_address_hex": "0x00002ff2",
+          "target_address": 83898274,
+          "target_address_hex": "0x05002fa2",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12304,
+          "source_address_hex": "0x00003010",
+          "target_address": 14748,
+          "target_address_hex": "0x0000399c",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_0000399c"
+        },
+        {
+          "source_address": 12316,
+          "source_address_hex": "0x0000301c",
+          "target_address": 14452,
+          "target_address_hex": "0x00003874",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00003874"
+        },
+        {
+          "source_address": 12324,
+          "source_address_hex": "0x00003024",
+          "target_address": 83895472,
+          "target_address_hex": "0x050024b0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12338,
+          "source_address_hex": "0x00003032",
+          "target_address": 83895958,
+          "target_address_hex": "0x05002696",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12350,
+          "source_address_hex": "0x0000303e",
+          "target_address": 83898274,
+          "target_address_hex": "0x05002fa2",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12360,
+          "source_address_hex": "0x00003048",
+          "target_address": 83896366,
+          "target_address_hex": "0x0500282e",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 35,
+        "internal": 13,
+        "library": 22,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 12380,
+      "address_hex": "0x0000305c",
+      "name": "FUN_0000305c",
+      "size": 102,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 12394,
+          "source_address_hex": "0x0000306a",
+          "target_address": 83897572,
+          "target_address_hex": "0x05002ce4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12404,
+          "source_address_hex": "0x00003074",
+          "target_address": 83895472,
+          "target_address_hex": "0x050024b0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12434,
+          "source_address_hex": "0x00003092",
+          "target_address": 83898238,
+          "target_address_hex": "0x05002f7e",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12450,
+          "source_address_hex": "0x000030a2",
+          "target_address": 83894452,
+          "target_address_hex": "0x050020b4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12468,
+          "source_address_hex": "0x000030b4",
+          "target_address": 83895598,
+          "target_address_hex": "0x0500252e",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12474,
+          "source_address_hex": "0x000030ba",
+          "target_address": 83894566,
+          "target_address_hex": "0x05002126",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 11718,
+          "caller_address_hex": "0x00002dc6",
+          "caller_name": "FUN_00002dc6",
+          "call_site": 11798,
+          "call_site_hex": "0x00002e16"
+        }
+      ],
+      "call_counts": {
+        "total": 6,
+        "internal": 0,
+        "library": 6,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 12482,
+      "address_hex": "0x000030c2",
+      "name": "FUN_000030c2",
+      "size": 318,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 12560,
+          "source_address_hex": "0x00003110",
+          "target_address": 83898718,
+          "target_address_hex": "0x0500315e",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12568,
+          "source_address_hex": "0x00003118",
+          "target_address": 83899090,
+          "target_address_hex": "0x050032d2",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12590,
+          "source_address_hex": "0x0000312e",
+          "target_address": 83896516,
+          "target_address_hex": "0x050028c4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12652,
+          "source_address_hex": "0x0000316c",
+          "target_address": 83898718,
+          "target_address_hex": "0x0500315e",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12660,
+          "source_address_hex": "0x00003174",
+          "target_address": 83899048,
+          "target_address_hex": "0x050032a8",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12682,
+          "source_address_hex": "0x0000318a",
+          "target_address": 83896516,
+          "target_address_hex": "0x050028c4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12712,
+          "source_address_hex": "0x000031a8",
+          "target_address": 160,
+          "target_address_hex": "0x000000a0",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        },
+        {
+          "source_address": 12730,
+          "source_address_hex": "0x000031ba",
+          "target_address": 83898718,
+          "target_address_hex": "0x0500315e",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12738,
+          "source_address_hex": "0x000031c2",
+          "target_address": 83899060,
+          "target_address_hex": "0x050032b4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12760,
+          "source_address_hex": "0x000031d8",
+          "target_address": 83896516,
+          "target_address_hex": "0x050028c4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12778,
+          "source_address_hex": "0x000031ea",
+          "target_address": 83898718,
+          "target_address_hex": "0x0500315e",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12786,
+          "source_address_hex": "0x000031f2",
+          "target_address": 83899066,
+          "target_address_hex": "0x050032ba",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 13236,
+          "caller_address_hex": "0x000033b4",
+          "caller_name": "FUN_000033b4",
+          "call_site": 13616,
+          "call_site_hex": "0x00003530"
+        }
+      ],
+      "call_counts": {
+        "total": 12,
+        "internal": 0,
+        "library": 11,
+        "external": 1
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 12800,
+      "address_hex": "0x00003200",
+      "name": "FUN_00003200",
+      "size": 132,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 12818,
+          "source_address_hex": "0x00003212",
+          "target_address": 162,
+          "target_address_hex": "0x000000a2",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        },
+        {
+          "source_address": 12822,
+          "source_address_hex": "0x00003216",
+          "target_address": 83897428,
+          "target_address_hex": "0x05002c54",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12896,
+          "source_address_hex": "0x00003260",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12908,
+          "source_address_hex": "0x0000326c",
+          "target_address": 162,
+          "target_address_hex": "0x000000a2",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        },
+        {
+          "source_address": 12912,
+          "source_address_hex": "0x00003270",
+          "target_address": 83897434,
+          "target_address_hex": "0x05002c5a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 11718,
+          "caller_address_hex": "0x00002dc6",
+          "caller_name": "FUN_00002dc6",
+          "call_site": 12188,
+          "call_site_hex": "0x00002f9c"
+        }
+      ],
+      "call_counts": {
+        "total": 5,
+        "internal": 0,
+        "library": 3,
+        "external": 2
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 12932,
+      "address_hex": "0x00003284",
+      "name": "FUN_00003284",
+      "size": 304,
+      "external": false,
+      "thunk": false,
+      "depth": 1,
+      "calls": [
+        {
+          "source_address": 12952,
+          "source_address_hex": "0x00003298",
+          "target_address": 83898718,
+          "target_address_hex": "0x0500315e",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 12974,
+          "source_address_hex": "0x000032ae",
+          "target_address": 19026,
+          "target_address_hex": "0x00004a52",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00004a52"
+        },
+        {
+          "source_address": 12998,
+          "source_address_hex": "0x000032c6",
+          "target_address": 14368,
+          "target_address_hex": "0x00003820",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00003820"
+        },
+        {
+          "source_address": 13034,
+          "source_address_hex": "0x000032ea",
+          "target_address": 24042,
+          "target_address_hex": "0x00005dea",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00005dea"
+        },
+        {
+          "source_address": 13114,
+          "source_address_hex": "0x0000333a",
+          "target_address": 17350,
+          "target_address_hex": "0x000043c6",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_000043c6"
+        },
+        {
+          "source_address": 13150,
+          "source_address_hex": "0x0000335e",
+          "target_address": 83898718,
+          "target_address_hex": "0x0500315e",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 13158,
+          "source_address_hex": "0x00003366",
+          "target_address": 83897428,
+          "target_address_hex": "0x05002c54",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 13178,
+          "source_address_hex": "0x0000337a",
+          "target_address": 23974,
+          "target_address_hex": "0x00005da6",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00005da6"
+        },
+        {
+          "source_address": 13210,
+          "source_address_hex": "0x0000339a",
+          "target_address": 162,
+          "target_address_hex": "0x000000a2",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        },
+        {
+          "source_address": 13222,
+          "source_address_hex": "0x000033a6",
+          "target_address": 162,
+          "target_address_hex": "0x000000a2",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 11718,
+          "caller_address_hex": "0x00002dc6",
+          "caller_name": "FUN_00002dc6",
+          "call_site": 12246,
+          "call_site_hex": "0x00002fd6"
+        }
+      ],
+      "call_counts": {
+        "total": 10,
+        "internal": 5,
+        "library": 3,
+        "external": 2
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 13236,
+      "address_hex": "0x000033b4",
+      "name": "FUN_000033b4",
+      "size": 608,
+      "external": false,
+      "thunk": false,
+      "depth": 1,
+      "calls": [
+        {
+          "source_address": 13256,
+          "source_address_hex": "0x000033c8",
+          "target_address": 83894728,
+          "target_address_hex": "0x050021c8",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 13270,
+          "source_address_hex": "0x000033d6",
+          "target_address": 83894494,
+          "target_address_hex": "0x050020de",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 13524,
+          "source_address_hex": "0x000034d4",
+          "target_address": 160,
+          "target_address_hex": "0x000000a0",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        },
+        {
+          "source_address": 13616,
+          "source_address_hex": "0x00003530",
+          "target_address": 12482,
+          "target_address_hex": "0x000030c2",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_000030c2"
+        },
+        {
+          "source_address": 13738,
+          "source_address_hex": "0x000035aa",
+          "target_address": 160,
+          "target_address_hex": "0x000000a0",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        },
+        {
+          "source_address": 13804,
+          "source_address_hex": "0x000035ec",
+          "target_address": 25076,
+          "target_address_hex": "0x000061f4",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_000061f4"
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 14748,
+          "caller_address_hex": "0x0000399c",
+          "caller_name": "FUN_0000399c",
+          "call_site": 15386,
+          "call_site_hex": "0x00003c1a"
+        }
+      ],
+      "call_counts": {
+        "total": 6,
+        "internal": 2,
+        "library": 2,
+        "external": 2
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 13844,
+      "address_hex": "0x00003614",
+      "name": "FUN_00003614",
+      "size": 90,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 13870,
+          "source_address_hex": "0x0000362e",
+          "target_address": 83898718,
+          "target_address_hex": "0x0500315e",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 13878,
+          "source_address_hex": "0x00003636",
+          "target_address": 83899048,
+          "target_address_hex": "0x050032a8",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 13916,
+          "source_address_hex": "0x0000365c",
+          "target_address": 83897572,
+          "target_address_hex": "0x05002ce4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 24630,
+          "caller_address_hex": "0x00006036",
+          "caller_name": "FUN_00006036",
+          "call_site": 24738,
+          "call_site_hex": "0x000060a2"
+        }
+      ],
+      "call_counts": {
+        "total": 3,
+        "internal": 0,
+        "library": 3,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 13934,
+      "address_hex": "0x0000366e",
+      "name": "FUN_0000366e",
+      "size": 30,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 13946,
+          "source_address_hex": "0x0000367a",
+          "target_address": 83898718,
+          "target_address_hex": "0x0500315e",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 13954,
+          "source_address_hex": "0x00003682",
+          "target_address": 83899066,
+          "target_address_hex": "0x050032ba",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 24792,
+          "caller_address_hex": "0x000060d8",
+          "caller_name": "FUN_000060d8",
+          "call_site": 24882,
+          "call_site_hex": "0x00006132"
+        }
+      ],
+      "call_counts": {
+        "total": 2,
+        "internal": 0,
+        "library": 2,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 13964,
+      "address_hex": "0x0000368c",
+      "name": "FUN_0000368c",
+      "size": 38,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 13984,
+          "source_address_hex": "0x000036a0",
+          "target_address": 83898718,
+          "target_address_hex": "0x0500315e",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 13992,
+          "source_address_hex": "0x000036a8",
+          "target_address": 83899078,
+          "target_address_hex": "0x050032c6",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 24918,
+          "caller_address_hex": "0x00006156",
+          "caller_name": "FUN_00006156",
+          "call_site": 25040,
+          "call_site_hex": "0x000061d0"
+        }
+      ],
+      "call_counts": {
+        "total": 2,
+        "internal": 0,
+        "library": 2,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 14002,
+      "address_hex": "0x000036b2",
+      "name": "FUN_000036b2",
+      "size": 366,
+      "external": false,
+      "thunk": false,
+      "depth": 1,
+      "calls": [
+        {
+          "source_address": 14082,
+          "source_address_hex": "0x00003702",
+          "target_address": 83894794,
+          "target_address_hex": "0x0500220a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 14140,
+          "source_address_hex": "0x0000373c",
+          "target_address": 165,
+          "target_address_hex": "0x000000a5",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        },
+        {
+          "source_address": 14158,
+          "source_address_hex": "0x0000374e",
+          "target_address": 165,
+          "target_address_hex": "0x000000a5",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        },
+        {
+          "source_address": 14176,
+          "source_address_hex": "0x00003760",
+          "target_address": 15580,
+          "target_address_hex": "0x00003cdc",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00003cdc"
+        },
+        {
+          "source_address": 14208,
+          "source_address_hex": "0x00003780",
+          "target_address": 17906,
+          "target_address_hex": "0x000045f2",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_000045f2"
+        },
+        {
+          "source_address": 14242,
+          "source_address_hex": "0x000037a2",
+          "target_address": 18466,
+          "target_address_hex": "0x00004822",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00004822"
+        },
+        {
+          "source_address": 14268,
+          "source_address_hex": "0x000037bc",
+          "target_address": 18746,
+          "target_address_hex": "0x0000493a",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_0000493a"
+        },
+        {
+          "source_address": 14292,
+          "source_address_hex": "0x000037d4",
+          "target_address": 16894,
+          "target_address_hex": "0x000041fe",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_000041fe"
+        },
+        {
+          "source_address": 14314,
+          "source_address_hex": "0x000037ea",
+          "target_address": 16186,
+          "target_address_hex": "0x00003f3a",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00003f3a"
+        },
+        {
+          "source_address": 14340,
+          "source_address_hex": "0x00003804",
+          "target_address": 83896516,
+          "target_address_hex": "0x050028c4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 14350,
+          "source_address_hex": "0x0000380e",
+          "target_address": 14452,
+          "target_address_hex": "0x00003874",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00003874"
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 23102,
+          "caller_address_hex": "0x00005a3e",
+          "caller_name": "FUN_00005a3e",
+          "call_site": 23130,
+          "call_site_hex": "0x00005a5a"
+        },
+        {
+          "caller_address": 23286,
+          "caller_address_hex": "0x00005af6",
+          "caller_name": "FUN_00005af6",
+          "call_site": 23314,
+          "call_site_hex": "0x00005b12"
+        },
+        {
+          "caller_address": 23480,
+          "caller_address_hex": "0x00005bb8",
+          "caller_name": "FUN_00005bb8",
+          "call_site": 23508,
+          "call_site_hex": "0x00005bd4"
+        }
+      ],
+      "call_counts": {
+        "total": 11,
+        "internal": 7,
+        "library": 2,
+        "external": 2
+      },
+      "caller_count": 3
+    },
+    {
+      "address": 14368,
+      "address_hex": "0x00003820",
+      "name": "FUN_00003820",
+      "size": 84,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [],
+      "called_by": [
+        {
+          "caller_address": 11718,
+          "caller_address_hex": "0x00002dc6",
+          "caller_name": "FUN_00002dc6",
+          "call_site": 12074,
+          "call_site_hex": "0x00002f2a"
+        },
+        {
+          "caller_address": 12932,
+          "caller_address_hex": "0x00003284",
+          "caller_name": "FUN_00003284",
+          "call_site": 12998,
+          "call_site_hex": "0x000032c6"
+        }
+      ],
+      "call_counts": {
+        "total": 0,
+        "internal": 0,
+        "library": 0,
+        "external": 0
+      },
+      "caller_count": 2
+    },
+    {
+      "address": 14452,
+      "address_hex": "0x00003874",
+      "name": "FUN_00003874",
+      "size": 296,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 14536,
+          "source_address_hex": "0x000038c8",
+          "target_address": 83899066,
+          "target_address_hex": "0x050032ba",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 14562,
+          "source_address_hex": "0x000038e2",
+          "target_address": 83899066,
+          "target_address_hex": "0x050032ba",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 14588,
+          "source_address_hex": "0x000038fc",
+          "target_address": 83899066,
+          "target_address_hex": "0x050032ba",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 14614,
+          "source_address_hex": "0x00003916",
+          "target_address": 83899066,
+          "target_address_hex": "0x050032ba",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 14640,
+          "source_address_hex": "0x00003930",
+          "target_address": 83899066,
+          "target_address_hex": "0x050032ba",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 14664,
+          "source_address_hex": "0x00003948",
+          "target_address": 83897434,
+          "target_address_hex": "0x05002c5a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 14684,
+          "source_address_hex": "0x0000395c",
+          "target_address": 83897434,
+          "target_address_hex": "0x05002c5a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 14704,
+          "source_address_hex": "0x00003970",
+          "target_address": 83897434,
+          "target_address_hex": "0x05002c5a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 14730,
+          "source_address_hex": "0x0000398a",
+          "target_address": 83895622,
+          "target_address_hex": "0x05002546",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 11718,
+          "caller_address_hex": "0x00002dc6",
+          "caller_name": "FUN_00002dc6",
+          "call_site": 12220,
+          "call_site_hex": "0x00002fbc"
+        },
+        {
+          "caller_address": 11718,
+          "caller_address_hex": "0x00002dc6",
+          "caller_name": "FUN_00002dc6",
+          "call_site": 12316,
+          "call_site_hex": "0x0000301c"
+        },
+        {
+          "caller_address": 14002,
+          "caller_address_hex": "0x000036b2",
+          "caller_name": "FUN_000036b2",
+          "call_site": 14350,
+          "call_site_hex": "0x0000380e"
+        },
+        {
+          "caller_address": 23102,
+          "caller_address_hex": "0x00005a3e",
+          "caller_name": "FUN_00005a3e",
+          "call_site": 23194,
+          "call_site_hex": "0x00005a9a"
+        },
+        {
+          "caller_address": 23102,
+          "caller_address_hex": "0x00005a3e",
+          "caller_name": "FUN_00005a3e",
+          "call_site": 23268,
+          "call_site_hex": "0x00005ae4"
+        },
+        {
+          "caller_address": 23286,
+          "caller_address_hex": "0x00005af6",
+          "caller_name": "FUN_00005af6",
+          "call_site": 23378,
+          "call_site_hex": "0x00005b52"
+        },
+        {
+          "caller_address": 23286,
+          "caller_address_hex": "0x00005af6",
+          "caller_name": "FUN_00005af6",
+          "call_site": 23462,
+          "call_site_hex": "0x00005ba6"
+        },
+        {
+          "caller_address": 23480,
+          "caller_address_hex": "0x00005bb8",
+          "caller_name": "FUN_00005bb8",
+          "call_site": 23572,
+          "call_site_hex": "0x00005c14"
+        },
+        {
+          "caller_address": 23480,
+          "caller_address_hex": "0x00005bb8",
+          "caller_name": "FUN_00005bb8",
+          "call_site": 23646,
+          "call_site_hex": "0x00005c5e"
+        }
+      ],
+      "call_counts": {
+        "total": 9,
+        "internal": 0,
+        "library": 9,
+        "external": 0
+      },
+      "caller_count": 9
+    },
+    {
+      "address": 14748,
+      "address_hex": "0x0000399c",
+      "name": "FUN_0000399c",
+      "size": 832,
+      "external": false,
+      "thunk": false,
+      "depth": 2,
+      "calls": [
+        {
+          "source_address": 14784,
+          "source_address_hex": "0x000039c0",
+          "target_address": 162,
+          "target_address_hex": "0x000000a2",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        },
+        {
+          "source_address": 14792,
+          "source_address_hex": "0x000039c8",
+          "target_address": 162,
+          "target_address_hex": "0x000000a2",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        },
+        {
+          "source_address": 14796,
+          "source_address_hex": "0x000039cc",
+          "target_address": 83898706,
+          "target_address_hex": "0x05003152",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 14820,
+          "source_address_hex": "0x000039e4",
+          "target_address": 83897428,
+          "target_address_hex": "0x05002c54",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 14840,
+          "source_address_hex": "0x000039f8",
+          "target_address": 83896516,
+          "target_address_hex": "0x050028c4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 14864,
+          "source_address_hex": "0x00003a10",
+          "target_address": 83898724,
+          "target_address_hex": "0x05003164",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 14888,
+          "source_address_hex": "0x00003a28",
+          "target_address": 19026,
+          "target_address_hex": "0x00004a52",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00004a52"
+        },
+        {
+          "source_address": 14910,
+          "source_address_hex": "0x00003a3e",
+          "target_address": 83898226,
+          "target_address_hex": "0x05002f72",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 14926,
+          "source_address_hex": "0x00003a4e",
+          "target_address": 83897284,
+          "target_address_hex": "0x05002bc4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 14954,
+          "source_address_hex": "0x00003a6a",
+          "target_address": 83896270,
+          "target_address_hex": "0x050027ce",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 14962,
+          "source_address_hex": "0x00003a72",
+          "target_address": 83894938,
+          "target_address_hex": "0x0500229a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 14972,
+          "source_address_hex": "0x00003a7c",
+          "target_address": 83895958,
+          "target_address_hex": "0x05002696",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 14996,
+          "source_address_hex": "0x00003a94",
+          "target_address": 83897494,
+          "target_address_hex": "0x05002c96",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 15016,
+          "source_address_hex": "0x00003aa8",
+          "target_address": 83896516,
+          "target_address_hex": "0x050028c4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 15042,
+          "source_address_hex": "0x00003ac2",
+          "target_address": 83897488,
+          "target_address_hex": "0x05002c90",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 15064,
+          "source_address_hex": "0x00003ad8",
+          "target_address": 83896516,
+          "target_address_hex": "0x050028c4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 15090,
+          "source_address_hex": "0x00003af2",
+          "target_address": 83897488,
+          "target_address_hex": "0x05002c90",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 15112,
+          "source_address_hex": "0x00003b08",
+          "target_address": 83896516,
+          "target_address_hex": "0x050028c4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 15126,
+          "source_address_hex": "0x00003b16",
+          "target_address": 25716,
+          "target_address_hex": "0x00006474",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00006474"
+        },
+        {
+          "source_address": 15150,
+          "source_address_hex": "0x00003b2e",
+          "target_address": 83897488,
+          "target_address_hex": "0x05002c90",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 15172,
+          "source_address_hex": "0x00003b44",
+          "target_address": 83896516,
+          "target_address_hex": "0x050028c4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 15202,
+          "source_address_hex": "0x00003b62",
+          "target_address": 83897488,
+          "target_address_hex": "0x05002c90",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 15224,
+          "source_address_hex": "0x00003b78",
+          "target_address": 83896516,
+          "target_address_hex": "0x050028c4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 15254,
+          "source_address_hex": "0x00003b96",
+          "target_address": 83896750,
+          "target_address_hex": "0x050029ae",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 15270,
+          "source_address_hex": "0x00003ba6",
+          "target_address": 83896528,
+          "target_address_hex": "0x050028d0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 15336,
+          "source_address_hex": "0x00003be8",
+          "target_address": 83897572,
+          "target_address_hex": "0x05002ce4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 15368,
+          "source_address_hex": "0x00003c08",
+          "target_address": 28268,
+          "target_address_hex": "0x00006e6c",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00006e6c"
+        },
+        {
+          "source_address": 15386,
+          "source_address_hex": "0x00003c1a",
+          "target_address": 13236,
+          "target_address_hex": "0x000033b4",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_000033b4"
+        },
+        {
+          "source_address": 15410,
+          "source_address_hex": "0x00003c32",
+          "target_address": 83896366,
+          "target_address_hex": "0x0500282e",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 15442,
+          "source_address_hex": "0x00003c52",
+          "target_address": 83897572,
+          "target_address_hex": "0x05002ce4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 15460,
+          "source_address_hex": "0x00003c64",
+          "target_address": 28132,
+          "target_address_hex": "0x00006de4",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00006de4"
+        },
+        {
+          "source_address": 15502,
+          "source_address_hex": "0x00003c8e",
+          "target_address": 83896786,
+          "target_address_hex": "0x050029d2",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 15528,
+          "source_address_hex": "0x00003ca8",
+          "target_address": 83896528,
+          "target_address_hex": "0x050028d0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 15542,
+          "source_address_hex": "0x00003cb6",
+          "target_address": 83897572,
+          "target_address_hex": "0x05002ce4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 15564,
+          "source_address_hex": "0x00003ccc",
+          "target_address": 162,
+          "target_address_hex": "0x000000a2",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        },
+        {
+          "source_address": 15568,
+          "source_address_hex": "0x00003cd0",
+          "target_address": 162,
+          "target_address_hex": "0x000000a2",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 11718,
+          "caller_address_hex": "0x00002dc6",
+          "caller_name": "FUN_00002dc6",
+          "call_site": 12304,
+          "call_site_hex": "0x00003010"
+        }
+      ],
+      "call_counts": {
+        "total": 36,
+        "internal": 5,
+        "library": 27,
+        "external": 4
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 15580,
+      "address_hex": "0x00003cdc",
+      "name": "FUN_00003cdc",
+      "size": 258,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 15660,
+          "source_address_hex": "0x00003d2c",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 15688,
+          "source_address_hex": "0x00003d48",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 15710,
+          "source_address_hex": "0x00003d5e",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 14002,
+          "caller_address_hex": "0x000036b2",
+          "caller_name": "FUN_000036b2",
+          "call_site": 14176,
+          "call_site_hex": "0x00003760"
+        }
+      ],
+      "call_counts": {
+        "total": 3,
+        "internal": 0,
+        "library": 3,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 15838,
+      "address_hex": "0x00003dde",
+      "name": "FUN_00003dde",
+      "size": 208,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 15902,
+          "source_address_hex": "0x00003e1e",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 15930,
+          "source_address_hex": "0x00003e3a",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 15952,
+          "source_address_hex": "0x00003e50",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 3,
+        "internal": 0,
+        "library": 3,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 16046,
+      "address_hex": "0x00003eae",
+      "name": "FUN_00003eae",
+      "size": 140,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 16104,
+          "source_address_hex": "0x00003ee8",
+          "target_address": 83896654,
+          "target_address_hex": "0x0500294e",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 16162,
+          "source_address_hex": "0x00003f22",
+          "target_address": 83896786,
+          "target_address_hex": "0x050029d2",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 28268,
+          "caller_address_hex": "0x00006e6c",
+          "caller_name": "FUN_00006e6c",
+          "call_site": 28414,
+          "call_site_hex": "0x00006efe"
+        },
+        {
+          "caller_address": 28268,
+          "caller_address_hex": "0x00006e6c",
+          "caller_name": "FUN_00006e6c",
+          "call_site": 28490,
+          "call_site_hex": "0x00006f4a"
+        }
+      ],
+      "call_counts": {
+        "total": 2,
+        "internal": 0,
+        "library": 2,
+        "external": 0
+      },
+      "caller_count": 2
+    },
+    {
+      "address": 16186,
+      "address_hex": "0x00003f3a",
+      "name": "FUN_00003f3a",
+      "size": 234,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 16240,
+          "source_address_hex": "0x00003f70",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 16268,
+          "source_address_hex": "0x00003f8c",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 16290,
+          "source_address_hex": "0x00003fa2",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 14002,
+          "caller_address_hex": "0x000036b2",
+          "caller_name": "FUN_000036b2",
+          "call_site": 14314,
+          "call_site_hex": "0x000037ea"
+        }
+      ],
+      "call_counts": {
+        "total": 3,
+        "internal": 0,
+        "library": 3,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 16420,
+      "address_hex": "0x00004024",
+      "name": "FUN_00004024",
+      "size": 208,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 16484,
+          "source_address_hex": "0x00004064",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 16512,
+          "source_address_hex": "0x00004080",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 16534,
+          "source_address_hex": "0x00004096",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 3,
+        "internal": 0,
+        "library": 3,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 16628,
+      "address_hex": "0x000040f4",
+      "name": "FUN_000040f4",
+      "size": 266,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 16750,
+          "source_address_hex": "0x0000416e",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 16778,
+          "source_address_hex": "0x0000418a",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 16800,
+          "source_address_hex": "0x000041a0",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 3,
+        "internal": 0,
+        "library": 3,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 16894,
+      "address_hex": "0x000041fe",
+      "name": "FUN_000041fe",
+      "size": 234,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 16950,
+          "source_address_hex": "0x00004236",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 16978,
+          "source_address_hex": "0x00004252",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 17000,
+          "source_address_hex": "0x00004268",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 14002,
+          "caller_address_hex": "0x000036b2",
+          "caller_name": "FUN_000036b2",
+          "call_site": 14292,
+          "call_site_hex": "0x000037d4"
+        }
+      ],
+      "call_counts": {
+        "total": 3,
+        "internal": 0,
+        "library": 3,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 17128,
+      "address_hex": "0x000042e8",
+      "name": "FUN_000042e8",
+      "size": 222,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 17170,
+          "source_address_hex": "0x00004312",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 17198,
+          "source_address_hex": "0x0000432e",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 17220,
+          "source_address_hex": "0x00004344",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 11718,
+          "caller_address_hex": "0x00002dc6",
+          "caller_name": "FUN_00002dc6",
+          "call_site": 11878,
+          "call_site_hex": "0x00002e66"
+        }
+      ],
+      "call_counts": {
+        "total": 3,
+        "internal": 0,
+        "library": 3,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 17350,
+      "address_hex": "0x000043c6",
+      "name": "FUN_000043c6",
+      "size": 276,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 17446,
+          "source_address_hex": "0x00004426",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 17474,
+          "source_address_hex": "0x00004442",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 17496,
+          "source_address_hex": "0x00004458",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 12932,
+          "caller_address_hex": "0x00003284",
+          "caller_name": "FUN_00003284",
+          "call_site": 13114,
+          "call_site_hex": "0x0000333a"
+        }
+      ],
+      "call_counts": {
+        "total": 3,
+        "internal": 0,
+        "library": 3,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 17626,
+      "address_hex": "0x000044da",
+      "name": "FUN_000044da",
+      "size": 280,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 17712,
+          "source_address_hex": "0x00004530",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 17738,
+          "source_address_hex": "0x0000454a",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 17760,
+          "source_address_hex": "0x00004560",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 3,
+        "internal": 0,
+        "library": 3,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 17906,
+      "address_hex": "0x000045f2",
+      "name": "FUN_000045f2",
+      "size": 280,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 17992,
+          "source_address_hex": "0x00004648",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 18018,
+          "source_address_hex": "0x00004662",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 18040,
+          "source_address_hex": "0x00004678",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 14002,
+          "caller_address_hex": "0x000036b2",
+          "caller_name": "FUN_000036b2",
+          "call_site": 14208,
+          "call_site_hex": "0x00003780"
+        }
+      ],
+      "call_counts": {
+        "total": 3,
+        "internal": 0,
+        "library": 3,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 18186,
+      "address_hex": "0x0000470a",
+      "name": "FUN_0000470a",
+      "size": 280,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 18272,
+          "source_address_hex": "0x00004760",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 18298,
+          "source_address_hex": "0x0000477a",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 18320,
+          "source_address_hex": "0x00004790",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 3,
+        "internal": 0,
+        "library": 3,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 18466,
+      "address_hex": "0x00004822",
+      "name": "FUN_00004822",
+      "size": 280,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 18552,
+          "source_address_hex": "0x00004878",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 18578,
+          "source_address_hex": "0x00004892",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 18600,
+          "source_address_hex": "0x000048a8",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 14002,
+          "caller_address_hex": "0x000036b2",
+          "caller_name": "FUN_000036b2",
+          "call_site": 14242,
+          "call_site_hex": "0x000037a2"
+        }
+      ],
+      "call_counts": {
+        "total": 3,
+        "internal": 0,
+        "library": 3,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 18746,
+      "address_hex": "0x0000493a",
+      "name": "FUN_0000493a",
+      "size": 280,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 18832,
+          "source_address_hex": "0x00004990",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 18858,
+          "source_address_hex": "0x000049aa",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 18880,
+          "source_address_hex": "0x000049c0",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 14002,
+          "caller_address_hex": "0x000036b2",
+          "caller_name": "FUN_000036b2",
+          "call_site": 14268,
+          "call_site_hex": "0x000037bc"
+        }
+      ],
+      "call_counts": {
+        "total": 3,
+        "internal": 0,
+        "library": 3,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 19026,
+      "address_hex": "0x00004a52",
+      "name": "FUN_00004a52",
+      "size": 286,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 19102,
+          "source_address_hex": "0x00004a9e",
+          "target_address": 83898442,
+          "target_address_hex": "0x0500304a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 19134,
+          "source_address_hex": "0x00004abe",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 19162,
+          "source_address_hex": "0x00004ada",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 19184,
+          "source_address_hex": "0x00004af0",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 11718,
+          "caller_address_hex": "0x00002dc6",
+          "caller_name": "FUN_00002dc6",
+          "call_site": 12166,
+          "call_site_hex": "0x00002f86"
+        },
+        {
+          "caller_address": 12932,
+          "caller_address_hex": "0x00003284",
+          "caller_name": "FUN_00003284",
+          "call_site": 12974,
+          "call_site_hex": "0x000032ae"
+        },
+        {
+          "caller_address": 14748,
+          "caller_address_hex": "0x0000399c",
+          "caller_name": "FUN_0000399c",
+          "call_site": 14888,
+          "call_site_hex": "0x00003a28"
+        },
+        {
+          "caller_address": 25716,
+          "caller_address_hex": "0x00006474",
+          "caller_name": "FUN_00006474",
+          "call_site": 25746,
+          "call_site_hex": "0x00006492"
+        }
+      ],
+      "call_counts": {
+        "total": 4,
+        "internal": 0,
+        "library": 4,
+        "external": 0
+      },
+      "caller_count": 4
+    },
+    {
+      "address": 19312,
+      "address_hex": "0x00004b70",
+      "name": "FUN_00004b70",
+      "size": 280,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 19398,
+          "source_address_hex": "0x00004bc6",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 19424,
+          "source_address_hex": "0x00004be0",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 19446,
+          "source_address_hex": "0x00004bf6",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 3,
+        "internal": 0,
+        "library": 3,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 19592,
+      "address_hex": "0x00004c88",
+      "name": "FUN_00004c88",
+      "size": 280,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 19678,
+          "source_address_hex": "0x00004cde",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 19704,
+          "source_address_hex": "0x00004cf8",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 19726,
+          "source_address_hex": "0x00004d0e",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 23102,
+          "caller_address_hex": "0x00005a3e",
+          "caller_name": "FUN_00005a3e",
+          "call_site": 23176,
+          "call_site_hex": "0x00005a88"
+        },
+        {
+          "caller_address": 23286,
+          "caller_address_hex": "0x00005af6",
+          "caller_name": "FUN_00005af6",
+          "call_site": 23360,
+          "call_site_hex": "0x00005b40"
+        },
+        {
+          "caller_address": 23480,
+          "caller_address_hex": "0x00005bb8",
+          "caller_name": "FUN_00005bb8",
+          "call_site": 23554,
+          "call_site_hex": "0x00005c02"
+        }
+      ],
+      "call_counts": {
+        "total": 3,
+        "internal": 0,
+        "library": 3,
+        "external": 0
+      },
+      "caller_count": 3
+    },
+    {
+      "address": 19872,
+      "address_hex": "0x00004da0",
+      "name": "FUN_00004da0",
+      "size": 256,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 19932,
+          "source_address_hex": "0x00004ddc",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 19960,
+          "source_address_hex": "0x00004df8",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 19982,
+          "source_address_hex": "0x00004e0e",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 3,
+        "internal": 0,
+        "library": 3,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 20128,
+      "address_hex": "0x00004ea0",
+      "name": "FUN_00004ea0",
+      "size": 196,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 20180,
+          "source_address_hex": "0x00004ed4",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 20206,
+          "source_address_hex": "0x00004eee",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 20228,
+          "source_address_hex": "0x00004f04",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 3,
+        "internal": 0,
+        "library": 3,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 20324,
+      "address_hex": "0x00004f64",
+      "name": "FUN_00004f64",
+      "size": 276,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 20408,
+          "source_address_hex": "0x00004fb8",
+          "target_address": 83896654,
+          "target_address_hex": "0x0500294e",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 20454,
+          "source_address_hex": "0x00004fe6",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 20482,
+          "source_address_hex": "0x00005002",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 20506,
+          "source_address_hex": "0x0000501a",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 4,
+        "internal": 0,
+        "library": 4,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 20600,
+      "address_hex": "0x00005078",
+      "name": "FUN_00005078",
+      "size": 256,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 20660,
+          "source_address_hex": "0x000050b4",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 20688,
+          "source_address_hex": "0x000050d0",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 20710,
+          "source_address_hex": "0x000050e6",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 3,
+        "internal": 0,
+        "library": 3,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 20856,
+      "address_hex": "0x00005178",
+      "name": "FUN_00005178",
+      "size": 222,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 20934,
+          "source_address_hex": "0x000051c6",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 20962,
+          "source_address_hex": "0x000051e2",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 20984,
+          "source_address_hex": "0x000051f8",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 11718,
+          "caller_address_hex": "0x00002dc6",
+          "caller_name": "FUN_00002dc6",
+          "call_site": 12096,
+          "call_site_hex": "0x00002f40"
+        }
+      ],
+      "call_counts": {
+        "total": 3,
+        "internal": 0,
+        "library": 3,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 21078,
+      "address_hex": "0x00005256",
+      "name": "FUN_00005256",
+      "size": 262,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 21154,
+          "source_address_hex": "0x000052a2",
+          "target_address": 83898442,
+          "target_address_hex": "0x0500304a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 21196,
+          "source_address_hex": "0x000052cc",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 21224,
+          "source_address_hex": "0x000052e8",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 21246,
+          "source_address_hex": "0x000052fe",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 25716,
+          "caller_address_hex": "0x00006474",
+          "caller_name": "FUN_00006474",
+          "call_site": 25814,
+          "call_site_hex": "0x000064d6"
+        }
+      ],
+      "call_counts": {
+        "total": 4,
+        "internal": 0,
+        "library": 4,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 21340,
+      "address_hex": "0x0000535c",
+      "name": "FUN_0000535c",
+      "size": 248,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 21412,
+          "source_address_hex": "0x000053a4",
+          "target_address": 83898442,
+          "target_address_hex": "0x0500304a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 21444,
+          "source_address_hex": "0x000053c4",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 21472,
+          "source_address_hex": "0x000053e0",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 21494,
+          "source_address_hex": "0x000053f6",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 4,
+        "internal": 0,
+        "library": 4,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 21588,
+      "address_hex": "0x00005454",
+      "name": "FUN_00005454",
+      "size": 236,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 21644,
+          "source_address_hex": "0x0000548c",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 21672,
+          "source_address_hex": "0x000054a8",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 21694,
+          "source_address_hex": "0x000054be",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 3,
+        "internal": 0,
+        "library": 3,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 21824,
+      "address_hex": "0x00005540",
+      "name": "FUN_00005540",
+      "size": 222,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 21866,
+          "source_address_hex": "0x0000556a",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 21894,
+          "source_address_hex": "0x00005586",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 21916,
+          "source_address_hex": "0x0000559c",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 3,
+        "internal": 0,
+        "library": 3,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 22046,
+      "address_hex": "0x0000561e",
+      "name": "FUN_0000561e",
+      "size": 210,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 22112,
+          "source_address_hex": "0x00005660",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 22140,
+          "source_address_hex": "0x0000567c",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 22162,
+          "source_address_hex": "0x00005692",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 3,
+        "internal": 0,
+        "library": 3,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 22256,
+      "address_hex": "0x000056f0",
+      "name": "FUN_000056f0",
+      "size": 140,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 22314,
+          "source_address_hex": "0x0000572a",
+          "target_address": 83896654,
+          "target_address_hex": "0x0500294e",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 22372,
+          "source_address_hex": "0x00005764",
+          "target_address": 83896786,
+          "target_address_hex": "0x050029d2",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 2,
+        "internal": 0,
+        "library": 2,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 22396,
+      "address_hex": "0x0000577c",
+      "name": "FUN_0000577c",
+      "size": 462,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 22460,
+          "source_address_hex": "0x000057bc",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 22490,
+          "source_address_hex": "0x000057da",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 22512,
+          "source_address_hex": "0x000057f0",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 3,
+        "internal": 0,
+        "library": 3,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 22858,
+      "address_hex": "0x0000594a",
+      "name": "FUN_0000594a",
+      "size": 174,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 22922,
+          "source_address_hex": "0x0000598a",
+          "target_address": 162,
+          "target_address_hex": "0x000000a2",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        },
+        {
+          "source_address": 22946,
+          "source_address_hex": "0x000059a2",
+          "target_address": 162,
+          "target_address_hex": "0x000000a2",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        },
+        {
+          "source_address": 22970,
+          "source_address_hex": "0x000059ba",
+          "target_address": 162,
+          "target_address_hex": "0x000000a2",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        },
+        {
+          "source_address": 23016,
+          "source_address_hex": "0x000059e8",
+          "target_address": 83896786,
+          "target_address_hex": "0x050029d2",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 4,
+        "internal": 0,
+        "library": 1,
+        "external": 3
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 23032,
+      "address_hex": "0x000059f8",
+      "name": "FUN_000059f8",
+      "size": 70,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 23092,
+          "source_address_hex": "0x00005a34",
+          "target_address": 83896786,
+          "target_address_hex": "0x050029d2",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 1,
+        "internal": 0,
+        "library": 1,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 23102,
+      "address_hex": "0x00005a3e",
+      "name": "FUN_00005a3e",
+      "size": 184,
+      "external": false,
+      "thunk": false,
+      "depth": 2,
+      "calls": [
+        {
+          "source_address": 23118,
+          "source_address_hex": "0x00005a4e",
+          "target_address": 83898718,
+          "target_address_hex": "0x0500315e",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 23130,
+          "source_address_hex": "0x00005a5a",
+          "target_address": 14002,
+          "target_address_hex": "0x000036b2",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_000036b2"
+        },
+        {
+          "source_address": 23176,
+          "source_address_hex": "0x00005a88",
+          "target_address": 19592,
+          "target_address_hex": "0x00004c88",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00004c88"
+        },
+        {
+          "source_address": 23194,
+          "source_address_hex": "0x00005a9a",
+          "target_address": 14452,
+          "target_address_hex": "0x00003874",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00003874"
+        },
+        {
+          "source_address": 23208,
+          "source_address_hex": "0x00005aa8",
+          "target_address": 23664,
+          "target_address_hex": "0x00005c70",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00005c70"
+        },
+        {
+          "source_address": 23226,
+          "source_address_hex": "0x00005aba",
+          "target_address": 28564,
+          "target_address_hex": "0x00006f94",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00006f94"
+        },
+        {
+          "source_address": 23250,
+          "source_address_hex": "0x00005ad2",
+          "target_address": 83899066,
+          "target_address_hex": "0x050032ba",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 23268,
+          "source_address_hex": "0x00005ae4",
+          "target_address": 14452,
+          "target_address_hex": "0x00003874",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00003874"
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 8,
+        "internal": 6,
+        "library": 2,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 23286,
+      "address_hex": "0x00005af6",
+      "name": "FUN_00005af6",
+      "size": 194,
+      "external": false,
+      "thunk": false,
+      "depth": 2,
+      "calls": [
+        {
+          "source_address": 23302,
+          "source_address_hex": "0x00005b06",
+          "target_address": 83898718,
+          "target_address_hex": "0x0500315e",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 23314,
+          "source_address_hex": "0x00005b12",
+          "target_address": 14002,
+          "target_address_hex": "0x000036b2",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_000036b2"
+        },
+        {
+          "source_address": 23360,
+          "source_address_hex": "0x00005b40",
+          "target_address": 19592,
+          "target_address_hex": "0x00004c88",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00004c88"
+        },
+        {
+          "source_address": 23378,
+          "source_address_hex": "0x00005b52",
+          "target_address": 14452,
+          "target_address_hex": "0x00003874",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00003874"
+        },
+        {
+          "source_address": 23392,
+          "source_address_hex": "0x00005b60",
+          "target_address": 23664,
+          "target_address_hex": "0x00005c70",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00005c70"
+        },
+        {
+          "source_address": 23418,
+          "source_address_hex": "0x00005b7a",
+          "target_address": 28722,
+          "target_address_hex": "0x00007032",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00007032"
+        },
+        {
+          "source_address": 23444,
+          "source_address_hex": "0x00005b94",
+          "target_address": 83899066,
+          "target_address_hex": "0x050032ba",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 23462,
+          "source_address_hex": "0x00005ba6",
+          "target_address": 14452,
+          "target_address_hex": "0x00003874",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00003874"
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 11718,
+          "caller_address_hex": "0x00002dc6",
+          "caller_name": "FUN_00002dc6",
+          "call_site": 12026,
+          "call_site_hex": "0x00002efa"
+        }
+      ],
+      "call_counts": {
+        "total": 8,
+        "internal": 6,
+        "library": 2,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 23480,
+      "address_hex": "0x00005bb8",
+      "name": "FUN_00005bb8",
+      "size": 184,
+      "external": false,
+      "thunk": false,
+      "depth": 2,
+      "calls": [
+        {
+          "source_address": 23496,
+          "source_address_hex": "0x00005bc8",
+          "target_address": 83898718,
+          "target_address_hex": "0x0500315e",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 23508,
+          "source_address_hex": "0x00005bd4",
+          "target_address": 14002,
+          "target_address_hex": "0x000036b2",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_000036b2"
+        },
+        {
+          "source_address": 23554,
+          "source_address_hex": "0x00005c02",
+          "target_address": 19592,
+          "target_address_hex": "0x00004c88",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00004c88"
+        },
+        {
+          "source_address": 23572,
+          "source_address_hex": "0x00005c14",
+          "target_address": 14452,
+          "target_address_hex": "0x00003874",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00003874"
+        },
+        {
+          "source_address": 23586,
+          "source_address_hex": "0x00005c22",
+          "target_address": 23664,
+          "target_address_hex": "0x00005c70",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00005c70"
+        },
+        {
+          "source_address": 23604,
+          "source_address_hex": "0x00005c34",
+          "target_address": 28786,
+          "target_address_hex": "0x00007072",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00007072"
+        },
+        {
+          "source_address": 23628,
+          "source_address_hex": "0x00005c4c",
+          "target_address": 83899066,
+          "target_address_hex": "0x050032ba",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 23646,
+          "source_address_hex": "0x00005c5e",
+          "target_address": 14452,
+          "target_address_hex": "0x00003874",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00003874"
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 8,
+        "internal": 6,
+        "library": 2,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 23664,
+      "address_hex": "0x00005c70",
+      "name": "FUN_00005c70",
+      "size": 182,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 23738,
+          "source_address_hex": "0x00005cba",
+          "target_address": 83898976,
+          "target_address_hex": "0x05003260",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 23822,
+          "source_address_hex": "0x00005d0e",
+          "target_address": 83896660,
+          "target_address_hex": "0x05002954",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 23102,
+          "caller_address_hex": "0x00005a3e",
+          "caller_name": "FUN_00005a3e",
+          "call_site": 23208,
+          "call_site_hex": "0x00005aa8"
+        },
+        {
+          "caller_address": 23286,
+          "caller_address_hex": "0x00005af6",
+          "caller_name": "FUN_00005af6",
+          "call_site": 23392,
+          "call_site_hex": "0x00005b60"
+        },
+        {
+          "caller_address": 23480,
+          "caller_address_hex": "0x00005bb8",
+          "caller_name": "FUN_00005bb8",
+          "call_site": 23586,
+          "call_site_hex": "0x00005c22"
+        }
+      ],
+      "call_counts": {
+        "total": 2,
+        "internal": 0,
+        "library": 2,
+        "external": 0
+      },
+      "caller_count": 3
+    },
+    {
+      "address": 23846,
+      "address_hex": "0x00005d26",
+      "name": "FUN_00005d26",
+      "size": 58,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 23856,
+          "source_address_hex": "0x00005d30",
+          "target_address": 83898718,
+          "target_address_hex": "0x0500315e",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 11718,
+          "caller_address_hex": "0x00002dc6",
+          "caller_name": "FUN_00002dc6",
+          "call_site": 12140,
+          "call_site_hex": "0x00002f6c"
+        }
+      ],
+      "call_counts": {
+        "total": 1,
+        "internal": 0,
+        "library": 1,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 23904,
+      "address_hex": "0x00005d60",
+      "name": "FUN_00005d60",
+      "size": 70,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 23964,
+          "source_address_hex": "0x00005d9c",
+          "target_address": 83896786,
+          "target_address_hex": "0x050029d2",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 11718,
+          "caller_address_hex": "0x00002dc6",
+          "caller_name": "FUN_00002dc6",
+          "call_site": 12258,
+          "call_site_hex": "0x00002fe2"
+        }
+      ],
+      "call_counts": {
+        "total": 1,
+        "internal": 0,
+        "library": 1,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 23974,
+      "address_hex": "0x00005da6",
+      "name": "FUN_00005da6",
+      "size": 68,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 24032,
+          "source_address_hex": "0x00005de0",
+          "target_address": 83896786,
+          "target_address_hex": "0x050029d2",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 12932,
+          "caller_address_hex": "0x00003284",
+          "caller_name": "FUN_00003284",
+          "call_site": 13178,
+          "call_site_hex": "0x0000337a"
+        }
+      ],
+      "call_counts": {
+        "total": 1,
+        "internal": 0,
+        "library": 1,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 24042,
+      "address_hex": "0x00005dea",
+      "name": "FUN_00005dea",
+      "size": 256,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 24084,
+          "source_address_hex": "0x00005e14",
+          "target_address": 83896672,
+          "target_address_hex": "0x05002960",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 24114,
+          "source_address_hex": "0x00005e32",
+          "target_address": 83896768,
+          "target_address_hex": "0x050029c0",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 24136,
+          "source_address_hex": "0x00005e48",
+          "target_address": 83896666,
+          "target_address_hex": "0x0500295a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 12932,
+          "caller_address_hex": "0x00003284",
+          "caller_name": "FUN_00003284",
+          "call_site": 13034,
+          "call_site_hex": "0x000032ea"
+        }
+      ],
+      "call_counts": {
+        "total": 3,
+        "internal": 0,
+        "library": 3,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 24630,
+      "address_hex": "0x00006036",
+      "name": "FUN_00006036",
+      "size": 162,
+      "external": false,
+      "thunk": false,
+      "depth": 1,
+      "calls": [
+        {
+          "source_address": 24738,
+          "source_address_hex": "0x000060a2",
+          "target_address": 13844,
+          "target_address_hex": "0x00003614",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00003614"
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 1,
+        "internal": 1,
+        "library": 0,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 24792,
+      "address_hex": "0x000060d8",
+      "name": "FUN_000060d8",
+      "size": 126,
+      "external": false,
+      "thunk": false,
+      "depth": 1,
+      "calls": [
+        {
+          "source_address": 24882,
+          "source_address_hex": "0x00006132",
+          "target_address": 13934,
+          "target_address_hex": "0x0000366e",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_0000366e"
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 1,
+        "internal": 1,
+        "library": 0,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 24918,
+      "address_hex": "0x00006156",
+      "name": "FUN_00006156",
+      "size": 158,
+      "external": false,
+      "thunk": false,
+      "depth": 1,
+      "calls": [
+        {
+          "source_address": 25040,
+          "source_address_hex": "0x000061d0",
+          "target_address": 13964,
+          "target_address_hex": "0x0000368c",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_0000368c"
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 1,
+        "internal": 1,
+        "library": 0,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 25076,
+      "address_hex": "0x000061f4",
+      "name": "FUN_000061f4",
+      "size": 134,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 25198,
+          "source_address_hex": "0x0000626e",
+          "target_address": 160,
+          "target_address_hex": "0x000000a0",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 13236,
+          "caller_address_hex": "0x000033b4",
+          "caller_name": "FUN_000033b4",
+          "call_site": 13804,
+          "call_site_hex": "0x000035ec"
+        }
+      ],
+      "call_counts": {
+        "total": 1,
+        "internal": 0,
+        "library": 0,
+        "external": 1
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 25210,
+      "address_hex": "0x0000627a",
+      "name": "FUN_0000627a",
+      "size": 62,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 25238,
+          "source_address_hex": "0x00006296",
+          "target_address": 83897698,
+          "target_address_hex": "0x05002d62",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 25880,
+          "caller_address_hex": "0x00006518",
+          "caller_name": "FUN_00006518",
+          "call_site": 26006,
+          "call_site_hex": "0x00006596"
+        }
+      ],
+      "call_counts": {
+        "total": 1,
+        "internal": 0,
+        "library": 1,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 25272,
+      "address_hex": "0x000062b8",
+      "name": "FUN_000062b8",
+      "size": 48,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 25294,
+          "source_address_hex": "0x000062ce",
+          "target_address": 83899150,
+          "target_address_hex": "0x0500330e",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 26114,
+          "caller_address_hex": "0x00006602",
+          "caller_name": "FUN_00006602",
+          "call_site": 26268,
+          "call_site_hex": "0x0000669c"
+        }
+      ],
+      "call_counts": {
+        "total": 1,
+        "internal": 0,
+        "library": 1,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 25320,
+      "address_hex": "0x000062e8",
+      "name": "FUN_000062e8",
+      "size": 48,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 25342,
+          "source_address_hex": "0x000062fe",
+          "target_address": 83897284,
+          "target_address_hex": "0x05002bc4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 26332,
+          "caller_address_hex": "0x000066dc",
+          "caller_name": "FUN_000066dc",
+          "call_site": 26486,
+          "call_site_hex": "0x00006776"
+        }
+      ],
+      "call_counts": {
+        "total": 1,
+        "internal": 0,
+        "library": 1,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 25368,
+      "address_hex": "0x00006318",
+      "name": "FUN_00006318",
+      "size": 40,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 25382,
+          "source_address_hex": "0x00006326",
+          "target_address": 83894938,
+          "target_address_hex": "0x0500229a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 26552,
+          "caller_address_hex": "0x000067b8",
+          "caller_name": "FUN_000067b8",
+          "call_site": 26644,
+          "call_site_hex": "0x00006814"
+        }
+      ],
+      "call_counts": {
+        "total": 1,
+        "internal": 0,
+        "library": 1,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 25408,
+      "address_hex": "0x00006340",
+      "name": "FUN_00006340",
+      "size": 44,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 25426,
+          "source_address_hex": "0x00006352",
+          "target_address": 83895016,
+          "target_address_hex": "0x050022e8",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 26710,
+          "caller_address_hex": "0x00006856",
+          "caller_name": "FUN_00006856",
+          "call_site": 26848,
+          "call_site_hex": "0x000068e0"
+        }
+      ],
+      "call_counts": {
+        "total": 1,
+        "internal": 0,
+        "library": 1,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 25452,
+      "address_hex": "0x0000636c",
+      "name": "FUN_0000636c",
+      "size": 44,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 25470,
+          "source_address_hex": "0x0000637e",
+          "target_address": 83896396,
+          "target_address_hex": "0x0500284c",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 26914,
+          "caller_address_hex": "0x00006922",
+          "caller_name": "FUN_00006922",
+          "call_site": 27078,
+          "call_site_hex": "0x000069c6"
+        }
+      ],
+      "call_counts": {
+        "total": 1,
+        "internal": 0,
+        "library": 1,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 25496,
+      "address_hex": "0x00006398",
+      "name": "FUN_00006398",
+      "size": 40,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 25510,
+          "source_address_hex": "0x000063a6",
+          "target_address": 83898958,
+          "target_address_hex": "0x0500324e",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 27144,
+          "caller_address_hex": "0x00006a08",
+          "caller_name": "FUN_00006a08",
+          "call_site": 27264,
+          "call_site_hex": "0x00006a80"
+        }
+      ],
+      "call_counts": {
+        "total": 1,
+        "internal": 0,
+        "library": 1,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 25536,
+      "address_hex": "0x000063c0",
+      "name": "FUN_000063c0",
+      "size": 40,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 25550,
+          "source_address_hex": "0x000063ce",
+          "target_address": 83894824,
+          "target_address_hex": "0x05002228",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 27330,
+          "caller_address_hex": "0x00006ac2",
+          "caller_name": "FUN_00006ac2",
+          "call_site": 27450,
+          "call_site_hex": "0x00006b3a"
+        }
+      ],
+      "call_counts": {
+        "total": 1,
+        "internal": 0,
+        "library": 1,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 25576,
+      "address_hex": "0x000063e8",
+      "name": "FUN_000063e8",
+      "size": 44,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 25594,
+          "source_address_hex": "0x000063fa",
+          "target_address": 83894830,
+          "target_address_hex": "0x0500222e",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 27516,
+          "caller_address_hex": "0x00006b7c",
+          "caller_name": "FUN_00006b7c",
+          "call_site": 27654,
+          "call_site_hex": "0x00006c06"
+        }
+      ],
+      "call_counts": {
+        "total": 1,
+        "internal": 0,
+        "library": 1,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 25620,
+      "address_hex": "0x00006414",
+      "name": "FUN_00006414",
+      "size": 48,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 25642,
+          "source_address_hex": "0x0000642a",
+          "target_address": 83894836,
+          "target_address_hex": "0x05002234",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 27720,
+          "caller_address_hex": "0x00006c48",
+          "caller_name": "FUN_00006c48",
+          "call_site": 27874,
+          "call_site_hex": "0x00006ce2"
+        }
+      ],
+      "call_counts": {
+        "total": 1,
+        "internal": 0,
+        "library": 1,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 25668,
+      "address_hex": "0x00006444",
+      "name": "FUN_00006444",
+      "size": 48,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 25690,
+          "source_address_hex": "0x0000645a",
+          "target_address": 83896492,
+          "target_address_hex": "0x050028ac",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 27940,
+          "caller_address_hex": "0x00006d24",
+          "caller_name": "FUN_00006d24",
+          "call_site": 28066,
+          "call_site_hex": "0x00006da2"
+        }
+      ],
+      "call_counts": {
+        "total": 1,
+        "internal": 0,
+        "library": 1,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 25716,
+      "address_hex": "0x00006474",
+      "name": "FUN_00006474",
+      "size": 164,
+      "external": false,
+      "thunk": false,
+      "depth": 1,
+      "calls": [
+        {
+          "source_address": 25746,
+          "source_address_hex": "0x00006492",
+          "target_address": 19026,
+          "target_address_hex": "0x00004a52",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00004a52"
+        },
+        {
+          "source_address": 25764,
+          "source_address_hex": "0x000064a4",
+          "target_address": 83898718,
+          "target_address_hex": "0x0500315e",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 25772,
+          "source_address_hex": "0x000064ac",
+          "target_address": 83897428,
+          "target_address_hex": "0x05002c54",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 25792,
+          "source_address_hex": "0x000064c0",
+          "target_address": 83896516,
+          "target_address_hex": "0x050028c4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 25814,
+          "source_address_hex": "0x000064d6",
+          "target_address": 21078,
+          "target_address_hex": "0x00005256",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00005256"
+        },
+        {
+          "source_address": 25842,
+          "source_address_hex": "0x000064f2",
+          "target_address": 83896516,
+          "target_address_hex": "0x050028c4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 25852,
+          "source_address_hex": "0x000064fc",
+          "target_address": 83898718,
+          "target_address_hex": "0x0500315e",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 25860,
+          "source_address_hex": "0x00006504",
+          "target_address": 83897434,
+          "target_address_hex": "0x05002c5a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 14748,
+          "caller_address_hex": "0x0000399c",
+          "caller_name": "FUN_0000399c",
+          "call_site": 15126,
+          "call_site_hex": "0x00003b16"
+        }
+      ],
+      "call_counts": {
+        "total": 8,
+        "internal": 2,
+        "library": 6,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 25880,
+      "address_hex": "0x00006518",
+      "name": "FUN_00006518",
+      "size": 234,
+      "external": false,
+      "thunk": false,
+      "depth": 1,
+      "calls": [
+        {
+          "source_address": 26006,
+          "source_address_hex": "0x00006596",
+          "target_address": 25210,
+          "target_address_hex": "0x0000627a",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_0000627a"
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 1,
+        "internal": 1,
+        "library": 0,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 26114,
+      "address_hex": "0x00006602",
+      "name": "FUN_00006602",
+      "size": 218,
+      "external": false,
+      "thunk": false,
+      "depth": 1,
+      "calls": [
+        {
+          "source_address": 26268,
+          "source_address_hex": "0x0000669c",
+          "target_address": 25272,
+          "target_address_hex": "0x000062b8",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_000062b8"
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 1,
+        "internal": 1,
+        "library": 0,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 26332,
+      "address_hex": "0x000066dc",
+      "name": "FUN_000066dc",
+      "size": 220,
+      "external": false,
+      "thunk": false,
+      "depth": 1,
+      "calls": [
+        {
+          "source_address": 26486,
+          "source_address_hex": "0x00006776",
+          "target_address": 25320,
+          "target_address_hex": "0x000062e8",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_000062e8"
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 1,
+        "internal": 1,
+        "library": 0,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 26552,
+      "address_hex": "0x000067b8",
+      "name": "FUN_000067b8",
+      "size": 158,
+      "external": false,
+      "thunk": false,
+      "depth": 1,
+      "calls": [
+        {
+          "source_address": 26644,
+          "source_address_hex": "0x00006814",
+          "target_address": 25368,
+          "target_address_hex": "0x00006318",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00006318"
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 1,
+        "internal": 1,
+        "library": 0,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 26710,
+      "address_hex": "0x00006856",
+      "name": "FUN_00006856",
+      "size": 204,
+      "external": false,
+      "thunk": false,
+      "depth": 1,
+      "calls": [
+        {
+          "source_address": 26848,
+          "source_address_hex": "0x000068e0",
+          "target_address": 25408,
+          "target_address_hex": "0x00006340",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00006340"
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 1,
+        "internal": 1,
+        "library": 0,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 26914,
+      "address_hex": "0x00006922",
+      "name": "FUN_00006922",
+      "size": 230,
+      "external": false,
+      "thunk": false,
+      "depth": 1,
+      "calls": [
+        {
+          "source_address": 27078,
+          "source_address_hex": "0x000069c6",
+          "target_address": 25452,
+          "target_address_hex": "0x0000636c",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_0000636c"
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 1,
+        "internal": 1,
+        "library": 0,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 27144,
+      "address_hex": "0x00006a08",
+      "name": "FUN_00006a08",
+      "size": 186,
+      "external": false,
+      "thunk": false,
+      "depth": 1,
+      "calls": [
+        {
+          "source_address": 27264,
+          "source_address_hex": "0x00006a80",
+          "target_address": 25496,
+          "target_address_hex": "0x00006398",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00006398"
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 1,
+        "internal": 1,
+        "library": 0,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 27330,
+      "address_hex": "0x00006ac2",
+      "name": "FUN_00006ac2",
+      "size": 186,
+      "external": false,
+      "thunk": false,
+      "depth": 1,
+      "calls": [
+        {
+          "source_address": 27450,
+          "source_address_hex": "0x00006b3a",
+          "target_address": 25536,
+          "target_address_hex": "0x000063c0",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_000063c0"
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 1,
+        "internal": 1,
+        "library": 0,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 27516,
+      "address_hex": "0x00006b7c",
+      "name": "FUN_00006b7c",
+      "size": 204,
+      "external": false,
+      "thunk": false,
+      "depth": 1,
+      "calls": [
+        {
+          "source_address": 27654,
+          "source_address_hex": "0x00006c06",
+          "target_address": 25576,
+          "target_address_hex": "0x000063e8",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_000063e8"
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 1,
+        "internal": 1,
+        "library": 0,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 27720,
+      "address_hex": "0x00006c48",
+      "name": "FUN_00006c48",
+      "size": 220,
+      "external": false,
+      "thunk": false,
+      "depth": 1,
+      "calls": [
+        {
+          "source_address": 27874,
+          "source_address_hex": "0x00006ce2",
+          "target_address": 25620,
+          "target_address_hex": "0x00006414",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00006414"
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 1,
+        "internal": 1,
+        "library": 0,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 27940,
+      "address_hex": "0x00006d24",
+      "name": "FUN_00006d24",
+      "size": 192,
+      "external": false,
+      "thunk": false,
+      "depth": 1,
+      "calls": [
+        {
+          "source_address": 28066,
+          "source_address_hex": "0x00006da2",
+          "target_address": 25668,
+          "target_address_hex": "0x00006444",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00006444"
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 1,
+        "internal": 1,
+        "library": 0,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 28132,
+      "address_hex": "0x00006de4",
+      "name": "FUN_00006de4",
+      "size": 136,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 28256,
+          "source_address_hex": "0x00006e60",
+          "target_address": 160,
+          "target_address_hex": "0x000000a0",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 14748,
+          "caller_address_hex": "0x0000399c",
+          "caller_name": "FUN_0000399c",
+          "call_site": 15460,
+          "call_site_hex": "0x00003c64"
+        }
+      ],
+      "call_counts": {
+        "total": 1,
+        "internal": 0,
+        "library": 0,
+        "external": 1
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 28268,
+      "address_hex": "0x00006e6c",
+      "name": "FUN_00006e6c",
+      "size": 272,
+      "external": false,
+      "thunk": false,
+      "depth": 1,
+      "calls": [
+        {
+          "source_address": 28348,
+          "source_address_hex": "0x00006ebc",
+          "target_address": 83895610,
+          "target_address_hex": "0x0500253a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 28364,
+          "source_address_hex": "0x00006ecc",
+          "target_address": 83895544,
+          "target_address_hex": "0x050024f8",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 28386,
+          "source_address_hex": "0x00006ee2",
+          "target_address": 83895568,
+          "target_address_hex": "0x05002510",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 28394,
+          "source_address_hex": "0x00006eea",
+          "target_address": 83898424,
+          "target_address_hex": "0x05003038",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 28414,
+          "source_address_hex": "0x00006efe",
+          "target_address": 16046,
+          "target_address_hex": "0x00003eae",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00003eae"
+        },
+        {
+          "source_address": 28458,
+          "source_address_hex": "0x00006f2a",
+          "target_address": 83894410,
+          "target_address_hex": "0x0500208a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 28490,
+          "source_address_hex": "0x00006f4a",
+          "target_address": 16046,
+          "target_address_hex": "0x00003eae",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_00003eae"
+        },
+        {
+          "source_address": 28512,
+          "source_address_hex": "0x00006f60",
+          "target_address": 83896516,
+          "target_address_hex": "0x050028c4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 28536,
+          "source_address_hex": "0x00006f78",
+          "target_address": 30178,
+          "target_address_hex": "0x000075e2",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_000075e2"
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 14748,
+          "caller_address_hex": "0x0000399c",
+          "caller_name": "FUN_0000399c",
+          "call_site": 15368,
+          "call_site_hex": "0x00003c08"
+        }
+      ],
+      "call_counts": {
+        "total": 9,
+        "internal": 3,
+        "library": 6,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 28564,
+      "address_hex": "0x00006f94",
+      "name": "FUN_00006f94",
+      "size": 158,
+      "external": false,
+      "thunk": false,
+      "depth": 1,
+      "calls": [
+        {
+          "source_address": 28582,
+          "source_address_hex": "0x00006fa6",
+          "target_address": 83897284,
+          "target_address_hex": "0x05002bc4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 28606,
+          "source_address_hex": "0x00006fbe",
+          "target_address": 83895658,
+          "target_address_hex": "0x0500256a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 28640,
+          "source_address_hex": "0x00006fe0",
+          "target_address": 83896606,
+          "target_address_hex": "0x0500291e",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 28658,
+          "source_address_hex": "0x00006ff2",
+          "target_address": 28828,
+          "target_address_hex": "0x0000709c",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_0000709c"
+        },
+        {
+          "source_address": 28682,
+          "source_address_hex": "0x0000700a",
+          "target_address": 83899066,
+          "target_address_hex": "0x050032ba",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 28690,
+          "source_address_hex": "0x00007012",
+          "target_address": 83894938,
+          "target_address_hex": "0x0500229a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 28702,
+          "source_address_hex": "0x0000701e",
+          "target_address": 83894938,
+          "target_address_hex": "0x0500229a",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 23102,
+          "caller_address_hex": "0x00005a3e",
+          "caller_name": "FUN_00005a3e",
+          "call_site": 23226,
+          "call_site_hex": "0x00005aba"
+        }
+      ],
+      "call_counts": {
+        "total": 7,
+        "internal": 1,
+        "library": 6,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 28722,
+      "address_hex": "0x00007032",
+      "name": "FUN_00007032",
+      "size": 64,
+      "external": false,
+      "thunk": false,
+      "depth": 1,
+      "calls": [
+        {
+          "source_address": 28742,
+          "source_address_hex": "0x00007046",
+          "target_address": 83896072,
+          "target_address_hex": "0x05002708",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 28764,
+          "source_address_hex": "0x0000705c",
+          "target_address": 28828,
+          "target_address_hex": "0x0000709c",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_0000709c"
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 23286,
+          "caller_address_hex": "0x00005af6",
+          "caller_name": "FUN_00005af6",
+          "call_site": 23418,
+          "call_site_hex": "0x00005b7a"
+        }
+      ],
+      "call_counts": {
+        "total": 2,
+        "internal": 1,
+        "library": 1,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 28786,
+      "address_hex": "0x00007072",
+      "name": "FUN_00007072",
+      "size": 42,
+      "external": false,
+      "thunk": false,
+      "depth": 1,
+      "calls": [
+        {
+          "source_address": 28806,
+          "source_address_hex": "0x00007086",
+          "target_address": 28828,
+          "target_address_hex": "0x0000709c",
+          "instruction": "bsr.l",
+          "type": "internal",
+          "target_name": "FUN_0000709c"
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 23480,
+          "caller_address_hex": "0x00005bb8",
+          "caller_name": "FUN_00005bb8",
+          "call_site": 23604,
+          "call_site_hex": "0x00005c34"
+        }
+      ],
+      "call_counts": {
+        "total": 1,
+        "internal": 1,
+        "library": 0,
+        "external": 0
+      },
+      "caller_count": 1
+    },
+    {
+      "address": 28828,
+      "address_hex": "0x0000709c",
+      "name": "FUN_0000709c",
+      "size": 976,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 28946,
+          "source_address_hex": "0x00007112",
+          "target_address": 162,
+          "target_address_hex": "0x000000a2",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        },
+        {
+          "source_address": 28962,
+          "source_address_hex": "0x00007122",
+          "target_address": 162,
+          "target_address_hex": "0x000000a2",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        },
+        {
+          "source_address": 28974,
+          "source_address_hex": "0x0000712e",
+          "target_address": 83898052,
+          "target_address_hex": "0x05002ec4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 28996,
+          "source_address_hex": "0x00007144",
+          "target_address": 162,
+          "target_address_hex": "0x000000a2",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        },
+        {
+          "source_address": 29006,
+          "source_address_hex": "0x0000714e",
+          "target_address": 162,
+          "target_address_hex": "0x000000a2",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        },
+        {
+          "source_address": 29130,
+          "source_address_hex": "0x000071ca",
+          "target_address": 83898376,
+          "target_address_hex": "0x05003008",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 29494,
+          "source_address_hex": "0x00007336",
+          "target_address": 83898376,
+          "target_address_hex": "0x05003008",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 29778,
+          "source_address_hex": "0x00007452",
+          "target_address": 162,
+          "target_address_hex": "0x000000a2",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        },
+        {
+          "source_address": 29788,
+          "source_address_hex": "0x0000745c",
+          "target_address": 162,
+          "target_address_hex": "0x000000a2",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        }
+      ],
+      "called_by": [
+        {
+          "caller_address": 28564,
+          "caller_address_hex": "0x00006f94",
+          "caller_name": "FUN_00006f94",
+          "call_site": 28658,
+          "call_site_hex": "0x00006ff2"
+        },
+        {
+          "caller_address": 28722,
+          "caller_address_hex": "0x00007032",
+          "caller_name": "FUN_00007032",
+          "call_site": 28764,
+          "call_site_hex": "0x0000705c"
+        },
+        {
+          "caller_address": 28786,
+          "caller_address_hex": "0x00007072",
+          "caller_name": "FUN_00007072",
+          "call_site": 28806,
+          "call_site_hex": "0x00007086"
+        }
+      ],
+      "call_counts": {
+        "total": 9,
+        "internal": 0,
+        "library": 3,
+        "external": 6
+      },
+      "caller_count": 3
+    },
+    {
+      "address": 29804,
+      "address_hex": "0x0000746c",
+      "name": "FUN_0000746c",
+      "size": 352,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 29890,
+          "source_address_hex": "0x000074c2",
+          "target_address": 162,
+          "target_address_hex": "0x000000a2",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        },
+        {
+          "source_address": 29906,
+          "source_address_hex": "0x000074d2",
+          "target_address": 162,
+          "target_address_hex": "0x000000a2",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        },
+        {
+          "source_address": 29918,
+          "source_address_hex": "0x000074de",
+          "target_address": 83898052,
+          "target_address_hex": "0x05002ec4",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        },
+        {
+          "source_address": 30096,
+          "source_address_hex": "0x00007590",
+          "target_address": 162,
+          "target_address_hex": "0x000000a2",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        },
+        {
+          "source_address": 30106,
+          "source_address_hex": "0x0000759a",
+          "target_address": 162,
+          "target_address_hex": "0x000000a2",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        },
+        {
+          "source_address": 30126,
+          "source_address_hex": "0x000075ae",
+          "target_address": 162,
+          "target_address_hex": "0x000000a2",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        },
+        {
+          "source_address": 30136,
+          "source_address_hex": "0x000075b8",
+          "target_address": 162,
+          "target_address_hex": "0x000000a2",
+          "instruction": "jsr",
+          "type": "external",
+          "target_name": null
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 7,
+        "internal": 0,
+        "library": 1,
+        "external": 6
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 30156,
+      "address_hex": "0x000075cc",
+      "name": "FUN_000075cc",
+      "size": 22,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [
+        {
+          "source_address": 30170,
+          "source_address_hex": "0x000075da",
+          "target_address": 83896420,
+          "target_address_hex": "0x05002864",
+          "instruction": "bsr.l",
+          "type": "library",
+          "target_name": null
+        }
+      ],
+      "called_by": [],
+      "call_counts": {
+        "total": 1,
+        "internal": 0,
+        "library": 1,
+        "external": 0
+      },
+      "caller_count": 0
+    },
+    {
+      "address": 30178,
+      "address_hex": "0x000075e2",
+      "name": "FUN_000075e2",
+      "size": 22,
+      "external": false,
+      "thunk": false,
+      "depth": 0,
+      "calls": [],
+      "called_by": [
+        {
+          "caller_address": 28268,
+          "caller_address_hex": "0x00006e6c",
+          "caller_name": "FUN_00006e6c",
+          "call_site": 28536,
+          "call_site_hex": "0x00006f78"
+        }
+      ],
+      "call_counts": {
+        "total": 0,
+        "internal": 0,
+        "library": 0,
+        "external": 0
+      },
+      "caller_count": 1
+    }
+  ]
+}

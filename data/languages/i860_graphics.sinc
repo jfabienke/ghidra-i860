@@ -9,43 +9,59 @@
 # ==================================================================
 
 # faddp — pixel add with merge (fpop=0x50)
-:^DualPrefix^"faddp" FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x50 & pbit=0 & DualPrefix & FS1src & FS2src & FSdest  {
-    FSdest = fp_faddp(FS1src, FS2src);
+:^DualPrefix^"faddp" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x50 & pbit=0 & DualPrefix & FD1src & FD2src & FDdest  {
+    FDdest = fp_faddp(FD1src, FD2src, MERGE, psr);
+    MERGE = fp_faddp_merge(FD1src, FD2src, MERGE, psr);
+    psr = fp_faddp_psr(FD1src, FD2src, psr);
 }
-:^DualPrefix^"pfaddp" FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x50 & pbit=1 & DualPrefix & FS1src & FS2src & FSdest  {
-    FSdest = fp_faddp(FS1src, FS2src);
+:^DualPrefix^"pfaddp" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x50 & pbit=1 & DualPrefix & FD1src & FD2src & FDdest  {
+    FDdest = fp_faddp(FD1src, FD2src, MERGE, psr);
+    MERGE = fp_faddp_merge(FD1src, FD2src, MERGE, psr);
+    psr = fp_faddp_psr(FD1src, FD2src, psr);
 }
 
 # faddz — FP add with Z-buffer check (fpop=0x51)
-:^DualPrefix^"faddz" FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x51 & pbit=0 & DualPrefix & FS1src & FS2src & FSdest  {
-    FSdest = fp_faddz(FS1src, FS2src);
+:^DualPrefix^"faddz" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x51 & pbit=0 & DualPrefix & FD1src & FD2src & FDdest  {
+    FDdest = fp_faddz(FD1src, FD2src, MERGE, psr);
+    MERGE = fp_faddz_merge(FD1src, FD2src, MERGE, psr);
 }
-:^DualPrefix^"pfaddz" FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x51 & pbit=1 & DualPrefix & FS1src & FS2src & FSdest  {
-    FSdest = fp_faddz(FS1src, FS2src);
+:^DualPrefix^"pfaddz" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x51 & pbit=1 & DualPrefix & FD1src & FD2src & FDdest  {
+    FDdest = fp_faddz(FD1src, FD2src, MERGE, psr);
+    MERGE = fp_faddz_merge(FD1src, FD2src, MERGE, psr);
 }
 
 # fzchkl — Z-check lower (fpop=0x57)
-:^DualPrefix^"fzchkl" FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x57 & pbit=0 & DualPrefix & FS1src & FS2src & FSdest  {
-    FSdest = fp_fzchkl(FS1src, FS2src);
+:^DualPrefix^"fzchkl" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x57 & pbit=0 & DualPrefix & FD1src & FD2src & FDdest  {
+    FDdest = fp_fzchkl(FD1src, FD2src, psr);
+    MERGE = fp_fzchkl_merge(FD1src, FD2src, MERGE, psr);
+    psr = fp_fzchkl_psr(FD1src, FD2src, psr);
 }
-:^DualPrefix^"pfzchkl" FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x57 & pbit=1 & DualPrefix & FS1src & FS2src & FSdest  {
-    FSdest = fp_fzchkl(FS1src, FS2src);
+:^DualPrefix^"pfzchkl" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x57 & pbit=1 & DualPrefix & FD1src & FD2src & FDdest  {
+    FDdest = fp_fzchkl(FD1src, FD2src, psr);
+    MERGE = fp_fzchkl_merge(FD1src, FD2src, MERGE, psr);
+    psr = fp_fzchkl_psr(FD1src, FD2src, psr);
 }
 
 # fzchks — Z-check stencil (fpop=0x5F)
-:^DualPrefix^"fzchks" FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x5F & pbit=0 & DualPrefix & FS1src & FS2src & FSdest  {
-    FSdest = fp_fzchks(FS1src, FS2src);
+:^DualPrefix^"fzchks" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x5F & pbit=0 & DualPrefix & FD1src & FD2src & FDdest  {
+    FDdest = fp_fzchks(FD1src, FD2src, psr);
+    MERGE = fp_fzchks_merge(FD1src, FD2src, MERGE, psr);
+    psr = fp_fzchks_psr(FD1src, FD2src, psr);
 }
-:^DualPrefix^"pfzchks" FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x5F & pbit=1 & DualPrefix & FS1src & FS2src & FSdest  {
-    FSdest = fp_fzchks(FS1src, FS2src);
+:^DualPrefix^"pfzchks" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x5F & pbit=1 & DualPrefix & FD1src & FD2src & FDdest  {
+    FDdest = fp_fzchks(FD1src, FD2src, psr);
+    MERGE = fp_fzchks_merge(FD1src, FD2src, MERGE, psr);
+    psr = fp_fzchks_psr(FD1src, FD2src, psr);
 }
 
 # form.dd — graphics OR merge (fpop=0x5A, always double)
 :^DualPrefix^"form.dd" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x5A & pbit=0 & DualPrefix & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
-    FDdest = fp_form(FD1src, FD2src);
+    FDdest = fp_form(FD1src, FD2src, MERGE);
+    MERGE = fp_form_merge(FD1src, FD2src, MERGE);
 }
 :^DualPrefix^"pform.dd" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x5A & pbit=1 & DualPrefix & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
-    FDdest = fp_form(FD1src, FD2src);
+    FDdest = fp_form(FD1src, FD2src, MERGE);
+    MERGE = fp_form_merge(FD1src, FD2src, MERGE);
 }
 
 # ==================================================================
@@ -55,12 +71,14 @@
 
 :pst.d fdsrc1, simm16(R2src)  is op6=0x0F & fpsize=0b00 & fpauto=0 & fdsrc1 & simm16 & R2src  {
     local addr:4 = R2src + sext(simm16:2);
-    *:8 addr = fdsrc1;
+    fp_pst_d(fdsrc1, addr, MERGE, psr);
+    MERGE = fp_pst_d_merge(fdsrc1, addr, MERGE, psr);
 }
 
 :pst.d fdsrc1, simm16(R2src)"++"  is op6=0x0F & fpsize=0b00 & fpauto=1 & fdsrc1 & simm16 & R2src & src2_zero!=0  {
     local addr:4 = R2src + sext(simm16:2);
-    *:8 addr = fdsrc1;
+    fp_pst_d(fdsrc1, addr, MERGE, psr);
+    MERGE = fp_pst_d_merge(fdsrc1, addr, MERGE, psr);
     R2src = addr;
 }
 
@@ -76,182 +94,615 @@
 #   bit 8 (S):  mul source precision (0=single, 1=double)
 #   bit 7 (R):  add source/result precision (0=single, 1=double)
 #
-# For SLEIGH, we model dual ops as sequential mul+add/sub since
-# pipeline timing is not observable in decompilation.
+# Pipeline semantics: each dual-op advances BOTH the FP Adder (A1-A3)
+# and FP Multiplier (M1-M3) stage registers simultaneously.
+# fdest receives the adder result from A3.
+# The multiplier result flows through M stages to T/KR/KI (DPC-dependent).
 #
-# DPC names (from Rust disassembler):
-#   0=r2p1, 1=r2pt, 2=r2ap1, 3=r2apt, 4=i2p1, 5=i2pt,
-#   6=i2ap1, 7=i2apt, 8=rat1p2, 9=m12apm, 10=ra1p2, 11=m12ttpa,
-#   12=iat1p2, 13=m12tpm, 14=ia1p2, 15=m12tpa
+# Precision rules:
+#   .ss: Adder 3-stage (A3), Multiplier 3-stage (M3) — single precision
+#   .sd: Adder 3-stage (A3), Multiplier 3-stage (M3) — single→double
+#   .dd: Adder 3-stage (A3), Multiplier 2-stage (M2) — double precision
+#
+# DPC routing of operands to each pipeline is complex (16 configurations).
+# We model fsrc1 op fsrc2 for both pipelines — captures pipeline advancement
+# and data dependencies correctly for decompilation.
 # ==================================================================
 
-# For brevity, define a single pcodeop for dual operations
-# The decompiler sees the operation name and operands
-define pcodeop fp_dualop;
-
 # --- PFAM (P=1, bit4=0): pipelined FP add + multiply ---
-# Precision .ss (S=0, R=0)
-:^DualPrefix^"r2p1.ss"   FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"r2pt.ss"   FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x1 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"r2ap1.ss"  FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x2 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"r2apt.ss"  FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x3 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"i2p1.ss"   FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x4 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"i2pt.ss"   FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x5 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"i2ap1.ss"  FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x6 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"i2apt.ss"  FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x7 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"rat1p2.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x8 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"m12apm.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x9 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"ra1p2.ss"  FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xA & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"m12ttpa.ss" FS1src, FS2src, FSdest is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xB & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"iat1p2.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xC & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"m12tpm.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xD & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"ia1p2.ss"  FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xE & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"m12tpa.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xF & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
+# .ss
+:^DualPrefix^"r2p1.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"r2pt.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x1 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"r2ap1.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x2 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"r2apt.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x3 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"i2p1.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x4 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"i2pt.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x5 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"i2ap1.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x6 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"i2apt.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x7 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"rat1p2.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x8 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"m12apm.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x9 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"ra1p2.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xA & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"m12ttpa.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xB & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"iat1p2.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xC & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"m12tpm.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xD & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"ia1p2.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xE & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"m12tpa.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xF & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
 
 # PFAM .sd (S=0, R=1)
-:^DualPrefix^"r2p1.sd"   FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x0 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest { FDdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"r2pt.sd"   FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x1 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest { FDdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"r2ap1.sd"  FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x2 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest { FDdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"r2apt.sd"  FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x3 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest { FDdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"i2p1.sd"   FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x4 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest { FDdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"i2pt.sd"   FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x5 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest { FDdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"i2ap1.sd"  FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x6 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest { FDdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"i2apt.sd"  FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x7 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest { FDdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"rat1p2.sd" FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x8 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest { FDdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"m12apm.sd" FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x9 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest { FDdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"ra1p2.sd"  FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xA & sbit=0 & rbit=1 & FS1src & FS2src & FDdest { FDdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"m12ttpa.sd" FS1src, FS2src, FDdest is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xB & sbit=0 & rbit=1 & FS1src & FS2src & FDdest { FDdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"iat1p2.sd" FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xC & sbit=0 & rbit=1 & FS1src & FS2src & FDdest { FDdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"m12tpm.sd" FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xD & sbit=0 & rbit=1 & FS1src & FS2src & FDdest { FDdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"ia1p2.sd"  FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xE & sbit=0 & rbit=1 & FS1src & FS2src & FDdest { FDdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"m12tpa.sd" FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xF & sbit=0 & rbit=1 & FS1src & FS2src & FDdest { FDdest = fp_dualop(FS1src, FS2src); }
+:^DualPrefix^"r2p1.sd" FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x0 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = float2float(FS1src) f+ float2float(FS2src);
+    M3 = M2; M2 = M1; M1 = float2float(FS1src) f* float2float(FS2src);
+}
+:^DualPrefix^"r2pt.sd" FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x1 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = float2float(FS1src) f+ float2float(FS2src);
+    M3 = M2; M2 = M1; M1 = float2float(FS1src) f* float2float(FS2src);
+}
+:^DualPrefix^"r2ap1.sd" FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x2 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = float2float(FS1src) f+ float2float(FS2src);
+    M3 = M2; M2 = M1; M1 = float2float(FS1src) f* float2float(FS2src);
+}
+:^DualPrefix^"r2apt.sd" FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x3 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = float2float(FS1src) f+ float2float(FS2src);
+    M3 = M2; M2 = M1; M1 = float2float(FS1src) f* float2float(FS2src);
+}
+:^DualPrefix^"i2p1.sd" FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x4 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = float2float(FS1src) f+ float2float(FS2src);
+    M3 = M2; M2 = M1; M1 = float2float(FS1src) f* float2float(FS2src);
+}
+:^DualPrefix^"i2pt.sd" FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x5 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = float2float(FS1src) f+ float2float(FS2src);
+    M3 = M2; M2 = M1; M1 = float2float(FS1src) f* float2float(FS2src);
+}
+:^DualPrefix^"i2ap1.sd" FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x6 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = float2float(FS1src) f+ float2float(FS2src);
+    M3 = M2; M2 = M1; M1 = float2float(FS1src) f* float2float(FS2src);
+}
+:^DualPrefix^"i2apt.sd" FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x7 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = float2float(FS1src) f+ float2float(FS2src);
+    M3 = M2; M2 = M1; M1 = float2float(FS1src) f* float2float(FS2src);
+}
+:^DualPrefix^"rat1p2.sd" FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x8 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = float2float(FS1src) f+ float2float(FS2src);
+    M3 = M2; M2 = M1; M1 = float2float(FS1src) f* float2float(FS2src);
+}
+:^DualPrefix^"m12apm.sd" FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x9 & sbit=0 & rbit=1 & FS1src & FS2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = float2float(FS1src) f+ float2float(FS2src);
+    M3 = M2; M2 = M1; M1 = float2float(FS1src) f* float2float(FS2src);
+}
+:^DualPrefix^"ra1p2.sd" FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xA & sbit=0 & rbit=1 & FS1src & FS2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = float2float(FS1src) f+ float2float(FS2src);
+    M3 = M2; M2 = M1; M1 = float2float(FS1src) f* float2float(FS2src);
+}
+:^DualPrefix^"m12ttpa.sd" FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xB & sbit=0 & rbit=1 & FS1src & FS2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = float2float(FS1src) f+ float2float(FS2src);
+    M3 = M2; M2 = M1; M1 = float2float(FS1src) f* float2float(FS2src);
+}
+:^DualPrefix^"iat1p2.sd" FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xC & sbit=0 & rbit=1 & FS1src & FS2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = float2float(FS1src) f+ float2float(FS2src);
+    M3 = M2; M2 = M1; M1 = float2float(FS1src) f* float2float(FS2src);
+}
+:^DualPrefix^"m12tpm.sd" FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xD & sbit=0 & rbit=1 & FS1src & FS2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = float2float(FS1src) f+ float2float(FS2src);
+    M3 = M2; M2 = M1; M1 = float2float(FS1src) f* float2float(FS2src);
+}
+:^DualPrefix^"ia1p2.sd" FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xE & sbit=0 & rbit=1 & FS1src & FS2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = float2float(FS1src) f+ float2float(FS2src);
+    M3 = M2; M2 = M1; M1 = float2float(FS1src) f* float2float(FS2src);
+}
+:^DualPrefix^"m12tpa.sd" FS1src, FS2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xF & sbit=0 & rbit=1 & FS1src & FS2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = float2float(FS1src) f+ float2float(FS2src);
+    M3 = M2; M2 = M1; M1 = float2float(FS1src) f* float2float(FS2src);
+}
 
-# PFAM .dd (S=1, R=1)
-:^DualPrefix^"r2p1.dd"   FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"r2pt.dd"   FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x1 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"r2ap1.dd"  FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x2 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"r2apt.dd"  FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x3 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"i2p1.dd"   FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x4 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"i2pt.dd"   FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x5 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"i2ap1.dd"  FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x6 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"i2apt.dd"  FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x7 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"rat1p2.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x8 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"m12apm.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x9 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"ra1p2.dd"  FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xA & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"m12ttpa.dd" FD1src, FD2src, FDdest is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xB & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"iat1p2.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xC & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"m12tpm.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xD & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"ia1p2.dd"  FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xE & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"m12tpa.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xF & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
+# PFAM .dd (S=1, R=1) — multiplier is 2-stage for double precision
+:^DualPrefix^"r2p1.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"r2pt.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x1 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"r2ap1.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x2 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"r2apt.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x3 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"i2p1.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x4 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"i2pt.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x5 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"i2ap1.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x6 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"i2apt.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x7 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"rat1p2.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x8 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"m12apm.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0x9 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"ra1p2.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xA & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"m12ttpa.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xB & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"iat1p2.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xC & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"m12tpm.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xD & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"ia1p2.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xE & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"m12tpa.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=0 & dpc=0xF & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
 
 # --- PFSM (P=1, bit4=1): pipelined FP subtract + multiply ---
 # .ss
-:^DualPrefix^"r2s1.ss"   FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"r2st.ss"   FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x1 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"r2as1.ss"  FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x2 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"r2ast.ss"  FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x3 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"i2s1.ss"   FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x4 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"i2st.ss"   FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x5 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"i2as1.ss"  FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x6 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"i2ast.ss"  FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x7 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"rat1s2.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x8 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"m12asm.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x9 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"ra1s2.ss"  FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0xA & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"m12ttsa.ss" FS1src, FS2src, FSdest is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0xB & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"iat1s2.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0xC & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"m12tsm.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0xD & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"ia1s2.ss"  FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0xE & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"m12tsa.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0xF & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
+:^DualPrefix^"r2s1.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"r2st.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x1 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"r2as1.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x2 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"r2ast.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x3 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"i2s1.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x4 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"i2st.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x5 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"i2as1.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x6 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"i2ast.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x7 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"rat1s2.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x8 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"m12asm.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x9 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"ra1s2.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0xA & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"m12ttsa.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0xB & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"iat1s2.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0xC & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"m12tsm.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0xD & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"ia1s2.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0xE & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"m12tsa.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0xF & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
 
 # PFSM .dd
-:^DualPrefix^"r2s1.dd"   FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"r2st.dd"   FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x1 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"r2as1.dd"  FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x2 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"r2ast.dd"  FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x3 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"i2s1.dd"   FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x4 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"i2st.dd"   FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x5 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"i2as1.dd"  FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x6 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"i2ast.dd"  FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x7 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"rat1s2.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x8 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"m12asm.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x9 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"ra1s2.dd"  FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0xA & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"m12ttsa.dd" FD1src, FD2src, FDdest is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0xB & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"iat1s2.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0xC & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"m12tsm.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0xD & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"ia1s2.dd"  FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0xE & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"m12tsa.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0xF & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
+:^DualPrefix^"r2s1.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"r2st.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x1 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"r2as1.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x2 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"r2ast.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x3 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"i2s1.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x4 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"i2st.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x5 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"i2as1.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x6 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"i2ast.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x7 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"rat1s2.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x8 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"m12asm.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0x9 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"ra1s2.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0xA & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"m12ttsa.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0xB & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"iat1s2.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0xC & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"m12tsm.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0xD & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"ia1s2.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0xE & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"m12tsa.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=1 & DualPrefix & dpc_sub=1 & dpc=0xF & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
 
 # --- PFMAM (P=0, bit4=0): pipelined FP multiply + add ---
-# Naming: 'm' prefix + replace 'a' with 'm' in DPC name
 # .ss
-:^DualPrefix^"mr2p1.ss"   FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mr2pt.ss"   FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x1 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mr2mp1.ss"  FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x2 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mr2mpt.ss"  FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x3 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mi2p1.ss"   FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x4 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mi2pt.ss"   FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x5 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mi2mp1.ss"  FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x6 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mi2mpt.ss"  FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x7 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mrmt1p2.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x8 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mm12mpm.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x9 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mrm1p2.ss"  FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0xA & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mm12ttpm.ss" FS1src, FS2src, FSdest is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0xB & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mimt1p2.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0xC & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mm12tpm.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0xD & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mim1p2.ss"  FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0xE & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mm12tpm_f.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0xF & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
+:^DualPrefix^"mr2p1.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mr2pt.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x1 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mr2mp1.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x2 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mr2mpt.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x3 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mi2p1.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x4 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mi2pt.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x5 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mi2mp1.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x6 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mi2mpt.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x7 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mrmt1p2.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x8 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mm12mpm.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x9 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mrm1p2.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0xA & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mm12ttpm.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0xB & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mimt1p2.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0xC & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mm12tpm.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0xD & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mim1p2.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0xE & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mm12tpm_f.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0xF & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f+ FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
 
-# PFMAM .dd
-:^DualPrefix^"mr2p1.dd"   FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mr2pt.dd"   FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x1 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mr2mp1.dd"  FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x2 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mr2mpt.dd"  FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x3 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mi2p1.dd"   FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x4 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mi2pt.dd"   FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x5 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mi2mp1.dd"  FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x6 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mi2mpt.dd"  FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x7 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mrmt1p2.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x8 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mm12mpm.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x9 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mrm1p2.dd"  FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0xA & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mm12ttpm.dd" FD1src, FD2src, FDdest is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0xB & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mimt1p2.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0xC & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mm12tpm.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0xD & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mim1p2.dd"  FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0xE & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mm12tpm_f.dd" FD1src, FD2src, FDdest is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0xF & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
+# PFMAM .dd — multiplier is 2-stage for double precision
+:^DualPrefix^"mr2p1.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mr2pt.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x1 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mr2mp1.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x2 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mr2mpt.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x3 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mi2p1.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x4 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mi2pt.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x5 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mi2mp1.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x6 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mi2mpt.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x7 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mrmt1p2.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x8 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mm12mpm.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0x9 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mrm1p2.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0xA & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mm12ttpm.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0xB & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mimt1p2.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0xC & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mm12tpm.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0xD & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mim1p2.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0xE & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mm12tpm_f.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=0 & dpc=0xF & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f+ FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
 
 # --- PFMSM (P=0, bit4=1): pipelined FP multiply + subtract ---
 # .ss
-:^DualPrefix^"mr2s1.ss"   FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mr2st.ss"   FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x1 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mr2ms1.ss"  FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x2 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mr2mst.ss"  FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x3 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mi2s1.ss"   FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x4 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mi2st.ss"   FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x5 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mi2ms1.ss"  FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x6 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mi2mst.ss"  FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x7 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mrmt1s2.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x8 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mm12msm.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x9 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mrm1s2.ss"  FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0xA & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mm12ttsm.ss" FS1src, FS2src, FSdest is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0xB & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mimt1s2.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0xC & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mm12tsm.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0xD & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mim1s2.ss"  FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0xE & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
-:^DualPrefix^"mm12tsm_f.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0xF & sbit=0 & rbit=0 & FS1src & FS2src & FSdest { FSdest = fp_dualop(FS1src, FS2src); }
+:^DualPrefix^"mr2s1.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x0 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mr2st.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x1 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mr2ms1.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x2 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mr2mst.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x3 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mi2s1.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x4 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mi2st.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x5 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mi2ms1.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x6 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mi2mst.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x7 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mrmt1s2.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x8 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mm12msm.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x9 & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mrm1s2.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0xA & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mm12ttsm.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0xB & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mimt1s2.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0xC & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mm12tsm.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0xD & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mim1s2.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0xE & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
+:^DualPrefix^"mm12tsm_f.ss" FS1src, FS2src, FSdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0xF & sbit=0 & rbit=0 & FS1src & FS2src & FSdest {
+    FSdest = A3:4; A3 = A2; A2 = A1; local a:4 = FS1src f- FS2src; A1 = zext(a);
+    local m:4 = FS1src f* FS2src; M3 = M2; M2 = M1; M1 = zext(m);
+}
 
 # PFMSM .dd
-:^DualPrefix^"mr2s1.dd"   FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mr2st.dd"   FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x1 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mr2ms1.dd"  FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x2 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mr2mst.dd"  FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x3 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mi2s1.dd"   FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x4 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mi2st.dd"   FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x5 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mi2ms1.dd"  FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x6 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mi2mst.dd"  FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x7 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mrmt1s2.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x8 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mm12msm.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x9 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mrm1s2.dd"  FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0xA & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mm12ttsm.dd" FD1src, FD2src, FDdest is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0xB & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mimt1s2.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0xC & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mm12tsm.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0xD & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mim1s2.dd"  FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0xE & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
-:^DualPrefix^"mm12tsm_f.dd" FD1src, FD2src, FDdest is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0xF & sbit=1 & rbit=1 & FD1src & FD2src & FDdest { FDdest = fp_dualop(FD1src, FD2src); }
+:^DualPrefix^"mr2s1.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x0 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mr2st.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x1 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mr2ms1.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x2 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mr2mst.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x3 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mi2s1.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x4 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mi2st.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x5 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mi2ms1.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x6 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mi2mst.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x7 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mrmt1s2.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x8 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mm12msm.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0x9 & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mrm1s2.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0xA & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mm12ttsm.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0xB & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mimt1s2.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0xC & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mm12tsm.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0xD & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mim1s2.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0xE & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}
+:^DualPrefix^"mm12tsm_f.dd" FD1src, FD2src, FDdest  is op6=0x12 & pbit=0 & DualPrefix & dpc_sub=1 & dpc=0xF & sbit=1 & rbit=1 & FD1src & FD2src & FDdest {
+    FDdest = A3; A3 = A2; A2 = A1; A1 = FD1src f- FD2src;
+    M2 = M1; M1 = FD1src f* FD2src;
+}

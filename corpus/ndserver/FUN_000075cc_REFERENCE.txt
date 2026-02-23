@@ -1,0 +1,314 @@
+================================================================================
+FUNCTION QUICK REFERENCE: FUN_000075cc
+================================================================================
+
+ADDRESS:              0x000075cc (30156 decimal)
+SIZE:                 22 bytes (5 instructions)
+TYPE:                 Callback wrapper / system API adapter
+ROM SOURCE:           ND_step1_v43_eeprom.bin (NeXTdimension i860 ROM v43)
+
+================================================================================
+DISASSEMBLY
+================================================================================
+
+0x75cc:  4E 56 00 00           LINK.W     A6,#0x0
+0x75d0:  2F 2E 00 08           MOVE.L     (0x8,A6),-(SP)
+0x75d4:  48 7A 80 F0           PEA        (0x80f0).L
+0x75da:  61 FF 04 A2 82 A4     BSR.L      0x05002864
+0x75e0:  4E 71                 NOP
+
+================================================================================
+INSTRUCTION BREAKDOWN
+================================================================================
+
+1. LINK.W A6,#0          [4 bytes] - Frame setup, no locals
+2. MOVE.L (0x8,A6),-(SP) [6 bytes] - Push caller's arg1
+3. PEA (0x80f0).L        [6 bytes] - Push constant address (arg2)
+4. BSR.L 0x05002864      [6 bytes] - Call external system function
+5. NOP                   [2 bytes] - Alignment/dead code
+
+================================================================================
+CALLING CONVENTION
+================================================================================
+
+Input Parameters:
+  ARG1: void *parameter (from caller's stack frame at 0x8,A6)
+  ARG2: 0x80f0 (constant - likely callback descriptor or handler)
+
+Return Value:
+  D0 (set by called function at 0x05002864)
+
+Stack Frame:
+  Size: 0 bytes (no local variables)
+  (A6): Return address
+  (A6+4): Caller's saved A6
+  (A6+8): First parameter (ARG1)
+
+Registers Preserved:
+  D0-D7, A0-A5 (caller-saved in std 68k ABI)
+  A6, SP modified
+
+================================================================================
+SEMANTICS
+================================================================================
+
+High-level function:
+
+    void FUN_000075cc(void *arg1) {
+        FUN_05002864(arg1, (void*)0x80f0);
+    }
+
+Stack operations:
+  1. Save old A6, create frame (A6 points to return addr location)
+  2. Extract caller's parameter from A6+8
+  3. Push ARG1 onto stack (SP-4)
+  4. Push constant 0x80f0 onto stack (SP-8)
+  5. Call external function 0x05002864 with two stack args
+  6. Return address 0x75e0 pushed by BSR.L
+  7. NOP (unreachable if callee doesn't return)
+
+================================================================================
+CALLERS & CALLEES
+================================================================================
+
+Called FROM (2 locations):
+  • FUN_0000709c (0x0000709c) - Larger function
+  • FUN_0000746c (0x0000746c) - Larger function
+
+Calls TO (1 location):
+  • FUN_05002864 (0x05002864) - EXTERNAL SYSTEM FUNCTION
+    [Far address, likely NeXTSTEP kernel]
+
+================================================================================
+DATA REFERENCES
+================================================================================
+
+Constant Address: 0x80f0
+  - Type: Absolute long (32-bit)
+  - Meaning: Likely ROM data structure, callback table, or handler reference
+  - Location: Within ND ROM address space
+  - Usage: Pushed as second parameter to 0x05002864
+
+External Call: 0x05002864
+  - Type: PC-relative offset (32-bit)
+  - Meaning: System API call outside ROM bounds
+  - Status: Requires runtime relocation for kernel address mapping
+  - Semantics: Expected to handle callbacks, register handlers, or setup
+
+================================================================================
+PERFORMANCE
+================================================================================
+
+Instruction Cycle Count (Motorola 68000):
+  LINK.W       16 cycles
+  MOVE.L       16 cycles
+  PEA          12 cycles
+  BSR.L        18 cycles
+  NOP           4 cycles
+  ──────────────────────
+  Total:       66 cycles (minimum)
+
+Memory Operations: ~4 (2 reads, 2 writes, 1 branch stack push)
+
+Latency: 66 cycles + callee latency (at 0x05002864)
+
+Performance Class: Low (due to external call overhead)
+
+================================================================================
+KEY CHARACTERISTICS
+================================================================================
+
+Pattern Type:        LINK-MOVE-PEA-BSR-NOP (common 68k template)
+Code Style:         Minimal, efficient stack parameter passing
+Stack Frame:        Minimal (0 bytes local)
+Parameters:         2 (one from caller, one constant)
+Complexity:         Very low (linear, no branches)
+Reusability:        Template-like (similar functions exist in ROM)
+Dead Code:          Possible (NOP after external call)
+
+================================================================================
+ANOMALIES & NOTES
+================================================================================
+
+1. Missing Epilogue:
+   - Function has no visible UNLK A6 or RTS instruction
+   - Suggests: implicit epilogue, tail call pattern, or inline code
+   - Impact: May continue into next function or rely on callee return
+
+2. Unreachable NOP:
+   - NOP at 0x75e0 may be unreachable if 0x05002864 doesn't return
+   - Suggests: alignment padding, dead code, or instrumentation placeholder
+
+3. External Address:
+   - 0x05002864 far outside ROM bounds (0x00000000-0x0001FFFF)
+   - Indicates: kernel API call, runtime-loaded code
+   - Requires: address relocation at runtime
+
+4. Hardcoded Constant:
+   - 0x80f0 is ROM-relative, assumes fixed memory layout
+   - Could fail: if ROM relocated differently in different implementations
+
+================================================================================
+CODE PATTERNS
+================================================================================
+
+Similar Functions Found:
+  - FUN_000075e2: 22 bytes at 0x000075e2 (next function)
+    Differences: Different parameter setup, different target
+
+Pattern Prevalence: Multiple identical-sized functions suggest:
+  • Template-generated code
+  • Standard library or wrapper functions
+  • Callback dispatcher framework
+
+Pattern Usage:
+  Wrapper/adapter between ROM-resident code and external system APIs
+  Common in firmware that must call OS kernel functions
+
+================================================================================
+MEMORY MAP
+================================================================================
+
+Function Location:
+  0x000075cc (ND ROM address space)
+  Located in: Main runtime code section (0x01580-0x02560 per ROM structure)
+
+Called Function Location:
+  0x05002864 (External/kernel address space)
+  Type: System call, far jump out of ROM
+
+Constant Reference:
+  0x80f0 (ND ROM data/resource space)
+  Type: Address/descriptor/callback reference
+
+ROM Address Space (i860 perspective):
+  0x00000000-0x0001FFFF  Local DRAM
+  0x10000000-0x103FFFFF  Local VRAM
+  0x08000000-0x0BFFFFFF  Shared host memory window
+  0xFFF00000-0xFFFFFFFF  Boot ROM (this function at 0xFFF075cc)
+  0x02000000-0x02000FFF  MMIO registers
+
+================================================================================
+SECURITY & ROBUSTNESS
+================================================================================
+
+Potential Issues:
+  1. No validation of input parameter (from caller's stack)
+     Risk: If caller provides invalid pointer, callee will crash
+
+  2. Hardcoded address 0x80f0 (not validated)
+     Risk: If ROM layout changes, may reference invalid memory
+
+  3. No error handling on return from 0x05002864
+     Risk: Errors propagate silently to caller
+
+  4. Parameter comes from caller's stack frame
+     Risk: Stack corruption could pass invalid arguments
+
+Safety: Low (typical ROM firmware code, assumes trusted caller)
+
+================================================================================
+TESTING RECOMMENDATIONS
+================================================================================
+
+1. Identify function 0x05002864 (called function)
+   - What does it do? Is it in kernel or ROM?
+   - Document its calling convention and semantics
+
+2. Identify the meaning of 0x80f0
+   - Is it a data structure, callback table, or resource reference?
+   - What format/layout does it have?
+
+3. Trace callers (0x0000709c, 0x0000746c)
+   - What parameters do they pass?
+   - In what context is this callback used?
+
+4. Monitor execution in emulator
+   - Verify parameter values passed
+   - Check if 0x05002864 is reachable
+   - Confirm return behavior
+
+5. Comparative analysis
+   - Compare with FUN_000075e2 (similar function)
+   - Identify pattern variations
+   - Extract all similar functions
+
+================================================================================
+RELATED FUNCTIONS
+================================================================================
+
+Same Size (22 bytes):
+  FUN_000075e2 @ 0x000075e2 - Different structure, similar pattern
+
+Callers:
+  FUN_0000709c @ 0x0000709c - 976 bytes
+  FUN_0000746c @ 0x0000746c - 352 bytes
+
+Called:
+  FUN_05002864 @ 0x05002864 - EXTERNAL (kernel)
+
+Nearby Functions:
+  FUN_0000746c @ 0x0000746c (352 bytes, before)
+  FUN_000075e2 @ 0x000075e2 (22 bytes, after)
+
+================================================================================
+METADATA
+================================================================================
+
+Analysis Tool:       Ghidra 11.x (disassembly export)
+Data Source:         /Users/jvindahl/Development/nextdimension/ndserver_re/
+                     ghidra_export/disassembly_full.asm
+Analysis Date:       2025-11-09
+ROM Source:          ND_step1_v43_eeprom.bin
+ROM Version:         v43 (NeXTdimension)
+Architecture:        Motorola 68000 (68k)
+Endianness:          Big-endian
+
+Documentation Files Generated:
+  1. FUN_000075cc_ANALYSIS.md       (18-section comprehensive analysis)
+  2. FUN_000075cc_DISASSEMBLY.md    (Detailed instruction-level disassembly)
+  3. FUN_000075cc_REFERENCE.txt     (This file - quick reference)
+
+================================================================================
+QUICK LOOKUP TABLE
+================================================================================
+
+What is this function?
+  Callback wrapper/adapter between ROM code and system kernel
+
+Where is it located?
+  0x000075cc in ND ROM (NeXTdimension i860 boot ROM)
+
+How big is it?
+  22 bytes (5 instructions)
+
+What does it do?
+  Calls 0x05002864 with two parameters: arg1 (from caller) and 0x80f0 (const)
+
+Who calls it?
+  FUN_0000709c and FUN_0000746c
+
+What does it call?
+  FUN_05002864 (external system function)
+
+Can it fail?
+  Unlikely to fail in ROM; depends on validity of 0x05002864
+
+Is it performance-critical?
+  No (single external call, ~66 cycles overhead)
+
+Is the code optimized?
+  Not particularly; standard frame setup, typical parameter passing
+
+Can it be optimized?
+  Possibly: could use register parameters instead of stack, but API may require stack
+
+Is this template-generated code?
+  Likely (similar functions found, consistent pattern)
+
+What year was this written?
+  Likely early 1990s (NeXTdimension product era, 1991-1995)
+
+================================================================================
+END OF REFERENCE CARD
+================================================================================

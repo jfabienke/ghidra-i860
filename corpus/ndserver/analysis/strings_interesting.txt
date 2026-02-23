@@ -1,0 +1,71 @@
+NextDimension
+ND_GetBoardList
+No NextDimension board found.
+No NextDimension board in Slot %d.
+ND_BootKernelFromSect
+ND_SetPagerTask
+NDPingKernel
+NDUX_Init: ND_Port_check_in()
+ND_ConsoleInput
+NDDriver: ND_Load_MachDriver
+NextDimension
+NDDriver: ND_GetBoardList
+NeXTdimension
+nd_currentsync
+nd_setsync
+Another WindowServer is using the NeXTdimension board.
+(NextDimension)
+/usr/lib/NextStep/Displays/NeXTdimension.psdrvr/NDserver
+FAILURE IN NeXTdimension SERVER
+NeXTdimension internal msg error: %s
+nd_start_video: can't find window bag
+nd_start_video: can't get window info
+nd_resumerecording: ps_setRecordingInfo fails (%d)
+nd_resumerecording: ps_startRecording fails (%d)
+NeXTdimension: Couldn't find kern_loader's port (%s)
+NeXTdimension: get_server_state() fails (%s)
+/usr/lib/NextStep/Displays/NeXTdimension.psdrvr/ND_MachDriver_reloc
+NeXTdimension: kern_loader_add_server() fails (%s)
+NeXTdimension: kern_loader_load_server() fails (%s)
+NeXTdimension: Mach driver spontaneously unloading!
+NeXTdimension: Mach driver has become a zombie!
+ND_Port_check_in()
+/* NeXTSTEP Release 3 */
+"slot_phone_filler" = "Next: (415) 123-4567";
+/usr/shlib/libNeXT_s.C.shlib
+getNextEvent:
+Dimensioni:
+/* NeXTSTEP Release 3 */
+/usr/shlib/libNeXT_s.C.shlib
+NeXTtv.nib
+NeXTtv_main.m
+getNextEvent:
+nextColor
+dimensionForm
+dimensionSlider
+setDimension:
+NeXTtv.app
+Port: NeXTtv
+Menu Item: NeXTtv/Output Selection
+nextText
+9Copyright 1991, NeXT Computer, Inc.  All Rights Reserved.
+(NeXTdimension Video Output Demonstration
+ScreenScape transparently outputs a partial rectangular area of your NeXTdimension screen to the NeXTdimension video output ports.  This rectangle automatically follows the cursor as you work.\
+The video frame automatically tracks the cursor upon startup.  The size of this frame depends on the type of video signal your NeXTdimension board can output (i.e., NTSC or PAL) and the 
+\b0 This box displays the type of video signal being output, the size of the output frame, and the frame's current position in screen coordinates relative to the lower-left corner of your NeXTdimension screen.\
+nextText
+%%NXNextStepVersion: 3.0
+%%BeginProcSet: /usr/lib/NextStep/printPackage.ps 3.0
+% NeXT Printing Package
+% Copyright: 1988, NeXT, Inc.
+/NextStepEncoding where not{
+/NextStepEncoding StandardEncoding 256 array copy def
+ {NextStepEncoding 2 index 2 index put pop 1 add}{exch pop}ifelse
+/NextStepEncoding NextStepEncoding readonly def
+ % Because we can never let NextStepEncoding get into
+ % SharedFontDirectory, we cannot reencode a font to NextStepEncoding
+ dup /Encoding NextStepEncoding put definefont
+* simple.el (append-next-kill):
+use c-backward-to-noncomment to find next real text.
+Delete whitespace only next to commas.
+* simple.el (next-complex-command): fix one-off about

@@ -1,0 +1,79 @@
+Analyze the following function and return a structured JSON intent dossier.
+
+FUNCTION: FUN_f800b83c at 0xf800b83c
+SIZE: 72 bytes (18 instructions)
+CONFIDENCE SOURCE: curated
+HAS UNRESOLVED BRI: False
+PRIORITY TAGS: mmio_access
+
+CALLERS (0): (none)
+CALLEES (0): (none)
+
+BLOCKS (1):
+  0xf800b83c..0xf800b883 (18 insns)
+
+INSTRUCTIONS:
+  0xf800b83c: ld.b r7(r16),r0                          defs=[r0_sink] uses=[r16,r7] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800b840: ld.b r0(r23),r24                         defs=[r24] uses=[0x0,r23] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800b844: ld.b r7(r0),r0                           defs=[r0_sink] uses=[0x0,r7] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800b848: ld.b r0(r7),r24                          defs=[r24] uses=[0x0,r7] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800b84c: st.b r22,0x16(r8)                        defs=[] uses=[r8,0x16,r22] pcode=[INT_ADD,STORE]
+  0xf800b850: st.s r22,0x116(r8)                       defs=[] uses=[r8,0x116,r22] pcode=[INT_ADD,STORE]
+  0xf800b854: fld.l -0x4dea(r8),f0                     defs=[f0_sink] uses=[r8,0xb216] pcode=[INT_SEXT,INT_ADD,LOAD] [MMIO:mmio_high_space]
+  0xf800b858: fst.l f22,-0x4cea(r8)                    defs=[] uses=[r8,0xb316,f22] pcode=[INT_SEXT,INT_ADD,STORE] [MMIO:mmio_high_space]
+  0xf800b85c: fld.l -0x91(r22)++,f29                   defs=[f29,r22] uses=[r22,0xff6f] pcode=[INT_SEXT,INT_ADD,LOAD,COPY] [MMIO:mmio_high_space]
+  0xf800b860: ld.b r11(r0),r0                          defs=[r0_sink] uses=[0x0,r11] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800b864: st.s r16,0x1c(r8)                        defs=[] uses=[r8,r16,0x1c] pcode=[INT_ADD,STORE]
+  0xf800b868: ld.s r8(r0),r0                           defs=[r0_sink] uses=[r8,0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800b86c: st.s r18,0x14(r8)                        defs=[] uses=[r8,0x14,r18] pcode=[INT_ADD,STORE]
+  0xf800b870: ld.b 0x50(r4),r0                         defs=[r0_sink] uses=[0x50,r4] pcode=[INT_SEXT,INT_ADD,LOAD,INT_ZEXT]
+  0xf800b874: ld.b r2(r8),r0                           defs=[r0_sink] uses=[r8,r2] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800b878: ld.b r16(r29),r16                        defs=[r16] uses=[r16,r29] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800b87c: fld.q r2(r0),f0f1                        defs=[f0f1] uses=[0x0,r2,0x8] pcode=[INT_ADD,LOAD,COPY]
+  0xf800b880: ld.b -0x7fe4(r13),r16                    defs=[r16] uses=[r13,0x801c] pcode=[INT_SEXT,INT_ADD,LOAD,INT_ZEXT] [MMIO:mmio_high_space]
+
+REFERENCES:
+  (none)
+
+STRINGS IN RANGE:
+  (none)
+
+DISPATCH UNRESOLVED:
+  (none)
+
+CONTEXT:
+- R15 cluster (GState flags): False
+- MMIO accesses: 0xf800b854=mmio_high_space
+- Nearby deny ranges: (none)
+- Nearby embedded objects: (none)
+
+Return ONLY valid JSON matching this schema:
+{
+  "function_id": "0xf800b83c",
+  "function_name": "FUN_f800b83c",
+  "primary_intent": "<one-line purpose statement>",
+  "intent_category": "<one of: initialization, dispatch, parser, raster, mmio_driver, math_kernel, utility, synchronization, error_handler, unknown>",
+  "evidence": [
+    {"addr": "0x...", "fact": "<what this instruction/pattern proves>"}
+  ],
+  "register_protocol": {
+    "inputs": ["<rN = description>"],
+    "outputs": ["<rN = description>"],
+    "side_effects": ["<memory write / MMIO / control reg change>"]
+  },
+  "data_accesses": [
+    {"addr": "0x...", "target": "0x...", "kind": "read|write|mmio", "interpretation": "..."}
+  ],
+  "control_flow_summary": "<how the function flows: linear, loop, conditional tree, dispatch, etc.>",
+  "confidence": <0-100>,
+  "confidence_factors": {
+    "supporting": ["<what raises confidence>"],
+    "limiting": ["<what caps confidence>"]
+  },
+  "alternatives": [
+    {"intent": "<alternative purpose>", "why_not_primary": "<evidence against>"}
+  ],
+  "open_questions": ["<what remains unknown>"],
+  "required_next_evidence": ["<what would resolve open questions>"],
+  "subsystem_hint": "<suggested subsystem: postscript_dispatch, pixel_pipeline, memory_management, board_init, interrupt_handling, unknown>"
+}

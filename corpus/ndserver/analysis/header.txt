@@ -1,0 +1,4 @@
+NDserver:
+Mach header
+      magic  cputype cpusubtype  caps    filetype ncmds sizeofcmds      flags
+   MH_MAGIC  MC680x0        ALL  0x00     EXECUTE     8       1052   NOUNDEFS

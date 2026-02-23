@@ -1,0 +1,83 @@
+Analyze the following function and return a structured JSON intent dossier.
+
+FUNCTION: FUN_f800cd64 at 0xf800cd64
+SIZE: 88 bytes (22 instructions)
+CONFIDENCE SOURCE: curated
+HAS UNRESOLVED BRI: False
+PRIORITY TAGS: mmio_access
+
+CALLERS (0): (none)
+CALLEES (0): (none)
+
+BLOCKS (1):
+  0xf800cd64..0xf800cdbb (22 insns)
+
+INSTRUCTIONS:
+  0xf800cd64: ld.b r4(r28),r0                          defs=[r0_sink] uses=[r4,r28] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800cd68: xorh 0x15ec,r31,r31                      defs=[r31] uses=[0x10,0x15ec,r31] pcode=[INT_ZEXT,INT_LEFT,INT_XOR]
+  0xf800cd6c: ld.s 0x68(r16),r0                        defs=[r0_sink] uses=[r16,0x68] pcode=[INT_SEXT,INT_ADD,LOAD,INT_ZEXT]
+  0xf800cd70: andnot r22,r7,r30                        defs=[r30] uses=[r22,r7] pcode=[INT_NEGATE,INT_AND]
+  0xf800cd74: fst.l f18,r18(r8)                        defs=[] uses=[r8,r18,f18] pcode=[INT_ADD,STORE]
+  0xf800cd78: ixfr r3,f24                              defs=[f24] uses=[r3] pcode=[COPY]
+  0xf800cd7c: andnot r30,r11,r26                       defs=[r26] uses=[r30,r11] pcode=[INT_NEGATE,INT_AND]
+  0xf800cd80: ld.b r4(r28),r0                          defs=[r0_sink] uses=[r4,r28] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800cd84: xorh 0x15ec,r31,r31                      defs=[r31] uses=[0x10,0x15ec,r31] pcode=[INT_ZEXT,INT_LEFT,INT_XOR]
+  0xf800cd88: st.b r0,0x68(r24)                        defs=[] uses=[r24,0x0,0x68] pcode=[INT_ADD,STORE]
+  0xf800cd8c: andnot r22,r7,r30                        defs=[r30] uses=[r22,r7] pcode=[INT_NEGATE,INT_AND]
+  0xf800cd90: ld.c fir,r0                              defs=[r0_sink] uses=[fir] pcode=[COPY]
+  0xf800cd94: ixfr r3,f24                              defs=[f24] uses=[r3] pcode=[COPY]
+  0xf800cd98: andnot 0xf117,r11,r26                    defs=[r26] uses=[0xf117,r11] pcode=[INT_ZEXT,INT_NEGATE,INT_AND]
+  0xf800cd9c: ld.b r4(r28),r0                          defs=[r0_sink] uses=[r4,r28] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800cda0: xorh 0x15ec,r31,r31                      defs=[r31] uses=[0x10,0x15ec,r31] pcode=[INT_ZEXT,INT_LEFT,INT_XOR]
+  0xf800cda4: ixfr r0,f0                               defs=[] uses=[] pcode=[]
+  0xf800cda8: andnot r22,r7,r30                        defs=[r30] uses=[r22,r7] pcode=[INT_NEGATE,INT_AND]
+  0xf800cdac: st.b r18,0x16(r8)                        defs=[] uses=[r8,0x16,r18] pcode=[INT_ADD,STORE]
+  0xf800cdb0: st.s r18,0x116(r8)                       defs=[] uses=[r8,0x116,r18] pcode=[INT_ADD,STORE]
+  0xf800cdb4: fld.l -0x6dea(r8),f0                     defs=[f0_sink] uses=[r8,0x9216] pcode=[INT_SEXT,INT_ADD,LOAD] [MMIO:mmio_high_space]
+  0xf800cdb8: fst.l f18,-0x6cea(r8)                    defs=[] uses=[r8,0x9316,f18] pcode=[INT_SEXT,INT_ADD,STORE] [MMIO:mmio_high_space]
+
+REFERENCES:
+  (none)
+
+STRINGS IN RANGE:
+  (none)
+
+DISPATCH UNRESOLVED:
+  (none)
+
+CONTEXT:
+- R15 cluster (GState flags): False
+- MMIO accesses: 0xf800cdb4=mmio_high_space
+- Nearby deny ranges: (none)
+- Nearby embedded objects: (none)
+
+Return ONLY valid JSON matching this schema:
+{
+  "function_id": "0xf800cd64",
+  "function_name": "FUN_f800cd64",
+  "primary_intent": "<one-line purpose statement>",
+  "intent_category": "<one of: initialization, dispatch, parser, raster, mmio_driver, math_kernel, utility, synchronization, error_handler, unknown>",
+  "evidence": [
+    {"addr": "0x...", "fact": "<what this instruction/pattern proves>"}
+  ],
+  "register_protocol": {
+    "inputs": ["<rN = description>"],
+    "outputs": ["<rN = description>"],
+    "side_effects": ["<memory write / MMIO / control reg change>"]
+  },
+  "data_accesses": [
+    {"addr": "0x...", "target": "0x...", "kind": "read|write|mmio", "interpretation": "..."}
+  ],
+  "control_flow_summary": "<how the function flows: linear, loop, conditional tree, dispatch, etc.>",
+  "confidence": <0-100>,
+  "confidence_factors": {
+    "supporting": ["<what raises confidence>"],
+    "limiting": ["<what caps confidence>"]
+  },
+  "alternatives": [
+    {"intent": "<alternative purpose>", "why_not_primary": "<evidence against>"}
+  ],
+  "open_questions": ["<what remains unknown>"],
+  "required_next_evidence": ["<what would resolve open questions>"],
+  "subsystem_hint": "<suggested subsystem: postscript_dispatch, pixel_pipeline, memory_management, board_init, interrupt_handling, unknown>"
+}

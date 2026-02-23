@@ -1,0 +1,307 @@
+{
+  "schema_version": "shard-v1",
+  "factpack_source": "/tmp/factpack_breakthrough_top56_augtrace",
+  "function": {
+    "entry": "0xf80777a8",
+    "name": "FUN_f80777a8",
+    "size": 36,
+    "in_exec": true,
+    "in_allow": true,
+    "in_deny": false,
+    "confidence_source": "curated",
+    "has_unresolved_bri": false
+  },
+  "blocks": [
+    {
+      "func_entry": "0xf80777a8",
+      "block_start": "0xf80777a8",
+      "block_end": "0xf80777af",
+      "insn_count": 2
+    },
+    {
+      "func_entry": "0xf80777a8",
+      "block_start": "0xf80777b0",
+      "block_end": "0xf80777cb",
+      "insn_count": 7
+    }
+  ],
+  "edges": [
+    {
+      "src": "0xf80777c0",
+      "dst": "0xf80777c4",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf80777bc",
+      "dst": "0xf80777c0",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf80777c4",
+      "dst": "0xfa14a908",
+      "kind": "branch",
+      "delay_slot": true
+    },
+    {
+      "src": "0xf80777a8",
+      "dst": "0xf80777ac",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf80777c8",
+      "dst": "0xf80777cc",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf80777ac",
+      "dst": "0xf8069b68",
+      "kind": "branch_cond",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf80777ac",
+      "dst": "0xf80777b0",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf80777b0",
+      "dst": "0xf80777b4",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf80777b4",
+      "dst": "0xf80777b8",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf80777b8",
+      "dst": "0xf80777bc",
+      "kind": "fallthrough",
+      "delay_slot": false
+    }
+  ],
+  "insns": [
+    {
+      "addr": "0xf80777a8",
+      "func_entry": "0xf80777a8",
+      "word": "0x0aca88a5",
+      "mnemonic": "ixfr",
+      "operands": "ixfr r17,f10",
+      "defs": [
+        "f10"
+      ],
+      "uses": [
+        "r17"
+      ],
+      "pcode_ops": [
+        "COPY"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf80777ac",
+      "func_entry": "0xf80777a8",
+      "word": "0x5c39d0ee",
+      "mnemonic": "bte",
+      "operands": "bte 0x1a,r1,0xf8069b68",
+      "defs": [],
+      "uses": [
+        "r1",
+        "0x1a"
+      ],
+      "pcode_ops": [
+        "INT_EQUAL",
+        "CBRANCH"
+      ],
+      "flows": [
+        "0xf8069b68"
+      ],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf80777b0",
+      "func_entry": "0xf80777a8",
+      "word": "0xc2c962f4",
+      "mnemonic": "and",
+      "operands": "and r12,r22,r9",
+      "defs": [
+        "r9"
+      ],
+      "uses": [
+        "r12",
+        "r22"
+      ],
+      "pcode_ops": [
+        "INT_AND"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf80777b4",
+      "func_entry": "0xf80777a8",
+      "word": "0xd2229d98",
+      "mnemonic": "andnot",
+      "operands": "andnot r19,r17,r2",
+      "defs": [
+        "r2"
+      ],
+      "uses": [
+        "r17",
+        "r19"
+      ],
+      "pcode_ops": [
+        "INT_NEGATE",
+        "INT_AND"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf80777b8",
+      "func_entry": "0xf80777a8",
+      "word": "0x8bfd8ce1",
+      "mnemonic": "subu",
+      "operands": "subu r17,r31,r29",
+      "defs": [
+        "r29"
+      ],
+      "uses": [
+        "r17",
+        "r31"
+      ],
+      "pcode_ops": [
+        "INT_SUB"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf80777bc",
+      "func_entry": "0xf80777a8",
+      "word": "0xd4d24865",
+      "mnemonic": "andnot",
+      "operands": "andnot 0x4865,r6,r18",
+      "defs": [
+        "r18"
+      ],
+      "uses": [
+        "0x4865",
+        "r6"
+      ],
+      "pcode_ops": [
+        "INT_ZEXT",
+        "INT_NEGATE",
+        "INT_AND"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf80777c0",
+      "func_entry": "0xf80777a8",
+      "word": "0x1085f7be",
+      "mnemonic": "ld.s",
+      "operands": "ld.s r30(r4),r5",
+      "defs": [
+        "r5"
+      ],
+      "uses": [
+        "r4",
+        "r30"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf80777c4",
+      "func_entry": "0xf80777a8",
+      "word": "0x68834c51",
+      "mnemonic": "br",
+      "operands": "br 0xfa14a908",
+      "defs": [],
+      "uses": [
+        "r4",
+        "0xffffa8c4",
+        "r19"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "STORE",
+        "BRANCH"
+      ],
+      "flows": [
+        "0xfa14a908"
+      ],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf80777c8",
+      "func_entry": "0xf80777a8",
+      "word": "0x1e7520c4",
+      "mnemonic": "_st.s",
+      "operands": "_st.s r4,-0x573c(r19)",
+      "defs": [],
+      "uses": [
+        "r4",
+        "0xffffa8c4",
+        "r19"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "STORE"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    }
+  ],
+  "refs": [
+    {
+      "from": "0xf80777c4",
+      "to": "0xfa14a908",
+      "type": "UNCONDITIONAL_JUMP",
+      "is_flow": true,
+      "is_primary": true
+    },
+    {
+      "from": "0xf80777ac",
+      "to": "0xf8069b68",
+      "type": "CONDITIONAL_JUMP",
+      "is_flow": true,
+      "is_primary": true
+    }
+  ],
+  "strings": [],
+  "dispatch_unresolved": [],
+  "callees": [],
+  "callers": [],
+  "context": {
+    "r15_cluster": false,
+    "mmio_accesses": [],
+    "nearby_deny_ranges": [],
+    "nearby_embedded_objects": [],
+    "priority_tags": []
+  }
+}

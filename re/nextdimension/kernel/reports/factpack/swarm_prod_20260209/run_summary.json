@@ -1,0 +1,370 @@
+{
+  "run_id": "18277bbe",
+  "model": "claude-sonnet-4-5-20250929",
+  "backend": "max",
+  "stats": {
+    "claims": 60,
+    "verified_accept": 21,
+    "verified_revise": 22,
+    "verified_reject": 4,
+    "gatekeeper_passed": 47,
+    "gatekeeper_failed": 0,
+    "total_tokens_in": 535719,
+    "total_tokens_out": 273240
+  },
+  "results": [
+    {
+      "function_id": "0xf8000000",
+      "status": "reject",
+      "confidence": 15,
+      "primary_intent": "Corrupted or incorrectly disassembled initialization stub containing predominantly zero-offset loads that write to r0 (hardwired zero sink)",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf8009270",
+      "status": "revise",
+      "confidence": 72,
+      "primary_intent": "Unrolled MMIO token-write loop with repeated PostScript-style dispatch setup sequences, likely a bulk token transmit or command pipeline flush",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf80094fc",
+      "status": "revise",
+      "confidence": 15,
+      "primary_intent": "MMIO sequence generator or hardware delay pattern with chaotic register usage and no coherent data flow",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800916c",
+      "status": "revise",
+      "confidence": 45,
+      "primary_intent": "MMIO-driven busy-wait synchronization loop with dual-path timing variants and FP register side effects",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800c964",
+      "status": "revise",
+      "confidence": 45,
+      "primary_intent": "Memory scrubbing loop with MMIO watchdog stroking",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800a44c",
+      "status": "accept",
+      "confidence": 95,
+      "primary_intent": "Dead-code garbage function containing semantic no-ops and nonsensical operations with no coherent computational purpose",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800bf74",
+      "status": "accept",
+      "confidence": 35,
+      "primary_intent": "Duplicated instruction sequence performing multiple byte loads and hash operations, terminating with MMIO write to high address space",
+      "contrarian_verdict": "schema_fail"
+    },
+    {
+      "function_id": "0xf800d0ec",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "MMIO token write followed by corrupted/invalid instruction sequence - likely unreachable trap stub or dead code",
+      "contrarian_verdict": "schema_fail"
+    },
+    {
+      "function_id": "0xf800cd64",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Dead code or unreachable debug/test stub containing nonsensical register operations and no coherent data flow",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800d00c",
+      "status": "schema_fail",
+      "errors": [
+        "evidence[15].addr: 'control_flow' is not a hex address"
+      ]
+    },
+    {
+      "function_id": "0xf8008098",
+      "status": "revise",
+      "confidence": 45,
+      "primary_intent": "Write single-byte MMIO value (r16) to device register; preceding/following instructions appear to be data-dependent junk or obfuscated initialization sequence",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf8008f5c",
+      "status": "revise",
+      "confidence": 20,
+      "primary_intent": "Dead code or obfuscated NOP sequence - performs 18 byte loads with all results discarded to r0 sink",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800b83c",
+      "status": "revise",
+      "confidence": 15,
+      "primary_intent": "Dead code test pattern: nonsensical instruction sequence loading into zero-sink registers without computational purpose",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800c8bc",
+      "status": "revise",
+      "confidence": 35,
+      "primary_intent": "MMIO diagnostic or trace routine with load-only validation pattern and dual MMIO writes",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf807ee1c",
+      "status": "reject",
+      "confidence": 35,
+      "primary_intent": "Conditional byte-load dispatcher with MMIO interaction and runtime branch target computation",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800842c",
+      "status": "revise",
+      "confidence": 45,
+      "primary_intent": "MMIO-driven state snapshot with conditional dispatch; writes token to 0x401C, captures state to high MMIO space, conditionally branches to runtime address 0xFA188E10",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf8009ae8",
+      "status": "accept",
+      "confidence": 5,
+      "primary_intent": "Dead or incorrectly disassembled code fragment containing nonsensical register operations and data loads with no control flow",
+      "contrarian_verdict": "schema_fail"
+    },
+    {
+      "function_id": "0xf800c520",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Corrupted or misaligned code region: multiple r0 writes, MMIO 0x401c write, trap termination, inconsistent register usage pattern suggests non-function data or improperly delimited code",
+      "contrarian_verdict": "schema_fail"
+    },
+    {
+      "function_id": "0xf800cf8c",
+      "status": "revise",
+      "confidence": 35,
+      "primary_intent": "MMIO diagnostic or test stub: executes sink-only loads from multiple register-based addresses, performs a write to MMIO offset 0x401c, then returns; all computational results discarded",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800c79c",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Dead code artifact containing MMIO write to 0xFFFFFFFC01C with no coherent computational purpose",
+      "contrarian_verdict": "schema_fail"
+    },
+    {
+      "function_id": "0xf80014c4",
+      "status": "revise",
+      "confidence": 35,
+      "primary_intent": "MMIO token read handler with byte-level table lookup and register staging; likely PostScript dispatch preparation",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800dc7c",
+      "status": "schema_fail",
+      "errors": [
+        "evidence[9].addr: 'CONTEXT' is not a hex address"
+      ]
+    },
+    {
+      "function_id": "0xf800bc68",
+      "status": "revise",
+      "confidence": 35,
+      "primary_intent": "Conditional MMIO configuration with integer-to-FP register transfer and indexed memory operations",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf80080f4",
+      "status": "revise",
+      "confidence": 72,
+      "primary_intent": "MMIO register test sequence with quad-precision floating-point store exercises and zero-register load checks",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800af6c",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Dead code artifact: sequence of byte/short loads to hardwired zero register with no side effects and one nonvolatile register assignment",
+      "contrarian_verdict": "schema_fail"
+    },
+    {
+      "function_id": "0xf800a554",
+      "status": "revise",
+      "confidence": 35,
+      "primary_intent": "MMIO write to 0x401C with data value loaded from memory, surrounded by loads to hardwired zero sink (r0) performing no meaningful computation",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800cef0",
+      "status": "schema_fail",
+      "errors": [
+        "evidence[9].addr: 'OVERALL' is not a hex address"
+      ]
+    },
+    {
+      "function_id": "0xf8008000",
+      "status": "reject",
+      "confidence": 15,
+      "primary_intent": "Read-discard byte sequences from base-pointer offsets and perform fixed MMIO read, with dead-end computation",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800b3fc",
+      "status": "accept",
+      "confidence": 5,
+      "primary_intent": "Dead code or unreachable garbage sequence\u2014no callers, nonsensical operations (storing FSR to r0 sink, MMIO quad write to likely invalid address), no coherent register protocol",
+      "contrarian_verdict": "schema_fail"
+    },
+    {
+      "function_id": "0xf8008e70",
+      "status": "schema_fail",
+      "errors": [
+        "evidence[8].addr: 'CALLERS' is not a hex address",
+        "evidence[9].addr: 'STRUCTURE' is not a hex address"
+      ]
+    },
+    {
+      "function_id": "0xf80090d4",
+      "status": "revise",
+      "confidence": 45,
+      "primary_intent": "MMIO byte write stub with conditional retry loop, possibly error/status polling",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf8009420",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Dead code fragment or compiler-generated padding with invalid instruction sequence",
+      "contrarian_verdict": "schema_fail"
+    },
+    {
+      "function_id": "0xf800a0bc",
+      "status": "revise",
+      "confidence": 72,
+      "primary_intent": "Write-through cache diagnostic routine performing flush and verification reads with hardwired zero constant tests",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800df78",
+      "status": "revise",
+      "confidence": 55,
+      "primary_intent": "Write single byte to MMIO port 0x401E after byte-indexed load and spurious register operations",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf80017cc",
+      "status": "accept",
+      "confidence": 5,
+      "primary_intent": "Dead code or data misinterpreted as instructions; no coherent computational purpose",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf8008dd4",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Dead code or compiler artifact: all computation writes to r0 (hardwired zero) with no observable side effects except one memory write",
+      "contrarian_verdict": "schema_fail"
+    },
+    {
+      "function_id": "0xf8000348",
+      "status": "revise",
+      "confidence": 15,
+      "primary_intent": "Dead code or alignment padding: 17 consecutive no-op load operations to hardwired zero register",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800a1c8",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Dead-code fragment or corrupted disassembly performing meaningless r0-sink operations before unconditional branch",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800f4d4",
+      "status": "accept",
+      "confidence": 5,
+      "primary_intent": "Dead code fragment or corrupted data misinterpreted as code",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800bb60",
+      "status": "schema_fail",
+      "errors": [
+        "evidence[11].addr: 'GLOBAL' is not a hex address",
+        "evidence[12].addr: 'GLOBAL' is not a hex address"
+      ]
+    },
+    {
+      "function_id": "0xf800db54",
+      "status": "schema_fail",
+      "errors": [
+        "evidence[11].addr: 'METADATA' is not a hex address"
+      ]
+    },
+    {
+      "function_id": "0xf800b504",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Dead code block: all computation results discarded via r0 sink writes with no side effects",
+      "contrarian_verdict": "schema_fail"
+    },
+    {
+      "function_id": "0xf8008e20",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Dead code fragment or instruction decoder test case: performs 5 isolated byte loads with 4 discarded to r0, mixed with unrelated integer operations and a no-op FP transfer",
+      "contrarian_verdict": "alternative_competitive"
+    },
+    {
+      "function_id": "0xf800c194",
+      "status": "revise",
+      "confidence": 72,
+      "primary_intent": "Floating-point pipeline synchronization with integer-to-FP transfer, unlock, and conditional error trap",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800cc00",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Test fixture or debugging artifact containing synthetic byte load/store patterns with no coherent data flow",
+      "contrarian_verdict": "schema_fail"
+    },
+    {
+      "function_id": "0xf8004e44",
+      "status": "accept",
+      "confidence": 15,
+      "primary_intent": "Dead code or unreachable trap: six load instructions that discard all results to r0 (hardwired zero sink)",
+      "contrarian_verdict": "schema_fail"
+    },
+    {
+      "function_id": "0xf800b9e0",
+      "status": "revise",
+      "confidence": 72,
+      "primary_intent": "PostScript token dispatch hash probe with table lookup and conditional branch to secondary handler",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800f80c",
+      "status": "accept",
+      "confidence": 5,
+      "primary_intent": "Dead or unreachable code fragment containing invalid/nonsensical instruction sequence with zero-register writes",
+      "contrarian_verdict": "schema_fail"
+    },
+    {
+      "function_id": "0xf800bd9c",
+      "status": "revise",
+      "confidence": 35,
+      "primary_intent": "Load two double-precision floating-point values from memory, likely preparing operands for subsequent FP computation",
+      "contrarian_verdict": null
+    },
+    {
+      "function_id": "0xf800c458",
+      "status": "accept",
+      "confidence": 5,
+      "primary_intent": "UNKNOWN: Insufficient evidence for coherent intent classification",
+      "contrarian_verdict": "alternative_competitive"
+    }
+  ],
+  "errors": []
+}

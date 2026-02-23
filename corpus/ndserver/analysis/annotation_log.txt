@@ -1,0 +1,119 @@
+================================================================================
+NDserver Function Annotation Tool
+================================================================================
+
+Loading function map...
+  Loaded 92 functions
+Loading string references...
+  Loaded string refs for 0 functions
+
+Processing functions...
+--------------------------------------------------------------------------------
+[ 1/92] func_00002d96                  → Utility/Helper       [LOW]
+[ 2/92] ND_GetBoardList                → Board Detection      [HIGH]
+[ 3/92] func_0000302c                  → Utility/Helper       [LOW]
+[ 4/92] func_0000305c                  → Unknown              [UNKNOWN]
+[ 5/92] func_0000307c                  → Unknown              [UNKNOWN]
+[ 6/92] func_000030c2                  → Unknown              [UNKNOWN]
+[ 7/92] func_00003200                  → Unknown              [UNKNOWN]
+[ 8/92] func_00003284                  → Unknown              [UNKNOWN]
+[ 9/92] func_000033b4                  → Main Logic           [LOW]
+[10/92] func_00003614                  → Unknown              [UNKNOWN]
+[11/92] func_0000366e                  → Utility/Helper       [LOW]
+[12/92] func_0000368c                  → Utility/Helper       [LOW]
+[13/92] func_000036b2                  → Unknown              [UNKNOWN]
+[14/92] func_00003820                  → Unknown              [UNKNOWN]
+[15/92] func_00003874                  → Unknown              [UNKNOWN]
+[16/92] func_0000399c                  → Main Logic           [LOW]
+[17/92] func_00003cdc                  → Unknown              [UNKNOWN]
+[18/92] func_00003dde                  → Unknown              [UNKNOWN]
+[19/92] func_00003eae                  → Unknown              [UNKNOWN]
+[20/92] func_00003f3a                  → Unknown              [UNKNOWN]
+[21/92] func_00004024                  → Unknown              [UNKNOWN]
+[22/92] func_000040f4                  → Unknown              [UNKNOWN]
+[23/92] func_000041fe                  → Unknown              [UNKNOWN]
+[24/92] func_000042e8                  → Unknown              [UNKNOWN]
+[25/92] func_000043c6                  → Unknown              [UNKNOWN]
+[26/92] func_000044da                  → Unknown              [UNKNOWN]
+[27/92] func_000045f2                  → Unknown              [UNKNOWN]
+[28/92] func_0000470a                  → Unknown              [UNKNOWN]
+[29/92] func_00004822                  → Unknown              [UNKNOWN]
+[30/92] func_0000493a                  → Unknown              [UNKNOWN]
+[31/92] func_00004a52                  → Unknown              [UNKNOWN]
+[32/92] func_00004b70                  → Unknown              [UNKNOWN]
+[33/92] func_00004c88                  → Unknown              [UNKNOWN]
+[34/92] func_00004da0                  → Unknown              [UNKNOWN]
+[35/92] func_00004ea0                  → Unknown              [UNKNOWN]
+[36/92] func_00004f64                  → Unknown              [UNKNOWN]
+[37/92] func_00005078                  → Unknown              [UNKNOWN]
+[38/92] func_00005178                  → Unknown              [UNKNOWN]
+[39/92] func_00005256                  → Unknown              [UNKNOWN]
+[40/92] func_0000535c                  → Unknown              [UNKNOWN]
+[41/92] func_00005454                  → Unknown              [UNKNOWN]
+[42/92] func_00005540                  → Unknown              [UNKNOWN]
+[43/92] func_0000561e                  → Unknown              [UNKNOWN]
+[44/92] func_000056f0                  → Unknown              [UNKNOWN]
+[45/92] func_0000577c                  → Unknown              [UNKNOWN]
+[46/92] func_0000594a                  → Unknown              [UNKNOWN]
+[47/92] func_000059f8                  → Unknown              [UNKNOWN]
+[48/92] func_00005a3e                  → Unknown              [UNKNOWN]
+[49/92] func_00005af6                  → Unknown              [UNKNOWN]
+[50/92] func_00005bb8                  → Unknown              [UNKNOWN]
+[51/92] func_00005c70                  → Unknown              [UNKNOWN]
+[52/92] func_00005d26                  → Unknown              [UNKNOWN]
+[53/92] func_00005d60                  → Unknown              [UNKNOWN]
+[54/92] func_00005da6                  → Unknown              [UNKNOWN]
+[55/92] func_00005dea                  → Unknown              [UNKNOWN]
+[56/92] func_00005eea                  → Unknown              [UNKNOWN]
+[57/92] func_00006036                  → Unknown              [UNKNOWN]
+[58/92] func_000060d8                  → Unknown              [UNKNOWN]
+[59/92] func_00006156                  → Unknown              [UNKNOWN]
+[60/92] func_000061f4                  → Unknown              [UNKNOWN]
+[61/92] func_0000627a                  → Unknown              [UNKNOWN]
+[62/92] func_000062b8                  → Utility/Helper       [LOW]
+[63/92] func_000062e8                  → Utility/Helper       [LOW]
+[64/92] func_00006318                  → Utility/Helper       [LOW]
+[65/92] func_00006340                  → Utility/Helper       [LOW]
+[66/92] func_0000636c                  → Utility/Helper       [LOW]
+[67/92] func_00006398                  → Utility/Helper       [LOW]
+[68/92] func_000063c0                  → Utility/Helper       [LOW]
+[69/92] func_000063e8                  → Utility/Helper       [LOW]
+[70/92] func_00006414                  → Utility/Helper       [LOW]
+[71/92] func_00006444                  → Utility/Helper       [LOW]
+[72/92] func_00006474                  → Unknown              [UNKNOWN]
+[73/92] func_00006518                  → Unknown              [UNKNOWN]
+[74/92] func_00006602                  → Unknown              [UNKNOWN]
+[75/92] func_000066dc                  → Unknown              [UNKNOWN]
+[76/92] func_000067b8                  → Unknown              [UNKNOWN]
+[77/92] func_00006856                  → Unknown              [UNKNOWN]
+[78/92] func_00006922                  → Unknown              [UNKNOWN]
+[79/92] func_00006a08                  → Unknown              [UNKNOWN]
+[80/92] func_00006ac2                  → Unknown              [UNKNOWN]
+[81/92] func_00006b7c                  → Unknown              [UNKNOWN]
+[82/92] func_00006c48                  → Unknown              [UNKNOWN]
+[83/92] func_00006d24                  → Unknown              [UNKNOWN]
+[84/92] func_00006de4                  → Unknown              [UNKNOWN]
+[85/92] func_00006e6c                  → Unknown              [UNKNOWN]
+[86/92] func_00006f94                  → Unknown              [UNKNOWN]
+[87/92] func_00007032                  → Unknown              [UNKNOWN]
+[88/92] func_00007072                  → Utility/Helper       [LOW]
+[89/92] func_0000709c                  → Main Logic           [LOW]
+[90/92] func_0000746c                  → Unknown              [UNKNOWN]
+[91/92] func_000075cc                  → Utility/Helper       [LOW]
+[92/92] func_000075e2                  → Utility/Helper       [LOW]
+
+================================================================================
+Generating summary report...
+
+✅ Annotation complete!
+
+Individual functions: disassembly/functions/ (92 files)
+Summary report:       analysis/annotated_functions.txt
+JSON database:        analysis/annotated_functions.json
+
+Summary by Purpose:
+--------------------------------------------------------------------------------
+  Unknown                         71 functions
+  Utility/Helper                  17 functions
+  Main Logic                       3 functions
+  Board Detection                  1 functions

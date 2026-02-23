@@ -1,0 +1,1811 @@
+{
+  "meta": {
+    "generator": "dynamic_trace_to_recovery_map.py",
+    "schema": "dynamic-recovery-map-v1",
+    "dynamic_trace_files": [
+      "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260211-022118/iter_1/sweep/traces/trace_F80014C4.jsonl"
+    ],
+    "lines_total": 1,
+    "lines_bad_json": 0,
+    "events_total": 1,
+    "indirect_events": 1,
+    "mem_events": 0,
+    "mmio_events": 0,
+    "targets_seen": 1,
+    "dynamic_candidates": 0,
+    "dynamic_added": 0,
+    "derived_src_word_targets": 0,
+    "exec_range": {
+      "start": "0xF8000000",
+      "end": "0xF80B2547"
+    },
+    "thresholds": {
+      "min_hits": 1,
+      "min_sites": 1,
+      "min_seed_score": 50,
+      "min_create_score": 70,
+      "reject_self_loop_only": true
+    }
+  },
+  "allow_ranges": [
+    {
+      "start": "0xF8000000",
+      "end": "0xF80B2547",
+      "name": "full_text_allow"
+    }
+  ],
+  "deny_ranges": [
+    {
+      "start": "0xF8000400",
+      "end": "0xF8000FFF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF800FC00",
+      "end": "0xF8017BFF",
+      "name": "ascii_heavy+pcode_hotspot_x2"
+    },
+    {
+      "start": "0xF8017CB8",
+      "end": "0xF802133D",
+      "name": "ascii_heavy+embedded_macho_cpu_6+pcode_hotspot_x3+x86_signature"
+    },
+    {
+      "start": "0xF8025FB4",
+      "end": "0xF8026038",
+      "name": "pcode_hotspot_x5"
+    },
+    {
+      "start": "0xF8029ED8",
+      "end": "0xF8029F5C",
+      "name": "pcode_hotspot_x3"
+    },
+    {
+      "start": "0xF802F604",
+      "end": "0xF802F688",
+      "name": "pcode_hotspot_x4"
+    },
+    {
+      "start": "0xF8030B0C",
+      "end": "0xF8030B90",
+      "name": "pcode_hotspot_x2"
+    },
+    {
+      "start": "0xF8031EF4",
+      "end": "0xF8031F78",
+      "name": "pcode_hotspot_x2"
+    },
+    {
+      "start": "0xF8032D44",
+      "end": "0xF8032DC8",
+      "name": "pcode_hotspot_x3"
+    },
+    {
+      "start": "0xF80363C8",
+      "end": "0xF803644C",
+      "name": "pcode_hotspot_x2"
+    },
+    {
+      "start": "0xF8037C00",
+      "end": "0xF8037FFF",
+      "name": "ascii_heavy"
+    },
+    {
+      "start": "0xF8038400",
+      "end": "0xF8038BFF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF8039000",
+      "end": "0xF80393FF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF8039800",
+      "end": "0xF803A3FF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF803A800",
+      "end": "0xF803ABFF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF803B400",
+      "end": "0xF803BBFF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF803C400",
+      "end": "0xF803DBFF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF803DCB8",
+      "end": "0xF8057CB7",
+      "name": "ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+    },
+    {
+      "start": "0xF8058000",
+      "end": "0xF80583FF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF8058C00",
+      "end": "0xF80593FF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF8059800",
+      "end": "0xF8059BFF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF805A800",
+      "end": "0xF805ABFF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF805B000",
+      "end": "0xF805DBFF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF805DCB8",
+      "end": "0xF8073CB7",
+      "name": "ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+    },
+    {
+      "start": "0xF8078000",
+      "end": "0xF80783FF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF8078C00",
+      "end": "0xF80793FF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF8079800",
+      "end": "0xF8079BFF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF807A000",
+      "end": "0xF807A3FF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF807B000",
+      "end": "0xF807B3FF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF807BC00",
+      "end": "0xF807C3FF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF807C800",
+      "end": "0xF807CBFF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF807D800",
+      "end": "0xF807DBFF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF807F000",
+      "end": "0xF807FBFF",
+      "name": "ascii_heavy"
+    },
+    {
+      "start": "0xF8080000",
+      "end": "0xF8081BFF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF8097000",
+      "end": "0xF80973FF",
+      "name": "x86_signature"
+    },
+    {
+      "start": "0xF8099000",
+      "end": "0xF809A3FF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF809A800",
+      "end": "0xF809ABFF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF809B400",
+      "end": "0xF809BBFF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF809C000",
+      "end": "0xF809C3FF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF809CC00",
+      "end": "0xF809DBFF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF809E000",
+      "end": "0xF809EBFF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF809F000",
+      "end": "0xF809F3FF",
+      "name": "zero_heavy"
+    },
+    {
+      "start": "0xF80A3C00",
+      "end": "0xF80AFBFF",
+      "name": "ascii_heavy"
+    }
+  ],
+  "seeds": [
+    {
+      "addr": "0xF8000000",
+      "name": "bootstrap_entry",
+      "create_function": true
+    },
+    {
+      "addr": "0xF8000348",
+      "name": "bootstrap_init",
+      "create_function": true
+    },
+    {
+      "addr": "0xF80014C4",
+      "name": "graphics_dispatch_bri_r8",
+      "create_function": true
+    },
+    {
+      "addr": "0xF80017CC",
+      "name": "phase1_seed_F80017CC",
+      "create_function": true
+    },
+    {
+      "addr": "0xF8008000",
+      "name": "section3_start",
+      "create_function": true
+    },
+    {
+      "addr": "0xF8008014",
+      "name": "first_operator",
+      "create_function": true
+    },
+    {
+      "addr": "0xF8008098",
+      "name": "op_02",
+      "create_function": true
+    },
+    {
+      "addr": "0xF80080F4",
+      "name": "op_03",
+      "create_function": true
+    },
+    {
+      "addr": "0xF8008274",
+      "name": "op_04",
+      "create_function": true
+    },
+    {
+      "addr": "0xF80082AC",
+      "name": "op_05",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800842C",
+      "name": "op_06",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800878C",
+      "name": "op_07",
+      "create_function": true
+    },
+    {
+      "addr": "0xF8008B44",
+      "name": "op_08",
+      "create_function": true
+    },
+    {
+      "addr": "0xF8008DD4",
+      "name": "op_09",
+      "create_function": true
+    },
+    {
+      "addr": "0xF8008E20",
+      "name": "op_10",
+      "create_function": true
+    },
+    {
+      "addr": "0xF8008E70",
+      "name": "op_11",
+      "create_function": true
+    },
+    {
+      "addr": "0xF8008EAC",
+      "name": "op_12",
+      "create_function": true
+    },
+    {
+      "addr": "0xF8008EE4",
+      "name": "op_13",
+      "create_function": true
+    },
+    {
+      "addr": "0xF8008F20",
+      "name": "op_14",
+      "create_function": true
+    },
+    {
+      "addr": "0xF8008F5C",
+      "name": "op_15",
+      "create_function": true
+    },
+    {
+      "addr": "0xF8008F98",
+      "name": "op_16",
+      "create_function": true
+    },
+    {
+      "addr": "0xF80090D4",
+      "name": "op_17",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800916C",
+      "name": "op_18",
+      "create_function": true
+    },
+    {
+      "addr": "0xF80091EC",
+      "name": "op_19",
+      "create_function": true
+    },
+    {
+      "addr": "0xF8009270",
+      "name": "op_20",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800935C",
+      "name": "op_21",
+      "create_function": true
+    },
+    {
+      "addr": "0xF8009420",
+      "name": "op_22",
+      "create_function": true
+    },
+    {
+      "addr": "0xF80094FC",
+      "name": "op_23",
+      "create_function": true
+    },
+    {
+      "addr": "0xF8009AE8",
+      "name": "op_24",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800A08C",
+      "name": "op_25",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800A0BC",
+      "name": "op_26",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800A1C8",
+      "name": "op_27",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800A44C",
+      "name": "op_28",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800A554",
+      "name": "op_29",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800A680",
+      "name": "op_30",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800AF6C",
+      "name": "op_31",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800B38C",
+      "name": "op_32",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800B3FC",
+      "name": "op_33",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800B504",
+      "name": "op_34",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800B628",
+      "name": "op_35",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800B7B4",
+      "name": "op_36",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800B83C",
+      "name": "op_37",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800B904",
+      "name": "op_38",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800B9E0",
+      "name": "op_39",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800BB60",
+      "name": "op_40",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800BC68",
+      "name": "op_41",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800BD9C",
+      "name": "op_42",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800BF74",
+      "name": "op_43",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800C01C",
+      "name": "op_44",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800C0E8",
+      "name": "op_45",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800C194",
+      "name": "op_46",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800C2A4",
+      "name": "op_47",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800C3F4",
+      "name": "op_48",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800C458",
+      "name": "op_49",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800C4BC",
+      "name": "op_50",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800C520",
+      "name": "op_51",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800C584",
+      "name": "op_52",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800C630",
+      "name": "op_53",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800C694",
+      "name": "op_54",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800C79C",
+      "name": "op_55",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800C8BC",
+      "name": "op_56",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800C964",
+      "name": "op_57",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800CA4C",
+      "name": "op_58",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800CB1C",
+      "name": "op_59",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800CB9C",
+      "name": "op_60",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800CC00",
+      "name": "op_61",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800CCE4",
+      "name": "op_62",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800CD64",
+      "name": "op_63",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800CDC8",
+      "name": "op_64",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800CEF0",
+      "name": "op_65",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800CF8C",
+      "name": "op_66",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800D00C",
+      "name": "op_67",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800D0EC",
+      "name": "op_68",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800DB54",
+      "name": "op_69",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800DC18",
+      "name": "op_70",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800DC7C",
+      "name": "op_71",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800DF78",
+      "name": "phase1_seed_F800DF78",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800F4D4",
+      "name": "op_72",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800F70C",
+      "name": "op_73",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800F77C",
+      "name": "op_74",
+      "create_function": true
+    },
+    {
+      "addr": "0xF800F80C",
+      "name": "op_75",
+      "create_function": true
+    },
+    {
+      "addr": "0xF803002C",
+      "name": "oor_branch_seed_F803002C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030050",
+      "name": "oor_branch_seed_F8030050",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803005C",
+      "name": "oor_branch_seed_F803005C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030060",
+      "name": "oor_branch_seed_F8030060",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030104",
+      "name": "oor_branch_seed_F8030104",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030120",
+      "name": "oor_branch_seed_F8030120",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030144",
+      "name": "oor_branch_seed_F8030144",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030160",
+      "name": "oor_branch_seed_F8030160",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803018C",
+      "name": "oor_branch_seed_F803018C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80301A4",
+      "name": "oor_branch_seed_F80301A4",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80301B8",
+      "name": "oor_branch_seed_F80301B8",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80301DC",
+      "name": "oor_branch_seed_F80301DC",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80301E8",
+      "name": "oor_branch_seed_F80301E8",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803020C",
+      "name": "oor_branch_seed_F803020C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030238",
+      "name": "oor_branch_seed_F8030238",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030274",
+      "name": "oor_branch_seed_F8030274",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030280",
+      "name": "oor_branch_seed_F8030280",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030294",
+      "name": "oor_branch_seed_F8030294",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803037C",
+      "name": "oor_branch_seed_F803037C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80303B8",
+      "name": "oor_branch_seed_F80303B8",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80303C4",
+      "name": "oor_branch_seed_F80303C4",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803040C",
+      "name": "oor_branch_seed_F803040C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030428",
+      "name": "oor_branch_seed_F8030428",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030434",
+      "name": "oor_branch_seed_F8030434",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803044C",
+      "name": "oor_branch_seed_F803044C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80305F4",
+      "name": "oor_branch_seed_F80305F4",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030668",
+      "name": "oor_branch_seed_F8030668",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803071C",
+      "name": "oor_branch_seed_F803071C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803073C",
+      "name": "oor_branch_seed_F803073C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030744",
+      "name": "oor_branch_seed_F8030744",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803079C",
+      "name": "oor_branch_seed_F803079C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80307A4",
+      "name": "oor_branch_seed_F80307A4",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80307C0",
+      "name": "oor_branch_seed_F80307C0",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80307DC",
+      "name": "oor_branch_seed_F80307DC",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030818",
+      "name": "oor_branch_seed_F8030818",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030838",
+      "name": "oor_branch_seed_F8030838",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030840",
+      "name": "oor_branch_seed_F8030840",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030850",
+      "name": "oor_branch_seed_F8030850",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80308A0",
+      "name": "oor_branch_seed_F80308A0",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030A14",
+      "name": "oor_branch_seed_F8030A14",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030A28",
+      "name": "oor_branch_seed_F8030A28",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030A30",
+      "name": "oor_branch_seed_F8030A30",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030A98",
+      "name": "oor_branch_seed_F8030A98",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030A9C",
+      "name": "oor_branch_seed_F8030A9C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030AC4",
+      "name": "oor_branch_seed_F8030AC4",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030AC8",
+      "name": "oor_branch_seed_F8030AC8",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030B48",
+      "name": "oor_branch_seed_F8030B48",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030B60",
+      "name": "oor_branch_seed_F8030B60",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030BC0",
+      "name": "oor_branch_seed_F8030BC0",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030C80",
+      "name": "oor_branch_seed_F8030C80",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030D94",
+      "name": "oor_branch_seed_F8030D94",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8030E70",
+      "name": "oor_branch_seed_F8030E70",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8031070",
+      "name": "oor_branch_seed_F8031070",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8031074",
+      "name": "oor_branch_seed_F8031074",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8031218",
+      "name": "oor_branch_seed_F8031218",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8031454",
+      "name": "oor_branch_seed_F8031454",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8031538",
+      "name": "oor_branch_seed_F8031538",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8031544",
+      "name": "oor_branch_seed_F8031544",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80315C0",
+      "name": "oor_branch_seed_F80315C0",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80315E4",
+      "name": "oor_branch_seed_F80315E4",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803162C",
+      "name": "oor_branch_seed_F803162C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8031678",
+      "name": "oor_branch_seed_F8031678",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80317C8",
+      "name": "oor_branch_seed_F80317C8",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80318FC",
+      "name": "oor_branch_seed_F80318FC",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8031A50",
+      "name": "oor_branch_seed_F8031A50",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8031BDC",
+      "name": "oor_branch_seed_F8031BDC",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8031C54",
+      "name": "oor_branch_seed_F8031C54",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8031CFC",
+      "name": "oor_branch_seed_F8031CFC",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8031D0C",
+      "name": "oor_branch_seed_F8031D0C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8031D38",
+      "name": "oor_branch_seed_F8031D38",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8031E44",
+      "name": "oor_branch_seed_F8031E44",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8031E70",
+      "name": "oor_branch_seed_F8031E70",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8031EB4",
+      "name": "oor_branch_seed_F8031EB4",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8031EDC",
+      "name": "oor_branch_seed_F8031EDC",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8031F1C",
+      "name": "oor_branch_seed_F8031F1C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8032008",
+      "name": "oor_branch_seed_F8032008",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8032014",
+      "name": "oor_branch_seed_F8032014",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80320B8",
+      "name": "oor_branch_seed_F80320B8",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80320C8",
+      "name": "oor_branch_seed_F80320C8",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8032104",
+      "name": "oor_branch_seed_F8032104",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803218C",
+      "name": "oor_branch_seed_F803218C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80321C0",
+      "name": "oor_branch_seed_F80321C0",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803227C",
+      "name": "oor_branch_seed_F803227C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80322CC",
+      "name": "oor_branch_seed_F80322CC",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8032484",
+      "name": "oor_branch_seed_F8032484",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80324BC",
+      "name": "oor_branch_seed_F80324BC",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8032540",
+      "name": "oor_branch_seed_F8032540",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80326C0",
+      "name": "oor_branch_seed_F80326C0",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8032760",
+      "name": "oor_branch_seed_F8032760",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8032798",
+      "name": "oor_branch_seed_F8032798",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803281C",
+      "name": "oor_branch_seed_F803281C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8032A7C",
+      "name": "oor_branch_seed_F8032A7C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8032AB0",
+      "name": "oor_branch_seed_F8032AB0",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8032AD4",
+      "name": "oor_branch_seed_F8032AD4",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8032CB8",
+      "name": "oor_branch_seed_F8032CB8",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8032FD8",
+      "name": "oor_branch_seed_F8032FD8",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8033084",
+      "name": "oor_branch_seed_F8033084",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80331D8",
+      "name": "oor_branch_seed_F80331D8",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8033234",
+      "name": "oor_branch_seed_F8033234",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8033AB0",
+      "name": "oor_branch_seed_F8033AB0",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8034008",
+      "name": "oor_branch_seed_F8034008",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80341EC",
+      "name": "oor_branch_seed_F80341EC",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8034480",
+      "name": "oor_branch_seed_F8034480",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80345B0",
+      "name": "oor_branch_seed_F80345B0",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8035804",
+      "name": "oor_branch_seed_F8035804",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8036374",
+      "name": "oor_branch_seed_F8036374",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8036398",
+      "name": "oor_branch_seed_F8036398",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80363F4",
+      "name": "oor_branch_seed_F80363F4",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8036EC8",
+      "name": "oor_branch_seed_F8036EC8",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8037028",
+      "name": "oor_branch_seed_F8037028",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8037A20",
+      "name": "oor_branch_seed_F8037A20",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8037B90",
+      "name": "oor_branch_seed_F8037B90",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8037DA4",
+      "name": "oor_branch_seed_F8037DA4",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8037F2C",
+      "name": "oor_branch_seed_F8037F2C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8038104",
+      "name": "oor_branch_seed_F8038104",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803821C",
+      "name": "oor_branch_seed_F803821C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8038830",
+      "name": "oor_branch_seed_F8038830",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80389C4",
+      "name": "oor_branch_seed_F80389C4",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8038AC8",
+      "name": "oor_branch_seed_F8038AC8",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8038B4C",
+      "name": "oor_branch_seed_F8038B4C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8038B5C",
+      "name": "oor_branch_seed_F8038B5C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8038BC4",
+      "name": "oor_branch_seed_F8038BC4",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8038E44",
+      "name": "oor_branch_seed_F8038E44",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80392DC",
+      "name": "oor_branch_seed_F80392DC",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80392E0",
+      "name": "oor_branch_seed_F80392E0",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80394F0",
+      "name": "oor_branch_seed_F80394F0",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8039710",
+      "name": "oor_branch_seed_F8039710",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80399A8",
+      "name": "oor_branch_seed_F80399A8",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8039A10",
+      "name": "oor_branch_seed_F8039A10",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8039AB0",
+      "name": "oor_branch_seed_F8039AB0",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8039BA4",
+      "name": "oor_branch_seed_F8039BA4",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8039C20",
+      "name": "oor_branch_seed_F8039C20",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8039C68",
+      "name": "oor_branch_seed_F8039C68",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8039E1C",
+      "name": "oor_branch_seed_F8039E1C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803A170",
+      "name": "oor_branch_seed_F803A170",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803A1CC",
+      "name": "oor_branch_seed_F803A1CC",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803A634",
+      "name": "oor_branch_seed_F803A634",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803A894",
+      "name": "oor_branch_seed_F803A894",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803A9BC",
+      "name": "oor_branch_seed_F803A9BC",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803AB00",
+      "name": "oor_branch_seed_F803AB00",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803AB58",
+      "name": "oor_branch_seed_F803AB58",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803AE54",
+      "name": "oor_branch_seed_F803AE54",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803B3A4",
+      "name": "oor_branch_seed_F803B3A4",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803B3D0",
+      "name": "oor_branch_seed_F803B3D0",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803BA78",
+      "name": "oor_branch_seed_F803BA78",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803BA90",
+      "name": "oor_branch_seed_F803BA90",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803BD70",
+      "name": "oor_branch_seed_F803BD70",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803BFD0",
+      "name": "oor_branch_seed_F803BFD0",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803C110",
+      "name": "oor_branch_seed_F803C110",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803C1D0",
+      "name": "oor_branch_seed_F803C1D0",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803C1E4",
+      "name": "oor_branch_seed_F803C1E4",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803C28C",
+      "name": "oor_branch_seed_F803C28C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803C34C",
+      "name": "oor_branch_seed_F803C34C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803CA1C",
+      "name": "oor_branch_seed_F803CA1C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803CA48",
+      "name": "oor_branch_seed_F803CA48",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803CAF8",
+      "name": "oor_branch_seed_F803CAF8",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803CE38",
+      "name": "oor_branch_seed_F803CE38",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803CE44",
+      "name": "oor_branch_seed_F803CE44",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803D0C4",
+      "name": "oor_branch_seed_F803D0C4",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803D4A8",
+      "name": "oor_branch_seed_F803D4A8",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803D66C",
+      "name": "oor_branch_seed_F803D66C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803D87C",
+      "name": "oor_branch_seed_F803D87C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803DA88",
+      "name": "oor_branch_seed_F803DA88",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803DAB4",
+      "name": "oor_branch_seed_F803DAB4",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803DBF8",
+      "name": "oor_branch_seed_F803DBF8",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803E270",
+      "name": "oor_branch_seed_F803E270",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803E274",
+      "name": "oor_branch_seed_F803E274",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803E330",
+      "name": "oor_branch_seed_F803E330",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803E374",
+      "name": "oor_branch_seed_F803E374",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803E3EC",
+      "name": "oor_branch_seed_F803E3EC",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803E448",
+      "name": "oor_branch_seed_F803E448",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803E5C0",
+      "name": "oor_branch_seed_F803E5C0",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803E81C",
+      "name": "oor_branch_seed_F803E81C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803F0A4",
+      "name": "oor_branch_seed_F803F0A4",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803F338",
+      "name": "oor_branch_seed_F803F338",
+      "create_function": false
+    },
+    {
+      "addr": "0xF803F6E0",
+      "name": "oor_branch_seed_F803F6E0",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80407C8",
+      "name": "oor_branch_seed_F80407C8",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8040800",
+      "name": "oor_branch_seed_F8040800",
+      "create_function": false
+    },
+    {
+      "addr": "0xF804088C",
+      "name": "oor_branch_seed_F804088C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8040930",
+      "name": "oor_branch_seed_F8040930",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8040A2C",
+      "name": "oor_branch_seed_F8040A2C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8040ACC",
+      "name": "oor_branch_seed_F8040ACC",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8040B50",
+      "name": "oor_branch_seed_F8040B50",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8040BC8",
+      "name": "oor_branch_seed_F8040BC8",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8040FF0",
+      "name": "oor_branch_seed_F8040FF0",
+      "create_function": false
+    },
+    {
+      "addr": "0xF804105C",
+      "name": "oor_branch_seed_F804105C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF804113C",
+      "name": "oor_branch_seed_F804113C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80411A8",
+      "name": "oor_branch_seed_F80411A8",
+      "create_function": false
+    },
+    {
+      "addr": "0xF804195C",
+      "name": "oor_branch_seed_F804195C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80419D8",
+      "name": "oor_branch_seed_F80419D8",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8041AC4",
+      "name": "oor_branch_seed_F8041AC4",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8041CA8",
+      "name": "oor_branch_seed_F8041CA8",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8041CD8",
+      "name": "oor_branch_seed_F8041CD8",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8041D68",
+      "name": "oor_branch_seed_F8041D68",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8041D98",
+      "name": "oor_branch_seed_F8041D98",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8044570",
+      "name": "oor_branch_seed_F8044570",
+      "create_function": false
+    },
+    {
+      "addr": "0xF804535C",
+      "name": "oor_branch_seed_F804535C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80453C8",
+      "name": "oor_branch_seed_F80453C8",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80453E4",
+      "name": "oor_branch_seed_F80453E4",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80454B0",
+      "name": "oor_branch_seed_F80454B0",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8045534",
+      "name": "oor_branch_seed_F8045534",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8045550",
+      "name": "oor_branch_seed_F8045550",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80455AC",
+      "name": "oor_branch_seed_F80455AC",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80455D4",
+      "name": "oor_branch_seed_F80455D4",
+      "create_function": false
+    },
+    {
+      "addr": "0xF804564C",
+      "name": "oor_branch_seed_F804564C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8045900",
+      "name": "oor_branch_seed_F8045900",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80459E0",
+      "name": "oor_branch_seed_F80459E0",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8045A50",
+      "name": "oor_branch_seed_F8045A50",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8045A64",
+      "name": "oor_branch_seed_F8045A64",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8045AE0",
+      "name": "oor_branch_seed_F8045AE0",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8045B90",
+      "name": "oor_branch_seed_F8045B90",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8045BB8",
+      "name": "oor_branch_seed_F8045BB8",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8045BD0",
+      "name": "oor_branch_seed_F8045BD0",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8045BE0",
+      "name": "oor_branch_seed_F8045BE0",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8045C30",
+      "name": "oor_branch_seed_F8045C30",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8045CA8",
+      "name": "oor_branch_seed_F8045CA8",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8045ED0",
+      "name": "oor_branch_seed_F8045ED0",
+      "create_function": false
+    },
+    {
+      "addr": "0xF804604C",
+      "name": "oor_branch_seed_F804604C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8046388",
+      "name": "oor_branch_seed_F8046388",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8046400",
+      "name": "oor_branch_seed_F8046400",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80464C8",
+      "name": "oor_branch_seed_F80464C8",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8046588",
+      "name": "oor_branch_seed_F8046588",
+      "create_function": false
+    },
+    {
+      "addr": "0xF804666C",
+      "name": "oor_branch_seed_F804666C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8046714",
+      "name": "oor_branch_seed_F8046714",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80471D8",
+      "name": "oor_branch_seed_F80471D8",
+      "create_function": false
+    },
+    {
+      "addr": "0xF804745C",
+      "name": "oor_branch_seed_F804745C",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80474DC",
+      "name": "oor_branch_seed_F80474DC",
+      "create_function": false
+    },
+    {
+      "addr": "0xF80474E0",
+      "name": "oor_branch_seed_F80474E0",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8047558",
+      "name": "oor_branch_seed_F8047558",
+      "create_function": false
+    },
+    {
+      "addr": "0xF8047B40",
+      "name": "oor_branch_seed_F8047B40",
+      "create_function": false
+    }
+  ]
+}

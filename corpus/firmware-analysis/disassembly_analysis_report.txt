@@ -1,0 +1,133 @@
+Analyzing: /Users/jvindahl/Development/nextdimension/firmware_clean/ND_i860_VERIFIED_clean.json
+
+================================================================================
+NeXTdimension i860 Firmware Disassembly Analysis
+================================================================================
+
+Total Instructions: 49,152
+Total Size: 196,608 bytes (192 KB)
+
+================================================================================
+Instruction Categories
+================================================================================
+  memory              : 37,646 ( 76.6%)
+  alu                 :  7,811 ( 15.9%)
+  branches            :  2,643 (  5.4%)
+  calls               :    734 (  1.5%)
+  control             :    307 (  0.6%)
+  fp                  :     11 (  0.0%)
+
+================================================================================
+Top 20 Instructions by Frequency
+================================================================================
+  ld.b                : 31,094 ( 63.3%)
+  .long               :  1,792 (  3.6%)
+  ixfr                :  1,741 (  3.5%)
+  st.b                :  1,350 (  2.7%)
+  xorh                :  1,048 (  2.1%)
+  call                :    689 (  1.4%)
+  subu                :    681 (  1.4%)
+  addu                :    610 (  1.2%)
+  ld.s                :    583 (  1.2%)
+  btne                :    504 (  1.0%)
+  ppfld.l             :    494 (  1.0%)
+  bte                 :    454 (  0.9%)
+  xor                 :    443 (  0.9%)
+  bc                  :    428 (  0.9%)
+  bri                 :    407 (  0.8%)
+  bc.t                :    392 (  0.8%)
+  shr                 :    345 (  0.7%)
+  bnc.t               :    344 (  0.7%)
+  and                 :    341 (  0.7%)
+  adds                :    332 (  0.7%)
+
+================================================================================
+Branch/Call Analysis
+================================================================================
+  Returns             : 407
+  Calls               : 689
+  Branches            : 1,847
+
+================================================================================
+Memory Operations Summary
+================================================================================
+  Total Loads:             31,991
+  Total Stores:            1,956
+  Total Memory Ops:        33,947
+  FP Loads:                694
+  FP Stores:               421
+
+================================================================================
+Floating Point Operations
+================================================================================
+  fisub.ss            : 3
+  fxfr                : 1
+
+================================================================================
+Function Analysis
+================================================================================
+  Total Functions:         408
+  Smallest Function:       4 bytes
+  Largest Function:        12,580 bytes
+  Average Function Size:   481 bytes
+
+================================================================================
+Function List (first 50)
+================================================================================
+Start         End           Size      Instructions
+--------------------------------------------------------------------------------
+0xf8000000    0xf800117c     4,480 B   1,120 insts
+0xf8001180    0xf80011c8        76 B      19 insts
+0xf80011cc    0xf80011e4        28 B       7 insts
+0xf80011e8    0xf80011f8        20 B       5 insts
+0xf80011fc    0xf800120c        20 B       5 insts
+0xf8001210    0xf8001210         4 B       1 insts
+0xf8001214    0xf8001240        48 B      12 insts
+0xf8001244    0xf8001244         4 B       1 insts
+0xf8001248    0xf80015a4       864 B     216 insts
+0xf80015a8    0xf8001660       188 B      47 insts
+0xf8001664    0xf8001734       212 B      53 insts
+0xf8001738    0xf8002780     4,172 B   1,043 insts
+0xf8002784    0xf8002d38     1,464 B     366 insts
+0xf8002d3c    0xf8002d60        40 B      10 insts
+0xf8002d64    0xf8002da4        68 B      17 insts
+0xf8002da8    0xf80034f8     1,876 B     469 insts
+0xf80034fc    0xf8003804       780 B     195 insts
+0xf8003808    0xf80041c8     2,500 B     625 insts
+0xf80041cc    0xf80042a4       220 B      55 insts
+0xf80042a8    0xf8004358       180 B      45 insts
+0xf800435c    0xf8004370        24 B       6 insts
+0xf8004374    0xf80043ec       124 B      31 insts
+0xf80043f0    0xf8004540       340 B      85 insts
+0xf8004544    0xf8004acc     1,420 B     355 insts
+0xf8004ad0    0xf8004b2c        96 B      24 insts
+0xf8004b30    0xf8004fb8     1,164 B     291 insts
+0xf8004fbc    0xf800502c       116 B      29 insts
+0xf8005030    0xf8005044        24 B       6 insts
+0xf8005048    0xf800507c        56 B      14 insts
+0xf8005080    0xf80050b0        52 B      13 insts
+0xf80050b4    0xf80051f4       324 B      81 insts
+0xf80051f8    0xf80052c4       208 B      52 insts
+0xf80052c8    0xf800545c       408 B     102 insts
+0xf8005460    0xf8005e44     2,536 B     634 insts
+0xf8005e48    0xf8005e48         4 B       1 insts
+0xf8005e4c    0xf8005e50         8 B       2 insts
+0xf8005e54    0xf8005f0c       188 B      47 insts
+0xf8005f10    0xf8005f58        76 B      19 insts
+0xf8005f5c    0xf8006498     1,344 B     336 insts
+0xf800649c    0xf8006584       236 B      59 insts
+0xf8006588    0xf8006588         4 B       1 insts
+0xf800658c    0xf80065f8       112 B      28 insts
+0xf80065fc    0xf8006660       104 B      26 insts
+0xf8006664    0xf8006664         4 B       1 insts
+0xf8006668    0xf8006878       532 B     133 insts
+0xf800687c    0xf8006884        12 B       3 insts
+0xf8006888    0xf80068ac        40 B      10 insts
+0xf80068b0    0xf8006910       100 B      25 insts
+0xf8006914    0xf80069f0       224 B      56 insts
+0xf80069f4    0xf8006a00        16 B       4 insts
+  ... (358 more functions)
+
+Symbol table saved to: /Users/jvindahl/Development/nextdimension/firmware_clean/ND_i860_VERIFIED_clean.symbols
+  408 function symbols
+Detailed analysis saved to: /Users/jvindahl/Development/nextdimension/firmware_clean/ND_i860_VERIFIED_clean_analysis.json

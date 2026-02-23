@@ -1,0 +1,71 @@
+Analyze the following function and return a structured JSON intent dossier.
+
+FUNCTION: FUN_f800b504 at 0xf800b504
+SIZE: 40 bytes (10 instructions)
+CONFIDENCE SOURCE: curated
+HAS UNRESOLVED BRI: False
+PRIORITY TAGS: (none)
+
+CALLERS (0): (none)
+CALLEES (0): (none)
+
+BLOCKS (1):
+  0xf800b504..0xf800b52b (10 insns)
+
+INSTRUCTIONS:
+  0xf800b504: ld.b r2(r8),r0                           defs=[r0_sink] uses=[r8,r2] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800b508: ld.b r20(r16),r8                         defs=[r8] uses=[r20,r16] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800b50c: ld.b 0x68(r16),r0                        defs=[r0_sink] uses=[r16,0x68] pcode=[INT_SEXT,INT_ADD,LOAD,INT_ZEXT]
+  0xf800b510: ld.b r2(r24),r0                          defs=[r0_sink] uses=[r24,r2] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800b514: ld.b r20(r17),r0                         defs=[r0_sink] uses=[r20,r17] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800b518: ld.b r0(r24),r0                          defs=[r0_sink] uses=[0x0,r24] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800b51c: ld.b 0x10e4(r0),r0                       defs=[r0_sink] uses=[0x0,0x10e4] pcode=[INT_SEXT,INT_ADD,LOAD,INT_ZEXT]
+  0xf800b520: xor r31,r7,r3                            defs=[r3] uses=[r31,r7] pcode=[INT_XOR]
+  0xf800b524: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800b528: ld.b r1(r4),r0                           defs=[r0_sink] uses=[r4,r1] pcode=[INT_ADD,LOAD,INT_ZEXT]
+
+REFERENCES:
+  (none)
+
+STRINGS IN RANGE:
+  (none)
+
+DISPATCH UNRESOLVED:
+  (none)
+
+CONTEXT:
+- R15 cluster (GState flags): False
+- MMIO accesses: (none)
+- Nearby deny ranges: (none)
+- Nearby embedded objects: (none)
+
+Return ONLY valid JSON matching this schema:
+{
+  "function_id": "0xf800b504",
+  "function_name": "FUN_f800b504",
+  "primary_intent": "<one-line purpose statement>",
+  "intent_category": "<one of: initialization, dispatch, parser, raster, mmio_driver, math_kernel, utility, synchronization, error_handler, unknown>",
+  "evidence": [
+    {"addr": "0x...", "fact": "<what this instruction/pattern proves>"}
+  ],
+  "register_protocol": {
+    "inputs": ["<rN = description>"],
+    "outputs": ["<rN = description>"],
+    "side_effects": ["<memory write / MMIO / control reg change>"]
+  },
+  "data_accesses": [
+    {"addr": "0x...", "target": "0x...", "kind": "read|write|mmio", "interpretation": "..."}
+  ],
+  "control_flow_summary": "<how the function flows: linear, loop, conditional tree, dispatch, etc.>",
+  "confidence": <0-100>,
+  "confidence_factors": {
+    "supporting": ["<what raises confidence>"],
+    "limiting": ["<what caps confidence>"]
+  },
+  "alternatives": [
+    {"intent": "<alternative purpose>", "why_not_primary": "<evidence against>"}
+  ],
+  "open_questions": ["<what remains unknown>"],
+  "required_next_evidence": ["<what would resolve open questions>"],
+  "subsystem_hint": "<suggested subsystem: postscript_dispatch, pixel_pipeline, memory_management, board_init, interrupt_handling, unknown>"
+}

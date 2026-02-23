@@ -1,0 +1,107 @@
+Analyze the following function and return a structured JSON intent dossier.
+
+FUNCTION: FUN_fff0048c at 0xfff0048c
+SIZE: 156 bytes (39 instructions)
+CONFIDENCE SOURCE: default
+HAS UNRESOLVED BRI: True
+PRIORITY TAGS: unresolved_bri
+
+CALLERS (3): 0xfff00020 FUN_fff00020, 0xfff00b78 FUN_fff00b78, 0xfff017f4 FUN_fff017f4
+CALLEES (0): (none)
+
+BLOCKS (5):
+  0xfff0048c..0xfff004d3 (18 insns)
+  0xfff004d4..0xfff004db (2 insns)
+  0xfff004dc..0xfff004eb (4 insns)
+  0xfff004ec..0xfff004f3 (2 insns)
+  0xfff004f4..0xfff00527 (13 insns)
+
+INSTRUCTIONS:
+  0xfff0048c: nop                                      defs=[] uses=[] pcode=[]
+  0xfff00490: shl r0,r1,r27                            defs=[r27] uses=[0x0,r1] pcode=[INT_LEFT]
+  0xfff00494: ld.c psr,r29                             defs=[r29] uses=[psr] pcode=[COPY]
+  0xfff00498: andnot 0x10,r29,r22                      defs=[r22] uses=[0x10,r29] pcode=[INT_ZEXT,INT_NEGATE,INT_AND]
+  0xfff0049c: st.c r22,psr                             defs=[psr] uses=[r22] pcode=[COPY]
+  0xfff004a0: nop                                      defs=[] uses=[] pcode=[]
+  0xfff004a4: ld.c fsr,r30                             defs=[r30] uses=[fsr] pcode=[COPY]
+  0xfff004a8: or 0x1,r0,r22                            defs=[r22] uses=[0x0,0x1] pcode=[INT_ZEXT,INT_OR]
+  0xfff004ac: st.c r22,fsr                             defs=[fsr] uses=[r22] pcode=[COPY]
+  0xfff004b0: ld.c dirbase,r23                         defs=[r23] uses=[dirbase] pcode=[COPY]
+  0xfff004b4: adds -0x1,r0,r25                         defs=[r25] uses=[0x0,0xffff] pcode=[INT_SEXT,INT_ADD]
+  0xfff004b8: or 0x7f,r0,r26                           defs=[r26] uses=[0x0,0x7f] pcode=[INT_ZEXT,INT_OR]
+  0xfff004bc: ld.l 0x45(r15),r22                       defs=[r22] uses=[0x45,r15] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff004c0: adds -0x20,r22,r22                       defs=[r22] uses=[0xffe0,r22] pcode=[INT_SEXT,INT_ADD]
+  0xfff004c4: andnot 0xf00,r23,r24                     defs=[r24] uses=[0xf00,r23] pcode=[INT_ZEXT,INT_NEGATE,INT_AND]
+  0xfff004c8: or 0x800,r24,r24                         defs=[r24] uses=[0x800,r24] pcode=[INT_ZEXT,INT_OR]
+  0xfff004cc: bla r25,r26,0xfff004d4                   defs=[CC,r26,dirbase] uses=[0x0,r24,CC,r25,r26] pcode=[INT_NOTEQUAL,INT_CARRY,INT_ZEXT,INT_ADD,COPY,CBRANCH]
+  0xfff004d0: _st.c r24,dirbase                        defs=[dirbase] uses=[r24] pcode=[COPY]
+  0xfff004d4: bla r25,r26,0xfff004d4                   defs=[CC,r26,fd0_sink,r22] uses=[0x0,0x21,CC,r25,r26,r22] pcode=[INT_NOTEQUAL,INT_CARRY,INT_ZEXT,INT_ADD,INT_SEXT,LOAD,COPY,CBRANCH]
+  0xfff004d8: _fld.d 0x21(r22)++,f0f1                  defs=[fd0_sink,r22] uses=[0x21,r22] pcode=[INT_SEXT,INT_ADD,LOAD,COPY]
+  0xfff004dc: or 0x900,r24,r24                         defs=[r24] uses=[0x900,r24] pcode=[INT_ZEXT,INT_OR]
+  0xfff004e0: or 0x7f,r0,r26                           defs=[r26] uses=[0x0,0x7f] pcode=[INT_ZEXT,INT_OR]
+  0xfff004e4: bla r25,r26,0xfff004ec                   defs=[CC,r26,dirbase] uses=[0x0,r24,CC,r25,r26] pcode=[INT_NOTEQUAL,INT_CARRY,INT_ZEXT,INT_ADD,COPY,CBRANCH]
+  0xfff004e8: _st.c r24,dirbase                        defs=[dirbase] uses=[r24] pcode=[COPY]
+  0xfff004ec: bla r25,r26,0xfff004ec                   defs=[CC,r26,fd0_sink,r22] uses=[0x0,0x21,CC,r25,r26,r22] pcode=[INT_NOTEQUAL,INT_CARRY,INT_ZEXT,INT_ADD,INT_SEXT,LOAD,COPY,CBRANCH]
+  0xfff004f0: _fld.d 0x21(r22)++,f0f1                  defs=[fd0_sink,r22] uses=[0x21,r22] pcode=[INT_SEXT,INT_ADD,LOAD,COPY]
+  0xfff004f4: st.c r30,fsr                             defs=[fsr] uses=[r30] pcode=[COPY]
+  0xfff004f8: st.c r29,psr                             defs=[psr] uses=[r29] pcode=[COPY]
+  0xfff004fc: nop                                      defs=[] uses=[] pcode=[]
+  0xfff00500: ixfr r0,f0                               defs=[] uses=[] pcode=[]
+  0xfff00504: st.c r23,dirbase                         defs=[dirbase] uses=[r23] pcode=[COPY]
+  0xfff00508: nop                                      defs=[] uses=[] pcode=[]
+  0xfff0050c: nop                                      defs=[] uses=[] pcode=[]
+  0xfff00510: nop                                      defs=[] uses=[] pcode=[]
+  0xfff00514: nop                                      defs=[] uses=[] pcode=[]
+  0xfff00518: nop                                      defs=[] uses=[] pcode=[]
+  0xfff0051c: nop                                      defs=[] uses=[] pcode=[]
+  0xfff00520: bri r27                                  defs=[] uses=[r27] pcode=[BRANCHIND]
+  0xfff00524: _nop                                     defs=[] uses=[] pcode=[]
+
+REFERENCES:
+  0xfff004cc -> 0xfff004d4 [CONDITIONAL_JUMP] flow=True
+  0xfff004d4 -> 0xfff004d4 [CONDITIONAL_JUMP] flow=True
+  0xfff004e4 -> 0xfff004ec [CONDITIONAL_JUMP] flow=True
+  0xfff004ec -> 0xfff004ec [CONDITIONAL_JUMP] flow=True
+
+STRINGS IN RANGE:
+  (none)
+
+DISPATCH UNRESOLVED:
+  0xfff00520: bri [COMPUTED_JUMP] phase2=None
+
+CONTEXT:
+- R15 cluster (GState flags): False
+- MMIO accesses: (none)
+- Nearby deny ranges: (none)
+- Nearby embedded objects: (none)
+
+Return ONLY valid JSON matching this schema:
+{
+  "function_id": "0xfff0048c",
+  "function_name": "FUN_fff0048c",
+  "primary_intent": "<one-line purpose statement>",
+  "intent_category": "<one of: initialization, dispatch, parser, raster, mmio_driver, math_kernel, utility, synchronization, error_handler, unknown>",
+  "evidence": [
+    {"addr": "0x...", "fact": "<what this instruction/pattern proves>"}
+  ],
+  "register_protocol": {
+    "inputs": ["<rN = description>"],
+    "outputs": ["<rN = description>"],
+    "side_effects": ["<memory write / MMIO / control reg change>"]
+  },
+  "data_accesses": [
+    {"addr": "0x...", "target": "0x...", "kind": "read|write|mmio", "interpretation": "..."}
+  ],
+  "control_flow_summary": "<how the function flows: linear, loop, conditional tree, dispatch, etc.>",
+  "confidence": <0-100>,
+  "confidence_factors": {
+    "supporting": ["<what raises confidence>"],
+    "limiting": ["<what caps confidence>"]
+  },
+  "alternatives": [
+    {"intent": "<alternative purpose>", "why_not_primary": "<evidence against>"}
+  ],
+  "open_questions": ["<what remains unknown>"],
+  "required_next_evidence": ["<what would resolve open questions>"],
+  "subsystem_hint": "<suggested subsystem: postscript_dispatch, pixel_pipeline, memory_management, board_init, interrupt_handling, unknown>"
+}

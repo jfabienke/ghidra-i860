@@ -1,0 +1,197 @@
+Analyze the following function and return a structured JSON intent dossier.
+
+FUNCTION: FUN_fff00020 at 0xfff00020
+SIZE: 464 bytes (116 instructions)
+CONFIDENCE SOURCE: default
+HAS UNRESOLVED BRI: False
+PRIORITY TAGS: (none)
+
+CALLERS (0): (none)
+CALLEES (4): 0xfff0037c FUN_fff0037c [BRI], 0xfff0048c FUN_fff0048c [BRI], 0xfff0079c FUN_fff0079c, 0xfff009c0 FUN_fff009c0
+
+BLOCKS (3):
+  0xfff00020..0xfff0019b (95 insns)
+  0xfff0019c..0xfff001af (5 insns)
+  0xfff001b0..0xfff001ef (16 insns)
+
+INSTRUCTIONS:
+  0xfff00020: nop                                      defs=[] uses=[] pcode=[]
+  0xfff00024: nop                                      defs=[] uses=[] pcode=[]
+  0xfff00028: ld.c psr,r16                             defs=[r16] uses=[psr] pcode=[COPY]
+  0xfff0002c: andnot 0x10,r16,r16                      defs=[r16] uses=[0x10,r16] pcode=[INT_ZEXT,INT_NEGATE,INT_AND]
+  0xfff00030: st.c r16,psr                             defs=[psr] uses=[r16] pcode=[COPY]
+  0xfff00034: nop                                      defs=[] uses=[] pcode=[]
+  0xfff00038: nop                                      defs=[] uses=[] pcode=[]
+  0xfff0003c: nop                                      defs=[] uses=[] pcode=[]
+  0xfff00040: ixfr r0,f0                               defs=[] uses=[] pcode=[]
+  0xfff00044: ld.c epsr,r16                            defs=[r16] uses=[epsr] pcode=[COPY]
+  0xfff00048: orh 0x80,r16,r16                         defs=[r16] uses=[0x80,0x10,r16] pcode=[INT_ZEXT,INT_LEFT,INT_OR]
+  0xfff0004c: or 0x4000,r16,r16                        defs=[r16] uses=[0x4000,r16] pcode=[INT_ZEXT,INT_OR]
+  0xfff00050: st.c r16,epsr                            defs=[epsr] uses=[r16] pcode=[COPY]
+  0xfff00054: ld.c fir,r0                              defs=[r0_sink] uses=[fir] pcode=[COPY]
+  0xfff00058: shl r0,r0,r15                            defs=[r15] uses=[0x0] pcode=[INT_LEFT]
+  0xfff0005c: orh 0x2e3a,r0,r16                        defs=[r16] uses=[0x10,0x0,0x2e3a] pcode=[INT_ZEXT,INT_LEFT,INT_OR]
+  0xfff00060: or 0x8000,r16,r16                        defs=[r16] uses=[0x8000,r16] pcode=[INT_ZEXT,INT_OR]
+  0xfff00064: call 0xfff0037c                          defs=[r1] uses=[0xfff0006c] pcode=[COPY,CALL]
+  0xfff00068: _nop                                     defs=[] uses=[] pcode=[]
+  0xfff0006c: orh 0x4e3a,r0,r16                        defs=[r16] uses=[0x10,0x0,0x4e3a] pcode=[INT_ZEXT,INT_LEFT,INT_OR]
+  0xfff00070: or 0x8000,r16,r16                        defs=[r16] uses=[0x8000,r16] pcode=[INT_ZEXT,INT_OR]
+  0xfff00074: call 0xfff0037c                          defs=[r1] uses=[0xfff0007c] pcode=[COPY,CALL]
+  0xfff00078: _nop                                     defs=[] uses=[] pcode=[]
+  0xfff0007c: orh 0x6e3a,r0,r16                        defs=[r16] uses=[0x10,0x0,0x6e3a] pcode=[INT_ZEXT,INT_LEFT,INT_OR]
+  0xfff00080: or 0x8000,r16,r16                        defs=[r16] uses=[0x8000,r16] pcode=[INT_ZEXT,INT_OR]
+  0xfff00084: call 0xfff0037c                          defs=[r1] uses=[0xfff0008c] pcode=[COPY,CALL]
+  0xfff00088: _nop                                     defs=[] uses=[] pcode=[]
+  0xfff0008c: orh 0xff80,r0,r16                        defs=[r16] uses=[0xff80,0x10,0x0] pcode=[INT_ZEXT,INT_LEFT,INT_OR]
+  0xfff00090: ld.l 0x31(r16),r4                        defs=[r4] uses=[r16,0x31] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff00094: and 0xf,r4,r4                            defs=[r4] uses=[r4,0xf] pcode=[INT_ZEXT,INT_AND]
+  0xfff00098: shl 0x1c,r4,r4                           defs=[r4] uses=[r4,0x1c] pcode=[INT_LEFT]
+  0xfff0009c: orh 0xff80,r0,r5                         defs=[r5] uses=[0xff80,0x10,0x0] pcode=[INT_ZEXT,INT_LEFT,INT_OR]
+  0xfff000a0: ld.l 0x1(r5),r6                          defs=[r6] uses=[0x1,r5] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff000a4: or 0x1000,r6,r16                         defs=[r16] uses=[0x1000,r6] pcode=[INT_ZEXT,INT_OR]
+  0xfff000a8: st.l r16,0x1(r5)                         defs=[] uses=[r16,0x1,r5] pcode=[INT_ADD,STORE]
+  0xfff000ac: orh 0xe3a,r0,r16                         defs=[r16] uses=[0x10,0x0,0xe3a] pcode=[INT_ZEXT,INT_LEFT,INT_OR]
+  0xfff000b0: or 0x8000,r16,r16                        defs=[r16] uses=[0x8000,r16] pcode=[INT_ZEXT,INT_OR]
+  0xfff000b4: or r4,r16,r16                            defs=[r16] uses=[r4,r16] pcode=[INT_OR]
+  0xfff000b8: call 0xfff0037c                          defs=[r1] uses=[0xfff000c0] pcode=[COPY,CALL]
+  0xfff000bc: _nop                                     defs=[] uses=[] pcode=[]
+  0xfff000c0: st.l r6,0x1(r5)                          defs=[] uses=[0x1,r5,r6] pcode=[INT_ADD,STORE]
+  0xfff000c4: or 0xa0,r0,r16                           defs=[r16] uses=[0xa0,0x0] pcode=[INT_ZEXT,INT_OR]
+  0xfff000c8: nop                                      defs=[] uses=[] pcode=[]
+  0xfff000cc: nop                                      defs=[] uses=[] pcode=[]
+  0xfff000d0: nop                                      defs=[] uses=[] pcode=[]
+  0xfff000d4: nop                                      defs=[] uses=[] pcode=[]
+  0xfff000d8: nop                                      defs=[] uses=[] pcode=[]
+  0xfff000dc: nop                                      defs=[] uses=[] pcode=[]
+  0xfff000e0: ixfr r0,f0                               defs=[] uses=[] pcode=[]
+  0xfff000e4: st.c r16,dirbase                         defs=[dirbase] uses=[r16] pcode=[COPY]
+  0xfff000e8: nop                                      defs=[] uses=[] pcode=[]
+  0xfff000ec: nop                                      defs=[] uses=[] pcode=[]
+  0xfff000f0: nop                                      defs=[] uses=[] pcode=[]
+  0xfff000f4: nop                                      defs=[] uses=[] pcode=[]
+  0xfff000f8: nop                                      defs=[] uses=[] pcode=[]
+  0xfff000fc: nop                                      defs=[] uses=[] pcode=[]
+  0xfff00100: orh 0x0,r0,r16                           defs=[r16] uses=[0x0,0x10] pcode=[INT_ZEXT,INT_LEFT,INT_OR]
+  0xfff00104: or 0x1,r16,r16                           defs=[r16] uses=[r16,0x1] pcode=[INT_ZEXT,INT_OR]
+  0xfff00108: st.c r16,fsr                             defs=[fsr] uses=[r16] pcode=[COPY]
+  0xfff0010c: r2apt.ss f0,f0,f0                        defs=[f0_sink] uses=[0x0,0x11] pcode=[CALLOTHER]
+  0xfff00110: r2apt.ss f0,f0,f0                        defs=[f0_sink] uses=[0x0,0x11] pcode=[CALLOTHER]
+  0xfff00114: r2apt.ss f0,f0,f0                        defs=[f0_sink] uses=[0x0,0x11] pcode=[CALLOTHER]
+  0xfff00118: i2apt.ss f0,f0,f0                        defs=[f0_sink] uses=[0x0,0x11] pcode=[CALLOTHER]
+  0xfff0011c: pfiadd.ss f0,f0,f0                       defs=[f0_sink] uses=[0x0] pcode=[INT_ADD]
+  0xfff00120: pfiadd.ss f0,f0,f0                       defs=[f0_sink] uses=[0x0] pcode=[INT_ADD]
+  0xfff00124: st.c r16,fsr                             defs=[fsr] uses=[r16] pcode=[COPY]
+  0xfff00128: orh 0xff00,r0,r2                         defs=[r2] uses=[0xff00,0x10,0x0] pcode=[INT_ZEXT,INT_LEFT,INT_OR]
+  0xfff0012c: or 0x200,r2,r2                           defs=[r2] uses=[0x200,r2] pcode=[INT_ZEXT,INT_OR]
+  0xfff00130: adds -0x10,r2,r2                         defs=[r2] uses=[0xfff0,r2] pcode=[INT_SEXT,INT_ADD]
+  0xfff00134: adds 0x8,r2,r3                           defs=[r3] uses=[0x8,r2] pcode=[INT_SEXT,INT_ADD]
+  0xfff00138: st.l r3,0x9(r2)                          defs=[] uses=[r2,0x9,r3] pcode=[INT_ADD,STORE]
+  0xfff0013c: st.l r0,0xd(r2)                          defs=[] uses=[0x0,r2,0xd] pcode=[INT_ADD,STORE]
+  0xfff00140: call 0xfff0079c                          defs=[r1] uses=[0xfff00148] pcode=[COPY,CALL]
+  0xfff00144: _nop                                     defs=[] uses=[] pcode=[]
+  0xfff00148: mov r16,r2                               defs=[r2] uses=[r16] pcode=[COPY]
+  0xfff0014c: adds 0x8,r2,r3                           defs=[r3] uses=[0x8,r2] pcode=[INT_SEXT,INT_ADD]
+  0xfff00150: st.l r3,0x9(r2)                          defs=[] uses=[r2,0x9,r3] pcode=[INT_ADD,STORE]
+  0xfff00154: orh 0xfffe,r0,r16                        defs=[r16] uses=[0x10,0x0,0xfffe] pcode=[INT_ZEXT,INT_LEFT,INT_OR]
+  0xfff00158: or 0x168,r16,r16                         defs=[r16] uses=[r16,0x168] pcode=[INT_ZEXT,INT_OR]
+  0xfff0015c: st.l r16,0xd(r2)                         defs=[] uses=[r16,r2,0xd] pcode=[INT_ADD,STORE]
+  0xfff00160: call 0xfff009c0                          defs=[r1] uses=[0xfff00168] pcode=[COPY,CALL]
+  0xfff00164: _nop                                     defs=[] uses=[] pcode=[]
+  0xfff00168: orh 0xff80,r0,r5                         defs=[r5] uses=[0xff80,0x10,0x0] pcode=[INT_ZEXT,INT_LEFT,INT_OR]
+  0xfff0016c: ld.l 0x1(r5),r6                          defs=[r6] uses=[0x1,r5] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff00170: orh 0xff80,r0,r16                        defs=[r16] uses=[0xff80,0x10,0x0] pcode=[INT_ZEXT,INT_LEFT,INT_OR]
+  0xfff00174: ld.l 0x31(r16),r4                        defs=[r4] uses=[r16,0x31] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff00178: and 0xf,r4,r4                            defs=[r4] uses=[r4,0xf] pcode=[INT_ZEXT,INT_AND]
+  0xfff0017c: shl 0x1c,r4,r4                           defs=[r4] uses=[r4,0x1c] pcode=[INT_LEFT]
+  0xfff00180: or 0x1000,r6,r16                         defs=[r16] uses=[0x1000,r6] pcode=[INT_ZEXT,INT_OR]
+  0xfff00184: st.l r16,0x1(r5)                         defs=[] uses=[r16,0x1,r5] pcode=[INT_ADD,STORE]
+  0xfff00188: call 0xfff0048c                          defs=[r1] uses=[0xfff00190] pcode=[COPY,CALL]
+  0xfff0018c: _nop                                     defs=[] uses=[] pcode=[]
+  0xfff00190: or 0x0,r0,r3                             defs=[r3] uses=[0x0] pcode=[INT_ZEXT,INT_OR]
+  0xfff00194: orh 0x2,r3,r3                            defs=[r3] uses=[0x10,0x2,r3] pcode=[INT_ZEXT,INT_LEFT,INT_OR]
+  0xfff00198: or 0x1004,r6,r16                         defs=[r16] uses=[0x1004,r6] pcode=[INT_ZEXT,INT_OR]
+  0xfff0019c: st.l r16,0x1(r5)                         defs=[] uses=[r16,0x1,r5] pcode=[INT_ADD,STORE]
+  0xfff001a0: ld.c epsr,r2                             defs=[r2] uses=[epsr] pcode=[COPY]
+  0xfff001a4: and r2,r3,r0                             defs=[r0_sink] uses=[r2,r3] pcode=[INT_AND]
+  0xfff001a8: bc.t 0xfff0019c                          defs=[] uses=[0x0,CC] pcode=[INT_NOTEQUAL,CBRANCH]
+  0xfff001ac: _nop                                     defs=[] uses=[] pcode=[]
+  0xfff001b0: or 0x1000,r6,r6                          defs=[r6] uses=[0x1000,r6] pcode=[INT_ZEXT,INT_OR]
+  0xfff001b4: orh 0xfffe,r0,r1                         defs=[r1] uses=[0x10,0x0,0xfffe] pcode=[INT_ZEXT,INT_LEFT,INT_OR]
+  0xfff001b8: or 0x204,r1,r1                           defs=[r1] uses=[0x204,r1] pcode=[INT_ZEXT,INT_OR]
+  0xfff001bc: ld.c dirbase,r2                          defs=[r2] uses=[dirbase] pcode=[COPY]
+  0xfff001c0: nop                                      defs=[] uses=[] pcode=[]
+  0xfff001c4: nop                                      defs=[] uses=[] pcode=[]
+  0xfff001c8: nop                                      defs=[] uses=[] pcode=[]
+  0xfff001cc: nop                                      defs=[] uses=[] pcode=[]
+  0xfff001d0: nop                                      defs=[] uses=[] pcode=[]
+  0xfff001d4: nop                                      defs=[] uses=[] pcode=[]
+  0xfff001d8: nop                                      defs=[] uses=[] pcode=[]
+  0xfff001dc: nop                                      defs=[] uses=[] pcode=[]
+  0xfff001e0: st.l r6,0x1(r5)                          defs=[] uses=[0x1,r5,r6] pcode=[INT_ADD,STORE]
+  0xfff001e4: st.c r2,dirbase                          defs=[dirbase] uses=[r2] pcode=[COPY]
+  0xfff001e8: ret                                      defs=[] uses=[r1] pcode=[RETURN]
+  0xfff001ec: _nop                                     defs=[] uses=[] pcode=[]
+
+REFERENCES:
+  0xfff00064 -> 0xfff0037c [UNCONDITIONAL_CALL] flow=True
+  0xfff00074 -> 0xfff0037c [UNCONDITIONAL_CALL] flow=True
+  0xfff00084 -> 0xfff0037c [UNCONDITIONAL_CALL] flow=True
+  0xfff00090 -> 0xff800031 [READ] flow=False
+  0xfff000a0 -> 0xff800001 [READ] flow=False
+  0xfff000a8 -> 0xff800001 [WRITE] flow=False
+  0xfff000b8 -> 0xfff0037c [UNCONDITIONAL_CALL] flow=True
+  0xfff000c0 -> 0xff800001 [WRITE] flow=False
+  0xfff00138 -> 0xff0001f9 [WRITE] flow=False
+  0xfff0013c -> 0xff0001fd [WRITE] flow=False
+  0xfff00140 -> 0xfff0079c [UNCONDITIONAL_CALL] flow=True
+  0xfff00160 -> 0xfff009c0 [UNCONDITIONAL_CALL] flow=True
+  0xfff0016c -> 0xff800001 [READ] flow=False
+  0xfff00174 -> 0xff800031 [READ] flow=False
+  0xfff00184 -> 0xff800001 [WRITE] flow=False
+  0xfff00188 -> 0xfff0048c [UNCONDITIONAL_CALL] flow=True
+  0xfff0019c -> 0xff800001 [WRITE] flow=False
+  0xfff001a8 -> 0xfff0019c [CONDITIONAL_JUMP] flow=True
+  0xfff001e0 -> 0xff800001 [WRITE] flow=False
+
+STRINGS IN RANGE:
+  (none)
+
+DISPATCH UNRESOLVED:
+  (none)
+
+CONTEXT:
+- R15 cluster (GState flags): False
+- MMIO accesses: (none)
+- Nearby deny ranges: (none)
+- Nearby embedded objects: (none)
+
+Return ONLY valid JSON matching this schema:
+{
+  "function_id": "0xfff00020",
+  "function_name": "FUN_fff00020",
+  "primary_intent": "<one-line purpose statement>",
+  "intent_category": "<one of: initialization, dispatch, parser, raster, mmio_driver, math_kernel, utility, synchronization, error_handler, unknown>",
+  "evidence": [
+    {"addr": "0x...", "fact": "<what this instruction/pattern proves>"}
+  ],
+  "register_protocol": {
+    "inputs": ["<rN = description>"],
+    "outputs": ["<rN = description>"],
+    "side_effects": ["<memory write / MMIO / control reg change>"]
+  },
+  "data_accesses": [
+    {"addr": "0x...", "target": "0x...", "kind": "read|write|mmio", "interpretation": "..."}
+  ],
+  "control_flow_summary": "<how the function flows: linear, loop, conditional tree, dispatch, etc.>",
+  "confidence": <0-100>,
+  "confidence_factors": {
+    "supporting": ["<what raises confidence>"],
+    "limiting": ["<what caps confidence>"]
+  },
+  "alternatives": [
+    {"intent": "<alternative purpose>", "why_not_primary": "<evidence against>"}
+  ],
+  "open_questions": ["<what remains unknown>"],
+  "required_next_evidence": ["<what would resolve open questions>"],
+  "subsystem_hint": "<suggested subsystem: postscript_dispatch, pixel_pipeline, memory_management, board_init, interrupt_handling, unknown>"
+}

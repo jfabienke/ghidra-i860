@@ -1,0 +1,25 @@
+ND_DATA_TIFF1_6x8_off0x0938.tiff
+=== TIFF directory 0 ===
+TIFF Directory at offset 0x1c (28)
+  Image Width: 6 Image Length: 8
+  Resolution: 72, 72 pixels/inch
+  Bits/Sample: 2
+  Compression Scheme: LZW
+  Photometric Interpretation: min-is-black
+  Samples/Pixel: 1
+  Rows/Strip: 16384
+  Planar Configuration: separate image planes
+
+
+ND_DATA_TIFF2_360x196_reconstructed.tiff
+=== TIFF directory 0 ===
+TIFF Directory at offset 0xd4a (3402)
+  Image Width: 360 Image Length: 196
+  Resolution: 72, 72 pixels/inch
+  Bits/Sample: 2
+  Compression Scheme: LZW
+  Photometric Interpretation: min-is-black
+  Samples/Pixel: 1
+  Rows/Strip: 364
+  Planar Configuration: separate image planes
+

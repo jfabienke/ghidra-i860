@@ -1,0 +1,25 @@
+nd_trace: LC_UNIXTHREAD flavor=0x00000004 count=97 words=97 nonzero=1
+nd_trace: LC_UNIXTHREAD word[64] = 0xF8000000
+nd_trace: LC_UNIXTHREAD executable-range candidates=1 (entry arg=0xF80014C4)
+nd_trace: candidate word[64] = 0xF8000000
+nd_trace: reset-vector mode enabled pc=0xFFF00000 target=0xF80014C4
+nd_trace: executed 64 instructions
+nd_trace: final pc=0x000000F8
+nd_trace: stop reason=max_steps
+nd_trace: top_pc_hotspots (top 12)
+nd_trace: hotspot#01 pc=0x00000000 hits=1
+nd_trace: hotspot#02 pc=0x00000004 hits=1
+nd_trace: hotspot#03 pc=0x00000008 hits=1
+nd_trace: hotspot#04 pc=0x0000000C hits=1
+nd_trace: hotspot#05 pc=0x00000010 hits=1
+nd_trace: hotspot#06 pc=0x00000014 hits=1
+nd_trace: hotspot#07 pc=0x00000018 hits=1
+nd_trace: hotspot#08 pc=0x0000001C hits=1
+nd_trace: hotspot#09 pc=0x00000020 hits=1
+nd_trace: hotspot#10 pc=0x00000024 hits=1
+nd_trace: hotspot#11 pc=0x00000028 hits=1
+nd_trace: hotspot#12 pc=0x0000002C hits=1
+nd_trace: back_edges (top 12)
+nd_trace: back_edge#01 0xF80014C8 -> 0x00000000 hits=1
+nd_trace: back_edge#02 0xFFF00004 -> 0xF80014C4 hits=1
+nd_trace: mmio accesses=0

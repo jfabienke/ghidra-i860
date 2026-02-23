@@ -1,0 +1,213 @@
+================================================================================
+FUNCTION ANALYSIS SUMMARY: FUN_00005d60 (0x5d60 / 23904)
+================================================================================
+
+QUICK FACTS
+-----------
+Address:         0x00005d60
+Decimal:         23904
+Size:            70 bytes
+Category:        Callback
+Complexity:      Low
+Priority:        HIGH
+M68k Function:   Yes
+
+FUNCTION TYPE
+=============
+Callback Initialization and Dispatch Wrapper
+
+PURPOSE
+=======
+This function serves as a trampoline that:
+1. Allocates a 32-byte callback context structure on the stack
+2. Initializes the structure with control fields and parameters
+3. Invokes an external handler function with the prepared context
+
+CALLING PATTERN
+===============
+Called from:  FUN_00002dc6 (0x00002dc6)
+Calls:        External function at 0x050029d2
+Parameter:    1 parameter passed via stack at (0xc,A6)
+
+STACK FRAME
+===========
+Frame size:   32 bytes (allocated via link.w A6,-0x20)
+Locals:       9 fields initialized
+Return value: None (void function)
+
+KEY INITIALIZATION VALUES
+==========================
+- Enable flag:      0x01 at offset -0x1d(A6)
+- Buffer size:      0x20 (32 bytes) at offset -0x1c(A6)
+- State field:      0x00000000 at offset -0x18(A6)
+- Status field:     0x00000000 at offset -0x14(A6)
+- Command ID:       0x5d4 (1492 decimal) at offset -0x0c(A6)
+- Global context:   From address 0x00007c8c at offset -0x08(A6)
+- Parameter copy:   From stack at offset -0x04(A6)
+- Param2 copy:      From (0x8,A6) at offset -0x10(A6)
+
+EXECUTION FLOW
+==============
+Entry
+  ↓
+Setup frame (link.w)
+  ↓
+Load global context from 0x7c8c
+  ↓
+Copy input parameter
+  ↓
+Initialize context structure fields
+  ↓
+Push 3 arguments for external call
+  ↓
+Call handler at 0x050029d2
+  ↓
+Unlink frame (unlk)
+  ↓
+Return (rts)
+Exit
+
+EXTERNAL FUNCTION CALL
+======================
+Target:     0x050029d2 (external/library function)
+Arguments:  3 (pointer to context, NULL, NULL)
+Expected:   void handler(context_t *ctx, void *arg2, void *arg3)
+
+INSTRUCTION BREAKDOWN
+======================
+Prologue:              4 instructions (link + 3 loads)
+Initialization:        6 instructions (set flags, clear fields)
+Call Preparation:      3 instructions (push args)
+Epilogue:              2 instructions (unlk + rts)
+Total:                15 instructions
+
+CODE CHARACTERISTICS
+====================
+- No conditional branches
+- No loops or recursion
+- Linear execution path
+- Proper stack frame management
+- Uses register-relative addressing
+- Standard M68k ABI compliance
+
+REGISTER USAGE
+==============
+Preserved: None explicitly
+Used:      D1 (for 0x20 constant)
+Scratch:   D0, A0 implicitly
+Frame:     A6 (frame pointer)
+
+MEMORY ACCESS PATTERNS
+======================
+Global reads:   1 (0x00007c8c)
+Stack reads:    3 (parameters)
+Stack writes:   6 (initialization)
+I/O access:     None
+Total memory:   ~10 accesses
+
+DEPENDENCIES
+=============
+Input:
+  - Function parameter 1 at (0xc,A6)
+  - Context parameter at (0x8,A6)
+  - Global context at 0x00007c8c
+
+Output:
+  - Callback context structure (32 bytes on stack)
+  - External function invocation
+  - Side effects from external function
+
+CALL GRAPH
+==========
+Caller:         FUN_00002dc6 at 0x00002dc6
+Callee:         0x050029d2 (external handler)
+Related:        FUN_00005d26 (predecessor function)
+Related:        FUN_00005da6 (successor function)
+
+INFERRED PURPOSE IN CONTEXT
+============================
+Part of event-driven processing system where:
+- FUN_00002dc6 iterates over items/events
+- Calls FUN_00005d60 for each item
+- FUN_00005d60 initializes callback context
+- External handler processes the callback
+- Results returned to main loop
+
+PERFORMANCE METRICS
+===================
+Instruction count:    15 total
+Code size:           70 bytes
+Stack overhead:      32 bytes local
+Call overhead:       ~20+ cycles (external)
+Time complexity:     O(1) constant
+Space complexity:    O(1) constant
+
+POTENTIAL ISSUES
+================
+1. No input validation on parameters
+2. External function address unvalidated
+3. No error checking on external call
+4. Parameter semantics unknown (undocumented)
+5. Global address 0x7c8c semantics unclear
+
+DOCUMENTATION STATUS
+====================
+Detailed analysis:      FUN_00005d60_ANALYSIS.md (18 sections)
+Disassembly reference:  FUN_00005d60_DISASSEMBLY.md (complete breakdown)
+This summary:           FUN_00005d60_SUMMARY.txt (quick reference)
+
+FILES GENERATED
+===============
+1. /ndserver_re/FUN_00005d60_ANALYSIS.md (12 KB)
+   - Comprehensive 18-section analysis
+   - Architecture integration
+   - Security considerations
+   - Performance analysis
+
+2. /ndserver_re/FUN_00005d60_DISASSEMBLY.md (12 KB)
+   - Complete annotated disassembly
+   - Stack frame diagrams
+   - Instruction timing
+   - Parameter conventions
+
+3. /ndserver_re/FUN_00005d60_SUMMARY.txt (this file)
+   - Quick reference guide
+   - Key metrics
+   - Execution flow overview
+
+ANALYSIS CONFIDENCE
+===================
+Function purpose:     HIGH (callback pattern clear)
+Calling convention:   HIGH (standard M68k ABI)
+Register usage:       HIGH (straightforward)
+Memory access:        HIGH (all visible)
+External function:    MEDIUM (address unknown)
+Parameter semantics:  MEDIUM (inferred from pattern)
+
+RECOMMENDATIONS
+================
+1. Map external function address 0x050029d2 to known symbol
+2. Document parameter 1 and (0x8,A6) semantics
+3. Investigate global context at 0x00007c8c
+4. Validate against actual system behavior
+5. Add parameter bounds checking if applicable
+6. Document callback protocol in external handler
+
+SIMILAR PATTERNS
+================
+This is a classic callback dispatcher pattern found in:
+- Signal handlers
+- Event processing systems
+- GUI frameworks
+- Interrupt handlers
+- Async callback systems
+
+Related function at 0x00005da6 (FUN_00005da6) appears to be
+similar callback initialization with different parameters.
+
+================================================================================
+Analysis completed: 2025-11-08
+Tool: Ghidra + Manual Inspection
+Architecture: Motorola 68000
+Confidence: HIGH
+================================================================================

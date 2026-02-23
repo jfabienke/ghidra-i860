@@ -1,0 +1,2551 @@
+{
+  "schema_version": "layered-intent-rules-v1",
+  "description": "GENERIC rules with COMPILER overlay for helper-vs-product triage.",
+  "compiler_generation_likelihood": {
+    "schema": "compiler-generation-likelihood-v1",
+    "bin": "same-lineage",
+    "delta_score": 6,
+    "confidence": "low",
+    "reasons": [
+      "strong_rule_delta=0",
+      "weak_rule_delta=1",
+      "runtime_const_mismatch=False",
+      "normalized_rate_delta=0.0175",
+      "evidence_strength=1.50"
+    ],
+    "components": {
+      "strong_rule_delta": 0,
+      "weak_rule_delta": 1,
+      "runtime_const_mismatch": false,
+      "normalized_rate_delta": 0.01746031746031746,
+      "evidence_strength": 1.5
+    },
+    "bins": {
+      "same-lineage": "low delta score with at least minimal evidence",
+      "possible-newer": "material cross-version delta in compiler-specific signatures",
+      "unknown": "insufficient signature evidence for a stable call"
+    }
+  },
+  "runs": [
+    {
+      "label": "NeXTSTEP 3.3",
+      "factpack": "re/nextdimension/kernel/reports/factpack/20260209-162613",
+      "binary": "re/nextdimension/kernel/i860_kernel.bin",
+      "function_evaluated_count": 60,
+      "rule_hit_counts": {
+        "COMPILER_DELAY_SLOT_NOP_PATTERN": 0,
+        "COMPILER_FP_ESCAPE_PRESENT": 2,
+        "COMPILER_FP_SAVE_RESTORE_SHELL": 0,
+        "COMPILER_ORH_OR_CONST_BUILD": 0,
+        "COMPILER_SHL_SHRA_SIGNEXT_PAIR": 0,
+        "GENERIC_COMPACT_BODY_LE_64_INSNS": 57,
+        "GENERIC_NO_MMIO_SIDE_EFFECTS": 17,
+        "GENERIC_NO_STRING_REFS": 60,
+        "GENERIC_NO_UNRESOLVED_BRI": 52
+      },
+      "classification_counts": {
+        "likely_product_or_dispatch": 58,
+        "mixed_compiler_signal_in_product_code": 2
+      },
+      "generic_top": [
+        {
+          "entry": "0xf80017cc",
+          "name": "FUN_f80017cc",
+          "size": 248,
+          "insn_count": 62,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf8008dd4",
+          "name": "FUN_f8008dd4",
+          "size": 72,
+          "insn_count": 18,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800a1c8",
+          "name": "FUN_f800a1c8",
+          "size": 68,
+          "insn_count": 17,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf8000348",
+          "name": "FUN_f8000348",
+          "size": 68,
+          "insn_count": 17,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800f4d4",
+          "name": "FUN_f800f4d4",
+          "size": 48,
+          "insn_count": 12,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800db54",
+          "name": "FUN_f800db54",
+          "size": 44,
+          "insn_count": 11,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800bb60",
+          "name": "FUN_f800bb60",
+          "size": 44,
+          "insn_count": 11,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800b504",
+          "name": "FUN_f800b504",
+          "size": 40,
+          "insn_count": 10,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800cc00",
+          "name": "FUN_f800cc00",
+          "size": 32,
+          "insn_count": 8,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800c194",
+          "name": "FUN_f800c194",
+          "size": 32,
+          "insn_count": 8,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf8008e20",
+          "name": "FUN_f8008e20",
+          "size": 32,
+          "insn_count": 8,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800f80c",
+          "name": "FUN_f800f80c",
+          "size": 24,
+          "insn_count": 6,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800b9e0",
+          "name": "FUN_f800b9e0",
+          "size": 24,
+          "insn_count": 6,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf8004e44",
+          "name": "FUN_f8004e44",
+          "size": 24,
+          "insn_count": 6,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800c458",
+          "name": "FUN_f800c458",
+          "size": 16,
+          "insn_count": 4,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        }
+      ],
+      "layered_top": [
+        {
+          "entry": "0xf807ee1c",
+          "name": "FUN_f807ee1c",
+          "size": 72,
+          "insn_count": 18,
+          "mmio_count": 3,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 1,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": false,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": true,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 3,
+          "compiler_score": 1,
+          "layered_score": 4,
+          "classification": "mixed_compiler_signal_in_product_code"
+        },
+        {
+          "entry": "0xf800f80c",
+          "name": "FUN_f800f80c",
+          "size": 24,
+          "insn_count": 6,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800f4d4",
+          "name": "FUN_f800f4d4",
+          "size": 48,
+          "insn_count": 12,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800db54",
+          "name": "FUN_f800db54",
+          "size": 44,
+          "insn_count": 11,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800cc00",
+          "name": "FUN_f800cc00",
+          "size": 32,
+          "insn_count": 8,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800c458",
+          "name": "FUN_f800c458",
+          "size": 16,
+          "insn_count": 4,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800c194",
+          "name": "FUN_f800c194",
+          "size": 32,
+          "insn_count": 8,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800bd9c",
+          "name": "FUN_f800bd9c",
+          "size": 16,
+          "insn_count": 4,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800bb60",
+          "name": "FUN_f800bb60",
+          "size": 44,
+          "insn_count": 11,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800b9e0",
+          "name": "FUN_f800b9e0",
+          "size": 24,
+          "insn_count": 6,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800b504",
+          "name": "FUN_f800b504",
+          "size": 40,
+          "insn_count": 10,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800a1c8",
+          "name": "FUN_f800a1c8",
+          "size": 68,
+          "insn_count": 17,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf8008e20",
+          "name": "FUN_f8008e20",
+          "size": 32,
+          "insn_count": 8,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf8008dd4",
+          "name": "FUN_f8008dd4",
+          "size": 72,
+          "insn_count": 18,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf8004e44",
+          "name": "FUN_f8004e44",
+          "size": 24,
+          "insn_count": 6,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf80017cc",
+          "name": "FUN_f80017cc",
+          "size": 248,
+          "insn_count": 62,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf8000348",
+          "name": "FUN_f8000348",
+          "size": 68,
+          "insn_count": 17,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf8021a20",
+          "name": "FUN_f8021a20",
+          "size": 100,
+          "insn_count": 25,
+          "mmio_count": 1,
+          "string_ref_count": 0,
+          "has_unresolved_bri": true,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 1,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": false,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": false,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": true,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 2,
+          "compiler_score": 1,
+          "layered_score": 3,
+          "classification": "mixed_compiler_signal_in_product_code"
+        },
+        {
+          "entry": "0xf800cb9c",
+          "name": "FUN_f800cb9c",
+          "size": 20,
+          "insn_count": 5,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": true,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": false,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 3,
+          "compiler_score": 0,
+          "layered_score": 3,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800df78",
+          "name": "FUN_f800df78",
+          "size": 28,
+          "insn_count": 7,
+          "mmio_count": 1,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": false,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 3,
+          "compiler_score": 0,
+          "layered_score": 3,
+          "classification": "likely_product_or_dispatch"
+        }
+      ],
+      "runtime860_const_probe": {
+        "rule": "COMPILER_RUNTIME860_DIVMOD_CONST_BLOCK_PRESENT",
+        "full_block_present": false,
+        "full_block_offset": null,
+        "subpattern_hits": {
+          "two52two31": 0,
+          "onepluseps": 0,
+          "two52": 0
+        }
+      }
+    },
+    {
+      "label": "OPENSTEP 4.2",
+      "factpack": "re/nextdimension/kernel/reports/factpack/openstep42_20260214-004032",
+      "binary": "re/nextdimension/ndserver_re/artifacts/extracted/os42/i860_scan/obj_01_off_000000_i860_preload_967496.bin",
+      "function_evaluated_count": 63,
+      "rule_hit_counts": {
+        "COMPILER_DELAY_SLOT_NOP_PATTERN": 0,
+        "COMPILER_FP_ESCAPE_PRESENT": 1,
+        "COMPILER_FP_SAVE_RESTORE_SHELL": 0,
+        "COMPILER_ORH_OR_CONST_BUILD": 0,
+        "COMPILER_SHL_SHRA_SIGNEXT_PAIR": 0,
+        "GENERIC_COMPACT_BODY_LE_64_INSNS": 62,
+        "GENERIC_NO_MMIO_SIDE_EFFECTS": 50,
+        "GENERIC_NO_STRING_REFS": 63,
+        "GENERIC_NO_UNRESOLVED_BRI": 47
+      },
+      "classification_counts": {
+        "likely_product_or_dispatch": 62,
+        "mixed_compiler_signal_in_product_code": 1
+      },
+      "generic_top": [
+        {
+          "entry": "0xf80017cc",
+          "name": "FUN_f80017cc",
+          "size": 248,
+          "insn_count": 62,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800cb1c",
+          "name": "FUN_f800cb1c",
+          "size": 172,
+          "insn_count": 43,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 1,
+            "fldq_count": 1,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf8008ee4",
+          "name": "FUN_f8008ee4",
+          "size": 148,
+          "insn_count": 37,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf8008b44",
+          "name": "FUN_f8008b44",
+          "size": 148,
+          "insn_count": 37,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 1,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf806f76c",
+          "name": "FUN_f806f76c",
+          "size": 140,
+          "insn_count": 35,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf8012388",
+          "name": "FUN_f8012388",
+          "size": 132,
+          "insn_count": 33,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800c630",
+          "name": "FUN_f800c630",
+          "size": 132,
+          "insn_count": 33,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf8000000",
+          "name": "entry",
+          "size": 116,
+          "insn_count": 29,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf80091ec",
+          "name": "FUN_f80091ec",
+          "size": 104,
+          "insn_count": 26,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf806ea64",
+          "name": "FUN_f806ea64",
+          "size": 96,
+          "insn_count": 24,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 1,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": true,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 1,
+          "layered_score": 5,
+          "classification": "mixed_compiler_signal_in_product_code"
+        },
+        {
+          "entry": "0xf800cf8c",
+          "name": "FUN_f800cf8c",
+          "size": 96,
+          "insn_count": 24,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 1,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf8008f98",
+          "name": "FUN_f8008f98",
+          "size": 96,
+          "insn_count": 24,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800c01c",
+          "name": "FUN_f800c01c",
+          "size": 80,
+          "insn_count": 20,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800d804",
+          "name": "FUN_f800d804",
+          "size": 76,
+          "insn_count": 19,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800c584",
+          "name": "FUN_f800c584",
+          "size": 68,
+          "insn_count": 17,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        }
+      ],
+      "layered_top": [
+        {
+          "entry": "0xf806ea64",
+          "name": "FUN_f806ea64",
+          "size": 96,
+          "insn_count": 24,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 1,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": true,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 1,
+          "layered_score": 5,
+          "classification": "mixed_compiler_signal_in_product_code"
+        },
+        {
+          "entry": "0xf806f76c",
+          "name": "FUN_f806f76c",
+          "size": 140,
+          "insn_count": 35,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf8012388",
+          "name": "FUN_f8012388",
+          "size": 132,
+          "insn_count": 33,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800f80c",
+          "name": "FUN_f800f80c",
+          "size": 16,
+          "insn_count": 4,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800f4d4",
+          "name": "FUN_f800f4d4",
+          "size": 32,
+          "insn_count": 8,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800df78",
+          "name": "FUN_f800df78",
+          "size": 44,
+          "insn_count": 11,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800dc18",
+          "name": "FUN_f800dc18",
+          "size": 16,
+          "insn_count": 4,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800d804",
+          "name": "FUN_f800d804",
+          "size": 76,
+          "insn_count": 19,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800d0ec",
+          "name": "FUN_f800d0ec",
+          "size": 36,
+          "insn_count": 9,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 1,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800cf8c",
+          "name": "FUN_f800cf8c",
+          "size": 96,
+          "insn_count": 24,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 1,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800cb1c",
+          "name": "FUN_f800cb1c",
+          "size": 172,
+          "insn_count": 43,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 1,
+            "fldq_count": 1,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800c79c",
+          "name": "FUN_f800c79c",
+          "size": 64,
+          "insn_count": 16,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 1,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800c694",
+          "name": "FUN_f800c694",
+          "size": 16,
+          "insn_count": 4,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 1,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800c630",
+          "name": "FUN_f800c630",
+          "size": 132,
+          "insn_count": 33,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800c584",
+          "name": "FUN_f800c584",
+          "size": 68,
+          "insn_count": 17,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800c520",
+          "name": "FUN_f800c520",
+          "size": 24,
+          "insn_count": 6,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800c2a4",
+          "name": "FUN_f800c2a4",
+          "size": 24,
+          "insn_count": 6,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800c194",
+          "name": "FUN_f800c194",
+          "size": 20,
+          "insn_count": 5,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800c01c",
+          "name": "FUN_f800c01c",
+          "size": 80,
+          "insn_count": 20,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        },
+        {
+          "entry": "0xf800bd9c",
+          "name": "FUN_f800bd9c",
+          "size": 24,
+          "insn_count": 6,
+          "mmio_count": 0,
+          "string_ref_count": 0,
+          "has_unresolved_bri": false,
+          "shape_counters": {
+            "delay_slot_nop_count": 0,
+            "orh_or_pair_count": 0,
+            "shl_shra_pair_count": 0,
+            "fp_escape_count": 0,
+            "fstq_count": 0,
+            "fldq_count": 0,
+            "ret_count": 0
+          },
+          "generic_hits": {
+            "GENERIC_NO_MMIO_SIDE_EFFECTS": true,
+            "GENERIC_NO_STRING_REFS": true,
+            "GENERIC_NO_UNRESOLVED_BRI": true,
+            "GENERIC_COMPACT_BODY_LE_64_INSNS": true
+          },
+          "compiler_hits": {
+            "COMPILER_DELAY_SLOT_NOP_PATTERN": false,
+            "COMPILER_ORH_OR_CONST_BUILD": false,
+            "COMPILER_SHL_SHRA_SIGNEXT_PAIR": false,
+            "COMPILER_FP_ESCAPE_PRESENT": false,
+            "COMPILER_FP_SAVE_RESTORE_SHELL": false
+          },
+          "generic_score": 4,
+          "compiler_score": 0,
+          "layered_score": 4,
+          "classification": "likely_product_or_dispatch"
+        }
+      ],
+      "runtime860_const_probe": {
+        "rule": "COMPILER_RUNTIME860_DIVMOD_CONST_BLOCK_PRESENT",
+        "full_block_present": false,
+        "full_block_offset": null,
+        "subpattern_hits": {
+          "two52two31": 0,
+          "onepluseps": 0,
+          "two52": 0
+        }
+      }
+    }
+  ]
+}

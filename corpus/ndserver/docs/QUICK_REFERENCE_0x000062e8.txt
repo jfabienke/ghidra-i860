@@ -1,0 +1,239 @@
+================================================================================
+QUICK REFERENCE CARD: FUN_000062e8
+================================================================================
+
+ADDRESS:        0x000062e8 (25320 decimal)
+SIZE:           48 bytes
+COMPLEXITY:     LOW
+CATEGORY:       Callback, Hardware
+PRIORITY:       HIGH
+
+================================================================================
+FUNCTION TYPE
+================================================================================
+
+Error-Handling RPC Wrapper / Remote Procedure Call Handler
+
+Delegates to external function, checks for error, propagates error code
+via output parameter.
+
+================================================================================
+SIGNATURE
+================================================================================
+
+void FUN_000062e8(
+    uint32_t arg0,        // @ A6+0x10
+    uint32_t arg1,        // @ A6+0x14
+    uint32_t arg2,        // @ A6+0x18
+    uint32_t *out_ptr     // @ A6+0x0c
+);
+
+================================================================================
+CONTROL FLOW
+================================================================================
+
+[Setup frame]
+    |
+[Load A2 = output ptr]
+    |
+[Push arg0, arg1, arg2 to stack]
+    |
+[Call 0x05002bc4 (external function)]
+    |
+[Compare return (D0) to -1]
+    |
+    +---- If D0 == -1: Write error code from 0x040105b0 to *out_ptr
+    |
+    +---- If D0 != -1: Skip error write
+    |
+[Restore registers, return]
+
+================================================================================
+KEY INSTRUCTIONS
+================================================================================
+
+0x000062e8  link.w A6,0x0           Stack frame (0 locals)
+0x000062ec  move.l A2,-(SP)         Save A2
+0x000062ee  movea.l (0xc,A6),A2     A2 = output pointer
+0x000062f2  move.l (0x18,A6),-(SP)  Push arg2
+0x000062f6  move.l (0x14,A6),-(SP)  Push arg1
+0x000062fa  move.l (0x10,A6),-(SP)  Push arg0
+0x000062fe  bsr.l 0x05002bc4        Call external function
+0x00006304  moveq -0x1,D1           D1 = -1 (error sentinel)
+0x00006306  cmp.l D0,D1             Compare return to -1
+0x00006308  bne.b 0x00006310        If D0 != -1, skip error write
+0x0000630a  move.l (0x040105b0).l,(A2)  Write error code to output
+0x00006310  movea.l (-0x4,A6),A2    Restore A2
+0x00006314  unlk A6                 Dismantle frame
+0x00006316  rts                     Return
+
+================================================================================
+REGISTER USAGE
+================================================================================
+
+INPUT:
+  A6 = Frame pointer (calling convention)
+
+WORKING:
+  D0 = Return from external function (result)
+  D1 = Error sentinel (-1)
+  A2 = Output pointer (callee-saved)
+
+OUTPUT:
+  *(A2) = Error code (if D0 == -1)
+
+================================================================================
+MEMORY REFERENCES
+================================================================================
+
+0x040105b0   Read when D0 == -1, write value to output pointer
+             Purpose: Error code register
+
+0x05002bc4   Called as: external_func(arg0, arg1, arg2)
+             Returns: D0 (success != -1, error == -1)
+             Purpose: Privileged/remote function
+
+================================================================================
+ERROR HANDLING
+================================================================================
+
+Sentinel Value:     -1 (0xFFFFFFFF)
+Detection:          CMP D0, -1
+Success Path:       D0 != -1, skip error write
+Error Path:         D0 == -1, read code from 0x040105b0, write to output
+
+Output Method:      Parameter pointer (out-param pattern)
+
+================================================================================
+CALLERS
+================================================================================
+
+PRIMARY:  FUN_000066dc @ 0x000066dc (220-byte function)
+
+CONTEXT:  FUN_000066dc performs validation/preparation, then calls
+          FUN_000062e8 with parameters and receives error via pointer.
+
+PATTERN:  Dispatch function → Error wrapper → External handler
+
+================================================================================
+STACK LAYOUT AT ENTRY
+================================================================================
+
+A6+0x18  arg2
+A6+0x14  arg1
+A6+0x10  arg0
+A6+0x0c  out_ptr (output parameter)
+A6+0x08  return address (from bsr.l)
+A6+0x04  saved A6
+A6+0x00  current A6
+A6-0x04  saved A2 (during execution)
+
+================================================================================
+BEHAVIORAL PATTERN
+================================================================================
+
+Pattern Name: Try-Catch Wrapper with Output Parameter
+
+Pseudocode:
+  result = call_external_function(arg0, arg1, arg2);
+  if (result == -1) {
+      *output_ptr = read_error_code();
+  }
+  return;
+
+Advantage: Returns error code WITHOUT losing original return value
+
+================================================================================
+OPTIMIZATION NOTES
+================================================================================
+
+✓ Minimal instructions (14 total)
+✓ Only 1 memory load (error code)
+✓ Only 1 memory write (error propagation)
+✓ No local variables (0 stack space)
+✓ Efficient register reuse (A2 for output pointer)
+✓ Short branch for success path (bne.b = 2 bytes)
+✓ Likely branch-predicted for success case
+
+Performance: Highly optimized, ~15-20 cycles on 68040
+
+================================================================================
+SECURITY CONSIDERATIONS
+================================================================================
+
+Risk Level: LOW
+
+Observations:
+✓ Clear input validation (error code check)
+✓ Defined error handling protocol
+✓ No buffer overflows (single write via pointer)
+✓ Proper calling convention adherence
+✓ Stack frame properly established/destroyed
+
+Potential Issues:
+⚠ Assumes caller provides valid pointer in A6+0x0c
+⚠ No null-check on output pointer
+⚠ Error code read from fixed address without validation
+
+================================================================================
+INTEGRATION POINTS
+================================================================================
+
+UPSTREAM:
+  FUN_000066dc → Dispatch logic, parameter preparation
+
+DOWNSTREAM:
+  0x05002bc4 → Privileged/remote kernel function
+
+SIDE EFFECTS:
+  Reads from 0x040105b0 (error code register)
+  Writes to caller-provided output pointer
+  Calls unrelated external function
+
+================================================================================
+RELATED FUNCTIONS
+================================================================================
+
+Similar wrappers at:
+  FUN_00006318 (40 bytes)  - Different external function
+  FUN_00006340 (44 bytes)  - Likely similar pattern
+
+All appear to be in same callback/wrapper family
+
+================================================================================
+COMMENTS FOR CODE REVIEW
+================================================================================
+
+1. CLARITY:     Function purpose is clear - RPC wrapper with error handling
+2. SIMPLICITY:  No unnecessary complexity, straightforward logic
+3. EFFICIENCY:  Well-optimized for common success path
+4. SAFETY:      Proper register/stack management, but lacks pointer validation
+5. REUSABILITY: Generic pattern suitable for multiple external functions
+6. TESTING:     Should test both success (D0 != -1) and error (D0 == -1) paths
+
+================================================================================
+DEBUGGING TIPS
+================================================================================
+
+Breakpoints:
+  • Set at 0x000062e8 to trace wrapper entry
+  • Set at 0x000062fe to observe parameters before external call
+  • Set at 0x00006304 to see return value from external function
+  • Set at 0x0000630a to catch error path
+
+Watch Variables:
+  • D0: Return from external function
+  • A2: Output pointer
+  • (A2): Contents of output buffer after execution
+
+Tracing:
+  • Monitor 0x040105b0 reads to see error code values
+  • Track return address to verify caller is FUN_000066dc
+  • Check stack parameters match expectations
+
+================================================================================
+Document Version: 1.0
+Generated: November 8, 2025
+Source: Ghidra Static Analysis
+Repository: nextdimension/ndserver_re
+================================================================================

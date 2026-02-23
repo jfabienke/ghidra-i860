@@ -1,0 +1,127 @@
+================================================================================
+QUICK REFERENCE CARD - FUN_00004f64 (PostScript mfont Operator)
+================================================================================
+
+FUNCTION SIGNATURE:
+  Name:        FUN_00004f64 (DPS_mfont_operator)
+  Address:     0x00004f64
+  Size:        276 bytes (69 instructions)
+  Frame:       -0x42c (1068 bytes local)
+
+PARAMETERS (via stack):
+  Arg1 @ 0x08(A6)  - Unknown purpose
+  Arg2 @ 0x0c(A6)  - Unknown purpose  
+  Arg3 @ 0x10(A6)  - Unknown purpose
+  Arg4 @ 0x14(A6)  - Font name pointer (string)
+  Arg5 @ 0x18(A6)  - Font name length (uint32_t)
+  Arg6 @ 0x1c(A6)  - Extra parameter (passed to lib call)
+
+RETURN VALUE (in D0):
+  0              - Success (neutral/field is zero)
+  Pointer        - Valid resource from allocation
+  -0xca (-202)   - Allocation error (cleanup called)
+  -0x12d (-301)  - Type mismatch (0xdb validation failed)
+  -0x12c (-300)  - Parameter/global mismatch
+  -0x133 (-307)  - Input length > 0x400 (1024 bytes)
+
+REGISTERS USED:
+  D0: Return value, temporary comparisons
+  D1: Temporary (comparisons, constants)
+  D2: Offset counter (initialized to 0x2c = 44)
+  D3: Font name length (from arg5)
+  A2: Local structure pointer (frame base)
+  A3: Frame base pointer ((-0x42c, A6))
+  A6: Frame pointer
+  SP: Stack pointer
+
+STACK LAYOUT:
+  0x08(A6) ← Return boundary
+  0x0c(A6) ← Arg2 (copy to -0x410)
+  0x10(A6) ← Arg3 (copy to -0x408)
+  0x14(A6) ← Arg4 (font name string)
+  0x18(A6) ← Arg5 (font name length)
+  -0x414(A6) ← Global copy (0x7bc0)
+  -0x40c(A6) ← Global copy (0x7bc4)
+  -0x404(A6) ← Global copy (0x7bc8)
+  -0x42c(A6) ← Local buffer start (A3 = A2)
+
+LOCAL STRUCTURE LAYOUT:
+  +0x00  Type/flags
+  +0x03  Flag byte (set to 0x1)
+  +0x04  Offset (4-byte aligned)
+  +0x08  Size = 0x100
+  +0x0c  Validation result
+  +0x10  Parameter copy (arg5)
+  +0x14  Op code = 0x77 (mfont identifier)
+  +0x18  Arg1 copy
+  +0x1c  Conditional return value
+  +0x2a  12-bit length field (via bfins)
+  +0x2c  Font name buffer (variable, 4-byte aligned)
+
+GLOBALS ACCESSED:
+  0x7bc0  PostScript state 1
+  0x7bc4  PostScript state 2
+  0x7bc8  PostScript state 3
+  0x7bcc  Parameter for validation
+
+LIBRARY CALLS:
+  1. 0x0500294e  Font name copy (strcpy/memcpy variant)
+  2. 0x05002960  Validation/processing function
+  3. 0x050029c0  Resource allocation (main call)
+  4. 0x0500295a  Error cleanup handler (-0xca)
+
+EXECUTION FLOW:
+  1. Validate input: name_length <= 0x400 ✓
+  2. Copy font name to local buffer
+  3. Calculate 4-byte aligned offset
+  4. Set structure fields (type=0x77, size=0x100)
+  5. Call validation function
+  6. Call allocation function (5 stack args)
+  7. IF allocation succeeds:
+       Return pointer or -0xca
+  8. IF allocation returns NULL:
+       Validate type=0xdb, size=0x20, count=0x1
+       Verify global match
+       Return error code or conditional value
+
+KEY VALIDATION CHECKS:
+  Check 1: Font name length <= 1024 bytes
+           Fails: Return -0x133
+  Check 2: Type field == 0xdb
+           Fails: Return -0x12d
+  Check 3: Size field == 0x20 AND count == 0x1 AND global match
+           Fails: Return -0x12c
+  Check 4: Conditional field (0x1c) is non-zero
+           If zero: Return 0
+           If non-zero: Return conditional field value
+
+POSTCRIPT CONTEXT:
+  Operator:      mfont (make font)
+  Opcode:        0x77 (119 decimal)
+  Type:          Graphics/Font operator
+  Table:         PostScript dispatch table (0x3cdc-0x59f8)
+  Related Ops:   0x78, 0x79, 0x7a, 0x7b (similar functions)
+
+PERFORMANCE:
+  Instruction count:  ~69 total
+  Fast path cycles:   ~90-100 (m68k @ 25MHz)
+  Stack usage:        1088 bytes minimum
+  External overhead:  3-4 function calls to libraries
+
+CODE QUALITY:
+  Error handling:  Excellent (5+ error codes)
+  Validation:      Comprehensive (multi-level checks)
+  Register use:    Efficient (no wasted operations)
+  Memory safety:   Good (bounds checking, alignment)
+
+CONFIDENCE LEVELS:
+  Purpose:            HIGH       (Font object creation)
+  PostScript Op:      HIGH       (DPS operator 0x77)
+  Register tracking:  HIGH       (All documented)
+  Structure layout:   MEDIUM     (Inferred from usage)
+  Error codes:        MEDIUM     (Pattern-based)
+  Lib function names: LOW        (Not in binary)
+
+================================================================================
+For detailed analysis, see: 00004f64_PostScriptOperator_mfont.md (779 lines)
+================================================================================

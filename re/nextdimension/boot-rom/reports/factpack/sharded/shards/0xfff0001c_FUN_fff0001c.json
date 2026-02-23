@@ -1,0 +1,63 @@
+{
+  "schema_version": "shard-v1",
+  "factpack_source": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/boot-rom/reports/factpack",
+  "function": {
+    "entry": "0xfff0001c",
+    "name": "FUN_fff0001c",
+    "size": 4,
+    "in_exec": true,
+    "in_allow": true,
+    "in_deny": false,
+    "confidence_source": "default",
+    "has_unresolved_bri": false
+  },
+  "blocks": [
+    {
+      "func_entry": "0xfff0001c",
+      "block_start": "0xfff0001c",
+      "block_end": "0xfff0001f",
+      "insn_count": 1
+    }
+  ],
+  "edges": [
+    {
+      "src": "0xfff0001c",
+      "dst": "0xfff00020",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xfff1ff20",
+      "dst": "0xfff0001c",
+      "kind": "call",
+      "delay_slot": true
+    }
+  ],
+  "insns": [
+    {
+      "addr": "0xfff0001c",
+      "func_entry": "0xfff0001c",
+      "word": "0xa0000000",
+      "mnemonic": "nop",
+      "operands": "nop",
+      "defs": [],
+      "uses": [],
+      "pcode_ops": [],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    }
+  ],
+  "refs": [],
+  "strings": [],
+  "dispatch_unresolved": [],
+  "callees": [],
+  "callers": [],
+  "context": {
+    "r15_cluster": false,
+    "mmio_accesses": [],
+    "nearby_deny_ranges": [],
+    "nearby_embedded_objects": [],
+    "priority_tags": []
+  }
+}

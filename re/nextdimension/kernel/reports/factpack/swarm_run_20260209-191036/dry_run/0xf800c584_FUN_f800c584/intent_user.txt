@@ -1,0 +1,73 @@
+Analyze the following function and return a structured JSON intent dossier.
+
+FUNCTION: FUN_f800c584 at 0xf800c584
+SIZE: 36 bytes (9 instructions)
+CONFIDENCE SOURCE: curated
+HAS UNRESOLVED BRI: True
+PRIORITY TAGS: unresolved_bri, mmio_access
+
+CALLERS (0): (none)
+CALLEES (0): (none)
+
+BLOCKS (3):
+  0xf800c584..0xf800c58b (2 insns)
+  0xf800c58c..0xf800c59f (5 insns)
+  0xf800c5a0..0xf800c5a7 (2 insns)
+
+INSTRUCTIONS:
+  0xf800c584: ixfr r3,f24                              defs=[f24] uses=[r3] pcode=[COPY]
+  0xf800c588: bnc 0xfdec89e4                           defs=[] uses=[0x0,CC] pcode=[INT_EQUAL,CBRANCH]
+  0xf800c58c: ixfr r4,f0                               defs=[] uses=[] pcode=[]
+  0xf800c590: flush -0x4fea(r8)                        defs=[] uses=[r8,0x4,0xb016] pcode=[INT_SEXT,INT_ADD,CALLOTHER] [MMIO:mmio_high_space]
+  0xf800c594: ixfr r3,f24                              defs=[f24] uses=[r3] pcode=[COPY]
+  0xf800c598: bnc.t 0xfdec89f4                         defs=[r0_sink] uses=[0x0,r4,0x2052,CC] pcode=[INT_EQUAL,INT_SEXT,INT_ADD,LOAD,INT_ZEXT,CBRANCH]
+  0xf800c59c: _ld.b 0x2052(r4),r0                      defs=[r0_sink] uses=[r4,0x2052] pcode=[INT_SEXT,INT_ADD,LOAD,INT_ZEXT]
+  0xf800c5a0: bri r22                                  defs=[f24] uses=[r22,r3] pcode=[COPY,BRANCHIND]
+  0xf800c5a4: _ixfr r3,f24                             defs=[f24] uses=[r3] pcode=[COPY]
+
+REFERENCES:
+  0xf800c588 -> 0xfdec89e4 [CONDITIONAL_JUMP] flow=True
+  0xf800c598 -> 0xfdec89f4 [CONDITIONAL_JUMP] flow=True
+
+STRINGS IN RANGE:
+  (none)
+
+DISPATCH UNRESOLVED:
+  0xf800c5a0: bri [COMPUTED_JUMP] phase2=trap_entry
+
+CONTEXT:
+- R15 cluster (GState flags): False
+- MMIO accesses: 0xf800c590=mmio_high_space
+- Nearby deny ranges: (none)
+- Nearby embedded objects: (none)
+
+Return ONLY valid JSON matching this schema:
+{
+  "function_id": "0xf800c584",
+  "function_name": "FUN_f800c584",
+  "primary_intent": "<one-line purpose statement>",
+  "intent_category": "<one of: initialization, dispatch, parser, raster, mmio_driver, math_kernel, utility, synchronization, error_handler, unknown>",
+  "evidence": [
+    {"addr": "0x...", "fact": "<what this instruction/pattern proves>"}
+  ],
+  "register_protocol": {
+    "inputs": ["<rN = description>"],
+    "outputs": ["<rN = description>"],
+    "side_effects": ["<memory write / MMIO / control reg change>"]
+  },
+  "data_accesses": [
+    {"addr": "0x...", "target": "0x...", "kind": "read|write|mmio", "interpretation": "..."}
+  ],
+  "control_flow_summary": "<how the function flows: linear, loop, conditional tree, dispatch, etc.>",
+  "confidence": <0-100>,
+  "confidence_factors": {
+    "supporting": ["<what raises confidence>"],
+    "limiting": ["<what caps confidence>"]
+  },
+  "alternatives": [
+    {"intent": "<alternative purpose>", "why_not_primary": "<evidence against>"}
+  ],
+  "open_questions": ["<what remains unknown>"],
+  "required_next_evidence": ["<what would resolve open questions>"],
+  "subsystem_hint": "<suggested subsystem: postscript_dispatch, pixel_pipeline, memory_management, board_init, interrupt_handling, unknown>"
+}

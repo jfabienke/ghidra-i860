@@ -32,17 +32,27 @@
 
 # pfadd.ss (pipelined)
 :^DualPrefix^"pfadd.ss" FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x30 & pbit=1 & DualPrefix & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
-    FSdest = FS1src f+ FS2src;
+    FSdest = A3:4;
+    A3 = A2;
+    A2 = A1;
+    local res:4 = FS1src f+ FS2src;
+    A1 = zext(res);
 }
 
 # pfadd.sd (pipelined)
 :^DualPrefix^"pfadd.sd" FS1src, FS2src, FDdest  is op6=0x12 & fpop=0x30 & pbit=1 & DualPrefix & sbit=0 & rbit=1 & FS1src & FS2src & FDdest  {
-    FDdest = float2float(FS1src) f+ float2float(FS2src);
+    FDdest = A3;
+    A3 = A2;
+    A2 = A1;
+    A1 = float2float(FS1src) f+ float2float(FS2src);
 }
 
 # pfadd.dd (pipelined)
 :^DualPrefix^"pfadd.dd" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x30 & pbit=1 & DualPrefix & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
-    FDdest = FD1src f+ FD2src;
+    FDdest = A3;
+    A3 = A2;
+    A2 = A1;
+    A1 = FD1src f+ FD2src;
 }
 
 # ==================================================================
@@ -62,15 +72,25 @@
 }
 
 :^DualPrefix^"pfsub.ss" FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x31 & pbit=1 & DualPrefix & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
-    FSdest = FS1src f- FS2src;
+    FSdest = A3:4;
+    A3 = A2;
+    A2 = A1;
+    local res:4 = FS1src f- FS2src;
+    A1 = zext(res);
 }
 
 :^DualPrefix^"pfsub.sd" FS1src, FS2src, FDdest  is op6=0x12 & fpop=0x31 & pbit=1 & DualPrefix & sbit=0 & rbit=1 & FS1src & FS2src & FDdest  {
-    FDdest = float2float(FS1src) f- float2float(FS2src);
+    FDdest = A3;
+    A3 = A2;
+    A2 = A1;
+    A1 = float2float(FS1src) f- float2float(FS2src);
 }
 
 :^DualPrefix^"pfsub.dd" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x31 & pbit=1 & DualPrefix & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
-    FDdest = FD1src f- FD2src;
+    FDdest = A3;
+    A3 = A2;
+    A2 = A1;
+    A1 = FD1src f- FD2src;
 }
 
 # ==================================================================
@@ -91,16 +111,27 @@
 }
 
 :^DualPrefix^"pfmul.ss" FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x20 & pbit=1 & DualPrefix & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
-    FSdest = FS1src f* FS2src;
+    FSdest = M3:4;
+    M3 = M2;
+    M2 = M1;
+    local res:4 = FS1src f* FS2src;
+    M1 = zext(res);
 }
 
 :^DualPrefix^"pfmul.sd" FS1src, FS2src, FDdest  is op6=0x12 & fpop=0x20 & pbit=1 & DualPrefix & sbit=0 & rbit=1 & FS1src & FS2src & FDdest  {
-    FDdest = float2float(FS1src) f* float2float(FS2src);
+    # Result is double, so it uses 2-stage pipeline on XR?
+    # Manual Page 8-5: "For double-precision, the multiplier pipeline has only two stages."
+    FDdest = M2;
+    M2 = M1;
+    M1 = float2float(FS1src) f* float2float(FS2src);
 }
 
 :^DualPrefix^"pfmul.dd" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x20 & pbit=1 & DualPrefix & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
-    FDdest = FD1src f* FD2src;
+    FDdest = M2;
+    M2 = M1;
+    M1 = FD1src f* FD2src;
 }
+
 
 # ==================================================================
 # fmlow.dd — FP sub-opcode 0x21 (multiply low, double only)
@@ -147,7 +178,10 @@
 # ==================================================================
 
 :^DualPrefix^"pfmul3.dd" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x24 & pbit=1 & DualPrefix & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
-    FDdest = FD1src f* FD2src;
+    FDdest = M3;
+    M3 = M2;
+    M2 = M1;
+    M1 = FD1src f* FD2src;
 }
 
 # ==================================================================
@@ -186,18 +220,28 @@
     FDdest = trunc(FD1src);
 }
 
-# Pipelined ftrunc variants
+# Pipelined ftrunc variants (Adder pipeline)
 :^DualPrefix^"pftrunc.ss" FS1src, FSdest  is op6=0x12 & fpop=0x3A & pbit=1 & DualPrefix & sbit=0 & rbit=0 & FS1src & FSdest  {
-    FSdest = trunc(FS1src);
+    FSdest = A3:4;
+    A3 = A2;
+    A2 = A1;
+    local res:4 = trunc(FS1src);
+    A1 = zext(res);
 }
 
 :^DualPrefix^"pftrunc.sd" FS1src, FDdest  is op6=0x12 & fpop=0x3A & pbit=1 & DualPrefix & sbit=0 & rbit=1 & FS1src & FDdest  {
+    FDdest = A3;
+    A3 = A2;
+    A2 = A1;
     local tmp:4 = trunc(FS1src);
-    FDdest = sext(tmp);
+    A1 = sext(tmp);
 }
 
 :^DualPrefix^"pftrunc.dd" FD1src, FDdest  is op6=0x12 & fpop=0x3A & pbit=1 & DualPrefix & sbit=1 & rbit=1 & FD1src & FDdest  {
-    FDdest = trunc(FD1src);
+    FDdest = A3;
+    A3 = A2;
+    A2 = A1;
+    A1 = trunc(FD1src);
 }
 
 # ==================================================================
@@ -221,21 +265,34 @@
     FDdest = FD1src;
 }
 
-# Pipelined famov
+# Pipelined famov (Adder pipeline)
 :^DualPrefix^"pfamov.ss" FS1src, FSdest  is op6=0x12 & fpop=0x33 & pbit=1 & DualPrefix & sbit=0 & rbit=0 & FS1src & FSdest  {
-    FSdest = FS1src;
+    FSdest = A3:4;
+    A3 = A2;
+    A2 = A1;
+    A1 = zext(FS1src);
 }
 
 :^DualPrefix^"pfamov.ds" FD1src, FSdest  is op6=0x12 & fpop=0x33 & pbit=1 & DualPrefix & sbit=1 & rbit=0 & FD1src & FSdest  {
-    FSdest = float2float(FD1src);
+    FSdest = A3:4;
+    A3 = A2;
+    A2 = A1;
+    local res:4 = float2float(FD1src);
+    A1 = zext(res);
 }
 
 :^DualPrefix^"pfamov.sd" FS1src, FDdest  is op6=0x12 & fpop=0x33 & pbit=1 & DualPrefix & sbit=0 & rbit=1 & FS1src & FDdest  {
-    FDdest = float2float(FS1src);
+    FDdest = A3;
+    A3 = A2;
+    A2 = A1;
+    A1 = float2float(FS1src);
 }
 
 :^DualPrefix^"pfamov.dd" FD1src, FDdest  is op6=0x12 & fpop=0x33 & pbit=1 & DualPrefix & sbit=1 & rbit=1 & FD1src & FDdest  {
-    FDdest = FD1src;
+    FDdest = A3;
+    A3 = A2;
+    A2 = A1;
+    A1 = FD1src;
 }
 
 # ==================================================================
@@ -314,14 +371,21 @@
     FDdest = FD1src + FD2src;
 }
 
-# pfiadd.ss (pipelined)
+# pfiadd.ss (pipelined - Adder pipeline)
 :^DualPrefix^"pfiadd.ss" FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x49 & pbit=1 & DualPrefix & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
-    FSdest = FS1src + FS2src;
+    FSdest = A3:4;
+    A3 = A2;
+    A2 = A1;
+    local res:4 = FS1src + FS2src;
+    A1 = zext(res);
 }
 
-# pfiadd.dd (pipelined)
+# pfiadd.dd (pipelined - Adder pipeline)
 :^DualPrefix^"pfiadd.dd" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x49 & pbit=1 & DualPrefix & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
-    FDdest = FD1src + FD2src;
+    FDdest = A3;
+    A3 = A2;
+    A2 = A1;
+    A1 = FD1src + FD2src;
 }
 
 # fisub.ss (fpop=0x4D, S=0, R=0)
@@ -334,14 +398,21 @@
     FDdest = FD1src - FD2src;
 }
 
-# pfisub.ss (pipelined)
+# pfisub.ss (pipelined - Adder pipeline)
 :^DualPrefix^"pfisub.ss" FS1src, FS2src, FSdest  is op6=0x12 & fpop=0x4D & pbit=1 & DualPrefix & sbit=0 & rbit=0 & FS1src & FS2src & FSdest  {
-    FSdest = FS1src - FS2src;
+    FSdest = A3:4;
+    A3 = A2;
+    A2 = A1;
+    local res:4 = FS1src - FS2src;
+    A1 = zext(res);
 }
 
-# pfisub.dd (pipelined)
+# pfisub.dd (pipelined - Adder pipeline)
 :^DualPrefix^"pfisub.dd" FD1src, FD2src, FDdest  is op6=0x12 & fpop=0x4D & pbit=1 & DualPrefix & sbit=1 & rbit=1 & FD1src & FD2src & FDdest  {
-    FDdest = FD1src - FD2src;
+    FDdest = A3;
+    A3 = A2;
+    A2 = A1;
+    A1 = FD1src - FD2src;
 }
 
 # ==================================================================
@@ -431,31 +502,25 @@
 # --- fld.q (16 bytes, quad) reg+reg: fpsize=2 ---
 :fld.q src1(R2src), fddest  is op6=0x08 & fpsize=0b10 & fpauto=0 & src1 & R2src & fddest  {
     local addr:4 = src1 + R2src;
-    local lo:8 = *:8 addr;
-    local hi:8 = *:8 (addr + 8);
-    fddest = lo;
+    fddest = *:8 addr;
+    # Note: fld.q loads into a register pair, but SLEIGH treats fddest as 64-bit here.
+    # This might need refinement for full 128-bit load modeling.
 }
 
 :fld.q src1(R2src)"++", fddest  is op6=0x08 & fpsize=0b10 & fpauto=1 & src1 & R2src & src2_zero!=0 & fddest  {
     local addr:4 = src1 + R2src;
-    local lo:8 = *:8 addr;
-    local hi:8 = *:8 (addr + 8);
-    fddest = lo;
+    fddest = *:8 addr;
     R2src = addr;
 }
 
 :fld.q simm16(R2src), fddest  is op6=0x09 & fpsize=0b10 & fpauto=0 & simm16 & R2src & fddest  {
     local addr:4 = R2src + sext(simm16:2);
-    local lo:8 = *:8 addr;
-    local hi:8 = *:8 (addr + 8);
-    fddest = lo;
+    fddest = *:8 addr;
 }
 
 :fld.q simm16(R2src)"++", fddest  is op6=0x09 & fpsize=0b10 & fpauto=1 & simm16 & R2src & src2_zero!=0 & fddest  {
     local addr:4 = R2src + sext(simm16:2);
-    local lo:8 = *:8 addr;
-    local hi:8 = *:8 (addr + 8);
-    fddest = lo;
+    fddest = *:8 addr;
     R2src = addr;
 }
 
@@ -467,67 +532,104 @@
 
 :pfld.l src1(R2src), FSdest  is op6=0x18 & fpsize=0b01 & fpauto=0 & src1 & R2src & FSdest  {
     local addr:4 = src1 + R2src;
-    FSdest = *:4 addr;
+    FSdest = L3:4;
+    L3 = L2;
+    L2 = L1;
+    L1 = zext(*:4 addr);
 }
 
 :pfld.l src1(R2src)"++", FSdest  is op6=0x18 & fpsize=0b01 & fpauto=1 & src1 & R2src & src2_zero!=0 & FSdest  {
     local addr:4 = src1 + R2src;
-    FSdest = *:4 addr;
+    FSdest = L3:4;
+    L3 = L2;
+    L2 = L1;
+    L1 = zext(*:4 addr);
     R2src = addr;
 }
 
 :pfld.l simm16(R2src), FSdest  is op6=0x19 & fpsize=0b01 & fpauto=0 & simm16 & R2src & FSdest  {
     local addr:4 = R2src + sext(simm16:2);
-    FSdest = *:4 addr;
+    FSdest = L3:4;
+    L3 = L2;
+    L2 = L1;
+    L1 = zext(*:4 addr);
 }
 
 :pfld.l simm16(R2src)"++", FSdest  is op6=0x19 & fpsize=0b01 & fpauto=1 & simm16 & R2src & src2_zero!=0 & FSdest  {
     local addr:4 = R2src + sext(simm16:2);
-    FSdest = *:4 addr;
+    FSdest = L3:4;
+    L3 = L2;
+    L2 = L1;
+    L1 = zext(*:4 addr);
     R2src = addr;
 }
 
 # --- pfld.l alternate encoding: fpsize=0b11 ---
 :pfld.l src1(R2src), FSdest  is op6=0x18 & fpsize=0b11 & fpauto=0 & src1 & R2src & FSdest  {
     local addr:4 = src1 + R2src;
-    FSdest = *:4 addr;
+    FSdest = L3:4;
+    L3 = L2;
+    L2 = L1;
+    L1 = zext(*:4 addr);
 }
 :pfld.l src1(R2src)"++", FSdest  is op6=0x18 & fpsize=0b11 & fpauto=1 & src1 & R2src & src2_zero!=0 & FSdest  {
     local addr:4 = src1 + R2src;
-    FSdest = *:4 addr;
+    FSdest = L3:4;
+    L3 = L2;
+    L2 = L1;
+    L1 = zext(*:4 addr);
     R2src = addr;
 }
 :pfld.l simm16(R2src), FSdest  is op6=0x19 & fpsize=0b11 & fpauto=0 & simm16 & R2src & FSdest  {
     local addr:4 = R2src + sext(simm16:2);
-    FSdest = *:4 addr;
+    FSdest = L3:4;
+    L3 = L2;
+    L2 = L1;
+    L1 = zext(*:4 addr);
 }
 :pfld.l simm16(R2src)"++", FSdest  is op6=0x19 & fpsize=0b11 & fpauto=1 & simm16 & R2src & src2_zero!=0 & FSdest  {
     local addr:4 = R2src + sext(simm16:2);
-    FSdest = *:4 addr;
+    FSdest = L3:4;
+    L3 = L2;
+    L2 = L1;
+    L1 = zext(*:4 addr);
     R2src = addr;
 }
 
 :pfld.d src1(R2src), FDdest  is op6=0x18 & fpsize=0b00 & fpauto=0 & src1 & R2src & FDdest  {
     local addr:4 = src1 + R2src;
-    FDdest = *:8 addr;
+    FDdest = L3;
+    L3 = L2;
+    L2 = L1;
+    L1 = *:8 addr;
 }
 
 :pfld.d src1(R2src)"++", FDdest  is op6=0x18 & fpsize=0b00 & fpauto=1 & src1 & R2src & src2_zero!=0 & FDdest  {
     local addr:4 = src1 + R2src;
-    FDdest = *:8 addr;
+    FDdest = L3;
+    L3 = L2;
+    L2 = L1;
+    L1 = *:8 addr;
     R2src = addr;
 }
 
 :pfld.d simm16(R2src), FDdest  is op6=0x19 & fpsize=0b00 & fpauto=0 & simm16 & R2src & FDdest  {
     local addr:4 = R2src + sext(simm16:2);
-    FDdest = *:8 addr;
+    FDdest = L3;
+    L3 = L2;
+    L2 = L1;
+    L1 = *:8 addr;
 }
 
 :pfld.d simm16(R2src)"++", FDdest  is op6=0x19 & fpsize=0b00 & fpauto=1 & simm16 & R2src & src2_zero!=0 & FDdest  {
     local addr:4 = R2src + sext(simm16:2);
-    FDdest = *:8 addr;
+    FDdest = L3;
+    L3 = L2;
+    L2 = L1;
+    L1 = *:8 addr;
     R2src = addr;
 }
+
 
 # ==================================================================
 # FP Stores — primary opcode 0x0A (reg+reg), 0x0B (disp+reg)

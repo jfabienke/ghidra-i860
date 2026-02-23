@@ -1,0 +1,326 @@
+{
+  "source": "re/nextdimension/firmware/extracted/postscript/ND_MachDriver_postscript_payload_normalized.ps",
+  "line_count": 1750,
+  "operator_count": 41,
+  "sections": [
+    {
+      "name": "% graphic state operators",
+      "line": 50
+    },
+    {
+      "name": "% path painting operators",
+      "line": 81
+    },
+    {
+      "name": "% group operators",
+      "line": 181
+    },
+    {
+      "name": "% place operators",
+      "line": 210
+    },
+    {
+      "name": "% color operators",
+      "line": 227
+    },
+    {
+      "name": "% locked object operator",
+      "line": 419
+    },
+    {
+      "name": "% annotate page operator",
+      "line": 428
+    },
+    {
+      "name": "%%EndResource",
+      "line": 432
+    },
+    {
+      "name": "%%EndProlog",
+      "line": 434
+    },
+    {
+      "name": "%%BeginSetup",
+      "line": 435
+    },
+    {
+      "name": "%AI3_BeginEncoding",
+      "line": 461
+    },
+    {
+      "name": "%AI3_EndEncoding",
+      "line": 614
+    },
+    {
+      "name": "%%EndSetup",
+      "line": 615
+    },
+    {
+      "name": "%AI3_Note:",
+      "line": 623
+    }
+  ],
+  "operators": [
+    {
+      "name": "y",
+      "line": 2,
+      "signature": "x1 y1 x2 y2 y -"
+    },
+    {
+      "name": "l",
+      "line": 8,
+      "signature": "x y l -"
+    },
+    {
+      "name": "m",
+      "line": 14,
+      "signature": "x y m -"
+    },
+    {
+      "name": "d",
+      "line": 51,
+      "signature": "array phase d -"
+    },
+    {
+      "name": "i",
+      "line": 56,
+      "signature": "flatness i -"
+    },
+    {
+      "name": "j",
+      "line": 64,
+      "signature": "linejoin j -"
+    },
+    {
+      "name": "J",
+      "line": 68,
+      "signature": "linecap J -"
+    },
+    {
+      "name": "M",
+      "line": 72,
+      "signature": "miterlimit M -"
+    },
+    {
+      "name": "w",
+      "line": 76,
+      "signature": "linewidth w -"
+    },
+    {
+      "name": "H",
+      "line": 82,
+      "signature": "- H -"
+    },
+    {
+      "name": "h",
+      "line": 84,
+      "signature": "- h -"
+    },
+    {
+      "name": "N",
+      "line": 88,
+      "signature": "- N -"
+    },
+    {
+      "name": "n",
+      "line": 99,
+      "signature": "- n -"
+    },
+    {
+      "name": "F",
+      "line": 101,
+      "signature": "- F -"
+    },
+    {
+      "name": "f",
+      "line": 118,
+      "signature": "- f -"
+    },
+    {
+      "name": "S",
+      "line": 123,
+      "signature": "- S -"
+    },
+    {
+      "name": "s",
+      "line": 140,
+      "signature": "- s -"
+    },
+    {
+      "name": "B",
+      "line": 145,
+      "signature": "- B -"
+    },
+    {
+      "name": "b",
+      "line": 163,
+      "signature": "- b -"
+    },
+    {
+      "name": "W",
+      "line": 168,
+      "signature": "- W -"
+    },
+    {
+      "name": "*",
+      "line": 172,
+      "signature": "- [string] * -"
+    },
+    {
+      "name": "u",
+      "line": 182,
+      "signature": "- u -"
+    },
+    {
+      "name": "U",
+      "line": 184,
+      "signature": "- U -"
+    },
+    {
+      "name": "q",
+      "line": 186,
+      "signature": "- q -"
+    },
+    {
+      "name": "Q",
+      "line": 190,
+      "signature": "- Q -"
+    },
+    {
+      "name": "*u",
+      "line": 194,
+      "signature": "- *u -"
+    },
+    {
+      "name": "*U",
+      "line": 198,
+      "signature": "- *U -"
+    },
+    {
+      "name": "D",
+      "line": 203,
+      "signature": "polarized D -"
+    },
+    {
+      "name": "*w",
+      "line": 205,
+      "signature": "- *w -"
+    },
+    {
+      "name": "*W",
+      "line": 207,
+      "signature": "- *W -"
+    },
+    {
+      "name": "`",
+      "line": 211,
+      "signature": "matrix llx lly urx ury string ` -"
+    },
+    {
+      "name": "~",
+      "line": 221,
+      "signature": "- ~ -"
+    },
+    {
+      "name": "O",
+      "line": 228,
+      "signature": "flag O -"
+    },
+    {
+      "name": "R",
+      "line": 234,
+      "signature": "flag R -"
+    },
+    {
+      "name": "g",
+      "line": 240,
+      "signature": "gray g -"
+    },
+    {
+      "name": "G",
+      "line": 269,
+      "signature": "gray G -"
+    },
+    {
+      "name": "k",
+      "line": 298,
+      "signature": "cyan magenta yellow black k -"
+    },
+    {
+      "name": "K",
+      "line": 327,
+      "signature": "cyan magenta yellow black K -"
+    },
+    {
+      "name": "x",
+      "line": 356,
+      "signature": "cyan magenta yellow black name gray x -"
+    },
+    {
+      "name": "X",
+      "line": 387,
+      "signature": "cyan magenta yellow black name gray X -"
+    },
+    {
+      "name": "A",
+      "line": 420,
+      "signature": "value A -"
+    }
+  ],
+  "families": {
+    "path_construction": [
+      "y",
+      "l",
+      "m",
+      "h",
+      "N",
+      "n"
+    ],
+    "path_painting": [
+      "F",
+      "f",
+      "S",
+      "s",
+      "B",
+      "b",
+      "W"
+    ],
+    "group_polarization": [
+      "u",
+      "U",
+      "q",
+      "Q",
+      "*u",
+      "*U",
+      "D",
+      "*w",
+      "*W"
+    ],
+    "placement_text": [
+      "`",
+      "~",
+      "*"
+    ],
+    "graphic_state": [
+      "d",
+      "i",
+      "j",
+      "J",
+      "M",
+      "w"
+    ],
+    "color": [
+      "O",
+      "R",
+      "g",
+      "G",
+      "k",
+      "K",
+      "x",
+      "X"
+    ],
+    "misc": [
+      "A"
+    ]
+  }
+}

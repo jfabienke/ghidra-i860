@@ -31,10 +31,12 @@
 }
 
 # bc.t target — branch if CC set, WITH delay slot
+# Manual states bc.t (not taken) annuls (skips) the delay slot.
+# If CC is 0 (not taken), we jump to the instruction after the delay slot.
 :bc.t br26target  is op6=0x1D & br26target  {
-    local cond:1 = (CC != 0);
+    if (CC == 0) goto [inst_next + 4];
     delayslot(1);
-    if (cond) goto br26target;
+    goto br26target;
 }
 
 # bnc target — branch if CC clear, NO delay slot
@@ -43,10 +45,12 @@
 }
 
 # bnc.t target — branch if CC clear, WITH delay slot
+# Manual states bnc.t (not taken) annuls (skips) the delay slot.
+# If CC is not 0 (not taken), we jump to the instruction after the delay slot.
 :bnc.t br26target  is op6=0x1F & br26target  {
-    local cond:1 = (CC == 0);
+    if (CC != 0) goto [inst_next + 4];
     delayslot(1);
-    if (cond) goto br26target;
+    goto br26target;
 }
 
 # ==================================================================

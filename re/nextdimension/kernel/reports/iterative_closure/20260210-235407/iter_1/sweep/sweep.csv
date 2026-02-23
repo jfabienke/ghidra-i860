@@ -1,0 +1,2 @@
+entry,trace_file,log_file,lines,executed,final_pc,status
+0xF8000348,/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260210-235407/iter_1/sweep/traces/trace_F8000348.jsonl,/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260210-235407/iter_1/sweep/logs/run_F8000348.log,0,64,0xF8000444,ok

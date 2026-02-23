@@ -1,0 +1,169 @@
+{
+  "schema_version": "shard-v1",
+  "factpack_source": "/tmp/factpack_breakthrough_top56_augtrace",
+  "function": {
+    "entry": "0xf8034a94",
+    "name": "FUN_f8034a94",
+    "size": 20,
+    "in_exec": true,
+    "in_allow": true,
+    "in_deny": false,
+    "confidence_source": "curated",
+    "has_unresolved_bri": false
+  },
+  "blocks": [
+    {
+      "func_entry": "0xf8034a94",
+      "block_start": "0xf8034a94",
+      "block_end": "0xf8034aa7",
+      "insn_count": 5
+    }
+  ],
+  "edges": [
+    {
+      "src": "0xf8034aa0",
+      "dst": "0xf8034aa4",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8034a9c",
+      "dst": "0xf8034aa0",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8034aa4",
+      "dst": "0xf8034aa8",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8034a94",
+      "dst": "0xf8034a98",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8034a98",
+      "dst": "0xf8034a9c",
+      "kind": "fallthrough",
+      "delay_slot": false
+    }
+  ],
+  "insns": [
+    {
+      "addr": "0xf8034a94",
+      "func_entry": "0xf8034a94",
+      "word": "0x81d020c1",
+      "mnemonic": "addu",
+      "operands": "addu r4,r14,r16",
+      "defs": [
+        "r16"
+      ],
+      "uses": [
+        "r4",
+        "r14"
+      ],
+      "pcode_ops": [
+        "INT_ADD"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8034a98",
+      "func_entry": "0xf8034a94",
+      "word": "0x44027fc1",
+      "mnemonic": "trap",
+      "operands": "trap r15,r0,r2",
+      "defs": [],
+      "uses": [
+        "0x0",
+        "r15"
+      ],
+      "pcode_ops": [
+        "CALLOTHER"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8034a9c",
+      "func_entry": "0xf8034a94",
+      "word": "0x01b08e85",
+      "mnemonic": "ld.b",
+      "operands": "ld.b r17(r13),r16",
+      "defs": [
+        "r16"
+      ],
+      "uses": [
+        "r17",
+        "r13"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD",
+        "INT_ZEXT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8034aa0",
+      "func_entry": "0xf8034a94",
+      "word": "0x83484c0e",
+      "mnemonic": "addu",
+      "operands": "addu r9,r26,r8",
+      "defs": [
+        "r8"
+      ],
+      "uses": [
+        "r9",
+        "r26"
+      ],
+      "pcode_ops": [
+        "INT_ADD"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8034aa4",
+      "func_entry": "0xf8034a94",
+      "word": "0x13d0d61b",
+      "mnemonic": "ld.l",
+      "operands": "ld.l r26(r30),r16",
+      "defs": [
+        "r16"
+      ],
+      "uses": [
+        "r26",
+        "r30"
+      ],
+      "pcode_ops": [
+        "INT_ADD",
+        "LOAD"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    }
+  ],
+  "refs": [],
+  "strings": [],
+  "dispatch_unresolved": [],
+  "callees": [],
+  "callers": [],
+  "context": {
+    "r15_cluster": false,
+    "mmio_accesses": [],
+    "nearby_deny_ranges": [],
+    "nearby_embedded_objects": [],
+    "priority_tags": []
+  }
+}

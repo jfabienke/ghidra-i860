@@ -1,0 +1,215 @@
+{
+  "schema_version": "shard-v1",
+  "factpack_source": "/tmp/factpack_breakthrough_top56_augtrace",
+  "function": {
+    "entry": "0xf8035e60",
+    "name": "FUN_f8035e60",
+    "size": 24,
+    "in_exec": true,
+    "in_allow": true,
+    "in_deny": false,
+    "confidence_source": "curated",
+    "has_unresolved_bri": false
+  },
+  "blocks": [
+    {
+      "func_entry": "0xf8035e60",
+      "block_start": "0xf8035e60",
+      "block_end": "0xf8035e6f",
+      "insn_count": 4
+    },
+    {
+      "func_entry": "0xf8035e60",
+      "block_start": "0xf8035e70",
+      "block_end": "0xf8035e73",
+      "insn_count": 1
+    }
+  ],
+  "edges": [
+    {
+      "src": "0xf8035e60",
+      "dst": "0xf8035e64",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8035e64",
+      "dst": "0xf8035e68",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8035e68",
+      "dst": "0xfe2c1130",
+      "kind": "branch_cond",
+      "delay_slot": true
+    },
+    {
+      "src": "0xf8035e68",
+      "dst": "0xf8035e70",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8035e6c",
+      "dst": "0xf8035e70",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8035e70",
+      "dst": "0xf80417e8",
+      "kind": "branch_cond",
+      "delay_slot": false
+    },
+    {
+      "src": "0xf8035e70",
+      "dst": "0xf8035e74",
+      "kind": "fallthrough",
+      "delay_slot": false
+    }
+  ],
+  "insns": [
+    {
+      "addr": "0xf8035e60",
+      "func_entry": "0xf8035e60",
+      "word": "0xb0c34a74",
+      "mnemonic": "d.shrd",
+      "operands": "d.shrd r9,r6,r3",
+      "defs": [
+        "r3"
+      ],
+      "uses": [
+        "0x20",
+        "r9",
+        "r6",
+        "r3",
+        "0x1f"
+      ],
+      "pcode_ops": [
+        "INT_ZEXT",
+        "INT_LEFT",
+        "INT_OR",
+        "INT_AND",
+        "INT_RIGHT",
+        "COPY"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8035e64",
+      "func_entry": "0xf8035e60",
+      "word": "0x0a356ec3",
+      "mnemonic": "ixfr",
+      "operands": "ixfr r13,f21",
+      "defs": [
+        "f21"
+      ],
+      "uses": [
+        "r13"
+      ],
+      "pcode_ops": [
+        "COPY"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8035e68",
+      "func_entry": "0xf8035e60",
+      "word": "0x758a2cb2",
+      "mnemonic": "bc.t",
+      "operands": "bc.t 0xfe2c1130",
+      "defs": [
+        "r12"
+      ],
+      "uses": [
+        "0x0",
+        "r12",
+        "CC",
+        "r21"
+      ],
+      "pcode_ops": [
+        "INT_NOTEQUAL",
+        "INT_SUB",
+        "CBRANCH"
+      ],
+      "flows": [
+        "0xfe2c1130"
+      ],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8035e6c",
+      "func_entry": "0xf8035e60",
+      "word": "0x8aac651f",
+      "mnemonic": "_subu",
+      "operands": "_subu r12,r21,r12",
+      "defs": [
+        "r12"
+      ],
+      "uses": [
+        "r12",
+        "r21"
+      ],
+      "pcode_ops": [
+        "INT_SUB"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xf8035e70",
+      "func_entry": "0xf8035e60",
+      "word": "0x52c5965d",
+      "mnemonic": "btne",
+      "operands": "btne r18,r22,0xf80417e8",
+      "defs": [],
+      "uses": [
+        "r18",
+        "r22"
+      ],
+      "pcode_ops": [
+        "INT_NOTEQUAL",
+        "CBRANCH"
+      ],
+      "flows": [
+        "0xf80417e8"
+      ],
+      "mmio_tag": null,
+      "string_ref": null
+    }
+  ],
+  "refs": [
+    {
+      "from": "0xf8035e68",
+      "to": "0xfe2c1130",
+      "type": "CONDITIONAL_JUMP",
+      "is_flow": true,
+      "is_primary": true
+    },
+    {
+      "from": "0xf8035e70",
+      "to": "0xf80417e8",
+      "type": "CONDITIONAL_JUMP",
+      "is_flow": true,
+      "is_primary": true
+    }
+  ],
+  "strings": [],
+  "dispatch_unresolved": [],
+  "callees": [],
+  "callers": [],
+  "context": {
+    "r15_cluster": false,
+    "mmio_accesses": [],
+    "nearby_deny_ranges": [],
+    "nearby_embedded_objects": [],
+    "priority_tags": []
+  }
+}

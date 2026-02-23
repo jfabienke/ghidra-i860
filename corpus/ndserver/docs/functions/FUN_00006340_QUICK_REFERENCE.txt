@@ -1,0 +1,274 @@
+================================================================================
+QUICK REFERENCE: FUN_00006340
+================================================================================
+
+FUNCTION METADATA
+─────────────────────────────────────────────────────────────────────────────
+Name:           FUN_00006340 (Hardware Access Callback Wrapper)
+Address:        0x00006340 (decimal: 25408)
+Size:           44 bytes (0x2c)
+Classification: Callback Wrapper - Hardware Access Pattern
+Complexity:     LOW
+Priority:       HIGH
+
+CALLING INFORMATION
+─────────────────────────────────────────────────────────────────────────────
+Called By:      FUN_00006856 @ 0x000068e0 (single caller)
+Calls:          ROM function @ 0x050022e8 (external)
+Hardware Reg:   0x040105b0 (read-only, conditional)
+Returns:        D0 (passthrough from ROM function)
+
+QUICK EXECUTION MODEL
+─────────────────────────────────────────────────────────────────────────────
+
+Input Parameters (from stack A6+offset):
+  A6+0x08 = arg0 (unused)
+  A6+0x0c = arg1 (output buffer pointer) ──► loaded to A2
+  A6+0x10 = arg2 (passed to ROM function)
+  A6+0x14 = arg3 (passed to ROM function)
+
+Execution Flow:
+  1. LINK.W A6,0x0           ► Setup frame (0 bytes)
+  2. MOVE.L A2,-(SP)         ► Save A2 (callee-save)
+  3. MOVEA.L (0xc,A6),A2     ► Load output buffer to A2
+  4. MOVE.L arg3,-(SP)       ► Push param3
+  5. MOVE.L arg2,-(SP)       ► Push param2
+  6. BSR.L 0x050022e8        ► Call ROM function
+  7. MOVEQ -0x1,D1           ► Load error value (-1)
+  8. CMP.L D0,D1             ► Compare result with -1
+  9. BNE.B 0x6364            ► If NOT -1, skip hardware copy
+  10. MOVE.L (0x040105b0),(A2) ► [CONDITIONAL] Copy hardware register
+  11. MOVEA.L (-4,A6),A2     ► Restore A2
+  12. UNLK A6                ► Deallocate frame
+  13. RTS                    ► Return
+
+Return Value:
+  D0 = result from ROM function 0x050022e8 (unchanged)
+    == -1: Error condition (hardware register copied to output)
+    != -1: Success condition (hardware register NOT copied)
+
+PSEUDO-CODE
+─────────────────────────────────────────────────────────────────────────────
+
+int32_t FUN_00006340(
+    void *arg0,              // A6+0x08 (unused)
+    void *output_buffer,     // A6+0x0c
+    int32_t param2,          // A6+0x10
+    int32_t param3           // A6+0x14
+) {
+    int32_t result = rom_function_050022e8(param2, param3);
+
+    if (result == -1) {
+        uint32_t *out = (uint32_t *)output_buffer;
+        *out = *(volatile uint32_t *)0x040105b0;  // Hardware register
+    }
+
+    return result;
+}
+
+KEY FINDINGS
+─────────────────────────────────────────────────────────────────────────────
+
+✓ HARDWARE ACCESS WRAPPER
+  - Delegates hardware operation to ROM function
+  - Conditionally copies hardware register on error
+  - Defensive programming pattern
+
+✓ ERROR RECOVERY PATTERN
+  - Unusual: copies register on FAILURE (D0 == -1), not success
+  - Suggests: error diagnostics or fallback mechanism
+  - Purpose: expose hardware state if operation fails
+
+✓ PART OF CALLBACK LIBRARY
+  - Similar functions at 0x6340, 0x636c, 0x6398, 0x63c0, 0x63e8
+  - All follow identical pattern with different ROM calls
+  - Suggests: templated wrapper framework
+
+✓ SINGLE CALLER: FUN_00006856
+  - Called after extensive validation
+  - Part of complex hardware initialization sequence
+  - Result propagated to output structure
+
+✓ HARDWARE REGISTER: 0x040105b0
+  - System data area (0x04XXXXXX range)
+  - Status/configuration/state register
+  - Read-only in this context
+  - Only accessed on ROM function failure
+
+INSTRUCTION BREAKDOWN
+─────────────────────────────────────────────────────────────────────────────
+
+Stack/Frame:      3 instructions (link, move A2, unlk)
+Parameters:       2 instructions (push arg3, arg2)
+ROM Call:         1 instruction (bsr.l)
+Error Checking:   2 instructions (moveq -1, cmp.l)
+Conditional Copy: 1 instruction (move.l hardware reg)
+Register Restore: 1 instruction (movea.l restore A2)
+Return:           1 instruction (rts)
+─────────────────────────────────────────────────────────────────────────────
+TOTAL:            11 instructions in 44 bytes
+
+TIMING ESTIMATE
+─────────────────────────────────────────────────────────────────────────────
+
+Setup/Teardown:      ~44 cycles
+Parameter Push:      ~24 cycles
+ROM Call:            ~18 cycles (+ ROM function time, likely 100+ cycles)
+Hardware Register:   ~12 cycles (conditional)
+─────────────────────────────────────────────────────────────────────────────
+TOTAL:               ~142+ cycles (dominated by ROM function)
+
+CONDITION CODE ANALYSIS
+─────────────────────────────────────────────────────────────────────────────
+
+Instruction: CMP.L D0, D1 (compare D0 with -1)
+Sets:        Z flag (zero if equal, clear if not equal)
+
+Branch:      BNE.B 0x6364 (branch if NOT EQUAL)
+Condition:   Takes branch if D0 != -1
+Effect:      Skips hardware register copy if ROM succeeded
+
+Inverted Logic: This is UNUSUAL
+  Typical:    Copy data on success
+  This:       Copy on failure
+  Reason:     Probably error recovery/diagnostics
+
+REGISTER USAGE
+─────────────────────────────────────────────────────────────────────────────
+
+A6:  Frame pointer (set by LINK.W, restored by UNLK)
+A2:  Output buffer pointer (saved/restored on stack)
+D0:  Return value from ROM function (passthrough)
+D1:  Temporary (-1 comparison value)
+SP:  Stack pointer (adjusted by LINK/UNLK)
+
+Preserved Registers:
+  D2-D7, A0-A1, A3-A5, A7 (unchanged)
+
+HARDWARE MEMORY ACCESS
+─────────────────────────────────────────────────────────────────────────────
+
+Read from 0x040105b0:
+  Type:       Hardware register (system data area)
+  Timing:     Only on error (D0 == -1)
+  Effect:     Copied to output buffer via A2 pointer
+  Purpose:    Hardware state snapshot for error handling
+
+No other hardware access in this function
+(ROM function may access hardware)
+
+RELATED FUNCTIONS
+─────────────────────────────────────────────────────────────────────────────
+
+Callback Wrapper Library (0x6340-0x6414):
+  ├─ FUN_00006340 ◄── THIS FUNCTION (44 bytes, ROM 0x050022e8)
+  ├─ FUN_0000636c (44 bytes, ROM 0x0500284c) [IDENTICAL PATTERN]
+  ├─ FUN_00006398 (40 bytes, ROM 0x0500324e) [SIMILAR PATTERN]
+  ├─ FUN_000063c0 (40 bytes, ROM 0x05002228) [SIMILAR PATTERN]
+  └─ FUN_000063e8 (44 bytes, ROM 0x0500222e) [IDENTICAL PATTERN]
+
+Caller:
+  └─ FUN_00006856 (204 bytes, @ 0x00006856)
+     Calls: FUN_00006340 (+ 4 other callback wrappers)
+
+ROM Functions Called:
+  └─ 0x050022e8 (called by this function)
+     Also called by: multiple other functions
+     Purpose: Hardware operation (unknown, needs analysis)
+
+ANALYSIS QUESTIONS FOR FURTHER INVESTIGATION
+─────────────────────────────────────────────────────────────────────────────
+
+Priority 1: What does ROM function 0x050022e8 do?
+  - What hardware operation does it perform?
+  - Why does it return -1 on failure?
+  - What do parameters param2, param3 control?
+
+Priority 2: What is hardware register 0x040105b0?
+  - Status? Configuration? Device state?
+  - Why copy only on error?
+  - What field meanings are in the register?
+
+Priority 3: Why is conditional copy inverted (on error, not success)?
+  - Error recovery mechanism?
+  - Fallback status reporting?
+  - Diagnostic information?
+
+Priority 4: What is FUN_00006856 doing in full context?
+  - Complete hardware initialization sequence?
+  - NeXTdimension board setup?
+  - Graphics system configuration?
+
+Priority 5: How does this fit into NeXTdimension architecture?
+  - Mailbox protocol?
+  - DMA operations?
+  - Video system initialization?
+
+SIMILAR PATTERNS IN CODEBASE
+─────────────────────────────────────────────────────────────────────────────
+
+Pattern: Hardware Access Callback Wrapper
+  - Found in: FUN_00006340, FUN_0000636c, FUN_00006398, etc.
+  - Characteristics:
+    1. Setup stack frame (small or zero)
+    2. Save callee-save registers
+    3. Load parameters to registers/stack
+    4. Call external ROM function
+    5. Check return value for error
+    6. Conditional operation based on result
+    7. Restore registers and return
+
+Classification: CALLBACK ADAPTER + ERROR HANDLER
+  - Adapts caller interface to ROM function interface
+  - Handles error conditions defensively
+  - Bridges high-level code to low-level hardware operations
+
+DOCUMENT REFERENCES
+─────────────────────────────────────────────────────────────────────────────
+
+Comprehensive Analysis:
+  /Users/jvindahl/Development/nextdimension/ndserver_re/docs/functions/
+  FUN_00006340_COMPREHENSIVE_ANALYSIS.md
+
+Annotated Disassembly:
+  /Users/jvindahl/Development/nextdimension/ndserver_re/disassembly/
+  FUN_00006340_ANNOTATED.asm
+
+Auto-Generated Docs:
+  /Users/jvindahl/Development/nextdimension/ndserver_re/docs/functions/
+  0x00006340_FUN_00006340.md
+
+Source Data:
+  /Users/jvindahl/Development/nextdimension/ndserver_re/ghidra_export/
+  disassembly_full.asm (lines 4109-4126)
+  functions.json (entry at index 487)
+  call_graph.json (entry with FUN_00006340)
+
+SUMMARY
+─────────────────────────────────────────────────────────────────────────────
+
+FUN_00006340 is a low-complexity hardware access callback wrapper that:
+
+1. Accepts 4 parameters from caller (output buffer + 3 data values)
+2. Delegates hardware operation to ROM function 0x050022e8
+3. Checks return value for error condition (-1)
+4. On ERROR: Copies hardware register 0x040105b0 to caller's output buffer
+5. On SUCCESS: Returns D0 without hardware copy
+6. Returns to caller with result in D0
+
+Part of a templated callback wrapper library used for safe, error-checked
+hardware access throughout the NDserver initialization and runtime code.
+
+Key insight: The inverted conditional (copy on error, not success) suggests
+error recovery or diagnostic purposes - providing hardware state information
+when the operation fails.
+
+Analysis Confidence: HIGH
+  - Clear pattern recognition
+  - Well-documented M68k conventions
+  - Consistent with sibling functions
+  - Coherent error handling model
+
+================================================================================
+END OF QUICK REFERENCE
+================================================================================

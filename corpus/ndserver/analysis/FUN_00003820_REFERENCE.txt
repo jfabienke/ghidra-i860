@@ -1,0 +1,240 @@
+================================================================================
+                    QUICK REFERENCE CARD - FUN_00003820
+================================================================================
+
+ADDRESS:        0x00003820 (14368 decimal)
+SIZE:           84 bytes (21 instructions)
+CATEGORY:       Callback - Table Lookup with Validation
+COMPLEXITY:     Low (Cyclomatic: 4)
+PRIORITY:       HIGH
+
+================================================================================
+                          FUNCTION SIGNATURE
+================================================================================
+
+void FUN_00003820(int param1, int* param2)
+  // Stack params also used: (0x8,A6) = validation parameter
+
+INPUT:
+  D0 / 0xC(A6):  Input value (must be < 8 and even)
+  A1 / 0x10(A6): Pointer to output location (32-bit)
+  Stack:         0x8(A6) = secondary validation parameter
+
+OUTPUT:
+  D0: Status code
+  *A1: Output data (on success) or 0 (on error)
+
+================================================================================
+                           ERROR CODES
+================================================================================
+
+D0 = 0x0    SUCCESS: Match found and data copied to *A1
+D0 = 0x4    ERROR: Invalid input (>= 8 or odd)
+D0 = 0x8    ERROR: Entry mismatch (comparison failed)
+D0 = 0xc    ERROR: Table entry NULL (no data available)
+
+================================================================================
+                         CONTROL FLOW
+================================================================================
+
+Entry (0x3820)
+    │
+    ├─ Load parameters (D0, A1)
+    │
+    ├─ Bounds check: D0 < 8 ?
+    │   ├─ NO  → Return 0x4
+    │   └─ YES → Continue
+    │
+    ├─ Even check: D0 & 1 == 0 ?
+    │   ├─ NO  → Return 0x4
+    │   └─ YES → Continue
+    │
+    ├─ Compute index: (D0 >> 1) - 1
+    │
+    ├─ Load table[index] from 0x81a0
+    │
+    ├─ Is entry NULL ?
+    │   ├─ YES → Return 0xc
+    │   └─ NO  → Continue
+    │
+    ├─ Load entry data from pointer
+    │
+    ├─ Compare: entry[0] == stack_param ?
+    │   ├─ NO  → Return 0x8
+    │   └─ YES → Continue
+    │
+    ├─ Copy entry[4] to *A1
+    │
+    └─ Return 0x0 (success)
+
+================================================================================
+                       DATA STRUCTURES
+================================================================================
+
+Table @ 0x81a0:
+  [0]  → pointer to entry 0 (or NULL)
+  [1]  → pointer to entry 1 (or NULL)
+  [2]  → pointer to entry 2 (or NULL)
+  [3]  → pointer to entry 3 (or NULL)
+
+Entry Structure (pointed to by table[n]):
+  Offset 0x0:  32-bit comparison key (validated against 0x8(A6))
+  Offset 0x4:  32-bit output data (copied to *A1 on success)
+
+Valid Indices:
+  Input 2 → Index 0
+  Input 4 → Index 1
+  Input 6 → Index 2
+
+================================================================================
+                      REGISTER USAGE
+================================================================================
+
+D0: PRIMARY - Input parameter → Index → Return code
+D1: SCRATCH - Bounds constant (0x8), loaded values
+A0: SCRATCH - Table base pointer, entry pointer
+A1: OUTPUT  - Output parameter pointer
+
+A6: FRAME - Frame pointer (link/unlk)
+SP: STACK - Stack pointer (implicit)
+
+================================================================================
+                        CALLER INFO
+================================================================================
+
+Called from:
+  • 0x00002f2a (FUN_00002dc6 context)
+  • 0x000032c6 (FUN_00003284 context)
+
+Call pattern:
+  bsr.l 0x00003820  ; Branch to subroutine long
+
+Calling convention:
+  • Parameters: D0, A1, and stack
+  • Return: D0 (error code)
+  • Leaf function (no outbound calls)
+
+================================================================================
+                      STACK FRAME
+================================================================================
+
+Frame size: 0 bytes (no local variables)
+
+  0xC(A6)  ← Input value parameter
+  0x8(A6)  ← Validation parameter
+  0x4(A6)  ← Return address
+  0x0(A6)  ← Old A6
+
+================================================================================
+                     POTENTIAL ISSUES
+================================================================================
+
+1. UNSAFE POINTER DEREFERENCE:
+   - Entry pointers dereferenced without NULL check
+   - Could crash if table corrupted
+
+2. HARD-CODED ADDRESS:
+   - Table address 0x81a0 is fixed
+   - Limits binary portability
+
+3. POSSIBLE LOGIC ERROR:
+   - Odd/even check at 0x3832-0x3836 may be reversed
+   - btst checks bit 0, beq branches if bit clear (even)
+   - Need to verify intended behavior
+
+4. NO BOUNDS CHECKING:
+   - Table access assumes valid index
+   - If index > 3, potential array out-of-bounds
+
+5. OUTPUT POINTER VALIDATION:
+   - No validation of A1 pointer
+   - Could write to arbitrary memory
+
+================================================================================
+                        TEST CASES
+================================================================================
+
+Input 0:
+  • Check: 0 < 8 ✓
+  • Check: 0 & 1 = 0 ✓ (even)
+  • Index: (0 >> 1) - 1 = -1 ✗ (NEGATIVE)
+  • Expected: May fail or wrap
+
+Input 2:
+  • Check: 2 < 8 ✓
+  • Check: 2 & 1 = 0 ✓ (even)
+  • Index: (2 >> 1) - 1 = 0 ✓
+  • Lookup: table[0]
+  • Expected: SUCCESS or ERROR_MISMATCH
+
+Input 4:
+  • Check: 4 < 8 ✓
+  • Check: 4 & 1 = 0 ✓ (even)
+  • Index: (4 >> 1) - 1 = 1 ✓
+  • Lookup: table[1]
+  • Expected: SUCCESS or ERROR_MISMATCH
+
+Input 6:
+  • Check: 6 < 8 ✓
+  • Check: 6 & 1 = 0 ✓ (even)
+  • Index: (6 >> 1) - 1 = 2 ✓
+  • Lookup: table[2]
+  • Expected: SUCCESS or ERROR_MISMATCH
+
+Input 7:
+  • Check: 7 < 8 ✓
+  • Check: 7 & 1 = 1 ✗ (odd)
+  • Expected: RETURN 0x4 (invalid)
+
+Input 8:
+  • Check: 8 < 8 ✗
+  • Expected: RETURN 0x4 (invalid)
+
+Input 10:
+  • Check: 10 < 8 ✗
+  • Expected: RETURN 0x4 (invalid)
+
+================================================================================
+                       FILE LOCATIONS
+================================================================================
+
+Full Analysis:      /Users/jvindahl/Development/nextdimension/ndserver_re/
+                    analysis/FUN_00003820_ANALYSIS.md
+
+Assembly File:      /Users/jvindahl/Development/nextdimension/ndserver_re/
+                    analysis/FUN_00003820.asm
+
+Reference Card:     /Users/jvindahl/Development/nextdimension/ndserver_re/
+                    analysis/FUN_00003820_REFERENCE.txt
+
+Source Exports:     /Users/jvindahl/Development/nextdimension/ndserver_re/
+                    ghidra_export/
+
+================================================================================
+                        SUMMARY
+================================================================================
+
+FUN_00003820 is a CALLBACK FUNCTION that performs TABLE LOOKUP with
+VALIDATION. It efficiently searches a fixed-size array for matching entries
+and returns associated data.
+
+STRENGTHS:
+  ✓ Minimal register usage
+  ✓ Early exit paths for common errors
+  ✓ Compact implementation (84 bytes)
+  ✓ Direct address computation
+
+WEAKNESSES:
+  ✗ Unsafe pointer dereference
+  ✗ Hard-coded table address
+  ✗ No bounds checking
+  ✗ Possible logic error in odd/even check
+  ✗ No validation of output pointer
+
+COMPLEXITY RATING:    Low (4 decision points)
+PRIORITY ASSESSMENT:  HIGH (core lookup function)
+SECURITY RISK:        MEDIUM (pointer dereference)
+
+RECOMMENDATION: Audit before use on safety-critical systems.
+
+================================================================================

@@ -1,0 +1,80 @@
+Analyze the following function and return a structured JSON intent dossier.
+
+FUNCTION: FUN_f800c8bc at 0xf800c8bc
+SIZE: 72 bytes (18 instructions)
+CONFIDENCE SOURCE: curated
+HAS UNRESOLVED BRI: False
+PRIORITY TAGS: mmio_access
+
+CALLERS (0): (none)
+CALLEES (0): (none)
+
+BLOCKS (2):
+  0xf800c8bc..0xf800c8fb (16 insns)
+  0xf800c8fc..0xf800c903 (2 insns)
+
+INSTRUCTIONS:
+  0xf800c8bc: ixfr r8,f24                              defs=[f24] uses=[r8] pcode=[COPY]
+  0xf800c8c0: st.b r8,0x401c(r8)                       defs=[] uses=[r8,0x401c] pcode=[INT_ADD,STORE] [MMIO:mmio_offset_0x401c]
+  0xf800c8c4: ixfr r8,f0                               defs=[] uses=[] pcode=[]
+  0xf800c8c8: ld.b r8(r9),r0                           defs=[r0_sink] uses=[r8,r9] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800c8cc: ld.b r2(r0),r0                           defs=[r0_sink] uses=[0x0,r2] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800c8d0: ld.b r4(r0),r0                           defs=[r0_sink] uses=[r4,0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800c8d4: ld.b 0x5016(r8),r0                       defs=[r0_sink] uses=[r8,0x5016] pcode=[INT_SEXT,INT_ADD,LOAD,INT_ZEXT]
+  0xf800c8d8: ld.b r10(r24),r0                         defs=[r0_sink] uses=[r24,r10] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800c8dc: xorh 0x31c6,r24,r0                       defs=[r0_sink] uses=[0x10,r24,0x31c6] pcode=[INT_ZEXT,INT_LEFT,INT_XOR]
+  0xf800c8e0: ld.b r0(r14),r0                          defs=[r0_sink] uses=[0x0,r14] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800c8e4: ld.b r4(r24),r8                          defs=[r8] uses=[r4,r24] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800c8e8: xorh 0x13ec,r31,r31                      defs=[r31] uses=[0x10,0x13ec,r31] pcode=[INT_ZEXT,INT_LEFT,INT_XOR]
+  0xf800c8ec: ld.b 0x68(r0),r0                         defs=[r0_sink] uses=[0x0,0x68] pcode=[INT_SEXT,INT_ADD,LOAD,INT_ZEXT]
+  0xf800c8f0: andnot r14,r7,r30                        defs=[r30] uses=[r14,r7] pcode=[INT_NEGATE,INT_AND]
+  0xf800c8f4: bc.t 0xf370c6b0                          defs=[] uses=[0x0,r8,CC,0x16,r10] pcode=[INT_NOTEQUAL,INT_ADD,STORE,CBRANCH]
+  0xf800c8f8: _st.b r10,0x16(r8)                       defs=[] uses=[r8,0x16,r10] pcode=[INT_ADD,STORE]
+  0xf800c8fc: andh 0x1394,r31,r30                      defs=[r30] uses=[0x10,0x1394,r31] pcode=[INT_ZEXT,INT_LEFT,INT_AND]
+  0xf800c900: st.s r16,-0x3fe4(r12)                    defs=[] uses=[r12,r16,0xffffc01c] pcode=[INT_ADD,STORE] [MMIO:mmio_high_space]
+
+REFERENCES:
+  0xf800c8f4 -> 0xf370c6b0 [CONDITIONAL_JUMP] flow=True
+
+STRINGS IN RANGE:
+  (none)
+
+DISPATCH UNRESOLVED:
+  (none)
+
+CONTEXT:
+- R15 cluster (GState flags): False
+- MMIO accesses: 0xf800c8c0=mmio_offset_0x401c, 0xf800c900=mmio_high_space
+- Nearby deny ranges: (none)
+- Nearby embedded objects: (none)
+
+Return ONLY valid JSON matching this schema:
+{
+  "function_id": "0xf800c8bc",
+  "function_name": "FUN_f800c8bc",
+  "primary_intent": "<one-line purpose statement>",
+  "intent_category": "<one of: initialization, dispatch, parser, raster, mmio_driver, math_kernel, utility, synchronization, error_handler, unknown>",
+  "evidence": [
+    {"addr": "0x...", "fact": "<what this instruction/pattern proves>"}
+  ],
+  "register_protocol": {
+    "inputs": ["<rN = description>"],
+    "outputs": ["<rN = description>"],
+    "side_effects": ["<memory write / MMIO / control reg change>"]
+  },
+  "data_accesses": [
+    {"addr": "0x...", "target": "0x...", "kind": "read|write|mmio", "interpretation": "..."}
+  ],
+  "control_flow_summary": "<how the function flows: linear, loop, conditional tree, dispatch, etc.>",
+  "confidence": <0-100>,
+  "confidence_factors": {
+    "supporting": ["<what raises confidence>"],
+    "limiting": ["<what caps confidence>"]
+  },
+  "alternatives": [
+    {"intent": "<alternative purpose>", "why_not_primary": "<evidence against>"}
+  ],
+  "open_questions": ["<what remains unknown>"],
+  "required_next_evidence": ["<what would resolve open questions>"],
+  "subsystem_hint": "<suggested subsystem: postscript_dispatch, pixel_pipeline, memory_management, board_init, interrupt_handling, unknown>"
+}

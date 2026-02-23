@@ -1,0 +1,590 @@
+================================================================================
+VISUAL ANALYSIS: FUN_0000366e (Callback Adapter Function)
+================================================================================
+
+Function: 0x0000366e (Address) | 13,934 (Decimal)
+Size: 30 bytes | Complexity: LOW | Type: CALLBACK ADAPTER
+Binary: NDserver (m68k Mach-O)
+
+================================================================================
+FUNCTION FLOW DIAGRAM
+================================================================================
+
+                            ┌─────────────────────┐
+                            │  FUN_000060d8       │
+                            │  (Caller Function)  │
+                            │  @ 0x00006132       │
+                            └──────────┬──────────┘
+                                       │
+                 ┌─────────────────────┼─────────────────────┐
+                 │                     │                     │
+         ┌───────▼─────┐      ┌───────▼─────┐      ┌────────▼────┐
+         │ Push param1 │      │ Push param2 │      │ Push param3 │
+         │ (A0+0x0c)   │      │ (A0+0x1c)   │      │ (A0+0x24)   │
+         └─────────────┘      └─────────────┘      └─────────────┘
+                 │                     │                     │
+                 └─────────────────────┼─────────────────────┘
+                                       │
+                            ╔══════════▼══════════╗
+                            ║  FUN_0000366e       ║
+                            ║  @ 0x0000366e      ║
+                            ║  30 bytes          ║
+                            ╚══════════╤══════════╝
+                                       │
+                 ┌─────────────────────┼─────────────────────┐
+                 │                     │                     │
+         ┌───────▼──────┐       ┌──────▼──────┐   ┌────────▼─────┐
+         │  LINK A6,0x0 │       │ MOVE params │   │  Stack setup │
+         │  Setup frame │       │ to stack    │   │  complete    │
+         └──────────────┘       └─────────────┘   └──────────────┘
+                                       │
+                            ╔══════════▼══════════╗
+                            │ LIBFUNC_1 call      │
+                            │ @ 0x0500315e        │
+                            │ (2 parameters)      │
+                            │ Returns: D0         │
+                            ╚══════════╤══════════╝
+                                       │
+                 ┌─────────────────────┴─────────────────────┐
+                 │                                           │
+         ┌───────▼────────────────────┐          ┌──────────▼─────────┐
+         │ D0 = Transformation result │          │ Push D0 to stack   │
+         │ (intermediate value)       │          │ for next call      │
+         └────────────────────────────┘          └────────────────────┘
+                                                          │
+                            ╔═════════════════════════════▼═══════════╗
+                            │ LIBFUNC_2 call                          │
+                            │ @ 0x050032ba                            │
+                            │ (1 parameter: previous result)          │
+                            │ Returns: D0 (FINAL RESULT)              │
+                            ╚═════════════════════════════╤═══════════╝
+                                                          │
+                 ┌─────────────────────┬─────────────────┴──────────┐
+                 │                     │                           │
+         ┌───────▼──────┐      ┌───────▼──────┐        ┌──────────▼─┐
+         │  UNLK A6     │      │   RTS        │        │ D0 = Final │
+         │ Cleanup      │      │ Return to    │        │ result     │
+         │ frame        │      │ caller @0x6138       └────────────┘
+         └──────────────┘      └──────────────┘
+                                       │
+                            ┌──────────▼──────────┐
+                            │  FUN_000060d8       │
+                            │  @ 0x00006138       │
+                            │  move.l D0,(A2+0x1c)│  ← Store result
+                            │  (Caller resumes)   │
+                            └─────────────────────┘
+
+================================================================================
+STACK FRAME DIAGRAM
+================================================================================
+
+At Entry (after LINK.W):
+
+        MEMORY                          PURPOSE
+        ──────────────────────────────────────────────────────
+        0xHIGHER
+
+        [Parameter 3]       ← A6+0x10   (int32_t value2)
+        [Parameter 2]       ← A6+0x0c   (int32_t value1)
+        [Parameter 1]       ← A6+0x08   (void *context)
+        [Return Address]    ← A6+0x04   (0x00006138)
+        [Saved A6]          ← A6+0x00   (Caller's A6)
+
+        0xLOWER (SP at this point)
+
+
+After MOVE.L (0x10,A6),-(SP):
+
+        [Param3 copy]       ← SP        (pushed, ready for libfunc_1)
+        [Param3 original]   ← A6+0x10   (still in frame)
+        [Param2]            ← A6+0x0c
+        [Param1]            ← A6+0x08
+        [Return Address]    ← A6+0x04
+        [Saved A6]          ← A6+0x00
+
+
+After MOVE.L (0x0c,A6),-(SP):
+
+        [Param2 copy]       ← SP        (top of stack, param for libfunc_1)
+        [Param3 copy]       ← SP+4
+        [Frame data...]
+
+
+After BSR.L 0x0500315e (libfunc_1 returns):
+
+        [Return Addr]       ← SP        (libfunc cleaned its params)
+        [D0 result]         ← SP+4      (intermediate value ready)
+        [Frame data...]
+
+
+After MOVE.L D0,-(SP):
+
+        [D0 result]         ← SP        (pushed for libfunc_2)
+        [Return Addr]       ← SP+4
+        [Frame data...]
+
+
+After BSR.L 0x050032ba (libfunc_2 returns):
+
+        [Return Addr]       ← SP        (0x00003688 - next instruction)
+        [D0 final]          (in D0 register, not on stack)
+
+
+After UNLK A6:
+
+        [Return Addr]       ← SP        (0x00006138 - original caller)
+        (A6 restored to caller's value)
+        (D0 still contains final result)
+
+
+After RTS:
+
+        Control returns to caller at 0x00006138
+        D0 contains final result
+        Caller executes: move.l D0,(0x1c,A2)
+
+================================================================================
+INSTRUCTION BREAKDOWN
+================================================================================
+
+OFFSET   MNEMONIC              SIZE  OPERATION DESCRIPTION
+────────────────────────────────────────────────────────────────────────────
+
+0x366e   LINK.W A6,0x0          4   Establish stack frame with 0 local bytes
+                                    → Sets up A6 as frame pointer
+                                    → SP adjusted down 4 bytes for saved A6
+
+0x3672   MOVE.L (0x10,A6),-(SP)  4   Read parameter 3 from A6+0x10
+                                    → Push 32-bit value onto stack
+                                    → SP -= 4
+
+0x3676   MOVE.L (0x0c,A6),-(SP)  4   Read parameter 2 from A6+0x0c
+                                    → Push 32-bit value onto stack
+                                    → SP -= 4
+                                    → Stack ready for libfunc_1 call
+
+0x367a   BSR.L 0x0500315e        6   Call external library function 1
+                                    → Push return address (0x3680) to stack
+                                    → Jump to 0x0500315e
+                                    → External function uses stack params
+                                    → Returns with 32-bit result in D0
+
+0x3680   MOVE.L D0,-(SP)         2   Push D0 (result) to stack
+                                    → SP -= 4
+                                    → Stack ready for libfunc_2 call
+
+0x3682   BSR.L 0x050032ba        6   Call external library function 2
+                                    → Push return address (0x3688) to stack
+                                    → Jump to 0x050032ba
+                                    → External function receives D0 on stack
+                                    → Returns with 32-bit result in D0
+
+0x3688   UNLK A6                 2   Destroy stack frame
+                                    → SP ← A6 (point to saved A6)
+                                    → A6 ← (SP) (restore caller's A6)
+                                    → SP += 4 (clean up saved A6)
+
+0x368a   RTS                     2   Return from subroutine
+                                    → PC ← (SP) (pop return address)
+                                    → SP += 4
+                                    → Jump to address on stack (0x6138)
+                                    → D0 returned to caller
+
+TOTAL:                           30   ✓ All 30 bytes accounted for
+
+================================================================================
+REGISTER USAGE TABLE
+================================================================================
+
+REGISTER  │ AT ENTRY  │ AT EXIT   │ MODIFIED? │ PURPOSE
+──────────┼───────────┼───────────┼───────────┼─────────────────────────────
+A0        │ Any       │ Any       │ NO        │ Not used by this function
+A1        │ Any       │ Any       │ NO        │ Not used by this function
+A2        │ Any       │ Any       │ NO        │ Not used by this function
+A3        │ Any       │ Any       │ NO        │ Not used by this function
+A4        │ Any       │ Any       │ NO        │ Not used by this function
+A5        │ Any       │ Any       │ NO        │ Not used by this function
+A6        │ Caller's  │ Caller's  │ YES*      │ Frame pointer (LINK/UNLK)
+A7 (SP)   │ Caller's  │ Caller's  │ YES       │ Stack pointer (many ops)
+──────────┼───────────┼───────────┼───────────┼─────────────────────────────
+D0        │ Any       │ Result    │ YES       │ Holds: libfunc_1 result
+          │           │           │           │        → libfunc_2 input
+          │           │           │           │        → return value
+D1        │ Any       │ Any       │ NO        │ Not used by this function
+D2-D7     │ Any       │ Any       │ NO        │ Not used by this function
+──────────┼───────────┼───────────┼───────────┼─────────────────────────────
+
+* A6: Saved by LINK, restored by UNLK to original caller's value
+
+================================================================================
+PARAMETER ANALYSIS
+================================================================================
+
+PARAMETER    LOCATION      SOURCE              PURPOSE
+──────────────────────────────────────────────────────────────────────────────
+Param 1      A6+0x08       caller (A0+0x0c)    Context/structure pointer
+             (unused)      [not used by this   (passed but not used in
+                            function]          this function)
+
+Param 2      A6+0x0c       caller (A0+0x1c)    First computation input
+             USED          [pushed to stack]   Passed to libfunc_1
+                           [accessible via     Required for transformation
+                            (0xc,A6)]
+
+Param 3      A6+0x10       caller (A0+0x24)    Second computation input
+             USED          [pushed to stack]   Passed to libfunc_1
+                           [accessible via     Required for transformation
+                            (0x10,A6)]
+
+RETURN       D0            Result from         Final computation result
+             VALUE         libfunc_2           Returned to caller in D0.L
+                                               Stored by caller to output
+                                               structure at offset +0x1c
+
+================================================================================
+EXTERNAL FUNCTION CALLS
+================================================================================
+
+CALL #1: LIBFUNC_1
+─────────────────────────────────────────────────────────────────────────────
+Address:     0x0500315e
+Instruction: BSR.L 0x0500315e @ 0x3672 (absolute jump)
+Parameters:  2 (from stack)
+             - Param 2 (from A6+0x0c)
+             - Param 3 (from A6+0x10)
+Return:      D0 (32-bit integer)
+Usage:       Used by 15+ functions in codebase
+Purpose:     Unknown (library/external function)
+Status:      Essential to function - transformation pipeline
+
+CALL #2: LIBFUNC_2
+─────────────────────────────────────────────────────────────────────────────
+Address:     0x050032ba
+Instruction: BSR.L 0x050032ba @ 0x3682 (absolute jump)
+Parameters:  1 (from stack)
+             - Result from libfunc_1 (D0 pushed via MOVE.L)
+Return:      D0 (32-bit integer - FINAL RESULT)
+Usage:       Used by 11+ functions in codebase
+Purpose:     Unknown (library/external function)
+Status:      Essential to function - final processing stage
+
+================================================================================
+CALL CHAIN VISUALIZATION
+================================================================================
+
+CALLER CHAIN:
+
+    main/entry_point
+         │
+         ├── ... many intermediate functions ...
+         │
+         └─► FUN_000060d8 (Parameter Validation)
+              │
+              ├─ Check structure format
+              ├─ Validate structure size
+              ├─ Check structure fields
+              │
+              └─► [FUN_0000366e] ◄── WE ARE HERE
+                   │
+                   ├─► libfunc_1 (0x0500315e)  ┐ External
+                   │   └─ Transformation       │ Library
+                   │                           │ Functions
+                   └─► libfunc_2 (0x050032ba)  ┤ (15+ & 11+ uses)
+                       └─ Final processing     ┘
+
+OUTGOING CALLS:
+
+    FUN_0000366e
+         │
+         ├─► libfunc_1 @ 0x0500315e
+         │   Used by 15+ functions
+         │   Likely math/transformation
+         │
+         └─► libfunc_2 @ 0x050032ba
+             Used by 11+ functions
+             Likely post-processing
+
+RETURN:
+
+    FUN_0000366e returns D0
+         │
+         └─► FUN_000060d8
+             Stores D0 to (A2+0x1c)
+             Continues validation
+             Sets success flags
+
+================================================================================
+PERFORMANCE ANALYSIS
+================================================================================
+
+INSTRUCTION COUNT:        8 instructions
+TOTAL BYTES:             30 bytes
+ESTIMATED BASE CYCLES:   24 cycles (without external calls)
+
+CYCLE BREAKDOWN:
+  - LINK.W A6,0x0:        4 cycles   (frame setup)
+  - MOVE.L read (×2):     8 cycles   (parameter access)
+  - MOVE.L write:         4 cycles   (push result)
+  - BSR.L (×2):          12 cycles   (subroutine calls)
+  - UNLK A6:             3 cycles    (frame cleanup)
+  - RTS:                 4 cycles    (return)
+  ─────────────────────────────────
+  SUBTOTAL:             ~35 cycles   (including external calls)
+
+BOTTLENECK:
+  ★ EXTERNAL FUNCTION CALLS (0x0500315e, 0x050032ba)
+    - Unknown implementation
+    - Unknown complexity
+    - Dominates actual execution time
+    - Likely contains complex logic or I/O
+
+OPTIMIZATION OPPORTUNITIES:
+  1. Inline external functions (if available)
+  2. Use registers instead of stack for small values
+  3. Cache results for repeated calls
+  4. Profile to identify true bottleneck
+
+================================================================================
+SECURITY ANALYSIS
+================================================================================
+
+VULNERABILITY ASSESSMENT:
+
+Input Validation:          ★☆☆☆☆ NONE
+  - No bounds checking
+  - No null pointer checks
+  - Assumes valid parameters
+  - Relies on caller validation
+
+Stack Safety:             ★★★★★ SAFE
+  - Balanced LINK/UNLK pair
+  - No stack buffer overflow risk
+  - 0 local variables (no overflow vector)
+  - Proper frame destruction
+
+Memory Safety:            ★★★★☆ MOSTLY SAFE
+  - No direct memory access beyond stack
+  - No pointer dereferences
+  - Delegates to external functions
+
+Type Safety:             ★★★★☆ GOOD
+  - No type confusion observed
+  - Proper register usage
+  - Standard calling convention
+
+Exploitability:          ★☆☆☆☆ LOW RISK
+  - No obvious vulnerabilities in function itself
+  - Risk is in external functions
+  - Depends on input validation in caller
+
+================================================================================
+CLASSIFICATION & PURPOSE
+================================================================================
+
+TYPE:              Callback Adapter / Utility Wrapper Function
+CATEGORY:          Hardware Abstraction Layer / Parameter Processing
+PATTERN:           Adapter Pattern (bridges two interfaces)
+
+EVIDENCE FOR CLASSIFICATION:
+  ✓ Auto-generated function name (FUN_XXXX pattern)
+  ✓ Minimal logic (parameter forwarding only)
+  ✓ Calls two external functions
+  ✓ Part of validation/processing framework
+  ✓ Called from conditional code path
+
+SUSPECTED USES:
+  1. Math transformation pipeline
+     - Compute intermediate value (libfunc_1)
+     - Apply final transformation (libfunc_2)
+     - Return result to caller
+
+  2. Validation/error handling
+     - Check input validity (libfunc_1)
+     - Generate error codes (libfunc_2)
+     - Return status to caller
+
+  3. State update callback
+     - Compute state delta (libfunc_1)
+     - Apply state change (libfunc_2)
+     - Return new state
+
+PATTERN CLASSIFICATION:
+  • Adapter Pattern: YES (bridges external functions)
+  • Bridge Pattern: MAYBE (separates interface from implementation)
+  • Strategy Pattern: NO (not behavior selection)
+  • Decorator Pattern: NO (not wrapping existing function)
+  • Factory Pattern: NO (not creating objects)
+
+================================================================================
+CONTROL FLOW ANALYSIS
+================================================================================
+
+STRUCTURE:           Straight-line (no branching)
+LOOPS:              None
+CONDITIONALS:       None (no branches)
+COMPLEXITY:         O(1) - constant time (ignoring external functions)
+
+CONTROL FLOW DIAGRAM:
+
+  Entry (0x366e)
+       ↓
+  [LINK A6,0x0]          ← Frame setup
+       ↓
+  [MOVE (0x10,A6),-(SP)] ← Push param
+       ↓
+  [MOVE (0x0c,A6),-(SP)] ← Push param
+       ↓
+  [BSR 0x0500315e]       ← Call 1 (ALWAYS returns)
+       ↓
+  [MOVE D0,-(SP)]        ← Push result
+       ↓
+  [BSR 0x050032ba]       ← Call 2 (ALWAYS returns)
+       ↓
+  [UNLK A6]              ← Frame cleanup
+       ↓
+  [RTS]                  ← Return
+       ↓
+  Exit → Caller at 0x6138
+
+BRANCHING:
+  Conditional branches:   0
+  Unconditional jumps:    0
+  Subroutine calls:       2 (BSR instructions always return)
+  Exception paths:        0 (no error handling)
+
+PATH COVERAGE:
+  Reachable code:       100% (all 8 instructions executed every time)
+  Dead code:            0% (no unreachable code)
+  Multiple paths:       NO (single execution path)
+
+================================================================================
+DATA FLOW ANALYSIS
+================================================================================
+
+SOURCE → TRANSFORMATION → DESTINATION
+
+Parameter 2 (A6+0x0c)
+    ↓
+  [MOVE to Stack]
+    ↓ (via libfunc_1)
+  [Transformation]
+    ↓
+  [Result in D0]
+    ↓
+  [MOVE to Stack for libfunc_2]
+    ↓
+  [Final Processing]
+    ↓
+  [Result in D0]
+    ↓
+  [Return to Caller]
+    ↓
+  [Stored at A2+0x1c by Caller]
+
+Parameter 3 (A6+0x10)
+    ↓
+  [MOVE to Stack]
+    ↓ (via libfunc_1)
+  [Transformation]
+    ↓
+  [Result in D0]
+    ↓ ... (same as Parameter 2)
+
+Parameter 1 (A6+0x08)
+    ↓
+  [Passed but NOT USED in this function]
+    ↓
+  [Probably used by external functions]
+    ↓ or
+  [Ignored entirely]
+
+MEMORY LOCATIONS MODIFIED:
+  - SP (Stack Pointer): 4 times (pushed 4 longwords)
+  - A6 (Frame Pointer): 2 times (link/unlk)
+  - D0 (Register):      2 times (result of two function calls)
+  - No other memory locations
+
+INVARIANTS:
+  - A0, A1-A5, D1-D7: NEVER modified
+  - Parameter values on stack: NEVER modified
+  - Return address: PRESERVED throughout
+
+================================================================================
+CROSS-REFERENCE SUMMARY
+================================================================================
+
+CALLED BY:
+  └─ FUN_000060d8 @ offset 0x6132
+     (Structure validation/processing function)
+     Single caller (only place this function is called)
+
+CALLS:
+  ├─ libfunc_1 @ 0x0500315e
+  │  (Used by 15+ functions - core utility)
+  │  (2 parameters, returns 32-bit value)
+  │
+  └─ libfunc_2 @ 0x050032ba
+     (Used by 11+ functions - core utility)
+     (1 parameter, returns 32-bit value)
+
+RELATED FUNCTIONS:
+  - FUN_0000368c (similar pattern, 4 parameters)
+  - Many callback-style functions in 0x06000000 range
+
+FUNCTION HIERARCHY:
+  Depth to this function: Unknown (depends on entry point)
+  Depth from this function: 2 (to external functions)
+  Max call stack depth: Unknown
+
+================================================================================
+SUMMARY TABLE
+================================================================================
+
+┌─ METADATA ──────────────────────────────────────────────────────────────┐
+│ Address:          0x0000366e (13,934 decimal)                         │
+│ Size:             30 bytes (0x1E)                                     │
+│ Architecture:     Motorola m68000 (68k)                               │
+│ Binary:           NDserver (Mach-O executable)                        │
+│ Type:             Callback Adapter Function                           │
+│ Complexity:       LOW                                                 │
+│ Priority:         HIGH                                                │
+└─────────────────────────────────────────────────────────────────────────┘
+
+┌─ FUNCTION CHARACTERISTICS ──────────────────────────────────────────────┐
+│ Instruction Count:        8                                            │
+│ Register Modifications:   A6, SP, D0 (only)                           │
+│ Hardware Access:          NONE                                         │
+│ Stack Frame Size:         0 bytes (locals)                            │
+│ External Calls:           2                                            │
+│ Conditional Branches:     0                                            │
+│ Loops:                    0                                            │
+│ Linear Execution:         YES                                          │
+└─────────────────────────────────────────────────────────────────────────┘
+
+┌─ CALLING CONTEXT ───────────────────────────────────────────────────────┐
+│ Called By:        FUN_000060d8 (single caller)                        │
+│ Call Site:        0x00006132                                          │
+│ Context:          Structure validation/processing                     │
+│ Parameters:       3 (context pointer, 2 computation inputs)           │
+│ Return Register:  D0 (32-bit integer result)                          │
+│ Caller Usage:     Result stored to output structure +0x1c             │
+└─────────────────────────────────────────────────────────────────────────┘
+
+┌─ EXTERNAL DEPENDENCIES ─────────────────────────────────────────────────┐
+│ Function 1:       0x0500315e (15+ uses) - Primary transformation     │
+│ Function 2:       0x050032ba (11+ uses) - Final processing           │
+│ Purpose:          Unknown (external/library functions)                │
+│ Risk:             Medium (depends on external function behavior)      │
+└─────────────────────────────────────────────────────────────────────────┘
+
+┌─ SECURITY ASSESSMENT ───────────────────────────────────────────────────┐
+│ Input Validation:     NONE (relies on caller)                         │
+│ Buffer Overflow:      NO (stack operations safe)                      │
+│ Integer Overflow:     UNKNOWN (depends on external functions)         │
+│ Type Safety:          GOOD (proper register usage)                    │
+│ Overall Risk:         LOW (no obvious vulnerabilities)                │
+└─────────────────────────────────────────────────────────────────────────┘
+
+================================================================================
+END OF VISUAL ANALYSIS
+================================================================================

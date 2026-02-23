@@ -1,0 +1,131 @@
+el (with-electric-help):
+	* rmail.el (rmail-forward):
+	* sendmail.el (mail-send-and-exit): Don't count minibuffer window
+	when deciding whether there is only one window.
+	These are done by definining subroutine one-window-p in a way that
+	works in old versions of Emacs.
+
+Fri Jan 30 16:35:48 1987  Richard Mlynarik  (mly at prep)
+
+	* loaddefs.el (completion-ignored-extensions):
+	Add ".lbin"
+
+	* mail-utils.el, loaddefs.el (mail-use-rfc822): Doc typo.
+
+Thu Jan 29 03:44:29 1987  Richard M. Stallman  (rms at prep)
+
+	* rmail.el (rmail-set-message-counters):
+	* rmail.el (rmail-count-new-messages):
+	Don't bind cursor-in-echo-area.
+
+	* debug.el (debug-on-entry): Doc fix.
+
+	* files.el (rename-auto-save-file): Don't rename if new and old
+	names are the same.
+
+Wed Jan 28 17:55:02 1987  Richard M. Stallman  (rms at prep)
+
+	* rmail.el (rmail-mode-1): Don't set mode-line-buffer-identification.
+
+Mon Jan 26 17:15:27 1987  Richard M. Stallman  (rms at prep)
+
+	* simple.el (set-variable): Use documentation-property
+	instead of get, for getting variable documentation.
+
+Sun Jan 25 15:46:01 1987  Richard Mlynarik  (mly at prep)
+
+	* debug.el (debug):
+	Bind cursor-in-echo-area.
+
+Fri Jan 23 13:19:28 1987  Richard M. Stallman  (rms at prep)
+
+	* isearch.el (isearch): In reverse search, wrapping is to end
+	of buffer, not beginning.
+
+	* man.el (manual-entry): Take 1st char of `section' as a
+	substring, not as a char, to pass to `concat'.
+
+	* loaddefs.el (completion-ignored-extensions):
+	Add ".glo", ".idx" and ".lot".
+
+Thu Jan 22 16:09:51 1987  Chris Hanson  (cph at prep)
+
+	* shell.el (shell): Do not pass -T flag to `/bin/sh', only to
+	`/bin/csh'.
+
+Thu Jan 22 15:08:24 1987  Richard M. Stallman  (rms at prep)
+
+	* scribe.el (scribe-mode): Doc fix.
+	* loaddefs.el (scribe-mode): Doc fix.
+
+	* tex-mode.el (tex-mode): Change tex vs latex discrimination
+	to avoid a slow regexp.
+
+Thu Jan 22 13:06:33 1987  Richard Mlynarik  (mly at prep)
+
+	* files.el (find-file-noselect):
+	Call expand-file-name earlier so it is correct in case of errors,
+	file-not-found, etc.
+
+Wed Jan 21 17:00:19 1987  Richard Mlynarik  (mly at prep)
+
+	* yow.el, flame.el, doctor.el:
+	Change calls to (random) (lisp reader doesn't read octal "07777")
+
+Wed Jan 21 02:13:17 1987  Richard M. Stallman  (rms at prep)
+
+	* Version 18.36 released.
+
+Wed Jan 21 02:13:17 1987  Richard M. Stallman  (rms at prep)
+
+	* bytecomp.el (byte-compile-setq-default): New function for
+	special handling needed because setq-default has an unevalled arg.
+
+	* c-mode.el (calculate-c-indent): When finding first statement
+	inside brace-group, `case' is not special unless a colon appears.
+
+	* macros.el (kbd-macro-query): Make C-l call `recenter'.
+
+	* bytecomp.el (byte-compile-setq): Make setq with no args
+	generate a value.
+
+	* bytecomp.el (byte-compile-cond): Notice unconditional clauses
+	and optimize the code generated.
+
+Tue Jan 20 11:48:17 1987  Richard M. Stallman  (rms at prep)
+
+	* bytecomp.el (byte-compile-if): Correct test for else-less if's.
+
+	* sun-mouse.el: Delete code to handle resize-blips
+	since they are unnecessary and no longer generated.
+
+	* sort.el (sort-columns): Pass -t\n instead of -b to `sort'.
+
+Mon Jan 19 12:44:42 1987  Richard M. Stallman  (rms at prep)
+
+	* loaddefs.el (auto-mode-alist): Recognize .lsp as Lisp mode.
+
+Fri Jan 16 18:09:59 1987  Richard Mlynarik  (mly at prep)
+
+	* rmail.el (rmail-count-new-messages),
+	  rmailout.el (rmail-output-to-rmail-file):
+	Add optional arg `nomsg' to former, which latter supplies,
+	so that rmail doesn't report counting one appended message.
+
+Thu Jan 15 22:19:17 1987  Richard M. Stallman  (rms at prep)
+
+	* shell.el (shell): Flush hpux kludge to use "sh" instead of
+	SHELL, and install another kludge to pass -T if on hpux.
+
+Thu Jan 15 17:08:01 1987  Richard Mlynarik  (mly at prep)
+
+	* time.el (display-time-filter):
+	Never eat anything larger than your own head.
+
+Thu Jan 15 16:10:33 1987  Richard M. Stallman  (rms at prep)
+
+	* files.el (after-find-file): Sit for 2 sec after warning msg.
+
+Thu Jan 15 09:07:04 1987  Richard Mlynarik  (mly at prep)
+
+	* rmail.el (rmail-get-new-ma

@@ -1,0 +1,111 @@
+Analyze the following function and return a structured JSON intent dossier.
+
+FUNCTION: FUN_f800916c at 0xf800916c
+SIZE: 184 bytes (46 instructions)
+CONFIDENCE SOURCE: curated
+HAS UNRESOLVED BRI: False
+PRIORITY TAGS: mmio_access
+
+CALLERS (0): (none)
+CALLEES (0): (none)
+
+BLOCKS (3):
+  0xf800916c..0xf8009197 (11 insns)
+  0xf8009198..0xf80091e7 (20 insns)
+  0xf80091e8..0xf8009223 (15 insns)
+
+INSTRUCTIONS:
+  0xf800916c: xor r8,r7,r31                            defs=[r31] uses=[r8,r7] pcode=[INT_XOR]
+  0xf8009170: ixfr r8,f24                              defs=[f24] uses=[r8] pcode=[COPY]
+  0xf8009174: st.b r8,0x401c(r8)                       defs=[] uses=[r8,0x401c] pcode=[INT_ADD,STORE] [MMIO:mmio_offset_0x401c]
+  0xf8009178: ixfr r8,f0                               defs=[] uses=[] pcode=[]
+  0xf800917c: st.b r3,-0x3814(r7)                      defs=[] uses=[0xffffc7ec,r7,r3] pcode=[INT_ADD,STORE] [MMIO:mmio_high_space]
+  0xf8009180: addu r30,r9,r25                          defs=[r25] uses=[r9,r30] pcode=[INT_ADD]
+  0xf8009184: ld.b r2(r8),r0                           defs=[r0_sink] uses=[r8,r2] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8009188: addu r28,r12,r1                          defs=[r1] uses=[r28,r12] pcode=[INT_ADD]
+  0xf800918c: ld.b 0x56(r8),r8                         defs=[r8] uses=[r8,0x56] pcode=[INT_SEXT,INT_ADD,LOAD,INT_ZEXT]
+  0xf8009190: st.b r3,-0x3814(r7)                      defs=[] uses=[0xffffc7ec,r7,r3] pcode=[INT_ADD,STORE] [MMIO:mmio_high_space]
+  0xf8009194: bc 0xfce851f0                            defs=[] uses=[0x0,CC] pcode=[INT_NOTEQUAL,CBRANCH]
+  0xf8009198: ld.b r0(r20),r0                          defs=[r0_sink] uses=[0x0,r20] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800919c: unlock                                   defs=[] uses=[0x3] pcode=[CALLOTHER]
+  0xf80091a0: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80091a4: ld.b 0x6114(r8),r0                       defs=[r0_sink] uses=[r8,0x6114] pcode=[INT_SEXT,INT_ADD,LOAD,INT_ZEXT]
+  0xf80091a8: ld.b r12(r0),r0                          defs=[r0_sink] uses=[r12,0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80091ac: ld.b r12(r8),r0                          defs=[r0_sink] uses=[r12,r8] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80091b0: ld.b r0(r0),r8                           defs=[r8] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80091b4: ixfr r8,f0                               defs=[] uses=[] pcode=[]
+  0xf80091b8: xor r8,r7,r31                            defs=[r31] uses=[r8,r7] pcode=[INT_XOR]
+  0xf80091bc: ixfr r8,f24                              defs=[f24] uses=[r8] pcode=[COPY]
+  0xf80091c0: st.b r8,0x401c(r8)                       defs=[] uses=[r8,0x401c] pcode=[INT_ADD,STORE] [MMIO:mmio_offset_0x401c]
+  0xf80091c4: ixfr r8,f0                               defs=[] uses=[] pcode=[]
+  0xf80091c8: st.b r3,-0x3814(r7)                      defs=[] uses=[0xffffc7ec,r7,r3] pcode=[INT_ADD,STORE] [MMIO:mmio_high_space]
+  0xf80091cc: addu r30,r9,r25                          defs=[r25] uses=[r9,r30] pcode=[INT_ADD]
+  0xf80091d0: ixfr r0,f0                               defs=[] uses=[] pcode=[]
+  0xf80091d4: xorh 0x1086,r31,r31                      defs=[r31] uses=[0x10,0x1086,r31] pcode=[INT_ZEXT,INT_LEFT,INT_XOR]
+  0xf80091d8: addu r28,r12,r1                          defs=[r1] uses=[r28,r12] pcode=[INT_ADD]
+  0xf80091dc: ld.b 0x50(r12),r0                        defs=[r0_sink] uses=[0x50,r12] pcode=[INT_SEXT,INT_ADD,LOAD,INT_ZEXT]
+  0xf80091e0: st.b r3,-0x3814(r7)                      defs=[] uses=[0xffffc7ec,r7,r3] pcode=[INT_ADD,STORE] [MMIO:mmio_high_space]
+  0xf80091e4: bc 0xfce85240                            defs=[] uses=[0x0,CC] pcode=[INT_NOTEQUAL,CBRANCH]
+  0xf80091e8: ld.b r0(r20),r0                          defs=[r0_sink] uses=[0x0,r20] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80091ec: pfld.l -0x91(r15)++,f30                  defs=[f30,r15] uses=[r15,0xff6f] pcode=[INT_SEXT,INT_ADD,LOAD,COPY] [MMIO:mmio_high_space]
+  0xf80091f0: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80091f4: ld.b 0x6114(r8),r0                       defs=[r0_sink] uses=[r8,0x6114] pcode=[INT_SEXT,INT_ADD,LOAD,INT_ZEXT]
+  0xf80091f8: ld.b r12(r0),r0                          defs=[r0_sink] uses=[r12,0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80091fc: ld.b r12(r8),r0                          defs=[r0_sink] uses=[r12,r8] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8009200: ld.b r0(r0),r8                           defs=[r8] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8009204: ixfr r8,f0                               defs=[] uses=[] pcode=[]
+  0xf8009208: xor r8,r7,r31                            defs=[r31] uses=[r8,r7] pcode=[INT_XOR]
+  0xf800920c: ixfr r8,f24                              defs=[f24] uses=[r8] pcode=[COPY]
+  0xf8009210: st.b r8,0x401c(r8)                       defs=[] uses=[r8,0x401c] pcode=[INT_ADD,STORE] [MMIO:mmio_offset_0x401c]
+  0xf8009214: ixfr r8,f0                               defs=[] uses=[] pcode=[]
+  0xf8009218: st.b r3,-0x3814(r7)                      defs=[] uses=[0xffffc7ec,r7,r3] pcode=[INT_ADD,STORE] [MMIO:mmio_high_space]
+  0xf800921c: br 0xfce85278                            defs=[r0_sink] uses=[0x0,r28] pcode=[INT_ADD,LOAD,INT_ZEXT,BRANCH]
+  0xf8009220: _ld.b r0(r28),r0                         defs=[r0_sink] uses=[0x0,r28] pcode=[INT_ADD,LOAD,INT_ZEXT]
+
+REFERENCES:
+  0xf8009194 -> 0xfce851f0 [CONDITIONAL_JUMP] flow=True
+  0xf800921c -> 0xfce85278 [UNCONDITIONAL_JUMP] flow=True
+  0xf80091e4 -> 0xfce85240 [CONDITIONAL_JUMP] flow=True
+
+STRINGS IN RANGE:
+  (none)
+
+DISPATCH UNRESOLVED:
+  (none)
+
+CONTEXT:
+- R15 cluster (GState flags): False
+- MMIO accesses: 0xf8009174=mmio_offset_0x401c, 0xf800917c=mmio_high_space
+- Nearby deny ranges: (none)
+- Nearby embedded objects: (none)
+
+Return ONLY valid JSON matching this schema:
+{
+  "function_id": "0xf800916c",
+  "function_name": "FUN_f800916c",
+  "primary_intent": "<one-line purpose statement>",
+  "intent_category": "<one of: initialization, dispatch, parser, raster, mmio_driver, math_kernel, utility, synchronization, error_handler, unknown>",
+  "evidence": [
+    {"addr": "0x...", "fact": "<what this instruction/pattern proves>"}
+  ],
+  "register_protocol": {
+    "inputs": ["<rN = description>"],
+    "outputs": ["<rN = description>"],
+    "side_effects": ["<memory write / MMIO / control reg change>"]
+  },
+  "data_accesses": [
+    {"addr": "0x...", "target": "0x...", "kind": "read|write|mmio", "interpretation": "..."}
+  ],
+  "control_flow_summary": "<how the function flows: linear, loop, conditional tree, dispatch, etc.>",
+  "confidence": <0-100>,
+  "confidence_factors": {
+    "supporting": ["<what raises confidence>"],
+    "limiting": ["<what caps confidence>"]
+  },
+  "alternatives": [
+    {"intent": "<alternative purpose>", "why_not_primary": "<evidence against>"}
+  ],
+  "open_questions": ["<what remains unknown>"],
+  "required_next_evidence": ["<what would resolve open questions>"],
+  "subsystem_hint": "<suggested subsystem: postscript_dispatch, pixel_pipeline, memory_management, board_init, interrupt_handling, unknown>"
+}

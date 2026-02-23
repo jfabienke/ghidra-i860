@@ -1,0 +1,123 @@
+================================================================================
+NDserver ISOLATED FUNCTIONS - QUICK REFERENCE
+================================================================================
+Generated: 2025-11-08
+Total: 59 functions not in main call graph
+Confidence: 66.1% categorized
+
+================================================================================
+TLDR - WHAT TO DO NEXT
+================================================================================
+
+1. START HERE: Analyze hardware function 0x00003874 (296B)
+   → Accesses device register 0x04010290
+   → Complex logic with 9 external calls
+   → May be critical for NeXTdimension communication
+
+2. ERRNO FAMILY: Quick-analyze 0x000061f4-0x00006444 (12 functions)
+   → All access errno (0x040105b0)
+   → Compiler-generated wrappers
+   → Can document as family, not individually
+
+3. DISPATCH TABLE: Deep-dive 0x00003cdc-0x000059f8 (31 functions)
+   → HYPOTHESIS: PostScript operator implementations
+   → Find dispatch array in main code
+   → Cross-reference with DPS specification
+
+================================================================================
+TOP 10 PRIORITY FUNCTIONS
+================================================================================
+
+Address      | Size  | Priority | Categories           | Notes
+-------------|-------|----------|----------------------|------------------------
+0x00003874   | 296B  | HIGH     | Hardware, Utility    | Device register access
+0x00003eae   | 140B  | HIGH     | Callback             | Event handler
+0x000056f0   | 140B  | HIGH     | Callback             | Event handler
+0x00006de4   | 136B  | HIGH     | Callback             | Event handler
+0x000061f4   | 134B  | HIGH     | Callback             | Errno wrapper
+0x00003820   | 84B   | HIGH     | Callback             | 4 branches
+0x000059f8   | 70B   | HIGH     | Callback             | Minimal wrapper
+0x00005d60   | 70B   | HIGH     | Callback             | Minimal wrapper
+0x00005da6   | 68B   | HIGH     | Callback             | Minimal wrapper
+0x0000627a   | 62B   | HIGH     | Callback, Hardware   | Errno wrapper
+
+================================================================================
+CATEGORIES (functions can have multiple)
+================================================================================
+
+Utility/Helper (33):    Generic support functions
+Callback (24):          Function pointer targets, event handlers
+Unknown (20):           Complex, needs manual analysis
+Hardware (12):          Memory/register access
+
+================================================================================
+FUNCTION FAMILIES (Consecutive Address Groups)
+================================================================================
+
+Family 1: Init Functions
+  Range: 0x0000305c - 0x00003200 (3 functions)
+  Type: Utilities
+
+Family 2: Mixed Utilities  
+  Range: 0x00003614 - 0x00003874 (5 functions)
+  Type: Callbacks + utilities
+
+Family 3: DISPATCH TABLE *** CRITICAL ***
+  Range: 0x00003cdc - 0x000059f8 (31 functions)
+  Type: PostScript operator implementations (HYPOTHESIS)
+  Evidence: Consecutive addresses, similar sizes, complex logic
+
+Family 4: Small Callbacks
+  Range: 0x00005c70 - 0x00005dea (5 functions)
+  Type: Event handlers
+
+Family 5: ERRNO WRAPPERS *** CONFIRMED ***
+  Range: 0x000061f4 - 0x00006444 (12 functions)
+  Type: System call wrappers
+  Evidence: All access 0x040105b0, identical patterns
+
+================================================================================
+HARDWARE ACCESS SUMMARY
+================================================================================
+
+0x04010290:  Accessed by 1 function  (0x00003874) - UNKNOWN DEVICE REGISTER
+0x040105b0:  Accessed by 12 functions - CONFIRMED errno global variable
+
+================================================================================
+KEY INSIGHTS
+================================================================================
+
+✓ NO DEAD CODE: All 59 functions show operational patterns
+  → Called via function pointers, dispatch tables, callbacks
+
+✓ DISPATCH TABLE DETECTED: 31-function family likely DPS operators
+  → Should correlate with command dispatch in analyzed code
+  → Next step: Find operator_id → function_address mapping
+
+✓ COMPILER ARTIFACTS: 12 errno wrappers are auto-generated
+  → Can bulk-document instead of individual analysis
+
+✓ i860 CODE ISOLATED: No NeXTdimension-specific patterns here
+  → All board communication is in the 29 analyzed functions
+  → These are generic Unix/Mach utilities
+
+================================================================================
+ANALYSIS WAVES
+================================================================================
+
+Wave 5 (HIGH):    25 callbacks + hardware functions
+Wave 6 (MEDIUM):  33 utility functions + dispatch table
+Wave 7 (LOWER):   20 complex unknown functions
+
+================================================================================
+FILES GENERATED
+================================================================================
+
+database/isolated_functions_categorization.json  (46KB) - Machine-readable
+docs/ISOLATED_FUNCTIONS_CATEGORIZATION.md        (13KB) - Human-readable report  
+docs/ISOLATED_FUNCTIONS_ANALYSIS_SUMMARY.md      (24KB) - Complete analysis
+QUICK_REFERENCE_ISOLATED_FUNCTIONS.txt           (This file) - Quick lookup
+
+analyze_isolated_functions.py - Automated analysis tool
+
+================================================================================

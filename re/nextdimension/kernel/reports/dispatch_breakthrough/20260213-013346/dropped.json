@@ -1,0 +1,562 @@
+[
+  {
+    "addr": "0xF8011CA4",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+pcode_hotspot_x2"
+  },
+  {
+    "addr": "0xF8013B88",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+pcode_hotspot_x2"
+  },
+  {
+    "addr": "0xF8013FF4",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+pcode_hotspot_x2"
+  },
+  {
+    "addr": "0xF8014A00",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+pcode_hotspot_x2"
+  },
+  {
+    "addr": "0xF801766C",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+pcode_hotspot_x2"
+  },
+  {
+    "addr": "0xF801AB70",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+embedded_macho_cpu_6+pcode_hotspot_x3+x86_signature"
+  },
+  {
+    "addr": "0xF801B45C",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+embedded_macho_cpu_6+pcode_hotspot_x3+x86_signature"
+  },
+  {
+    "addr": "0xF801B778",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+embedded_macho_cpu_6+pcode_hotspot_x3+x86_signature"
+  },
+  {
+    "addr": "0xF801BEB0",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+embedded_macho_cpu_6+pcode_hotspot_x3+x86_signature"
+  },
+  {
+    "addr": "0xF801DC54",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+embedded_macho_cpu_6+pcode_hotspot_x3+x86_signature"
+  },
+  {
+    "addr": "0xF802056C",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+embedded_macho_cpu_6+pcode_hotspot_x3+x86_signature"
+  },
+  {
+    "addr": "0xF8037FB4",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy"
+  },
+  {
+    "addr": "0xF8038590",
+    "refs": 2,
+    "drop_reason": "deny:zero_heavy"
+  },
+  {
+    "addr": "0xF80385DC",
+    "refs": 2,
+    "drop_reason": "deny:zero_heavy"
+  },
+  {
+    "addr": "0xF803A1F0",
+    "refs": 2,
+    "drop_reason": "deny:zero_heavy"
+  },
+  {
+    "addr": "0xF803A9B4",
+    "refs": 2,
+    "drop_reason": "deny:zero_heavy"
+  },
+  {
+    "addr": "0xF803B508",
+    "refs": 2,
+    "drop_reason": "deny:zero_heavy"
+  },
+  {
+    "addr": "0xF803C804",
+    "refs": 2,
+    "drop_reason": "deny:zero_heavy"
+  },
+  {
+    "addr": "0xF803EC04",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF803EC78",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF803FDFC",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8040628",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8040814",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8040D20",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8040D54",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8042B70",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8043E3C",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8043F14",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8043F48",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8043F6C",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8044774",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8044CAC",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8044F80",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8045704",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8045C8C",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF80460A8",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8046328",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8046AC0",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8046B2C",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8048168",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8049178",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF804935C",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF804A220",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF804B4AC",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF804BB84",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF804DE60",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF804E68C",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8050100",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8050180",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8050468",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF80514A8",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF805269C",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF805321C",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8056A48",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8056B14",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8056C28",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8056FB4",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF805789C",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+pcode_hotspot_x3+pcode_hotspot_x4+x86_signature+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8059994",
+    "refs": 2,
+    "drop_reason": "deny:zero_heavy"
+  },
+  {
+    "addr": "0xF805B2B4",
+    "refs": 2,
+    "drop_reason": "deny:zero_heavy"
+  },
+  {
+    "addr": "0xF805CD68",
+    "refs": 2,
+    "drop_reason": "deny:zero_heavy"
+  },
+  {
+    "addr": "0xF805CDC4",
+    "refs": 2,
+    "drop_reason": "deny:zero_heavy"
+  },
+  {
+    "addr": "0xF805E4B8",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF805F6E4",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF80600E4",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8060114",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF80608F0",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8060908",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8060EE0",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8061680",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF80619CC",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8062334",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF80627AC",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8063090",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8063414",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF80642AC",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8064F74",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8065070",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8068C14",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF80695A8",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8069B68",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8069F18",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF806BB14",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF806C268",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF806D748",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF806EB04",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8070F6C",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF80723E8",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8073394",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy+zero_heavy+embedded_macho_cpu_7+x86_signature+zero_heavy+zero_heavy"
+  },
+  {
+    "addr": "0xF8078FB0",
+    "refs": 2,
+    "drop_reason": "deny:zero_heavy"
+  },
+  {
+    "addr": "0xF80790C4",
+    "refs": 2,
+    "drop_reason": "deny:zero_heavy"
+  },
+  {
+    "addr": "0xF807BD28",
+    "refs": 2,
+    "drop_reason": "deny:zero_heavy"
+  },
+  {
+    "addr": "0xF807C96C",
+    "refs": 2,
+    "drop_reason": "deny:zero_heavy"
+  },
+  {
+    "addr": "0xF807F220",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy"
+  },
+  {
+    "addr": "0xF8080E70",
+    "refs": 2,
+    "drop_reason": "deny:zero_heavy"
+  },
+  {
+    "addr": "0xF8097320",
+    "refs": 2,
+    "drop_reason": "deny:x86_signature"
+  },
+  {
+    "addr": "0xF8099438",
+    "refs": 2,
+    "drop_reason": "deny:zero_heavy"
+  },
+  {
+    "addr": "0xF8099CB4",
+    "refs": 2,
+    "drop_reason": "deny:zero_heavy"
+  },
+  {
+    "addr": "0xF809A1CC",
+    "refs": 2,
+    "drop_reason": "deny:zero_heavy"
+  },
+  {
+    "addr": "0xF809F248",
+    "refs": 2,
+    "drop_reason": "deny:zero_heavy"
+  },
+  {
+    "addr": "0xF80A3D18",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy"
+  },
+  {
+    "addr": "0xF80A53B4",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy"
+  },
+  {
+    "addr": "0xF80A6618",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy"
+  },
+  {
+    "addr": "0xF80A6FF4",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy"
+  },
+  {
+    "addr": "0xF80A7F98",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy"
+  },
+  {
+    "addr": "0xF80A830C",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy"
+  },
+  {
+    "addr": "0xF80A8B84",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy"
+  },
+  {
+    "addr": "0xF80AAE24",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy"
+  },
+  {
+    "addr": "0xF80ACCC0",
+    "refs": 2,
+    "drop_reason": "deny:ascii_heavy"
+  },
+  {
+    "addr": "0xF80B47AC",
+    "refs": 2,
+    "drop_reason": "out_of_text"
+  },
+  {
+    "addr": "0xF80BFC20",
+    "refs": 2,
+    "drop_reason": "out_of_text"
+  },
+  {
+    "addr": "0xF80C0938",
+    "refs": 2,
+    "drop_reason": "out_of_text"
+  }
+]

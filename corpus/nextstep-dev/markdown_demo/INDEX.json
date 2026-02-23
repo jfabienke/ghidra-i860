@@ -1,0 +1,669 @@
+{
+  "metadata": {
+    "generated": "2025-11-09T18:23:57.496131",
+    "total_documents": 3,
+    "sections": [
+      "GeneralRef",
+      "Concepts",
+      "ReleaseNotes"
+    ],
+    "topics": [
+      "basic",
+      "performance",
+      "display",
+      "drawing",
+      "tips",
+      "application",
+      "graphics",
+      "view",
+      "generalref",
+      "image",
+      "nextdimension",
+      "acceleration",
+      "postscript",
+      "operations",
+      "overview",
+      "programming",
+      "i860",
+      "framework",
+      "class",
+      "principles",
+      "reading",
+      "interface",
+      "hierarchy",
+      "further",
+      "concepts",
+      "method",
+      "oriented",
+      "object",
+      "introduction",
+      "function",
+      "information",
+      "hardware",
+      "release",
+      "capabilities",
+      "text",
+      "specifications",
+      "more",
+      "notes",
+      "issues",
+      "known",
+      "releasenotes",
+      "software"
+    ]
+  },
+  "documents": [
+    {
+      "path": "GeneralRef/DisplayPostScript.md",
+      "title": "Display PostScript Reference",
+      "section": "GeneralRef",
+      "format": "HTML",
+      "headers": [
+        {
+          "level": 1,
+          "text": "Display PostScript Programming"
+        },
+        {
+          "level": 2,
+          "text": "Overview"
+        },
+        {
+          "level": 2,
+          "text": "Basic Drawing Operations"
+        },
+        {
+          "level": 3,
+          "text": "Drawing a Line"
+        },
+        {
+          "level": 3,
+          "text": "Common PostScript Operators"
+        },
+        {
+          "level": 2,
+          "text": "NeXTdimension Acceleration"
+        },
+        {
+          "level": 2,
+          "text": "Performance Tips"
+        }
+      ],
+      "code_blocks": 0,
+      "topics": [
+        "basic",
+        "performance",
+        "display",
+        "drawing",
+        "tips",
+        "application",
+        "graphics",
+        "view",
+        "generalref",
+        "image",
+        "nextdimension",
+        "acceleration",
+        "postscript",
+        "operations",
+        "overview",
+        "programming",
+        "i860"
+      ],
+      "apis": [
+        "NSRect",
+        "NeXTdimension",
+        "NeXTSTEP",
+        "level",
+        "PostScript"
+      ],
+      "size": 1245
+    },
+    {
+      "path": "Concepts/ObjectOriented.md",
+      "title": "Object-Oriented Programming in NeXTSTEP",
+      "section": "Concepts",
+      "format": "HTML",
+      "headers": [
+        {
+          "level": 1,
+          "text": "Object-Oriented Programming"
+        },
+        {
+          "level": 2,
+          "text": "Introduction"
+        },
+        {
+          "level": 2,
+          "text": "Key Principles"
+        },
+        {
+          "level": 3,
+          "text": "Encapsulation"
+        },
+        {
+          "level": 3,
+          "text": "Inheritance"
+        },
+        {
+          "level": 3,
+          "text": "Polymorphism"
+        },
+        {
+          "level": 2,
+          "text": "The NeXTSTEP Class Hierarchy"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "code_blocks": 1,
+      "topics": [
+        "framework",
+        "class",
+        "principles",
+        "reading",
+        "interface",
+        "hierarchy",
+        "further",
+        "concepts",
+        "programming",
+        "method",
+        "oriented",
+        "object",
+        "introduction",
+        "function"
+      ],
+      "apis": [
+        "ProgrammingTopics",
+        "NeXTSTEP",
+        "BankAccount",
+        "CheckingAccount",
+        "GeneralRef",
+        "NSObject",
+        "programming",
+        "DynamicLoading",
+        "MemoryManagement"
+      ],
+      "size": 1710
+    },
+    {
+      "path": "ReleaseNotes/NeXTdimension.md",
+      "title": "NeXTdimension Release Notes",
+      "section": "ReleaseNotes",
+      "format": "HTML",
+      "headers": [
+        {
+          "level": 1,
+          "text": "NeXTdimension Release Notes"
+        },
+        {
+          "level": 2,
+          "text": "Hardware Specifications"
+        },
+        {
+          "level": 2,
+          "text": "Software Capabilities"
+        },
+        {
+          "level": 3,
+          "text": "Display PostScript Acceleration"
+        },
+        {
+          "level": 3,
+          "text": "3D Graphics"
+        },
+        {
+          "level": 2,
+          "text": "Programming Notes"
+        },
+        {
+          "level": 3,
+          "text": "Memory Architecture"
+        },
+        {
+          "level": 3,
+          "text": "I860 Programming"
+        },
+        {
+          "level": 2,
+          "text": "Known Issues"
+        },
+        {
+          "level": 2,
+          "text": "For More Information"
+        }
+      ],
+      "code_blocks": 1,
+      "topics": [
+        "information",
+        "hardware",
+        "graphics",
+        "image",
+        "nextdimension",
+        "programming",
+        "i860",
+        "release",
+        "display",
+        "capabilities",
+        "text",
+        "specifications",
+        "more",
+        "notes",
+        "postscript",
+        "object",
+        "issues",
+        "known",
+        "releasenotes",
+        "software"
+      ],
+      "apis": [
+        "registers",
+        "NeXTdimension",
+        "PostScript"
+      ],
+      "size": 1647
+    }
+  ],
+  "sections": {
+    "GeneralRef": [
+      {
+        "path": "GeneralRef/DisplayPostScript.md",
+        "title": "Display PostScript Reference",
+        "section": "GeneralRef",
+        "format": "HTML",
+        "headers": [
+          {
+            "level": 1,
+            "text": "Display PostScript Programming"
+          },
+          {
+            "level": 2,
+            "text": "Overview"
+          },
+          {
+            "level": 2,
+            "text": "Basic Drawing Operations"
+          },
+          {
+            "level": 3,
+            "text": "Drawing a Line"
+          },
+          {
+            "level": 3,
+            "text": "Common PostScript Operators"
+          },
+          {
+            "level": 2,
+            "text": "NeXTdimension Acceleration"
+          },
+          {
+            "level": 2,
+            "text": "Performance Tips"
+          }
+        ],
+        "code_blocks": 0,
+        "topics": [
+          "basic",
+          "performance",
+          "display",
+          "drawing",
+          "tips",
+          "application",
+          "graphics",
+          "view",
+          "generalref",
+          "image",
+          "nextdimension",
+          "acceleration",
+          "postscript",
+          "operations",
+          "overview",
+          "programming",
+          "i860"
+        ],
+        "apis": [
+          "NSRect",
+          "NeXTdimension",
+          "NeXTSTEP",
+          "level",
+          "PostScript"
+        ],
+        "size": 1245
+      }
+    ],
+    "Concepts": [
+      {
+        "path": "Concepts/ObjectOriented.md",
+        "title": "Object-Oriented Programming in NeXTSTEP",
+        "section": "Concepts",
+        "format": "HTML",
+        "headers": [
+          {
+            "level": 1,
+            "text": "Object-Oriented Programming"
+          },
+          {
+            "level": 2,
+            "text": "Introduction"
+          },
+          {
+            "level": 2,
+            "text": "Key Principles"
+          },
+          {
+            "level": 3,
+            "text": "Encapsulation"
+          },
+          {
+            "level": 3,
+            "text": "Inheritance"
+          },
+          {
+            "level": 3,
+            "text": "Polymorphism"
+          },
+          {
+            "level": 2,
+            "text": "The NeXTSTEP Class Hierarchy"
+          },
+          {
+            "level": 2,
+            "text": "Further Reading"
+          }
+        ],
+        "code_blocks": 1,
+        "topics": [
+          "framework",
+          "class",
+          "principles",
+          "reading",
+          "interface",
+          "hierarchy",
+          "further",
+          "concepts",
+          "programming",
+          "method",
+          "oriented",
+          "object",
+          "introduction",
+          "function"
+        ],
+        "apis": [
+          "ProgrammingTopics",
+          "NeXTSTEP",
+          "BankAccount",
+          "CheckingAccount",
+          "GeneralRef",
+          "NSObject",
+          "programming",
+          "DynamicLoading",
+          "MemoryManagement"
+        ],
+        "size": 1710
+      }
+    ],
+    "ReleaseNotes": [
+      {
+        "path": "ReleaseNotes/NeXTdimension.md",
+        "title": "NeXTdimension Release Notes",
+        "section": "ReleaseNotes",
+        "format": "HTML",
+        "headers": [
+          {
+            "level": 1,
+            "text": "NeXTdimension Release Notes"
+          },
+          {
+            "level": 2,
+            "text": "Hardware Specifications"
+          },
+          {
+            "level": 2,
+            "text": "Software Capabilities"
+          },
+          {
+            "level": 3,
+            "text": "Display PostScript Acceleration"
+          },
+          {
+            "level": 3,
+            "text": "3D Graphics"
+          },
+          {
+            "level": 2,
+            "text": "Programming Notes"
+          },
+          {
+            "level": 3,
+            "text": "Memory Architecture"
+          },
+          {
+            "level": 3,
+            "text": "I860 Programming"
+          },
+          {
+            "level": 2,
+            "text": "Known Issues"
+          },
+          {
+            "level": 2,
+            "text": "For More Information"
+          }
+        ],
+        "code_blocks": 1,
+        "topics": [
+          "information",
+          "hardware",
+          "graphics",
+          "image",
+          "nextdimension",
+          "programming",
+          "i860",
+          "release",
+          "display",
+          "capabilities",
+          "text",
+          "specifications",
+          "more",
+          "notes",
+          "postscript",
+          "object",
+          "issues",
+          "known",
+          "releasenotes",
+          "software"
+        ],
+        "apis": [
+          "registers",
+          "NeXTdimension",
+          "PostScript"
+        ],
+        "size": 1647
+      }
+    ]
+  },
+  "topics": {
+    "basic": [
+      "GeneralRef/DisplayPostScript.md"
+    ],
+    "performance": [
+      "GeneralRef/DisplayPostScript.md"
+    ],
+    "display": [
+      "GeneralRef/DisplayPostScript.md",
+      "ReleaseNotes/NeXTdimension.md"
+    ],
+    "drawing": [
+      "GeneralRef/DisplayPostScript.md"
+    ],
+    "tips": [
+      "GeneralRef/DisplayPostScript.md"
+    ],
+    "application": [
+      "GeneralRef/DisplayPostScript.md"
+    ],
+    "graphics": [
+      "GeneralRef/DisplayPostScript.md",
+      "ReleaseNotes/NeXTdimension.md"
+    ],
+    "view": [
+      "GeneralRef/DisplayPostScript.md"
+    ],
+    "generalref": [
+      "GeneralRef/DisplayPostScript.md"
+    ],
+    "image": [
+      "GeneralRef/DisplayPostScript.md",
+      "ReleaseNotes/NeXTdimension.md"
+    ],
+    "nextdimension": [
+      "GeneralRef/DisplayPostScript.md",
+      "ReleaseNotes/NeXTdimension.md"
+    ],
+    "acceleration": [
+      "GeneralRef/DisplayPostScript.md"
+    ],
+    "postscript": [
+      "GeneralRef/DisplayPostScript.md",
+      "ReleaseNotes/NeXTdimension.md"
+    ],
+    "operations": [
+      "GeneralRef/DisplayPostScript.md"
+    ],
+    "overview": [
+      "GeneralRef/DisplayPostScript.md"
+    ],
+    "programming": [
+      "GeneralRef/DisplayPostScript.md",
+      "Concepts/ObjectOriented.md",
+      "ReleaseNotes/NeXTdimension.md"
+    ],
+    "i860": [
+      "GeneralRef/DisplayPostScript.md",
+      "ReleaseNotes/NeXTdimension.md"
+    ],
+    "framework": [
+      "Concepts/ObjectOriented.md"
+    ],
+    "class": [
+      "Concepts/ObjectOriented.md"
+    ],
+    "principles": [
+      "Concepts/ObjectOriented.md"
+    ],
+    "reading": [
+      "Concepts/ObjectOriented.md"
+    ],
+    "interface": [
+      "Concepts/ObjectOriented.md"
+    ],
+    "hierarchy": [
+      "Concepts/ObjectOriented.md"
+    ],
+    "further": [
+      "Concepts/ObjectOriented.md"
+    ],
+    "concepts": [
+      "Concepts/ObjectOriented.md"
+    ],
+    "method": [
+      "Concepts/ObjectOriented.md"
+    ],
+    "oriented": [
+      "Concepts/ObjectOriented.md"
+    ],
+    "object": [
+      "Concepts/ObjectOriented.md",
+      "ReleaseNotes/NeXTdimension.md"
+    ],
+    "introduction": [
+      "Concepts/ObjectOriented.md"
+    ],
+    "function": [
+      "Concepts/ObjectOriented.md"
+    ],
+    "information": [
+      "ReleaseNotes/NeXTdimension.md"
+    ],
+    "hardware": [
+      "ReleaseNotes/NeXTdimension.md"
+    ],
+    "release": [
+      "ReleaseNotes/NeXTdimension.md"
+    ],
+    "capabilities": [
+      "ReleaseNotes/NeXTdimension.md"
+    ],
+    "text": [
+      "ReleaseNotes/NeXTdimension.md"
+    ],
+    "specifications": [
+      "ReleaseNotes/NeXTdimension.md"
+    ],
+    "more": [
+      "ReleaseNotes/NeXTdimension.md"
+    ],
+    "notes": [
+      "ReleaseNotes/NeXTdimension.md"
+    ],
+    "issues": [
+      "ReleaseNotes/NeXTdimension.md"
+    ],
+    "known": [
+      "ReleaseNotes/NeXTdimension.md"
+    ],
+    "releasenotes": [
+      "ReleaseNotes/NeXTdimension.md"
+    ],
+    "software": [
+      "ReleaseNotes/NeXTdimension.md"
+    ]
+  },
+  "api_index": {
+    "NSRect": [
+      "GeneralRef/DisplayPostScript.md"
+    ],
+    "NeXTdimension": [
+      "GeneralRef/DisplayPostScript.md",
+      "ReleaseNotes/NeXTdimension.md"
+    ],
+    "NeXTSTEP": [
+      "GeneralRef/DisplayPostScript.md",
+      "Concepts/ObjectOriented.md"
+    ],
+    "level": [
+      "GeneralRef/DisplayPostScript.md"
+    ],
+    "PostScript": [
+      "GeneralRef/DisplayPostScript.md",
+      "ReleaseNotes/NeXTdimension.md"
+    ],
+    "ProgrammingTopics": [
+      "Concepts/ObjectOriented.md"
+    ],
+    "BankAccount": [
+      "Concepts/ObjectOriented.md"
+    ],
+    "CheckingAccount": [
+      "Concepts/ObjectOriented.md"
+    ],
+    "GeneralRef": [
+      "Concepts/ObjectOriented.md"
+    ],
+    "NSObject": [
+      "Concepts/ObjectOriented.md"
+    ],
+    "programming": [
+      "Concepts/ObjectOriented.md"
+    ],
+    "DynamicLoading": [
+      "Concepts/ObjectOriented.md"
+    ],
+    "MemoryManagement": [
+      "Concepts/ObjectOriented.md"
+    ],
+    "registers": [
+      "ReleaseNotes/NeXTdimension.md"
+    ]
+  }
+}

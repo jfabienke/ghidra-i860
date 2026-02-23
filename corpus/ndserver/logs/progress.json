@@ -1,0 +1,22 @@
+{
+  "session_id": "20251109_195658",
+  "timestamp": "2025-11-15T18:48:32Z",
+  "elapsed_seconds": 517894,
+  "baseline": {
+    "docs": 137,
+    "asm": 31
+  },
+  "current": {
+    "docs": 173,
+    "asm": 31
+  },
+  "delta": {
+    "docs": 36,
+    "asm": 0
+  },
+  "rate_per_minute": {
+    "docs": 0,
+    "asm": 0
+  }
+}
+

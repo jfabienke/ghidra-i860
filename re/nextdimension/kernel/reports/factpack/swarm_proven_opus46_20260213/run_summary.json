@@ -1,0 +1,25 @@
+{
+  "run_id": "31de85b8",
+  "model": "claude-opus-4-6",
+  "backend": "api",
+  "stats": {
+    "claims": 1,
+    "verified_accept": 0,
+    "verified_revise": 1,
+    "verified_reject": 0,
+    "gatekeeper_passed": 1,
+    "gatekeeper_failed": 0,
+    "total_tokens_in": 7049,
+    "total_tokens_out": 4833
+  },
+  "results": [
+    {
+      "function_id": "0xf800c630",
+      "status": "revise",
+      "confidence": 28,
+      "primary_intent": "PostScript-related dispatch fragment that reads a token, performs XOR hashing, writes to MMIO 0x401C, and exits via computed indirect branch",
+      "contrarian_verdict": null
+    }
+  ],
+  "errors": []
+}

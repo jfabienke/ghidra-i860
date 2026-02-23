@@ -72,6 +72,30 @@
         <pentry minsize="1" maxsize="4" extension="inttype">
           <register name="r27"/>
         </pentry>
+        <pentry minsize="1" maxsize="4">
+          <register name="f8"/>
+        </pentry>
+        <pentry minsize="1" maxsize="4">
+          <register name="f9"/>
+        </pentry>
+        <pentry minsize="1" maxsize="4">
+          <register name="f10"/>
+        </pentry>
+        <pentry minsize="1" maxsize="4">
+          <register name="f11"/>
+        </pentry>
+        <pentry minsize="1" maxsize="4">
+          <register name="f12"/>
+        </pentry>
+        <pentry minsize="1" maxsize="4">
+          <register name="f13"/>
+        </pentry>
+        <pentry minsize="1" maxsize="4">
+          <register name="f14"/>
+        </pentry>
+        <pentry minsize="1" maxsize="4">
+          <register name="f15"/>
+        </pentry>
         <pentry minsize="1" maxsize="500" align="4">
           <addr offset="0" space="stack"/>
         </pentry>
@@ -79,6 +103,9 @@
       <output>
         <pentry minsize="1" maxsize="4" extension="inttype">
           <register name="r16"/>
+        </pentry>
+        <pentry minsize="1" maxsize="8">
+          <register name="f8f9"/>
         </pentry>
       </output>
       <unaffected>
@@ -97,6 +124,12 @@
         <register name="r13"/>
         <register name="r14"/>
         <register name="r15"/>
+        <register name="f2"/>
+        <register name="f3"/>
+        <register name="f4"/>
+        <register name="f5"/>
+        <register name="f6"/>
+        <register name="f7"/>
       </unaffected>
     </prototype>
   </default_proto>

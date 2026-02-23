@@ -113,6 +113,11 @@ define register offset=0x2000 size=4 [
 define register offset=0x2100 size=8 [KR KI T];
 define register offset=0x2118 size=8 [MERGE];
 
+# Floating-point and Load pipeline stages (64-bit)
+define register offset=0x2200 size=8 [A1 A2 A3];
+define register offset=0x2218 size=8 [M1 M2 M3];
+define register offset=0x2230 size=8 [L1 L2 L3];
+
 # Program counter and condition code
 define register offset=0x3000 size=4 [PC CC];
 
@@ -221,10 +226,10 @@ sbroff: target  is sbrhi & sbrlo
 
 # ------------------------------------------------------------------
 # Sub-constructors: 26-bit branch target
-# Target = PC + sign_extend(broff26) << 2
+# Target = PC + 4 + (sign_extend(broff26) << 2)
 # ------------------------------------------------------------------
 br26target: target  is broff26
-    [ target = inst_start + (broff26 << 2); ]
+    [ target = inst_start + 4 + (broff26 << 2); ]
     { export *:4 target; }
 
 # ------------------------------------------------------------------
@@ -258,10 +263,20 @@ define pcodeop i860_flush;
 define pcodeop f_reciprocal;
 define pcodeop f_reciprocal_sqrt;
 define pcodeop fp_faddp;
+define pcodeop fp_faddp_merge;
+define pcodeop fp_faddp_psr;
 define pcodeop fp_faddz;
+define pcodeop fp_faddz_merge;
 define pcodeop fp_fzchkl;
+define pcodeop fp_fzchkl_merge;
+define pcodeop fp_fzchkl_psr;
 define pcodeop fp_fzchks;
+define pcodeop fp_fzchks_merge;
+define pcodeop fp_fzchks_psr;
 define pcodeop fp_form;
+define pcodeop fp_form_merge;
+define pcodeop fp_pst_d;
+define pcodeop fp_pst_d_merge;
 define pcodeop fp_fmlow;
 define pcodeop i860_ldio;
 define pcodeop i860_stio;

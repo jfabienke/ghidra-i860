@@ -1,0 +1,69 @@
+Analyze the following function and return a structured JSON intent dossier.
+
+FUNCTION: FUN_f8009420 at 0xf8009420
+SIZE: 32 bytes (8 instructions)
+CONFIDENCE SOURCE: curated
+HAS UNRESOLVED BRI: False
+PRIORITY TAGS: mmio_access
+
+CALLERS (0): (none)
+CALLEES (0): (none)
+
+BLOCKS (1):
+  0xf8009420..0xf800943f (8 insns)
+
+INSTRUCTIONS:
+  0xf8009420: ld.b r4(r4),r0                           defs=[r0_sink] uses=[r4] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8009424: ld.b r0(r8),r0                           defs=[r0_sink] uses=[0x0,r8] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8009428: ld.b r2(r8),r0                           defs=[r0_sink] uses=[r8,r2] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800942c: st.b r3,-0x3814(r7)                      defs=[] uses=[0xffffc7ec,r7,r3] pcode=[INT_ADD,STORE] [MMIO:mmio_high_space]
+  0xf8009430: shr r30,r9,r29                           defs=[r29] uses=[r9,r30] pcode=[INT_RIGHT]
+  0xf8009434: ixfr r0,f16                              defs=[f16] uses=[0x0] pcode=[COPY]
+  0xf8009438: shr r28,r12,r21                          defs=[r21] uses=[r12,r28] pcode=[INT_RIGHT]
+  0xf800943c: ld.b 0x58(r4),r16                        defs=[r16] uses=[r4,0x58] pcode=[INT_SEXT,INT_ADD,LOAD,INT_ZEXT]
+
+REFERENCES:
+  (none)
+
+STRINGS IN RANGE:
+  (none)
+
+DISPATCH UNRESOLVED:
+  (none)
+
+CONTEXT:
+- R15 cluster (GState flags): False
+- MMIO accesses: 0xf800942c=mmio_high_space
+- Nearby deny ranges: (none)
+- Nearby embedded objects: (none)
+
+Return ONLY valid JSON matching this schema:
+{
+  "function_id": "0xf8009420",
+  "function_name": "FUN_f8009420",
+  "primary_intent": "<one-line purpose statement>",
+  "intent_category": "<one of: initialization, dispatch, parser, raster, mmio_driver, math_kernel, utility, synchronization, error_handler, unknown>",
+  "evidence": [
+    {"addr": "0x...", "fact": "<what this instruction/pattern proves>"}
+  ],
+  "register_protocol": {
+    "inputs": ["<rN = description>"],
+    "outputs": ["<rN = description>"],
+    "side_effects": ["<memory write / MMIO / control reg change>"]
+  },
+  "data_accesses": [
+    {"addr": "0x...", "target": "0x...", "kind": "read|write|mmio", "interpretation": "..."}
+  ],
+  "control_flow_summary": "<how the function flows: linear, loop, conditional tree, dispatch, etc.>",
+  "confidence": <0-100>,
+  "confidence_factors": {
+    "supporting": ["<what raises confidence>"],
+    "limiting": ["<what caps confidence>"]
+  },
+  "alternatives": [
+    {"intent": "<alternative purpose>", "why_not_primary": "<evidence against>"}
+  ],
+  "open_questions": ["<what remains unknown>"],
+  "required_next_evidence": ["<what would resolve open questions>"],
+  "subsystem_hint": "<suggested subsystem: postscript_dispatch, pixel_pipeline, memory_management, board_init, interrupt_handling, unknown>"
+}

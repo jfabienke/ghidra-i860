@@ -1,0 +1,83 @@
+; Function: func_00006ac2
+; Address: 0x00006ac2 - 0x00006b7b
+; Size: 186 bytes
+; Frame: 0 bytes
+; Purpose: Unknown
+; Description: 186 bytes, frame size 0
+; Confidence: UNKNOWN
+;
+0x00006ac2:  linkw %fp,#0
+0x00006ac4:  movel %a3,%sp@-
+0x00006ac6:  movel %a2,%sp@-
+0x00006ac8:  moveal %fp@(8),%a2
+0x00006aca:  moveal %fp@(12),%a3
+0x00006acc:  .short 0xe9ea
+0x00006ace:  .short 0x0008
+0x00006ad0:  .short 0x0003
+0x00006ad2:  invalid
+0x00006ad4:  .short 0x0000
+0x00006ad6:  .short 0x042c
+0x00006ad8:  .short 0x0004
+0x00006ada:  bnes 0x00000026
+0x00006adc:  moveq #1,%d1
+0x00006ade:  cmpl %d0,%d1
+0x00006ae0:  beqs 0x00000030
+0x00006ae2:  invalid
+0x00006ae4:  breakpoint
+0x00006ae6:  .short 0xfed0
+0x00006ae8:  .short 0x001c
+0x00006aea:  bras 0x000000ae
+0x00006aec:  movel %a2@(24),%d1
+0x00006aee:  invalid
+0x00006af0:  .short 0x0000
+0x00006af2:  mvsw %a0@+,%d6
+0x00006af4:  bnes 0x00000062
+0x00006af6:  moveb %a2@(35),%d0
+0x00006af8:  .short 0x0200
+0x00006afa:  .short 0x000c
+0x00006afc:  cmpib #12,%d0
+0x00006afe:  bnes 0x00000062
+0x00006b00:  cmpiw #12,%d2
+0x00006b02:  .short 0x0024
+0x00006b04:  bnes 0x00000062
+0x00006b06:  moveq #1,%d1
+0x00006b08:  cmpl %a2@(40),%d1
+0x00006b0a:  bnes 0x00000062
+0x00006b0c:  cmpiw #8192,%d2
+0x00006b0e:  .short 0x0026
+0x00006b10:  beqs 0x0000006c
+0x00006b12:  invalid
+0x00006b14:  breakpoint
+0x00006b16:  .short 0xfed0
+0x00006b18:  .short 0x001c
+0x00006b1a:  bras 0x00000086
+0x00006b1c:  pea %a2@(44)
+0x00006b1e:  pea %a2@(28)
+0x00006b20:  movel %a2@(12),%sp@-
+0x00006b22:  invalid
+0x00006b24:  breakpoint
+0x00006b26:  .short 0xf884
+0x00006b28:  movel %d0,%a3@(36)
+0x00006b2a:  clrl %a3@(28)
+0x00006b2c:  tstl %a3@(28)
+0x00006b2e:  bnes 0x000000ae
+0x00006b30:  invalid
+0x00006b32:  .short 0x0000
+0x00006b34:  mvsw %a4@+,%d6
+0x00006b36:  .short 0x0020
+0x00006b38:  invalid
+0x00006b3a:  .short 0x0000
+0x00006b3c:  mvsw %a0@-,%d6
+0x00006b3e:  .short 0x0028
+0x00006b40:  invalid
+0x00006b42:  .short 0x001c
+0x00006b44:  .short 0x002c
+0x00006b46:  invalid
+0x00006b48:  .short 0x0001
+0x00006b4a:  .short 0x0003
+0x00006b4c:  moveq #48,%d1
+0x00006b4e:  movel %d1,%a3@(4)
+0x00006b50:  moveal %fp@(-8),%a2
+0x00006b52:  moveal %fp@(-4),%a3
+0x00006b54:  unlk %fp
+0x00006b56:  rts

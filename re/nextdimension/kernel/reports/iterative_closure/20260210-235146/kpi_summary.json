@@ -1,0 +1,21 @@
+{
+  "schema": "iterative-closure-kpi-v1",
+  "iterations": 1,
+  "converged": true,
+  "rows": [
+    {
+      "iteration": "1",
+      "dynamic_added": "0",
+      "targets_seen": "0",
+      "trace_events": "0",
+      "indirect_events": "0",
+      "functions": "60",
+      "instructions": "2536",
+      "code_bytes": "10144",
+      "coverage_pct": "1.4",
+      "map_path": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260210-235146/iter_1/sweep/dynamic_recovery_map.json",
+      "trace_path": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260210-235146/iter_1/sweep/runtime_trace_merged.jsonl",
+      "factpack_dir": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260210-235146/iter_1/factpack"
+    }
+  ]
+}

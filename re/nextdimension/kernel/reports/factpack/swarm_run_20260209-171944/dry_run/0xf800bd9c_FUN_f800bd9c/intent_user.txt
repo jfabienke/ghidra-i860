@@ -1,0 +1,65 @@
+Analyze the following function and return a structured JSON intent dossier.
+
+FUNCTION: FUN_f800bd9c at 0xf800bd9c
+SIZE: 16 bytes (4 instructions)
+CONFIDENCE SOURCE: curated
+HAS UNRESOLVED BRI: False
+PRIORITY TAGS: (none)
+
+CALLERS (0): (none)
+CALLEES (0): (none)
+
+BLOCKS (1):
+  0xf800bd9c..0xf800bdab (4 insns)
+
+INSTRUCTIONS:
+  0xf800bd9c: xorh 0x31c6,r24,r0                       defs=[r0_sink] uses=[0x10,r24,0x31c6] pcode=[INT_ZEXT,INT_LEFT,INT_XOR]
+  0xf800bda0: shra r0,r0,r0                            defs=[r0_sink] uses=[0x0] pcode=[INT_SRIGHT]
+  0xf800bda4: fld.d 0x78(r24),f0f1                     defs=[fd0_sink] uses=[r24,0x78] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xf800bda8: fld.d 0x50(r20),f8f9                     defs=[f8f9] uses=[0x50,r20] pcode=[INT_SEXT,INT_ADD,LOAD]
+
+REFERENCES:
+  (none)
+
+STRINGS IN RANGE:
+  (none)
+
+DISPATCH UNRESOLVED:
+  (none)
+
+CONTEXT:
+- R15 cluster (GState flags): False
+- MMIO accesses: (none)
+- Nearby deny ranges: (none)
+- Nearby embedded objects: (none)
+
+Return ONLY valid JSON matching this schema:
+{
+  "function_id": "0xf800bd9c",
+  "function_name": "FUN_f800bd9c",
+  "primary_intent": "<one-line purpose statement>",
+  "intent_category": "<one of: initialization, dispatch, parser, raster, mmio_driver, math_kernel, utility, synchronization, error_handler, unknown>",
+  "evidence": [
+    {"addr": "0x...", "fact": "<what this instruction/pattern proves>"}
+  ],
+  "register_protocol": {
+    "inputs": ["<rN = description>"],
+    "outputs": ["<rN = description>"],
+    "side_effects": ["<memory write / MMIO / control reg change>"]
+  },
+  "data_accesses": [
+    {"addr": "0x...", "target": "0x...", "kind": "read|write|mmio", "interpretation": "..."}
+  ],
+  "control_flow_summary": "<how the function flows: linear, loop, conditional tree, dispatch, etc.>",
+  "confidence": <0-100>,
+  "confidence_factors": {
+    "supporting": ["<what raises confidence>"],
+    "limiting": ["<what caps confidence>"]
+  },
+  "alternatives": [
+    {"intent": "<alternative purpose>", "why_not_primary": "<evidence against>"}
+  ],
+  "open_questions": ["<what remains unknown>"],
+  "required_next_evidence": ["<what would resolve open questions>"],
+  "subsystem_hint": "<suggested subsystem: postscript_dispatch, pixel_pipeline, memory_management, board_init, interrupt_handling, unknown>"
+}

@@ -1,0 +1,68 @@
+Analyze the following function and return a structured JSON intent dossier.
+
+FUNCTION: FUN_f800b9e0 at 0xf800b9e0
+SIZE: 24 bytes (6 instructions)
+CONFIDENCE SOURCE: curated
+HAS UNRESOLVED BRI: False
+PRIORITY TAGS: (none)
+
+CALLERS (0): (none)
+CALLEES (0): (none)
+
+BLOCKS (2):
+  0xf800b9e0..0xf800b9eb (3 insns)
+  0xf800b9ec..0xf800b9f7 (3 insns)
+
+INSTRUCTIONS:
+  0xf800b9e0: ld.b r26(r24),r0                         defs=[r0_sink] uses=[r24,r26] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800b9e4: xorh 0x10c6,r24,r0                       defs=[r0_sink] uses=[0x10,r24,0x10c6] pcode=[INT_ZEXT,INT_LEFT,INT_XOR]
+  0xf800b9e8: btne 0x4,r0,0xf800bdc4                   defs=[] uses=[r0,0x4] pcode=[INT_NOTEQUAL,CBRANCH]
+  0xf800b9ec: ld.b r0(r8),r0                           defs=[r0_sink] uses=[0x0,r8] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800b9f0: ld.b r0(r28),r0                          defs=[r0_sink] uses=[0x0,r28] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800b9f4: andnot r3,r7,r30                         defs=[r30] uses=[r3,r7] pcode=[INT_NEGATE,INT_AND]
+
+REFERENCES:
+  0xf800b9e8 -> 0xf800bdc4 [CONDITIONAL_JUMP] flow=True
+
+STRINGS IN RANGE:
+  (none)
+
+DISPATCH UNRESOLVED:
+  (none)
+
+CONTEXT:
+- R15 cluster (GState flags): False
+- MMIO accesses: (none)
+- Nearby deny ranges: (none)
+- Nearby embedded objects: (none)
+
+Return ONLY valid JSON matching this schema:
+{
+  "function_id": "0xf800b9e0",
+  "function_name": "FUN_f800b9e0",
+  "primary_intent": "<one-line purpose statement>",
+  "intent_category": "<one of: initialization, dispatch, parser, raster, mmio_driver, math_kernel, utility, synchronization, error_handler, unknown>",
+  "evidence": [
+    {"addr": "0x...", "fact": "<what this instruction/pattern proves>"}
+  ],
+  "register_protocol": {
+    "inputs": ["<rN = description>"],
+    "outputs": ["<rN = description>"],
+    "side_effects": ["<memory write / MMIO / control reg change>"]
+  },
+  "data_accesses": [
+    {"addr": "0x...", "target": "0x...", "kind": "read|write|mmio", "interpretation": "..."}
+  ],
+  "control_flow_summary": "<how the function flows: linear, loop, conditional tree, dispatch, etc.>",
+  "confidence": <0-100>,
+  "confidence_factors": {
+    "supporting": ["<what raises confidence>"],
+    "limiting": ["<what caps confidence>"]
+  },
+  "alternatives": [
+    {"intent": "<alternative purpose>", "why_not_primary": "<evidence against>"}
+  ],
+  "open_questions": ["<what remains unknown>"],
+  "required_next_evidence": ["<what would resolve open questions>"],
+  "subsystem_hint": "<suggested subsystem: postscript_dispatch, pixel_pipeline, memory_management, board_init, interrupt_handling, unknown>"
+}

@@ -1,0 +1,16 @@
+# Core dependencies for NeXTSTEP documentation conversion
+beautifulsoup4>=4.12.0
+html2text>=2020.1.16
+PyPDF2>=3.0.0
+requests>=2.31.0
+
+# Optional: Better PDF conversion (recommended)
+# Requires system package: poppler-utils (brew install poppler)
+pdfplumber>=0.10.0
+pdf2image>=1.16.0
+
+# Optional: Enhanced HTML parsing
+lxml>=4.9.0
+
+# Optional: Progress bars for long conversions
+tqdm>=4.66.0

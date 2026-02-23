@@ -1,0 +1,941 @@
+NDserver Annotated Function Database
+================================================================================
+
+Total Functions: 92
+
+Functions by Purpose:
+--------------------------------------------------------------------------------
+
+Board Detection: 1 functions
+  0x00002dc6  ND_GetBoardList                          HIGH
+
+Main Logic: 3 functions
+  0x000033b4  main_logic_000033b4                      LOW
+  0x0000399c  main_logic_0000399c                      LOW
+  0x0000709c  main_logic_0000709c                      LOW
+
+Unknown: 71 functions
+  0x0000305c  func_0000305c                            UNKNOWN
+  0x0000307c  func_0000307c                            UNKNOWN
+  0x000030c2  func_000030c2                            UNKNOWN
+  0x00003200  func_00003200                            UNKNOWN
+  0x00003284  func_00003284                            UNKNOWN
+  0x00003614  func_00003614                            UNKNOWN
+  0x000036b2  func_000036b2                            UNKNOWN
+  0x00003820  func_00003820                            UNKNOWN
+  0x00003874  func_00003874                            UNKNOWN
+  0x00003cdc  func_00003cdc                            UNKNOWN
+  0x00003dde  func_00003dde                            UNKNOWN
+  0x00003eae  func_00003eae                            UNKNOWN
+  0x00003f3a  func_00003f3a                            UNKNOWN
+  0x00004024  func_00004024                            UNKNOWN
+  0x000040f4  func_000040f4                            UNKNOWN
+  0x000041fe  func_000041fe                            UNKNOWN
+  0x000042e8  func_000042e8                            UNKNOWN
+  0x000043c6  func_000043c6                            UNKNOWN
+  0x000044da  func_000044da                            UNKNOWN
+  0x000045f2  func_000045f2                            UNKNOWN
+  0x0000470a  func_0000470a                            UNKNOWN
+  0x00004822  func_00004822                            UNKNOWN
+  0x0000493a  func_0000493a                            UNKNOWN
+  0x00004a52  func_00004a52                            UNKNOWN
+  0x00004b70  func_00004b70                            UNKNOWN
+  0x00004c88  func_00004c88                            UNKNOWN
+  0x00004da0  func_00004da0                            UNKNOWN
+  0x00004ea0  func_00004ea0                            UNKNOWN
+  0x00004f64  func_00004f64                            UNKNOWN
+  0x00005078  func_00005078                            UNKNOWN
+  0x00005178  func_00005178                            UNKNOWN
+  0x00005256  func_00005256                            UNKNOWN
+  0x0000535c  func_0000535c                            UNKNOWN
+  0x00005454  func_00005454                            UNKNOWN
+  0x00005540  func_00005540                            UNKNOWN
+  0x0000561e  func_0000561e                            UNKNOWN
+  0x000056f0  func_000056f0                            UNKNOWN
+  0x0000577c  func_0000577c                            UNKNOWN
+  0x0000594a  func_0000594a                            UNKNOWN
+  0x000059f8  func_000059f8                            UNKNOWN
+  0x00005a3e  func_00005a3e                            UNKNOWN
+  0x00005af6  func_00005af6                            UNKNOWN
+  0x00005bb8  func_00005bb8                            UNKNOWN
+  0x00005c70  func_00005c70                            UNKNOWN
+  0x00005d26  func_00005d26                            UNKNOWN
+  0x00005d60  func_00005d60                            UNKNOWN
+  0x00005da6  func_00005da6                            UNKNOWN
+  0x00005dea  func_00005dea                            UNKNOWN
+  0x00005eea  func_00005eea                            UNKNOWN
+  0x00006036  func_00006036                            UNKNOWN
+  0x000060d8  func_000060d8                            UNKNOWN
+  0x00006156  func_00006156                            UNKNOWN
+  0x000061f4  func_000061f4                            UNKNOWN
+  0x0000627a  func_0000627a                            UNKNOWN
+  0x00006474  func_00006474                            UNKNOWN
+  0x00006518  func_00006518                            UNKNOWN
+  0x00006602  func_00006602                            UNKNOWN
+  0x000066dc  func_000066dc                            UNKNOWN
+  0x000067b8  func_000067b8                            UNKNOWN
+  0x00006856  func_00006856                            UNKNOWN
+  0x00006922  func_00006922                            UNKNOWN
+  0x00006a08  func_00006a08                            UNKNOWN
+  0x00006ac2  func_00006ac2                            UNKNOWN
+  0x00006b7c  func_00006b7c                            UNKNOWN
+  0x00006c48  func_00006c48                            UNKNOWN
+  0x00006d24  func_00006d24                            UNKNOWN
+  0x00006de4  func_00006de4                            UNKNOWN
+  0x00006e6c  func_00006e6c                            UNKNOWN
+  0x00006f94  func_00006f94                            UNKNOWN
+  0x00007032  func_00007032                            UNKNOWN
+  0x0000746c  func_0000746c                            UNKNOWN
+
+Utility/Helper: 17 functions
+  0x00002d96  helper_00002d96                          LOW
+  0x0000302c  helper_0000302c                          LOW
+  0x0000366e  helper_0000366e                          LOW
+  0x0000368c  helper_0000368c                          LOW
+  0x000062b8  helper_000062b8                          LOW
+  0x000062e8  helper_000062e8                          LOW
+  0x00006318  helper_00006318                          LOW
+  0x00006340  helper_00006340                          LOW
+  0x0000636c  helper_0000636c                          LOW
+  0x00006398  helper_00006398                          LOW
+  0x000063c0  helper_000063c0                          LOW
+  0x000063e8  helper_000063e8                          LOW
+  0x00006414  helper_00006414                          LOW
+  0x00006444  helper_00006444                          LOW
+  0x00007072  helper_00007072                          LOW
+  0x000075cc  helper_000075cc                          LOW
+  0x000075e2  helper_000075e2                          LOW
+
+
+================================================================================
+Detailed Function List:
+================================================================================
+
+Address:     0x00002d96 - 0x00002dc5
+Label:       helper_00002d96
+Purpose:     Utility/Helper
+Description: Small function (48 bytes) - likely helper/wrapper
+Size:        48 bytes
+Frame:       4 bytes
+Confidence:  LOW
+File:        disassembly/functions/00002d96_helper_00002d96.asm
+--------------------------------------------------------------------------------
+Address:     0x00002dc6 - 0x0000305b
+Label:       ND_GetBoardList
+Purpose:     Board Detection
+Description: Scans NeXTBus slots for NeXTdimension boards, validates availability
+Size:        662 bytes
+Frame:       20 bytes
+Confidence:  HIGH
+File:        disassembly/functions/00002dc6_ND_GetBoardList.asm
+--------------------------------------------------------------------------------
+Address:     0x0000302c - 0x0000305b
+Label:       helper_0000302c
+Purpose:     Utility/Helper
+Description: Small function (48 bytes) - likely helper/wrapper
+Size:        48 bytes
+Frame:       0 bytes
+Confidence:  LOW
+File:        disassembly/functions/0000302c_helper_0000302c.asm
+--------------------------------------------------------------------------------
+Address:     0x0000305c - 0x000031ff
+Label:       func_0000305c
+Purpose:     Unknown
+Description: 420 bytes, frame size 0
+Size:        420 bytes
+Frame:       0 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/0000305c_func_0000305c.asm
+--------------------------------------------------------------------------------
+Address:     0x0000307c - 0x000031ff
+Label:       func_0000307c
+Purpose:     Unknown
+Description: 388 bytes, frame size 0
+Size:        388 bytes
+Frame:       0 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/0000307c_func_0000307c.asm
+--------------------------------------------------------------------------------
+Address:     0x000030c2 - 0x000031ff
+Label:       func_000030c2
+Purpose:     Unknown
+Description: 318 bytes, frame size 28
+Size:        318 bytes
+Frame:       28 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/000030c2_func_000030c2.asm
+--------------------------------------------------------------------------------
+Address:     0x00003200 - 0x00003283
+Label:       func_00003200
+Purpose:     Unknown
+Description: 132 bytes, frame size 28
+Size:        132 bytes
+Frame:       28 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00003200_func_00003200.asm
+--------------------------------------------------------------------------------
+Address:     0x00003284 - 0x000033b3
+Label:       func_00003284
+Purpose:     Unknown
+Description: 304 bytes, frame size 64
+Size:        304 bytes
+Frame:       64 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00003284_func_00003284.asm
+--------------------------------------------------------------------------------
+Address:     0x000033b4 - 0x00003613
+Label:       main_logic_000033b4
+Purpose:     Main Logic
+Description: Large function (608 bytes) - complex logic
+Size:        608 bytes
+Frame:       16 bytes
+Confidence:  LOW
+File:        disassembly/functions/000033b4_main_logic_000033b4.asm
+--------------------------------------------------------------------------------
+Address:     0x00003614 - 0x0000366d
+Label:       func_00003614
+Purpose:     Unknown
+Description: 90 bytes, frame size 0
+Size:        90 bytes
+Frame:       0 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00003614_func_00003614.asm
+--------------------------------------------------------------------------------
+Address:     0x0000366e - 0x0000368b
+Label:       helper_0000366e
+Purpose:     Utility/Helper
+Description: Small function (30 bytes) - likely helper/wrapper
+Size:        30 bytes
+Frame:       0 bytes
+Confidence:  LOW
+File:        disassembly/functions/0000366e_helper_0000366e.asm
+--------------------------------------------------------------------------------
+Address:     0x0000368c - 0x000036b1
+Label:       helper_0000368c
+Purpose:     Utility/Helper
+Description: Small function (38 bytes) - likely helper/wrapper
+Size:        38 bytes
+Frame:       0 bytes
+Confidence:  LOW
+File:        disassembly/functions/0000368c_helper_0000368c.asm
+--------------------------------------------------------------------------------
+Address:     0x000036b2 - 0x0000381f
+Label:       func_000036b2
+Purpose:     Unknown
+Description: 366 bytes, frame size 0
+Size:        366 bytes
+Frame:       0 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/000036b2_func_000036b2.asm
+--------------------------------------------------------------------------------
+Address:     0x00003820 - 0x00003873
+Label:       func_00003820
+Purpose:     Unknown
+Description: 84 bytes, frame size 0
+Size:        84 bytes
+Frame:       0 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00003820_func_00003820.asm
+--------------------------------------------------------------------------------
+Address:     0x00003874 - 0x0000399b
+Label:       func_00003874
+Purpose:     Unknown
+Description: 296 bytes, frame size 0
+Size:        296 bytes
+Frame:       0 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00003874_func_00003874.asm
+--------------------------------------------------------------------------------
+Address:     0x0000399c - 0x00003cdb
+Label:       main_logic_0000399c
+Purpose:     Main Logic
+Description: Large function (832 bytes) - complex logic
+Size:        832 bytes
+Frame:       12 bytes
+Confidence:  LOW
+File:        disassembly/functions/0000399c_main_logic_0000399c.asm
+--------------------------------------------------------------------------------
+Address:     0x00003cdc - 0x00003ddd
+Label:       func_00003cdc
+Purpose:     Unknown
+Description: 258 bytes, frame size 48
+Size:        258 bytes
+Frame:       48 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00003cdc_func_00003cdc.asm
+--------------------------------------------------------------------------------
+Address:     0x00003dde - 0x00003ead
+Label:       func_00003dde
+Purpose:     Unknown
+Description: 208 bytes, frame size 40
+Size:        208 bytes
+Frame:       40 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00003dde_func_00003dde.asm
+--------------------------------------------------------------------------------
+Address:     0x00003eae - 0x00003f39
+Label:       func_00003eae
+Purpose:     Unknown
+Description: 140 bytes, frame size 548
+Size:        140 bytes
+Frame:       548 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00003eae_func_00003eae.asm
+--------------------------------------------------------------------------------
+Address:     0x00003f3a - 0x00004023
+Label:       func_00003f3a
+Purpose:     Unknown
+Description: 234 bytes, frame size 40
+Size:        234 bytes
+Frame:       40 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00003f3a_func_00003f3a.asm
+--------------------------------------------------------------------------------
+Address:     0x00004024 - 0x000040f3
+Label:       func_00004024
+Purpose:     Unknown
+Description: 208 bytes, frame size 40
+Size:        208 bytes
+Frame:       40 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00004024_func_00004024.asm
+--------------------------------------------------------------------------------
+Address:     0x000040f4 - 0x000041fd
+Label:       func_000040f4
+Purpose:     Unknown
+Description: 266 bytes, frame size 72
+Size:        266 bytes
+Frame:       72 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/000040f4_func_000040f4.asm
+--------------------------------------------------------------------------------
+Address:     0x000041fe - 0x000042e7
+Label:       func_000041fe
+Purpose:     Unknown
+Description: 234 bytes, frame size 40
+Size:        234 bytes
+Frame:       40 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/000041fe_func_000041fe.asm
+--------------------------------------------------------------------------------
+Address:     0x000042e8 - 0x000043c5
+Label:       func_000042e8
+Purpose:     Unknown
+Description: 222 bytes, frame size 40
+Size:        222 bytes
+Frame:       40 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/000042e8_func_000042e8.asm
+--------------------------------------------------------------------------------
+Address:     0x000043c6 - 0x000044d9
+Label:       func_000043c6
+Purpose:     Unknown
+Description: 276 bytes, frame size 56
+Size:        276 bytes
+Frame:       56 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/000043c6_func_000043c6.asm
+--------------------------------------------------------------------------------
+Address:     0x000044da - 0x000045f1
+Label:       func_000044da
+Purpose:     Unknown
+Description: 280 bytes, frame size 48
+Size:        280 bytes
+Frame:       48 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/000044da_func_000044da.asm
+--------------------------------------------------------------------------------
+Address:     0x000045f2 - 0x00004709
+Label:       func_000045f2
+Purpose:     Unknown
+Description: 280 bytes, frame size 48
+Size:        280 bytes
+Frame:       48 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/000045f2_func_000045f2.asm
+--------------------------------------------------------------------------------
+Address:     0x0000470a - 0x00004821
+Label:       func_0000470a
+Purpose:     Unknown
+Description: 280 bytes, frame size 48
+Size:        280 bytes
+Frame:       48 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/0000470a_func_0000470a.asm
+--------------------------------------------------------------------------------
+Address:     0x00004822 - 0x00004939
+Label:       func_00004822
+Purpose:     Unknown
+Description: 280 bytes, frame size 48
+Size:        280 bytes
+Frame:       48 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00004822_func_00004822.asm
+--------------------------------------------------------------------------------
+Address:     0x0000493a - 0x00004a51
+Label:       func_0000493a
+Purpose:     Unknown
+Description: 280 bytes, frame size 48
+Size:        280 bytes
+Frame:       48 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/0000493a_func_0000493a.asm
+--------------------------------------------------------------------------------
+Address:     0x00004a52 - 0x00004b6f
+Label:       func_00004a52
+Purpose:     Unknown
+Description: 286 bytes, frame size 300
+Size:        286 bytes
+Frame:       300 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00004a52_func_00004a52.asm
+--------------------------------------------------------------------------------
+Address:     0x00004b70 - 0x00004c87
+Label:       func_00004b70
+Purpose:     Unknown
+Description: 280 bytes, frame size 48
+Size:        280 bytes
+Frame:       48 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00004b70_func_00004b70.asm
+--------------------------------------------------------------------------------
+Address:     0x00004c88 - 0x00004d9f
+Label:       func_00004c88
+Purpose:     Unknown
+Description: 280 bytes, frame size 48
+Size:        280 bytes
+Frame:       48 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00004c88_func_00004c88.asm
+--------------------------------------------------------------------------------
+Address:     0x00004da0 - 0x00004e9f
+Label:       func_00004da0
+Purpose:     Unknown
+Description: 256 bytes, frame size 48
+Size:        256 bytes
+Frame:       48 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00004da0_func_00004da0.asm
+--------------------------------------------------------------------------------
+Address:     0x00004ea0 - 0x00004f63
+Label:       func_00004ea0
+Purpose:     Unknown
+Description: 196 bytes, frame size 32
+Size:        196 bytes
+Frame:       32 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00004ea0_func_00004ea0.asm
+--------------------------------------------------------------------------------
+Address:     0x00004f64 - 0x00005077
+Label:       func_00004f64
+Purpose:     Unknown
+Description: 276 bytes, frame size 1068
+Size:        276 bytes
+Frame:       1068 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00004f64_func_00004f64.asm
+--------------------------------------------------------------------------------
+Address:     0x00005078 - 0x00005177
+Label:       func_00005078
+Purpose:     Unknown
+Description: 256 bytes, frame size 48
+Size:        256 bytes
+Frame:       48 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00005078_func_00005078.asm
+--------------------------------------------------------------------------------
+Address:     0x00005178 - 0x00005255
+Label:       func_00005178
+Purpose:     Unknown
+Description: 222 bytes, frame size 48
+Size:        222 bytes
+Frame:       48 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00005178_func_00005178.asm
+--------------------------------------------------------------------------------
+Address:     0x00005256 - 0x0000535b
+Label:       func_00005256
+Purpose:     Unknown
+Description: 262 bytes, frame size 308
+Size:        262 bytes
+Frame:       308 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00005256_func_00005256.asm
+--------------------------------------------------------------------------------
+Address:     0x0000535c - 0x00005453
+Label:       func_0000535c
+Purpose:     Unknown
+Description: 248 bytes, frame size 300
+Size:        248 bytes
+Frame:       300 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/0000535c_func_0000535c.asm
+--------------------------------------------------------------------------------
+Address:     0x00005454 - 0x0000553f
+Label:       func_00005454
+Purpose:     Unknown
+Description: 236 bytes, frame size 40
+Size:        236 bytes
+Frame:       40 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00005454_func_00005454.asm
+--------------------------------------------------------------------------------
+Address:     0x00005540 - 0x0000561d
+Label:       func_00005540
+Purpose:     Unknown
+Description: 222 bytes, frame size 40
+Size:        222 bytes
+Frame:       40 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00005540_func_00005540.asm
+--------------------------------------------------------------------------------
+Address:     0x0000561e - 0x000056ef
+Label:       func_0000561e
+Purpose:     Unknown
+Description: 210 bytes, frame size 40
+Size:        210 bytes
+Frame:       40 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/0000561e_func_0000561e.asm
+--------------------------------------------------------------------------------
+Address:     0x000056f0 - 0x0000577b
+Label:       func_000056f0
+Purpose:     Unknown
+Description: 140 bytes, frame size 548
+Size:        140 bytes
+Frame:       548 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/000056f0_func_000056f0.asm
+--------------------------------------------------------------------------------
+Address:     0x0000577c - 0x00005949
+Label:       func_0000577c
+Purpose:     Unknown
+Description: 462 bytes, frame size 120
+Size:        462 bytes
+Frame:       120 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/0000577c_func_0000577c.asm
+--------------------------------------------------------------------------------
+Address:     0x0000594a - 0x000059f7
+Label:       func_0000594a
+Purpose:     Unknown
+Description: 174 bytes, frame size 812
+Size:        174 bytes
+Frame:       812 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/0000594a_func_0000594a.asm
+--------------------------------------------------------------------------------
+Address:     0x000059f8 - 0x00005a3d
+Label:       func_000059f8
+Purpose:     Unknown
+Description: 70 bytes, frame size 32
+Size:        70 bytes
+Frame:       32 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/000059f8_func_000059f8.asm
+--------------------------------------------------------------------------------
+Address:     0x00005a3e - 0x00005af5
+Label:       func_00005a3e
+Purpose:     Unknown
+Description: 184 bytes, frame size 0
+Size:        184 bytes
+Frame:       0 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00005a3e_func_00005a3e.asm
+--------------------------------------------------------------------------------
+Address:     0x00005af6 - 0x00005bb7
+Label:       func_00005af6
+Purpose:     Unknown
+Description: 194 bytes, frame size 0
+Size:        194 bytes
+Frame:       0 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00005af6_func_00005af6.asm
+--------------------------------------------------------------------------------
+Address:     0x00005bb8 - 0x00005c6f
+Label:       func_00005bb8
+Purpose:     Unknown
+Description: 184 bytes, frame size 0
+Size:        184 bytes
+Frame:       0 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00005bb8_func_00005bb8.asm
+--------------------------------------------------------------------------------
+Address:     0x00005c70 - 0x00005d25
+Label:       func_00005c70
+Purpose:     Unknown
+Description: 182 bytes, frame size 0
+Size:        182 bytes
+Frame:       0 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00005c70_func_00005c70.asm
+--------------------------------------------------------------------------------
+Address:     0x00005d26 - 0x00005d5f
+Label:       func_00005d26
+Purpose:     Unknown
+Description: 58 bytes, frame size 0
+Size:        58 bytes
+Frame:       0 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00005d26_func_00005d26.asm
+--------------------------------------------------------------------------------
+Address:     0x00005d60 - 0x00005da5
+Label:       func_00005d60
+Purpose:     Unknown
+Description: 70 bytes, frame size 32
+Size:        70 bytes
+Frame:       32 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00005d60_func_00005d60.asm
+--------------------------------------------------------------------------------
+Address:     0x00005da6 - 0x00005de9
+Label:       func_00005da6
+Purpose:     Unknown
+Description: 68 bytes, frame size 32
+Size:        68 bytes
+Frame:       32 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00005da6_func_00005da6.asm
+--------------------------------------------------------------------------------
+Address:     0x00005dea - 0x00005ee9
+Label:       func_00005dea
+Purpose:     Unknown
+Description: 256 bytes, frame size 68
+Size:        256 bytes
+Frame:       68 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00005dea_func_00005dea.asm
+--------------------------------------------------------------------------------
+Address:     0x00005eea - 0x00006035
+Label:       func_00005eea
+Purpose:     Unknown
+Description: 332 bytes, frame size 7944
+Size:        332 bytes
+Frame:       7944 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00005eea_func_00005eea.asm
+--------------------------------------------------------------------------------
+Address:     0x00006036 - 0x000060d7
+Label:       func_00006036
+Purpose:     Unknown
+Description: 162 bytes, frame size 0
+Size:        162 bytes
+Frame:       0 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00006036_func_00006036.asm
+--------------------------------------------------------------------------------
+Address:     0x000060d8 - 0x00006155
+Label:       func_000060d8
+Purpose:     Unknown
+Description: 126 bytes, frame size 0
+Size:        126 bytes
+Frame:       0 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/000060d8_func_000060d8.asm
+--------------------------------------------------------------------------------
+Address:     0x00006156 - 0x000061f3
+Label:       func_00006156
+Purpose:     Unknown
+Description: 158 bytes, frame size 0
+Size:        158 bytes
+Frame:       0 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00006156_func_00006156.asm
+--------------------------------------------------------------------------------
+Address:     0x000061f4 - 0x00006279
+Label:       func_000061f4
+Purpose:     Unknown
+Description: 134 bytes, frame size 0
+Size:        134 bytes
+Frame:       0 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/000061f4_func_000061f4.asm
+--------------------------------------------------------------------------------
+Address:     0x0000627a - 0x000062b7
+Label:       func_0000627a
+Purpose:     Unknown
+Description: 62 bytes, frame size 0
+Size:        62 bytes
+Frame:       0 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/0000627a_func_0000627a.asm
+--------------------------------------------------------------------------------
+Address:     0x000062b8 - 0x000062e7
+Label:       helper_000062b8
+Purpose:     Utility/Helper
+Description: Small function (48 bytes) - likely helper/wrapper
+Size:        48 bytes
+Frame:       0 bytes
+Confidence:  LOW
+File:        disassembly/functions/000062b8_helper_000062b8.asm
+--------------------------------------------------------------------------------
+Address:     0x000062e8 - 0x00006317
+Label:       helper_000062e8
+Purpose:     Utility/Helper
+Description: Small function (48 bytes) - likely helper/wrapper
+Size:        48 bytes
+Frame:       0 bytes
+Confidence:  LOW
+File:        disassembly/functions/000062e8_helper_000062e8.asm
+--------------------------------------------------------------------------------
+Address:     0x00006318 - 0x0000633f
+Label:       helper_00006318
+Purpose:     Utility/Helper
+Description: Small function (40 bytes) - likely helper/wrapper
+Size:        40 bytes
+Frame:       0 bytes
+Confidence:  LOW
+File:        disassembly/functions/00006318_helper_00006318.asm
+--------------------------------------------------------------------------------
+Address:     0x00006340 - 0x0000636b
+Label:       helper_00006340
+Purpose:     Utility/Helper
+Description: Small function (44 bytes) - likely helper/wrapper
+Size:        44 bytes
+Frame:       0 bytes
+Confidence:  LOW
+File:        disassembly/functions/00006340_helper_00006340.asm
+--------------------------------------------------------------------------------
+Address:     0x0000636c - 0x00006397
+Label:       helper_0000636c
+Purpose:     Utility/Helper
+Description: Small function (44 bytes) - likely helper/wrapper
+Size:        44 bytes
+Frame:       0 bytes
+Confidence:  LOW
+File:        disassembly/functions/0000636c_helper_0000636c.asm
+--------------------------------------------------------------------------------
+Address:     0x00006398 - 0x000063bf
+Label:       helper_00006398
+Purpose:     Utility/Helper
+Description: Small function (40 bytes) - likely helper/wrapper
+Size:        40 bytes
+Frame:       0 bytes
+Confidence:  LOW
+File:        disassembly/functions/00006398_helper_00006398.asm
+--------------------------------------------------------------------------------
+Address:     0x000063c0 - 0x000063e7
+Label:       helper_000063c0
+Purpose:     Utility/Helper
+Description: Small function (40 bytes) - likely helper/wrapper
+Size:        40 bytes
+Frame:       0 bytes
+Confidence:  LOW
+File:        disassembly/functions/000063c0_helper_000063c0.asm
+--------------------------------------------------------------------------------
+Address:     0x000063e8 - 0x00006413
+Label:       helper_000063e8
+Purpose:     Utility/Helper
+Description: Small function (44 bytes) - likely helper/wrapper
+Size:        44 bytes
+Frame:       0 bytes
+Confidence:  LOW
+File:        disassembly/functions/000063e8_helper_000063e8.asm
+--------------------------------------------------------------------------------
+Address:     0x00006414 - 0x00006443
+Label:       helper_00006414
+Purpose:     Utility/Helper
+Description: Small function (48 bytes) - likely helper/wrapper
+Size:        48 bytes
+Frame:       0 bytes
+Confidence:  LOW
+File:        disassembly/functions/00006414_helper_00006414.asm
+--------------------------------------------------------------------------------
+Address:     0x00006444 - 0x00006473
+Label:       helper_00006444
+Purpose:     Utility/Helper
+Description: Small function (48 bytes) - likely helper/wrapper
+Size:        48 bytes
+Frame:       0 bytes
+Confidence:  LOW
+File:        disassembly/functions/00006444_helper_00006444.asm
+--------------------------------------------------------------------------------
+Address:     0x00006474 - 0x00006517
+Label:       func_00006474
+Purpose:     Unknown
+Description: 164 bytes, frame size 4
+Size:        164 bytes
+Frame:       4 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00006474_func_00006474.asm
+--------------------------------------------------------------------------------
+Address:     0x00006518 - 0x00006601
+Label:       func_00006518
+Purpose:     Unknown
+Description: 234 bytes, frame size 4
+Size:        234 bytes
+Frame:       4 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00006518_func_00006518.asm
+--------------------------------------------------------------------------------
+Address:     0x00006602 - 0x000066db
+Label:       func_00006602
+Purpose:     Unknown
+Description: 218 bytes, frame size 0
+Size:        218 bytes
+Frame:       0 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00006602_func_00006602.asm
+--------------------------------------------------------------------------------
+Address:     0x000066dc - 0x000067b7
+Label:       func_000066dc
+Purpose:     Unknown
+Description: 220 bytes, frame size 0
+Size:        220 bytes
+Frame:       0 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/000066dc_func_000066dc.asm
+--------------------------------------------------------------------------------
+Address:     0x000067b8 - 0x00006855
+Label:       func_000067b8
+Purpose:     Unknown
+Description: 158 bytes, frame size 0
+Size:        158 bytes
+Frame:       0 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/000067b8_func_000067b8.asm
+--------------------------------------------------------------------------------
+Address:     0x00006856 - 0x00006921
+Label:       func_00006856
+Purpose:     Unknown
+Description: 204 bytes, frame size 0
+Size:        204 bytes
+Frame:       0 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00006856_func_00006856.asm
+--------------------------------------------------------------------------------
+Address:     0x00006922 - 0x00006a07
+Label:       func_00006922
+Purpose:     Unknown
+Description: 230 bytes, frame size 0
+Size:        230 bytes
+Frame:       0 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00006922_func_00006922.asm
+--------------------------------------------------------------------------------
+Address:     0x00006a08 - 0x00006ac1
+Label:       func_00006a08
+Purpose:     Unknown
+Description: 186 bytes, frame size 0
+Size:        186 bytes
+Frame:       0 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00006a08_func_00006a08.asm
+--------------------------------------------------------------------------------
+Address:     0x00006ac2 - 0x00006b7b
+Label:       func_00006ac2
+Purpose:     Unknown
+Description: 186 bytes, frame size 0
+Size:        186 bytes
+Frame:       0 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00006ac2_func_00006ac2.asm
+--------------------------------------------------------------------------------
+Address:     0x00006b7c - 0x00006c47
+Label:       func_00006b7c
+Purpose:     Unknown
+Description: 204 bytes, frame size 0
+Size:        204 bytes
+Frame:       0 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00006b7c_func_00006b7c.asm
+--------------------------------------------------------------------------------
+Address:     0x00006c48 - 0x00006d23
+Label:       func_00006c48
+Purpose:     Unknown
+Description: 220 bytes, frame size 0
+Size:        220 bytes
+Frame:       0 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00006c48_func_00006c48.asm
+--------------------------------------------------------------------------------
+Address:     0x00006d24 - 0x00006de3
+Label:       func_00006d24
+Purpose:     Unknown
+Description: 192 bytes, frame size 0
+Size:        192 bytes
+Frame:       0 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00006d24_func_00006d24.asm
+--------------------------------------------------------------------------------
+Address:     0x00006de4 - 0x00006e6b
+Label:       func_00006de4
+Purpose:     Unknown
+Description: 136 bytes, frame size 0
+Size:        136 bytes
+Frame:       0 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00006de4_func_00006de4.asm
+--------------------------------------------------------------------------------
+Address:     0x00006e6c - 0x00006f93
+Label:       func_00006e6c
+Purpose:     Unknown
+Description: 296 bytes, frame size 512
+Size:        296 bytes
+Frame:       512 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00006e6c_func_00006e6c.asm
+--------------------------------------------------------------------------------
+Address:     0x00006f94 - 0x00007031
+Label:       func_00006f94
+Purpose:     Unknown
+Description: 158 bytes, frame size 60
+Size:        158 bytes
+Frame:       60 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00006f94_func_00006f94.asm
+--------------------------------------------------------------------------------
+Address:     0x00007032 - 0x00007071
+Label:       func_00007032
+Purpose:     Unknown
+Description: 64 bytes, frame size 4
+Size:        64 bytes
+Frame:       4 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/00007032_func_00007032.asm
+--------------------------------------------------------------------------------
+Address:     0x00007072 - 0x0000709b
+Label:       helper_00007072
+Purpose:     Utility/Helper
+Description: Small function (42 bytes) - likely helper/wrapper
+Size:        42 bytes
+Frame:       0 bytes
+Confidence:  LOW
+File:        disassembly/functions/00007072_helper_00007072.asm
+--------------------------------------------------------------------------------
+Address:     0x0000709c - 0x0000746b
+Label:       main_logic_0000709c
+Purpose:     Main Logic
+Description: Large function (976 bytes) - complex logic
+Size:        976 bytes
+Frame:       56 bytes
+Confidence:  LOW
+File:        disassembly/functions/0000709c_main_logic_0000709c.asm
+--------------------------------------------------------------------------------
+Address:     0x0000746c - 0x000075cb
+Label:       func_0000746c
+Purpose:     Unknown
+Description: 352 bytes, frame size 24
+Size:        352 bytes
+Frame:       24 bytes
+Confidence:  UNKNOWN
+File:        disassembly/functions/0000746c_func_0000746c.asm
+--------------------------------------------------------------------------------
+Address:     0x000075cc - 0x000075f7
+Label:       helper_000075cc
+Purpose:     Utility/Helper
+Description: Small function (44 bytes) - likely helper/wrapper
+Size:        44 bytes
+Frame:       0 bytes
+Confidence:  LOW
+File:        disassembly/functions/000075cc_helper_000075cc.asm
+--------------------------------------------------------------------------------
+Address:     0x000075e2 - 0x000075f7
+Label:       helper_000075e2
+Purpose:     Utility/Helper
+Description: Small function (22 bytes) - likely helper/wrapper
+Size:        22 bytes
+Frame:       0 bytes
+Confidence:  LOW
+File:        disassembly/functions/000075e2_helper_000075e2.asm
+--------------------------------------------------------------------------------

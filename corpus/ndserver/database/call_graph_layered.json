@@ -1,0 +1,721 @@
+[
+  {
+    "function": {
+      "address": 11718,
+      "name": "FUN_00002dc6",
+      "address_hex": "0x00002dc6"
+    },
+    "internal_calls": [
+      {
+        "address": 19026,
+        "name": "FUN_00004a52",
+        "address_hex": "0x00004a52"
+      },
+      {
+        "address": 14452,
+        "name": "FUN_00003874",
+        "address_hex": "0x00003874"
+      },
+      {
+        "address": 23286,
+        "name": "FUN_00005af6",
+        "address_hex": "0x00005af6"
+      },
+      {
+        "address": 12380,
+        "name": "FUN_0000305c",
+        "address_hex": "0x0000305c"
+      },
+      {
+        "address": 17128,
+        "name": "FUN_000042e8",
+        "address_hex": "0x000042e8"
+      },
+      {
+        "address": 23846,
+        "name": "FUN_00005d26",
+        "address_hex": "0x00005d26"
+      },
+      {
+        "address": 20856,
+        "name": "FUN_00005178",
+        "address_hex": "0x00005178"
+      },
+      {
+        "address": 23904,
+        "name": "FUN_00005d60",
+        "address_hex": "0x00005d60"
+      },
+      {
+        "address": 14368,
+        "name": "FUN_00003820",
+        "address_hex": "0x00003820"
+      },
+      {
+        "address": 12800,
+        "name": "FUN_00003200",
+        "address_hex": "0x00003200"
+      },
+      {
+        "address": 12932,
+        "name": "FUN_00003284",
+        "address_hex": "0x00003284"
+      },
+      {
+        "address": 14748,
+        "name": "FUN_0000399c",
+        "address_hex": "0x0000399c"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [],
+    "depth": 3
+  },
+  {
+    "function": {
+      "address": 12932,
+      "name": "FUN_00003284",
+      "address_hex": "0x00003284"
+    },
+    "internal_calls": [
+      {
+        "address": 19026,
+        "name": "FUN_00004a52",
+        "address_hex": "0x00004a52"
+      },
+      {
+        "address": 24042,
+        "name": "FUN_00005dea",
+        "address_hex": "0x00005dea"
+      },
+      {
+        "address": 17350,
+        "name": "FUN_000043c6",
+        "address_hex": "0x000043c6"
+      },
+      {
+        "address": 23974,
+        "name": "FUN_00005da6",
+        "address_hex": "0x00005da6"
+      },
+      {
+        "address": 14368,
+        "name": "FUN_00003820",
+        "address_hex": "0x00003820"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [
+      11718
+    ],
+    "depth": 0
+  },
+  {
+    "function": {
+      "address": 13236,
+      "name": "FUN_000033b4",
+      "address_hex": "0x000033b4"
+    },
+    "internal_calls": [
+      {
+        "address": 12482,
+        "name": "FUN_000030c2",
+        "address_hex": "0x000030c2"
+      },
+      {
+        "address": 25076,
+        "name": "FUN_000061f4",
+        "address_hex": "0x000061f4"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [
+      14748
+    ],
+    "depth": 0
+  },
+  {
+    "function": {
+      "address": 14002,
+      "name": "FUN_000036b2",
+      "address_hex": "0x000036b2"
+    },
+    "internal_calls": [
+      {
+        "address": 17906,
+        "name": "FUN_000045f2",
+        "address_hex": "0x000045f2"
+      },
+      {
+        "address": 15580,
+        "name": "FUN_00003cdc",
+        "address_hex": "0x00003cdc"
+      },
+      {
+        "address": 14452,
+        "name": "FUN_00003874",
+        "address_hex": "0x00003874"
+      },
+      {
+        "address": 16894,
+        "name": "FUN_000041fe",
+        "address_hex": "0x000041fe"
+      },
+      {
+        "address": 18746,
+        "name": "FUN_0000493a",
+        "address_hex": "0x0000493a"
+      },
+      {
+        "address": 18466,
+        "name": "FUN_00004822",
+        "address_hex": "0x00004822"
+      },
+      {
+        "address": 16186,
+        "name": "FUN_00003f3a",
+        "address_hex": "0x00003f3a"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [
+      23102,
+      23286,
+      23480
+    ],
+    "depth": 0
+  },
+  {
+    "function": {
+      "address": 14748,
+      "name": "FUN_0000399c",
+      "address_hex": "0x0000399c"
+    },
+    "internal_calls": [
+      {
+        "address": 19026,
+        "name": "FUN_00004a52",
+        "address_hex": "0x00004a52"
+      },
+      {
+        "address": 28132,
+        "name": "FUN_00006de4",
+        "address_hex": "0x00006de4"
+      },
+      {
+        "address": 13236,
+        "name": "FUN_000033b4",
+        "address_hex": "0x000033b4"
+      },
+      {
+        "address": 28268,
+        "name": "FUN_00006e6c",
+        "address_hex": "0x00006e6c"
+      },
+      {
+        "address": 25716,
+        "name": "FUN_00006474",
+        "address_hex": "0x00006474"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [
+      11718
+    ],
+    "depth": 1
+  },
+  {
+    "function": {
+      "address": 23102,
+      "name": "FUN_00005a3e",
+      "address_hex": "0x00005a3e"
+    },
+    "internal_calls": [
+      {
+        "address": 14002,
+        "name": "FUN_000036b2",
+        "address_hex": "0x000036b2"
+      },
+      {
+        "address": 19592,
+        "name": "FUN_00004c88",
+        "address_hex": "0x00004c88"
+      },
+      {
+        "address": 23664,
+        "name": "FUN_00005c70",
+        "address_hex": "0x00005c70"
+      },
+      {
+        "address": 28564,
+        "name": "FUN_00006f94",
+        "address_hex": "0x00006f94"
+      },
+      {
+        "address": 14452,
+        "name": "FUN_00003874",
+        "address_hex": "0x00003874"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [],
+    "depth": 2
+  },
+  {
+    "function": {
+      "address": 23286,
+      "name": "FUN_00005af6",
+      "address_hex": "0x00005af6"
+    },
+    "internal_calls": [
+      {
+        "address": 14002,
+        "name": "FUN_000036b2",
+        "address_hex": "0x000036b2"
+      },
+      {
+        "address": 19592,
+        "name": "FUN_00004c88",
+        "address_hex": "0x00004c88"
+      },
+      {
+        "address": 23664,
+        "name": "FUN_00005c70",
+        "address_hex": "0x00005c70"
+      },
+      {
+        "address": 14452,
+        "name": "FUN_00003874",
+        "address_hex": "0x00003874"
+      },
+      {
+        "address": 28722,
+        "name": "FUN_00007032",
+        "address_hex": "0x00007032"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [
+      11718
+    ],
+    "depth": 2
+  },
+  {
+    "function": {
+      "address": 23480,
+      "name": "FUN_00005bb8",
+      "address_hex": "0x00005bb8"
+    },
+    "internal_calls": [
+      {
+        "address": 14002,
+        "name": "FUN_000036b2",
+        "address_hex": "0x000036b2"
+      },
+      {
+        "address": 19592,
+        "name": "FUN_00004c88",
+        "address_hex": "0x00004c88"
+      },
+      {
+        "address": 23664,
+        "name": "FUN_00005c70",
+        "address_hex": "0x00005c70"
+      },
+      {
+        "address": 28786,
+        "name": "FUN_00007072",
+        "address_hex": "0x00007072"
+      },
+      {
+        "address": 14452,
+        "name": "FUN_00003874",
+        "address_hex": "0x00003874"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [],
+    "depth": 2
+  },
+  {
+    "function": {
+      "address": 24630,
+      "name": "FUN_00006036",
+      "address_hex": "0x00006036"
+    },
+    "internal_calls": [
+      {
+        "address": 13844,
+        "name": "FUN_00003614",
+        "address_hex": "0x00003614"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [],
+    "depth": 0
+  },
+  {
+    "function": {
+      "address": 24792,
+      "name": "FUN_000060d8",
+      "address_hex": "0x000060d8"
+    },
+    "internal_calls": [
+      {
+        "address": 13934,
+        "name": "FUN_0000366e",
+        "address_hex": "0x0000366e"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [],
+    "depth": 0
+  },
+  {
+    "function": {
+      "address": 24918,
+      "name": "FUN_00006156",
+      "address_hex": "0x00006156"
+    },
+    "internal_calls": [
+      {
+        "address": 13964,
+        "name": "FUN_0000368c",
+        "address_hex": "0x0000368c"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [],
+    "depth": 0
+  },
+  {
+    "function": {
+      "address": 25716,
+      "name": "FUN_00006474",
+      "address_hex": "0x00006474"
+    },
+    "internal_calls": [
+      {
+        "address": 19026,
+        "name": "FUN_00004a52",
+        "address_hex": "0x00004a52"
+      },
+      {
+        "address": 21078,
+        "name": "FUN_00005256",
+        "address_hex": "0x00005256"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [
+      14748
+    ],
+    "depth": 0
+  },
+  {
+    "function": {
+      "address": 25880,
+      "name": "FUN_00006518",
+      "address_hex": "0x00006518"
+    },
+    "internal_calls": [
+      {
+        "address": 25210,
+        "name": "FUN_0000627a",
+        "address_hex": "0x0000627a"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [],
+    "depth": 0
+  },
+  {
+    "function": {
+      "address": 26114,
+      "name": "FUN_00006602",
+      "address_hex": "0x00006602"
+    },
+    "internal_calls": [
+      {
+        "address": 25272,
+        "name": "FUN_000062b8",
+        "address_hex": "0x000062b8"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [],
+    "depth": 0
+  },
+  {
+    "function": {
+      "address": 26332,
+      "name": "FUN_000066dc",
+      "address_hex": "0x000066dc"
+    },
+    "internal_calls": [
+      {
+        "address": 25320,
+        "name": "FUN_000062e8",
+        "address_hex": "0x000062e8"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [],
+    "depth": 0
+  },
+  {
+    "function": {
+      "address": 26552,
+      "name": "FUN_000067b8",
+      "address_hex": "0x000067b8"
+    },
+    "internal_calls": [
+      {
+        "address": 25368,
+        "name": "FUN_00006318",
+        "address_hex": "0x00006318"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [],
+    "depth": 0
+  },
+  {
+    "function": {
+      "address": 26710,
+      "name": "FUN_00006856",
+      "address_hex": "0x00006856"
+    },
+    "internal_calls": [
+      {
+        "address": 25408,
+        "name": "FUN_00006340",
+        "address_hex": "0x00006340"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [],
+    "depth": 0
+  },
+  {
+    "function": {
+      "address": 26914,
+      "name": "FUN_00006922",
+      "address_hex": "0x00006922"
+    },
+    "internal_calls": [
+      {
+        "address": 25452,
+        "name": "FUN_0000636c",
+        "address_hex": "0x0000636c"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [],
+    "depth": 0
+  },
+  {
+    "function": {
+      "address": 27144,
+      "name": "FUN_00006a08",
+      "address_hex": "0x00006a08"
+    },
+    "internal_calls": [
+      {
+        "address": 25496,
+        "name": "FUN_00006398",
+        "address_hex": "0x00006398"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [],
+    "depth": 0
+  },
+  {
+    "function": {
+      "address": 27330,
+      "name": "FUN_00006ac2",
+      "address_hex": "0x00006ac2"
+    },
+    "internal_calls": [
+      {
+        "address": 25536,
+        "name": "FUN_000063c0",
+        "address_hex": "0x000063c0"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [],
+    "depth": 0
+  },
+  {
+    "function": {
+      "address": 27516,
+      "name": "FUN_00006b7c",
+      "address_hex": "0x00006b7c"
+    },
+    "internal_calls": [
+      {
+        "address": 25576,
+        "name": "FUN_000063e8",
+        "address_hex": "0x000063e8"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [],
+    "depth": 0
+  },
+  {
+    "function": {
+      "address": 27720,
+      "name": "FUN_00006c48",
+      "address_hex": "0x00006c48"
+    },
+    "internal_calls": [
+      {
+        "address": 25620,
+        "name": "FUN_00006414",
+        "address_hex": "0x00006414"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [],
+    "depth": 0
+  },
+  {
+    "function": {
+      "address": 27940,
+      "name": "FUN_00006d24",
+      "address_hex": "0x00006d24"
+    },
+    "internal_calls": [
+      {
+        "address": 25668,
+        "name": "FUN_00006444",
+        "address_hex": "0x00006444"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [],
+    "depth": 0
+  },
+  {
+    "function": {
+      "address": 28268,
+      "name": "FUN_00006e6c",
+      "address_hex": "0x00006e6c"
+    },
+    "internal_calls": [
+      {
+        "address": 16046,
+        "name": "FUN_00003eae",
+        "address_hex": "0x00003eae"
+      },
+      {
+        "address": 30178,
+        "name": "FUN_000075e2",
+        "address_hex": "0x000075e2"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [
+      14748
+    ],
+    "depth": 0
+  },
+  {
+    "function": {
+      "address": 28564,
+      "name": "FUN_00006f94",
+      "address_hex": "0x00006f94"
+    },
+    "internal_calls": [
+      {
+        "address": 28828,
+        "name": "FUN_0000709c",
+        "address_hex": "0x0000709c"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [
+      23102
+    ],
+    "depth": 1
+  },
+  {
+    "function": {
+      "address": 28722,
+      "name": "FUN_00007032",
+      "address_hex": "0x00007032"
+    },
+    "internal_calls": [
+      {
+        "address": 28828,
+        "name": "FUN_0000709c",
+        "address_hex": "0x0000709c"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [
+      23286
+    ],
+    "depth": 1
+  },
+  {
+    "function": {
+      "address": 28786,
+      "name": "FUN_00007072",
+      "address_hex": "0x00007072"
+    },
+    "internal_calls": [
+      {
+        "address": 28828,
+        "name": "FUN_0000709c",
+        "address_hex": "0x0000709c"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [
+      23480
+    ],
+    "depth": 1
+  },
+  {
+    "function": {
+      "address": 28828,
+      "name": "FUN_0000709c",
+      "address_hex": "0x0000709c"
+    },
+    "internal_calls": [
+      {
+        "address": 30156,
+        "name": "FUN_000075cc",
+        "address_hex": "0x000075cc"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [
+      28564,
+      28722,
+      28786
+    ],
+    "depth": 0
+  },
+  {
+    "function": {
+      "address": 29804,
+      "name": "FUN_0000746c",
+      "address_hex": "0x0000746c"
+    },
+    "internal_calls": [
+      {
+        "address": 30156,
+        "name": "FUN_000075cc",
+        "address_hex": "0x000075cc"
+      }
+    ],
+    "library_calls": [],
+    "called_by": [],
+    "depth": 0
+  }
+]

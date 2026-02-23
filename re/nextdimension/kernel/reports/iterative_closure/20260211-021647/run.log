@@ -1,0 +1,16 @@
+=== Iterative Closure ===
+Binary:      re/nextdimension/kernel/i860_kernel.bin
+Base map:    re/nextdimension/kernel/docs/recovery_map_hardmask_pcode.json
+State json:  re/nextdimension/kernel/scripts/nd_firmware_state.json
+Auto gaps:   0
+Hints json:  <none>
+Gap max reg: 2
+Gap fallback:0 (fill=0x00000001)
+Iterations:  1
+Work dir:    /Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260211-021647
+Base addr:   0xF8000000
+Max steps:   64
+Entry spec:  0xF80014C4
+
+=== Iteration 1 ===
+Input map: re/nextdimension/kernel/docs/recovery_map_hardmask_pcode.json

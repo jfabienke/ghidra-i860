@@ -1,0 +1,57 @@
+=== GaCK Crosswalk ===
+ndkernel_source:  /Users/jvindahl/Development/re/NeXTDimension/NextDimension-21/NDkernel
+binary:           /tmp/openstep42_carved2/i860_preload_5ab0000.bin
+factpack:         /tmp/factpack_openstep42_20260213
+out_dir:          re/nextdimension/kernel/reports/crosswalk/20260213-openstep42
+min_score:        24
+min_confidence:   60
+top_k:            8
+source_version:   NeXTSTEP-2.0
+target_version:   NeXTSTEP-3.3
+allow_compat_lbl: 0
+compat_lbl_class: strong_compat
+NOTE: compatibility mode active (NeXTSTEP-2.0 -> NeXTSTEP-3.3).
+      Labels are blocked unless CROSSWALK_ALLOW_COMPAT_LABELS=1.
+
+=== extract_gack_source_facts ===
+source_root:    /Users/jvindahl/Development/re/NeXTDimension/NextDimension-21/NDkernel
+source_version: NeXTSTEP-2.0
+files scanned:  c=55 asm=5
+functions:      331
+output:         re/nextdimension/kernel/reports/crosswalk/20260213-openstep42/source_functions.json
+=== extract_binary_facts ===
+factpack:        /private/tmp/factpack_openstep42_20260213
+target_version:  NeXTSTEP-3.3
+functions:       58
+insn rows:       5127
+ref rows:        24
+dispatch rows:   13
+output:          re/nextdimension/kernel/reports/crosswalk/20260213-openstep42/binary_functions.json
+=== match_gack_to_binary ===
+source functions:   331
+binary functions:   58
+pairs scored:       19198
+source_version:     NeXTSTEP-2.0
+target_version:     NeXTSTEP-3.3
+compatibility_mode: True
+matches (greedy):   2
+match classes:      {'candidate_compat': 2}
+output json:        re/nextdimension/kernel/reports/crosswalk/20260213-openstep42/matches.json
+output csv:         re/nextdimension/kernel/reports/crosswalk/20260213-openstep42/matches_ranked.csv
+=== generate_crosswalk_labels ===
+input matches:     re/nextdimension/kernel/reports/crosswalk/20260213-openstep42/matches.json
+compatibility:    True
+allow_compat:     False
+blocked_compat:   0
+blocked_class:    0
+emitted labels:   0
+output csv:       re/nextdimension/kernel/reports/crosswalk/20260213-openstep42/ghidra_labels.csv
+output json:      re/nextdimension/kernel/reports/crosswalk/20260213-openstep42/ghidra_apply_crosswalk.json
+
+Artifacts:
+  re/nextdimension/kernel/reports/crosswalk/20260213-openstep42/source_functions.json
+  re/nextdimension/kernel/reports/crosswalk/20260213-openstep42/binary_functions.json
+  re/nextdimension/kernel/reports/crosswalk/20260213-openstep42/matches.json
+  re/nextdimension/kernel/reports/crosswalk/20260213-openstep42/matches_ranked.csv
+  re/nextdimension/kernel/reports/crosswalk/20260213-openstep42/ghidra_labels.csv
+  re/nextdimension/kernel/reports/crosswalk/20260213-openstep42/ghidra_apply_crosswalk.json

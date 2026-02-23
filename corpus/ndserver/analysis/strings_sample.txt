@@ -1,0 +1,100 @@
+NextDimension
+netname_lookup
+ND_GetBoardList
+No NextDimension board found.
+No NextDimension board in Slot %d.
+ND_BootKernelFromSect
+ND_SetPagerTask
+NDPingKernel
+Usage: %s [-s Slot]
+Illegal memory access!
+vm_region() on page out op
+vm_allocate of copy area
+vm_copy of copied area
+ND vm_allocate fails (%d) addr 0x%x size %d %d
+port_allocate failed
+parent_port
+/dev/tty
+port_set_allocate failed
+port_set_add (debug) failed
+port_set_add (pager) failed
+port_set_add (unix port) failed
+port_set_add (notify) failed
+error %s in Receive, message will be ignored.
+Unexpected emergency msg received: id is %d
+Message for unknown port %d! (ID = %d)
+error %s at Send.
+NDUX_Init: port_allocate failed
+NDUX_Init: ND_Port_check_in()
+ND_ConsoleInput
+__PAGEZERO
+__common
+IIH I(@0.h
+IIH I(@0.h
+IIH I(@0.h
+IIH I(@0.h
+IIH I(@0&)
+IIH I(@0&)
+% x1 y1 x2 y2 y -
+2 copy curveto
+/y load def
+% x y l -
+/l load def
+% x y m -
+pl curveto
+/c load def
+currentpoint 6 2 roll pl curveto
+/v load def
+pl 2 copy curveto
+/y load def
+pl lineto
+/l load def
+pl moveto
+% graphic state operators
+% array phase d -
+% - cf flatness
+% flatness i -
+dup 0 eq
+% linejoin j -
+setlinejoin
+% linecap J -
+setlinecap
+% miterlimit M -
+setmiterlimit
+% linewidth w -
+setlinewidth
+% path painting operators
+closepath
+_pola 0 eq 
+_doClip 1 eq {clip /_doClip 0 ddef} if 
+/CRender {N} ddef
+_pola 0 eq 
+_doClip 1 eq 
+gsave _pf grestore clip newpath /_lp /none ddef _fc 
+/_doClip 0 ddef
+/CRender {F} ddef
+closepath
+_pola 0 eq 
+_doClip 1 eq 
+gsave _ps grestore clip newpath /_lp /none ddef _sc 
+/_doClip 0 ddef
+/CRender {S} ddef
+closepath
+_pola 0 eq 
+_doClip 1 eq 
+% F clears _doClip
+gsave F grestore 
+gsave S grestore clip newpath /_lp /none ddef _sc
+/_doClip 0 ddef
+/CRender {B} ddef
+closepath
+/_doClip 1 ddef
+% - [string] * -
+count 0 ne 
+dup type (stringtype) eq {pop} if
+_pola 0 eq {newpath} if
+% group operators
+_pola 0 eq {gsave} if
+_pola 0 eq {grestore} if
+% - *u -
+_pola 1 add /_pola exch ddef

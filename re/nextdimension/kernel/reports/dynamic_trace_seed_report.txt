@@ -1,0 +1,17 @@
+=== Dynamic Trace -> Recovery Map Report ===
+Trace files: 1
+  - /tmp/i860_openstep42_sweep_20260213/runtime_trace_merged.jsonl
+Lines total:        3
+Bad JSON lines:     0
+Events total:       3
+Indirect events:    3
+Memory events:      0
+MMIO events:        0
+Targets seen:       1
+Derived src_word:   0
+Candidates:         0
+Dynamic seeds add:  0
+Total seeds output: 814
+
+Rejected summary:
+  range_or_align: 1

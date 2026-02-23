@@ -1,0 +1,11 @@
+{"addr":"0xf80082b4","func_entry":"0xf8008274","mnemonic":"bri","flow_type":"COMPUTED_JUMP","phase2_classification":"dynamic_entry"}
+{"addr":"0xf8008d58","func_entry":null,"mnemonic":"bri","flow_type":"COMPUTED_JUMP","phase2_classification":null}
+{"addr":"0xf8008f30","func_entry":"0xf8008ee4","mnemonic":"bri","flow_type":"COMPUTED_JUMP","phase2_classification":"dynamic_entry"}
+{"addr":"0xf800a714","func_entry":"0xf800a680","mnemonic":"bri","flow_type":"COMPUTED_JUMP","phase2_classification":"scan_failed"}
+{"addr":"0xf800c5a0","func_entry":"0xf800c584","mnemonic":"bri","flow_type":"COMPUTED_JUMP","phase2_classification":"trap_entry"}
+{"addr":"0xf800ca54","func_entry":"0xf800c630","mnemonic":"bri","flow_type":"COMPUTED_JUMP","phase2_classification":null}
+{"addr":"0xf800cba8","func_entry":"0xf800cb9c","mnemonic":"bri","flow_type":"COMPUTED_JUMP","phase2_classification":null}
+{"addr":"0xf800f738","func_entry":"0xf800f70c","mnemonic":"bri","flow_type":"COMPUTED_JUMP","phase2_classification":"dynamic_entry"}
+{"addr":"0xf80219e4","func_entry":null,"mnemonic":"bri","flow_type":"COMPUTED_JUMP","phase2_classification":null}
+{"addr":"0xf8021a50","func_entry":"0xf8021a20","mnemonic":"bri","flow_type":"COMPUTED_JUMP","phase2_classification":null}
+{"addr":"0xf803153c","func_entry":null,"mnemonic":"bri","flow_type":"COMPUTED_JUMP","phase2_classification":null}

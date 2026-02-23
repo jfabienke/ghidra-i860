@@ -1,0 +1,97 @@
+Analyze the following function and return a structured JSON intent dossier.
+
+FUNCTION: FUN_fff0037c at 0xfff0037c
+SIZE: 116 bytes (29 instructions)
+CONFIDENCE SOURCE: default
+HAS UNRESOLVED BRI: True
+PRIORITY TAGS: unresolved_bri
+
+CALLERS (1): 0xfff00020 FUN_fff00020
+CALLEES (0): (none)
+
+BLOCKS (5):
+  0xfff0037c..0xfff003bf (17 insns)
+  0xfff003c0..0xfff003c7 (2 insns)
+  0xfff003c8..0xfff003d7 (4 insns)
+  0xfff003d8..0xfff003df (2 insns)
+  0xfff003e0..0xfff003ef (4 insns)
+
+INSTRUCTIONS:
+  0xfff0037c: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xfff00380: shl r0,r1,r27                            defs=[r27] uses=[0x0,r1] pcode=[INT_LEFT]
+  0xfff00384: ld.c psr,r29                             defs=[r29] uses=[psr] pcode=[COPY]
+  0xfff00388: andnot 0x10,r29,r23                      defs=[r23] uses=[0x10,r29] pcode=[INT_ZEXT,INT_NEGATE,INT_AND]
+  0xfff0038c: st.c r23,psr                             defs=[psr] uses=[r23] pcode=[COPY]
+  0xfff00390: nop                                      defs=[] uses=[] pcode=[]
+  0xfff00394: ld.c fsr,r30                             defs=[r30] uses=[fsr] pcode=[COPY]
+  0xfff00398: or 0x1,r0,r23                            defs=[r23] uses=[0x0,0x1] pcode=[INT_ZEXT,INT_OR]
+  0xfff0039c: st.c r23,fsr                             defs=[fsr] uses=[r23] pcode=[COPY]
+  0xfff003a0: ld.c dirbase,r23                         defs=[r23] uses=[dirbase] pcode=[COPY]
+  0xfff003a4: adds -0x1,r0,r25                         defs=[r25] uses=[0x0,0xffff] pcode=[INT_SEXT,INT_ADD]
+  0xfff003a8: or 0x7f,r0,r26                           defs=[r26] uses=[0x0,0x7f] pcode=[INT_ZEXT,INT_OR]
+  0xfff003ac: addu -0x20,r16,r22                       defs=[r22] uses=[0xffe0,r16] pcode=[INT_SEXT,INT_ADD]
+  0xfff003b0: andnot 0xf00,r23,r24                     defs=[r24] uses=[0xf00,r23] pcode=[INT_ZEXT,INT_NEGATE,INT_AND]
+  0xfff003b4: or 0x800,r24,r24                         defs=[r24] uses=[0x800,r24] pcode=[INT_ZEXT,INT_OR]
+  0xfff003b8: bla r25,r26,0xfff003c0                   defs=[CC,r26,dirbase] uses=[0x0,r24,CC,r25,r26] pcode=[INT_NOTEQUAL,INT_CARRY,INT_ZEXT,INT_ADD,COPY,CBRANCH]
+  0xfff003bc: _st.c r24,dirbase                        defs=[dirbase] uses=[r24] pcode=[COPY]
+  0xfff003c0: bla r25,r26,0xfff003c0                   defs=[CC,r26,r22] uses=[0x0,0x21,CC,r25,0x4,r26,r22] pcode=[INT_NOTEQUAL,INT_CARRY,INT_ZEXT,INT_ADD,INT_SEXT,CALLOTHER,COPY,CBRANCH]
+  0xfff003c4: _flush 0x21(r22)++                       defs=[r22] uses=[0x21,0x4,r22] pcode=[INT_SEXT,INT_ADD,CALLOTHER,COPY]
+  0xfff003c8: or 0x900,r24,r24                         defs=[r24] uses=[0x900,r24] pcode=[INT_ZEXT,INT_OR]
+  0xfff003cc: or 0x7f,r0,r26                           defs=[r26] uses=[0x0,0x7f] pcode=[INT_ZEXT,INT_OR]
+  0xfff003d0: bla r25,r26,0xfff003d8                   defs=[CC,r26,dirbase] uses=[0x0,r24,CC,r25,r26] pcode=[INT_NOTEQUAL,INT_CARRY,INT_ZEXT,INT_ADD,COPY,CBRANCH]
+  0xfff003d4: _st.c r24,dirbase                        defs=[dirbase] uses=[r24] pcode=[COPY]
+  0xfff003d8: bla r25,r26,0xfff003d8                   defs=[CC,r26,r22] uses=[0x0,0x21,CC,r25,0x4,r26,r22] pcode=[INT_NOTEQUAL,INT_CARRY,INT_ZEXT,INT_ADD,INT_SEXT,CALLOTHER,COPY,CBRANCH]
+  0xfff003dc: _flush 0x21(r22)++                       defs=[r22] uses=[0x21,0x4,r22] pcode=[INT_SEXT,INT_ADD,CALLOTHER,COPY]
+  0xfff003e0: st.c r30,fsr                             defs=[fsr] uses=[r30] pcode=[COPY]
+  0xfff003e4: st.c r29,psr                             defs=[psr] uses=[r29] pcode=[COPY]
+  0xfff003e8: bri r27                                  defs=[dirbase] uses=[r23,r27] pcode=[COPY,BRANCHIND]
+  0xfff003ec: _st.c r23,dirbase                        defs=[dirbase] uses=[r23] pcode=[COPY]
+
+REFERENCES:
+  0xfff003b8 -> 0xfff003c0 [CONDITIONAL_JUMP] flow=True
+  0xfff003c0 -> 0xfff003c0 [CONDITIONAL_JUMP] flow=True
+  0xfff003d0 -> 0xfff003d8 [CONDITIONAL_JUMP] flow=True
+  0xfff003d8 -> 0xfff003d8 [CONDITIONAL_JUMP] flow=True
+
+STRINGS IN RANGE:
+  (none)
+
+DISPATCH UNRESOLVED:
+  0xfff003e8: bri [COMPUTED_JUMP] phase2=None
+
+CONTEXT:
+- R15 cluster (GState flags): False
+- MMIO accesses: (none)
+- Nearby deny ranges: (none)
+- Nearby embedded objects: (none)
+
+Return ONLY valid JSON matching this schema:
+{
+  "function_id": "0xfff0037c",
+  "function_name": "FUN_fff0037c",
+  "primary_intent": "<one-line purpose statement>",
+  "intent_category": "<one of: initialization, dispatch, parser, raster, mmio_driver, math_kernel, utility, synchronization, error_handler, unknown>",
+  "evidence": [
+    {"addr": "0x...", "fact": "<what this instruction/pattern proves>"}
+  ],
+  "register_protocol": {
+    "inputs": ["<rN = description>"],
+    "outputs": ["<rN = description>"],
+    "side_effects": ["<memory write / MMIO / control reg change>"]
+  },
+  "data_accesses": [
+    {"addr": "0x...", "target": "0x...", "kind": "read|write|mmio", "interpretation": "..."}
+  ],
+  "control_flow_summary": "<how the function flows: linear, loop, conditional tree, dispatch, etc.>",
+  "confidence": <0-100>,
+  "confidence_factors": {
+    "supporting": ["<what raises confidence>"],
+    "limiting": ["<what caps confidence>"]
+  },
+  "alternatives": [
+    {"intent": "<alternative purpose>", "why_not_primary": "<evidence against>"}
+  ],
+  "open_questions": ["<what remains unknown>"],
+  "required_next_evidence": ["<what would resolve open questions>"],
+  "subsystem_hint": "<suggested subsystem: postscript_dispatch, pixel_pipeline, memory_management, board_init, interrupt_handling, unknown>"
+}

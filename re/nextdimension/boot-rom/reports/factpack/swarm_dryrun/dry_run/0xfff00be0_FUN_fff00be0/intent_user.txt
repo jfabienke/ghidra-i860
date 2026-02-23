@@ -1,0 +1,98 @@
+Analyze the following function and return a structured JSON intent dossier.
+
+FUNCTION: FUN_fff00be0 at 0xfff00be0
+SIZE: 120 bytes (30 instructions)
+CONFIDENCE SOURCE: default
+HAS UNRESOLVED BRI: False
+PRIORITY TAGS: (none)
+
+CALLERS (1): 0xfff009c0 FUN_fff009c0
+CALLEES (6): 0xfff00b2c FUN_fff00b2c, 0xfff00b78 FUN_fff00b78, 0xfff00c58 FUN_fff00c58, 0xfff00cb8 FUN_fff00cb8, 0xfff013a4 FUN_fff013a4, 0xfff01618 FUN_fff01618
+
+BLOCKS (0):
+  (none)
+
+INSTRUCTIONS:
+  0xfff00be0: nop                                      defs=[] uses=[] pcode=[]
+  0xfff00be4: adds -0x10,r2,r2                         defs=[r2] uses=[0xfff0,r2] pcode=[INT_SEXT,INT_ADD]
+  0xfff00be8: st.l r3,0x9(r2)                          defs=[] uses=[r2,0x9,r3] pcode=[INT_ADD,STORE]
+  0xfff00bec: st.l r1,0xd(r2)                          defs=[] uses=[r1,r2,0xd] pcode=[INT_ADD,STORE]
+  0xfff00bf0: adds 0x8,r2,r3                           defs=[r3] uses=[0x8,r2] pcode=[INT_SEXT,INT_ADD]
+  0xfff00bf4: st.l r4,0x1(r2)                          defs=[] uses=[r4,0x1,r2] pcode=[INT_ADD,STORE]
+  0xfff00bf8: or 0x1000,r0,r16                         defs=[r16] uses=[0x1000,0x0] pcode=[INT_ZEXT,INT_OR]
+  0xfff00bfc: orh 0xff80,r16,r16                       defs=[r16] uses=[0xff80,0x10,r16] pcode=[INT_ZEXT,INT_LEFT,INT_OR]
+  0xfff00c00: st.l r0,0x1(r16)                         defs=[] uses=[r16,0x0,0x1] pcode=[INT_ADD,STORE]
+  0xfff00c04: or 0x2000,r0,r16                         defs=[r16] uses=[0x2000,0x0] pcode=[INT_ZEXT,INT_OR]
+  0xfff00c08: orh 0xff80,r16,r16                       defs=[r16] uses=[0xff80,0x10,r16] pcode=[INT_ZEXT,INT_LEFT,INT_OR]
+  0xfff00c0c: call 0xfff00b2c                          defs=[r1] uses=[r16,0x0,0x1,0xfff00c14] pcode=[COPY,INT_ADD,STORE,CALL]
+  0xfff00c10: _st.l r0,0x1(r16)                        defs=[] uses=[r16,0x0,0x1] pcode=[INT_ADD,STORE]
+  0xfff00c14: call 0xfff00cb8                          defs=[r1] uses=[0xfff00c1c] pcode=[COPY,CALL]
+  0xfff00c18: _nop                                     defs=[] uses=[] pcode=[]
+  0xfff00c1c: call 0xfff01618                          defs=[r1] uses=[0xfff00c24] pcode=[COPY,CALL]
+  0xfff00c20: _nop                                     defs=[] uses=[] pcode=[]
+  0xfff00c24: call 0xfff00b78                          defs=[r4,r1] uses=[r16,0x0,0xfff00c2c] pcode=[COPY,INT_LEFT,CALL]
+  0xfff00c28: _shl r0,r16,r4                           defs=[r4] uses=[r16,0x0] pcode=[INT_LEFT]
+  0xfff00c2c: call 0xfff013a4                          defs=[r1] uses=[0xfff00c34] pcode=[COPY,CALL]
+  0xfff00c30: _nop                                     defs=[] uses=[] pcode=[]
+  0xfff00c34: st.l r16,0x41(r15)                       defs=[] uses=[r16,0x41,r15] pcode=[INT_ADD,STORE]
+  0xfff00c38: call 0xfff00c58                          defs=[r16,r1] uses=[0xfff00c40,0x0] pcode=[COPY,INT_ZEXT,INT_OR,CALL]
+  0xfff00c3c: _or 0x0,r0,r16                           defs=[r16] uses=[0x0] pcode=[INT_ZEXT,INT_OR]
+  0xfff00c40: shl r0,r4,r16                            defs=[r16] uses=[r4,0x0] pcode=[INT_LEFT]
+  0xfff00c44: ld.l -0x7(r3),r4                         defs=[r4] uses=[0xfff9,r3] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff00c48: ld.l 0x5(r3),r1                          defs=[r1] uses=[0x5,r3] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff00c4c: shl r0,r3,r2                             defs=[r2] uses=[0x0,r3] pcode=[INT_LEFT]
+  0xfff00c50: ld.l 0x1(r3),r3                          defs=[r3] uses=[0x1,r3] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff00c54: ret                                      defs=[r2] uses=[r1,0x8,r2] pcode=[INT_SEXT,INT_ADD,RETURN]
+
+REFERENCES:
+  0xfff00c00 -> 0xff801001 [WRITE] flow=False
+  0xfff00c0c -> 0xfff00b2c [UNCONDITIONAL_CALL] flow=True
+  0xfff00c10 -> 0xff802001 [WRITE] flow=False
+  0xfff00c14 -> 0xfff00cb8 [UNCONDITIONAL_CALL] flow=True
+  0xfff00c1c -> 0xfff01618 [UNCONDITIONAL_CALL] flow=True
+  0xfff00c24 -> 0xfff00b78 [UNCONDITIONAL_CALL] flow=True
+  0xfff00c2c -> 0xfff013a4 [UNCONDITIONAL_CALL] flow=True
+  0xfff00c38 -> 0xfff00c58 [UNCONDITIONAL_CALL] flow=True
+
+STRINGS IN RANGE:
+  (none)
+
+DISPATCH UNRESOLVED:
+  (none)
+
+CONTEXT:
+- R15 cluster (GState flags): False
+- MMIO accesses: (none)
+- Nearby deny ranges: (none)
+- Nearby embedded objects: (none)
+
+Return ONLY valid JSON matching this schema:
+{
+  "function_id": "0xfff00be0",
+  "function_name": "FUN_fff00be0",
+  "primary_intent": "<one-line purpose statement>",
+  "intent_category": "<one of: initialization, dispatch, parser, raster, mmio_driver, math_kernel, utility, synchronization, error_handler, unknown>",
+  "evidence": [
+    {"addr": "0x...", "fact": "<what this instruction/pattern proves>"}
+  ],
+  "register_protocol": {
+    "inputs": ["<rN = description>"],
+    "outputs": ["<rN = description>"],
+    "side_effects": ["<memory write / MMIO / control reg change>"]
+  },
+  "data_accesses": [
+    {"addr": "0x...", "target": "0x...", "kind": "read|write|mmio", "interpretation": "..."}
+  ],
+  "control_flow_summary": "<how the function flows: linear, loop, conditional tree, dispatch, etc.>",
+  "confidence": <0-100>,
+  "confidence_factors": {
+    "supporting": ["<what raises confidence>"],
+    "limiting": ["<what caps confidence>"]
+  },
+  "alternatives": [
+    {"intent": "<alternative purpose>", "why_not_primary": "<evidence against>"}
+  ],
+  "open_questions": ["<what remains unknown>"],
+  "required_next_evidence": ["<what would resolve open questions>"],
+  "subsystem_hint": "<suggested subsystem: postscript_dispatch, pixel_pipeline, memory_management, board_init, interrupt_handling, unknown>"
+}

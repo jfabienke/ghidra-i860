@@ -1,0 +1,79 @@
+Analyze the following function and return a structured JSON intent dossier.
+
+FUNCTION: FUN_f800842c at 0xf800842c
+SIZE: 68 bytes (17 instructions)
+CONFIDENCE SOURCE: curated
+HAS UNRESOLVED BRI: False
+PRIORITY TAGS: mmio_access
+
+CALLERS (0): (none)
+CALLEES (0): (none)
+
+BLOCKS (2):
+  0xf800842c..0xf8008463 (14 insns)
+  0xf8008464..0xf800846f (3 insns)
+
+INSTRUCTIONS:
+  0xf800842c: ixfr r8,f0                               defs=[] uses=[] pcode=[]
+  0xf8008430: xor r8,r7,r31                            defs=[r31] uses=[r8,r7] pcode=[INT_XOR]
+  0xf8008434: ixfr r8,f24                              defs=[f24] uses=[r8] pcode=[COPY]
+  0xf8008438: st.b r8,0x401c(r8)                       defs=[] uses=[r8,0x401c] pcode=[INT_ADD,STORE] [MMIO:mmio_offset_0x401c]
+  0xf800843c: ixfr r8,f0                               defs=[] uses=[] pcode=[]
+  0xf8008440: st.b r3,-0x3814(r7)                      defs=[] uses=[0xffffc7ec,r7,r3] pcode=[INT_ADD,STORE] [MMIO:mmio_high_space]
+  0xf8008444: fld.l r30(r9)++,f24                      defs=[f24,r9] uses=[r9,r30] pcode=[INT_ADD,LOAD,COPY]
+  0xf8008448: subs r2,r0,r29                           defs=[r29] uses=[0x0,r2] pcode=[INT_SUB]
+  0xf800844c: st.b r6,-0x3e12(r7)                      defs=[] uses=[0xffffc1ee,r6,r7] pcode=[INT_ADD,STORE] [MMIO:mmio_high_space]
+  0xf8008450: adds r2,r0,r29                           defs=[r29] uses=[0x0,r2] pcode=[INT_ADD]
+  0xf8008454: st.b r10,-0x3d12(r7)                     defs=[] uses=[0xffffc2ee,r10,r7] pcode=[INT_ADD,STORE] [MMIO:mmio_high_space]
+  0xf8008458: ixfr r2,f10                              defs=[f10] uses=[r2] pcode=[COPY]
+  0xf800845c: ixfr r14,f0                              defs=[] uses=[] pcode=[]
+  0xf8008460: bc 0xfa188e10                            defs=[] uses=[0x0,CC] pcode=[INT_NOTEQUAL,CBRANCH]
+  0xf8008464: ld.b r2(r8),r0                           defs=[r0_sink] uses=[r8,r2] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8008468: ld.b r0(r28),r0                          defs=[r0_sink] uses=[0x0,r28] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800846c: ixfr r2,f24                              defs=[f24] uses=[r2] pcode=[COPY]
+
+REFERENCES:
+  0xf8008460 -> 0xfa188e10 [CONDITIONAL_JUMP] flow=True
+
+STRINGS IN RANGE:
+  (none)
+
+DISPATCH UNRESOLVED:
+  (none)
+
+CONTEXT:
+- R15 cluster (GState flags): False
+- MMIO accesses: 0xf8008438=mmio_offset_0x401c, 0xf8008440=mmio_high_space
+- Nearby deny ranges: (none)
+- Nearby embedded objects: (none)
+
+Return ONLY valid JSON matching this schema:
+{
+  "function_id": "0xf800842c",
+  "function_name": "FUN_f800842c",
+  "primary_intent": "<one-line purpose statement>",
+  "intent_category": "<one of: initialization, dispatch, parser, raster, mmio_driver, math_kernel, utility, synchronization, error_handler, unknown>",
+  "evidence": [
+    {"addr": "0x...", "fact": "<what this instruction/pattern proves>"}
+  ],
+  "register_protocol": {
+    "inputs": ["<rN = description>"],
+    "outputs": ["<rN = description>"],
+    "side_effects": ["<memory write / MMIO / control reg change>"]
+  },
+  "data_accesses": [
+    {"addr": "0x...", "target": "0x...", "kind": "read|write|mmio", "interpretation": "..."}
+  ],
+  "control_flow_summary": "<how the function flows: linear, loop, conditional tree, dispatch, etc.>",
+  "confidence": <0-100>,
+  "confidence_factors": {
+    "supporting": ["<what raises confidence>"],
+    "limiting": ["<what caps confidence>"]
+  },
+  "alternatives": [
+    {"intent": "<alternative purpose>", "why_not_primary": "<evidence against>"}
+  ],
+  "open_questions": ["<what remains unknown>"],
+  "required_next_evidence": ["<what would resolve open questions>"],
+  "subsystem_hint": "<suggested subsystem: postscript_dispatch, pixel_pipeline, memory_management, board_init, interrupt_handling, unknown>"
+}

@@ -1,0 +1,2382 @@
+{
+  "metadata": {
+    "total_functions": 88,
+    "functions_with_hw_access": 22,
+    "total_hw_accesses": 35,
+    "unique_hw_addresses": 7,
+    "unique_registers": 7
+  },
+  "functions": [
+    {
+      "address": 11718,
+      "address_hex": "0x00002dc6",
+      "name": "FUN_00002dc6",
+      "size": 662,
+      "hardware_accesses": [
+        {
+          "source_address": 11826,
+          "source_address_hex": "0x00002e32",
+          "hardware_address": 67175060,
+          "hardware_address_hex": "0x04010294",
+          "register_name": "SYSTEM_PORT",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "move.l",
+          "operands": "(0x04010294).l,-(SP)",
+          "access_type": "read"
+        },
+        {
+          "source_address": 12080,
+          "source_address_hex": "0x00002f30",
+          "hardware_address": 67175056,
+          "hardware_address_hex": "0x04010290",
+          "register_name": "SYSTEM_PORT+0x4",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "move.l",
+          "operands": "(0x04010290).l,-(SP)",
+          "access_type": "read"
+        }
+      ],
+      "access_count": 2,
+      "regions_accessed": {
+        "SYSTEM_DATA": 2
+      }
+    },
+    {
+      "address": 12380,
+      "address_hex": "0x0000305c",
+      "name": "FUN_0000305c",
+      "size": 102,
+      "hardware_accesses": [
+        {
+          "source_address": 12462,
+          "source_address_hex": "0x000030ae",
+          "hardware_address": 67174440,
+          "hardware_address_hex": "0x04010028",
+          "register_name": "ROM_CONFIG+0x28",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "pea",
+          "operands": "(0x4010028).l",
+          "access_type": "read"
+        }
+      ],
+      "access_count": 1,
+      "regions_accessed": {
+        "SYSTEM_DATA": 1
+      }
+    },
+    {
+      "address": 14002,
+      "address_hex": "0x000036b2",
+      "name": "FUN_000036b2",
+      "size": 366,
+      "hardware_accesses": [
+        {
+          "source_address": 14018,
+          "source_address_hex": "0x000036c2",
+          "hardware_address": 67175056,
+          "hardware_address_hex": "0x04010290",
+          "register_name": "SYSTEM_PORT+0x4",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "move.l",
+          "operands": "(0x04010290).l,D4",
+          "access_type": "read"
+        }
+      ],
+      "access_count": 1,
+      "regions_accessed": {
+        "SYSTEM_DATA": 1
+      }
+    },
+    {
+      "address": 14452,
+      "address_hex": "0x00003874",
+      "name": "FUN_00003874",
+      "size": 296,
+      "hardware_accesses": [
+        {
+          "source_address": 14464,
+          "source_address_hex": "0x00003880",
+          "hardware_address": 67175056,
+          "hardware_address_hex": "0x04010290",
+          "register_name": "SYSTEM_PORT+0x4",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "move.l",
+          "operands": "(0x04010290).l,D2",
+          "access_type": "read"
+        }
+      ],
+      "access_count": 1,
+      "regions_accessed": {
+        "SYSTEM_DATA": 1
+      }
+    },
+    {
+      "address": 14748,
+      "address_hex": "0x0000399c",
+      "name": "FUN_0000399c",
+      "size": 832,
+      "hardware_accesses": [
+        {
+          "source_address": 14814,
+          "source_address_hex": "0x000039de",
+          "hardware_address": 67175056,
+          "hardware_address_hex": "0x04010290",
+          "register_name": "SYSTEM_PORT+0x4",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "move.l",
+          "operands": "(0x04010290).l,-(SP)",
+          "access_type": "read"
+        },
+        {
+          "source_address": 14858,
+          "source_address_hex": "0x00003a0a",
+          "hardware_address": 67175056,
+          "hardware_address_hex": "0x04010290",
+          "register_name": "SYSTEM_PORT+0x4",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "move.l",
+          "operands": "(0x04010290).l,-(SP)",
+          "access_type": "read"
+        },
+        {
+          "source_address": 14990,
+          "source_address_hex": "0x00003a8e",
+          "hardware_address": 67175056,
+          "hardware_address_hex": "0x04010290",
+          "register_name": "SYSTEM_PORT+0x4",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "move.l",
+          "operands": "(0x04010290).l,-(SP)",
+          "access_type": "read"
+        },
+        {
+          "source_address": 15036,
+          "source_address_hex": "0x00003abc",
+          "hardware_address": 67175056,
+          "hardware_address_hex": "0x04010290",
+          "register_name": "SYSTEM_PORT+0x4",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "move.l",
+          "operands": "(0x04010290).l,-(SP)",
+          "access_type": "read"
+        },
+        {
+          "source_address": 15084,
+          "source_address_hex": "0x00003aec",
+          "hardware_address": 67175056,
+          "hardware_address_hex": "0x04010290",
+          "register_name": "SYSTEM_PORT+0x4",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "move.l",
+          "operands": "(0x04010290).l,-(SP)",
+          "access_type": "read"
+        },
+        {
+          "source_address": 15144,
+          "source_address_hex": "0x00003b28",
+          "hardware_address": 67175056,
+          "hardware_address_hex": "0x04010290",
+          "register_name": "SYSTEM_PORT+0x4",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "move.l",
+          "operands": "(0x04010290).l,-(SP)",
+          "access_type": "read"
+        },
+        {
+          "source_address": 15196,
+          "source_address_hex": "0x00003b5c",
+          "hardware_address": 67175056,
+          "hardware_address_hex": "0x04010290",
+          "register_name": "SYSTEM_PORT+0x4",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "move.l",
+          "operands": "(0x04010290).l,-(SP)",
+          "access_type": "read"
+        }
+      ],
+      "access_count": 7,
+      "regions_accessed": {
+        "SYSTEM_DATA": 7
+      }
+    },
+    {
+      "address": 25210,
+      "address_hex": "0x0000627a",
+      "name": "FUN_0000627a",
+      "size": 62,
+      "hardware_accesses": [
+        {
+          "source_address": 25254,
+          "source_address_hex": "0x000062a6",
+          "hardware_address": 67175856,
+          "hardware_address_hex": "0x040105b0",
+          "register_name": "SYSTEM_PORT+0x31c",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "move.l",
+          "operands": "(0x040105b0).l,(A3)",
+          "access_type": "read"
+        }
+      ],
+      "access_count": 1,
+      "regions_accessed": {
+        "SYSTEM_DATA": 1
+      }
+    },
+    {
+      "address": 25272,
+      "address_hex": "0x000062b8",
+      "name": "FUN_000062b8",
+      "size": 48,
+      "hardware_accesses": [
+        {
+          "source_address": 25306,
+          "source_address_hex": "0x000062da",
+          "hardware_address": 67175856,
+          "hardware_address_hex": "0x040105b0",
+          "register_name": "SYSTEM_PORT+0x31c",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "move.l",
+          "operands": "(0x040105b0).l,(A2)",
+          "access_type": "read"
+        }
+      ],
+      "access_count": 1,
+      "regions_accessed": {
+        "SYSTEM_DATA": 1
+      }
+    },
+    {
+      "address": 25320,
+      "address_hex": "0x000062e8",
+      "name": "FUN_000062e8",
+      "size": 48,
+      "hardware_accesses": [
+        {
+          "source_address": 25354,
+          "source_address_hex": "0x0000630a",
+          "hardware_address": 67175856,
+          "hardware_address_hex": "0x040105b0",
+          "register_name": "SYSTEM_PORT+0x31c",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "move.l",
+          "operands": "(0x040105b0).l,(A2)",
+          "access_type": "read"
+        }
+      ],
+      "access_count": 1,
+      "regions_accessed": {
+        "SYSTEM_DATA": 1
+      }
+    },
+    {
+      "address": 25368,
+      "address_hex": "0x00006318",
+      "name": "FUN_00006318",
+      "size": 40,
+      "hardware_accesses": [
+        {
+          "source_address": 25394,
+          "source_address_hex": "0x00006332",
+          "hardware_address": 67175856,
+          "hardware_address_hex": "0x040105b0",
+          "register_name": "SYSTEM_PORT+0x31c",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "move.l",
+          "operands": "(0x040105b0).l,(A2)",
+          "access_type": "read"
+        }
+      ],
+      "access_count": 1,
+      "regions_accessed": {
+        "SYSTEM_DATA": 1
+      }
+    },
+    {
+      "address": 25408,
+      "address_hex": "0x00006340",
+      "name": "FUN_00006340",
+      "size": 44,
+      "hardware_accesses": [
+        {
+          "source_address": 25438,
+          "source_address_hex": "0x0000635e",
+          "hardware_address": 67175856,
+          "hardware_address_hex": "0x040105b0",
+          "register_name": "SYSTEM_PORT+0x31c",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "move.l",
+          "operands": "(0x040105b0).l,(A2)",
+          "access_type": "read"
+        }
+      ],
+      "access_count": 1,
+      "regions_accessed": {
+        "SYSTEM_DATA": 1
+      }
+    },
+    {
+      "address": 25452,
+      "address_hex": "0x0000636c",
+      "name": "FUN_0000636c",
+      "size": 44,
+      "hardware_accesses": [
+        {
+          "source_address": 25482,
+          "source_address_hex": "0x0000638a",
+          "hardware_address": 67175856,
+          "hardware_address_hex": "0x040105b0",
+          "register_name": "SYSTEM_PORT+0x31c",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "move.l",
+          "operands": "(0x040105b0).l,(A2)",
+          "access_type": "read"
+        }
+      ],
+      "access_count": 1,
+      "regions_accessed": {
+        "SYSTEM_DATA": 1
+      }
+    },
+    {
+      "address": 25496,
+      "address_hex": "0x00006398",
+      "name": "FUN_00006398",
+      "size": 40,
+      "hardware_accesses": [
+        {
+          "source_address": 25522,
+          "source_address_hex": "0x000063b2",
+          "hardware_address": 67175856,
+          "hardware_address_hex": "0x040105b0",
+          "register_name": "SYSTEM_PORT+0x31c",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "move.l",
+          "operands": "(0x040105b0).l,(A2)",
+          "access_type": "read"
+        }
+      ],
+      "access_count": 1,
+      "regions_accessed": {
+        "SYSTEM_DATA": 1
+      }
+    },
+    {
+      "address": 25536,
+      "address_hex": "0x000063c0",
+      "name": "FUN_000063c0",
+      "size": 40,
+      "hardware_accesses": [
+        {
+          "source_address": 25562,
+          "source_address_hex": "0x000063da",
+          "hardware_address": 67175856,
+          "hardware_address_hex": "0x040105b0",
+          "register_name": "SYSTEM_PORT+0x31c",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "move.l",
+          "operands": "(0x040105b0).l,(A2)",
+          "access_type": "read"
+        }
+      ],
+      "access_count": 1,
+      "regions_accessed": {
+        "SYSTEM_DATA": 1
+      }
+    },
+    {
+      "address": 25576,
+      "address_hex": "0x000063e8",
+      "name": "FUN_000063e8",
+      "size": 44,
+      "hardware_accesses": [
+        {
+          "source_address": 25606,
+          "source_address_hex": "0x00006406",
+          "hardware_address": 67175856,
+          "hardware_address_hex": "0x040105b0",
+          "register_name": "SYSTEM_PORT+0x31c",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "move.l",
+          "operands": "(0x040105b0).l,(A2)",
+          "access_type": "read"
+        }
+      ],
+      "access_count": 1,
+      "regions_accessed": {
+        "SYSTEM_DATA": 1
+      }
+    },
+    {
+      "address": 25620,
+      "address_hex": "0x00006414",
+      "name": "FUN_00006414",
+      "size": 48,
+      "hardware_accesses": [
+        {
+          "source_address": 25654,
+          "source_address_hex": "0x00006436",
+          "hardware_address": 67175856,
+          "hardware_address_hex": "0x040105b0",
+          "register_name": "SYSTEM_PORT+0x31c",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "move.l",
+          "operands": "(0x040105b0).l,(A2)",
+          "access_type": "read"
+        }
+      ],
+      "access_count": 1,
+      "regions_accessed": {
+        "SYSTEM_DATA": 1
+      }
+    },
+    {
+      "address": 25668,
+      "address_hex": "0x00006444",
+      "name": "FUN_00006444",
+      "size": 48,
+      "hardware_accesses": [
+        {
+          "source_address": 25702,
+          "source_address_hex": "0x00006466",
+          "hardware_address": 67175856,
+          "hardware_address_hex": "0x040105b0",
+          "register_name": "SYSTEM_PORT+0x31c",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "move.l",
+          "operands": "(0x040105b0).l,(A2)",
+          "access_type": "read"
+        }
+      ],
+      "access_count": 1,
+      "regions_accessed": {
+        "SYSTEM_DATA": 1
+      }
+    },
+    {
+      "address": 28268,
+      "address_hex": "0x00006e6c",
+      "name": "FUN_00006e6c",
+      "size": 272,
+      "hardware_accesses": [
+        {
+          "source_address": 28338,
+          "source_address_hex": "0x00006eb2",
+          "hardware_address": 67174420,
+          "hardware_address_hex": "0x04010014",
+          "register_name": "ROM_CONFIG+0x14",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "pea",
+          "operands": "(0x4010014).l",
+          "access_type": "read"
+        },
+        {
+          "source_address": 28358,
+          "source_address_hex": "0x00006ec6",
+          "hardware_address": 67174420,
+          "hardware_address_hex": "0x04010014",
+          "register_name": "ROM_CONFIG+0x14",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "pea",
+          "operands": "(0x4010014).l",
+          "access_type": "read"
+        },
+        {
+          "source_address": 28370,
+          "source_address_hex": "0x00006ed2",
+          "hardware_address": 67174400,
+          "hardware_address_hex": "0x04010000",
+          "register_name": "ROM_CONFIG",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "pea",
+          "operands": "(0x4010000).l",
+          "access_type": "read"
+        },
+        {
+          "source_address": 28426,
+          "source_address_hex": "0x00006f0a",
+          "hardware_address": 67174400,
+          "hardware_address_hex": "0x04010000",
+          "register_name": "ROM_CONFIG",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "lea",
+          "operands": "(0x4010000).l,A0",
+          "access_type": "read"
+        },
+        {
+          "source_address": 28436,
+          "source_address_hex": "0x00006f14",
+          "hardware_address": 67174404,
+          "hardware_address_hex": "0x04010004",
+          "register_name": "ROM_CONFIG+0x4",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "movea.l",
+          "operands": "(0x04010004).l,A0",
+          "access_type": "read"
+        },
+        {
+          "source_address": 28444,
+          "source_address_hex": "0x00006f1c",
+          "hardware_address": 67174404,
+          "hardware_address_hex": "0x04010004",
+          "register_name": "ROM_CONFIG+0x4",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "addq.l",
+          "operands": "0x1,(0x04010004).l",
+          "access_type": "read"
+        },
+        {
+          "source_address": 28452,
+          "source_address_hex": "0x00006f24",
+          "hardware_address": 67174400,
+          "hardware_address_hex": "0x04010000",
+          "register_name": "ROM_CONFIG",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "pea",
+          "operands": "(0x4010000).l",
+          "access_type": "read"
+        }
+      ],
+      "access_count": 7,
+      "regions_accessed": {
+        "SYSTEM_DATA": 7
+      }
+    },
+    {
+      "address": 28564,
+      "address_hex": "0x00006f94",
+      "name": "FUN_00006f94",
+      "size": 158,
+      "hardware_accesses": [
+        {
+          "source_address": 28676,
+          "source_address_hex": "0x00007004",
+          "hardware_address": 67175056,
+          "hardware_address_hex": "0x04010290",
+          "register_name": "SYSTEM_PORT+0x4",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "move.l",
+          "operands": "(0x04010290).l,-(SP)",
+          "access_type": "read"
+        }
+      ],
+      "access_count": 1,
+      "regions_accessed": {
+        "SYSTEM_DATA": 1
+      }
+    },
+    {
+      "address": 28722,
+      "address_hex": "0x00007032",
+      "name": "FUN_00007032",
+      "size": 64,
+      "hardware_accesses": [
+        {
+          "source_address": 28774,
+          "source_address_hex": "0x00007066",
+          "hardware_address": 67175856,
+          "hardware_address_hex": "0x040105b0",
+          "register_name": "SYSTEM_PORT+0x31c",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "move.l",
+          "operands": "D1,(0x040105b0).l",
+          "access_type": "write"
+        }
+      ],
+      "access_count": 1,
+      "regions_accessed": {
+        "SYSTEM_DATA": 1
+      }
+    },
+    {
+      "address": 28786,
+      "address_hex": "0x00007072",
+      "name": "FUN_00007072",
+      "size": 42,
+      "hardware_accesses": [
+        {
+          "source_address": 28816,
+          "source_address_hex": "0x00007090",
+          "hardware_address": 67175856,
+          "hardware_address_hex": "0x040105b0",
+          "register_name": "SYSTEM_PORT+0x31c",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "move.l",
+          "operands": "D1,(0x040105b0).l",
+          "access_type": "write"
+        }
+      ],
+      "access_count": 1,
+      "regions_accessed": {
+        "SYSTEM_DATA": 1
+      }
+    },
+    {
+      "address": 28828,
+      "address_hex": "0x0000709c",
+      "name": "FUN_0000709c",
+      "size": 976,
+      "hardware_accesses": [
+        {
+          "source_address": 29754,
+          "source_address_hex": "0x0000743a",
+          "hardware_address": 67175856,
+          "hardware_address_hex": "0x040105b0",
+          "register_name": "SYSTEM_PORT+0x31c",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "move.l",
+          "operands": "D1,(0x040105b0).l",
+          "access_type": "write"
+        }
+      ],
+      "access_count": 1,
+      "regions_accessed": {
+        "SYSTEM_DATA": 1
+      }
+    },
+    {
+      "address": 29804,
+      "address_hex": "0x0000746c",
+      "name": "FUN_0000746c",
+      "size": 352,
+      "hardware_accesses": [
+        {
+          "source_address": 30140,
+          "source_address_hex": "0x000075bc",
+          "hardware_address": 67175856,
+          "hardware_address_hex": "0x040105b0",
+          "register_name": "SYSTEM_PORT+0x31c",
+          "type": "System Data",
+          "region": "SYSTEM_DATA",
+          "instruction": "move.l",
+          "operands": "D1,(0x040105b0).l",
+          "access_type": "write"
+        }
+      ],
+      "access_count": 1,
+      "regions_accessed": {
+        "SYSTEM_DATA": 1
+      }
+    }
+  ],
+  "analysis": {
+    "by_region": {
+      "SYSTEM_DATA": {
+        "count": 35,
+        "unique_addresses": 7,
+        "accesses": [
+          {
+            "source_address": 11826,
+            "source_address_hex": "0x00002e32",
+            "hardware_address": 67175060,
+            "hardware_address_hex": "0x04010294",
+            "register_name": "SYSTEM_PORT",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010294).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_00002dc6",
+            "function_address": 11718,
+            "function_address_hex": "0x00002dc6"
+          },
+          {
+            "source_address": 12080,
+            "source_address_hex": "0x00002f30",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_00002dc6",
+            "function_address": 11718,
+            "function_address_hex": "0x00002dc6"
+          },
+          {
+            "source_address": 12462,
+            "source_address_hex": "0x000030ae",
+            "hardware_address": 67174440,
+            "hardware_address_hex": "0x04010028",
+            "register_name": "ROM_CONFIG+0x28",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "pea",
+            "operands": "(0x4010028).l",
+            "access_type": "read",
+            "function_name": "FUN_0000305c",
+            "function_address": 12380,
+            "function_address_hex": "0x0000305c"
+          },
+          {
+            "source_address": 14018,
+            "source_address_hex": "0x000036c2",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,D4",
+            "access_type": "read",
+            "function_name": "FUN_000036b2",
+            "function_address": 14002,
+            "function_address_hex": "0x000036b2"
+          },
+          {
+            "source_address": 14464,
+            "source_address_hex": "0x00003880",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,D2",
+            "access_type": "read",
+            "function_name": "FUN_00003874",
+            "function_address": 14452,
+            "function_address_hex": "0x00003874"
+          },
+          {
+            "source_address": 14814,
+            "source_address_hex": "0x000039de",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_0000399c",
+            "function_address": 14748,
+            "function_address_hex": "0x0000399c"
+          },
+          {
+            "source_address": 14858,
+            "source_address_hex": "0x00003a0a",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_0000399c",
+            "function_address": 14748,
+            "function_address_hex": "0x0000399c"
+          },
+          {
+            "source_address": 14990,
+            "source_address_hex": "0x00003a8e",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_0000399c",
+            "function_address": 14748,
+            "function_address_hex": "0x0000399c"
+          },
+          {
+            "source_address": 15036,
+            "source_address_hex": "0x00003abc",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_0000399c",
+            "function_address": 14748,
+            "function_address_hex": "0x0000399c"
+          },
+          {
+            "source_address": 15084,
+            "source_address_hex": "0x00003aec",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_0000399c",
+            "function_address": 14748,
+            "function_address_hex": "0x0000399c"
+          },
+          {
+            "source_address": 15144,
+            "source_address_hex": "0x00003b28",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_0000399c",
+            "function_address": 14748,
+            "function_address_hex": "0x0000399c"
+          },
+          {
+            "source_address": 15196,
+            "source_address_hex": "0x00003b5c",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_0000399c",
+            "function_address": 14748,
+            "function_address_hex": "0x0000399c"
+          },
+          {
+            "source_address": 25254,
+            "source_address_hex": "0x000062a6",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A3)",
+            "access_type": "read",
+            "function_name": "FUN_0000627a",
+            "function_address": 25210,
+            "function_address_hex": "0x0000627a"
+          },
+          {
+            "source_address": 25306,
+            "source_address_hex": "0x000062da",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_000062b8",
+            "function_address": 25272,
+            "function_address_hex": "0x000062b8"
+          },
+          {
+            "source_address": 25354,
+            "source_address_hex": "0x0000630a",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_000062e8",
+            "function_address": 25320,
+            "function_address_hex": "0x000062e8"
+          },
+          {
+            "source_address": 25394,
+            "source_address_hex": "0x00006332",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_00006318",
+            "function_address": 25368,
+            "function_address_hex": "0x00006318"
+          },
+          {
+            "source_address": 25438,
+            "source_address_hex": "0x0000635e",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_00006340",
+            "function_address": 25408,
+            "function_address_hex": "0x00006340"
+          },
+          {
+            "source_address": 25482,
+            "source_address_hex": "0x0000638a",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_0000636c",
+            "function_address": 25452,
+            "function_address_hex": "0x0000636c"
+          },
+          {
+            "source_address": 25522,
+            "source_address_hex": "0x000063b2",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_00006398",
+            "function_address": 25496,
+            "function_address_hex": "0x00006398"
+          },
+          {
+            "source_address": 25562,
+            "source_address_hex": "0x000063da",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_000063c0",
+            "function_address": 25536,
+            "function_address_hex": "0x000063c0"
+          },
+          {
+            "source_address": 25606,
+            "source_address_hex": "0x00006406",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_000063e8",
+            "function_address": 25576,
+            "function_address_hex": "0x000063e8"
+          },
+          {
+            "source_address": 25654,
+            "source_address_hex": "0x00006436",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_00006414",
+            "function_address": 25620,
+            "function_address_hex": "0x00006414"
+          },
+          {
+            "source_address": 25702,
+            "source_address_hex": "0x00006466",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_00006444",
+            "function_address": 25668,
+            "function_address_hex": "0x00006444"
+          },
+          {
+            "source_address": 28338,
+            "source_address_hex": "0x00006eb2",
+            "hardware_address": 67174420,
+            "hardware_address_hex": "0x04010014",
+            "register_name": "ROM_CONFIG+0x14",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "pea",
+            "operands": "(0x4010014).l",
+            "access_type": "read",
+            "function_name": "FUN_00006e6c",
+            "function_address": 28268,
+            "function_address_hex": "0x00006e6c"
+          },
+          {
+            "source_address": 28358,
+            "source_address_hex": "0x00006ec6",
+            "hardware_address": 67174420,
+            "hardware_address_hex": "0x04010014",
+            "register_name": "ROM_CONFIG+0x14",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "pea",
+            "operands": "(0x4010014).l",
+            "access_type": "read",
+            "function_name": "FUN_00006e6c",
+            "function_address": 28268,
+            "function_address_hex": "0x00006e6c"
+          },
+          {
+            "source_address": 28370,
+            "source_address_hex": "0x00006ed2",
+            "hardware_address": 67174400,
+            "hardware_address_hex": "0x04010000",
+            "register_name": "ROM_CONFIG",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "pea",
+            "operands": "(0x4010000).l",
+            "access_type": "read",
+            "function_name": "FUN_00006e6c",
+            "function_address": 28268,
+            "function_address_hex": "0x00006e6c"
+          },
+          {
+            "source_address": 28426,
+            "source_address_hex": "0x00006f0a",
+            "hardware_address": 67174400,
+            "hardware_address_hex": "0x04010000",
+            "register_name": "ROM_CONFIG",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "lea",
+            "operands": "(0x4010000).l,A0",
+            "access_type": "read",
+            "function_name": "FUN_00006e6c",
+            "function_address": 28268,
+            "function_address_hex": "0x00006e6c"
+          },
+          {
+            "source_address": 28436,
+            "source_address_hex": "0x00006f14",
+            "hardware_address": 67174404,
+            "hardware_address_hex": "0x04010004",
+            "register_name": "ROM_CONFIG+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "movea.l",
+            "operands": "(0x04010004).l,A0",
+            "access_type": "read",
+            "function_name": "FUN_00006e6c",
+            "function_address": 28268,
+            "function_address_hex": "0x00006e6c"
+          },
+          {
+            "source_address": 28444,
+            "source_address_hex": "0x00006f1c",
+            "hardware_address": 67174404,
+            "hardware_address_hex": "0x04010004",
+            "register_name": "ROM_CONFIG+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "addq.l",
+            "operands": "0x1,(0x04010004).l",
+            "access_type": "read",
+            "function_name": "FUN_00006e6c",
+            "function_address": 28268,
+            "function_address_hex": "0x00006e6c"
+          },
+          {
+            "source_address": 28452,
+            "source_address_hex": "0x00006f24",
+            "hardware_address": 67174400,
+            "hardware_address_hex": "0x04010000",
+            "register_name": "ROM_CONFIG",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "pea",
+            "operands": "(0x4010000).l",
+            "access_type": "read",
+            "function_name": "FUN_00006e6c",
+            "function_address": 28268,
+            "function_address_hex": "0x00006e6c"
+          },
+          {
+            "source_address": 28676,
+            "source_address_hex": "0x00007004",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_00006f94",
+            "function_address": 28564,
+            "function_address_hex": "0x00006f94"
+          },
+          {
+            "source_address": 28774,
+            "source_address_hex": "0x00007066",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "D1,(0x040105b0).l",
+            "access_type": "write",
+            "function_name": "FUN_00007032",
+            "function_address": 28722,
+            "function_address_hex": "0x00007032"
+          },
+          {
+            "source_address": 28816,
+            "source_address_hex": "0x00007090",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "D1,(0x040105b0).l",
+            "access_type": "write",
+            "function_name": "FUN_00007072",
+            "function_address": 28786,
+            "function_address_hex": "0x00007072"
+          },
+          {
+            "source_address": 29754,
+            "source_address_hex": "0x0000743a",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "D1,(0x040105b0).l",
+            "access_type": "write",
+            "function_name": "FUN_0000709c",
+            "function_address": 28828,
+            "function_address_hex": "0x0000709c"
+          },
+          {
+            "source_address": 30140,
+            "source_address_hex": "0x000075bc",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "D1,(0x040105b0).l",
+            "access_type": "write",
+            "function_name": "FUN_0000746c",
+            "function_address": 29804,
+            "function_address_hex": "0x0000746c"
+          }
+        ]
+      }
+    },
+    "by_hardware_address": {
+      "0x04010294": {
+        "address": 67175060,
+        "register_name": "SYSTEM_PORT",
+        "type": "System Data",
+        "access_count": 1,
+        "accesses": [
+          {
+            "source_address": 11826,
+            "source_address_hex": "0x00002e32",
+            "hardware_address": 67175060,
+            "hardware_address_hex": "0x04010294",
+            "register_name": "SYSTEM_PORT",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010294).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_00002dc6",
+            "function_address": 11718,
+            "function_address_hex": "0x00002dc6"
+          }
+        ]
+      },
+      "0x04010290": {
+        "address": 67175056,
+        "register_name": "SYSTEM_PORT+0x4",
+        "type": "System Data",
+        "access_count": 11,
+        "accesses": [
+          {
+            "source_address": 12080,
+            "source_address_hex": "0x00002f30",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_00002dc6",
+            "function_address": 11718,
+            "function_address_hex": "0x00002dc6"
+          },
+          {
+            "source_address": 14018,
+            "source_address_hex": "0x000036c2",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,D4",
+            "access_type": "read",
+            "function_name": "FUN_000036b2",
+            "function_address": 14002,
+            "function_address_hex": "0x000036b2"
+          },
+          {
+            "source_address": 14464,
+            "source_address_hex": "0x00003880",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,D2",
+            "access_type": "read",
+            "function_name": "FUN_00003874",
+            "function_address": 14452,
+            "function_address_hex": "0x00003874"
+          },
+          {
+            "source_address": 14814,
+            "source_address_hex": "0x000039de",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_0000399c",
+            "function_address": 14748,
+            "function_address_hex": "0x0000399c"
+          },
+          {
+            "source_address": 14858,
+            "source_address_hex": "0x00003a0a",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_0000399c",
+            "function_address": 14748,
+            "function_address_hex": "0x0000399c"
+          },
+          {
+            "source_address": 14990,
+            "source_address_hex": "0x00003a8e",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_0000399c",
+            "function_address": 14748,
+            "function_address_hex": "0x0000399c"
+          },
+          {
+            "source_address": 15036,
+            "source_address_hex": "0x00003abc",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_0000399c",
+            "function_address": 14748,
+            "function_address_hex": "0x0000399c"
+          },
+          {
+            "source_address": 15084,
+            "source_address_hex": "0x00003aec",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_0000399c",
+            "function_address": 14748,
+            "function_address_hex": "0x0000399c"
+          },
+          {
+            "source_address": 15144,
+            "source_address_hex": "0x00003b28",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_0000399c",
+            "function_address": 14748,
+            "function_address_hex": "0x0000399c"
+          },
+          {
+            "source_address": 15196,
+            "source_address_hex": "0x00003b5c",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_0000399c",
+            "function_address": 14748,
+            "function_address_hex": "0x0000399c"
+          },
+          {
+            "source_address": 28676,
+            "source_address_hex": "0x00007004",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_00006f94",
+            "function_address": 28564,
+            "function_address_hex": "0x00006f94"
+          }
+        ]
+      },
+      "0x04010028": {
+        "address": 67174440,
+        "register_name": "ROM_CONFIG+0x28",
+        "type": "System Data",
+        "access_count": 1,
+        "accesses": [
+          {
+            "source_address": 12462,
+            "source_address_hex": "0x000030ae",
+            "hardware_address": 67174440,
+            "hardware_address_hex": "0x04010028",
+            "register_name": "ROM_CONFIG+0x28",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "pea",
+            "operands": "(0x4010028).l",
+            "access_type": "read",
+            "function_name": "FUN_0000305c",
+            "function_address": 12380,
+            "function_address_hex": "0x0000305c"
+          }
+        ]
+      },
+      "0x040105b0": {
+        "address": 67175856,
+        "register_name": "SYSTEM_PORT+0x31c",
+        "type": "System Data",
+        "access_count": 15,
+        "accesses": [
+          {
+            "source_address": 25254,
+            "source_address_hex": "0x000062a6",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A3)",
+            "access_type": "read",
+            "function_name": "FUN_0000627a",
+            "function_address": 25210,
+            "function_address_hex": "0x0000627a"
+          },
+          {
+            "source_address": 25306,
+            "source_address_hex": "0x000062da",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_000062b8",
+            "function_address": 25272,
+            "function_address_hex": "0x000062b8"
+          },
+          {
+            "source_address": 25354,
+            "source_address_hex": "0x0000630a",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_000062e8",
+            "function_address": 25320,
+            "function_address_hex": "0x000062e8"
+          },
+          {
+            "source_address": 25394,
+            "source_address_hex": "0x00006332",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_00006318",
+            "function_address": 25368,
+            "function_address_hex": "0x00006318"
+          },
+          {
+            "source_address": 25438,
+            "source_address_hex": "0x0000635e",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_00006340",
+            "function_address": 25408,
+            "function_address_hex": "0x00006340"
+          },
+          {
+            "source_address": 25482,
+            "source_address_hex": "0x0000638a",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_0000636c",
+            "function_address": 25452,
+            "function_address_hex": "0x0000636c"
+          },
+          {
+            "source_address": 25522,
+            "source_address_hex": "0x000063b2",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_00006398",
+            "function_address": 25496,
+            "function_address_hex": "0x00006398"
+          },
+          {
+            "source_address": 25562,
+            "source_address_hex": "0x000063da",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_000063c0",
+            "function_address": 25536,
+            "function_address_hex": "0x000063c0"
+          },
+          {
+            "source_address": 25606,
+            "source_address_hex": "0x00006406",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_000063e8",
+            "function_address": 25576,
+            "function_address_hex": "0x000063e8"
+          },
+          {
+            "source_address": 25654,
+            "source_address_hex": "0x00006436",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_00006414",
+            "function_address": 25620,
+            "function_address_hex": "0x00006414"
+          },
+          {
+            "source_address": 25702,
+            "source_address_hex": "0x00006466",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_00006444",
+            "function_address": 25668,
+            "function_address_hex": "0x00006444"
+          },
+          {
+            "source_address": 28774,
+            "source_address_hex": "0x00007066",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "D1,(0x040105b0).l",
+            "access_type": "write",
+            "function_name": "FUN_00007032",
+            "function_address": 28722,
+            "function_address_hex": "0x00007032"
+          },
+          {
+            "source_address": 28816,
+            "source_address_hex": "0x00007090",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "D1,(0x040105b0).l",
+            "access_type": "write",
+            "function_name": "FUN_00007072",
+            "function_address": 28786,
+            "function_address_hex": "0x00007072"
+          },
+          {
+            "source_address": 29754,
+            "source_address_hex": "0x0000743a",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "D1,(0x040105b0).l",
+            "access_type": "write",
+            "function_name": "FUN_0000709c",
+            "function_address": 28828,
+            "function_address_hex": "0x0000709c"
+          },
+          {
+            "source_address": 30140,
+            "source_address_hex": "0x000075bc",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "D1,(0x040105b0).l",
+            "access_type": "write",
+            "function_name": "FUN_0000746c",
+            "function_address": 29804,
+            "function_address_hex": "0x0000746c"
+          }
+        ]
+      },
+      "0x04010014": {
+        "address": 67174420,
+        "register_name": "ROM_CONFIG+0x14",
+        "type": "System Data",
+        "access_count": 2,
+        "accesses": [
+          {
+            "source_address": 28338,
+            "source_address_hex": "0x00006eb2",
+            "hardware_address": 67174420,
+            "hardware_address_hex": "0x04010014",
+            "register_name": "ROM_CONFIG+0x14",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "pea",
+            "operands": "(0x4010014).l",
+            "access_type": "read",
+            "function_name": "FUN_00006e6c",
+            "function_address": 28268,
+            "function_address_hex": "0x00006e6c"
+          },
+          {
+            "source_address": 28358,
+            "source_address_hex": "0x00006ec6",
+            "hardware_address": 67174420,
+            "hardware_address_hex": "0x04010014",
+            "register_name": "ROM_CONFIG+0x14",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "pea",
+            "operands": "(0x4010014).l",
+            "access_type": "read",
+            "function_name": "FUN_00006e6c",
+            "function_address": 28268,
+            "function_address_hex": "0x00006e6c"
+          }
+        ]
+      },
+      "0x04010000": {
+        "address": 67174400,
+        "register_name": "ROM_CONFIG",
+        "type": "System Data",
+        "access_count": 3,
+        "accesses": [
+          {
+            "source_address": 28370,
+            "source_address_hex": "0x00006ed2",
+            "hardware_address": 67174400,
+            "hardware_address_hex": "0x04010000",
+            "register_name": "ROM_CONFIG",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "pea",
+            "operands": "(0x4010000).l",
+            "access_type": "read",
+            "function_name": "FUN_00006e6c",
+            "function_address": 28268,
+            "function_address_hex": "0x00006e6c"
+          },
+          {
+            "source_address": 28426,
+            "source_address_hex": "0x00006f0a",
+            "hardware_address": 67174400,
+            "hardware_address_hex": "0x04010000",
+            "register_name": "ROM_CONFIG",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "lea",
+            "operands": "(0x4010000).l,A0",
+            "access_type": "read",
+            "function_name": "FUN_00006e6c",
+            "function_address": 28268,
+            "function_address_hex": "0x00006e6c"
+          },
+          {
+            "source_address": 28452,
+            "source_address_hex": "0x00006f24",
+            "hardware_address": 67174400,
+            "hardware_address_hex": "0x04010000",
+            "register_name": "ROM_CONFIG",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "pea",
+            "operands": "(0x4010000).l",
+            "access_type": "read",
+            "function_name": "FUN_00006e6c",
+            "function_address": 28268,
+            "function_address_hex": "0x00006e6c"
+          }
+        ]
+      },
+      "0x04010004": {
+        "address": 67174404,
+        "register_name": "ROM_CONFIG+0x4",
+        "type": "System Data",
+        "access_count": 2,
+        "accesses": [
+          {
+            "source_address": 28436,
+            "source_address_hex": "0x00006f14",
+            "hardware_address": 67174404,
+            "hardware_address_hex": "0x04010004",
+            "register_name": "ROM_CONFIG+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "movea.l",
+            "operands": "(0x04010004).l,A0",
+            "access_type": "read",
+            "function_name": "FUN_00006e6c",
+            "function_address": 28268,
+            "function_address_hex": "0x00006e6c"
+          },
+          {
+            "source_address": 28444,
+            "source_address_hex": "0x00006f1c",
+            "hardware_address": 67174404,
+            "hardware_address_hex": "0x04010004",
+            "register_name": "ROM_CONFIG+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "addq.l",
+            "operands": "0x1,(0x04010004).l",
+            "access_type": "read",
+            "function_name": "FUN_00006e6c",
+            "function_address": 28268,
+            "function_address_hex": "0x00006e6c"
+          }
+        ]
+      }
+    },
+    "by_register": {
+      "SYSTEM_PORT": {
+        "count": 1,
+        "unique_functions": 1,
+        "accesses": [
+          {
+            "source_address": 11826,
+            "source_address_hex": "0x00002e32",
+            "hardware_address": 67175060,
+            "hardware_address_hex": "0x04010294",
+            "register_name": "SYSTEM_PORT",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010294).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_00002dc6",
+            "function_address": 11718,
+            "function_address_hex": "0x00002dc6"
+          }
+        ]
+      },
+      "SYSTEM_PORT+0x4": {
+        "count": 11,
+        "unique_functions": 5,
+        "accesses": [
+          {
+            "source_address": 12080,
+            "source_address_hex": "0x00002f30",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_00002dc6",
+            "function_address": 11718,
+            "function_address_hex": "0x00002dc6"
+          },
+          {
+            "source_address": 14018,
+            "source_address_hex": "0x000036c2",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,D4",
+            "access_type": "read",
+            "function_name": "FUN_000036b2",
+            "function_address": 14002,
+            "function_address_hex": "0x000036b2"
+          },
+          {
+            "source_address": 14464,
+            "source_address_hex": "0x00003880",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,D2",
+            "access_type": "read",
+            "function_name": "FUN_00003874",
+            "function_address": 14452,
+            "function_address_hex": "0x00003874"
+          },
+          {
+            "source_address": 14814,
+            "source_address_hex": "0x000039de",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_0000399c",
+            "function_address": 14748,
+            "function_address_hex": "0x0000399c"
+          },
+          {
+            "source_address": 14858,
+            "source_address_hex": "0x00003a0a",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_0000399c",
+            "function_address": 14748,
+            "function_address_hex": "0x0000399c"
+          },
+          {
+            "source_address": 14990,
+            "source_address_hex": "0x00003a8e",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_0000399c",
+            "function_address": 14748,
+            "function_address_hex": "0x0000399c"
+          },
+          {
+            "source_address": 15036,
+            "source_address_hex": "0x00003abc",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_0000399c",
+            "function_address": 14748,
+            "function_address_hex": "0x0000399c"
+          },
+          {
+            "source_address": 15084,
+            "source_address_hex": "0x00003aec",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_0000399c",
+            "function_address": 14748,
+            "function_address_hex": "0x0000399c"
+          },
+          {
+            "source_address": 15144,
+            "source_address_hex": "0x00003b28",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_0000399c",
+            "function_address": 14748,
+            "function_address_hex": "0x0000399c"
+          },
+          {
+            "source_address": 15196,
+            "source_address_hex": "0x00003b5c",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_0000399c",
+            "function_address": 14748,
+            "function_address_hex": "0x0000399c"
+          },
+          {
+            "source_address": 28676,
+            "source_address_hex": "0x00007004",
+            "hardware_address": 67175056,
+            "hardware_address_hex": "0x04010290",
+            "register_name": "SYSTEM_PORT+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x04010290).l,-(SP)",
+            "access_type": "read",
+            "function_name": "FUN_00006f94",
+            "function_address": 28564,
+            "function_address_hex": "0x00006f94"
+          }
+        ]
+      },
+      "ROM_CONFIG+0x28": {
+        "count": 1,
+        "unique_functions": 1,
+        "accesses": [
+          {
+            "source_address": 12462,
+            "source_address_hex": "0x000030ae",
+            "hardware_address": 67174440,
+            "hardware_address_hex": "0x04010028",
+            "register_name": "ROM_CONFIG+0x28",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "pea",
+            "operands": "(0x4010028).l",
+            "access_type": "read",
+            "function_name": "FUN_0000305c",
+            "function_address": 12380,
+            "function_address_hex": "0x0000305c"
+          }
+        ]
+      },
+      "SYSTEM_PORT+0x31c": {
+        "count": 15,
+        "unique_functions": 15,
+        "accesses": [
+          {
+            "source_address": 25254,
+            "source_address_hex": "0x000062a6",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A3)",
+            "access_type": "read",
+            "function_name": "FUN_0000627a",
+            "function_address": 25210,
+            "function_address_hex": "0x0000627a"
+          },
+          {
+            "source_address": 25306,
+            "source_address_hex": "0x000062da",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_000062b8",
+            "function_address": 25272,
+            "function_address_hex": "0x000062b8"
+          },
+          {
+            "source_address": 25354,
+            "source_address_hex": "0x0000630a",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_000062e8",
+            "function_address": 25320,
+            "function_address_hex": "0x000062e8"
+          },
+          {
+            "source_address": 25394,
+            "source_address_hex": "0x00006332",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_00006318",
+            "function_address": 25368,
+            "function_address_hex": "0x00006318"
+          },
+          {
+            "source_address": 25438,
+            "source_address_hex": "0x0000635e",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_00006340",
+            "function_address": 25408,
+            "function_address_hex": "0x00006340"
+          },
+          {
+            "source_address": 25482,
+            "source_address_hex": "0x0000638a",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_0000636c",
+            "function_address": 25452,
+            "function_address_hex": "0x0000636c"
+          },
+          {
+            "source_address": 25522,
+            "source_address_hex": "0x000063b2",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_00006398",
+            "function_address": 25496,
+            "function_address_hex": "0x00006398"
+          },
+          {
+            "source_address": 25562,
+            "source_address_hex": "0x000063da",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_000063c0",
+            "function_address": 25536,
+            "function_address_hex": "0x000063c0"
+          },
+          {
+            "source_address": 25606,
+            "source_address_hex": "0x00006406",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_000063e8",
+            "function_address": 25576,
+            "function_address_hex": "0x000063e8"
+          },
+          {
+            "source_address": 25654,
+            "source_address_hex": "0x00006436",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_00006414",
+            "function_address": 25620,
+            "function_address_hex": "0x00006414"
+          },
+          {
+            "source_address": 25702,
+            "source_address_hex": "0x00006466",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "(0x040105b0).l,(A2)",
+            "access_type": "read",
+            "function_name": "FUN_00006444",
+            "function_address": 25668,
+            "function_address_hex": "0x00006444"
+          },
+          {
+            "source_address": 28774,
+            "source_address_hex": "0x00007066",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "D1,(0x040105b0).l",
+            "access_type": "write",
+            "function_name": "FUN_00007032",
+            "function_address": 28722,
+            "function_address_hex": "0x00007032"
+          },
+          {
+            "source_address": 28816,
+            "source_address_hex": "0x00007090",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "D1,(0x040105b0).l",
+            "access_type": "write",
+            "function_name": "FUN_00007072",
+            "function_address": 28786,
+            "function_address_hex": "0x00007072"
+          },
+          {
+            "source_address": 29754,
+            "source_address_hex": "0x0000743a",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "D1,(0x040105b0).l",
+            "access_type": "write",
+            "function_name": "FUN_0000709c",
+            "function_address": 28828,
+            "function_address_hex": "0x0000709c"
+          },
+          {
+            "source_address": 30140,
+            "source_address_hex": "0x000075bc",
+            "hardware_address": 67175856,
+            "hardware_address_hex": "0x040105b0",
+            "register_name": "SYSTEM_PORT+0x31c",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "move.l",
+            "operands": "D1,(0x040105b0).l",
+            "access_type": "write",
+            "function_name": "FUN_0000746c",
+            "function_address": 29804,
+            "function_address_hex": "0x0000746c"
+          }
+        ]
+      },
+      "ROM_CONFIG+0x14": {
+        "count": 2,
+        "unique_functions": 1,
+        "accesses": [
+          {
+            "source_address": 28338,
+            "source_address_hex": "0x00006eb2",
+            "hardware_address": 67174420,
+            "hardware_address_hex": "0x04010014",
+            "register_name": "ROM_CONFIG+0x14",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "pea",
+            "operands": "(0x4010014).l",
+            "access_type": "read",
+            "function_name": "FUN_00006e6c",
+            "function_address": 28268,
+            "function_address_hex": "0x00006e6c"
+          },
+          {
+            "source_address": 28358,
+            "source_address_hex": "0x00006ec6",
+            "hardware_address": 67174420,
+            "hardware_address_hex": "0x04010014",
+            "register_name": "ROM_CONFIG+0x14",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "pea",
+            "operands": "(0x4010014).l",
+            "access_type": "read",
+            "function_name": "FUN_00006e6c",
+            "function_address": 28268,
+            "function_address_hex": "0x00006e6c"
+          }
+        ]
+      },
+      "ROM_CONFIG": {
+        "count": 3,
+        "unique_functions": 1,
+        "accesses": [
+          {
+            "source_address": 28370,
+            "source_address_hex": "0x00006ed2",
+            "hardware_address": 67174400,
+            "hardware_address_hex": "0x04010000",
+            "register_name": "ROM_CONFIG",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "pea",
+            "operands": "(0x4010000).l",
+            "access_type": "read",
+            "function_name": "FUN_00006e6c",
+            "function_address": 28268,
+            "function_address_hex": "0x00006e6c"
+          },
+          {
+            "source_address": 28426,
+            "source_address_hex": "0x00006f0a",
+            "hardware_address": 67174400,
+            "hardware_address_hex": "0x04010000",
+            "register_name": "ROM_CONFIG",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "lea",
+            "operands": "(0x4010000).l,A0",
+            "access_type": "read",
+            "function_name": "FUN_00006e6c",
+            "function_address": 28268,
+            "function_address_hex": "0x00006e6c"
+          },
+          {
+            "source_address": 28452,
+            "source_address_hex": "0x00006f24",
+            "hardware_address": 67174400,
+            "hardware_address_hex": "0x04010000",
+            "register_name": "ROM_CONFIG",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "pea",
+            "operands": "(0x4010000).l",
+            "access_type": "read",
+            "function_name": "FUN_00006e6c",
+            "function_address": 28268,
+            "function_address_hex": "0x00006e6c"
+          }
+        ]
+      },
+      "ROM_CONFIG+0x4": {
+        "count": 2,
+        "unique_functions": 1,
+        "accesses": [
+          {
+            "source_address": 28436,
+            "source_address_hex": "0x00006f14",
+            "hardware_address": 67174404,
+            "hardware_address_hex": "0x04010004",
+            "register_name": "ROM_CONFIG+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "movea.l",
+            "operands": "(0x04010004).l,A0",
+            "access_type": "read",
+            "function_name": "FUN_00006e6c",
+            "function_address": 28268,
+            "function_address_hex": "0x00006e6c"
+          },
+          {
+            "source_address": 28444,
+            "source_address_hex": "0x00006f1c",
+            "hardware_address": 67174404,
+            "hardware_address_hex": "0x04010004",
+            "register_name": "ROM_CONFIG+0x4",
+            "type": "System Data",
+            "region": "SYSTEM_DATA",
+            "instruction": "addq.l",
+            "operands": "0x1,(0x04010004).l",
+            "access_type": "read",
+            "function_name": "FUN_00006e6c",
+            "function_address": 28268,
+            "function_address_hex": "0x00006e6c"
+          }
+        ]
+      }
+    }
+  }
+}

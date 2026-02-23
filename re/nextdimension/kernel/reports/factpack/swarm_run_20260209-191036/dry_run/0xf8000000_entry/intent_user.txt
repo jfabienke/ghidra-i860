@@ -1,0 +1,130 @@
+Analyze the following function and return a structured JSON intent dossier.
+
+FUNCTION: entry at 0xf8000000
+SIZE: 276 bytes (69 instructions)
+CONFIDENCE SOURCE: curated
+HAS UNRESOLVED BRI: False
+PRIORITY TAGS: mmio_access
+
+CALLERS (0): (none)
+CALLEES (0): (none)
+
+BLOCKS (1):
+  0xf8000000..0xf8000113 (69 insns)
+
+INSTRUCTIONS:
+  0xf8000000: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8000004: ld.b r22(r0),r0                          defs=[r0_sink] uses=[0x0,r22] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8000008: ld.b r2(r2),r0                           defs=[r0_sink] uses=[r2] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800000c: ld.b r20(r4),r0                          defs=[r0_sink] uses=[r20,r4] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8000010: xorh 0x5ec,r24,r15                       defs=[r15] uses=[0x10,r24,0x5ec] pcode=[INT_ZEXT,INT_LEFT,INT_XOR]
+  0xf8000014: xorh 0xa5e4,r31,r31                      defs=[r31] uses=[0x10,0xa5e4,r31] pcode=[INT_ZEXT,INT_LEFT,INT_XOR]
+  0xf8000018: addu r2,r7,r31                           defs=[r31] uses=[r2,r7] pcode=[INT_ADD]
+  0xf800001c: ld.c fir,r0                              defs=[r0_sink] uses=[fir] pcode=[COPY]
+  0xf8000020: st.b r24,0x6c4(r24)                      defs=[] uses=[r24,0x6c4] pcode=[INT_ADD,STORE]
+  0xf8000024: st.s r24,0x6a4(r0)                       defs=[] uses=[0x0,r24,0x6a4] pcode=[INT_ADD,STORE]
+  0xf8000028: st.b r2,-0x3f14(r7)                      defs=[] uses=[0xffffc0ec,r2,r7] pcode=[INT_ADD,STORE] [MMIO:mmio_high_space]
+  0xf800002c: and r2,r1,r7                             defs=[r7] uses=[r1,r2] pcode=[INT_AND]
+  0xf8000030: ld.b r2(r1),r8                           defs=[r8] uses=[r1,r2] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8000034: ld.b r2(r1),r16                          defs=[r16] uses=[r1,r2] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8000038: ld.b r0(r9),r16                          defs=[r16] uses=[0x0,r9] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800003c: ixfr r0,f24                              defs=[f24] uses=[0x0] pcode=[COPY]
+  0xf8000040: ld.b r8(r2),r16                          defs=[r16] uses=[r8,r2] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8000044: ld.b r8(r1),r8                           defs=[r8] uses=[r8,r1] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8000048: ld.b r8(r1),r16                          defs=[r16] uses=[r8,r1] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800004c: xor r8,r7,r31                            defs=[r31] uses=[r8,r7] pcode=[INT_XOR]
+  0xf8000050: ixfr r8,f0                               defs=[] uses=[] pcode=[]
+  0xf8000054: ixfr r8,f0                               defs=[] uses=[] pcode=[]
+  0xf8000058: st.b r8,0x1c(r8)                         defs=[] uses=[r8,0x1c] pcode=[INT_ADD,STORE]
+  0xf800005c: ld.b r3(r7),r31                          defs=[r31] uses=[r3,r7] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8000060: ld.b r3(r0),r0                           defs=[r0_sink] uses=[0x0,r3] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8000064: ld.b r28(r15),r16                        defs=[r16] uses=[r28,r15] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8000068: ld.b -0x1fe1(r8),r16                     defs=[r16] uses=[r8,0xe01f] pcode=[INT_SEXT,INT_ADD,LOAD,INT_ZEXT] [MMIO:mmio_high_space]
+  0xf800006c: ixfr r28,f16                             defs=[f16] uses=[r28] pcode=[COPY]
+  0xf8000070: ld.b r30(r0),r0                          defs=[r0_sink] uses=[0x0,r30] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8000074: d.shrd r0,r28,r19                        defs=[r19] uses=[0x0,0x20,r28,r19,0x1f] pcode=[INT_ZEXT,INT_LEFT,INT_OR,INT_AND,INT_RIGHT,COPY]
+  0xf8000078: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800007c: ld.b r10(r0),r0                          defs=[r0_sink] uses=[0x0,r10] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8000080: xorh 0x31c6,r24,r15                      defs=[r15] uses=[0x10,r24,0x31c6] pcode=[INT_ZEXT,INT_LEFT,INT_XOR]
+  0xf8000084: fld.l r6(r8),f0                          defs=[f0_sink] uses=[r8,r6] pcode=[INT_ADD,LOAD]
+  0xf8000088: xorh 0x10d6,r24,r15                      defs=[r15] uses=[0x10,r24,0x10d6] pcode=[INT_ZEXT,INT_LEFT,INT_XOR]
+  0xf800008c: ld.b r2(r4),r8                           defs=[r8] uses=[r4,r2] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8000090: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8000094: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8000098: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800009c: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80000a0: ld.b r8(r4),r0                           defs=[r0_sink] uses=[r8,r4] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80000a4: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80000a8: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80000ac: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80000b0: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80000b4: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80000b8: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80000bc: ld.b r2(r7),r24                          defs=[r24] uses=[r2,r7] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80000c0: ld.b r18(r0),r16                         defs=[r16] uses=[0x0,r18] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80000c4: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80000c8: ld.b r0(r5),r0                           defs=[r0_sink] uses=[0x0,r5] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80000cc: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80000d0: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80000d4: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80000d8: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80000dc: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80000e0: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80000e4: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80000e8: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80000ec: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80000f0: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80000f4: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80000f8: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80000fc: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8000100: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8000104: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8000108: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf800010c: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf8000110: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+
+REFERENCES:
+  0xf8000024 -> 0x000006a4 [WRITE] flow=False
+
+STRINGS IN RANGE:
+  (none)
+
+DISPATCH UNRESOLVED:
+  (none)
+
+CONTEXT:
+- R15 cluster (GState flags): False
+- MMIO accesses: 0xf8000028=mmio_high_space
+- Nearby deny ranges: (none)
+- Nearby embedded objects: (none)
+
+Return ONLY valid JSON matching this schema:
+{
+  "function_id": "0xf8000000",
+  "function_name": "entry",
+  "primary_intent": "<one-line purpose statement>",
+  "intent_category": "<one of: initialization, dispatch, parser, raster, mmio_driver, math_kernel, utility, synchronization, error_handler, unknown>",
+  "evidence": [
+    {"addr": "0x...", "fact": "<what this instruction/pattern proves>"}
+  ],
+  "register_protocol": {
+    "inputs": ["<rN = description>"],
+    "outputs": ["<rN = description>"],
+    "side_effects": ["<memory write / MMIO / control reg change>"]
+  },
+  "data_accesses": [
+    {"addr": "0x...", "target": "0x...", "kind": "read|write|mmio", "interpretation": "..."}
+  ],
+  "control_flow_summary": "<how the function flows: linear, loop, conditional tree, dispatch, etc.>",
+  "confidence": <0-100>,
+  "confidence_factors": {
+    "supporting": ["<what raises confidence>"],
+    "limiting": ["<what caps confidence>"]
+  },
+  "alternatives": [
+    {"intent": "<alternative purpose>", "why_not_primary": "<evidence against>"}
+  ],
+  "open_questions": ["<what remains unknown>"],
+  "required_next_evidence": ["<what would resolve open questions>"],
+  "subsystem_hint": "<suggested subsystem: postscript_dispatch, pixel_pipeline, memory_management, board_init, interrupt_handling, unknown>"
+}

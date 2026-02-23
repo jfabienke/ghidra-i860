@@ -1,0 +1,97 @@
+Analyze the following function and return a structured JSON intent dossier.
+
+FUNCTION: FUN_f8021a20 at 0xf8021a20
+SIZE: 100 bytes (25 instructions)
+CONFIDENCE SOURCE: default
+HAS UNRESOLVED BRI: True
+PRIORITY TAGS: unresolved_bri, mmio_access
+
+CALLERS (0): (none)
+CALLEES (0): (none)
+
+BLOCKS (8):
+  0xf8021a20..0xf8021a2b (3 insns)
+  0xf8021a2c..0xf8021a4f (9 insns)
+  0xf8021a50..0xf8021a57 (2 insns)
+  0xf8021c58..0xf8021c5b (1 insns)
+  0xf8021c5c..0xf8021c63 (2 insns)
+  0xf8021c64..0xf8021c67 (1 insns)
+  0xf802da2c..0xf802da33 (2 insns)
+  0xf802da34..0xf802da47 (5 insns)
+
+INSTRUCTIONS:
+  0xf8021a20: subs 0x0,r1,r6                           defs=[r6] uses=[0x0,r1] pcode=[INT_SEXT,INT_SUB]
+  0xf8021a24: andnot r0,r0,r28                         defs=[r28] uses=[0x0] pcode=[INT_NEGATE,INT_AND]
+  0xf8021a28: bte 0x0,r1,0xf802da2c                    defs=[] uses=[0x0,r1] pcode=[INT_EQUAL,CBRANCH]
+  0xf8021a2c: andnot r0,r1,r0                          defs=[r0_sink] uses=[0x0,r1] pcode=[INT_NEGATE,INT_AND]
+  0xf8021a30: fst.d f0f1,r0(r17)                       defs=[] uses=[r0,f0f1,r17] pcode=[INT_ADD,STORE]
+  0xf8021a34: and r0,r0,r1                             defs=[r1] uses=[0x0] pcode=[INT_AND]
+  0xf8021a38: or 0x0,r17,r5                            defs=[r5] uses=[0x0,r17] pcode=[INT_ZEXT,INT_OR]
+  0xf8021a3c: and r0,r0,r1                             defs=[r1] uses=[0x0] pcode=[INT_AND]
+  0xf8021a40: subs 0x0,r17,r5                          defs=[r5] uses=[0x0,r17] pcode=[INT_SEXT,INT_SUB]
+  0xf8021a44: and r0,r0,r1                             defs=[r1] uses=[0x0] pcode=[INT_AND]
+  0xf8021a48: bc.t 0xf8961a48                          defs=[r1] uses=[0x0,CC] pcode=[INT_NOTEQUAL,INT_AND,CBRANCH]
+  0xf8021a4c: _and r0,r0,r1                            defs=[r1] uses=[0x0] pcode=[INT_AND]
+  0xf8021a50: bri r0                                   defs=[r1] uses=[0x0] pcode=[INT_AND,BRANCHIND]
+  0xf8021a54: _and r0,r0,r1                            defs=[r1] uses=[0x0] pcode=[INT_AND]
+  0xf8021c58: bte 0x0,r1,0xf8037edc                    defs=[] uses=[0x0,r1] pcode=[INT_EQUAL,CBRANCH]
+  0xf8021c5c: st.s r0,0x3000(r20)                      defs=[] uses=[r20,0x3000,0x0] pcode=[INT_ADD,STORE]
+  0xf8021c60: btne 0x0,r1,0xf8037ee4                   defs=[] uses=[0x0,r1] pcode=[INT_NOTEQUAL,CBRANCH]
+  0xf8021c64: st.s r0,0x3000(r20)                      defs=[] uses=[r20,0x3000,0x0] pcode=[INT_ADD,STORE]
+  0xf802da2c: subu 0x537,r13,r6                        defs=[r6] uses=[r13,0x537] pcode=[INT_SEXT,INT_SUB]
+  0xf802da30: btne r18,r16,0xf8021c58                  defs=[] uses=[r16,r18] pcode=[INT_NOTEQUAL,CBRANCH]
+  0xf802da34: st.b r18,0x44b0(r26)                     defs=[] uses=[0x44b0,r26,r18] pcode=[INT_ADD,STORE]
+  0xf802da38: ld.b r23(r26),r8                         defs=[r8] uses=[r26,r23] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf802da3c: subu -0x2d1f,r18,r20                     defs=[r20] uses=[0xd2e1,r18] pcode=[INT_SEXT,INT_SUB] [MMIO:mmio_high_space]
+  0xf802da40: ra1p2.sd f4,f23,f4f5                     defs=[f4f5] uses=[f4,0x11,f23] pcode=[CALLOTHER]
+  0xf802da44: or 0xe9a3,r3,r23                         defs=[r23] uses=[0xe9a3,r3] pcode=[INT_ZEXT,INT_OR]
+
+REFERENCES:
+  0xf8021a28 -> 0xf802da2c [CONDITIONAL_JUMP] flow=True
+  0xf802da30 -> 0xf8021c58 [CONDITIONAL_JUMP] flow=True
+  0xf8021a48 -> 0xf8961a48 [CONDITIONAL_JUMP] flow=True
+  0xf8021c58 -> 0xf8037edc [CONDITIONAL_JUMP] flow=True
+  0xf8021c60 -> 0xf8037ee4 [CONDITIONAL_JUMP] flow=True
+
+STRINGS IN RANGE:
+  (none)
+
+DISPATCH UNRESOLVED:
+  0xf8021a50: bri [COMPUTED_JUMP] phase2=None
+
+CONTEXT:
+- R15 cluster (GState flags): False
+- MMIO accesses: 0xf802da3c=mmio_high_space
+- Nearby deny ranges: (none)
+- Nearby embedded objects: (none)
+
+Return ONLY valid JSON matching this schema:
+{
+  "function_id": "0xf8021a20",
+  "function_name": "FUN_f8021a20",
+  "primary_intent": "<one-line purpose statement>",
+  "intent_category": "<one of: initialization, dispatch, parser, raster, mmio_driver, math_kernel, utility, synchronization, error_handler, unknown>",
+  "evidence": [
+    {"addr": "0x...", "fact": "<what this instruction/pattern proves>"}
+  ],
+  "register_protocol": {
+    "inputs": ["<rN = description>"],
+    "outputs": ["<rN = description>"],
+    "side_effects": ["<memory write / MMIO / control reg change>"]
+  },
+  "data_accesses": [
+    {"addr": "0x...", "target": "0x...", "kind": "read|write|mmio", "interpretation": "..."}
+  ],
+  "control_flow_summary": "<how the function flows: linear, loop, conditional tree, dispatch, etc.>",
+  "confidence": <0-100>,
+  "confidence_factors": {
+    "supporting": ["<what raises confidence>"],
+    "limiting": ["<what caps confidence>"]
+  },
+  "alternatives": [
+    {"intent": "<alternative purpose>", "why_not_primary": "<evidence against>"}
+  ],
+  "open_questions": ["<what remains unknown>"],
+  "required_next_evidence": ["<what would resolve open questions>"],
+  "subsystem_hint": "<suggested subsystem: postscript_dispatch, pixel_pipeline, memory_management, board_init, interrupt_handling, unknown>"
+}

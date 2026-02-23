@@ -1,0 +1,77 @@
+Analyze the following function and return a structured JSON intent dossier.
+
+FUNCTION: FUN_fff0021c at 0xfff0021c
+SIZE: 52 bytes (13 instructions)
+CONFIDENCE SOURCE: default
+HAS UNRESOLVED BRI: False
+PRIORITY TAGS: (none)
+
+CALLERS (1): 0xfff006c0 FUN_fff006c0
+CALLEES (0): (none)
+
+BLOCKS (3):
+  0xfff0021c..0xfff0022b (4 insns)
+  0xfff0022c..0xfff00247 (7 insns)
+  0xfff00248..0xfff00253 (3 insns)
+
+INSTRUCTIONS:
+  0xfff0021c: nop                                      defs=[] uses=[] pcode=[]
+  0xfff00220: ld.c dirbase,r17                         defs=[r17] uses=[dirbase] pcode=[COPY]
+  0xfff00224: and 0x1,r17,r0                           defs=[r0_sink] uses=[0x1,r17] pcode=[INT_ZEXT,INT_AND]
+  0xfff00228: bnc 0xfff00248                           defs=[] uses=[0x0,CC] pcode=[INT_EQUAL,CBRANCH]
+  0xfff0022c: orh 0xff80,r0,r31                        defs=[r31] uses=[0xff80,0x10,0x0] pcode=[INT_ZEXT,INT_LEFT,INT_OR]
+  0xfff00230: ld.l 0x31(r31),r18                       defs=[r18] uses=[0x31,r31] pcode=[INT_SEXT,INT_ADD,LOAD]
+  0xfff00234: orh 0xfff,r0,r17                         defs=[r17] uses=[0x10,0x0,0xfff] pcode=[INT_ZEXT,INT_LEFT,INT_OR]
+  0xfff00238: or 0xffff,r17,r17                        defs=[r17] uses=[r17,0xffff] pcode=[INT_ZEXT,INT_OR]
+  0xfff0023c: and r16,r17,r16                          defs=[r16] uses=[r16,r17] pcode=[INT_AND]
+  0xfff00240: and 0xf,r18,r18                          defs=[r18] uses=[r18,0xf] pcode=[INT_ZEXT,INT_AND]
+  0xfff00244: shl 0x1c,r18,r18                         defs=[r18] uses=[r18,0x1c] pcode=[INT_LEFT]
+  0xfff00248: or r16,r18,r16                           defs=[r16] uses=[r16,r18] pcode=[INT_OR]
+  0xfff0024c: ret                                      defs=[] uses=[r1] pcode=[RETURN]
+
+REFERENCES:
+  0xfff00228 -> 0xfff00248 [CONDITIONAL_JUMP] flow=True
+  0xfff00230 -> 0xff800031 [READ] flow=False
+
+STRINGS IN RANGE:
+  (none)
+
+DISPATCH UNRESOLVED:
+  (none)
+
+CONTEXT:
+- R15 cluster (GState flags): False
+- MMIO accesses: (none)
+- Nearby deny ranges: (none)
+- Nearby embedded objects: (none)
+
+Return ONLY valid JSON matching this schema:
+{
+  "function_id": "0xfff0021c",
+  "function_name": "FUN_fff0021c",
+  "primary_intent": "<one-line purpose statement>",
+  "intent_category": "<one of: initialization, dispatch, parser, raster, mmio_driver, math_kernel, utility, synchronization, error_handler, unknown>",
+  "evidence": [
+    {"addr": "0x...", "fact": "<what this instruction/pattern proves>"}
+  ],
+  "register_protocol": {
+    "inputs": ["<rN = description>"],
+    "outputs": ["<rN = description>"],
+    "side_effects": ["<memory write / MMIO / control reg change>"]
+  },
+  "data_accesses": [
+    {"addr": "0x...", "target": "0x...", "kind": "read|write|mmio", "interpretation": "..."}
+  ],
+  "control_flow_summary": "<how the function flows: linear, loop, conditional tree, dispatch, etc.>",
+  "confidence": <0-100>,
+  "confidence_factors": {
+    "supporting": ["<what raises confidence>"],
+    "limiting": ["<what caps confidence>"]
+  },
+  "alternatives": [
+    {"intent": "<alternative purpose>", "why_not_primary": "<evidence against>"}
+  ],
+  "open_questions": ["<what remains unknown>"],
+  "required_next_evidence": ["<what would resolve open questions>"],
+  "subsystem_hint": "<suggested subsystem: postscript_dispatch, pixel_pipeline, memory_management, board_init, interrupt_handling, unknown>"
+}

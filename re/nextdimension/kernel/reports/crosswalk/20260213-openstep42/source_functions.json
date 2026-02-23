@@ -1,0 +1,5078 @@
+{
+  "schema_version": "gack-source-facts-v1",
+  "source_root": "/Users/jvindahl/Development/re/NeXTDimension/NextDimension-21/NDkernel",
+  "source_version": "NeXTSTEP-2.0",
+  "generated_at_utc": "2026-02-13T15:58:59.533332+00:00",
+  "files_scanned": {
+    "c": 55,
+    "asm": 5
+  },
+  "function_count": 331,
+  "functions": [
+    {
+      "name": "two52two31",
+      "file": "ND/_i860rt.s",
+      "line": 13,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x43300000",
+        "0x80000000"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "two",
+      "file": "ND/_i860rt.s",
+      "line": 16,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00000000",
+        "0x40000000"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "onepluseps",
+      "file": "ND/_i860rt.s",
+      "line": 19,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00001000",
+        "0x3ff00000"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "two52",
+      "file": "ND/_i860rt.s",
+      "line": 22,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00000000",
+        "0x43300000"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "___divsi3",
+      "file": "ND/_i860rt.s",
+      "line": 32,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00008000"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "___udivsi3",
+      "file": "ND/_i860rt.s",
+      "line": 110,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x80000000"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "___modsi3",
+      "file": "ND/_i860rt.s",
+      "line": 165,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00008000"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "___umodsi3",
+      "file": "ND/_i860rt.s",
+      "line": 225,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x80000000"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "SingleZero",
+      "file": "ND/bootstrap.s",
+      "line": 10,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_start",
+      "file": "ND/bootstrap.s",
+      "line": 23,
+      "lang": "asm",
+      "calls": [
+        "_init_data_cache"
+      ],
+      "mmio_consts": [
+        "0x08000000",
+        "0xff800000",
+        "0xff800030"
+      ],
+      "imm_consts": [
+        "0x000003ff",
+        "0x00006800",
+        "0x0000a000",
+        "0x0000fc00",
+        "0x0000ff00",
+        "0x0000ffff",
+        "0x08000000",
+        "0x0fffffff",
+        "0xff800000",
+        "0xff800030"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "_start",
+      "file": "ND/bootstrap.s",
+      "line": 166,
+      "lang": "asm",
+      "calls": [
+        "bootflush"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00000010",
+        "0x28100000"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "SkipZeroes",
+      "file": "ND/bootstrap.s",
+      "line": 275,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00000fff",
+        "0x28100000",
+        "0x28100004",
+        "0xf8100000"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "gone_virtual",
+      "file": "ND/bootstrap.s",
+      "line": 337,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00006800",
+        "0x0000a000",
+        "0x0000fc00",
+        "0x0000ff00",
+        "0x0000ffff",
+        "0x28100000"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "_abs_addr",
+      "file": "ND/bootstrap.s",
+      "line": 409,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00001000"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "bootflush",
+      "file": "ND/bootstrap.s",
+      "line": 463,
+      "lang": "asm",
+      "calls": [
+        "D_INIT"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00000800",
+        "0x00000900"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "D_INIT",
+      "file": "ND/bootstrap.s",
+      "line": 503,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "D_INIT_LOOP",
+      "file": "ND/bootstrap.s",
+      "line": 507,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "vm_set_page_size",
+      "file": "ND/build_pte.c",
+      "line": 41,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "map_range",
+      "file": "ND/build_pte.c",
+      "line": 64,
+      "lang": "c",
+      "calls": [
+        "bzero",
+        "malloc",
+        "pdenum",
+        "printf",
+        "ptenum",
+        "round_page",
+        "trunc_page"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "vaddr 0x%08x: \tpaddr 0x%08x, pte %d, pde %d, (0x%08x)\\n"
+      ]
+    },
+    {
+      "name": "main",
+      "file": "ND/build_pte.c",
+      "line": 94,
+      "lang": "c",
+      "calls": [
+        "bootflush",
+        "bzero",
+        "flush",
+        "malloc",
+        "map_range",
+        "output",
+        "pdenum",
+        "vm_set_page_size"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00400000"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "output",
+      "file": "ND/build_pte.c",
+      "line": 131,
+      "lang": "c",
+      "calls": [
+        "bootflush",
+        "ctime",
+        "dump_tables",
+        "flush",
+        "printf",
+        "time"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "//\\n//\\tGenerated by build_pte.\\n//\\n//\\tDO NOT EDIT THIS FILE\\n//\\n",
+        "//\\tBuilt %s//\\n",
+        "\\t.blkb\t8192\\t// Trashable 8K band for flush(), bootflush()\\n",
+        "\\t.blkb\\t%d\\t// Space for task 0 stack.\\n",
+        "\\t.data\\n",
+        "\\t_bad:\\t.globl _bad\\n",
+        "\\t_sdata:\\t.globl _sdata\\t// Marks start of all data.\\n",
+        "\\tdf_stack:\\t.globl df_stack\\n",
+        "\\tintstack:\\t.globl intstack\\t// top of task 0 stack\\n\\n"
+      ]
+    },
+    {
+      "name": "dump_page",
+      "file": "ND/build_pte.c",
+      "line": 153,
+      "lang": "c",
+      "calls": [
+        "printf"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "0x%08x, ",
+        "0x%08x\\n",
+        "\\t.long\\t0x%08x, "
+      ]
+    },
+    {
+      "name": "dump_tables",
+      "file": "ND/build_pte.c",
+      "line": 168,
+      "lang": "c",
+      "calls": [
+        "dump_page",
+        "pdetova",
+        "printf"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00000000"
+      ],
+      "string_literals": [
+        "0x00000000,\\t",
+        "0x00000000\\n",
+        "\\n__end_page_tables_:\\t.globl __end_page_tables_\\n",
+        "\\n__start_page_tables_:\\t.globl __start_page_tables_\\n",
+        "\\nkpde:\\t.globl kpde\t// Kernel page directory\\n",
+        "\\nkpte%d:\\t// Vaddr range 0x%08x - 0x%08x\\n",
+        "\\t.long\\t0x00000000,\\t",
+        "\\t.long\\tkpte%d+0x%x,\\t",
+        "kpte%d+0x%x,\\t",
+        "kpte%d+0x%x\\n",
+        "transparent_DRAM:\\t.globl transparent_DRAM\\n"
+      ]
+    },
+    {
+      "name": "EnableDebugging",
+      "file": "ND/clock.c",
+      "line": 17,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "DisableDebugging",
+      "file": "ND/clock.c",
+      "line": 23,
+      "lang": "c",
+      "calls": [
+        "CursorTask",
+        "KernelDebugEnabled",
+        "Wakeup",
+        "hardclock",
+        "kdb",
+        "ping_driver",
+        "wakeup"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x0000000f"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "cngetc",
+      "file": "ND/cons.c",
+      "line": 41,
+      "lang": "c",
+      "calls": [
+        "cn_getc",
+        "cn_putc"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "cn_getc",
+      "file": "ND/cons.c",
+      "line": 51,
+      "lang": "c",
+      "calls": [
+        "abs_addr"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "cnpollc",
+      "file": "ND/cons.c",
+      "line": 78,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "cnrintr",
+      "file": "ND/cons.c",
+      "line": 81,
+      "lang": "c",
+      "calls": [
+        "abort",
+        "abs_addr",
+        "cnputc",
+        "panic",
+        "puts"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "panic: "
+      ]
+    },
+    {
+      "name": "putx",
+      "file": "ND/cons.c",
+      "line": 105,
+      "lang": "c",
+      "calls": [
+        "_exit",
+        "abs_addr",
+        "cn_putc",
+        "cnputc",
+        "defined"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x0000000f"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "ping_driver",
+      "file": "ND/cons.c",
+      "line": 153,
+      "lang": "c",
+      "calls": [
+        "abs_addr"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "cache_on",
+      "file": "ND/cons.c",
+      "line": 164,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_save_context",
+      "file": "ND/cswitch.s",
+      "line": 21,
+      "lang": "asm",
+      "calls": [
+        "_get_pcb_context",
+        "_splhigh",
+        "_splx"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_setjmp",
+      "file": "ND/cswitch.s",
+      "line": 52,
+      "lang": "asm",
+      "calls": [
+        "_splhigh",
+        "_splx"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_longjmp",
+      "file": "ND/cswitch.s",
+      "line": 87,
+      "lang": "asm",
+      "calls": [
+        "_splhigh",
+        "_splx"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_kdbsetjmp",
+      "file": "ND/cswitch.s",
+      "line": 127,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_kdblongjmp",
+      "file": "ND/cswitch.s",
+      "line": 155,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "InitCEQ",
+      "file": "ND/cursor.c",
+      "line": 34,
+      "lang": "c",
+      "calls": [
+        "bzero"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "DisplayCursor",
+      "file": "ND/cursor.c",
+      "line": 51,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x000000ff",
+        "0x00ff00ff",
+        "0xff00ff00"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "RemoveCursor",
+      "file": "ND/cursor.c",
+      "line": 90,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "SetCursor",
+      "file": "ND/cursor.c",
+      "line": 109,
+      "lang": "c",
+      "calls": [
+        "mask",
+        "queue"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0xffffff00"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "ProcessCEQ",
+      "file": "ND/cursor.c",
+      "line": 138,
+      "lang": "c",
+      "calls": [
+        "DisplayCursor",
+        "RemoveCursor",
+        "SetBrightness",
+        "SetCursor",
+        "hardclock"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "CursorTask",
+      "file": "ND/cursor.c",
+      "line": 176,
+      "lang": "c",
+      "calls": [
+        "ProcessCEQ"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "FlushCEQ",
+      "file": "ND/cursor.c",
+      "line": 186,
+      "lang": "c",
+      "calls": [
+        "ProcessCEQ"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_init_data_cache",
+      "file": "ND/flush.s",
+      "line": 43,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_flush_inv",
+      "file": "ND/flush.s",
+      "line": 49,
+      "lang": "asm",
+      "calls": [
+        "D_FLUSH"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00000800",
+        "0x00000900"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "_flush",
+      "file": "ND/flush.s",
+      "line": 86,
+      "lang": "asm",
+      "calls": [
+        "D_FLUSH"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00000800",
+        "0x00000900"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "D_FLUSH",
+      "file": "ND/flush.s",
+      "line": 116,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "D_FLUSH_LOOP",
+      "file": "ND/flush.s",
+      "line": 126,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "lost"
+      ]
+    },
+    {
+      "name": "_flush_inv",
+      "file": "ND/flush.s",
+      "line": 163,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00000800",
+        "0x00000f00"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "flush1",
+      "file": "ND/flush.s",
+      "line": 185,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00000900"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "flush2",
+      "file": "ND/flush.s",
+      "line": 196,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_flush",
+      "file": "ND/flush.s",
+      "line": 217,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00000800",
+        "0x00000f00"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "flush3",
+      "file": "ND/flush.s",
+      "line": 239,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00000900"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "flush4",
+      "file": "ND/flush.s",
+      "line": 250,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "is_empty",
+      "file": "ND/i860_init.c",
+      "line": 61,
+      "lang": "c",
+      "calls": [
+        "is_4Mbit",
+        "parts"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x55555555",
+        "0xaaaaaaaa"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "is_4Mbit",
+      "file": "ND/i860_init.c",
+      "line": 91,
+      "lang": "c",
+      "calls": [
+        "table"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00100000"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "size_memory",
+      "file": "ND/i860_init.c",
+      "line": 126,
+      "lang": "c",
+      "calls": [
+        "is_4Mbit",
+        "is_empty"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00400000",
+        "0x01000000"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "early_start",
+      "file": "ND/i860_init.c",
+      "line": 163,
+      "lang": "c",
+      "calls": [
+        "abs_addr",
+        "cnputc",
+        "config_memory",
+        "i860_round_page",
+        "puts",
+        "putx",
+        "size_memory"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        " Addr ",
+        " Size ",
+        "DRAM Bank ",
+        "final kernel end ",
+        "initial kernel end "
+      ]
+    },
+    {
+      "name": "i860_start",
+      "file": "ND/i860_init.c",
+      "line": 206,
+      "lang": "c",
+      "calls": [
+        "InitCEQ",
+        "InitMessages",
+        "InitPorts",
+        "btop",
+        "current_pmap",
+        "kmem_init",
+        "kvtophys",
+        "phystokv",
+        "pmap_init",
+        "pmap_remove",
+        "printf",
+        "rmfree",
+        "rminit",
+        "round_page",
+        "vm_set_page_size"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "coremap",
+        "coremap uses %D bytes starting at 0x%X\\n",
+        "i860_start\\n"
+      ]
+    },
+    {
+      "name": "KernelDebugEnabled",
+      "file": "ND/i860_init.c",
+      "line": 294,
+      "lang": "c",
+      "calls": [
+        "cache_on",
+        "kdb",
+        "printf",
+        "ptob",
+        "spl0"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "Cache on...\\n",
+        "NextDimension Graphics Accelerator Kernel: free memory: %D bytes\\n"
+      ]
+    },
+    {
+      "name": "vm_set_page_size",
+      "file": "ND/i860_init.c",
+      "line": 316,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "config_memory",
+      "file": "ND/i860_init.c",
+      "line": 346,
+      "lang": "c",
+      "calls": [
+        "abs_addr",
+        "bzero",
+        "cnputc",
+        "i860_trunc_page",
+        "pdenum",
+        "phystokv",
+        "ptenum",
+        "puts",
+        "putx",
+        "round_page",
+        "software",
+        "trunc_page"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "1:1 DRAM PTE ",
+        "DRAM PTE ",
+        "MC CSR PTE ",
+        "PDE ",
+        "TRAP PAGE ",
+        "TRAP PTE "
+      ]
+    },
+    {
+      "name": "errsys",
+      "file": "ND/init_sysent.c",
+      "line": 231,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "nullsys",
+      "file": "ND/init_sysent.c",
+      "line": 237,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "ipc_oob_receive",
+      "file": "ND/ipc_oob_data.c",
+      "line": 13,
+      "lang": "c",
+      "calls": [
+        "current_pmap",
+        "pmap_add",
+        "round_page",
+        "trunc_page"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00000003"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "ipc_oob_send",
+      "file": "ND/ipc_oob_data.c",
+      "line": 84,
+      "lang": "c",
+      "calls": [
+        "current_pmap",
+        "pmap_clean",
+        "pmap_remove",
+        "round_page",
+        "trunc_page"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00000003"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "dumpkalloc",
+      "file": "ND/kalloc.c",
+      "line": 33,
+      "lang": "c",
+      "calls": [
+        "CurrentPriority",
+        "Sleep",
+        "Wakeup",
+        "bzero",
+        "free",
+        "i860_btop",
+        "i860_ptob",
+        "kcalloc",
+        "kfree",
+        "kmalloc",
+        "morecore",
+        "printf",
+        "rmalloc",
+        "round_page"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "malloc pool: %D bytes at 0x%X\\n",
+        "malloc pool: Nothing allocated yet\\n"
+      ]
+    },
+    {
+      "name": "KernelDebugEnabled",
+      "file": "ND/kalloc.c",
+      "line": 142,
+      "lang": "c",
+      "calls": [
+        "abort",
+        "free",
+        "freecore",
+        "printf",
+        "storage",
+        "trunc_page"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "Freeing unallocated/trashed storage (0x%X)\\n"
+      ]
+    },
+    {
+      "name": "freecore",
+      "file": "ND/kalloc.c",
+      "line": 181,
+      "lang": "c",
+      "calls": [
+        "i860_btop",
+        "rmfree",
+        "trunc_page"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "rminit",
+      "file": "ND/kern_map.c",
+      "line": 12,
+      "lang": "c",
+      "calls": [
+        "bzero"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "rmdump",
+      "file": "ND/kern_map.c",
+      "line": 26,
+      "lang": "c",
+      "calls": [
+        "printf"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "Frag: %D units at address 0x%X\\n",
+        "Map %s, size %D\\n"
+      ]
+    },
+    {
+      "name": "rmalloc",
+      "file": "ND/kern_map.c",
+      "line": 38,
+      "lang": "c",
+      "calls": [
+        "printf"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "Resource %s exhausted\\n"
+      ]
+    },
+    {
+      "name": "rmfree",
+      "file": "ND/kern_map.c",
+      "line": 77,
+      "lang": "c",
+      "calls": [
+        "Wakeup",
+        "exhausted",
+        "printf"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "Resource %s exhausted (lost %D units at 0x%X)[1]\\n",
+        "Resource %s exhausted (lost %D units at 0x%X)[2]\\n",
+        "Resource %s exhausted (lost %D units at 0x%X)[3]\\n"
+      ]
+    },
+    {
+      "name": "ND_LamportLockInit",
+      "file": "ND/locks.c",
+      "line": 5,
+      "lang": "c",
+      "calls": [
+        "bzero"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "ND_LamportLockSet",
+      "file": "ND/locks.c",
+      "line": 17,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "A Fast Mutual\n * Exclusion Algorithm"
+      ]
+    },
+    {
+      "name": "ND_LamportSpinLock",
+      "file": "ND/locks.c",
+      "line": 37,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "ND_LamportUnlock",
+      "file": "ND/locks.c",
+      "line": 76,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_stext",
+      "file": "ND/locore.s",
+      "line": 71,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "pstart",
+      "file": "ND/locore.s",
+      "line": 72,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [
+        "0x08000000",
+        "0xff800000",
+        "0xff800030"
+      ],
+      "imm_consts": [
+        "0x00000010",
+        "0x00001000",
+        "0x08000000",
+        "0x0fffffff",
+        "0xff800000",
+        "0xff800030"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "_start",
+      "file": "ND/locore.s",
+      "line": 99,
+      "lang": "asm",
+      "calls": [
+        "_early_start",
+        "reset_initialization"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00000fff"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "reset_initialization",
+      "file": "ND/locore.s",
+      "line": 252,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00000800",
+        "0x00000f00"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "flush1",
+      "file": "ND/locore.s",
+      "line": 278,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00000900"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "flush2",
+      "file": "ND/locore.s",
+      "line": 288,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_vstart",
+      "file": "ND/locore.s",
+      "line": 312,
+      "lang": "asm",
+      "calls": [
+        "_i860_start",
+        "_kern_main"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00006800",
+        "0x0000a000",
+        "0x0000fc00",
+        "0x0000ff00",
+        "0x0000ffff"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "_exit",
+      "file": "ND/locore.s",
+      "line": 367,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "all_done",
+      "file": "ND/locore.s",
+      "line": 368,
+      "lang": "asm",
+      "calls": [
+        "__exit"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "alltraps",
+      "file": "ND/locore.s",
+      "line": 377,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [
+        "0xf0000000"
+      ],
+      "imm_consts": [
+        "0x0000f000",
+        "0xf0000000",
+        "0xffffff00"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "waskern",
+      "file": "ND/locore.s",
+      "line": 403,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x0000000f"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "save_pipes",
+      "file": "ND/locore.s",
+      "line": 473,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00000020",
+        "0x0000002c"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "end_save_pipes",
+      "file": "ND/locore.s",
+      "line": 525,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "no_intr",
+      "file": "ND/locore.s",
+      "line": 539,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "no_iat",
+      "file": "ND/locore.s",
+      "line": 545,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00004400"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "not_bpt",
+      "file": "ND/locore.s",
+      "line": 569,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x000047e0",
+        "0x0000ffff"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "not_sysc",
+      "file": "ND/locore.s",
+      "line": 576,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "no_it",
+      "file": "ND/locore.s",
+      "line": 580,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "no_ft",
+      "file": "ND/locore.s",
+      "line": 586,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00000c00",
+        "0x00002000",
+        "0x0000e800",
+        "0x0000ec00"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "ls_ok",
+      "file": "ND/locore.s",
+      "line": 616,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00001000"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "got_ls_aln",
+      "file": "ND/locore.s",
+      "line": 625,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x0000007c",
+        "0x000007ff",
+        "0x00000800",
+        "0x0000f800"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "is_ld",
+      "file": "ND/locore.s",
+      "line": 650,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "gen_ea",
+      "file": "ND/locore.s",
+      "line": 661,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x0000007c",
+        "0x00000400"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "gen_r_r",
+      "file": "ND/locore.s",
+      "line": 679,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x0000007c"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "ai_fix",
+      "file": "ND/locore.s",
+      "line": 688,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "no_ai_fix",
+      "file": "ND/locore.s",
+      "line": 695,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "not_ld_st",
+      "file": "ND/locore.s",
+      "line": 699,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00002000",
+        "0x00003f00",
+        "0x0000f000",
+        "0x0000fc00"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "fdat_ok",
+      "file": "ND/locore.s",
+      "line": 712,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "got_f_aln",
+      "file": "ND/locore.s",
+      "line": 721,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00000800",
+        "0x00001000"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "is_fld",
+      "file": "ND/locore.s",
+      "line": 732,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "is_pix",
+      "file": "ND/locore.s",
+      "line": 737,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "got_datp",
+      "file": "ND/locore.s",
+      "line": 742,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "no_tbits",
+      "file": "ND/locore.s",
+      "line": 745,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "got_ttype",
+      "file": "ND/locore.s",
+      "line": 748,
+      "lang": "asm",
+      "calls": [
+        "_flush_inv",
+        "_trap",
+        "trap"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00001f00"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "ret_user",
+      "file": "ND/locore.s",
+      "line": 772,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "restore_pipes",
+      "file": "ND/locore.s",
+      "line": 797,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00000010",
+        "0x00000020",
+        "0x00000400",
+        "0x00000800",
+        "0x00001000",
+        "0x00002000"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "end_restore_pipes",
+      "file": "ND/locore.s",
+      "line": 902,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_system_bootstrap",
+      "file": "ND/locore.s",
+      "line": 972,
+      "lang": "asm",
+      "calls": [
+        "_kern_main"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "setup_hlt",
+      "file": "ND/locore.s",
+      "line": 980,
+      "lang": "asm",
+      "calls": [
+        "_panic"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_thread_bootstrap",
+      "file": "ND/locore.s",
+      "line": 987,
+      "lang": "asm",
+      "calls": [
+        "_spl0"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "panic_msg",
+      "file": "ND/locore.s",
+      "line": 993,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "First thread returned\\n"
+      ]
+    },
+    {
+      "name": "panic_msg1",
+      "file": "ND/locore.s",
+      "line": 996,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "Jump to tss failed\\n"
+      ]
+    },
+    {
+      "name": "wierd_death1",
+      "file": "ND/locore.s",
+      "line": 1000,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "0x%X\\n"
+      ]
+    },
+    {
+      "name": "SingleZero",
+      "file": "ND/locore.s",
+      "line": 1007,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "SingleOne",
+      "file": "ND/locore.s",
+      "line": 1008,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "DoubleOne",
+      "file": "ND/locore.s",
+      "line": 1010,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_current_pmap",
+      "file": "ND/locore.s",
+      "line": 1018,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00000fff",
+        "0x0000f000"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "_get_dirbase",
+      "file": "ND/locore.s",
+      "line": 1025,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_get_fp",
+      "file": "ND/locore.s",
+      "line": 1030,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_get_epsr",
+      "file": "ND/locore.s",
+      "line": 1035,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_new_dirbase",
+      "file": "ND/locore.s",
+      "line": 1046,
+      "lang": "asm",
+      "calls": [
+        "_flush"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00000fff"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "_invalidate_TLB",
+      "file": "ND/locore.s",
+      "line": 1076,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_go_virt",
+      "file": "ND/locore.s",
+      "line": 1091,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00000fff"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "_bzero",
+      "file": "ND/locore.s",
+      "line": 1108,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "blp",
+      "file": "ND/locore.s",
+      "line": 1120,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "bzdolongs",
+      "file": "ND/locore.s",
+      "line": 1127,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "llp",
+      "file": "ND/locore.s",
+      "line": 1133,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "bzdone",
+      "file": "ND/locore.s",
+      "line": 1137,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_memmove",
+      "file": "ND/locore.s",
+      "line": 1146,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_bcopy",
+      "file": "ND/locore.s",
+      "line": 1153,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "bcblp",
+      "file": "ND/locore.s",
+      "line": 1167,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "bcdolongs",
+      "file": "ND/locore.s",
+      "line": 1177,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "bcllp",
+      "file": "ND/locore.s",
+      "line": 1182,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "bcdone",
+      "file": "ND/locore.s",
+      "line": 1189,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_ALLOW_FAULT_START",
+      "file": "ND/locore.s",
+      "line": 1205,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_copyin",
+      "file": "ND/locore.s",
+      "line": 1210,
+      "lang": "asm",
+      "calls": [
+        "userstring"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "copycom",
+      "file": "ND/locore.s",
+      "line": 1217,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "cpcblp",
+      "file": "ND/locore.s",
+      "line": 1231,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "cpclongs",
+      "file": "ND/locore.s",
+      "line": 1241,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "cpcllp",
+      "file": "ND/locore.s",
+      "line": 1246,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "cpcdone",
+      "file": "ND/locore.s",
+      "line": 1253,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_FAULT_ERROR",
+      "file": "ND/locore.s",
+      "line": 1261,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_copyout",
+      "file": "ND/locore.s",
+      "line": 1270,
+      "lang": "asm",
+      "calls": [
+        "userstring"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "isuser",
+      "file": "ND/locore.s",
+      "line": 1282,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "userstring",
+      "file": "ND/locore.s",
+      "line": 1295,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_ALLOW_FAULT_END",
+      "file": "ND/locore.s",
+      "line": 1309,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_abs_addr",
+      "file": "ND/locore.s",
+      "line": 1317,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_splhigh",
+      "file": "ND/locore.s",
+      "line": 1340,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_splclock",
+      "file": "ND/locore.s",
+      "line": 1342,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_spl7",
+      "file": "ND/locore.s",
+      "line": 1344,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_splsched",
+      "file": "ND/locore.s",
+      "line": 1346,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_splvm",
+      "file": "ND/locore.s",
+      "line": 1348,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_spl6",
+      "file": "ND/locore.s",
+      "line": 1350,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_splbio",
+      "file": "ND/locore.s",
+      "line": 1352,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_splimp",
+      "file": "ND/locore.s",
+      "line": 1354,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_splnet",
+      "file": "ND/locore.s",
+      "line": 1356,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_spl5",
+      "file": "ND/locore.s",
+      "line": 1358,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_spltty",
+      "file": "ND/locore.s",
+      "line": 1360,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_splsoftclock",
+      "file": "ND/locore.s",
+      "line": 1365,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_spl1",
+      "file": "ND/locore.s",
+      "line": 1367,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_spl0",
+      "file": "ND/locore.s",
+      "line": 1369,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "splcom",
+      "file": "ND/locore.s",
+      "line": 1377,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_splx",
+      "file": "ND/locore.s",
+      "line": 1387,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_splall",
+      "file": "ND/locore.s",
+      "line": 1398,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_backall",
+      "file": "ND/locore.s",
+      "line": 1409,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_abort",
+      "file": "ND/locore.s",
+      "line": 1420,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_alloca",
+      "file": "ND/locore.s",
+      "line": 1432,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "_DataTrap",
+      "file": "ND/locore.s",
+      "line": 1446,
+      "lang": "asm",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00000003"
+      ],
+      "string_literals": []
+    },
+    {
+      "name": "_CoInit",
+      "file": "ND/locore.s",
+      "line": 1459,
+      "lang": "asm",
+      "calls": [
+        "_DestroyProc",
+        "r14"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "dumpmalloc",
+      "file": "ND/malloc.c",
+      "line": 33,
+      "lang": "c",
+      "calls": [
+        "printf"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "malloc pool: %D bytes at 0x%X\\n",
+        "malloc pool: Nothing allocated yet\\n"
+      ]
+    },
+    {
+      "name": "realloc",
+      "file": "ND/malloc.c",
+      "line": 50,
+      "lang": "c",
+      "calls": [
+        "malloc"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "KernelDebugEnabled",
+      "file": "ND/malloc.c",
+      "line": 64,
+      "lang": "c",
+      "calls": [
+        "abort",
+        "bcopy",
+        "bzero",
+        "calloc",
+        "cfree",
+        "free",
+        "malloc",
+        "morecore",
+        "printf",
+        "round_page",
+        "storage",
+        "task_self",
+        "vm_allocate"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "realloc unallocated/trashed storage (0x%X)\\n"
+      ]
+    },
+    {
+      "name": "KernelDebugEnabled",
+      "file": "ND/malloc.c",
+      "line": 178,
+      "lang": "c",
+      "calls": [
+        "abort",
+        "free",
+        "printf",
+        "storage"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "Freeing unallocated/trashed storage (0x%X)\\n"
+      ]
+    },
+    {
+      "name": "InitMessages",
+      "file": "ND/messages.c",
+      "line": 111,
+      "lang": "c",
+      "calls": [
+        "AddPortToList",
+        "Messages"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "Messages",
+      "file": "ND/messages.c",
+      "line": 130,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "BYTES_ON_QUEUE",
+      "file": "ND/messages.c",
+      "line": 143,
+      "lang": "c",
+      "calls": [
+        "Sleep",
+        "Wakeup",
+        "bcopy",
+        "kmalloc",
+        "panic",
+        "printf",
+        "queue_deq",
+        "readqueue",
+        "skipqueue",
+        "splhigh",
+        "splx"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        " queue head %d, tail %d\\n",
+        "Messages: out of memory",
+        "msg_local_port %D, msg_remote_port %D, msg_id %D\\n",
+        "msg_simple %D, msg_size %D, msg_type %D, "
+      ]
+    },
+    {
+      "name": "queue_enq",
+      "file": "ND/messages.c",
+      "line": 224,
+      "lang": "c",
+      "calls": [
+        "BYTES_ON_QUEUE",
+        "Sleep",
+        "ping_driver",
+        "spl",
+        "splhigh",
+        "splx"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "ServiceMsg_receive",
+      "file": "ND/messages.c",
+      "line": 251,
+      "lang": "c",
+      "calls": [
+        "BYTES_ON_QUEUE",
+        "Sleep",
+        "bcopy",
+        "ping_driver",
+        "readqueue",
+        "snoopqueue",
+        "spl",
+        "splhigh",
+        "splx"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "AddPortToList",
+      "file": "ND/messages.c",
+      "line": 306,
+      "lang": "c",
+      "calls": [
+        "kcalloc",
+        "panic"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "AddPortToList: out of memory."
+      ]
+    },
+    {
+      "name": "DeletePortFromList",
+      "file": "ND/messages.c",
+      "line": 319,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "queue_head",
+      "file": "ND/messages.c",
+      "line": 347,
+      "lang": "c",
+      "calls": [
+        "Wakeup",
+        "queue_deq"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "queue_head",
+      "file": "ND/messages.c",
+      "line": 355,
+      "lang": "c",
+      "calls": [
+        "kfree",
+        "queue_deq"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "msg_send",
+      "file": "ND/messages.c",
+      "line": 376,
+      "lang": "c",
+      "calls": [
+        "BYTES_ON_QUEUE",
+        "Sleep",
+        "ipc_oob_send",
+        "ping_driver",
+        "spl",
+        "splhigh",
+        "splx",
+        "writequeue"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "msg_receive",
+      "file": "ND/messages.c",
+      "line": 419,
+      "lang": "c",
+      "calls": [
+        "ServiceMsg_receive",
+        "Sleep",
+        "bcopy",
+        "ipc_oob_receive",
+        "kfree",
+        "kmalloc",
+        "queue_deq",
+        "queue_enq",
+        "queue_preq",
+        "services"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "msg_rpc",
+      "file": "ND/messages.c",
+      "line": 509,
+      "lang": "c",
+      "calls": [
+        "CurrentPriority",
+        "Sleep",
+        "Wakeup",
+        "msg_receive",
+        "msg_send",
+        "splhigh",
+        "splx"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "readqueue",
+      "file": "ND/messages.c",
+      "line": 562,
+      "lang": "c",
+      "calls": [
+        "bcopy"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "snoopqueue",
+      "file": "ND/messages.c",
+      "line": 586,
+      "lang": "c",
+      "calls": [
+        "bcopy"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "skipqueue",
+      "file": "ND/messages.c",
+      "line": 606,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "writequeue",
+      "file": "ND/messages.c",
+      "line": 625,
+      "lang": "c",
+      "calls": [
+        "BYTES_ON_QUEUE",
+        "Sleep",
+        "bcopy",
+        "defined",
+        "splhigh",
+        "splx"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "pmap_init",
+      "file": "ND/pmap.c",
+      "line": 33,
+      "lang": "c",
+      "calls": [
+        "i860_protection_init"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "i860_protection_init",
+      "file": "ND/pmap.c",
+      "line": 42,
+      "lang": "c",
+      "calls": [
+        "current_pmap",
+        "i860_protection",
+        "i860_trunc_page",
+        "kvtophys",
+        "mode",
+        "pdenum",
+        "phystokv",
+        "pmap_pte",
+        "ptenum",
+        "ptetokv"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "pmap_translation_valid",
+      "file": "ND/pmap.c",
+      "line": 122,
+      "lang": "c",
+      "calls": [
+        "INCR_PT_ENTRY",
+        "address",
+        "block",
+        "first",
+        "flush_inv",
+        "i860_btop",
+        "i860_protection",
+        "i860_ptob",
+        "invalidate_TLB",
+        "kmem_alloc",
+        "kmem_free",
+        "kvtophys",
+        "last",
+        "page",
+        "pages",
+        "pdenum",
+        "phystokv",
+        "pmap",
+        "pmap_add",
+        "pmap_add_range",
+        "pmap_clean",
+        "pmap_enter",
+        "pmap_expand",
+        "pmap_pte",
+        "pmap_release",
+        "pmap_release_range",
+        "pmap_remove",
+        "pmap_remove_range",
+        "printf"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "pmap(%x, %x)\\n",
+        "pmap_expand: kmem_alloc gave us a bogus page!\\n"
+      ]
+    },
+    {
+      "name": "pmap_clean",
+      "file": "ND/pmap.c",
+      "line": 603,
+      "lang": "c",
+      "calls": [
+        "ND_Kern_page_out",
+        "Wakeup",
+        "flush",
+        "flush_inv",
+        "i860_ptob",
+        "panic",
+        "pmap_pte",
+        "printf",
+        "vm_fault"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "ND_Kern_page_out returns %D\\n",
+        "ND_Kern_page_put",
+        "pmap_clean(%x, %x)\\n",
+        "pmap_clean: calling ND_Kern_page_out\\n",
+        "pmap_clean: dirty page %x, %x\\n"
+      ]
+    },
+    {
+      "name": "pmap_cache",
+      "file": "ND/pmap.c",
+      "line": 730,
+      "lang": "c",
+      "calls": [
+        "pmap_cache_range"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "pmap_cache_range",
+      "file": "ND/pmap.c",
+      "line": 738,
+      "lang": "c",
+      "calls": [
+        "PageOutDaemon",
+        "flush_inv",
+        "i860_ptob",
+        "pmap_pte"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "PageOutDaemon",
+      "file": "ND/pmap.c",
+      "line": 780,
+      "lang": "c",
+      "calls": [
+        "ND_Kern_page_out",
+        "Sleep",
+        "Wakeup",
+        "X",
+        "current_pmap",
+        "flush",
+        "flush_inv",
+        "i860_ptob",
+        "invalidate_TLB",
+        "kmem_free",
+        "panic",
+        "phystokv",
+        "pmap_pte",
+        "printf",
+        "vm_fault"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "ND_Kern_page_out returns %D\\n",
+        "PageOutDaemon",
+        "PageOutDaemon: awake, need %D, start va 0x%X\\n",
+        "PageOutDaemon: flush dirty va 0x%X (pa 0x%X)\\n",
+        "PageOutDaemon: release va 0x%X\\n",
+        "PageOutDaemon: sleeping\\n"
+      ]
+    },
+    {
+      "name": "pmap_dump",
+      "file": "ND/pmap.c",
+      "line": 894,
+      "lang": "c",
+      "calls": [
+        "pmap_dump_range"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "pmap_dump_range",
+      "file": "ND/pmap.c",
+      "line": 898,
+      "lang": "c",
+      "calls": [
+        "current_pmap",
+        "i860_ptob",
+        "pmap_pte",
+        "printf",
+        "trunc_page"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "0x%X: 0x%X ",
+        "A ",
+        "CD ",
+        "D ",
+        "P ",
+        "U ",
+        "W ",
+        "WT ",
+        "\\n",
+        "alloc ",
+        "back ",
+        "wired ",
+        "zero "
+      ]
+    },
+    {
+      "name": "InitPorts",
+      "file": "ND/ports.c",
+      "line": 15,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "task_self",
+      "file": "ND/ports.c",
+      "line": 24,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "TaskReceivePort",
+      "file": "ND/ports.c",
+      "line": 30,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "KernelDebugPort",
+      "file": "ND/ports.c",
+      "line": 36,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "KernelDebugEnabled",
+      "file": "ND/ports.c",
+      "line": 42,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "ND_Port_check_in",
+      "file": "ND/ports.c",
+      "line": 51,
+      "lang": "c",
+      "calls": [
+        "ND_Kern_port_check_in"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "ND_Port_check_out",
+      "file": "ND/ports.c",
+      "line": 59,
+      "lang": "c",
+      "calls": [
+        "ND_Kern_port_check_out"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "ND_Port_look_up",
+      "file": "ND/ports.c",
+      "line": 67,
+      "lang": "c",
+      "calls": [
+        "ND_Kern_port_look_up"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "port_allocate",
+      "file": "ND/ports.c",
+      "line": 82,
+      "lang": "c",
+      "calls": [
+        "AddPortToList",
+        "ND_Kern_port_allocate"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "port_deallocate",
+      "file": "ND/ports.c",
+      "line": 95,
+      "lang": "c",
+      "calls": [
+        "DeletePortFromList",
+        "ND_Kern_port_deallocate"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "backall",
+      "file": "ND/stubs.c",
+      "line": 13,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "current_thread",
+      "file": "ND/stubs.c",
+      "line": 14,
+      "lang": "c",
+      "calls": [
+        "puts"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "current_thread "
+      ]
+    },
+    {
+      "name": "splall",
+      "file": "ND/stubs.c",
+      "line": 15,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "panic",
+      "file": "ND/stubs.c",
+      "line": 16,
+      "lang": "c",
+      "calls": [
+        "puts"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "panic "
+      ]
+    },
+    {
+      "name": "getmemc",
+      "file": "ND/stubs.c",
+      "line": 18,
+      "lang": "c",
+      "calls": [
+        "puts"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "getmemc "
+      ]
+    },
+    {
+      "name": "page_mask",
+      "file": "ND/stubs.c",
+      "line": 19,
+      "lang": "c",
+      "calls": [
+        "puts"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "page_mask "
+      ]
+    },
+    {
+      "name": "pfind",
+      "file": "ND/stubs.c",
+      "line": 20,
+      "lang": "c",
+      "calls": [
+        "puts"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "pfind "
+      ]
+    },
+    {
+      "name": "pmap_extract",
+      "file": "ND/stubs.c",
+      "line": 21,
+      "lang": "c",
+      "calls": [
+        "puts"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "pmap_extract "
+      ]
+    },
+    {
+      "name": "putmemc",
+      "file": "ND/stubs.c",
+      "line": 22,
+      "lang": "c",
+      "calls": [
+        "puts"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "putmemc "
+      ]
+    },
+    {
+      "name": "reset",
+      "file": "ND/stubs.c",
+      "line": 23,
+      "lang": "c",
+      "calls": [
+        "puts"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "reset "
+      ]
+    },
+    {
+      "name": "thread_read_times",
+      "file": "ND/stubs.c",
+      "line": 24,
+      "lang": "c",
+      "calls": [
+        "puts"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "thread_read_times "
+      ]
+    },
+    {
+      "name": "vm_map_print",
+      "file": "ND/stubs.c",
+      "line": 25,
+      "lang": "c",
+      "calls": [
+        "puts"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "vm_map_print "
+      ]
+    },
+    {
+      "name": "idle",
+      "file": "ND/switch.c",
+      "line": 21,
+      "lang": "c",
+      "calls": [
+        "CoInit",
+        "DestroyProc",
+        "Sleep",
+        "SpawnProc",
+        "SpawnUserProc",
+        "Switch",
+        "flush",
+        "i860_btop",
+        "i860_ptob",
+        "longjmp",
+        "rmalloc",
+        "rmfree",
+        "round_page",
+        "setjmp",
+        "spl0",
+        "splx",
+        "task_self",
+        "top",
+        "vm_allocate",
+        "vm_deallocate",
+        "void"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "Scheduler",
+      "file": "ND/switch.c",
+      "line": 228,
+      "lang": "c",
+      "calls": [
+        "Sleep"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "CurrentPriority",
+      "file": "ND/switch.c",
+      "line": 234,
+      "lang": "c",
+      "calls": [
+        "Automatic",
+        "Sleep",
+        "Switch",
+        "Wakeup",
+        "idle",
+        "setpri",
+        "setrun",
+        "splsched",
+        "splx",
+        "stack"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "Switch",
+      "file": "ND/switch.c",
+      "line": 343,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "setjmp",
+      "file": "ND/switch.c",
+      "line": 351,
+      "lang": "c",
+      "calls": [
+        "get_dirbase",
+        "idle",
+        "longjmp",
+        "new_dirbase",
+        "priority",
+        "splsched",
+        "trunc_page"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "vm_fault",
+      "file": "ND/vm_fault.c",
+      "line": 22,
+      "lang": "c",
+      "calls": [
+        "CurrentPriority",
+        "ND_Kern_page_in",
+        "Sleep",
+        "Wakeup",
+        "kmem_alloc",
+        "kvtophys",
+        "panic",
+        "pmap_enter",
+        "pmap_pte",
+        "pmap_translation_valid",
+        "printf",
+        "splhigh",
+        "splx",
+        "trunc_page"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "ND_Kern_page_in",
+        "ND_Kern_page_in 0x%X to 0x%X returns %D\\n",
+        "vm_fault: out of memory."
+      ]
+    },
+    {
+      "name": "kmem_init",
+      "file": "ND/vm_kern.c",
+      "line": 26,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "kmem_alloc",
+      "file": "ND/vm_kern.c",
+      "line": 32,
+      "lang": "c",
+      "calls": [
+        "CurrentPriority",
+        "Sleep",
+        "Wakeup",
+        "btop",
+        "bzero",
+        "ptob",
+        "rmalloc",
+        "round_page"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "kmem_free",
+      "file": "ND/vm_kern.c",
+      "line": 60,
+      "lang": "c",
+      "calls": [
+        "btop",
+        "rmfree",
+        "round_page",
+        "trunc_page"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "vm_flush",
+      "file": "ND/vm_pager.c",
+      "line": 23,
+      "lang": "c",
+      "calls": [
+        "current_pmap",
+        "pmap_clean",
+        "round_page",
+        "trunc_page"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "vm_page_out",
+      "file": "ND/vm_pager.c",
+      "line": 40,
+      "lang": "c",
+      "calls": [
+        "current_pmap",
+        "pmap_clean",
+        "pmap_release_range",
+        "round_page",
+        "trunc_page"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "vm_allocate",
+      "file": "ND/vm_user.c",
+      "line": 26,
+      "lang": "c",
+      "calls": [
+        "ND_Kern_vm_allocate",
+        "current_pmap",
+        "pmap_add",
+        "round_page",
+        "trunc_page"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "vm_deallocate",
+      "file": "ND/vm_user.c",
+      "line": 63,
+      "lang": "c",
+      "calls": [
+        "ND_Kern_vm_deallocate",
+        "current_pmap",
+        "pmap_remove",
+        "round_page",
+        "trunc_page"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "vm_protect",
+      "file": "ND/vm_user.c",
+      "line": 84,
+      "lang": "c",
+      "calls": [
+        "ND_Kern_vm_protect"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "vm_map_hardware",
+      "file": "ND/vm_user.c",
+      "line": 102,
+      "lang": "c",
+      "calls": [
+        "ND_Kern_vm_allocate",
+        "current_pmap",
+        "pmap_enter",
+        "trunc_page"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "vm_allocate_wired",
+      "file": "ND/vm_user.c",
+      "line": 148,
+      "lang": "c",
+      "calls": [
+        "ND_Kern_vm_allocate",
+        "btop",
+        "current_pmap",
+        "kvtophys",
+        "pmap_enter",
+        "ptob",
+        "rmalloc",
+        "rmfree",
+        "round_page",
+        "vm_cacheable"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "vm_cacheable",
+      "file": "ND/vm_user.c",
+      "line": 197,
+      "lang": "c",
+      "calls": [
+        "current_pmap",
+        "pmap_cache_range"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "main",
+      "file": "example.c",
+      "line": 20,
+      "lang": "c",
+      "calls": [
+        "X",
+        "exit",
+        "kvtophys",
+        "printf",
+        "task_self",
+        "vm_allocate"
+      ],
+      "mmio_consts": [
+        "0x02000000"
+      ],
+      "imm_consts": [
+        "0x00001000",
+        "0x02000000"
+      ],
+      "string_literals": [
+        "Dirtying pages...\\n",
+        "Done\\n",
+        "Error: va 0x%X (pa 0x%X)read 0x%X, should be 0x%X\\n",
+        "Read back test:\\n",
+        "Reading new memory...\\n",
+        "\\t%D Kbytes in %D seconds, %D Kb/sec\\n",
+        "vm_allocate %D bytes gave us %D\\n",
+        "vm_allocate %D bytes: %D\\n"
+      ]
+    },
+    {
+      "name": "main",
+      "file": "example2.c",
+      "line": 15,
+      "lang": "c",
+      "calls": [
+        "bzero",
+        "current_pmap",
+        "exit",
+        "pmap_dump_range",
+        "pmap_enter",
+        "printf",
+        "task_self",
+        "vm_allocate",
+        "vm_fault"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00400000",
+        "0x2b400000"
+      ],
+      "string_literals": [
+        "At addr 0x%X, read 0x%X\\n",
+        "Poking data...\\n",
+        "pmap 0x%X\\n",
+        "vm_allocate %D bytes gave us %D\\n",
+        "vm_allocate %D bytes: %D\\n",
+        "vm_fault returns %D\\n"
+      ]
+    },
+    {
+      "name": "main",
+      "file": "example3.c",
+      "line": 17,
+      "lang": "c",
+      "calls": [
+        "LOOP32",
+        "bzero",
+        "current_pmap",
+        "exit",
+        "pmap_dump_range",
+        "printf",
+        "task_self",
+        "vm_allocate",
+        "vm_cacheable",
+        "vm_fault",
+        "vm_map_hardware"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x00400000",
+        "0x2e000000"
+      ],
+      "string_literals": [
+        "At addr 0x%X, read 0x%X\\n",
+        "Poking data...\\n",
+        "vm_allocate %D bytes gave us %D\\n",
+        "vm_allocate %D bytes: %D\\n",
+        "vm_fault returns %D\\n",
+        "vm_map_hardware %D bytes: %D\\n"
+      ]
+    },
+    {
+      "name": "within",
+      "file": "kdb/access.c",
+      "line": 149,
+      "lang": "c",
+      "calls": [
+        "rwerr"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "abrev",
+      "file": "kdb/bits.c",
+      "line": 102,
+      "lang": "c",
+      "calls": [
+        "FOPC",
+        "MKDISP",
+        "MKUNS",
+        "compoff",
+        "convert",
+        "d",
+        "dbstrcat",
+        "dbstrcpy",
+        "dis_dot",
+        "exit",
+        "get_ins",
+        "getbyte",
+        "lookbyte",
+        "looklabel",
+        "mkd26",
+        "printf",
+        "printline",
+        "s",
+        "sect_name",
+        "section",
+        "sprintf",
+        "src1",
+        "strcmp"
+      ],
+      "mmio_consts": [
+        "0x02000000"
+      ],
+      "imm_consts": [
+        "0x000000ff",
+        "0x02000000",
+        "0xfc000000"
+      ],
+      "string_literals": [
+        "",
+        " %d",
+        " %d,%d,%d",
+        "%+d",
+        "%02x%02x%02x%02x",
+        "%d",
+        "%d(%s)",
+        "%d(%s)%s",
+        "%s(%s)",
+        "%s(%s)%s",
+        "***** Error - bad opcode\\n",
+        "++",
+        ".d",
+        ".l",
+        ".q",
+        ".s",
+        "0x%x",
+        "\\t%d-%d",
+        "d",
+        "d.",
+        "mov",
+        "nop",
+        "p.",
+        "r0",
+        "s",
+        "shl"
+      ]
+    },
+    {
+      "name": "rdc",
+      "file": "kdb/command.c",
+      "line": 104,
+      "lang": "c",
+      "calls": [
+        "eol",
+        "expr",
+        "inkdot"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "rdc",
+      "file": "kdb/command.c",
+      "line": 141,
+      "lang": "c",
+      "calls": [
+        "error",
+        "expr"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "rdc",
+      "file": "kdb/command.c",
+      "line": 178,
+      "lang": "c",
+      "calls": [
+        "error",
+        "expr"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "expr",
+      "file": "kdb/command.c",
+      "line": 199,
+      "lang": "c",
+      "calls": [
+        "PageTrace",
+        "chkerr",
+        "error",
+        "exform",
+        "flushbuf",
+        "get",
+        "getformat",
+        "getreg",
+        "inkdot",
+        "itol",
+        "newline",
+        "nextchar",
+        "printf",
+        "prints",
+        "printtrace",
+        "psymoff",
+        "ptrace",
+        "put",
+        "rdc",
+        "scanform",
+        "subpcs",
+        "varchk"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x0000ffff"
+      ],
+      "string_literals": [
+        "",
+        ":%16t",
+        "=%8t"
+      ]
+    },
+    {
+      "name": "expr",
+      "file": "kdb/expr.c",
+      "line": 92,
+      "lang": "c",
+      "calls": [
+        "error",
+        "rdc",
+        "readchar",
+        "round",
+        "term"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "term",
+      "file": "kdb/expr.c",
+      "line": 154,
+      "lang": "c",
+      "calls": [
+        "chkget",
+        "error",
+        "expr",
+        "item",
+        "readchar"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "item",
+      "file": "kdb/expr.c",
+      "line": 199,
+      "lang": "c",
+      "calls": [
+        "readchar"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "symchar",
+      "file": "kdb/expr.c",
+      "line": 217,
+      "lang": "c",
+      "calls": [
+        "error",
+        "getnum",
+        "lookup",
+        "readchar",
+        "readsym"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "symchar",
+      "file": "kdb/expr.c",
+      "line": 231,
+      "lang": "c",
+      "calls": [
+        "chkloc",
+        "error",
+        "getreg",
+        "inkdot",
+        "rdc",
+        "varchk"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "quotchar",
+      "file": "kdb/expr.c",
+      "line": 270,
+      "lang": "c",
+      "calls": [
+        "error",
+        "getnum",
+        "int"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "isdigit",
+      "file": "kdb/expr.c",
+      "line": 299,
+      "lang": "c",
+      "calls": [
+        "convdig",
+        "error",
+        "isxdigit"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "isdigit",
+      "file": "kdb/expr.c",
+      "line": 330,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "readsym",
+      "file": "kdb/expr.c",
+      "line": 349,
+      "lang": "c",
+      "calls": [
+        "convdig",
+        "readchar",
+        "symchar"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "isdigit",
+      "file": "kdb/expr.c",
+      "line": 367,
+      "lang": "c",
+      "calls": [
+        "isxdigit"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "symchar",
+      "file": "kdb/expr.c",
+      "line": 376,
+      "lang": "c",
+      "calls": [
+        "isalpha",
+        "isdigit",
+        "readchar"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "varchk",
+      "file": "kdb/expr.c",
+      "line": 385,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "isdigit",
+      "file": "kdb/expr.c",
+      "line": 387,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "isalpha",
+      "file": "kdb/expr.c",
+      "line": 390,
+      "lang": "c",
+      "calls": [
+        "chkloc",
+        "readsym"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "localsym",
+      "file": "kdb/expr.c",
+      "line": 401,
+      "lang": "c",
+      "calls": [
+        "eqsym",
+        "error",
+        "strcmp"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "rdfp",
+      "file": "kdb/format.c",
+      "line": 34,
+      "lang": "c",
+      "calls": [
+        "findsym",
+        "printf",
+        "scanform"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "\\n%s:%16t"
+      ]
+    },
+    {
+      "name": "digit",
+      "file": "kdb/format.c",
+      "line": 68,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "digit",
+      "file": "kdb/format.c",
+      "line": 70,
+      "lang": "c",
+      "calls": [
+        "CMU",
+        "error",
+        "exform",
+        "get",
+        "inkdot",
+        "itol",
+        "printc"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "x"
+      ]
+    },
+    {
+      "name": "charpos",
+      "file": "kdb/format.c",
+      "line": 176,
+      "lang": "c",
+      "calls": [
+        "CMU",
+        "PageTrace",
+        "endline",
+        "error",
+        "get",
+        "inkdot",
+        "printc",
+        "printesc",
+        "printf",
+        "printins",
+        "psymoff",
+        "puts"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "%-16.9f",
+        "%-16D",
+        "%-16O",
+        "%-16Q",
+        "%-16R",
+        "%-16U",
+        "%-16X",
+        "%-24Y",
+        "%-32.18F",
+        "%-8d",
+        "%-8o",
+        "%-8q",
+        "%-8r",
+        "%-8u",
+        "%-8x",
+        "%16m",
+        "%16t",
+        "%M",
+        "%T",
+        "':\n\t\t\tdotinc=0;\n\t\t\twhile ( *fp != '",
+        ":%16t",
+        "eh?\\n"
+      ]
+    },
+    {
+      "name": "printesc",
+      "file": "kdb/format.c",
+      "line": 392,
+      "lang": "c",
+      "calls": [
+        "printc",
+        "printf"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "^%c",
+        "^?"
+      ]
+    },
+    {
+      "name": "inkdot",
+      "file": "kdb/format.c",
+      "line": 404,
+      "lang": "c",
+      "calls": [
+        "error"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "digit",
+      "file": "kdb/format.c",
+      "line": 415,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "rdc",
+      "file": "kdb/input.c",
+      "line": 30,
+      "lang": "c",
+      "calls": [
+        "editchar",
+        "readchar",
+        "write"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "^R\\n"
+      ]
+    },
+    {
+      "name": "readchar",
+      "file": "kdb/input.c",
+      "line": 78,
+      "lang": "c",
+      "calls": [
+        "editchar",
+        "error",
+        "read"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "nextchar",
+      "file": "kdb/input.c",
+      "line": 111,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "eol",
+      "file": "kdb/input.c",
+      "line": 113,
+      "lang": "c",
+      "calls": [
+        "rdc"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "quotchar",
+      "file": "kdb/input.c",
+      "line": 121,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "readchar",
+      "file": "kdb/input.c",
+      "line": 123,
+      "lang": "c",
+      "calls": [
+        "eol",
+        "getformat"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "kdb_init",
+      "file": "kdb/kdb.c",
+      "line": 16,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "kdb_kintr",
+      "file": "kdb/kdb.c",
+      "line": 32,
+      "lang": "c",
+      "calls": [
+        "cngetc",
+        "cnpollc",
+        "cnputc",
+        "current_pmap",
+        "flush_inv",
+        "invalidate_TLB",
+        "kdb",
+        "kdb_trap",
+        "kdb_wallow",
+        "kdbread",
+        "kdbrlong",
+        "kdbsbrk",
+        "kdbwlong",
+        "kdbwrite",
+        "pmap_pte",
+        "printf"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x000000ff",
+        "0x0000ffff",
+        "0x00ffffff"
+      ],
+      "string_literals": [
+        "%s",
+        "kernel: ",
+        "type %d"
+      ]
+    },
+    {
+      "name": "done",
+      "file": "kdb/kdb_main.c",
+      "line": 271,
+      "lang": "c",
+      "calls": [
+        "endpcs",
+        "exit",
+        "printf",
+        "round"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "Done, status %d\\n"
+      ]
+    },
+    {
+      "name": "chkerr",
+      "file": "kdb/kdb_main.c",
+      "line": 294,
+      "lang": "c",
+      "calls": [
+        "error",
+        "iclose",
+        "kdblongjmp",
+        "oclose",
+        "reset"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "fault",
+      "file": "kdb/kdb_main.c",
+      "line": 324,
+      "lang": "c",
+      "calls": [
+        "breakpoint",
+        "delbp",
+        "error",
+        "lseek",
+        "printf",
+        "sbrk",
+        "scanbkpt",
+        "setss",
+        "signal"
+      ],
+      "mmio_consts": [
+        "0x08000000",
+        "0xf0000000"
+      ],
+      "imm_consts": [
+        "0x00000010",
+        "0x000007ff",
+        "0x0000f800",
+        "0x00020000",
+        "0x001f0000",
+        "0x03e00000",
+        "0x03ffffff",
+        "0x04000000",
+        "0x08000000",
+        "0x40000000",
+        "0x50000000",
+        "0x58000000",
+        "0x60000000",
+        "0xb4000000",
+        "0xe0000000",
+        "0xf0000000",
+        "0xf8000000",
+        "0xfc000000",
+        "0xfffc0000",
+        "0xffffffe0"
+      ],
+      "string_literals": [
+        "setss(): next_step = 0x%X\\n",
+        "setss(): pc = 0x%X fault_ins = 0x%X, psw = 0x%X\\n"
+      ]
+    },
+    {
+      "name": "charpos",
+      "file": "kdb/output.c",
+      "line": 119,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "flushbuf",
+      "file": "kdb/output.c",
+      "line": 124,
+      "lang": "c",
+      "calls": [
+        "_printf",
+        "charpos",
+        "convert",
+        "ctime",
+        "defined",
+        "ecvt",
+        "itol",
+        "length",
+        "printc",
+        "printdate",
+        "printdbl",
+        "printf",
+        "printnum",
+        "printoct",
+        "prints",
+        "shorten",
+        "sprintf"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "%+.16e",
+        "%s",
+        "????????????????????????"
+      ]
+    },
+    {
+      "name": "newline",
+      "file": "kdb/output.c",
+      "line": 358,
+      "lang": "c",
+      "calls": [
+        "convert",
+        "itol",
+        "leng",
+        "printc",
+        "printdbl",
+        "printnum",
+        "printoct",
+        "sprintf"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x0000ffff"
+      ],
+      "string_literals": [
+        "%D",
+        "%X"
+      ]
+    },
+    {
+      "name": "iclose",
+      "file": "kdb/output.c",
+      "line": 554,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "oclose",
+      "file": "kdb/output.c",
+      "line": 555,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "iclose",
+      "file": "kdb/output.c",
+      "line": 557,
+      "lang": "c",
+      "calls": [
+        "close",
+        "error"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "oclose",
+      "file": "kdb/output.c",
+      "line": 595,
+      "lang": "c",
+      "calls": [
+        "close",
+        "flushbuf"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "endline",
+      "file": "kdb/output.c",
+      "line": 605,
+      "lang": "c",
+      "calls": [
+        "charpos",
+        "printf"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "\\n"
+      ]
+    },
+    {
+      "name": "subpcs",
+      "file": "kdb/pcs.c",
+      "line": 59,
+      "lang": "c",
+      "calls": [
+        "DataTrap",
+        "delbp",
+        "endpcs",
+        "error",
+        "getsig",
+        "isupper",
+        "kdblongjmp",
+        "printf",
+        "printpc",
+        "rdc",
+        "readchar",
+        "runpcs",
+        "sbrk",
+        "scanbkpt",
+        "setup"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "%d: killed",
+        "breakpoint%16t",
+        "stopped at%16t"
+      ]
+    },
+    {
+      "name": "printtrace",
+      "file": "kdb/print.c",
+      "line": 258,
+      "lang": "c",
+      "calls": [
+        "kdbgetprocess",
+        "mdb_init",
+        "pfind",
+        "printc",
+        "printf",
+        "psymoff",
+        "queue_end",
+        "queue_first",
+        "queue_next",
+        "thread_read_times",
+        "varchk"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "",
+        " ",
+        " %c%c%c%c%s",
+        " pri = %D, %Du %Ds %Dt %Dc",
+        "%d threads:\\n",
+        "(swapped)",
+        "no such process",
+        "no threads\\n",
+        "proc entry at 0x%X\\n",
+        "task 0x%X: ",
+        "thread 0x%X "
+      ]
+    },
+    {
+      "name": "readchar",
+      "file": "kdb/print.c",
+      "line": 387,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "rdc",
+      "file": "kdb/print.c",
+      "line": 392,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "rdc",
+      "file": "kdb/print.c",
+      "line": 407,
+      "lang": "c",
+      "calls": [
+        "error",
+        "readchar",
+        "strcat",
+        "strcpy"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "/"
+      ]
+    },
+    {
+      "name": "strcmp",
+      "file": "kdb/print.c",
+      "line": 422,
+      "lang": "c",
+      "calls": [
+        "_dr0",
+        "_dr1",
+        "_dr2",
+        "_dr3",
+        "_dr7",
+        "_exit",
+        "access",
+        "creat",
+        "done",
+        "error",
+        "expr",
+        "flushbuf",
+        "get",
+        "get_dirbase",
+        "getpcb",
+        "iclose",
+        "inb",
+        "kdbtrace",
+        "lseek",
+        "newtrace",
+        "oclose",
+        "oldtrace",
+        "open",
+        "outb",
+        "panic",
+        "pmap_dump_range",
+        "prbkpt",
+        "printc",
+        "printf",
+        "printfregs",
+        "printmap",
+        "printpiperegs",
+        "printregs",
+        "prints",
+        "psymoff",
+        "sigprint",
+        "vm_map_print"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x000000ff",
+        "0x00002000",
+        "0xfffff000"
+      ],
+      "string_literals": [
+        "   %d\\t",
+        " = %X\\n",
+        "%-8.8d",
+        "%24t",
+        "%c: ",
+        "%s%12t`%s'\\n",
+        "%s:%12t%R\\n",
+        "-",
+        "/ map",
+        "? map",
+        "Dump of pmap, dirbase 0x%X:\\n",
+        "KDB:CPU didn't reset\\n",
+        "No algol 68 on NextDimension board.",
+        "\\n",
+        "\\nb2 = %-16R",
+        "b1 = %-16R",
+        "bkpt\\taddress\\n",
+        "breakpoints\\ncount%8tbkpt%24tcommand\\n",
+        "e1 = %-16R",
+        "e2 = %-16R",
+        "f1 = %-16R",
+        "f2 = %-16R",
+        "inb(%x) = %x\\n",
+        "must have 2 <= radix <= 16",
+        "need value for outb",
+        "no process\\n",
+        "not debugging kernel\\n",
+        "outb(%x, %x) = %x\\n",
+        "pcs id = %d\\n",
+        "radix=%d base ten",
+        "variables\\n"
+      ]
+    },
+    {
+      "name": "printregs",
+      "file": "kdb/print.c",
+      "line": 707,
+      "lang": "c",
+      "calls": [
+        "dbstrlen",
+        "printc",
+        "printf",
+        "printpc",
+        "valpr"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "%9X%  ",
+        "%s"
+      ]
+    },
+    {
+      "name": "printfregs",
+      "file": "kdb/print.c",
+      "line": 733,
+      "lang": "c",
+      "calls": [
+        "dbstrlen",
+        "printc",
+        "printf",
+        "valpr"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "%9X%  ",
+        "%s"
+      ]
+    },
+    {
+      "name": "printpiperegs",
+      "file": "kdb/print.c",
+      "line": 759,
+      "lang": "c",
+      "calls": [
+        "dbstrlen",
+        "printc",
+        "printf"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "%9X%  ",
+        "%s"
+      ]
+    },
+    {
+      "name": "getreg",
+      "file": "kdb/print.c",
+      "line": 782,
+      "lang": "c",
+      "calls": [
+        "readchar"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "printpc",
+      "file": "kdb/print.c",
+      "line": 825,
+      "lang": "c",
+      "calls": [
+        "chkget",
+        "printc",
+        "printins",
+        "psymoff"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        ":%16t",
+        "decimal overflow trap",
+        "floating divide by zero fault",
+        "floating overflow fault",
+        "floating overflow trap",
+        "floating undeflow fault",
+        "floating underflow trap",
+        "floating/decimal divide by zero trap",
+        "integer divide by zero trap",
+        "integer overflow trap",
+        "privileged instruction fault",
+        "reserved addressing fault",
+        "reserved operand fault",
+        "subscript out of range trap"
+      ]
+    },
+    {
+      "name": "sigprint",
+      "file": "kdb/print.c",
+      "line": 857,
+      "lang": "c",
+      "calls": [
+        "prints"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        " (",
+        ")"
+      ]
+    },
+    {
+      "name": "getsig",
+      "file": "kdb/runpcs.c",
+      "line": 81,
+      "lang": "c",
+      "calls": [
+        "expr"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "runpcs",
+      "file": "kdb/runpcs.c",
+      "line": 88,
+      "lang": "c",
+      "calls": [
+        "bpwait",
+        "breakpoint",
+        "chkerr",
+        "delbp",
+        "execbkpt",
+        "printf",
+        "ptrace",
+        "readregs",
+        "reset",
+        "scanbkpt",
+        "setbp"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "%s: running\\n",
+        "\\ncontinue %x %d\\n",
+        "kernel: running\\n",
+        "reset(%d) from runpcs()\\n"
+      ]
+    },
+    {
+      "name": "nextpcs",
+      "file": "kdb/runpcs.c",
+      "line": 157,
+      "lang": "c",
+      "calls": [
+        "chkget",
+        "command",
+        "delbp",
+        "execbkpt",
+        "printf",
+        "printpc",
+        "runpcs",
+        "scanbkpt"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x000000ff"
+      ],
+      "string_literals": [
+        "  ",
+        "%16t",
+        "%d instructions executed\\n",
+        "[after %6d]     ",
+        "\\n BPT code; '%s'%o'%o'%d"
+      ]
+    },
+    {
+      "name": "endpcs",
+      "file": "kdb/runpcs.c",
+      "line": 264,
+      "lang": "c",
+      "calls": [
+        "ptrace"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "nullsig",
+      "file": "kdb/runpcs.c",
+      "line": 282,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "setup",
+      "file": "kdb/runpcs.c",
+      "line": 290,
+      "lang": "c",
+      "calls": [
+        "bpwait",
+        "chkerr",
+        "close",
+        "delbp",
+        "doexec",
+        "endpcs",
+        "error",
+        "execbkpt",
+        "exit",
+        "fork",
+        "open",
+        "panic",
+        "printf",
+        "ptrace",
+        "readregs",
+        "reset",
+        "signal",
+        "vfork"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "",
+        "%s: cannot execute\\n",
+        "exbkpt: %d\\n",
+        "reset(%d) from execbkpt()\\n"
+      ]
+    },
+    {
+      "name": "doexec",
+      "file": "kdb/runpcs.c",
+      "line": 357,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "rdc",
+      "file": "kdb/runpcs.c",
+      "line": 367,
+      "lang": "c",
+      "calls": [
+        "close",
+        "readchar"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "open",
+      "file": "kdb/runpcs.c",
+      "line": 398,
+      "lang": "c",
+      "calls": [
+        "_exit",
+        "close",
+        "printf",
+        "readchar"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "%s: cannot open\\n"
+      ]
+    },
+    {
+      "name": "creat",
+      "file": "kdb/runpcs.c",
+      "line": 415,
+      "lang": "c",
+      "calls": [
+        "_exit",
+        "exect",
+        "perror",
+        "printf",
+        "scanbkpt"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "%s: cannot create\\n"
+      ]
+    },
+    {
+      "name": "delbp",
+      "file": "kdb/runpcs.c",
+      "line": 442,
+      "lang": "c",
+      "calls": [
+        "get",
+        "printf",
+        "prints",
+        "psymoff",
+        "ptrace",
+        "put",
+        "setbp"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x000000ff",
+        "0x48000200",
+        "0xb0000200",
+        "0xfc000200"
+      ],
+      "string_literals": [
+        "\\n",
+        "cannot set breakpoint: ",
+        "setbp(): bp->loc = 0x%X\\n"
+      ]
+    },
+    {
+      "name": "bpwait",
+      "file": "kdb/runpcs.c",
+      "line": 511,
+      "lang": "c",
+      "calls": [
+        "close",
+        "flushbuf",
+        "prints",
+        "ptrace",
+        "setcor",
+        "signal",
+        "sigprint",
+        "wait"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        " - core dumped"
+      ]
+    },
+    {
+      "name": "readregs",
+      "file": "kdb/runpcs.c",
+      "line": 546,
+      "lang": "c",
+      "calls": [
+        "ptrace"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "setsym",
+      "file": "kdb/setup.c",
+      "line": 37,
+      "lang": "c",
+      "calls": [
+        "INKERNEL",
+        "N_BADMAG",
+        "N_SYMOFF",
+        "N_TXTOFF",
+        "exit",
+        "getfile",
+        "lseek",
+        "malloc",
+        "printf",
+        "read",
+        "round",
+        "setcor"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "Error reading symbol|string table\\n",
+        "Not enough space for symbol|string table\\n",
+        "Old format a.out - no string table\\n"
+      ]
+    },
+    {
+      "name": "setcor",
+      "file": "kdb/setup.c",
+      "line": 132,
+      "lang": "c",
+      "calls": [
+        "INKERNEL",
+        "INSTACK",
+        "INUDOT",
+        "ctob",
+        "fstat",
+        "getfile",
+        "getpcb",
+        "lookup",
+        "physrw",
+        "printf",
+        "read",
+        "round"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x7fffffff"
+      ],
+      "string_literals": [
+        "_Sysmap",
+        "_Syssize",
+        "_masterpaddr",
+        "corefile not from this program",
+        "sbr %X slr %X\\n"
+      ]
+    },
+    {
+      "name": "getpcb",
+      "file": "kdb/setup.c",
+      "line": 197,
+      "lang": "c",
+      "calls": [
+        "close",
+        "creat",
+        "create",
+        "eqstr",
+        "getfile",
+        "lseek",
+        "open",
+        "printf",
+        "read"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "-",
+        "cannot open `%s'\\n",
+        "p0br %X p0lr %X p1br %X p1lr %X\\n"
+      ]
+    },
+    {
+      "name": "setvar",
+      "file": "kdb/setup.c",
+      "line": 239,
+      "lang": "c",
+      "calls": [
+        "varchk"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "oldtrace",
+      "file": "kdb/stack.c",
+      "line": 67,
+      "lang": "c",
+      "calls": [
+        "IN_KERNEL_STACK",
+        "chkerr",
+        "findsym",
+        "get",
+        "kdbtrace",
+        "printc",
+        "printf",
+        "s",
+        "strcmp"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x000000ff",
+        "0x00000200",
+        "0x00000fff",
+        "0x00002000",
+        "0x0000ffff"
+      ],
+      "string_literals": [
+        "%R",
+        "%s(",
+        ") from %X\\n",
+        "?",
+        "_trap",
+        "_vstart",
+        "sigtramp"
+      ]
+    },
+    {
+      "name": "localsym",
+      "file": "kdb/stack.c",
+      "line": 175,
+      "lang": "c",
+      "calls": [
+        "INSTACK",
+        "IN_KERNEL_STACK",
+        "get",
+        "printf",
+        "prints"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": [
+        "%8t%s:%10t",
+        "%R\\n",
+        "?\\n"
+      ]
+    },
+    {
+      "name": "newtrace",
+      "file": "kdb/stack.c",
+      "line": 220,
+      "lang": "c",
+      "calls": [
+        "INSTACK",
+        "IN_KERNEL_STACK",
+        "PAGE",
+        "X",
+        "bget",
+        "call",
+        "chkerr",
+        "chkget",
+        "cpc",
+        "etext",
+        "findsym",
+        "get",
+        "kdbtrace",
+        "one_stack_frame",
+        "panic",
+        "printf",
+        "printins",
+        "psymoff",
+        "rpc",
+        "s",
+        "strcmp",
+        "vstart"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x0000003f",
+        "0x00000059",
+        "0x00000060",
+        "0x000000ef",
+        "0x000000fa",
+        "0x000000fb",
+        "0x000000ff",
+        "0x00000200",
+        "0x00000fff",
+        "0x00002000",
+        "0x0000c483",
+        "0x0000ffff"
+      ],
+      "string_literals": [
+        "",
+        "   ????   ",
+        "  -%02X(fp) ",
+        " %08X ",
+        " %8X ",
+        "%04x(",
+        "%08X: calls $%D,",
+        "%X%s",
+        "%X(",
+        "%X:\\t",
+        "%s%X",
+        "%s(",
+        "%s+%X:\\t",
+        "(",
+        "(r0)(",
+        ")\\n",
+        "*cpc(%X) = %X, *pc-4 = %X, *rpc(%X) = %X\\n",
+        ", ",
+        ": ",
+        "?",
+        "??%x??%x??(",
+        "\\n",
+        "\\n%08X:\\t",
+        "\\n\\n",
+        "_main",
+        "_vstart",
+        "calls #!=(",
+        "calls $%D,",
+        "fp = %X, ap = %X(#%D), sp = %X(#%X), nfp = %X\\n",
+        "not a call(",
+        "sigtramp"
+      ]
+    },
+    {
+      "name": "getbyte",
+      "file": "kdb/utls.c",
+      "line": 71,
+      "lang": "c",
+      "calls": [
+        "chkget",
+        "convnum",
+        "lookbyte"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "lookbyte",
+      "file": "kdb/utls.c",
+      "line": 95,
+      "lang": "c",
+      "calls": [
+        "chkget",
+        "printline"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    },
+    {
+      "name": "printline",
+      "file": "kdb/utls.c",
+      "line": 117,
+      "lang": "c",
+      "calls": [
+        "_sprintf",
+        "dbstrcat",
+        "dbstrcpy",
+        "dbstrlen",
+        "dec",
+        "hex",
+        "prhex",
+        "printf",
+        "sprintf",
+        "strchr",
+        "strtol"
+      ],
+      "mmio_consts": [],
+      "imm_consts": [
+        "0x0000000f"
+      ],
+      "string_literals": [
+        "%s",
+        "-0x%x",
+        "0/0",
+        "0123456789abcdef",
+        "0x%x"
+      ]
+    },
+    {
+      "name": "mkioptab",
+      "file": "kdb/utls.c",
+      "line": 355,
+      "lang": "c",
+      "calls": [],
+      "mmio_consts": [],
+      "imm_consts": [],
+      "string_literals": []
+    }
+  ]
+}

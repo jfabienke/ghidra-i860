@@ -1,0 +1,13 @@
+{
+  "runs": [
+    {
+      "entry": "0xF8000348",
+      "trace_file": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260210-235146/iter_1/sweep/traces/trace_F8000348.jsonl",
+      "log_file": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260210-235146/iter_1/sweep/logs/run_F8000348.log",
+      "lines": "0",
+      "executed": "200",
+      "final_pc": "0xF8000664",
+      "status": "ok"
+    }
+  ]
+}

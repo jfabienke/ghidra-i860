@@ -1,0 +1,81 @@
+Analyze the following function and return a structured JSON intent dossier.
+
+FUNCTION: FUN_f807ee1c at 0xf807ee1c
+SIZE: 72 bytes (18 instructions)
+CONFIDENCE SOURCE: default
+HAS UNRESOLVED BRI: False
+PRIORITY TAGS: mmio_access
+
+CALLERS (0): (none)
+CALLEES (0): (none)
+
+BLOCKS (2):
+  0xf807ee1c..0xf807ee37 (7 insns)
+  0xf807ee38..0xf807ee63 (11 insns)
+
+INSTRUCTIONS:
+  0xf807ee1c: addu 0x19c8,r13,r12                      defs=[r12] uses=[r13,0x19c8] pcode=[INT_SEXT,INT_ADD]
+  0xf807ee20: shr r16,r0,r2                            defs=[r2] uses=[0x0,r16] pcode=[INT_RIGHT]
+  0xf807ee24: addu -0x6700,r11,r3                      defs=[r3] uses=[0x9900,r11] pcode=[INT_SEXT,INT_ADD] [MMIO:mmio_high_space]
+  0xf807ee28: addu 0x6792,r13,r20                      defs=[r20] uses=[0x6792,r13] pcode=[INT_SEXT,INT_ADD]
+  0xf807ee2c: shr 0x8486,r0,r27                        defs=[r27] uses=[0x0,0x8486] pcode=[INT_RIGHT]
+  0xf807ee30: i2p1.sd f16,f0,f4f5                      defs=[f4f5] uses=[f16,0x0,0x11] pcode=[CALLOTHER]
+  0xf807ee34: btne 0xc,r19,0xf8089fdc                  defs=[] uses=[r19,0xc] pcode=[INT_NOTEQUAL,CBRANCH]
+  0xf807ee38: ld.b r0(r0),r0                           defs=[r0_sink] uses=[0x0] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf807ee3c: ld.b r16(r5),r17                         defs=[r17] uses=[r16,r5] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf807ee40: ld.b r23(r4),r1                          defs=[r1] uses=[r4,r23] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf807ee44: addu 0x19c8,r13,r12                      defs=[r12] uses=[r13,0x19c8] pcode=[INT_SEXT,INT_ADD]
+  0xf807ee48: shr r16,r8,r2                            defs=[r2] uses=[r8,r16] pcode=[INT_RIGHT]
+  0xf807ee4c: andnot r13,r24,r0                        defs=[r0_sink] uses=[r24,r13] pcode=[INT_NEGATE,INT_AND]
+  0xf807ee50: addu 0x56,r12,r18                        defs=[r18] uses=[r12,0x56] pcode=[INT_SEXT,INT_ADD]
+  0xf807ee54: addu -0x7a4c,r4,r6                       defs=[r6] uses=[r4,0x85b4] pcode=[INT_SEXT,INT_ADD] [MMIO:mmio_high_space]
+  0xf807ee58: addu -0x53e5,r4,r4                       defs=[r4] uses=[r4,0xac1b] pcode=[INT_SEXT,INT_ADD] [MMIO:mmio_high_space]
+  0xf807ee5c: br 0xfddd326c                            defs=[r1] uses=[r20,0x5674] pcode=[INT_SEXT,INT_ADD,LOAD,INT_ZEXT,BRANCH]
+  0xf807ee60: _ld.b 0x5674(r20),r1                     defs=[r1] uses=[r20,0x5674] pcode=[INT_SEXT,INT_ADD,LOAD,INT_ZEXT]
+
+REFERENCES:
+  0xf807ee34 -> 0xf8089fdc [CONDITIONAL_JUMP] flow=True
+  0xf807ee5c -> 0xfddd326c [UNCONDITIONAL_JUMP] flow=True
+
+STRINGS IN RANGE:
+  (none)
+
+DISPATCH UNRESOLVED:
+  (none)
+
+CONTEXT:
+- R15 cluster (GState flags): False
+- MMIO accesses: 0xf807ee24=mmio_high_space
+- Nearby deny ranges: (none)
+- Nearby embedded objects: (none)
+
+Return ONLY valid JSON matching this schema:
+{
+  "function_id": "0xf807ee1c",
+  "function_name": "FUN_f807ee1c",
+  "primary_intent": "<one-line purpose statement>",
+  "intent_category": "<one of: initialization, dispatch, parser, raster, mmio_driver, math_kernel, utility, synchronization, error_handler, unknown>",
+  "evidence": [
+    {"addr": "0x...", "fact": "<what this instruction/pattern proves>"}
+  ],
+  "register_protocol": {
+    "inputs": ["<rN = description>"],
+    "outputs": ["<rN = description>"],
+    "side_effects": ["<memory write / MMIO / control reg change>"]
+  },
+  "data_accesses": [
+    {"addr": "0x...", "target": "0x...", "kind": "read|write|mmio", "interpretation": "..."}
+  ],
+  "control_flow_summary": "<how the function flows: linear, loop, conditional tree, dispatch, etc.>",
+  "confidence": <0-100>,
+  "confidence_factors": {
+    "supporting": ["<what raises confidence>"],
+    "limiting": ["<what caps confidence>"]
+  },
+  "alternatives": [
+    {"intent": "<alternative purpose>", "why_not_primary": "<evidence against>"}
+  ],
+  "open_questions": ["<what remains unknown>"],
+  "required_next_evidence": ["<what would resolve open questions>"],
+  "subsystem_hint": "<suggested subsystem: postscript_dispatch, pixel_pipeline, memory_management, board_init, interrupt_handling, unknown>"
+}

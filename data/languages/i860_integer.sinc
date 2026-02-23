@@ -225,25 +225,22 @@
 # ==================================================================
 
 # st.b src1,offset(src2)  (opcode 0x03)
-:st.b R1src, stimm(R2src)  is op6=0x03 & R1src & R2src & stimm  {
-    local disp:4 = stimm;
-    local addr:4 = R2src + disp;
+:st.b R1src, simm16(R2src)  is op6=0x03 & R1src & R2src & simm16  {
+    local addr:4 = R2src + sext(simm16:2);
     *:1 addr = R1src:1;
 }
 
 # st.s src1,offset(src2)  (opcode 0x07, bit0=0: short)
 # bit 0 = 0 means short; also means displacement LSB=0 (aligned)
-:st.s R1src, stimm(R2src)  is op6=0x07 & lsbit0=0 & R1src & R2src & stimm  {
-    local disp:4 = stimm;
-    local addr:4 = R2src + disp;
+:st.s R1src, simm16(R2src)  is op6=0x07 & lsbit0=0 & R1src & R2src & simm16  {
+    local addr:4 = R2src + sext(simm16:2);
     *:2 addr = R1src:2;
 }
 
 # st.l src1,offset(src2)  (opcode 0x07, bit0=1: long)
 # bit 0 = 1 means long; displacement low 2 bits are masked in hardware
-:st.l R1src, stimm(R2src)  is op6=0x07 & lsbit0=1 & R1src & R2src & stimm  {
-    local disp:4 = stimm;
-    local addr:4 = R2src + disp;
+:st.l R1src, simm16(R2src)  is op6=0x07 & lsbit0=1 & R1src & R2src & simm16  {
+    local addr:4 = R2src + sext(simm16:2);
     *:4 addr = R1src;
 }
 

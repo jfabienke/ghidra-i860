@@ -1,0 +1,303 @@
+{
+  "schema_version": "shard-v1",
+  "factpack_source": "/Users/jvindahl/Development/ghidra-i860/re/nextdimension/boot-rom/reports/factpack",
+  "function": {
+    "entry": "0xfff00260",
+    "name": "FUN_fff00260",
+    "size": 48,
+    "in_exec": true,
+    "in_allow": true,
+    "in_deny": false,
+    "confidence_source": "default",
+    "has_unresolved_bri": false
+  },
+  "blocks": [
+    {
+      "func_entry": "0xfff00260",
+      "block_start": "0xfff00260",
+      "block_end": "0xfff00293",
+      "insn_count": 13
+    }
+  ],
+  "edges": [
+    {
+      "src": "0xfff00260",
+      "dst": "0xfff00264",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xfff008f4",
+      "dst": "0xfff00260",
+      "kind": "call",
+      "delay_slot": true
+    },
+    {
+      "src": "0xfff00280",
+      "dst": "0xfff00284",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xfff0027c",
+      "dst": "0xfff00280",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xfff00264",
+      "dst": "0xfff00268",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xfff00284",
+      "dst": "0xfff00288",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xfff00268",
+      "dst": "0xfff0026c",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xfff00288",
+      "dst": "0xfff0028c",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xfff0026c",
+      "dst": "0xfff00270",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xfff00270",
+      "dst": "0xfff00274",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xfff00274",
+      "dst": "0xfff00278",
+      "kind": "fallthrough",
+      "delay_slot": false
+    },
+    {
+      "src": "0xfff00278",
+      "dst": "0xfff0027c",
+      "kind": "fallthrough",
+      "delay_slot": false
+    }
+  ],
+  "insns": [
+    {
+      "addr": "0xfff00260",
+      "func_entry": "0xfff00260",
+      "word": "0xae100004",
+      "mnemonic": "shr",
+      "operands": "shr 0x4,r16,r16",
+      "defs": [
+        "r16"
+      ],
+      "uses": [
+        "r16",
+        "0x4"
+      ],
+      "pcode_ops": [
+        "INT_RIGHT"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xfff00264",
+      "func_entry": "0xfff00260",
+      "word": "0xa0000000",
+      "mnemonic": "nop",
+      "operands": "nop",
+      "defs": [],
+      "uses": [],
+      "pcode_ops": [],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xfff00268",
+      "func_entry": "0xfff00260",
+      "word": "0xa0000000",
+      "mnemonic": "nop",
+      "operands": "nop",
+      "defs": [],
+      "uses": [],
+      "pcode_ops": [],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xfff0026c",
+      "func_entry": "0xfff00260",
+      "word": "0xa0000000",
+      "mnemonic": "nop",
+      "operands": "nop",
+      "defs": [],
+      "uses": [],
+      "pcode_ops": [],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xfff00270",
+      "func_entry": "0xfff00260",
+      "word": "0xa0000000",
+      "mnemonic": "nop",
+      "operands": "nop",
+      "defs": [],
+      "uses": [],
+      "pcode_ops": [],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xfff00274",
+      "func_entry": "0xfff00260",
+      "word": "0xa0000000",
+      "mnemonic": "nop",
+      "operands": "nop",
+      "defs": [],
+      "uses": [],
+      "pcode_ops": [],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xfff00278",
+      "func_entry": "0xfff00260",
+      "word": "0xa0000000",
+      "mnemonic": "nop",
+      "operands": "nop",
+      "defs": [],
+      "uses": [],
+      "pcode_ops": [],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xfff0027c",
+      "func_entry": "0xfff00260",
+      "word": "0xa0000000",
+      "mnemonic": "nop",
+      "operands": "nop",
+      "defs": [],
+      "uses": [],
+      "pcode_ops": [],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xfff00280",
+      "func_entry": "0xfff00260",
+      "word": "0x08000000",
+      "mnemonic": "ixfr",
+      "operands": "ixfr r0,f0",
+      "defs": [],
+      "uses": [],
+      "pcode_ops": [],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xfff00284",
+      "func_entry": "0xfff00260",
+      "word": "0x30b00000",
+      "mnemonic": "ld.c",
+      "operands": "ld.c epsr,r16",
+      "defs": [
+        "r16"
+      ],
+      "uses": [
+        "epsr"
+      ],
+      "pcode_ops": [
+        "COPY"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xfff00288",
+      "func_entry": "0xfff00260",
+      "word": "0xc6101f00",
+      "mnemonic": "and",
+      "operands": "and 0x1f00,r16,r16",
+      "defs": [
+        "r16"
+      ],
+      "uses": [
+        "0x1f00",
+        "r16"
+      ],
+      "pcode_ops": [
+        "INT_ZEXT",
+        "INT_AND"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    },
+    {
+      "addr": "0xfff0028c",
+      "func_entry": "0xfff00260",
+      "word": "0x40000800",
+      "mnemonic": "ret",
+      "operands": "ret",
+      "defs": [
+        "r16"
+      ],
+      "uses": [
+        "r16",
+        "r1",
+        "0x8"
+      ],
+      "pcode_ops": [
+        "INT_RIGHT",
+        "RETURN"
+      ],
+      "flows": [],
+      "mmio_tag": null,
+      "string_ref": null
+    }
+  ],
+  "refs": [],
+  "strings": [],
+  "dispatch_unresolved": [],
+  "callees": [],
+  "callers": [
+    {
+      "entry": "0xfff0079c",
+      "name": "FUN_fff0079c",
+      "size": 524,
+      "has_unresolved_bri": false
+    }
+  ],
+  "context": {
+    "r15_cluster": false,
+    "mmio_accesses": [],
+    "nearby_deny_ranges": [],
+    "nearby_embedded_objects": [],
+    "priority_tags": []
+  }
+}

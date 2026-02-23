@@ -1,0 +1,1400 @@
+{"addr":"0xf800fce1","length":9,"value":"NSObject","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf800fd59","length":12,"value":"NSResponder","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf800fd7f","length":15,"value":"NSMutableArray","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf800fd91","length":8,"value":"NSArray","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf800fe3a","length":10,"value":"Helvetica","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf800fe66","length":9,"value":"NSButton","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf800ffb6","length":8,"value":"NSColor","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8010316","length":10,"value":"Helvetica","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80104ac","length":13,"value":"NSMutableSet","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80104bc","length":6,"value":"NSSet","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80104d2","length":20,"value":"NSIBOutletConnector","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf801054a","length":21,"value":"NSIBControlConnector","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8010cd8","length":16,"value":"data.classes","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8010cf0","length":12,"value":"objects.nib","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80114b8","length":328,"value":"\"NSPanelController\" = {\n    ACTIONS = {\"cancel:\" = id; \"ok:\" = id; }; \n    OUTLETS = {alertPanel = id; form = id; iconButton = id; okButton = id; }; \n    SUPERCLASS = Object; \n};\n\"IconApp\" = {ACTIONS = {}; OUTLETS = {}; SUPERCLASS = NSApplication; };\n\"FirstResponder\" = {ACTIONS = {}; CATEGORY = LocalActions; OUTLETS = {}; };\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8011ce1","length":9,"value":"NSObject","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8011d36","length":9,"value":"NSButton","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8011d59","length":12,"value":"NSResponder","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8011d7f","length":15,"value":"NSMutableArray","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8011d91","length":8,"value":"NSArray","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8011e41","length":15,"value":"Helvetica-Bold","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8011e78","length":8,"value":"NSColor","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8011f47","length":15,"value":"Helvetica-Bold","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8011fe7","length":10,"value":"Helvetica","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8012643","length":13,"value":"NSMutableSet","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8012653","length":6,"value":"NSSet","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8012669","length":20,"value":"NSIBOutletConnector","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80126c9","length":21,"value":"NSIBControlConnector","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8012cd8","length":16,"value":"data.classes","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8012cf0","length":12,"value":"objects.nib","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80134b8","length":1000,"value":"\"NSFontPanel\" = {\n    ACTIONS = {\n        \"_chooseFace:\" = id; \n        \"_chooseFamily:\" = id; \n        \"_chooseSize:\" = id; \n        \"_custom:\" = id; \n        \"_preview:\" = id; \n        \"_revert:\" = id; \n        \"_set:\" = id; \n        \"performResize:\" = id; \n    }; \n    OUTLETS = {\n        chooser = id; \n        current = id; \n        currentBox = id; \n        faces = id; \n        facesTitle = id; \n        families = id; \n        familyTitle = id; \n        preview = id; \n        previewBox = id; \n        s...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8017cdb","length":9,"value":"H__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8017d0c","length":8,"value":"__text","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8017d1c","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8017d50","length":12,"value":"__cstring","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8017d60","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8017d94","length":24,"value":"__picsymbol_stub__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8017dd8","length":8,"value":"__const","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8017de8","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8017e24","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8017e54","length":8,"value":"__data","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8017e64","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8017ea8","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8017edc","length":8,"value":"__const","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8017eec","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8017f20","length":16,"value":"__la_symbol_ptr","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8017f30","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8017f64","length":16,"value":"__nl_symbol_ptr","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8017f74","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8017fb8","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8017ff3","length":13,"value":"8__LINKEDIT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80229ee","length":33,"value":"N^NuNDDriver: ND_Load_MachDriver","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022a0f","length":14,"value":"NextDimension","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022a1e","length":37,"value":"NDDriver: netname_lookup: ND timeout","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022a43","length":26,"value":"NDDriver: ND_GetBoardList","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022a5d","length":14,"value":"NeXTdimension","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022a6b","length":15,"value":"nd_currentsync","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022a7a","length":11,"value":"nd_setsync","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022a85","length":14,"value":"port_allocate","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022a93","length":56,"value":"Another WindowServer is using the NeXTdimension board.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022acb","length":34,"value":"Cannot set PostScript hook. (%d)\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022aed","length":8,"value":"-NDSlot","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022af5","length":16,"value":"(NextDimension)","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022b05","length":57,"value":"/usr/lib/NextStep/Displays/NeXTdimension.psdrvr/NDserver","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022b3e","length":33,"value":"FAILURE IN NeXTdimension SERVER\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022b5f","length":10,"value":"ps_server","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022b69","length":27,"value":"NDserver died on startup.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022b84","length":43,"value":"netname_look_up for ps_server failed (%d)\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022baf","length":28,"value":"{1 2.2 div exp } dup dup {}","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022bcb","length":38,"value":"NeXTdimension internal msg error: %s\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022bf1","length":23,"value":"DevOptSetBMCompression","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022c08","length":34,"value":"makePublic: msg_send returned %D\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022c2a","length":37,"value":"makePublic: msg_receive returned %D\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022c4f","length":37,"value":"mark_msg_send: msg_send returned %D\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022c74","length":39,"value":"nd_start_video: can't find window bag\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022c9b","length":39,"value":"nd_start_video: can't get window info\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022cc2","length":31,"value":"NDGrab: can't find window bag\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022ce1","length":52,"value":"nd_resumerecording: ps_setRecordingInfo fails (%d)\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022d15","length":50,"value":"nd_resumerecording: ps_startRecording fails (%d)\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022d47","length":14,"value":"malloc failed","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022d55","length":20,"value":"vm_allocate failed\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022d69","length":22,"value":"as_newRead: no memory","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022d7f","length":54,"value":"as_new_message: incorrect id for continuation message","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022db5","length":31,"value":"as_read: size mismatch on read","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022dd4","length":43,"value":"as_read: size mismatch on out-of-band read","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022dff","length":37,"value":"nd ps driver: can't build CIE table\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022e24","length":9,"value":"Detached","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022e2d","length":12,"value":"Deallocated","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022e39","length":10,"value":"Unloading","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022e43","length":7,"value":"Loaded","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022e4a","length":8,"value":"Loading","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022e52","length":10,"value":"Allocated","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022e5c","length":11,"value":"Allocating","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022e6e","length":54,"value":"NeXTdimension: Couldn't find kern_loader's port (%s)\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022ea4","length":46,"value":"NeXTdimension: get_server_state() fails (%s)\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022ed2","length":68,"value":"/usr/lib/NextStep/Displays/NeXTdimension.psdrvr/ND_MachDriver_reloc","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022f16","length":52,"value":"NeXTdimension: kern_loader_add_server() fails (%s)\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022f4a","length":53,"value":"NeXTdimension: kern_loader_load_server() fails (%s)\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022f7f","length":53,"value":"NeXTdimension: Mach driver spontaneously unloading!\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022fb4","length":49,"value":"NeXTdimension: Mach driver has become a zombie!\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8022fe7","length":22,"value":"/etc/kern_loader.conf","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8023009","length":12,"value":"parent_port","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8023015","length":19,"value":"ND_Port_check_in()","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8023028","length":14,"value":"%s : %s (%d)\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8023036","length":16,"value":"server detached","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8023046","length":29,"value":"server won't unload properly","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8023063","length":32,"value":"server deleted during operation","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8023083","length":29,"value":"can't allocate server memory","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80230a0","length":22,"value":"relocatable malformed","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80230b6","length":30,"value":"can't open server relocatable","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80230d4","length":18,"value":"server won't load","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80230e6","length":22,"value":"server won't relocate","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80230fc","length":24,"value":"port already advertised","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8023114","length":22,"value":"server already exists","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf802312a","length":19,"value":"need a server name","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf802313d","length":16,"value":"server unloaded","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf802314d","length":14,"value":"server loaded","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf802315b","length":15,"value":"unknown server","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf802316a","length":20,"value":"permission required","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf802317e","length":14,"value":"server_loader","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80268fa","length":22,"value":"FOfoFOF>F>ENENENENEN","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8037cb8","length":304,"value":"FirstResponder = {\n    ACTIONS = {\n    };\n    SUPERCLASS = Object;\n};\nCInspector = {\n    ACTIONS = {\n\tdeactivate:;\n\tedit:;\n\tplay:;\n\tactivate:;\n    };\n    OUTLETS = {\n\ttool;\n\tlinesField;\n\twindow;\n\tscrollText;\n\tfullPathField;\n    };\n    SUPERCLASS = Object;\n};\nWMPathField = {\n    SUPERCLASS = View;\n};\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80384cf","length":13,"value":"IBObjectData","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80384df","length":7,"value":"Object","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80384ef","length":13,"value":"CustomObject","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8038520","length":11,"value":"\tResponder","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8038609","length":12,"value":"ciifffcfffs","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80386d8","length":9,"value":"NXCursor","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803870f","length":9,"value":"Scroller","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803871b","length":8,"value":"Control","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8038787","length":11,"value":"\tTextField","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8038940","length":18,"value":"IBOutletConnector","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8038955","length":12,"value":"IBConnector","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8038cd8","length":16,"value":"data.classes","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8038cf0","length":12,"value":"data.nib","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80394b8","length":464,"value":"Pref = {\n    OUTLETS = {\n\twindow;\n\tcontentView;\n    };\n    SUPERCLASS = Object;\n};\nFirstResponder = {\n    ACTIONS = {\n    };\n    SUPERCLASS = Object;\n};\nColumnSizer = {\n    OUTLETS = {\n\tdelegate;\n\trefView;\n    };\n    SUPERCLASS = View;\n};\nDiskPref = {\n    ACTIONS = {\n\trevert:;\n\tok:;\n    };\n    OUTLETS = {\n\tremovableMatrix;\n\tfixedMatrix;\n\tdockMatrix;\n    };\n    SUPERCLASS = Pref;\n};\nTitleSizer = {\n    OUTLETS = {\n\tdelegate;\n    };\n    SUPERCLASS = View;\n};\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8039ccf","length":13,"value":"IBObjectData","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8039cdf","length":7,"value":"Object","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8039cef","length":13,"value":"CustomObject","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8039de4","length":8,"value":"Control","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8039df6","length":11,"value":"\tResponder","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803a27a","length":18,"value":"IBOutletConnector","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803a28f","length":12,"value":"IBConnector","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803a2da","length":19,"value":"IBControlConnector","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803a4d8","length":16,"value":"data.classes","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803a4f0","length":12,"value":"data.nib","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803acb8","length":476,"value":"BrowserPref = {\n    ACTIONS = {\n\tdefault:;\n\trevert:;\n\tok:;\n    };\n    OUTLETS = {\n\tdefaultButton;\n\tcolumnSizer;\n\trevertButton;\n    };\n    SUPERCLASS = Pref;\n};\nFirstResponder = {\n    ACTIONS = {\n    };\n    SUPERCLASS = Object;\n};\nColumnSizer = {\n    OUTLETS = {\n\tdelegate;\n\trefView;\n    };\n    SUPERCLASS = View;\n};\nTitleSizer = {\n    OUTLETS = {\n\tdelegate;\n    };\n    SUPERCLASS = View;\n};\nPref = {\n    OUTLETS = {\n\twindow;\n\tcontentView;\n    };\n    SUPERCLASS = Object;\n};\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803b4cf","length":13,"value":"IBObjectData","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803b4df","length":7,"value":"Object","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803b4ef","length":13,"value":"CustomObject","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803b519","length":12,"value":"\nCustomView","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803b52f","length":11,"value":"\tResponder","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803b595","length":8,"value":"Control","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803b7c5","length":9,"value":"Scroller","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803b955","length":18,"value":"IBOutletConnector","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803b96a","length":12,"value":"IBConnector","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803b9c8","length":19,"value":"IBControlConnector","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803df7a","length":10,"value":"__environ","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803df84","length":20,"value":"__mh_execute_header","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803df98","length":23,"value":"__cthread_init_routine","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803dfaf","length":9,"value":"__ctype_","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803dfb8","length":9,"value":"__filbuf","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803dfc7","length":20,"value":"__mach_init_routine","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803dfe1","length":8,"value":"_calloc","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803dff6","length":8,"value":"_fclose","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803e00c","length":9,"value":"_fprintf","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803e015","length":7,"value":"_index","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803e01c","length":8,"value":"_printf","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803e02a","length":10,"value":"_signal","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf803fcdb","length":13,"value":"8__PAGEZERO","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf803fd14","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf803fd44","length":8,"value":"__text","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf803fd54","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf803fd88","length":16,"value":"__fvmlib_init0","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf803fd98","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf803fdcc","length":16,"value":"__fvmlib_init1","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf803fddc","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf803fe10","length":24,"value":"__picsymbol_stub__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf803fe53","length":13,"value":"<__cstring","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf803fe64","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf803fe98","length":8,"value":"__const","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf803fea8","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf803fee4","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf803ff14","length":8,"value":"__data","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf803ff24","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf803ff58","length":16,"value":"__la_symbol_ptr","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf803ff68","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf803ff9c","length":16,"value":"__nl_symbol_ptr","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf803ffac","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf803fff0","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8040034","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8040068","length":12,"value":"__common","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8040078","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80400b3","length":13,"value":"8__LINKEDIT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80400f0","length":16,"value":"/usr/lib/dyld","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8040118","length":60,"value":"/NextLibrary/Frameworks/System.framework/Versions/A/System","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8040167","length":61,"value":"P/NextLibrary/Frameworks/System.framework/Versions/A/System","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804bb80","length":80,"value":"The kernel support for the dynamic linker is not present to run this program.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804bbd8","length":48,"value":"__dyld_make_delayed_module_initializer_calls","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804bc08","length":88,"value":"@(#)PROGRAM:tbl  PROJECT:usrbin-76  DEVELOPER:root  BUILT:Thu Mar 27 22:14:08 PST 1997\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804bd20","length":8,"value":"Input","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804bd38","length":64,"value":"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWYXZ0123456789","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804bda8","length":16,"value":"/usr/lib/tmac.s","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804bdc0","length":16,"value":"/usr/lib/tmac.m","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804bde0","length":12,"value":".ds f. %s\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804bdf0","length":16,"value":"Can't open file","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804bee8","length":8,"value":"DELIM","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804bef0","length":8,"value":"delim","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804bef8","length":12,"value":"LINESIZE","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804bf08","length":12,"value":"linesize","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804bf28","length":12,"value":"DOUBLEFRAME","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804bf38","length":12,"value":"doubleframe","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804bf48","length":8,"value":"FRAME","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804bf50","length":8,"value":"frame","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804bf58","length":12,"value":"DOUBLEBOX","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804bf68","length":12,"value":"doublebox","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804bf98","length":8,"value":"CENTER","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804bfa0","length":8,"value":"center","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804bfa8","length":8,"value":"EXPAND","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804bfb0","length":8,"value":"expand","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804bfb8","length":16,"value":".nr %d \\n(.s\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804bfc8","length":28,"value":"Misspelled global option","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804bfe8","length":12,"value":".nr %d %s\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804bff8","length":16,"value":"Illegal option","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c038","length":36,"value":"bad table specification character","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c060","length":32,"value":"too many lines in specification","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c080","length":20,"value":"no specification","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c098","length":40,"value":"dot not last character on format line","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c0c0","length":40,"value":"tried to widen table in T&, not allowed","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c0e8","length":32,"value":"first column can not be S-type","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c108","length":52,"value":".tm warning: can't span a-type cols, changed to l\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c140","length":52,"value":".tm warning: can't span n-type cols, changed to c\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c178","length":40,"value":"first row can not contain vertical span","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c1a0","length":28,"value":"too many columns in table","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c1c0","length":24,"value":"Nonterminated font name","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c1d8","length":24,"value":"point size too large","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c1f0","length":24,"value":"point size unreasonable","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c208","length":36,"value":"vertical spacing value too large","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c230","length":24,"value":"column width too long","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c248","length":32,"value":"EOF reading table specification","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c2c0","length":44,"value":"Vertical spanning in first row not allowed","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c318","length":12,"value":".nr %d 0\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c338","length":20,"value":".nr %d 0\n.nr %d 0\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c350","length":32,"value":".if \\n(%c->\\n(%d .nr %d \\n(%c-\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c370","length":20,"value":".nr %d 0\n.nr %d 0\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c398","length":32,"value":".if \\n(%d<\\n(%d .nr %d \\n(%d\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c3b8","length":20,"value":".nr %d \\w%c%s%c\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c3d0","length":32,"value":".if \\n(%d<\\n(%d .nr %d \\n(%d\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c400","length":32,"value":".if \\n(%d<\\n(%d .nr %d \\n(%d\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c420","length":36,"value":".if \\n(%d>=\\n(%d .nr %d \\n(%du+2n\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c448","length":16,"value":".nr %d \\n(%d\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c458","length":20,"value":".nr %d \\n(%d+\\n(%d\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c470","length":32,"value":".if \\n(%d>\\n(%d .nr %d \\n(%d\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c490","length":44,"value":".if \\n(%d<\\n(%d .nr %d +(\\n(%d-\\n(%d)/2\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c4c0","length":12,"value":".nr %d %sn\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c4d0","length":32,"value":".if \\n(%d<\\n(%d .nr %d \\n(%d\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c510","length":32,"value":".if \\n(%d>0 .nr %d \\n(%d/%d\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c530","length":24,"value":".if \\n(%d<0 .nr %d 0\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c548","length":20,"value":".nr %d +\\n(%d/2\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c560","length":16,"value":".nr %d +\\n(%d\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c570","length":12,"value":".nr %d 0\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c580","length":32,"value":".if \\n(%d>\\n(%d .nr %d \\n(%d\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c5a0","length":36,"value":".nr %d (100*\\n(%d/\\n(%d)*\\n(%d/100\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c5c8","length":16,"value":".nr %d \\n(%d\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c5d8","length":12,"value":".nr %d 0","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c5f8","length":20,"value":".nr %d \\n(.l-\\n(%d\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c610","length":20,"value":".nr %d \\n(%d/%d\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c628","length":24,"value":".if \\n(%d<0 .nr %d 0\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c650","length":12,"value":".nr %d 0\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c660","length":28,"value":".nr %d \\n(%d+(%d*\\n(%d)\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c680","length":16,"value":".nr %d +\\n(%d\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c690","length":16,"value":".nr %d +\\n(%d\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c6a0","length":24,"value":".nr %d (\\n(%d+\\n(%d)/2\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c6b8","length":16,"value":".nr TW \\n(%d\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c6e0","length":80,"value":".if t .if \\n(TW>\\n(.li .tm Table at line %d file %s is too wide - \\n(TW units\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c7a8","length":12,"value":".fc %c %c\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c870","length":36,"value":".if \\(ts\\n(.z\\(ts\\(ts .ds #d nl\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804c8d8","length":32,"value":".if \\n(T. .vs \\n(.vu-\\n(.sp\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804cb50","length":44,"value":"%s: line %d: Data ignored on table line %d\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804cd28","length":28,"value":".if \\n(%d>0 .sp \\n(%du/2u\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804cd70","length":32,"value":".if \\n(%d>\\n(%d .nr %d \\n(%d\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804cdf0","length":28,"value":"Wierd.  No data in table.","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804ce10","length":32,"value":"Wierd.  No real lines in table.","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804ce70","length":32,"value":"Too many characters in table","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804ce90","length":24,"value":"no space for characters","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804ceb0","length":24,"value":"no space for vectors","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804cef5","length":67,"value":"!%&#/?,:;<=>@`^~_{}+-*ABCDEFGHIJKMNOPQRSTUVWXYZabcdefgjkoqrstwxyz","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804cf3d","length":67,"value":":_~^`@;,<=>#%&!/?{}+-*ABCDEFGHIJKMNOPQRSTUVWXZabcdefgjkoqrstuwxyz","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804cf80","length":48,"value":"couldn't find characters to use for delimiters","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804cfc8","length":20,"value":"\n%s: line %d: %s\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804cfe0","length":12,"value":"tbl quits\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804cff0","length":16,"value":"too much backup","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804d000","length":16,"value":"unexpected EOF","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804d030","length":8,"value":".de %d\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804d118","length":36,"value":".if \\(ts\\n(.z\\(ts\\(ts .ds #d nl\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804d1b0","length":32,"value":"Too many text block diversions","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804d1d0","length":16,"value":".nr %d \\n(.lu\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804d210","length":24,"value":".nr %d \\n(.f\n.ft %s\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804d250","length":8,"value":".ps %s\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804d260","length":40,"value":".if \\n(%du>\\n(.vu .sp \\n(%du-\\n(.vu\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804d2b0","length":28,"value":".if \\n(.l<\\n(%d .ll \\n(%du\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804d2f8","length":12,"value":".ft \\n(%d\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804d410","length":32,"value":".nr %d \\n(.v\n.vs \\n(.vu-\\n(.sp\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804dfb6","length":10,"value":"__environ","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804dfc0","length":20,"value":"__mh_execute_header","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804dfd4","length":23,"value":"__cthread_init_routine","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804dfeb","length":9,"value":"__ctype_","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804dff4","length":9,"value":"__filbuf","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804e003","length":20,"value":"__mach_init_routine","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804e01d","length":8,"value":"_calloc","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804e032","length":8,"value":"_fclose","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804e048","length":9,"value":"_fprintf","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804e051","length":7,"value":"_index","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804e058","length":8,"value":"_printf","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804e066","length":8,"value":"_signal","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf804e076","length":10,"value":"_strlen","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80514d7","length":17,"value":"\rEnglish.lproj","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80514f0","length":16,"value":"NT.component","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8051508","length":20,"value":"Info-nextstep.plist","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8051524","length":16,"value":"French.lproj","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf805153c","length":16,"value":"German.lproj","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8051553","length":17,"value":"\rItalian.lproj","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf805156b","length":17,"value":"\rSpanish.lproj","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8051583","length":17,"value":"\rSwedish.lproj","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8051cb8","length":15356,"value":"StartFontMetrics 2.0\nComment Copyright (c) 1989, 1990, 1991, Adobe Systems Incorporated. All rights reserved.\nComment Creation Date: Tue Sep 17 14:02:41 1991\nComment UniqueID 36384\nComment VMusage 31992 40360\nFontName Courier-Bold\nFullName Courier Bold\nFamilyName Courier\nWeight Bold\nItalicAngle 0\nIsFixedPitch true\nFontBBox -113 -250 749 801\nUnderlinePosition -100\nUnderlineThickness 50\nVersion 002.004\nNotice Copyright (c) 1989, 1990, 1991, Adobe Systems Incorporated. All rights reserved.\nEncodingScheme Adobe...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8055cec","length":16,"value":"Courier-Bold","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8055cfc","length":24,"value":"ISOLatin1CharacterSet","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8057cd8","length":16,"value":"RecyclerUI.nib","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80584d8","length":16,"value":"data.classes","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80584f0","length":12,"value":"data.nib","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8058504","length":20,"value":"lock_closed.tiff","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8058520","length":16,"value":"lock_open.tiff","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8058cb8","length":240,"value":"FirstResponder = {\n    ACTIONS = {\n    };\n    SUPERCLASS = Object;\n};\nEncryptPanel = {\n    ACTIONS = {\n\tcancel:;\n\tok:;\n    };\n    OUTLETS = {\n\tentryField;\n\tokButton;\n\twindow;\n\tdisplayField;\n\tlockButton;\n    };\n    SUPERCLASS = Object;\n};\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80594cf","length":13,"value":"IBObjectData","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80594df","length":7,"value":"Object","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80594ef","length":13,"value":"CustomObject","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf805951b","length":7,"value":"Button","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8059525","length":8,"value":"Control","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8059537","length":11,"value":"\tResponder","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8059682","length":11,"value":"\tTextField","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8059973","length":18,"value":"IBOutletConnector","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8059988","length":12,"value":"IBConnector","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80599d6","length":19,"value":"IBControlConnector","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8059a3e","length":16,"value":"IBHelpConnector","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf805ccd8","length":8,"value":"README","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf805ccf8","length":8,"value":"endnote","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf805cd78","length":8,"value":"swapacc","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf805d4b8","length":2000,"value":"This directory, /usr/lib/ms, contains various macro files used\nby the -ms package, along with various scripts that are useful\nfor text formatting.  These scripts are not supported commands--\nthey are examples that may assist you with document preparation.\nThese scripts are described below:\n\nendnote\n-------\nThis program takes -ms footnotes (text placed between .FS and .FE\nmacros) and moves them to the end of your output.  It should be\nused with numbered footnotes, which are entered like this:\n\n\tthis is best ...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf805fcc8","length":24,"value":"@(#) nucinit.c 1.3@(#)","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8069a25","length":29,"value":"You are not attached to %s.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8069a42","length":7,"value":"Sorry\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8069a49","length":29,"value":"Cannot find file server %s.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8069a66","length":22,"value":"Usage: %s serverName\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8069a7e","length":6,"value":"FALSE","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8069a84","length":100,"value":"/Net/seaport/release/.sources/Sources2/netware_proj/netware-30.14/nuc/src/utils/libnwapi/src/conn.c","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8069ae8","length":30,"value":"%s:%u: failed assertion `%s'\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8069b06","length":36,"value":" NWMPGetTaskInfo NOT IMPLEMENTED! \n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8069b2a","length":47,"value":" NWMPSetTaskDiagnosticLevel NOT IMPLEMENTED! \n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8069b59","length":43,"value":" NWMPGetTaskDiagnostics NOT IMPLEMENTED! \n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8069b84","length":28,"value":"NWMPScanTasks; ccode = %x \n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8069bae","length":42,"value":"NWMPLib: RAW ioctl failed with errno=%d \n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8069bd8","length":57,"value":"NWMPLib: Register raw failed with ccode=%d and errno=%d\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8069c11","length":64,"value":"NWMPLib: Set Primary Service failed with ccode=%d and errno=%d\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8069c51","length":99,"value":"/Net/seaport/release/.sources/Sources2/netware_proj/netware-30.14/nuc/src/utils/libnwapi/src/ncp.c","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8069cb8","length":9128,"value":"StartFontMetrics 2.0\nComment Copyright 1988 NeXT, Inc.\nComment Created by ScreenAfm from printer afm file\nFontName Screen-Courier-Bold\nEncodingScheme AdobeStandardEncoding\nFullName Screen-Courier-Bold.14\nFamilyName Courier\nWeight Bold\nItalicAngle 0.0\nIsFixedPitch true\nIsScreenFont true\nScreenFontSize 14\nUnderlinePosition -1\nUnderlineThickness 0\nVersion 002.004\nFontBBox -1 -3 11 14\nCapHeight 7\nXHeight 6\nDescender -1\nAscender 8\nStartCharMetrics 228\nC 32 ; WX 9 ; N space ; B 0 0 0 0 ;\nC 33 ; WX 9 ; N exclam ; ...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf806c4b8","length":8,"value":"rumlaut","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c4c0","length":7,"value":"hyphen","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c4c9","length":7,"value":"iacute","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c4d0","length":12,"value":"icircumflex","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c4dc","length":10,"value":"idieresis","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c4e6","length":7,"value":"igrave","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c4f8","length":11,"value":"logicalnot","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c503","length":7,"value":"lslash","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c50c","length":7,"value":"macron","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c513","length":6,"value":"minus","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c51c","length":9,"value":"multiply","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c52c","length":7,"value":"ntilde","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c533","length":11,"value":"numbersign","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c540","length":7,"value":"oacute","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c547","length":12,"value":"ocircumflex","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c553","length":10,"value":"odieresis","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c567","length":7,"value":"ograve","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c572","length":8,"value":"onehalf","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c57a","length":11,"value":"onequarter","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c585","length":12,"value":"onesuperior","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c591","length":12,"value":"ordfeminine","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c59d","length":13,"value":"ordmasculine","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c5aa","length":7,"value":"oslash","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c5b1","length":7,"value":"otilde","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c5ba","length":10,"value":"paragraph","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c5c4","length":10,"value":"parenleft","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c5ce","length":11,"value":"parenright","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c5d9","length":8,"value":"percent","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c5e1","length":7,"value":"period","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c5e8","length":15,"value":"periodcentered","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c5f7","length":12,"value":"perthousand","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c608","length":10,"value":"plusminus","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c614","length":9,"value":"question","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c61d","length":13,"value":"questiondown","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c62a","length":9,"value":"quotedbl","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c633","length":13,"value":"quotedblbase","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c640","length":13,"value":"quotedblleft","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c64d","length":14,"value":"quotedblright","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c65b","length":10,"value":"quoteleft","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c665","length":11,"value":"quoteright","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c670","length":15,"value":"quotesinglbase","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c67f","length":12,"value":"quotesingle","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c68d","length":11,"value":"registered","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c69f","length":7,"value":"scaron","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c6a6","length":8,"value":"section","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c6ae","length":10,"value":"semicolon","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c6b8","length":6,"value":"seven","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c6c2","length":6,"value":"slash","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c6c8","length":6,"value":"space","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c6ce","length":9,"value":"sterling","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c6d9","length":6,"value":"thorn","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c6df","length":6,"value":"three","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c6e5","length":14,"value":"threequarters","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c6f3","length":14,"value":"threesuperior","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c701","length":6,"value":"tilde","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c707","length":10,"value":"trademark","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c715","length":12,"value":"twosuperior","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c723","length":7,"value":"uacute","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c72a","length":12,"value":"ucircumflex","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c736","length":10,"value":"udieresis","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c740","length":7,"value":"ugrave","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c747","length":11,"value":"underscore","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c75a","length":7,"value":"yacute","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c761","length":10,"value":"ydieresis","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806c771","length":7,"value":"zcaron","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806ccb8","length":888,"value":"WX 7 ; N Thorn ; B 0 0 7 8 ;\nC -1 ; WX 7 ; N Yacute ; B 0 0 8 10 ;\nC -1 ; WX 7 ; N brokenbar ; B 3 -2 2 10 ;\nC -1 ; WX 7 ; N degree ; B 2 4 4 4 ;\nC -1 ; WX 7 ; N divide ; B 1 1 6 5 ;\nC -1 ; WX 7 ; N eth ; B 1 0 6 9 ;\nC -1 ; WX 7 ; N mu ; B 0 -3 8 9 ;\nC -1 ; WX 7 ; N multiply ; B 1 1 6 5 ;\nC -1 ; WX 7 ; N onehalf ; B 0 0 8 8 ;\nC -1 ; WX 7 ; N onequarter ; B 0 0 8 8 ;\nC -1 ; WX 7 ; N onesuperior ; B 2 3 4 5 ;\nC -1 ; WX 7 ; N plusminus ; B 1 1 6 5 ;\nC -1 ; WX 7 ; N thorn ; B 0 -3 7 11 ;\nC -1 ; WX 7 ; N threequ...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf806d4b8","length":912,"value":"1 0 6 6 ;\nC -1 ; WX 6 ; N Thorn ; B -1 0 6 6 ;\nC -1 ; WX 6 ; N Yacute ; B -1 0 7 9 ;\nC -1 ; WX 6 ; N brokenbar ; B 1 -2 2 9 ;\nC -1 ; WX 6 ; N degree ; B 0 4 4 3 ;\nC -1 ; WX 6 ; N divide ; B 0 1 5 5 ;\nC -1 ; WX 6 ; N eth ; B 0 0 5 8 ;\nC -1 ; WX 6 ; N mu ; B -1 -2 7 7 ;\nC -1 ; WX 6 ; N multiply ; B 0 1 5 5 ;\nC -1 ; WX 6 ; N onehalf ; B -1 0 7 7 ;\nC -1 ; WX 6 ; N onequarter ; B -1 0 7 7 ;\nC -1 ; WX 6 ; N onesuperior ; B 1 3 3 4 ;\nC -1 ; WX 6 ; N plusminus ; B 0 1 5 5 ;\nC -1 ; WX 6 ; N thorn ; B -1 -2 6 9 ;\nC -...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf806dcec","length":16,"value":"Courier-Bold","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf806dcfc","length":24,"value":"ISOLatin1CharacterSet","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf807394d","length":7,"value":"Aacute","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073954","length":12,"value":"Acircumflex","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073960","length":10,"value":"Adieresis","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf807396a","length":7,"value":"Agrave","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073971","length":6,"value":"Aring","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073977","length":7,"value":"Atilde","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073982","length":9,"value":"Ccedilla","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf807398f","length":7,"value":"Eacute","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073996","length":12,"value":"Ecircumflex","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80739a2","length":10,"value":"Edieresis","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80739ac","length":7,"value":"Egrave","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80739bf","length":7,"value":"Iacute","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80739c6","length":12,"value":"Icircumflex","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80739d2","length":10,"value":"Idieresis","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80739dc","length":7,"value":"Igrave","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80739e9","length":7,"value":"Lslash","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80739f4","length":7,"value":"Ntilde","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073a00","length":7,"value":"Oacute","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073a07","length":12,"value":"Ocircumflex","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073a13","length":10,"value":"Odieresis","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073a1d","length":7,"value":"Ograve","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073a24","length":7,"value":"Oslash","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073a2b","length":7,"value":"Otilde","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073a3a","length":7,"value":"Scaron","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073a43","length":6,"value":"Thorn","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073a4b","length":7,"value":"Uacute","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073a52","length":12,"value":"Ucircumflex","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073a5e","length":10,"value":"Udieresis","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073a68","length":7,"value":"Ugrave","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073a77","length":7,"value":"Yacute","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073a7e","length":10,"value":"Ydieresis","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073a8a","length":7,"value":"Zcaron","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073a93","length":7,"value":"aacute","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073a9a","length":12,"value":"acircumflex","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073aa6","length":6,"value":"acute","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073aac","length":10,"value":"adieresis","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073ab9","length":7,"value":"agrave","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073ac0","length":10,"value":"ampersand","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073aca","length":6,"value":"aring","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073ad0","length":12,"value":"asciicircum","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073adc","length":11,"value":"asciitilde","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073ae7","length":9,"value":"asterisk","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073af3","length":7,"value":"atilde","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073afc","length":10,"value":"backslash","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073b0a","length":10,"value":"braceleft","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073b14","length":11,"value":"braceright","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073b1f","length":12,"value":"bracketleft","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073b2b","length":13,"value":"bracketright","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073b38","length":6,"value":"breve","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073b3e","length":10,"value":"brokenbar","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073b48","length":7,"value":"bullet","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073b51","length":6,"value":"caron","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073b57","length":9,"value":"ccedilla","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073b60","length":8,"value":"cedilla","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073b6d","length":11,"value":"circumflex","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073b78","length":6,"value":"colon","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073b7e","length":6,"value":"comma","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073b84","length":10,"value":"copyright","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073b8e","length":9,"value":"currency","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073b99","length":7,"value":"dagger","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073ba0","length":10,"value":"daggerdbl","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073baa","length":7,"value":"degree","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073bb1","length":9,"value":"dieresis","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073bba","length":7,"value":"divide","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073bc1","length":7,"value":"dollar","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073bc8","length":10,"value":"dotaccent","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073bd2","length":9,"value":"dotlessi","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073bdd","length":7,"value":"eacute","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073be4","length":12,"value":"ecircumflex","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073bf0","length":10,"value":"edieresis","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073bfa","length":7,"value":"egrave","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8073c01","length":6,"value":"eight","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8073c07","length":9,"value":"ellipsis","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8073c17","length":7,"value":"endash","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8073c1e","length":6,"value":"equal","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8073c28","length":7,"value":"exclam","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8073c2f","length":11,"value":"exclamdown","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8073c47","length":7,"value":"florin","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8073c53","length":9,"value":"fraction","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8073c5e","length":11,"value":"germandbls","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8073c69","length":6,"value":"grave","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8073c6f","length":8,"value":"greater","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8073c77","length":14,"value":"guillemotleft","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8073c85","length":15,"value":"guillemotright","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8073c94","length":14,"value":"guilsinglleft","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8073ca2","length":15,"value":"guilsinglright","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8073cb3","length":16392,"value":"hungaStartFontMetrics 2.0\nComment Copyright 1988 NeXT, Inc.\nComment Created by ScreenAfm from printer afm file\nFontName Screen-Courier-Bold\nEncodingScheme AdobeStandardEncoding\nFullName Screen-Courier-Bold.12\nFamilyName Courier\nWeight Bold\nItalicAngle 0.0\nIsFixedPitch true\nIsScreenFont true\nScreenFontSize 12\nUnderlinePosition -1\nUnderlineThickness 0\nVersion 002.004\nFontBBox 0 -3 8 13\nCapHeight 6\nXHeight 5\nDescender -1\nAscender 7\nStartCharMetrics 228\nC 32 ; WX 7 ; N space ; B 0 0 0 0 ;\nC 33 ; WX 7 ; N exclam...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8079cb8","length":368,"value":"BEGIN {\n\tprint \".bp\"\t\t>  \"endnotes\"\n\tprint \".nr # 0 1\"\t>> \"endnotes\"\n\tprint \".ds # \\\\\\\\n+#.\"\t>> \"endnotes\"\n\tprint \".TL\"\t\t>> \"endnotes\"\n\tprint \"ENDNOTES\"\t>> \"endnotes\"\n\tprint \".sp\"\t\t>> \"endnotes\"\n\t}\n{\n\tif ($1 == \".FS\") {\n\t\tinNote = 1\n\t\tprint \".IP \\\\*#\" >> \"endnotes\"\n\t}\n\telse if ($1 == \".FE\")\n\t\tinNote = 0;\n\n\telse if (inNote)\n\t\tprint $0 >> \"endnotes\"\n\telse\n\t\tprint\n}\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf807a4b8","length":356,"value":": endnote - move footnotes to separate file\n\nif test $# -eq 0\nthen\n\techo \"Usage: endnote textfile ...\n\tmoves all footnotes to separate file of endnotes\n\tsends text, then endnotes, to standard output\"\n\texit\nfi\nif test -f endnotes\nthen\n\techo \"endnotes exist - mv or rm before proceeding\"\n\texit\nfi\n\nawk -f /usr/lib/ms/end.awk $*\ncat endnotes\nrm -f endnotes\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf807bf2e","length":10,"value":"__environ","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf807bf38","length":20,"value":"__mh_execute_header","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf807bf5c","length":23,"value":"__cthread_init_routine","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf807bf73","length":9,"value":"__filbuf","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf807bf8b","length":20,"value":"__mach_init_routine","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf807bf9f","length":7,"value":"_close","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf807bfbf","length":8,"value":"_fflush","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf807bfc7","length":6,"value":"_fork","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf807bfcd","length":9,"value":"_fprintf","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf807bfdd","length":9,"value":"_freopen","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf807bfe6","length":6,"value":"_read","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf807bfec","length":8,"value":"_signal","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80859e1","length":26,"value":"You cannot attach to %s.\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80859fb","length":11,"value":"Password: ","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8085a08","length":7,"value":"Sorry\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8085a0f","length":50,"value":"Sorry, you are already logged in to this server.\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8085a41","length":29,"value":"Cannot find file server %s.\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8085a5e","length":31,"value":"Usage: %s serverName/userName\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8085a7f","length":6,"value":"FALSE","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8085a85","length":100,"value":"/Net/seaport/release/.sources/Sources2/netware_proj/netware-30.14/nuc/src/utils/libnwapi/src/conn.c","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8085ae9","length":30,"value":"%s:%u: failed assertion `%s'\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8085b07","length":36,"value":" NWMPGetTaskInfo NOT IMPLEMENTED! \n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8085b2b","length":47,"value":" NWMPSetTaskDiagnosticLevel NOT IMPLEMENTED! \n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8085b5a","length":43,"value":" NWMPGetTaskDiagnostics NOT IMPLEMENTED! \n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8085b85","length":28,"value":"NWMPScanTasks; ccode = %x \n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8085baf","length":42,"value":"NWMPLib: RAW ioctl failed with errno=%d \n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8085bd9","length":57,"value":"NWMPLib: Register raw failed with ccode=%d and errno=%d\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8085c12","length":64,"value":"NWMPLib: Set Primary Service failed with ccode=%d and errno=%d\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf808600c","length":52,"value":"@(#)tserver.c\t1.3 92/01/1014:52:05 92/01/1014:53:00","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8086040","length":53,"value":"@(#)tserverm.c\t1.3 92/01/1014:52:07 92/01/1014:53:00","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80860da","length":52,"value":"@(#)bindery.c\t1.2 91/09/0310:23:29 92/01/1014:52:48","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf808610e","length":55,"value":"@(#)nwAuthList.c\t1.3 92/01/1014:53:56 92/01/1014:55:20","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8087cdc","length":12,"value":"__PAGEZERO","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8087d14","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8087d44","length":8,"value":"__text","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8087d54","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8087d88","length":16,"value":"__fvmlib_init0","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8087d98","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8087dcc","length":16,"value":"__fvmlib_init1","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8087ddc","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8087e10","length":12,"value":"__cstring","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8087e20","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8087e5c","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8087e8c","length":8,"value":"__data","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8087e9c","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8087ee0","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8087f14","length":12,"value":"__common","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8087f24","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8087f60","length":12,"value":"__LINKEDIT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8087fa4","length":28,"value":"/usr/shlib/libsys_s.B.shlib","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80919e1","length":26,"value":"You cannot attach to %s.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80919fb","length":11,"value":"Password: ","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8091a08","length":7,"value":"Sorry\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8091a0f","length":50,"value":"Sorry, you are already logged in to this server.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8091a41","length":29,"value":"Cannot find file server %s.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8091a5e","length":31,"value":"Usage: %s serverName/userName\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8091a7f","length":6,"value":"FALSE","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8091a85","length":100,"value":"/Net/seaport/release/.sources/Sources2/netware_proj/netware-30.14/nuc/src/utils/libnwapi/src/conn.c","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8091ae9","length":30,"value":"%s:%u: failed assertion `%s'\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8091b07","length":36,"value":" NWMPGetTaskInfo NOT IMPLEMENTED! \n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8091b2b","length":47,"value":" NWMPSetTaskDiagnosticLevel NOT IMPLEMENTED! \n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8091b5a","length":43,"value":" NWMPGetTaskDiagnostics NOT IMPLEMENTED! \n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8091b85","length":28,"value":"NWMPScanTasks; ccode = %x \n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8091baf","length":42,"value":"NWMPLib: RAW ioctl failed with errno=%d \n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8091bd9","length":57,"value":"NWMPLib: Register raw failed with ccode=%d and errno=%d\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8091c12","length":64,"value":"NWMPLib: Set Primary Service failed with ccode=%d and errno=%d\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8091c52","length":99,"value":"/Net/seaport/release/.sources/Sources2/netware_proj/netware-30.14/nuc/src/utils/libnwapi/src/ncp.c","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809839d","length":1143,"value":" .sp\n.hy 14\n.ul 0\n.ce 0\n.fi\n.ft 1\n.nr OJ \\\\n(.i\n.in +\\\\n(.lu/12u\n.ll -\\\\n(.lu/12u\n.br\n.ps \\\\n(PS\n.if \\\\n(VS>=40 .vs \\\\n(VSu\n.if \\\\n(VS<=39 .vs \\\\n(VSp\n.ti +\\\\n(PIu\n.if \\\\n(TM .ls 1\n..\n.\t\\\" AE - abstract end\n.de AE\n.br\n.di\n.ll \\\\n(LLu\n.ps \\\\n(PS\n.if \\\\n(VS>=40 .vs \\\\n(VSu\n.if \\\\n(VS<=39 .vs \\\\n(VSp\n.nr 1T 0\n.nr IK 0\n.in \\\\n(OJu\n.nr AJ 0\n.di\n.ce 0\n.if \\\\n(ST>0 .SY\n.if \\\\n(ST<3 .rm SY\n.if \\\\n(TM .ls 2\n..\n.\t\\\" SY - cover sheet of released paper\n.de SY\n.ll \\\\n(LLu\n.if !\\\\n(LT .nr LT \\\\n(LLu\n.ns\n.if \\\\n(TV .TX\n.i...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf8099287","length":21,"value":" .nr PE \\\\n(.d\n..\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf8099795","length":383,"value":" .nr BC 1\n.nr BE 1\n..\n.\t\\\" B2 - end boxed text\n.de B2\n.br\n.nr BI 1n\n.if \\\\n(.$>0 .nr BI \\\\$1n\n.di\n.nr BE 0\n.nr BW \\\\n(dl\n.nr BH \\\\n(dn\n.ne \\\\n(BHu+\\\\n(.Vu\n.nr BQ \\\\n(.u\n.nf\n.nr BW +2*\\\\n(BI\n.if \\\\n(BC>0 .in +(\\\\n(.lu-\\\\n(BWu)/2u\n.in +\\\\n(BIu\n.BB\n.in -\\\\n(BIu\n.sp -1\n\\l'\\\\n(BWu\\(ul'\\L'-\\\\n(BHu'\\l'|0\\(ul'\\h'|0'\\L'\\\\n(BHu'\n.if \\\\n(BC>0 .in -(\\\\n(.lu-\\\\n(BWu)/2u\n.if \\\\n(BQ .fi\n.br\n..\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809a51a","length":246,"value":" \\\\*([O\n.FE\n..\n.de ]<\n.[<\n..\n.de [<\n.SH\nReferences\n.LP\n.de FP\n.IP \\\\\\\\$1.\n\\\\..\n.rm FS FE\n..\n.de [>\n.]>\n..\n.de ]>\n.sp\n..\n.de ]-\n.[-\n..\n.de [-\n.rm [Q [A [T [J [B [E [S [V\n.rm [N [P [I [C [D [O [R [G\n..\n.de ]]\n.\\\" circumvent EOF bug in troff\n..\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809acb8","length":264,"value":".\t\\\" TM - U.C. Berkeley thesis mode\n.ls 2\n.if v .nr PO 1.5i\n.rm CH\n.ds RH \\\\n(PN\n.rm CF\n.P1\n.nr TM 1\n.\t\\\" CT - chapter title \n.de CT\n.rn RH R@\n.if \\\\n(1T .bp\n.RT\n.if \\\\n(1T .sp\n.if !\\\\n(1T .BG\n.RT\n.ft 3\n.if n .ul 100\n.ps \\\\n(PS+2\n.ce 100\n.nr CT 1\n.rn R@ RH\n..\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809b968","length":244,"value":" \\{\\\n.\tnr NS \\\\n(.$-1\n.\tnr H1 \\\\$2\n.\tnr H2 \\\\$3\n.\tnr H3 \\\\$4\n.\tnr H4 \\\\$5\n.\tnr H5 \\\\$6\n.\\}\n.ds SN \\\\n(H1.\n.ti \\\\n(.iu\n.if \\\\n(NS-1 .as SN \\\\n(H2.\n.if \\\\n(NS-2 .as SN \\\\n(H3.\n.if \\\\n(NS-3 .as SN \\\\n(H4.\n.if \\\\n(NS-4 .as SN \\\\n(H5.\n\\\\*(SN\n..\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809db8a","length":79,"value":"The kernel support for the dynamic linker is not present to run this program.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809dbda","length":45,"value":"__dyld_make_delayed_module_initializer_calls","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809dc07","length":89,"value":"@(#)PROGRAM:tip  PROJECT:usrbin-76  DEVELOPER:root  BUILT:Thu Mar 27 22:16:15 PST 1997\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809dccc","length":36,"value":"@(#)acu.c\t5.5 (Berkeley) 12/4/87","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809dcf4","length":16,"value":"call completed","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809dd04","length":15,"value":"\ncall aborted\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809dd13","length":13,"value":"call aborted","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809dd22","length":10,"value":"interrupt","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809dd2c","length":17,"value":"unknown ACU type","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809dd3d","length":15,"value":"call completed","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809dd4c","length":12,"value":"call failed","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809dd5f","length":29,"value":"can't open phone number file","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809dd80","length":25,"value":"unrecognizable host name","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809dd9c","length":21,"value":"missing phone number","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ddb1","length":15,"value":"call completed","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ddc0","length":12,"value":"call failed","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ddcc","length":21,"value":"missing phone number","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809dde2","length":12,"value":"call failed","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ddee","length":21,"value":"missing phone number","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809de03","length":17,"value":"call terminated","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809de14","length":16,"value":"call terminated","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809de25","length":19,"value":"\r\ndisconnecting...","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809de60","length":36,"value":"@(#)cmds.c\t5.4 (Berkeley) 5/5/86","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809dea5","length":7,"value":"minute","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809deac","length":7,"value":"second","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809deb3","length":18,"value":"Local file name? ","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809dec5","length":21,"value":"\r\n%s: cannot creat\r\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809deda","length":33,"value":"List command for remote system? ","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809df03","length":26,"value":"usage: <take> from [to]\r\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809df1d","length":22,"value":"\r\n%s: cannot create\r\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809df4a","length":16,"value":"\r\nwrite error\r\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809df5a","length":16,"value":"\r\nwrite error\r\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809df6e","length":23,"value":" lines transferred in ","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809df85","length":16,"value":"Local command? ","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809df95","length":23,"value":"can't establish pipe\r\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809dfac","length":14,"value":"can't fork!\r\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809dfba","length":33,"value":"List command for remote system? ","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809dfdb","length":15,"value":"can't execl!\r\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809dfea","length":18,"value":"Local file name? ","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809dffe","length":18,"value":"%s: cannot open\r\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e014","length":21,"value":"\r\ntimed out at eol\r\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e029","length":23,"value":" chars transferred in ","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e040","length":23,"value":" lines transferred in ","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e05e","length":25,"value":"usage: <put> from [to]\r\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e079","length":18,"value":"%s: cannot open\r\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e093","length":29,"value":"stty -echo;cat>%s;stty echo\r","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e0b2","length":23,"value":"\r\ntimeout error (%s)\r\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e0c9","length":16,"value":"Local command? ","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e0d9","length":14,"value":"can't fork!\r\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e0e7","length":18,"value":"can't find `%s'\r\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e0f9","length":10,"value":"away for ","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e110","length":17,"value":"\r\ncan't execl!\r\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e123","length":18,"value":"can't create %s\r\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e13b","length":20,"value":"%s: bad directory\r\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e198","length":8,"value":"echo %s","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e1b0","length":15,"value":"\"Echo\" failed\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e1c4","length":16,"value":"\"%s\": No match\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e1d4","length":32,"value":"Buffer overflow expanding \"%s\"\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e23c","length":40,"value":"@(#)cmdtab.c\t5.4 (Berkeley) 12/22/87","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e324","length":11,"value":"send break","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e32f","length":17,"value":"get this summary","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e340","length":13,"value":"set variable","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e34d","length":25,"value":"suspend tip (local only)","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e366","length":27,"value":"suspend tip (local+remote)","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e381","length":14,"value":"exit from tip","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e38f","length":14,"value":"exit from tip","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e39d","length":17,"value":"change directory","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e3ae","length":34,"value":"pipe local command to remote host","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e3d0","length":17,"value":"pipe remote file","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e3e1","length":24,"value":"put file to remote UNIX","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e3f9","length":27,"value":"take file from remote UNIX","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e414","length":25,"value":"send file to remote host","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e42d","length":30,"value":"receive file from remote host","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e44b","length":9,"value":"shell","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e454","length":33,"value":"@(#)cu.c\t5.5 (Berkeley) 10/22/87","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e475","length":57,"value":"usage: cu telno [-t] [-s speed] [-a acu] [-l line] [-#]\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e4ae","length":26,"value":"cu: unsupported speed %s\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e4c8","length":12,"value":"Bad flag %s","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e4d9","length":16,"value":"all ports busy\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e4e9","length":11,"value":"link down\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e4f9","length":19,"value":"Connect failed\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e528","length":36,"value":"@(#)hunt.c\t5.2 (Berkeley) 4/23/87","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e558","length":32,"value":"@(#)log.c\t5.2 (Berkeley) 5/2/87","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e57c","length":11,"value":"tip: flock","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e58c","length":25,"value":"%s (%s) <%s, %s, %s> %s\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e5a7","length":26,"value":"can't open log file %s.\r\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e5c1","length":36,"value":"@(#)partab.c\t5.1 (Berkeley) 4/30/85","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e668","length":36,"value":"@(#)remote.c\t5.3 (Berkeley) 4/30/86","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e740","length":22,"value":"tip: unknown host %s\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e756","length":39,"value":"tip: can't open host description file\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e786","length":25,"value":"%s: missing device spec\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e79f","length":26,"value":"%s: missing phone number\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e7e0","length":11,"value":"tip.record","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e811","length":27,"value":"tip: no host specified\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e874","length":88,"value":"@(#) Copyright (c) 1983 Regents of the University of California.\n All rights reserved.\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e8cc","length":36,"value":"@(#)tip.c\t5.6 (Berkeley) 10/22/87","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e93e","length":40,"value":"usage: tip [-v] [-speed] [system-name]\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e966","length":26,"value":"tip: must be interactive\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e980","length":25,"value":"tip: %s, unknown option\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e999","length":45,"value":"tip: phone number too long (max = %d bytes)\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e9cc","length":16,"value":"all ports busy\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e9dc","length":11,"value":"link down\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e9e7","length":7,"value":"PHONES","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e9ee","length":12,"value":"/etc/phones","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809e9ff","length":23,"value":"tip: bad baud rate %d\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ea21","length":12,"value":"Connected\r\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ea2e","length":12,"value":"connected\r\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ea5f","length":15,"value":"%-2s %c   %s\r\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ea6e","length":14,"value":"Lost carrier.","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ea7c","length":6,"value":"write","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809eab0","length":28,"value":"%s: unknown parity value\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809eb38","length":36,"value":"@(#)tipout.c\t5.1 (Berkeley) 4/30/85","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809eb74","length":36,"value":"@(#)value.c\t5.1 (Berkeley) 4/30/85","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809eba6","length":7,"value":"set %s","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ebad","length":16,"value":"access denied\r\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ebbd","length":14,"value":"out of core\r\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ebd6","length":7,"value":"record","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ebdd","length":23,"value":"%s: unknown variable\r\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ec1b","length":9,"value":"record","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ec28","length":36,"value":"@(#)vars.c\t5.1 (Berkeley) 4/30/85","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ee70","length":7,"value":"parity","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ee7a","length":10,"value":"localecho","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ee88","length":11,"value":"halfduplex","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809eea1","length":9,"value":"etimeout","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809eeaa","length":7,"value":"cdelay","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809eeb1","length":10,"value":"chardelay","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809eebb","length":7,"value":"ldelay","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809eec2","length":10,"value":"linedelay","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809eecf","length":7,"value":"tandem","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809eed9","length":11,"value":"disconnect","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809eee7","length":10,"value":"echocheck","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809eefe","length":6,"value":"SHELL","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ef09","length":8,"value":"verbose","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ef15","length":10,"value":"tabexpand","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ef22","length":7,"value":"script","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ef29","length":7,"value":"remote","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ef34","length":7,"value":"record","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ef3e","length":10,"value":"raisechar","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ef4b","length":6,"value":"raise","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ef54","length":7,"value":"prompt","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ef5b","length":7,"value":"phones","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ef62","length":16,"value":"/usr/adm/aculog","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ef81","length":10,"value":"framesize","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ef8e","length":6,"value":"force","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809ef97","length":11,"value":"exceptions","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809efa5","length":7,"value":"escape","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809efb5","length":9,"value":"eofwrite","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809efc3","length":8,"value":"eofread","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809efd0","length":12,"value":"dialtimeout","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809efdf","length":9,"value":"baudrate","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809efeb","length":9,"value":"beautify","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809eff4","length":36,"value":"@(#)acutab.c\t5.2 (Berkeley) 4/3/86","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f07d","length":6,"value":"vadic","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f083","length":8,"value":"courier","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f08b","length":6,"value":"hayes","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f091","length":7,"value":"ventel","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f098","length":36,"value":"@(#)remcap.c\t5.1 (Berkeley) 4/30/85","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f0bc","length":7,"value":"REMOTE","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f0c3","length":12,"value":"/etc/remote","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f0cf","length":12,"value":"/etc/remote","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f0db","length":12,"value":"/etc/remote","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f0e7","length":23,"value":"Remcap entry too long\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f103","length":12,"value":"/etc/remote","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f10f","length":12,"value":"/etc/remote","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f11b","length":23,"value":"Remcap entry too long\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f132","length":18,"value":"Bad remcap entry\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f144","length":19,"value":"Infinite tc= loop\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f157","length":12,"value":"/etc/remote","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f163","length":12,"value":"/etc/remote","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f16f","length":23,"value":"Remcap entry too long\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f1a0","length":40,"value":"@(#)uucplock.c\t5.2 (Berkeley) 11/29/85","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f1cc","length":28,"value":"/usr/spool/uucp/LCK/LTMP.%d","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f1ee","length":15,"value":"AERROR - (%s) ","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f1fd","length":18,"value":"TOO MANY LOCKS %d","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f211","length":15,"value":"AERROR - (%s) ","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f220","length":24,"value":"CAN NOT ALLOCATE FOR %s","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f238","length":25,"value":"/usr/spool/uucp/LCK/LCK.","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f257","length":25,"value":"/usr/spool/uucp/LCK/LCK.","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f27c","length":36,"value":"@(#)biz22.c\t5.1 (Berkeley) 6/6/85","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f2a4","length":18,"value":"\nstarting call...","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f2ba","length":28,"value":"can't initialize bizcomp...","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f2da","length":26,"value":"can't set dialing mode...","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f2fc","length":23,"value":"can't get dial tone...","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f313","length":11,"value":"ringing...","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f321","length":23,"value":"%d second dial timeout","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f378","length":12,"value":"out of sync","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f389","length":21,"value":"bizcomp out of sync\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f39e","length":18,"value":"\nstarting call...","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f3ef","length":11,"value":"ringing...","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f3fc","length":23,"value":"%d second dial timeout","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f445","length":27,"value":"timeout waiting for reply\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f47c","length":36,"value":"@(#)courier.c\t5.1 (Berkeley) 4/3/86","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f4a4","length":12,"value":"Using \"%s\"\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f4b0","length":32,"value":"can't synchronize with courier\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f4d0","length":15,"value":"can't synch up","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f4df","length":8,"value":"courier","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f4ee","length":23,"value":"%d second dial timeout","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f512","length":30,"value":"timeout waiting for reply\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f562","length":8,"value":"RINGING","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f56f","length":8,"value":"CONNECT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f580","length":9,"value":"TIOCSETP","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f5d8","length":31,"value":"@(#)df.c\t5.1 (Berkeley) 6/6/85","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f5f7","length":23,"value":"connection timed out\r\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f60e","length":12,"value":"\ndialing...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f628","length":36,"value":"@(#)dn11.c\t5.1 (Berkeley) 4/30/85","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f650","length":18,"value":"\nstarting call...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f662","length":13,"value":"line busy...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f66f","length":18,"value":"acu open error...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f681","length":16,"value":"lost carrier...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f691","length":27,"value":"dialup line open failed...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f6b8","length":36,"value":"@(#)hayes.c\t5.1 (Berkeley) 4/30/85","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f6e4","length":12,"value":"\ndialing...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f709","length":23,"value":"%d second dial timeout","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f720","length":6,"value":"hayes","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f729","length":28,"value":"timeout waiting for reply\n\r","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f74b","length":8,"value":"CONNECT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f758","length":11,"value":"NO CARRIER","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f763","length":15,"value":"ERROR in input","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f772","length":13,"value":"CONNECT 1200","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f77f","length":31,"value":"Unknown Modem error: %c (0x%x)","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f7aa","length":23,"value":"cannot hang up modem\n\r","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f7c1","length":59,"value":"please use 'tip dialer' to make sure the line is hung up\n\r","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf809f80a","length":38,"value":"Cannot synchronize with hayes...\n\r","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f834","length":36,"value":"@(#)ventel.c\t5.1 (Berkeley) 4/30/85","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f85c","length":31,"value":"can't synchronize with ventel\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f87b","length":15,"value":"can't synch up","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f88a","length":7,"value":"ventel","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f891","length":12,"value":"\ndialing...","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f8b2","length":23,"value":"%d second dial timeout","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f8c9","length":7,"value":"ventel","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f8d0","length":6,"value":"%s...","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f8d9","length":27,"value":"timeout waiting for reply\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f8f8","length":12,"value":"tip: ioctl","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f930","length":18,"value":"\nstarting call...","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f942","length":13,"value":"line busy...","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f94f","length":18,"value":"acu open error...","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f961","length":16,"value":"lost carrier...","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f971","length":27,"value":"dialup line open failed...","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809f9b8","length":32,"value":"Unable to locate dialer (%s)\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809fa17","length":6,"value":"READY","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809fa1d","length":35,"value":"can't synchronize with vadic 3451\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809fa40","length":15,"value":"can't synch up","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809fa4f","length":6,"value":"vadic","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809fa58","length":8,"value":"NUMBER?","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809fa60","length":36,"value":"Vadic will not accept dial command\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809fa84","length":21,"value":"will not accept dial","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809fa99","length":6,"value":"vadic","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809faa1","length":36,"value":"Vadic will not accept phone number\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809fac5","length":23,"value":"will not accept number","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809fadc","length":6,"value":"vadic","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809fae6","length":9,"value":"DIALING:","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809faef","length":22,"value":"Vadic failed to dial\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809fb05","length":15,"value":"failed to dial","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809fb14","length":6,"value":"vadic","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809fb1a","length":12,"value":"\ndialing...","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809fb26","length":8,"value":"ON LINE","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809fb2e","length":13,"value":"call failed\n","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809fb3b","length":12,"value":"call failed","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809fb47","length":6,"value":"vadic","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809fb50","length":8,"value":"ON LINE","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf809fb58","length":12,"value":"FAILED CALL","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a253a","length":10,"value":"__environ","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a2544","length":20,"value":"__mh_execute_header","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a2558","length":23,"value":"__cthread_init_routine","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a256f","length":9,"value":"__ctype_","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a2578","length":7,"value":"__exit","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a257f","length":9,"value":"__filbuf","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a2597","length":20,"value":"__mach_init_routine","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a25ab","length":8,"value":"_access","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a25b3","length":7,"value":"_alarm","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a25c0","length":13,"value":"_bsd_sprintf","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a25d4","length":8,"value":"_calloc","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a25e3","length":7,"value":"_close","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a25ea","length":7,"value":"_creat","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a25f1","length":7,"value":"_ctime","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a2617","length":8,"value":"_fclose","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a261f","length":8,"value":"_fflush","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a262e","length":7,"value":"_flock","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a263c","length":6,"value":"_fork","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a2642","length":9,"value":"_fprintf","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a2651","length":8,"value":"_fwrite","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a2659","length":9,"value":"_getegid","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a2662","length":8,"value":"_getenv","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a266a","length":9,"value":"_geteuid","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a267b","length":10,"value":"_getlogin","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a2685","length":8,"value":"_getpid","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a268d","length":13,"value":"_getpriority","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a26a4","length":8,"value":"_getuid","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a26ac","length":7,"value":"_index","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a26ba","length":8,"value":"_isatty","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a26ce","length":9,"value":"_longjmp","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a26d7","length":8,"value":"_malloc","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a26df","length":6,"value":"_open","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a26e5","length":8,"value":"_perror","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a26f3","length":8,"value":"_printf","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a26fb","length":6,"value":"_read","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a2701","length":8,"value":"_rindex","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a2711","length":11,"value":"_setitimer","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a2724","length":13,"value":"_setpriority","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a2731","length":10,"value":"_setregid","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a273b","length":10,"value":"_setreuid","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a2745","length":10,"value":"_sigblock","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a274f","length":8,"value":"_signal","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a2757","length":10,"value":"_sigpause","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a2761","length":12,"value":"_sigsetmask","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a277c","length":6,"value":"_stat","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a2782","length":8,"value":"_strcat","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a279a","length":9,"value":"_strncmp","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a27ac","length":6,"value":"_time","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a27b2","length":8,"value":"_unlink","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a27c7","length":9,"value":"_write","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80a3cdb","length":13,"value":"8__PAGEZERO","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80a3d14","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80a3d44","length":8,"value":"__text","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80a3d54","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80a3d88","length":16,"value":"__fvmlib_init0","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80a3d98","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80a3dcc","length":16,"value":"__fvmlib_init1","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80a3ddc","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80a3e10","length":24,"value":"__picsymbol_stub__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80a3e53","length":13,"value":"<__cstring","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80a3e64","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80a3e98","length":8,"value":"__const","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80a3ea8","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80a3ee4","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80a3f14","length":8,"value":"__data","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80a3f24","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80a3f58","length":16,"value":"__la_symbol_ptr","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80a3f68","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80a3f9c","length":16,"value":"__nl_symbol_ptr","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80a3fac","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80a3ff0","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80a4034","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80a4068","length":12,"value":"__common","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80a4078","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80a40b3","length":13,"value":"8__LINKEDIT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80a40f0","length":16,"value":"/usr/lib/dyld","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80a4118","length":60,"value":"/NextLibrary/Frameworks/System.framework/Versions/A/System","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80a4167","length":61,"value":"P/NextLibrary/Frameworks/System.framework/Versions/A/System","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1b78","length":80,"value":"The kernel support for the dynamic linker is not present to run this program.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1bd0","length":48,"value":"__dyld_make_delayed_module_initializer_calls","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1c00","length":88,"value":"@(#)PROGRAM:tip  PROJECT:usrbin-76  DEVELOPER:root  BUILT:Thu Mar 27 22:16:15 PST 1997\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1cd0","length":36,"value":"@(#)acu.c\t5.5 (Berkeley) 12/4/87","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1d00","length":16,"value":"call completed","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1d10","length":16,"value":"\ncall aborted\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1d30","length":16,"value":"call aborted","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1d40","length":12,"value":"interrupt","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1d50","length":20,"value":"unknown ACU type","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1d68","length":16,"value":"call completed","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1d78","length":12,"value":"call failed","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1d98","length":32,"value":"can't open phone number file","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1dc0","length":28,"value":"unrecognizable host name","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1de8","length":24,"value":"missing phone number","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1e00","length":16,"value":"call completed","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1e10","length":12,"value":"call failed","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1e28","length":24,"value":"missing phone number","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1e40","length":12,"value":"call failed","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1e50","length":24,"value":"missing phone number","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1e70","length":16,"value":"call terminated","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1e88","length":16,"value":"call terminated","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1e98","length":20,"value":"\r\ndisconnecting...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1ed8","length":36,"value":"@(#)cmds.c\t5.4 (Berkeley) 5/5/86","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1f20","length":8,"value":"minute","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1f28","length":8,"value":"second","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1f30","length":20,"value":"Local file name? ","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1f48","length":24,"value":"\r\n%s: cannot creat\r\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1f60","length":36,"value":"List command for remote system? ","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1f90","length":28,"value":"usage: <take> from [to]\r\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1fb0","length":24,"value":"\r\n%s: cannot create\r\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b1ff0","length":16,"value":"\r\nwrite error\r\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2000","length":16,"value":"\r\nwrite error\r\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2018","length":24,"value":" lines transferred in ","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2030","length":16,"value":"Local command? ","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2040","length":24,"value":"can't establish pipe\r\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2058","length":16,"value":"can't fork!\r\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2068","length":36,"value":"List command for remote system? ","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2090","length":16,"value":"can't execl!\r\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b20a0","length":20,"value":"Local file name? ","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b20c0","length":20,"value":"%s: cannot open\r\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b20e0","length":24,"value":"\r\ntimed out at eol\r\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b20f8","length":24,"value":" chars transferred in ","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2110","length":24,"value":" lines transferred in ","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2130","length":28,"value":"usage: <put> from [to]\r\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2158","length":20,"value":"%s: cannot open\r\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2178","length":32,"value":"stty -echo;cat>%s;stty echo\r","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b21a0","length":24,"value":"\r\ntimeout error (%s)\r\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b21b8","length":16,"value":"Local command? ","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b21c8","length":16,"value":"can't fork!\r\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b21d8","length":20,"value":"can't find `%s'\r\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b21f0","length":12,"value":"away for ","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2210","length":20,"value":"\r\ncan't execl!\r\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2230","length":20,"value":"can't create %s\r\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2250","length":20,"value":"%s: bad directory\r\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b22e8","length":8,"value":"echo %s","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2308","length":16,"value":"\"Echo\" failed\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2320","length":16,"value":"\"%s\": No match\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2330","length":32,"value":"Buffer overflow expanding \"%s\"\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2396","length":42,"value":"< @(#)cmdtab.c\t5.4 (Berkeley) 12/22/87","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2480","length":12,"value":"send break","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2490","length":20,"value":"get this summary","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b24a8","length":16,"value":"set variable","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b24b8","length":28,"value":"suspend tip (local only)","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b24d8","length":28,"value":"suspend tip (local+remote)","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b24f8","length":16,"value":"exit from tip","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2508","length":16,"value":"exit from tip","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2518","length":20,"value":"change directory","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2530","length":36,"value":"pipe local command to remote host","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2558","length":20,"value":"pipe remote file","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2570","length":24,"value":"put file to remote UNIX","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2588","length":28,"value":"take file from remote UNIX","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b25a8","length":28,"value":"send file to remote host","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b25c8","length":32,"value":"receive file from remote host","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b25e8","length":8,"value":"shell","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b25f0","length":36,"value":"@(#)cu.c\t5.5 (Berkeley) 10/22/87","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2618","length":60,"value":"usage: cu telno [-t] [-s speed] [-a acu] [-l line] [-#]\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2658","length":28,"value":"cu: unsupported speed %s\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2678","length":12,"value":"Bad flag %s","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2690","length":16,"value":"all ports busy\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b26a0","length":12,"value":"link down\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b26b8","length":16,"value":"Connect failed\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b26e8","length":36,"value":"@(#)hunt.c\t5.2 (Berkeley) 4/23/87","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2716","length":34,"value":"=p@(#)log.c\t5.2 (Berkeley) 5/2/87","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2740","length":12,"value":"tip: flock","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2758","length":28,"value":"%s (%s) <%s, %s, %s> %s\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2788","length":28,"value":"can't open log file %s.\r\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b27a8","length":36,"value":"@(#)partab.c\t5.1 (Berkeley) 4/30/85","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2850","length":36,"value":"@(#)remote.c\t5.3 (Berkeley) 4/30/86","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2978","length":24,"value":"tip: unknown host %s\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2990","length":40,"value":"tip: can't open host description file\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b29d0","length":28,"value":"%s: missing device spec\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b29f0","length":28,"value":"%s: missing phone number\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2a78","length":12,"value":"tip.record","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2ad0","length":24,"value":"tip: no host specified\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2b2e","length":90,"value":";`@(#) Copyright (c) 1983 Regents of the University of California.\n All rights reserved.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2b88","length":36,"value":"@(#)tip.c\t5.6 (Berkeley) 10/22/87","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2c08","length":40,"value":"usage: tip [-v] [-speed] [system-name]\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2c30","length":28,"value":"tip: must be interactive\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2c50","length":28,"value":"tip: %s, unknown option\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2c70","length":48,"value":"tip: phone number too long (max = %d bytes)\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2ca8","length":16,"value":"all ports busy\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2cb8","length":12,"value":"link down\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2cc8","length":8,"value":"PHONES","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2cd0","length":12,"value":"/etc/phones","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2ce8","length":24,"value":"tip: bad baud rate %d\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2d10","length":12,"value":"Connected\r\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2d21","length":15,"value":"connected\r\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2d78","length":16,"value":"%-2s %c   %s\r\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2d88","length":16,"value":"Lost carrier.","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2d98","length":8,"value":"write","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2df0","length":28,"value":"%s: unknown parity value\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2e78","length":36,"value":"@(#)tipout.c\t5.1 (Berkeley) 4/30/85","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2eb6","length":38,"value":"=8@(#)value.c\t5.1 (Berkeley) 4/30/85","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2ef0","length":8,"value":"set %s","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2ef8","length":16,"value":"access denied\r\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2f08","length":16,"value":"out of core\r\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2f30","length":8,"value":"record","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2f38","length":24,"value":"%s: unknown variable\r\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2f98","length":8,"value":"record","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b2fa8","length":36,"value":"@(#)vars.c\t5.1 (Berkeley) 4/30/85","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b31f8","length":8,"value":"parity","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3208","length":12,"value":"localecho","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3220","length":12,"value":"halfduplex","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3248","length":12,"value":"etimeout","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3258","length":8,"value":"cdelay","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3260","length":12,"value":"chardelay","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3270","length":8,"value":"ldelay","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3278","length":12,"value":"linedelay","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3290","length":8,"value":"tandem","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b32a0","length":12,"value":"disconnect","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b32b8","length":12,"value":"echocheck","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b32d8","length":8,"value":"SHELL","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b32e8","length":8,"value":"verbose","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b32f8","length":12,"value":"tabexpand","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3310","length":8,"value":"script","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3318","length":8,"value":"remote","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3328","length":8,"value":"record","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3338","length":12,"value":"raisechar","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3350","length":8,"value":"raise","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3360","length":8,"value":"prompt","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3368","length":8,"value":"phones","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3370","length":16,"value":"/usr/adm/aculog","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b33a0","length":12,"value":"framesize","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b33b8","length":8,"value":"force","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b33c8","length":12,"value":"exceptions","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b33e0","length":8,"value":"escape","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b33f8","length":12,"value":"eofwrite","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3410","length":8,"value":"eofread","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3420","length":12,"value":"dialtimeout","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3438","length":12,"value":"baudrate","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3450","length":12,"value":"beautify","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3460","length":36,"value":"@(#)acutab.c\t5.2 (Berkeley) 4/3/86","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b34f0","length":8,"value":"vadic","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b34f8","length":8,"value":"courier","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3500","length":8,"value":"hayes","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3508","length":8,"value":"ventel","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3510","length":36,"value":"@(#)remcap.c\t5.1 (Berkeley) 4/30/85","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3538","length":8,"value":"REMOTE","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3540","length":12,"value":"/etc/remote","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3550","length":12,"value":"/etc/remote","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3560","length":12,"value":"/etc/remote","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3570","length":24,"value":"Remcap entry too long\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3590","length":12,"value":"/etc/remote","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b35a0","length":12,"value":"/etc/remote","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b35b0","length":24,"value":"Remcap entry too long\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b35c8","length":20,"value":"Bad remcap entry\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b35e0","length":20,"value":"Infinite tc= loop\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b35f8","length":12,"value":"/etc/remote","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3608","length":12,"value":"/etc/remote","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3618","length":24,"value":"Remcap entry too long\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3648","length":40,"value":"@(#)uucplock.c\t5.2 (Berkeley) 11/29/85","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3678","length":28,"value":"/usr/spool/uucp/LCK/LTMP.%d","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3698","length":16,"value":"AERROR - (%s) ","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b36b0","length":20,"value":"TOO MANY LOCKS %d","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b36c8","length":16,"value":"AERROR - (%s) ","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b36e0","length":24,"value":"CAN NOT ALLOCATE FOR %s","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3700","length":28,"value":"/usr/spool/uucp/LCK/LCK.","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3728","length":28,"value":"/usr/spool/uucp/LCK/LCK.","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3748","length":36,"value":"@(#)biz22.c\t5.1 (Berkeley) 6/6/85","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3770","length":20,"value":"\nstarting call...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3790","length":28,"value":"can't initialize bizcomp...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b37b8","length":28,"value":"can't set dialing mode...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b37f0","length":24,"value":"can't get dial tone...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3808","length":12,"value":"ringing...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3820","length":24,"value":"%d second dial timeout","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3898","length":12,"value":"out of sync","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b38a8","length":24,"value":"bizcomp out of sync\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b38c0","length":20,"value":"\nstarting call...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3930","length":12,"value":"ringing...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3948","length":24,"value":"%d second dial timeout","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b39b1","length":27,"value":"timeout waiting for reply\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b39f8","length":36,"value":"@(#)courier.c\t5.1 (Berkeley) 4/3/86","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3a20","length":12,"value":"Using \"%s\"\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3a30","length":32,"value":"can't synchronize with courier\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3a50","length":8,"value":"courier","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3a58","length":16,"value":"can't synch up","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3a78","length":24,"value":"%d second dial timeout","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3aa1","length":27,"value":"timeout waiting for reply\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3b08","length":8,"value":"RINGING","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3b18","length":8,"value":"CONNECT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3b30","length":12,"value":"TIOCSETP","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3ba0","length":32,"value":"@(#)df.c\t5.1 (Berkeley) 6/6/85","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3bc0","length":24,"value":"connection timed out\r\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3bd8","length":12,"value":"\ndialing...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3c08","length":36,"value":"@(#)dn11.c\t5.1 (Berkeley) 4/30/85","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3c30","length":20,"value":"\nstarting call...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3c48","length":16,"value":"line busy...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3c58","length":20,"value":"acu open error...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3c70","length":16,"value":"lost carrier...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3c80","length":28,"value":"dialup line open failed...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3ca8","length":36,"value":"@(#)hayes.c\t5.1 (Berkeley) 4/30/85","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3cd8","length":12,"value":"\ndialing...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3d20","length":24,"value":"%d second dial timeout","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3d38","length":8,"value":"hayes","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3d49","length":31,"value":"timeout waiting for reply\n\r","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3d78","length":8,"value":"CONNECT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3d88","length":12,"value":"NO CARRIER","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3d98","length":16,"value":"ERROR in input","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3da8","length":16,"value":"CONNECT 1200","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3db8","length":32,"value":"Unknown Modem error: %c (0x%x)","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3df0","length":24,"value":"cannot hang up modem\n\r","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3e08","length":60,"value":"please use 'tip dialer' to make sure the line is hung up\n\r","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3e60","length":36,"value":"Cannot synchronize with hayes...\n\r","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3e88","length":36,"value":"@(#)ventel.c\t5.1 (Berkeley) 4/30/85","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3eb0","length":32,"value":"can't synchronize with ventel\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3ed0","length":8,"value":"ventel","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3ed8","length":16,"value":"can't synch up","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3ee8","length":12,"value":"\ndialing...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3f18","length":24,"value":"%d second dial timeout","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3f30","length":8,"value":"ventel","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3f38","length":8,"value":"%s...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3f49","length":27,"value":"timeout waiting for reply\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3f78","length":12,"value":"tip: ioctl","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3fb0","length":20,"value":"\nstarting call...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3fc8","length":16,"value":"line busy...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3fd8","length":20,"value":"acu open error...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b3ff0","length":16,"value":"lost carrier...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b4000","length":28,"value":"dialup line open failed...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b4058","length":32,"value":"Unable to locate dialer (%s)\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b40d0","length":8,"value":"READY","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b40d8","length":36,"value":"can't synchronize with vadic 3451\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b4100","length":8,"value":"vadic","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b4108","length":16,"value":"can't synch up","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b4120","length":8,"value":"NUMBER?","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b4128","length":36,"value":"Vadic will not accept dial command\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b4150","length":8,"value":"vadic","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b4158","length":24,"value":"will not accept dial","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b4178","length":36,"value":"Vadic will not accept phone number\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b41a0","length":8,"value":"vadic","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b41a8","length":24,"value":"will not accept number","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b41d0","length":12,"value":"DIALING:","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b41e0","length":24,"value":"Vadic failed to dial\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b41f8","length":8,"value":"vadic","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b4200","length":16,"value":"failed to dial","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b4210","length":12,"value":"\ndialing...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b4220","length":8,"value":"ON LINE","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b4228","length":16,"value":"call failed\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b4238","length":8,"value":"vadic","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b4240","length":12,"value":"call failed","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b4258","length":8,"value":"ON LINE","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b4260","length":12,"value":"FAILED CALL","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b65ae","length":10,"value":"__environ","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b65b8","length":20,"value":"__mh_execute_header","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b65dc","length":23,"value":"__cthread_init_routine","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b65f3","length":9,"value":"__ctype_","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b65fc","length":7,"value":"__exit","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b6603","length":9,"value":"__filbuf","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b661b","length":20,"value":"__mach_init_routine","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b662f","length":8,"value":"_access","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b6637","length":7,"value":"_alarm","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b6644","length":13,"value":"_bsd_sprintf","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b6658","length":8,"value":"_calloc","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b6667","length":7,"value":"_close","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b666e","length":7,"value":"_creat","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b6675","length":7,"value":"_ctime","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b669b","length":8,"value":"_fclose","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b66a3","length":8,"value":"_fflush","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b66b2","length":7,"value":"_flock","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b66c0","length":6,"value":"_fork","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b66c6","length":9,"value":"_fprintf","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b66d5","length":8,"value":"_fwrite","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b66dd","length":9,"value":"_getegid","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b66e6","length":8,"value":"_getenv","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b66ee","length":9,"value":"_geteuid","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b66ff","length":10,"value":"_getlogin","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b6709","length":8,"value":"_getpid","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b6711","length":13,"value":"_getpriority","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b6728","length":8,"value":"_getuid","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b6730","length":7,"value":"_index","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b673e","length":8,"value":"_isatty","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b6752","length":9,"value":"_longjmp","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b675b","length":8,"value":"_malloc","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b6763","length":6,"value":"_open","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b6769","length":8,"value":"_perror","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b6777","length":8,"value":"_printf","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b677f","length":6,"value":"_read","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b6785","length":8,"value":"_rindex","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b6795","length":11,"value":"_setitimer","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b67a8","length":13,"value":"_setpriority","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b67b5","length":10,"value":"_setregid","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b67bf","length":10,"value":"_setreuid","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b67c9","length":10,"value":"_sigblock","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b67d3","length":8,"value":"_signal","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b67db","length":10,"value":"_sigpause","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b67e5","length":12,"value":"_sigsetmask","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b6800","length":6,"value":"_stat","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b6806","length":8,"value":"_strcat","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b681e","length":8,"value":"_strlen","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b6826","length":9,"value":"_strncmp","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b6838","length":6,"value":"_time","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b683e","length":8,"value":"_unlink","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b6853","length":9,"value":"_write","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b94c4","length":48,"value":"@(#)cmgt.crt0.c\t4.3 (crt0.c) (Berkeley) 4/19/82","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b9cd8","length":16,"value":"data.classes","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80b9cf0","length":12,"value":"data.nib","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80ba4b8","length":568,"value":"NIDomainPanel = {\n    ACTIONS = {\n\tbrowser:;\n\tcancel:;\n\tok:;\n    };\n    OUTLETS = {\n\tpanelButton;\n\tcancelButton;\n\tgroupForm;\n\tdomainBrowser;\n\tpanel;\n\tdomainText;\n\tsharedDomainPanel;\n\tokButton;\n\tfieldEditor;\n    };\n    SUPERCLASS = Object;\n};\nFirstResponder = {\n    ACTIONS = {\n    };\n    SUPERCLASS = Object;\n};\nNIOpenPanel = {\n    ACTIONS = {\n\trefreshLowerData:;\n\tobjectHit:;\n    };\n    OUTLETS = {\n\tpanelTitleField;\n\tlistTitleField;\n\tdirectoryObjectBrowser;\n\tselectedItemText;\n    };\n    SUPERCLASS = NIDomainP...","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80baccf","length":13,"value":"IBObjectData","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80bacdf","length":7,"value":"Object","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80bacef","length":13,"value":"CustomObject","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80bada0","length":8,"value":"Control","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80badb2","length":11,"value":"\tResponder","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80bae79","length":7,"value":"Button","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80baef4","length":11,"value":"\tTextField","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80bb549","length":18,"value":"IBOutletConnector","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80bb55e","length":12,"value":"IBConnector","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80bb5a5","length":19,"value":"IBControlConnector","in_exec":true,"in_allow":true,"in_deny":false}
+{"addr":"0xf80bdcdc","length":12,"value":"__PAGEZERO","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80bdd14","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80bdd44","length":8,"value":"__text","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80bdd54","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80bdd88","length":16,"value":"__fvmlib_init0","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80bdd98","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80bddcc","length":16,"value":"__fvmlib_init1","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80bdddc","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80bde10","length":24,"value":"__picsymbol_stub__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80bde54","length":12,"value":"__cstring","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80bde64","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80bde98","length":8,"value":"__const","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80bdea8","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80bdee4","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80bdf14","length":8,"value":"__data","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80bdf24","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80bdf58","length":16,"value":"__la_symbol_ptr","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80bdf68","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80bdf9c","length":16,"value":"__nl_symbol_ptr","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80bdfac","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80bdff0","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80be034","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80be068","length":12,"value":"__common","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80be078","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80be0b4","length":12,"value":"__LINKEDIT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80be0f0","length":16,"value":"/usr/lib/dyld","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80be118","length":60,"value":"/NextLibrary/Frameworks/System.framework/Versions/A/System","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80be168","length":60,"value":"/NextLibrary/Frameworks/System.framework/Versions/A/System","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80c9b82","length":79,"value":"The kernel support for the dynamic linker is not present to run this program.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80c9bd2","length":45,"value":"__dyld_make_delayed_module_initializer_calls","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80c9bff","length":93,"value":"@(#)PROGRAM:troff  PROJECT:usrbin-76  DEVELOPER:root  BUILT:Thu Mar 27 22:17:51 PST 1997\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80ca530","length":28,"value":"/usr/lib/tmac/tmac.xxxxx","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80ca5a4","length":12,"value":"/dev/cat","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd158","length":28,"value":"/usr/local/lib/tmac/tmac.","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd18b","length":12,"value":"Available.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd197","length":21,"value":"Floating Exception.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd1ac","length":16,"value":"/usr/adm/tracct","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd1c0","length":13,"value":"/tmp/taXXXXX","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd1cd","length":26,"value":"Cannot create temp file.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd1e7","length":6,"value":"notty","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd1ed","length":19,"value":"Typesetter busy.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd21f","length":13,"value":"Cannot open ","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd22e","length":17,"value":"can't open file ","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd241","length":17,"value":"can't open file ","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd254","length":24,"value":"Too many page numbers\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd2bd","length":25,"value":"Waiting for Typesetter.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd2d6","length":18,"value":"Troff finished.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd310","length":30,"value":"Too many string/macro names.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd32e","length":25,"value":"Out of temp file space.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd347","length":25,"value":"Bad storage allocation.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd360","length":21,"value":"Core limit reached.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd375","length":26,"value":"Macro argument too long.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd38f","length":17,"value":"Cannot divert.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd3cc","length":28,"value":"Too many number registers.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd3fe","length":18,"value":"Divide by zero.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd429","length":20,"value":"Cannot plant trap.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd43d","length":12,"value":"User Abort.","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd449","length":15,"value":"Cannot do ev.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd458","length":19,"value":"if-else overflow.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd491","length":19,"value":"/usr/lib/font/ftXX","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd4f8","length":23,"value":"fp: bad font position\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd50f","length":13,"value":"Cannot open ","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd51e","length":13,"value":"Cannot read ","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd52b","length":12,"value":"Mount font ","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd53e","length":23,"value":"fp: bad font position\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd555","length":18,"value":"fp: no font name\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd567","length":13,"value":"Cannot open ","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd576","length":13,"value":"Cannot read ","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd583","length":12,"value":"Mount font ","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd5c0","length":16,"value":"Line overflow.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd5d0","length":13,"value":"Trap botch.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd5dd","length":19,"value":"Word overflow.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd610","length":28,"value":"Exception word list full.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd648","length":20,"value":"Zero field width.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd688","length":22,"value":"Excessive paper use.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80cd69e","length":18,"value":"Pages finished.\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d0416","length":10,"value":"__environ","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d0420","length":20,"value":"__mh_execute_header","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d0434","length":23,"value":"__cthread_init_routine","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d044b","length":20,"value":"__mach_init_routine","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d045f","length":8,"value":"_access","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d046e","length":7,"value":"_close","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d0475","length":7,"value":"_creat","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d0489","length":14,"value":"_gettimeofday","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d0497","length":8,"value":"_getuid","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d04a5","length":9,"value":"_isspace","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d04ae","length":9,"value":"_longjmp","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d04c6","length":6,"value":"_open","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d04cc","length":6,"value":"_read","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d04d2","length":8,"value":"_rindex","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d04e8","length":8,"value":"_setuid","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d04f0","length":8,"value":"_signal","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d04ff","length":6,"value":"_stat","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d0505","length":8,"value":"_strcat","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d051b","length":9,"value":"_ttyname","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d0524","length":8,"value":"_unlink","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d052c","length":8,"value":"_write","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d1cdb","length":13,"value":"8__PAGEZERO","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d1d14","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d1d44","length":8,"value":"__text","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d1d54","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d1d88","length":16,"value":"__fvmlib_init0","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d1d98","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d1dcc","length":16,"value":"__fvmlib_init1","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d1ddc","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d1e10","length":24,"value":"__picsymbol_stub__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d1e53","length":13,"value":"<__cstring","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d1e64","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d1e98","length":8,"value":"__const","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d1ea8","length":8,"value":"__TEXT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d1ee4","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d1f14","length":8,"value":"__data","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d1f24","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d1f58","length":16,"value":"__la_symbol_ptr","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d1f68","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d1f9c","length":16,"value":"__nl_symbol_ptr","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d1fac","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d1ff0","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d2034","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d2068","length":12,"value":"__common","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d2078","length":8,"value":"__DATA","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d20b3","length":13,"value":"8__LINKEDIT","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d20f0","length":16,"value":"/usr/lib/dyld","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d2118","length":60,"value":"/NextLibrary/Frameworks/System.framework/Versions/A/System","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d2167","length":61,"value":"P/NextLibrary/Frameworks/System.framework/Versions/A/System","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d7cec","length":12,"value":"x-win.el","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d7d20","length":8,"value":"COPYING","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d7d68","length":12,"value":"xterm.el","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d7d7b","length":13,"value":"\tbobcat.el","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d7dcb","length":13,"value":"\tsupdup.el","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d7ddf","length":13,"value":"\tapollo.el","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d84b8","length":2012,"value":";; Map VT100 function key escape sequences\n;; into the standard slots in function-keymap.\n\n(require 'keypad)\n\n(defvar CSI-map nil\n  \"The CSI-map maps the CSI function keys on the VT100 keyboard.\nThe CSI keys are the arrow keys.\")\n\n(if (not CSI-map)\n    (progn\n     (setq CSI-map (lookup-key global-map \"\\e[\"))\n     (if (not (keymapp CSI-map))\n\t (setq CSI-map (make-sparse-keymap)))  ;; <ESC>[ commands\n\n     (setup-terminal-keymap CSI-map\n\t    '((\"A\" . ?u)\t   ; up arrow\n\t      (\"B\" . ?d)\t   ; down-arrow\n\t      ...","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d8cb8","length":48,"value":"(load (concat term-file-prefix \"bg\") nil t)\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80d94b8","length":48,"value":"(load (concat term-file-prefix \"vt200\") nil t)\n","in_exec":true,"in_allow":true,"in_deny":true}
+{"addr":"0xf80e9b78","length":80,"value":"The kernel support for the dynamic linker is not present to run this program.\n","in_exec":false,"in_allow":false,"in_deny":false}
+{"addr":"0xf80e9bd0","length":48,"value":"__dyld_make_delayed_module_initializer_calls","in_exec":false,"in_allow":false,"in_deny":false}
+{"addr":"0xf80e9c00","length":92,"value":"@(#)PROGRAM:troff  PROJECT:usrbin-76  DEVELOPER:root  BUILT:Thu Mar 27 22:17:51 PST 1997\n","in_exec":false,"in_allow":false,"in_deny":false}
+{"addr":"0xf80ea538","length":28,"value":"/usr/lib/tmac/tmac.xxxxx","in_exec":false,"in_allow":false,"in_deny":false}
+{"addr":"0xf80ea5b0","length":12,"value":"/dev/cat","in_exec":false,"in_allow":false,"in_deny":false}

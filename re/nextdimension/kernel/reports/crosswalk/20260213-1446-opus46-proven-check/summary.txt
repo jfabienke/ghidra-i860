@@ -1,0 +1,57 @@
+=== GaCK Crosswalk ===
+ndkernel_source:  /Users/jvindahl/Development/re/NeXTDimension/NextDimension-21/NDkernel
+binary:           re/nextdimension/kernel/i860_kernel.bin
+factpack:         re/nextdimension/kernel/reports/factpack/retagged
+out_dir:          re/nextdimension/kernel/reports/crosswalk/20260213-1446-opus46-proven-check
+min_score:        24
+min_confidence:   60
+top_k:            8
+source_version:   NeXTSTEP-2.0
+target_version:   NeXTSTEP-3.3
+allow_compat_lbl: 0
+compat_lbl_class: strong_compat
+NOTE: compatibility mode active (NeXTSTEP-2.0 -> NeXTSTEP-3.3).
+      Labels are blocked unless CROSSWALK_ALLOW_COMPAT_LABELS=1.
+
+=== extract_gack_source_facts ===
+source_root:    /Users/jvindahl/Development/re/NeXTDimension/NextDimension-21/NDkernel
+source_version: NeXTSTEP-2.0
+files scanned:  c=55 asm=5
+functions:      331
+output:         re/nextdimension/kernel/reports/crosswalk/20260213-1446-opus46-proven-check/source_functions.json
+=== extract_binary_facts ===
+factpack:        /Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/factpack/retagged
+target_version:  NeXTSTEP-3.3
+functions:       60
+insn rows:       2536
+ref rows:        188
+dispatch rows:   11
+output:          re/nextdimension/kernel/reports/crosswalk/20260213-1446-opus46-proven-check/binary_functions.json
+=== match_gack_to_binary ===
+source functions:   331
+binary functions:   60
+pairs scored:       19860
+source_version:     NeXTSTEP-2.0
+target_version:     NeXTSTEP-3.3
+compatibility_mode: True
+matches (greedy):   2
+match classes:      {'candidate_compat': 2}
+output json:        re/nextdimension/kernel/reports/crosswalk/20260213-1446-opus46-proven-check/matches.json
+output csv:         re/nextdimension/kernel/reports/crosswalk/20260213-1446-opus46-proven-check/matches_ranked.csv
+=== generate_crosswalk_labels ===
+input matches:     re/nextdimension/kernel/reports/crosswalk/20260213-1446-opus46-proven-check/matches.json
+compatibility:    True
+allow_compat:     False
+blocked_compat:   0
+blocked_class:    0
+emitted labels:   0
+output csv:       re/nextdimension/kernel/reports/crosswalk/20260213-1446-opus46-proven-check/ghidra_labels.csv
+output json:      re/nextdimension/kernel/reports/crosswalk/20260213-1446-opus46-proven-check/ghidra_apply_crosswalk.json
+
+Artifacts:
+  re/nextdimension/kernel/reports/crosswalk/20260213-1446-opus46-proven-check/source_functions.json
+  re/nextdimension/kernel/reports/crosswalk/20260213-1446-opus46-proven-check/binary_functions.json
+  re/nextdimension/kernel/reports/crosswalk/20260213-1446-opus46-proven-check/matches.json
+  re/nextdimension/kernel/reports/crosswalk/20260213-1446-opus46-proven-check/matches_ranked.csv
+  re/nextdimension/kernel/reports/crosswalk/20260213-1446-opus46-proven-check/ghidra_labels.csv
+  re/nextdimension/kernel/reports/crosswalk/20260213-1446-opus46-proven-check/ghidra_apply_crosswalk.json

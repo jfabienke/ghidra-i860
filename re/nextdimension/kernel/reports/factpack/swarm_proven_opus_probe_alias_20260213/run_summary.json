@@ -1,0 +1,25 @@
+{
+  "run_id": "30d322eb",
+  "model": "opus",
+  "backend": "max",
+  "stats": {
+    "claims": 1,
+    "verified_accept": 0,
+    "verified_revise": 0,
+    "verified_reject": 0,
+    "gatekeeper_passed": 0,
+    "gatekeeper_failed": 0,
+    "total_tokens_in": 27353,
+    "total_tokens_out": 3952
+  },
+  "results": [
+    {
+      "function_id": "0xf800c630",
+      "status": "schema_fail",
+      "errors": [
+        "JSON parse failed: Expecting value: line 1 column 1 (char 0)"
+      ]
+    }
+  ],
+  "errors": []
+}

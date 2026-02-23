@@ -1,0 +1,644 @@
+{
+  "run_id": "85082ea6",
+  "mode": "dry_run",
+  "model": "claude-sonnet-4-5-20250929",
+  "function_count": 60,
+  "total_estimated_tokens": 96729,
+  "functions": [
+    {
+      "function_id": "0xf800a680",
+      "function_name": "FUN_f800a680",
+      "system_chars": 1994,
+      "user_chars": 6394,
+      "estimated_tokens": 2097,
+      "insn_count": 39,
+      "priority_tags": [
+        "unresolved_bri",
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf8021a20",
+      "function_name": "FUN_f8021a20",
+      "system_chars": 1994,
+      "user_chars": 5062,
+      "estimated_tokens": 1764,
+      "insn_count": 25,
+      "priority_tags": [
+        "unresolved_bri",
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf800c630",
+      "function_name": "FUN_f800c630",
+      "system_chars": 1994,
+      "user_chars": 4676,
+      "estimated_tokens": 1667,
+      "insn_count": 23,
+      "priority_tags": [
+        "unresolved_bri",
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf8008ee4",
+      "function_name": "FUN_f8008ee4",
+      "system_chars": 1994,
+      "user_chars": 4396,
+      "estimated_tokens": 1597,
+      "insn_count": 21,
+      "priority_tags": [
+        "unresolved_bri",
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf8008274",
+      "function_name": "FUN_f8008274",
+      "system_chars": 1994,
+      "user_chars": 4026,
+      "estimated_tokens": 1505,
+      "insn_count": 18,
+      "priority_tags": [
+        "unresolved_bri",
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf800f70c",
+      "function_name": "FUN_f800f70c",
+      "system_chars": 1994,
+      "user_chars": 3452,
+      "estimated_tokens": 1361,
+      "insn_count": 13,
+      "priority_tags": [
+        "unresolved_bri",
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf800c584",
+      "function_name": "FUN_f800c584",
+      "system_chars": 1994,
+      "user_chars": 3085,
+      "estimated_tokens": 1269,
+      "insn_count": 9,
+      "priority_tags": [
+        "unresolved_bri",
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf800cb9c",
+      "function_name": "FUN_f800cb9c",
+      "system_chars": 1994,
+      "user_chars": 2408,
+      "estimated_tokens": 1100,
+      "insn_count": 5,
+      "priority_tags": [
+        "unresolved_bri"
+      ]
+    },
+    {
+      "function_id": "0xf800c2a4",
+      "function_name": "FUN_f800c2a4",
+      "system_chars": 1994,
+      "user_chars": 20334,
+      "estimated_tokens": 5582,
+      "insn_count": 158,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf800f77c",
+      "function_name": "FUN_f800f77c",
+      "system_chars": 1994,
+      "user_chars": 14629,
+      "estimated_tokens": 4155,
+      "insn_count": 106,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf8000000",
+      "function_name": "entry",
+      "system_chars": 1994,
+      "user_chars": 9509,
+      "estimated_tokens": 2875,
+      "insn_count": 69,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf8009270",
+      "function_name": "FUN_f8009270",
+      "system_chars": 1994,
+      "user_chars": 9023,
+      "estimated_tokens": 2754,
+      "insn_count": 64,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf80094fc",
+      "function_name": "FUN_f80094fc",
+      "system_chars": 1994,
+      "user_chars": 8543,
+      "estimated_tokens": 2634,
+      "insn_count": 60,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf800916c",
+      "function_name": "FUN_f800916c",
+      "system_chars": 1994,
+      "user_chars": 7150,
+      "estimated_tokens": 2286,
+      "insn_count": 46,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf800c964",
+      "function_name": "FUN_f800c964",
+      "system_chars": 1994,
+      "user_chars": 6767,
+      "estimated_tokens": 2190,
+      "insn_count": 42,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf800a44c",
+      "function_name": "FUN_f800a44c",
+      "system_chars": 1994,
+      "user_chars": 4869,
+      "estimated_tokens": 1715,
+      "insn_count": 28,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf800bf74",
+      "function_name": "FUN_f800bf74",
+      "system_chars": 1994,
+      "user_chars": 5154,
+      "estimated_tokens": 1787,
+      "insn_count": 28,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf800d0ec",
+      "function_name": "FUN_f800d0ec",
+      "system_chars": 1994,
+      "user_chars": 4493,
+      "estimated_tokens": 1621,
+      "insn_count": 23,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf800cd64",
+      "function_name": "FUN_f800cd64",
+      "system_chars": 1994,
+      "user_chars": 4316,
+      "estimated_tokens": 1577,
+      "insn_count": 22,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf800d00c",
+      "function_name": "FUN_f800d00c",
+      "system_chars": 1994,
+      "user_chars": 4395,
+      "estimated_tokens": 1597,
+      "insn_count": 22,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf8008098",
+      "function_name": "FUN_f8008098",
+      "system_chars": 1994,
+      "user_chars": 4028,
+      "estimated_tokens": 1505,
+      "insn_count": 18,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf8008f5c",
+      "function_name": "FUN_f8008f5c",
+      "system_chars": 1994,
+      "user_chars": 3994,
+      "estimated_tokens": 1497,
+      "insn_count": 18,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf800b83c",
+      "function_name": "FUN_f800b83c",
+      "system_chars": 1994,
+      "user_chars": 4008,
+      "estimated_tokens": 1500,
+      "insn_count": 18,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf800c8bc",
+      "function_name": "FUN_f800c8bc",
+      "system_chars": 1994,
+      "user_chars": 4075,
+      "estimated_tokens": 1517,
+      "insn_count": 18,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf807ee1c",
+      "function_name": "FUN_f807ee1c",
+      "system_chars": 1994,
+      "user_chars": 4051,
+      "estimated_tokens": 1511,
+      "insn_count": 18,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf800842c",
+      "function_name": "FUN_f800842c",
+      "system_chars": 1994,
+      "user_chars": 3759,
+      "estimated_tokens": 1438,
+      "insn_count": 17,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf8009ae8",
+      "function_name": "FUN_f8009ae8",
+      "system_chars": 1994,
+      "user_chars": 3727,
+      "estimated_tokens": 1430,
+      "insn_count": 16,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf800c520",
+      "function_name": "FUN_f800c520",
+      "system_chars": 1994,
+      "user_chars": 3677,
+      "estimated_tokens": 1417,
+      "insn_count": 16,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf800cf8c",
+      "function_name": "FUN_f800cf8c",
+      "system_chars": 1994,
+      "user_chars": 3601,
+      "estimated_tokens": 1398,
+      "insn_count": 16,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf800c79c",
+      "function_name": "FUN_f800c79c",
+      "system_chars": 1994,
+      "user_chars": 3630,
+      "estimated_tokens": 1406,
+      "insn_count": 15,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf80014c4",
+      "function_name": "FUN_f80014c4",
+      "system_chars": 1994,
+      "user_chars": 3439,
+      "estimated_tokens": 1358,
+      "insn_count": 14,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf800dc7c",
+      "function_name": "FUN_f800dc7c",
+      "system_chars": 1994,
+      "user_chars": 3621,
+      "estimated_tokens": 1403,
+      "insn_count": 14,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf800bc68",
+      "function_name": "FUN_f800bc68",
+      "system_chars": 1994,
+      "user_chars": 3388,
+      "estimated_tokens": 1345,
+      "insn_count": 13,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf80080f4",
+      "function_name": "FUN_f80080f4",
+      "system_chars": 1994,
+      "user_chars": 3260,
+      "estimated_tokens": 1313,
+      "insn_count": 12,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf800af6c",
+      "function_name": "FUN_f800af6c",
+      "system_chars": 1994,
+      "user_chars": 3312,
+      "estimated_tokens": 1326,
+      "insn_count": 12,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf800a554",
+      "function_name": "FUN_f800a554",
+      "system_chars": 1994,
+      "user_chars": 3011,
+      "estimated_tokens": 1251,
+      "insn_count": 11,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf800cef0",
+      "function_name": "FUN_f800cef0",
+      "system_chars": 1994,
+      "user_chars": 3186,
+      "estimated_tokens": 1295,
+      "insn_count": 11,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf8008000",
+      "function_name": "FUN_f8008000",
+      "system_chars": 1994,
+      "user_chars": 2953,
+      "estimated_tokens": 1236,
+      "insn_count": 10,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf800b3fc",
+      "function_name": "FUN_f800b3fc",
+      "system_chars": 1994,
+      "user_chars": 3058,
+      "estimated_tokens": 1263,
+      "insn_count": 10,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf8008e70",
+      "function_name": "FUN_f8008e70",
+      "system_chars": 1994,
+      "user_chars": 2789,
+      "estimated_tokens": 1195,
+      "insn_count": 8,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf80090d4",
+      "function_name": "FUN_f80090d4",
+      "system_chars": 1994,
+      "user_chars": 2876,
+      "estimated_tokens": 1217,
+      "insn_count": 8,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf8009420",
+      "function_name": "FUN_f8009420",
+      "system_chars": 1994,
+      "user_chars": 2758,
+      "estimated_tokens": 1188,
+      "insn_count": 8,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf800a0bc",
+      "function_name": "FUN_f800a0bc",
+      "system_chars": 1994,
+      "user_chars": 2723,
+      "estimated_tokens": 1179,
+      "insn_count": 7,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf800df78",
+      "function_name": "FUN_f800df78",
+      "system_chars": 1994,
+      "user_chars": 2660,
+      "estimated_tokens": 1163,
+      "insn_count": 7,
+      "priority_tags": [
+        "mmio_access"
+      ]
+    },
+    {
+      "function_id": "0xf80017cc",
+      "function_name": "FUN_f80017cc",
+      "system_chars": 1994,
+      "user_chars": 8787,
+      "estimated_tokens": 2695,
+      "insn_count": 62,
+      "priority_tags": []
+    },
+    {
+      "function_id": "0xf8008dd4",
+      "function_name": "FUN_f8008dd4",
+      "system_chars": 1994,
+      "user_chars": 3926,
+      "estimated_tokens": 1480,
+      "insn_count": 18,
+      "priority_tags": []
+    },
+    {
+      "function_id": "0xf8000348",
+      "function_name": "FUN_f8000348",
+      "system_chars": 1994,
+      "user_chars": 3746,
+      "estimated_tokens": 1435,
+      "insn_count": 17,
+      "priority_tags": []
+    },
+    {
+      "function_id": "0xf800a1c8",
+      "function_name": "FUN_f800a1c8",
+      "system_chars": 1994,
+      "user_chars": 3802,
+      "estimated_tokens": 1449,
+      "insn_count": 17,
+      "priority_tags": []
+    },
+    {
+      "function_id": "0xf800f4d4",
+      "function_name": "FUN_f800f4d4",
+      "system_chars": 1994,
+      "user_chars": 3177,
+      "estimated_tokens": 1292,
+      "insn_count": 12,
+      "priority_tags": []
+    },
+    {
+      "function_id": "0xf800bb60",
+      "function_name": "FUN_f800bb60",
+      "system_chars": 1994,
+      "user_chars": 3114,
+      "estimated_tokens": 1277,
+      "insn_count": 11,
+      "priority_tags": []
+    },
+    {
+      "function_id": "0xf800db54",
+      "function_name": "FUN_f800db54",
+      "system_chars": 1994,
+      "user_chars": 3087,
+      "estimated_tokens": 1270,
+      "insn_count": 11,
+      "priority_tags": []
+    },
+    {
+      "function_id": "0xf800b504",
+      "function_name": "FUN_f800b504",
+      "system_chars": 1994,
+      "user_chars": 2997,
+      "estimated_tokens": 1247,
+      "insn_count": 10,
+      "priority_tags": []
+    },
+    {
+      "function_id": "0xf8008e20",
+      "function_name": "FUN_f8008e20",
+      "system_chars": 1994,
+      "user_chars": 2716,
+      "estimated_tokens": 1177,
+      "insn_count": 8,
+      "priority_tags": []
+    },
+    {
+      "function_id": "0xf800c194",
+      "function_name": "FUN_f800c194",
+      "system_chars": 1994,
+      "user_chars": 2679,
+      "estimated_tokens": 1168,
+      "insn_count": 8,
+      "priority_tags": []
+    },
+    {
+      "function_id": "0xf800cc00",
+      "function_name": "FUN_f800cc00",
+      "system_chars": 1994,
+      "user_chars": 2762,
+      "estimated_tokens": 1189,
+      "insn_count": 8,
+      "priority_tags": []
+    },
+    {
+      "function_id": "0xf8004e44",
+      "function_name": "FUN_f8004e44",
+      "system_chars": 1994,
+      "user_chars": 2536,
+      "estimated_tokens": 1132,
+      "insn_count": 6,
+      "priority_tags": []
+    },
+    {
+      "function_id": "0xf800b9e0",
+      "function_name": "FUN_f800b9e0",
+      "system_chars": 1994,
+      "user_chars": 2622,
+      "estimated_tokens": 1154,
+      "insn_count": 6,
+      "priority_tags": []
+    },
+    {
+      "function_id": "0xf800f80c",
+      "function_name": "FUN_f800f80c",
+      "system_chars": 1994,
+      "user_chars": 2527,
+      "estimated_tokens": 1130,
+      "insn_count": 6,
+      "priority_tags": []
+    },
+    {
+      "function_id": "0xf800bd9c",
+      "function_name": "FUN_f800bd9c",
+      "system_chars": 1994,
+      "user_chars": 2314,
+      "estimated_tokens": 1077,
+      "insn_count": 4,
+      "priority_tags": []
+    },
+    {
+      "function_id": "0xf800c458",
+      "function_name": "FUN_f800c458",
+      "system_chars": 1994,
+      "user_chars": 2299,
+      "estimated_tokens": 1073,
+      "insn_count": 4,
+      "priority_tags": []
+    }
+  ]
+}

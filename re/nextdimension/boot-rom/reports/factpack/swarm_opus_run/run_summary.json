@@ -1,0 +1,30 @@
+{
+  "run_id": "515c1f8e",
+  "model": "claude-opus-4-6",
+  "backend": "max",
+  "stats": {
+    "claims": 29,
+    "verified_accept": 1,
+    "verified_revise": 24,
+    "verified_reject": 0,
+    "gatekeeper_passed": 26,
+    "gatekeeper_failed": 2,
+    "total_tokens_in": 312861,
+    "total_tokens_out": 119417
+  },
+  "results": [
+    {
+      "function_id": "0xfff0048c",
+      "status": "gatekeeper_failed",
+      "reasons": [
+        "Confidence 88 exceeds 50 ceiling for unresolved-bri function"
+      ]
+    },
+    {
+      "function_id": "0xfff0037c",
+      "status": "gatekeeper_failed",
+      "reasons": [
+        "Confidence 82 exceeds 50 ceiling for unresolved-bri function"
+      ]
+    },
+    

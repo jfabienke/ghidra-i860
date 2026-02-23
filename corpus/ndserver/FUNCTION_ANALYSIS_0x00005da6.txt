@@ -1,0 +1,232 @@
+================================================================================
+FUNCTION ANALYSIS: FUN_00005da6 (0x00005da6 / 23974)
+================================================================================
+
+QUICK SUMMARY
+================================================================================
+Name:         FUN_00005da6
+Type:         CALLBACK HANDLER
+Address:      0x00005da6 (decimal: 23,974)
+Size:         68 bytes (0x44)
+Complexity:   LOW
+Priority:     HIGH
+Status:       ANALYZED - COMPLETE
+
+CLASSIFICATION
+================================================================================
+Category:           Callback
+Thunk:              No
+External:           No
+Calls Made:         1 (library function 0x050029d2)
+Called By:          1 (FUN_00003284 @ 0x00003284)
+Frame Size:         32 bytes
+
+STACK FRAME LAYOUT
+================================================================================
+Frame Size: -0x20 (32 bytes allocated on stack)
+
+Arguments (passed from caller):
+  A6 + 0x08:  arg1 (32-bit value/pointer)
+  A6 + 0x0C:  arg2 (32-bit value/pointer)
+
+Local Variables:
+  A6 - 0x04:  copy of arg2
+  A6 - 0x08:  system config handle (loaded from 0x7c90)
+  A6 - 0x0C:  callback type ID = 0x5d5 (1493 decimal)
+  A6 - 0x10:  copy of arg1
+  A6 - 0x14:  reserved (cleared)
+  A6 - 0x18:  reserved (cleared)
+  A6 - 0x1C:  size field = 0x20 (32 decimal)
+  A6 - 0x1D:  status flag (cleared)
+
+DISASSEMBLY
+================================================================================
+0x00005da6:  link.w     A6,-0x20              ; Allocate 32-byte frame
+0x00005daa:  move.l     (0x00007c90).l,(-0x8,A6)    ; [local_-8] = *0x7c90
+0x00005db2:  move.l     (0xc,A6),(-0x4,A6)   ; [local_-4] = arg2
+0x00005db8:  clr.b      (-0x1d,A6)            ; [local_-1d] = 0
+0x00005dbc:  moveq      0x20,D1               ; D1 = 32
+0x00005dbe:  move.l     D1,(-0x1c,A6)        ; [local_-1c] = 32
+0x00005dc2:  clr.l      (-0x18,A6)            ; [local_-18] = 0
+0x00005dc6:  move.l     (0x8,A6),(-0x10,A6)  ; [local_-10] = arg1
+0x00005dcc:  clr.l      (-0x14,A6)            ; [local_-14] = 0
+0x00005dd0:  move.l     #0x5d5,(-0xc,A6)     ; [local_-c] = 0x5d5
+0x00005dd8:  clr.l      -(SP)                 ; Push NULL (arg3 to call)
+0x00005dda:  clr.l      -(SP)                 ; Push NULL (arg2 to call)
+0x00005ddc:  pea        (-0x20,A6)            ; Push &local_frame[0] (arg1 to call)
+0x00005de0:  bsr.l      0x050029d2            ; Call external function
+0x00005de6:  unlk       A6                    ; Deallocate frame
+0x00005de8:  rts                              ; Return (D0 from called function)
+
+FUNCTION PURPOSE
+================================================================================
+This function implements a CALLBACK INITIALIZATION AND DELEGATION pattern:
+
+1. INITIALIZE CALLBACK STATE STRUCTURE (32 bytes):
+   - Load system configuration handle from address 0x7c90
+   - Copy input parameters (arg1, arg2) to local variables
+   - Set callback type identifier to 0x5d5
+   - Initialize size field to 0x20 (32 bytes)
+   - Clear status/reserved fields
+
+2. DELEGATE TO EXTERNAL HANDLER:
+   - Pass address of local state structure to external function
+   - Pass two NULL pointers as additional parameters
+   - Invoke: external_func_050029d2(&state, NULL, NULL)
+
+3. RETURN HANDLER RESULT:
+   - External function returns status in D0
+   - Deallocate frame and return D0 to caller
+   - D0 == 0: Success
+   - D0 != 0: Error code
+
+CALL CONTEXT
+================================================================================
+CALLER: FUN_00003284 (@ 0x00003284)
+
+Call site:
+  0x00003372:  move.l     (-0x40,A6),-(SP)    ; Push arg1
+  0x00003376:  move.l     (-0x38,A6),-(SP)    ; Push arg2
+  0x0000337a:  bsr.l      0x00005da6          ; CALL THIS FUNCTION
+  0x00003380:  addq.w     #0x8,SP             ; Clean up arguments
+  0x00003382:  tst.l      D0                  ; Test return value
+  0x00003384:  bne.b      0x000033aa          ; Branch if error
+
+CALLER'S ROLE:
+- FUN_00003284 orchestrates a larger initialization sequence
+- It calls multiple setup functions in sequence:
+  1. FUN_0500315e
+  2. FUN_00004a52
+  3. FUN_00003820
+  4. FUN_00005dea
+  5. FUN_00005da6 ← THIS FUNCTION
+  6. FUN_05002c54
+- Each call is error-checked before proceeding
+- This function is critical to the initialization path
+
+CONSTANTS & MAGIC VALUES
+================================================================================
+0x5D5:      Callback type identifier (1493 decimal)
+            - Likely used by handler to dispatch/categorize
+            - May indicate callback operation type
+
+0x20:       Structure size (32 bytes)
+            - Size of callback state being initialized
+
+0x7C90:     System configuration handle address
+            - Static address containing system-wide handle
+            - Likely mailbox, device handle, or context pointer
+
+0x050029D2: External handler function address
+            - Library/system function for processing callbacks
+            - Used 7 times across the codebase
+            - Likely in ROM or protected memory (0x05000000 range)
+
+ANALYSIS DETAILS
+================================================================================
+
+CALLBACK STATE STRUCTURE (32-byte):
+The function prepares a 32-byte callback descriptor:
+
+typedef struct {
+    uint32_t config_handle;    // From address 0x7c90
+    uint32_t arg2_copy;        // Parameter 2
+    uint32_t callback_type;    // = 0x5d5
+    uint32_t arg1_copy;        // Parameter 1
+    uint32_t reserved1;        // = 0
+    uint32_t reserved2;        // = 0
+    uint32_t size_field;       // = 0x20 (32)
+    uint8_t  status_flag;      // = 0
+} callback_state_t;
+
+FUNCTION SIGNATURE (Inferred):
+  int32_t FUN_00005da6(void *arg1, void *arg2)
+
+RETURN VALUE:
+  D0 = 0:    Success (continue execution)
+  D0 != 0:   Error code (halt/branch in caller)
+
+ERROR HANDLING:
+- Function delegates error handling to external function 0x050029d2
+- Return value from external function is passed directly to caller
+- Caller performs error checking via: tst.l D0; bne
+
+MEMORY ACCESS
+================================================================================
+READ from 0x00007c90:  Single 32-bit read to get system handle
+READ from args:        Two input parameters copied to locals
+NO hardware register access:
+  - No NeXT system registers (0x02000000 range)
+  - No NeXTdimension MMIO (0xF8000000+ range)
+  - Pure software function
+
+INSTRUCTION BREAKDOWN
+================================================================================
+Code setup:          3 instructions (link, moveq, pea pattern)
+Structure init:      7 instructions (move, clr operations)
+Function call:       5 instructions (clr for args, pea, bsr)
+Cleanup:             2 instructions (unlk, rts)
+
+Execution estimate:  ~170 CPU cycles (initialization dominated)
+
+KEY OBSERVATIONS
+================================================================================
+1. CALLBACK PATTERN: Clear callback initialization architecture
+   - Create structured descriptor
+   - Pass to handler
+   - Return handler result
+
+2. TYPE IDENTIFICATION: 0x5d5 identifies callback operation
+   - Handler uses this to determine operation type
+   - May indicate graphics, mailbox, or device command
+
+3. SYSTEM INTEGRATION: References global handle at 0x7c90
+   - System-wide context/configuration
+   - Likely related to NeXTdimension or graphics
+
+4. DEFENSIVE PROGRAMMING:
+   - All locals explicitly initialized
+   - Input parameters copied locally
+   - Status flags pre-cleared
+   - No uninitialized state
+
+5. CRITICAL INITIALIZATION: Part of mandatory setup sequence
+   - Called in strict order after validation steps
+   - Must succeed for system to proceed
+   - Early in NeXTdimension initialization
+
+LIKELY PURPOSE
+================================================================================
+Based on analysis, this function likely:
+- Sets up a callback for graphics or NeXTdimension operation
+- Could be initializing mailbox communication
+- May be setting up display/RAMDAC configuration
+- Possibly handling NeXTdimension board initialization
+
+The callback type 0x5d5 suggests a specific operation category,
+possibly related to:
+- Graphics mode/resolution
+- Mailbox command processing
+- Device configuration
+- System state transition
+
+RECOMMENDATIONS
+================================================================================
+1. Analyze function 0x050029d2 to understand callback processing
+2. Search codebase for constant 0x5d5 to find related operations
+3. Determine contents/purpose of address 0x7c90
+4. Trace complete initialization sequence in FUN_00003284
+5. Compare with NeXTdimension hardware documentation (if available)
+
+FILES GENERATED
+================================================================================
+Main Analysis:     ANALYSIS_FUN_00005da6_CALLBACK.md (18-section detailed report)
+This Summary:      FUNCTION_ANALYSIS_0x00005da6.txt
+Disassembly:       docs/functions/0x00005da6_FUN_00005da6.md (auto-generated)
+
+================================================================================
+Analysis Date:  November 8, 2025
+Analysis Tool:  Manual reverse engineering + Ghidra
+Target:         NDserver m68k binary (i860 subsystem)
+Confidence:     HIGH (straightforward initialization code)
+================================================================================

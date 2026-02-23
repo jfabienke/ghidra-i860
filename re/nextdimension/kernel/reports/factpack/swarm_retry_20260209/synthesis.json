@@ -1,0 +1,157 @@
+{
+  "subsystems": [
+    {
+      "name": "Unreachable Dead Code Island",
+      "purpose": "Isolated code fragments with zero callers, hardwired-zero register sinks, and no return mechanisms\u2014likely compiler artifacts, test stubs, or corrupted disassembly boundaries",
+      "members": [
+        {
+          "entry": "0xf8008274",
+          "name": "FUN_f8008274",
+          "role_in_subsystem": "Byte-accessor validation with MMIO side-effect; bri r3 dispatch unresolved (dynamic_entry); 7/9 loads to r0 sink; no callers"
+        },
+        {
+          "entry": "0xf8008ee4",
+          "name": "FUN_f8008ee4",
+          "role_in_subsystem": "MMIO test sequence with PostScript token port write (0x401C); 6 MMIO operations across 3 base registers; bri r2 unresolved; ABI violations (r1/r2 misuse); no callers"
+        },
+        {
+          "entry": "0xf800f70c",
+          "name": "FUN_f800f70c",
+          "role_in_subsystem": "Obfuscated thunk or corrupt data: 6/11 instructions write to r0 sink; bri r2 dispatch through caller-saved register; uses r1 (return address) as load base; no callers"
+        },
+        {
+          "entry": "0xf8008098",
+          "name": "FUN_f8008098",
+          "role_in_subsystem": "MMIO loopback pattern (0x801E read\u2192write) with 16/18 sink writes; no control flow; no callers; resembles decryption stub or padding"
+        },
+        {
+          "entry": "0xf80014c4",
+          "name": "FUN_f80014c4",
+          "role_in_subsystem": "Diagnostic stub performing nonsensical operations: 4 loads to r0, ixfr to f0 (hardwired zero), MMIO 0x401C read discarded; no return; no callers"
+        },
+        {
+          "entry": "0xf800cef0",
+          "name": "FUN_f800cef0",
+          "role_in_subsystem": "Orphan MMIO sequence with trap terminator; 3 MMIO reads (0xFFFF9184, 0xFFFF801C, r15 autoincrement), dead FP writes, no callers"
+        },
+        {
+          "entry": "0xf800a0bc",
+          "name": "FUN_f800a0bc",
+          "role_in_subsystem": "MMIO flush (0x401E) followed by 5 architectural sink operations (f0/r0); FSR write only persistent effect; no callers; abnormal termination"
+        },
+        {
+          "entry": "0xf8000348",
+          "name": "FUN_f8000348",
+          "role_in_subsystem": "NOP sled: 17 identical ld.b r0(r0),r0 instructions; 68-byte alignment padding or NULL-pointer load pattern; no callers"
+        },
+        {
+          "entry": "0xf800db54",
+          "name": "FUN_f800db54",
+          "role_in_subsystem": "Dead load sequence: 10/11 loads to r0/f0 sinks, single load to r24 never used; no control flow; no callers"
+        },
+        {
+          "entry": "0xf800bb60",
+          "name": "FUN_f800bb60",
+          "role_in_subsystem": "Dead code fragment: 10 discarded loads, single st.b r0,0x68(r0) writing zero to fixed address; no callers; no return"
+        },
+        {
+          "entry": "0xf800bd9c",
+          "name": "FUN_f800bd9c",
+          "role_in_subsystem": "FP computation fragment: 2x fld.d with 1 to f0f1 sink, 1 to f8f9 (caller-saved); 3/4 instructions have no effect; no callers; no exit"
+        }
+      ],
+      "interfaces": [],
+      "confidence": 25,
+      "evidence_summary": "All 11 functions share critical defects: zero callers in promoted execution set (60 functions, 2,536 instructions), high percentage of writes to hardwired-zero registers (r0, f0, f1), missing or invalid return mechanisms (no bri r1, abnormal fall-through, trap without context), and patterns inconsistent with known firmware structures (no r15 GState, no PostScript dispatch chains, no ABI-conformant prologues). Despite curated confidence sources, these functions appear unreachable from normal execution paths. Confidence capped at 25 due to lack of call graph integration and semantic incoherence (75-95% of instructions produce no observable effects)."
+    }
+  ],
+  "cross_subsystem_flows": [],
+  "data_model_hypotheses": [
+    {
+      "structure_name": "MMIO_Control_Block",
+      "base_register": "r7 or r12",
+      "fields": [
+        {
+          "offset": "0x401C",
+          "size": 1,
+          "access_pattern": "both",
+          "interpretation": "PostScript token FIFO port (read=fetch token, write=inject token); accessed in FUN_f8008ee4, FUN_f80014c4"
+        },
+        {
+          "offset": "0x401E",
+          "size": 1,
+          "access_pattern": "write",
+          "interpretation": "Cache flush or buffer synchronization control; flush instruction in FUN_f800a0bc"
+        },
+        {
+          "offset": "0x801E",
+          "size": 1,
+          "access_pattern": "both",
+          "interpretation": "Loopback register or diagnostic port; read+write pair in FUN_f8008098"
+        },
+        {
+          "offset": "-0x3814",
+          "size": 1,
+          "access_pattern": "write",
+          "interpretation": "High-space MMIO register (0xFFFFc7ec + r7); written 3x in FUN_f8008ee4"
+        },
+        {
+          "offset": "-0x3912",
+          "size": 1,
+          "access_pattern": "write",
+          "interpretation": "Second high-space MMIO offset (0xFFFFc6ee + r7); written in FUN_f8008ee4"
+        },
+        {
+          "offset": "-0x91",
+          "size": 4,
+          "access_pattern": "read",
+          "interpretation": "MMIO with autoincrement (fld.l r15++ pattern); FP domain access in FUN_f8008ee4, FUN_f800cef0"
+        }
+      ],
+      "evidence_count": 6,
+      "confidence": 35
+    },
+    {
+      "structure_name": "ByteTable_Dispatch_Structure",
+      "base_register": "r4 or r5",
+      "fields": [
+        {
+          "offset": "0x0 to 0x78+",
+          "size": 1,
+          "access_pattern": "read",
+          "interpretation": "Byte lookup table accessed via register-indexed loads (r14(r4), r3(r5)); 9 consecutive byte loads in FUN_f8008274 suggest validation/classification table"
+        }
+      ],
+      "evidence_count": 9,
+      "confidence": 20
+    }
+  ],
+  "control_flow_summary": "The analyzed subset represents an execution-unreachable code island within the 795 KB kernel firmware. All 11 functions exhibit zero incoming call edges, preventing static determination of entry conditions. The dominant pattern is indirect branch (bri) through runtime-computed targets (r2, r3) classified as 'dynamic_entry' by Phase 2 analysis, confirming that dispatch addresses are ALU-chain computed and unresolvable without emulation. The absence of PostScript dispatch signatures (r15 GState, xorh 0x10c6 hash, and 0xe827 classify) and MMIO token reads (0x401C) outside isolated test sequences suggests these functions are not integrated into the primary threaded interpreter control flow. High sink-register write density (70-95% of instructions to r0/f0) combined with missing return mechanisms indicates these are either: (1) compiler/linker artifacts from dead code elimination failures, (2) embedded diagnostic stubs stripped from production call graph, or (3) corrupted disassembly boundaries at fat binary construction seams (m68k/x86 object overlap at 0x017CB8, 0x03DCB8, 0x05DCB8). The firmware's execution model remains opaque at this coverage level (1.4% of binary, 60/unknown total functions).",
+  "unresolved_runtime_dependencies": [
+    "Dynamic resolution of bri targets in FUN_f8008274 (r3), FUN_f8008ee4 (r2), FUN_f800f70c (r2), FUN_f8008098 (implicit fall-through target)",
+    "Determination of r7/r12/r15 MMIO base pointer initialization sources (no observed writes in analyzed functions)",
+    "Runtime values of r1/r2/r3 at function entries (ABI violations prevent static inference)",
+    "Mapping of MMIO addresses to NeXTdimension hardware registers: 0x401C (token FIFO), 0x401E (flush control), 0x801E (loopback), 0xFFFF9184 (quad read), 0xFFFF801C (trap delay slot), 0xFFFFC0EE (high-space peripheral)",
+    "Validation of address 0x0 memory accessibility (ld.b r0(r0),r0 in FUN_f8000348 and FUN_f80014c4)",
+    "Identification of byte table structures at r4/r5 bases (9-load sequence in FUN_f8008274)",
+    "Confirmation of FSR (floating-point status register) intended configuration in FUN_f800a0bc",
+    "Discovery of function pointer tables or indirect call vectors referencing these 11 addresses (potential dynamic entry points)"
+  ],
+  "coverage_assessment": {
+    "functions_analyzed": 11,
+    "subsystems_identified": 1,
+    "functions_unclassified": 11,
+    "key_gaps": [
+      "No call graph edges prevent subsystem boundary identification\u2014all functions are isolated",
+      "No known firmware patterns (PostScript dispatch, r15 GState manipulation, MMIO 0x401C token read chains) matched in analyzed set",
+      "Zero callers in 60-function promoted execution set suggests analyzed functions are outside main kernel execution paths",
+      "MMIO register semantics unknown: 6 distinct MMIO offsets accessed but not cross-referenced with NeXTdimension hardware documentation",
+      "Indirect branch resolution blocked: 5 bri instructions with runtime-computed targets prevent control flow reconstruction",
+      "Data structure layouts unknown: byte table accesses, FP loads, and register-indexed memory operations lack type annotations",
+      "ABI conformance violations (r1/r2 misuse, missing returns, caller-saved register assumptions) prevent standard protocol inference",
+      "Missing: initialization sequences, main dispatcher entry point, interrupt vector table, known PostScript operator implementations",
+      "Curated confidence sources conflict with static analysis findings (no callers + no returns + sink writes = dead code, but flagged as execution-proven)",
+      "Requires: emulation traces, hardware register map, m68k/x86 relocation table analysis, Mach-O section boundary verification"
+    ]
+  }
+}

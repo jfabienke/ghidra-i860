@@ -796,36 +796,86 @@ public class I860Analyze extends GhidraScript {
 
     // Decode missing delay-slot instructions at code/data boundaries.
     // i860 delay-slot opcodes (raw decode):
-    //   br(0x1A), call(0x1B), bc.t(0x1D), bnc.t(0x1F),
+    //   br(0x1A), call(0x1B), bc(0x1C), bc.t(0x1D), bnc(0x1E), bnc.t(0x1F),
     //   bla(0x2D), bri/ret(0x10), calli(0x13 escop=2)
     private int fixOrphanDelaySlots() {
         int fixed = 0;
+        List<Address> pruneBranches = new ArrayList<>();
         InstructionIterator ii = listing.getInstructions(true);
         while (ii.hasNext()) {
             if (monitor.isCancelled()) break;
             Instruction insn = ii.next();
             try {
-                int word = memory.getInt(insn.getAddress());
-                if (!hasDelaySlot(word)) continue;
+                if (!hasDelaySlot(insn)) continue;
 
                 Address nextAddr = insn.getAddress().add(4);
                 if (!analysisSet.contains(nextAddr)) continue;
                 if (!isCandidateAddress(nextAddr.getOffset())) continue;
                 if (listing.getInstructionAt(nextAddr) != null) continue;
 
+                // If delay-slot bytes are currently typed as data, clear them first.
+                // Disassembler won't always overwrite existing data definitions.
+                try {
+                    clearListing(nextAddr, nextAddr.add(3));
+                } catch (Exception e) {}
+
                 // Decode single instruction at PC+4 (no flow following — just the delay slot)
                 AddressSet singleInsn = new AddressSet(nextAddr, nextAddr.add(3));
                 DisassembleCommand cmd = new DisassembleCommand(nextAddr, singleInsn, false);
                 cmd.applyTo(currentProgram);
-                if (listing.getInstructionAt(nextAddr) != null) fixed++;
+                if (listing.getInstructionAt(nextAddr) == null) {
+                    // Fallback: disassemble from the branch itself so normal flow-following
+                    // can materialize the delay slot at PC+4.
+                    AddressSet branchWindow = new AddressSet(insn.getAddress(), nextAddr.add(3));
+                    DisassembleCommand flowCmd =
+                        new DisassembleCommand(insn.getAddress(), branchWindow, true);
+                    flowCmd.applyTo(currentProgram);
+                }
+                if (listing.getInstructionAt(nextAddr) != null) {
+                    fixed++;
+                } else {
+                    // If we still cannot decode the delay slot, this is usually a false
+                    // positive branch decoded from data. Prune it to avoid persistent pcode
+                    // errors from impossible delay-slot references.
+                    pruneBranches.add(insn.getAddress());
+                }
+            } catch (Exception e) {}
+        }
+
+        for (Address branchAddr : pruneBranches) {
+            try {
+                clearListing(branchAddr, branchAddr.add(3));
             } catch (Exception e) {}
         }
         return fixed;
     }
 
-    private static boolean hasDelaySlot(int word) {
+    private boolean hasDelaySlot(Instruction insn) {
+        try {
+            if (insn.getDelaySlotDepth() > 0) return true;
+        } catch (Exception e) {}
+
+        String mnem = insn.getMnemonicString();
+        if (mnem != null) {
+            String m = mnem.toLowerCase(Locale.ROOT);
+            if (m.equals("br") || m.equals("call") || m.equals("bc") || m.equals("bc.t") ||
+                m.equals("bnc") || m.equals("bnc.t") || m.equals("bla") || m.equals("bri") ||
+                m.equals("ret") || m.equals("calli")) {
+                return true;
+            }
+        }
+
+        try {
+            return hasDelaySlotWord(memory.getInt(insn.getAddress()));
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    private static boolean hasDelaySlotWord(int word) {
         int op6 = (word >>> 26) & 0x3F;
-        if (op6 == 0x1A || op6 == 0x1B || op6 == 0x1D || op6 == 0x1F ||
+        if (op6 == 0x1A || op6 == 0x1B || op6 == 0x1C || op6 == 0x1D ||
+            op6 == 0x1E || op6 == 0x1F ||
             op6 == 0x2D || op6 == 0x10) {
             return true;
         }

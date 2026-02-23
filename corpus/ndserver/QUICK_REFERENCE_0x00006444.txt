@@ -1,0 +1,316 @@
+================================================================================
+QUICK REFERENCE: FUN_00006444 (0x00006444)
+Hardware Access Callback Wrapper - Errno/Error Handler Family
+================================================================================
+
+ADDRESS          0x00006444
+DECIMAL          25668
+SIZE             48 bytes (0x30)
+ARCHITECTURE     Motorola 68040 (m68k)
+CLASSIFICATION   Hardware access callback (error-state capture)
+PATTERN          Last of 6 errno wrapper functions
+
+================================================================================
+DISASSEMBLY (CLEAN)
+================================================================================
+
+0x6444:  link.w     A6,0x0
+0x6448:  move.l     A2,-(SP)
+0x644a:  movea.l    (0xc,A6),A2
+0x644e:  move.l     (0x18,A6),-(SP)
+0x6452:  move.l     (0x14,A6),-(SP)
+0x6456:  move.l     (0x10,A6),-(SP)
+0x645a:  bsr.l      0x050028ac         ← Library call
+0x6460:  moveq      -0x1,D1
+0x6462:  cmp.l      D0,D1
+0x6464:  bne.b      0x6646c            ← Branch if success
+0x6466:  move.l     (0x040105b0).l,(A2)  ← Hardware read (error path)
+0x646c:  movea.l    (-0x4,A6),A2
+0x6470:  unlk       A6
+0x6472:  rts
+
+================================================================================
+PSEUDOCODE
+================================================================================
+
+void FUN_00006444(
+    unknown arg1,                    /* Not directly used */
+    uint32_t *error_context,         /* Loaded into A2 */
+    uint32_t arg3,                   /* Library arg 1 */
+    uint32_t arg4,                   /* Library arg 2 */
+    uint32_t arg5                    /* Library arg 3 */
+) {
+    int result = library_func_050028ac(arg3, arg4, arg5);
+
+    if (result == -1) {              /* Error case */
+        *error_context = READ_HARDWARE(0x040105b0);
+    }
+    return;
+}
+
+================================================================================
+CONTROL FLOW
+================================================================================
+
+SUCCESS PATH (result != -1)          ERROR PATH (result == -1)
+├─ Call library function             ├─ Call library function
+├─ D0 = result (≥0)                  ├─ D0 = -1
+├─ Compare: D0 != -1 → TRUE          ├─ Compare: D0 != -1 → FALSE
+├─ Branch: Skip error handling       ├─ Fall through to hardware read
+└─ Return                            ├─ Read 0x040105b0 → [A2]
+                                     └─ Return
+
+================================================================================
+PARAMETERS (Stack Frame)
+================================================================================
+
+Offset   Type         Name              Purpose
+A6+8     unknown      arg1              First parameter (unused)
+A6+12    uint32_t*    error_state       Output pointer → A2
+A6+16    uint32_t     arg3              Library argument 1
+A6+20    uint32_t     arg4              Library argument 2
+A6+24    uint32_t     arg5              Library argument 3
+
+================================================================================
+HARDWARE ACCESS
+================================================================================
+
+Register:        0x040105b0 (SYSTEM_DATA)
+Type:            Status/Configuration register (32-bit)
+Access:          READ (conditional, error path only)
+Condition:       Library call returned -1
+Destination:     [A2] (caller-provided buffer)
+Purpose:         Capture system state for error diagnostics
+
+================================================================================
+REGISTER CHANGES
+================================================================================
+
+Entry:
+  A6 = undefined (caller's frame)
+  A2 = original value
+  D0 = undefined
+
+After link.w:
+  A6 = SP (new frame)
+  SP = SP - 0 (no locals)
+
+After movel A2,-(SP):
+  A2 saved on stack
+  SP = SP - 4
+
+After moveal (0xc,A6),A2:
+  A2 = [A6+12] (error context pointer)
+
+After library call:
+  D0 = library result
+  A2 = unchanged (callee-save)
+
+After moveq/-1,D1 & cmp.l:
+  D1 = -1 (0xFFFFFFFF)
+  CCR.Z = 1 if D0==-1 (error)
+  CCR.Z = 0 if D0!=-1 (success)
+
+On error path (0x6466):
+  [A2] = value from 0x040105b0
+  A2, D0, D1 unchanged
+
+Exit (rts):
+  A2 = restored to original
+  A6 = restored to caller's value
+  SP = restored to caller's frame
+  D0 = library result (preserved for caller)
+
+================================================================================
+CALLING CONVENTIONS
+================================================================================
+
+Called By:       FUN_00006d24 @ 0x00006da2 (command dispatcher)
+Calls:           0x050028ac (unknown library function)
+
+Arguments:       Passed via stack (3 library arguments + 2 wrapper args)
+Return Value:    Void (nominal), D0 contains library result
+Side Effects:    May write to [A2] if error occurs
+Registers:       A2 saved/restored (callee-save)
+Stack:           Balanced (proper use of linkw/unlk)
+
+================================================================================
+ISSUES & RISKS
+================================================================================
+
+Issue 1 (HIGH):  Unvalidated output pointer
+  - A2 not checked before write at 0x6466
+  - NULL pointer or invalid address → crash
+  - Fix: Add pointer validation
+
+Issue 2 (MEDIUM): Unchecked hardware read
+  - Register 0x040105b0 not verified accessible
+  - Bus error if unmapped → crash
+  - Fix: Verify register availability or add exception handler
+
+Issue 3 (MEDIUM): Unknown library function
+  - Function 0x050028ac not identified
+  - Cannot verify correctness
+  - Fix: Disassemble or obtain library symbols
+
+Issue 4 (LOW):   Hardcoded addresses
+  - Register 0x040105b0 hardcoded (no symbol)
+  - Magic offset values (0x0c, 0x10, 0x14, 0x18, 0x24)
+  - Fix: Use symbolic names or documentation
+
+Issue 5 (LOW):   Return semantics unclear
+  - Void return hides error status from caller
+  - Caller must check D0 or *error_context
+  - Fix: Document expected caller behavior
+
+================================================================================
+COMPARISON WITH SIMILAR FUNCTIONS
+================================================================================
+
+Address  Size  Library Call    Pattern
+0x6318   40    0x0500229a      close() wrapper
+0x6340   40    0x050028ac      unknown
+0x6398   40    0x050029fc      unknown
+0x63c0   40    0x05002a4c      unknown
+0x63e8   48    0x05002aa6      unknown
+0x6414   48    0x05002a7c      unknown
+0x6444   48    0x050028ac      ← THIS (last in family)
+
+All follow identical pattern:
+  1. Save A2
+  2. Load error context pointer
+  3. Push 3 library arguments
+  4. Call library function
+  5. Check for -1
+  6. Read 0x040105b0 on error
+  7. Restore & return
+
+Difference: Larger functions (48 vs 40 bytes) - may have more args or instructions
+
+================================================================================
+CONTEXT & PURPOSE
+================================================================================
+
+Location:    NeXTdimension firmware initialization sequence
+Role:        Error handling for critical library call
+Used By:     Command validator (FUN_00006d24)
+Timing:      Executes after command validation passes
+Failure:     If library call fails, captures hardware state for diagnosis
+
+Why Hardware State Capture?
+  - System may be in unstable state at failure
+  - Hardware register 0x040105b0 reflects system condition
+  - Enables offline diagnostics of boot failures
+  - Provides evidence of system state at error time
+
+================================================================================
+KEY INSTRUCTIONS EXPLAINED
+================================================================================
+
+0x645a:  bsr.l 0x050028ac       Branch to library function (long)
+         3 arguments on stack
+         Result returned in D0
+         Returns to 0x6460
+
+0x6460:  moveq -1,D1            Load error sentinel (-1 = 0xFFFFFFFF)
+         Used for comparison
+
+0x6462:  cmp.l D0,D1            Compare D0 vs D1
+         D1 - D0 → condition codes
+         Sets Z flag if equal (both -1)
+
+0x6464:  bne.b 0x646c           Branch if NOT equal (success)
+         If D0 != -1 → jump to cleanup
+         If D0 == -1 → fall through to error path
+
+0x6466:  move.l (0x040105b0),(A2)
+         Read 32 bits from 0x040105b0
+         Write to address in A2
+         6 bytes: absolute addressing mode
+         Only executed on error path
+
+================================================================================
+STACK LAYOUT (KEY POINTS)
+================================================================================
+
+At Entry:
+  [Ret Addr from caller]
+  [Arg 1]
+  [Arg 2 - error_context pointer]
+  [Arg 3 - library arg 1]
+  [Arg 4 - library arg 2]
+  [Arg 5 - library arg 3]
+  [saved A6] ← A6 points here (after linkw)
+
+After Prologue:
+  [... all above ...]
+  [saved A6]
+  [saved A2] ← SP points here
+
+Before Library Call:
+  [... args to caller ...]
+  [saved A6]
+  [saved A2]
+  [lib arg 3]
+  [lib arg 4]
+  [lib arg 5] ← SP (for library function)
+
+Library Function View:
+  [Return addr 0x6460]
+  [lib arg 3]
+  [lib arg 4]
+  [lib arg 5]
+
+Exit (after unlk):
+  [Return addr to caller] ← SP points here
+  A6 = caller's frame
+
+================================================================================
+RECOMMENDATIONS
+================================================================================
+
+PRIORITY 1 (Safety):
+  ☐ Validate error context pointer (A2) before write
+  ☐ Identify library function at 0x050028ac
+  ☐ Verify hardware register 0x040105b0 always accessible
+  ☐ Add exception handler for unsafe hardware access
+
+PRIORITY 2 (Documentation):
+  ☐ Create symbolic names for hardcoded addresses
+  ☐ Document error context structure format
+  ☐ Comment library function purpose
+  ☐ Explain return value semantics
+
+PRIORITY 3 (Testing):
+  ☐ Force library call to return -1 (test error path)
+  ☐ Verify hardware state capture to correct address
+  ☐ Test with NULL error context pointer
+  ☐ Compare with other errno wrapper functions
+
+PRIORITY 4 (Enhancement):
+  ☐ Return indication of success/failure
+  ☐ Add parameter validation
+  ☐ Consolidate 6 wrapper functions into 1 parameterized version
+  ☐ Add logging/tracing for errors
+
+================================================================================
+RELATED DOCUMENTATION
+================================================================================
+
+Complete Analysis:      ANALYSIS_0x00006444_COMPREHENSIVE.md
+Function Family:        FUN_00006318, FUN_00006340, FUN_00006398,
+                        FUN_000063c0, FUN_000063e8, FUN_00006414
+Caller:                 FUN_00006d24 (ND_ValidateAndExecuteCommand)
+Hardware Register:      0x040105b0 (SYSTEM_DATA)
+Library Functions:      0x050028ac (unknown)
+
+NeXTdimension Docs:
+  - ROM_ANALYSIS.md
+  - nextdimension_hardware.h
+  - ND_ROM_DISASSEMBLY_ANALYSIS.md
+
+================================================================================
+Generated: November 9, 2025
+Analyzer: Claude Code (Haiku 4.5)
+Binary: NDserver (NeXTdimension Mach-O executable)
+================================================================================

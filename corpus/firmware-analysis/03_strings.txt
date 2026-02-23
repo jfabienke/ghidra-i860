@@ -1,0 +1,696 @@
+le Template" = "Modelo de\nfichero RTF";
+"%d addresses" = "%d direcciones";
+"Untitled" = "Sin t
+"RTF_DRAG_TEMPLATE" = "\"Nombre completo\":\n
+EMail: \"EMail\"\n
+Privado: \"Tel. privado\";\n
+Oficina: \"Tel. oficina\"\n
+FAX: \"Fax\"\n
+\"Direciones\"\n
+\"Informaci
+data.classes
+data.nib
+CompressorProcess = {
+    ACTIONS = {
+    OUTLETS = {
+opField;
+compWindow;
+buttons;
+    SUPERCLASS = BGProcess;
+FirstResponder = {
+    ACTIONS = {
+    SUPERCLASS = Object;
+BGProcess = {
+    ACTIONS = {
+activateProcess:;
+deactivateProcess:;
+    OUTLETS = {
+    SUPERCLASS = Object;
+typedstream
+IBObjectData
+CustomObject
+CompressorProcess
+WindowTemplate
+iiii***@s@
+Responder
+TextField
+TextFieldCell
+ActionCell
+Komprimerar ...
+Helvetica
+ButtonCell
+ff@@#::s
+File's Owner
+Compress
+IBOutletConnector
+IBConnector
+compWindow
+IBControlConnector
+data.classes
+data.nib
+ImageInspector = {
+    OUTLETS = {
+scaleField;
+    SUPERCLASS = Object;
+FirstResponder = {
+    ACTIONS = {
+orderFrontNXColorPanel:;
+    SUPERCLASS = Object;
+typedstream
+IBObjectData
+CustomObject
+ImageInspector
+TextField
+Responder
+TextFieldCell
+ActionCell
+[Klicken Sie auf "Anzeigen". Die Darstellung des Bildes kann einige Zeit in Anspruch nehmen.
+Helvetica
+WindowTemplate
+iiii***@s@
+Bild-Inspektor
+File's Owner
+IBOutletConnector
+IBConnector
+scaleField
+data.classes
+data.nib
+?f/V/U?V?U/
+__PAGEZERO
+__fvmlib_init0
+__fvmlib_init1
+__cstring
+__literal8
+__literal4
+__common
+__meta_class
+__cat_cls_meth
+__cat_inst_meth
+__cls_meth
+__inst_meth
+__message_refs
+__symbols
+__category
+__protocol
+__class_vars
+__instance_vars
+__module_info
+__string_object
+__class_names
+__meth_var_names__OBJC
+__meth_var_types__OBJC
+__cls_refs
+__header
+__LINKEDIT
+/usr/shlib/libMedia_s.A.shlib
+/usr/shlib/libNeXT_s.C.shlib
+/usr/shlib/libIndexing_s.A.shlib
+/usr/shlib/libsys_s.B.shlib
+ExportedSize
+ImageResolution
+GammaCorrection
+overview.pcd
+info.pcd
+Unable to open %s.
+Photo CD:
+PhotoAlbum Version: %s
+PhotoCD Toolkit Version: %d.%d
+InfoPanel
+ImageWindow
+SinglePhotoCD
+JPEGView
+Unable to save file `%s'.
+%s (%d x %d)
+../rights/
+InspectorPanel
+%d %b %Y %H:%M:%S
+sessions
+%d %s in %d %s
+color negative
+color reversal
+color hardcopy
+thermal hardcopy
+B/W negative
+B/W reversal
+B/W hardcopy
+internegative
+synthetic image
+Helvetica
+%s/photo_cd/images/img%04u.pcd
+/etc/mtab
+%s/photo_cd/images
+%s/photo_cd/overview.pcd
+%s/photo_cd/info.pcd
+/photo_cd/overview.pcd
+/photo_cd/info.pcd
+ProgressPanel
+Displaying Image...
+Format Error.
+Parameter Error.
+Version Error.
+Unable to open `%s'.  %s
+PhotoAlbum.nib
+PHOTO_CD
+img####.pcd
+dashArraynullArray
+flushgraphicsdashArraynullArray
+@(#)PROGRAM:PhotoAlbum  PROJECT:PhotoAlbum-2  DEVELOPER:root  BUILT:Fri Oct 21 10:26:23 PDT 1994
+)Copyright 1991, Eastman Kodak Company.
+PCDTK SPARC v1.0FCS
+Controller
+Controller.m
+Overview
+ImageDocument
+OpenPanel
+NXBundle
+Inspector
+ImageDocument.m
+ScrollView
+ImageView
+ImageView.m
+NXCursor
+NXBitmapImageRep
+Pasteboard
+SavePanel
+Inspector.m
+Application
+OverMatrix
+OverMatrix.m
+Overview.m
+ThumbCell
+PhotoCD.m
+ProgressPanel
+ProgressPanel.m
+ButtonCell
+ThumbCell.m
+PhotoAlbum_main.m
+imageSizePref
+exportedSizePref
+gammaSlider
+gammaText
+infoPanel
+inspector
+haveOpenedDocument
+infoAppVersion
+infoToolkitVersion
+initialize
+menuItemUpdate:
+getExportedSize:
+setGammaCorrection:
+gammaCorrection
+imageRes
+setPreferences:
+readPreferences
+openInspectorPanel:
+openInfoPanel:
+setInfoToolkitVersion:
+setInfoAppVersion:
+openPhotoCD:
+openImage:
+appAcceptsAnotherFile:
+appOpenFile:type:
+appDidInit:
+itemList
+cellCount
+cellAt::
+setUpdateAction:forMenu:
+hasSubmenu
+findPhotoCDs
+objectAt:
+initFromPhotoCD:withController:
+registerServicesMenuSendTypes:andReturnTypes:
+setAutoupdate:
+mainMenu
+allocFromDirectory:
+initFromImagePac:withController:
+setPrompt:
+chooseDirectories:
+allowMultipleFiles:
+runModalForTypes:
+filenames
+directory
+runModalForDirectory:file:
+filename
+setStringValue:
+mainBundle
+getPath:forResource:ofType:
+loadNibFile:owner:withNames:
+setBecomeKeyOnlyIfNeeded:
+orderFront:
+setInspectorPanel:
+orderFront
+setFloatValue:
+selectCellAt::
+floatValue
+selectedRow
+isEnabled
+calcTargetForAction:
+validateCommand:
+respondsTo:
+setEnabled:
+scrollView
+imageView
+initFromImagePac:
+loadNibFile:owner:withNames:fromZone:
+setDynamicScrolling:
+setDocument:
+displayImagePac:
+getSize:
+sizeTo::
+borderType
+getFrameSize:forContentSize:horizScroller:vertScroller:borderType:
+sizeWindow::
+setFreeWhenClosed:
+setMiniwindowIcon:
+displayIfNeeded
+makeFirstResponder:
+flushWindow
+makeKeyAndOrderFront:
+closeProgressPanel
+imageSize
+selection
+marchingEntry
+selectedRect
+jpegView
+jpegButton
+jpegSlider
+jpegText
+selectionButton
+mySweepData
+document
+copyrightFile
+zoomOutCursor
+zoomInCursor
+setWindowTitle:
+jpegSliding:
+jpegClicked:
+jpegFactorEntered:
+saveImage:
+superviewSizeChanged:
+windowWillClose:
+windowChanged:
+windowDidBecomeKey:
+windowDidResignKey:
+adjustRect:
+computeSweepRect:fromPoints::
+mouseDown:
+scrollPointToVisible:
+flagsChanged:
+writeSelectionToPasteboard:types:
+validRequestorForSendType:andReturnType:
+keyDown:
+clearAnts
+stopAnts
+restartAnts
+zoomOut:
+canZoomOut
+doZoomOut:
+getImageOffset:
+canZoomIn
+doZoomIn:
+selectAll:
+copyToPasteboard:
+exportImageForRect:
+drawSelf::
+adjustSize
+basename
+acceptsFirstResponder
+initFrame:
+findImageNamed:
+initFromImage:
+setHotSpot:
+addToEventMask:
+allocateGState
+getFrame:
+getFrameRect:forContentRect:style:
+setMaxSize:
+delegate
+imageFromPac:atRes:info:
+bytesPerRow
+initData:pixelsWide:pixelsHigh:bitsPerSample:samplesPerPixel:hasAlpha:isPlanar:colorSpace:bytesPerRow:bitsPerPixel:
+setSize:
+writeTIFF:
+declareTypes:num:owner:
+writeType:fromStream:
+newName:
+convertPoint:fromView:
+imageFromPac:atRes:
+disableFlushWindow
+getVisibleRect:
+scrollPoint:
+reenableFlushWindow
+lockFocus
+unlockFocus
+scrollRectToVisible:
+currentCursor
+getNextEvent:
+setEventMask:
+contentView
+convertSize:fromView:
+setAutoresizeSubviews:
+setRequiredFileType:
+setAccessoryView:
+intValue
+writeTIFF:usingCompression:andFactor:
+writeTIFF:usingCompression:
+setIntValue:
+setTitle:
+printPSCode:
+diskInspectorPane
+imageInspectorPane
+installedPane
+inspectedWindow
+container
+signature
+revision
+serialNumber
+createTime
+sessionInfo
+piwVersion
+magnification
+mediaType
+scanTime
+imageModTime
+copyrightText
+copyrightButton
+activeOverview
+activeImageView
+currentPanel
+isUpdating
+windowDidUpdate:
+reflectChoiceOfPane::
+displayCopyrightFile:
+displayImageInfo:
+displayDiskInfo:
+readInfo:
+setTextColor:
+setTransparent:
+mainWindow
+workspace
+openFile:
+removeFromSuperview
+addSubview:
+getBounds:
+moveTo::
+acceptsFirstMouse
+imageCount
+controller
+windowWillResize:toSize:
+windowDidResize:
+showImagePac:
+initFromPhotoCD:
+newFrame:
+setVertScrollerRequired:
+setBackgroundGray:
+setBorderType:
+setLineScroll:
+setPageScroll:
+getScreenSize:
+initContent:style:backing:buttonMask:defer:
+setContentView:
+setDelegate:
+pathname
+setBordered:
+setIconPosition:
+setTarget:
+setAction:
+setType:
+setShowsStateBy:
+setPhotoCD:
+newFont:size:style:matrix:
+setFont:
+getContentSize:
+initFrame:mode:prototype:numRows:numCols:
+setIntercell:
+setAutoscroll:
+setAutodisplay:
+setCellSize:
+renewRows:cols:
+setDocView:
+cellList
+sizeToCells
+flushWindowIfNeeded
+setPrototype:
+selectedCell
+delayedFree:
+ungammaCorrect:
+repForPac:atRes:inRect:info:
+repForPac:atRes:inRect:
+setProgressPanel:
+repForPac:atRes:
+overviewImage:
+initFromDirectory:
+initCount:
+addObject:
+orderOut:
+initSize:
+useRepresentation:
+setProgress:
+checkAbort
+showExtraWarning:
+beginModalSession
+pixelsWide
+pixelsHigh
+progressView
+progressText
+extraText
+beginModalSession:for:
+runModalSession:
+stopModal
+endModalSession:
+imageLoaded
+drawInside:inView:
+setImage:
+loadNibSection:owner:withNames:
+c12@8:12@16
+c12@8:12^{?=ff}16
+@12@8:12@16
+i16@8:12*16*20
+@16@8:12*16@20
+@12@8:12*16
+{?="width"f"height"f}
+^{__DPSTimedEntry}
+{?="origin"{?="x"f"y"f}"size"{?="width"f"height"f}}
+{marchingAntData="r"{?="origin"{?="x"f"y"f}"size"{?="width"f"height"f}}"dashLength"f"incPhase"f"phase"f"drawView"@}
+{?="version"S"piwVersion"S"magnification"S"scanTime"L"modTime"L"mediaId"c"mediaType"[20c]"scannerVendor"[20c]"scannerProdID"[16c]"scannerFirmRev"[4c]"scannerFirmDate"[8c]"scannerSerial"[20c]"scannerSize"[2C]"piwEquipment"[20c]"nameCharSet"c"nameEscapes"[32c]"photofinisher"[60c]"SBAdata"[106c]"copyright"c"copyrightFile"[32c]}
+^{?=SSSLLc[20c][20c][16c][4c][8c][20c][2C][20c]c[32c][60c][106c]c[32c]}8@8:12
+@12@8:12^{?=ff}16
+@12@8:12^{?={?=ff}{?=ff}}16
+@20@8:12^{?={?=ff}{?=ff}}16^{?=ff}20^{?=ff}24
+@12@8:12^{?=i{?=ff}liI({?=ssiCcs}{?=ssSSSs}{?=ssii}{?=ss([2f][2l][4s][8c])})^{_t_DPSContextRec}}16
+c16@8:12@16^*20
+@16@8:12*16*20
+@16@8:12^{?={?=ff}{?=ff}}16i20
+@"Overview"
+@"ImageView"
+@16@8:12i16@20
+@16@8:12@16^{?=ff}20
+@16@8:12@16@20
+@24@8:12*16i20^{?={?=ff}{?=ff}}24^{?=SSSLLc[20c][20c][16c][4c][8c][20c][2C][20c]c[32c][60c][106c]c[32c]}28
+@20@8:12*16i20^{?={?=ff}{?=ff}}24
+@16@8:12*16i20
+@20@8:12*16i20^{?=SSSLLc[20c][20c][16c][4c][8c][20c][2C][20c]c[32c][60c][106c]c[32c]}24
+@12@8:12i16
+@12@8:12^{pcdinfofilerec=[8c]CC[12c]LLSCC[3C]C}16
+@12@8:12f16
+@9@8:12c16
+@16@8:12^{?={?=ff}{?=ff}}16@20
+PhotoAlbum.app
+PhotoAlbum
+PhotoAlbum
+PhotoAlbum
+PhotoAlbum
+oEOTOU_EO
+COCOC?TO
+xof_goho
+U_4?W_S/D
+W_DOC?3/
+goFOFOU_
+V_fowogo
+EOEO4?U_EO5?5OUOVO6OE_
+oU?uOu_f_
+oEOTOU_EO
+COCOC?TO
+xof_goho
+U_4?W_S/D
+W_DOC?3/
+goFOFOU_
+V_fowogo
+EOEO4?U_EO5?5OUOVO6OE_
+U/u_f_dOg_
+x/i/x?y/y?zO
+x/y/y?z?
+x/y/y?y?yOz?
+V_f_f_f_
+oC?fOC?T?U?
+x/i/y?z?zO{O
+G_Wogoe?
+x/y/y?z?zO{O
+hoU_E_EO#OVoWo
+w/x/y?z?
+gohohogoxohox
+x/y?yO{O
+U_xofoV_E_U_U_VO
+TOTOUOT_T_EOUOe_
+2/2/4?COCOD?D?vow_S/
+#/#/3?#/#/3?3?E?3/W_
+D/w_eOf?w_vO
+W_DOC?3/
+goFOFOU_
+EOEO4?U_EO5?5OUOVO6OE_
+U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_U_
+?f/V/U?V?U/
+SoundInspector = {
+    ACTIONS = {
+deactivate:;
+activate:;
+    OUTLETS = {
+fullPathField;
+infoText;
+infoForm;
+    SUPERCLASS = Object;
+FirstResponder = {
+    ACTIONS = {
+    SUPERCLASS = Object;
+WMPathField = {
+    SUPERCLASS = View;
+typedstream
+IBObjectData
+CustomObject
+SoundInspector
+TextFieldCell
+ActionCell
+Helvetica
+Responder
+TextField
+3Ulteriori informazioni vengono visualizzate qui
+muLaw 8 bit senza disturbi
+ff@@#::s
+Dimensioni:
+Campioni:
+Secondi:
+Formato:
+Frequenza di campionamento:
+WindowTemplate
+iiii***@s@
+Ispettore del suono
+Sound Inspector Window
+File's Owner
+IBOutletConnector
+IBConnector
+infoText
+infoForm
+data.classes
+data.nib
+FirstResponder = {
+    ACTIONS = {
+    SUPERCLASS = Object;
+ColumnSizer = {
+    OUTLETS = {
+delegate;
+refView;
+    SUPERCLASS = View;
+IconPref = {
+    ACTIONS = {
+default:;
+revert:;
+    OUTLETS = {
+defaultButton;
+titleSizer;
+fileIcon;
+    SUPERCLASS = Pref;
+TitleSizer = {
+    OUTLETS = {
+delegate;
+    SUPERCLASS = View;
+Pref = {
+    OUTLETS = {
+contentView;
+    SUPERCLASS = Object;
+typedstream
+IBObjectData
+CustomObject
+IconPref
+Responder
+ButtonCell
+ActionCell
+Utilizar valor por defecto
+Helvetica
+ff@@#::s
+CustomView
+TitleSizer
+Ancho del t
+WindowTemplate
+iiii***@s@
+Title Width
+LayoutWindow
+File's Owner
+IBOutletConnector
+IBConnector
+delegate
+titleSizer
+IBControlConnector
+default:
+defaultButton
+fileIcon
+AlertProcessController.nib
+AppProcessUI.nib
+CPMVProcess.nib
+DiskProcessUI.nib
+ProcessManager.nib
+Processes.strings
+SimpleBGProcess.nib
+/* NeXTSTEP Release 3 */
+/**** Process Window strings ****/
+"Background" = "Hintergrund";
+"Applications" = "Anwendungen";
+"running" = "l
+"launching" = "wird gestartet";
+"dying" = "wird abgebrochen";
+"Resume" = "Fortsetzen";
+"Pause" = "Unterbrechen";
+"Debug" = "Austesten";
+"Stopping File Operation" = "Dateioperation wird gestoppt";
+"File Operation Stopped" = "Dateioperation gestoppt";
+"File Operation Completed" = "Dateioperation beendet";
+"1 background process" = "1 Hintergrundproze
+"%d background processes" = "%d Hintergrundprozesse";
+"Pausing" = "Wird unterbrochen";
+"Paused" = "Unterbrochen";
+"Stopping" = "Wird gestoppt";
+"Stopped" = "Gestoppt";
+"Alert" = "Achtung";
+"Done" = "Beendet";
+"Stopping ..." = "Wird gestoppt ...";
+data.classes
+data.nib
+__PAGEZERO
+__fvmlib_init0
+__fvmlib_init1
+__literal8
+__cstring
+__literal4
+__common
+__meta_class
+__cat_cls_meth
+__cat_inst_meth
+__cls_meth
+__inst_meth
+__message_refs
+__symbols
+__category
+__protocol
+__class_vars
+__instance_vars
+__module_info
+__string_object
+__class_names
+__meth_var_names__OBJC
+__meth_var_types__OBJC
+__cls_refs
+__header
+__request
+__LINKEDIT
+/usr/shlib/libMedia_s.A.shlib
+/usr/shlib/libNeXT_s.C.shlib
+/usr/shlib/libsys_s.B.shlib

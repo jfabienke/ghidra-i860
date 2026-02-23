@@ -1,0 +1,701 @@
+openjdk version "25.0.2" 2026-01-20
+OpenJDK Runtime Environment Homebrew (build 25.0.2)
+OpenJDK 64-Bit Server VM Homebrew (build 25.0.2, mixed mode)
+INFO  Using log config file: jar:file:/opt/homebrew/Cellar/ghidra/12.0.2/libexec/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /Users/jvindahl/Library/ghidra/ghidra_12.0.2_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /Users/jvindahl/Library/ghidra/ghidra_12.0.2_PUBLIC/preferences (Preferences)  
+INFO  Loading previous preferences: /Users/jvindahl/Library/ghidra/ghidra_11.4.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (725 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (DefaultSSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (DefaultTrustManagerFactory)  
+INFO  Headless startup complete (1405 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 58 extension points (18 false positives) (ClassSearcher)  
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldOffset has been called by org.apache.felix.framework.util.SecureAction (file:/opt/homebrew/Cellar/ghidra/12.0.2/libexec/Ghidra/Features/Base/lib/org.apache.felix.framework-7.0.5.jar)
+WARNING: Please consider reporting this to the maintainers of class org.apache.felix.framework.util.SecureAction
+WARNING: sun.misc.Unsafe::staticFieldOffset will be removed in a future release
+INFO  HEADLESS Script Paths:
+    /opt/homebrew/Cellar/ghidra/12.0.2/libexec/Ghidra/Features/Base/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.0.2/libexec/Ghidra/Processors/8051/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.0.2/libexec/Ghidra/Processors/Atmel/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.0.2/libexec/Ghidra/Processors/JVM/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.0.2/libexec/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.0.2/libexec/Ghidra/Features/BytePatterns/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.0.2/libexec/Ghidra/Features/BSim/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.0.2/libexec/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.0.2/libexec/Ghidra/Processors/DATA/ghidra_scripts
+    /Users/jvindahl/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.0.2/libexec/Ghidra/Features/Jython/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.0.2/libexec/Ghidra/Features/FileFormats/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.0.2/libexec/Ghidra/Features/PDB/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.0.2/libexec/Ghidra/Features/PyGhidra/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.0.2/libexec/Ghidra/Features/VersionTracking/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.0.2/libexec/Ghidra/Features/Decompiler/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.0.2/libexec/Ghidra/Features/FunctionID/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.0.2/libexec/Ghidra/Debug/Debugger/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.0.2/libexec/Ghidra/Processors/PIC/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.0.2/libexec/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.0.2/libexec/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/scripts
+    /opt/homebrew/Cellar/ghidra/12.0.2/libexec/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.0.2/libexec/Ghidra/Features/SwiftDemangler/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.0.2/libexec/Ghidra/Features/GnuDemangler/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Creating project: /tmp/ghidra_i860_kernel (HeadlessAnalyzer)  
+INFO  Creating project: /tmp/ghidra_i860_kernel (DefaultProject)  
+INFO  REPORT: Processing input files:  (HeadlessAnalyzer)  
+INFO       project: /tmp/ghidra_i860_kernel (HeadlessAnalyzer)  
+INFO  IMPORTING: file:///Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/i860_kernel.bin (HeadlessAnalyzer)  
+INFO  Using Loader: Mac OS X Mach-O (ProgramLoader)  
+INFO  Using Language/Compiler: i860:LE:32:XR:gcc (ProgramLoader)  
+INFO  Using Library Search Path: [., /System/Library/dyld/dyld_shared_cache_arm64e, /System/Library/dyld/dyld_shared_cache_x86_64, /System/Library/dyld/dyld_shared_cache_x86_64h, /System/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e, /System/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64, /System/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64h, /Users/jvindahl/Library/Java/Extensions, /Library/Java/Extensions, /Network/Library/Java/Extensions, /System/Library/Java/Extensions, /usr/lib/java] (ProgramLoader)  
+INFO  Unsupported thread command flavor: 0x4 for CPU type 0xf (Mach-O Thread Command)  
+INFO  Additional info:
+Loading file:///Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/i860_kernel.bin?MD5=bc23eaacacc54d4c3062714edaf809b9...
+------------------------------------------------
+
+ (ProgramLoader)  
+INFO  IMPORTING: Loaded 0 additional files (HeadlessAnalyzer)  
+INFO  REPORT: Execute script: /Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/scripts/I860Import.java '--seed-map=/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260211-020258/iter_1/sweep/dynamic_recovery_map.json'  (HeadlessAnalyzer)  
+INFO  SCRIPT: /Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/scripts/I860Import.java (HeadlessAnalyzer)  
+INFO  === I860Import preScript (recursive descent) === (GhidraScript)  
+INFO  Entry point: f8000000 (GhidraScript)  
+INFO  Embedded non-i860 objects: 3 (GhidraScript)  
+INFO    F8017CB8 - F802133D (38,533 bytes) (GhidraScript)  
+INFO    F803DCB8 - F8057CB7 (106,495 bytes) (GhidraScript)  
+INFO    F805DCB8 - F8073CB7 (90,111 bytes) (GhidraScript)  
+INFO  Recovery map: /Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260211-020258/iter_1/sweep/dynamic_recovery_map.json (allow=1, deny=43) (GhidraScript)  
+INFO  Analysis set ranges: 44 (GhidraScript)  
+INFO  Initial descent from entry: 69 instructions (GhidraScript)  
+INFO    Round 1: +264 insns (call/br=19, flow=0) (GhidraScript)  
+INFO    Round 2: +0 insns (call/br=0, flow=0) (GhidraScript)  
+INFO  Recursive descent complete: 333 instructions in 2 rounds (GhidraScript)  
+INFO    Call/br seeds: 19, Flow seeds: 0 (GhidraScript)  
+INFO  Final instruction count: 333 (GhidraScript)  
+INFO  ANALYZING all memory and code: file:///Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/i860_kernel.bin (HeadlessAnalyzer)  
+WARN  Decompiling f8008bf0, pcode error at f248287c: Could not follow disassembly flow into non-existing memory at f248287c (DecompileCallback)  
+INFO  Packed database cache: /var/tmp/jvindahl-ghidra/packed-db-cache (PackedDatabaseCache)  
+INFO  Applied data type archive: mac_osx (ApplyDataArchiveAnalyzer)  
+INFO  Unsupported thread command flavor: 0x4 for CPU type 0xf (Mach-O Thread Command)  
+INFO  REPORT: Analysis succeeded for file: file:///Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/i860_kernel.bin (HeadlessAnalyzer)  
+INFO  REPORT: Execute script: /Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/scripts/I860Analyze.java '-' '/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260211-020258/iter_1/sweep/dynamic_recovery_map.json'  (HeadlessAnalyzer)  
+INFO  SCRIPT: /Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/scripts/I860Analyze.java (HeadlessAnalyzer)  
+INFO  === I860Analyze postScript === (GhidraScript)  
+INFO  Embedded non-i860 objects: 3 (GhidraScript)  
+INFO    F8017CB8 - F802133D (38,533 bytes) (GhidraScript)  
+INFO    F803DCB8 - F8057CB7 (106,495 bytes) (GhidraScript)  
+INFO    F805DCB8 - F8073CB7 (90,111 bytes) (GhidraScript)  
+INFO  Analysis set ranges: 44 (GhidraScript)  
+INFO  Instructions from preScript + auto-analysis: 333 (GhidraScript)  
+INFO  Recovery map: /Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260211-020258/iter_1/sweep/dynamic_recovery_map.json (allow=1, deny=43, curated-seeds=311) (GhidraScript)  
+INFO    Curated seeds: 205 usable, 106 rejected by filters (GhidraScript)  
+INFO    Static candidates: curated=205, rust-xref=0, call/br=29, prologue=2, addr-load=0, data-ptr=1 (GhidraScript)  
+INFO    Round 1: +2203 insns, 156 seeded, 0 delay-fixed, +44 flow, +0 post-ret (GhidraScript)  
+INFO    Round 2: +0 insns, 0 seeded, 0 delay-fixed, +0 flow, +0 post-ret (GhidraScript)  
+INFO  Seed discovery complete: 2 rounds, 2536 instructions, 43 failed (GhidraScript)  
+INFO    curated: 153 successful (GhidraScript)  
+INFO    prologue: 2 successful (GhidraScript)  
+INFO    data-ptr: 1 successful (GhidraScript)  
+INFO  
+Strategy 1: Call targets... (GhidraScript)  
+INFO    Found 0 functions from call targets (GhidraScript)  
+INFO  Strategy 2: Prologue patterns... (GhidraScript)  
+INFO    Found 0 functions from prologue patterns (GhidraScript)  
+INFO  Strategy 3: Post-return boundaries... (GhidraScript)  
+INFO    Found 0 functions from post-return boundaries (GhidraScript)  
+INFO  Strategy 4: Data pointers... (GhidraScript)  
+INFO    Found 0 functions from data pointers (GhidraScript)  
+INFO  
+Function discovery summary: (GhidraScript)  
+INFO    Call targets:       0 (GhidraScript)  
+INFO    Prologue patterns:  0 (GhidraScript)  
+INFO    Post-return:        0 (GhidraScript)  
+INFO    Data pointers:      0 (GhidraScript)  
+INFO    Total new:          69 (GhidraScript)  
+INFO  
+Validating function starts... (GhidraScript)  
+INFO    Pruned 12 functions with bad starts (GhidraScript)  
+INFO    Pruned (bad start):  12 (GhidraScript)  
+INFO  
+Code/Data classification... (GhidraScript)  
+INFO    419 regions: 208 code, 211 data (GhidraScript)  
+INFO  
+=== i860 Kernel Analysis Report (Recursive Descent) ===
+
+--- Summary ---
+Program:      i860_kernel.bin
+Language:     i860:LE:32:XR
+Compiler:     gcc
+Instructions: 2,536
+Functions:    60
+Code bytes:   10,144
+Data bytes:   735,364 (in executable blocks)
+Coverage:     1.4%
+
+--- Seed Discovery ---
+Recovery map:      /Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260211-020258/iter_1/sweep/dynamic_recovery_map.json
+Allow ranges:      1
+Deny ranges:       43
+Curated seed defs: 311
+Decoded flows:     0
+Call/br targets:   0
+Address loads:     0
+Prologue seeds:    2
+Pointer seeds:     1
+Post-return seeds: 0
+Rust xref seeds:   0
+Curated seeds:     153
+
+--- Function Discovery ---
+Call targets:       0
+Prologue patterns:  0
+Post-return:        0
+Data pointers:      0
+Total new:          69
+Pruned (bad start): 12
+
+--- Functions ---
+Address       Size      Name                            First Insn
+-------       ----      ----                            ----------
+f8000000      276       entry                           ld.b r0(r0),r0
+f8000348      68        FUN_f8000348                    ld.b r0(r0),r0
+f80014c4      56        FUN_f80014c4                    ld.b r0(r0),r0
+f80017cc      248       FUN_f80017cc                    ld.b r0(r0),r0
+f8004e44      24        FUN_f8004e44                    ld.b r4(r4),r0
+f8008000      40        FUN_f8008000                    ixfr r14,f0
+f8008098      72        FUN_f8008098                    xorh 0x40c6,r24,r0
+f80080f4      48        FUN_f80080f4                    ld.b r0(r0),r8
+f8008274      72        FUN_f8008274                    ld.b r14(r4),r8
+f800842c      68        FUN_f800842c                    ixfr r8,f0
+f8008dd4      72        FUN_f8008dd4                    ld.b r7(r4),r24
+f8008e20      32        FUN_f8008e20                    ld.b r20(r13),r24
+f8008e70      32        FUN_f8008e70                    ixfr r10,f0
+f8008ee4      84        FUN_f8008ee4                    st.b r8,0x401c(r8)
+f8008f5c      72        FUN_f8008f5c                    ld.b r22(r16),r0
+f80090d4      32        FUN_f80090d4                    ld.b r0(r0),r0
+f800916c      184       FUN_f800916c                    xor r8,r7,r31
+f8009270      256       FUN_f8009270                    ld.b r12(r8),r0
+f8009420      32        FUN_f8009420                    ld.b r4(r4),r0
+f80094fc      240       FUN_f80094fc                    ld.b r0(r0),r8
+f8009ae8      64        FUN_f8009ae8                    st.b r2,-0x3f12(r7)
+f800a0bc      28        FUN_f800a0bc                    flush 0x401e(r12)
+f800a1c8      68        FUN_f800a1c8                    st.c r4,fir
+f800a44c      112       FUN_f800a44c                    ld.b r0(r0),r8
+f800a554      44        FUN_f800a554                    ld.b r12(r8),r0
+f800a680      156       FUN_f800a680                    ixfr r18,f0
+f800af6c      48        FUN_f800af6c                    ld.b r0(r0),r0
+f800b3fc      40        FUN_f800b3fc                    ld.b r2(r8),r0
+f800b504      40        FUN_f800b504                    ld.b r2(r8),r0
+f800b83c      72        FUN_f800b83c                    ld.b r7(r16),r0
+f800b9e0      24        FUN_f800b9e0                    ld.b r26(r24),r0
+f800bb60      44        FUN_f800bb60                    ld.b r2(r0),r0
+f800bc68      52        FUN_f800bc68                    st.b r22,0x16(r8)
+f800bd9c      16        FUN_f800bd9c                    xorh 0x31c6,r24,r0
+f800bf74      112       FUN_f800bf74                    trap r2,r0,r0
+f800c194      32        FUN_f800c194                    fld.l r4(r20),f0
+f800c2a4      632       FUN_f800c2a4                    xorh 0x1394,r7,r31
+f800c458      16        FUN_f800c458                    shra 0xff6f,r30,r27
+f800c520      64        FUN_f800c520                    ld.b r12(r8),r0
+f800c584      36        FUN_f800c584                    ixfr r3,f24
+f800c630      92        FUN_f800c630                    ld.b r12(r8),r0
+f800c79c      60        FUN_f800c79c                    ld.b r8(r9),r0
+f800c8bc      72        FUN_f800c8bc                    ixfr r8,f24
+f800c964      168       FUN_f800c964                    ld.s r0(r16),r0
+f800cb9c      20        FUN_f800cb9c                    ixfr r3,f24
+f800cc00      32        FUN_f800cc00                    ld.b 0x3f16(r0),r0
+f800cd64      88        FUN_f800cd64                    ld.b r4(r28),r0
+f800cef0      44        FUN_f800cef0                    st.b r10,0x16(r8)
+f800cf8c      64        FUN_f800cf8c                    ld.b r12(r8),r0
+f800d00c      88        FUN_f800d00c                    ld.b 0x3f16(r0),r0
+f800d0ec      92        FUN_f800d0ec                    ld.b r12(r0),r0
+f800db54      44        FUN_f800db54                    ld.b r2(r0),r0
+f800dc7c      56        FUN_f800dc7c                    ld.b r24(r7),r31
+f800df78      28        FUN_f800df78                    ld.b r2(r4),r8
+f800f4d4      48        FUN_f800f4d4                    xorh 0x31c6,r24,r0
+f800f70c      52        FUN_f800f70c                    ld.b r20(r0),r0
+f800f77c      424       FUN_f800f77c                    fst.l f0,r0(r8)
+f800f80c      24        FUN_f800f80c                    st.b r6,0x87(r0)
+f8021a20      100       FUN_f8021a20                    subs 0x0,r1,r6
+f807ee1c      72        FUN_f807ee1c                    addu 0x19c8,r13,r12
+
+--- Code/Data Regions (executable blocks) ---
+Start         End           Size        Type
+-----         ---           ----        ----
+F8000000      F8000110      276         CODE
+F8000114      F8000344      564         DATA
+F8000348      F8000388      68          CODE
+F800038C      F80014AC      4388        DATA
+F80014B0      F80014BC      16          CODE
+F80014C0      F80014C0      4           DATA
+F80014C4      F80014F8      56          CODE
+F80014FC      F80017C8      720         DATA
+F80017CC      F80018C0      248         CODE
+F80018C4      F800209C      2012        DATA
+F80020A0      F800228C      496         CODE
+F8002290      F8004758      9420        DATA
+F800475C      F80047B4      92          CODE
+F80047B8      F8004DF4      1600        DATA
+F8004DF8      F8004E58      100         CODE
+F8004E5C      F8005CA0      3656        DATA
+F8005CA4      F8005CA8      8           CODE
+F8005CAC      F8007FFC      9044        DATA
+F8008000      F8008024      40          CODE
+F8008028      F8008094      112         DATA
+F8008098      F80080DC      72          CODE
+F80080E0      F80080F0      20          DATA
+F80080F4      F8008120      48          CODE
+F8008124      F8008270      336         DATA
+F8008274      F80082B8      72          CODE
+F80082BC      F8008428      368         DATA
+F800842C      F800846C      68          CODE
+F8008470      F8008788      796         DATA
+F800878C      F8008790      8           CODE
+F8008794      F8008BEC      1116        DATA
+F8008BF0      F8008D5C      368         CODE
+F8008D60      F8008DD0      116         DATA
+F8008DD4      F8008E18      72          CODE
+F8008E1C      F8008E1C      4           DATA
+F8008E20      F8008E3C      32          CODE
+F8008E40      F8008E6C      48          DATA
+F8008E70      F8008E8C      32          CODE
+F8008E90      F8008EA8      28          DATA
+F8008EAC      F8008EB4      12          CODE
+F8008EB8      F8008EE0      44          DATA
+F8008EE4      F8008F34      84          CODE
+F8008F38      F8008F58      36          DATA
+F8008F5C      F8008FA0      72          CODE
+F8008FA4      F80090D0      304         DATA
+F80090D4      F80090F0      32          CODE
+F80090F4      F8009168      120         DATA
+F800916C      F8009220      184         CODE
+F8009224      F800926C      76          DATA
+F8009270      F800936C      256         CODE
+F8009370      F800941C      176         DATA
+F8009420      F800943C      32          CODE
+F8009440      F80094F8      188         DATA
+F80094FC      F80095E8      240         CODE
+F80095EC      F8009AE4      1276        DATA
+F8009AE8      F8009B24      64          CODE
+F8009B28      F800A088      1380        DATA
+F800A08C      F800A08C      4           CODE
+F800A090      F800A0B8      44          DATA
+F800A0BC      F800A0D4      28          CODE
+F800A0D8      F800A1C4      240         DATA
+F800A1C8      F800A208      68          CODE
+F800A20C      F800A448      576         DATA
+F800A44C      F800A4B8      112         CODE
+F800A4BC      F800A550      152         DATA
+F800A554      F800A57C      44          CODE
+F800A580      F800A67C      256         DATA
+F800A680      F800A718      156         CODE
+F800A71C      F800AF68      2128        DATA
+F800AF6C      F800AF98      48          CODE
+F800AF9C      F800B388      1008        DATA
+F800B38C      F800B394      12          CODE
+F800B398      F800B3F8      100         DATA
+F800B3FC      F800B420      40          CODE
+F800B424      F800B500      224         DATA
+F800B504      F800B528      40          CODE
+F800B52C      F800B624      252         DATA
+F800B628      F800B630      12          CODE
+F800B634      F800B7B0      384         DATA
+F800B7B4      F800B7B8      8           CODE
+F800B7BC      F800B838      128         DATA
+F800B83C      F800B880      72          CODE
+F800B884      F800B9DC      348         DATA
+F800B9E0      F800B9F4      24          CODE
+F800B9F8      F800BB5C      360         DATA
+F800BB60      F800BB88      44          CODE
+F800BB8C      F800BC64      220         DATA
+F800BC68      F800BC80      28          CODE
+F800BC84      F800BD98      280         DATA
+F800BD9C      F800BDA8      16          CODE
+F800BDAC      F800BF70      456         DATA
+F800BF74      F800BFE0      112         CODE
+F800BFE4      F800C018      56          DATA
+F800C01C      F800C024      12          CODE
+F800C028      F800C098      116         DATA
+F800C09C      F800C0E4      76          CODE
+F800C0E8      F800C190      172         DATA
+F800C194      F800C1B0      32          CODE
+F800C1B4      F800C2A0      240         DATA
+F800C2A4      F800C2F0      80          CODE
+F800C2F4      F800C454      356         DATA
+F800C458      F800C464      16          CODE
+F800C468      F800C4B8      84          DATA
+F800C4BC      F800C4BC      4           CODE
+F800C4C0      F800C51C      96          DATA
+F800C520      F800C55C      64          CODE
+F800C560      F800C580      36          DATA
+F800C584      F800C5A4      36          CODE
+F800C5A8      F800C62C      136         DATA
+F800C630      F800C66C      64          CODE
+F800C670      F800C690      36          DATA
+F800C694      F800C6A8      24          CODE
+F800C6AC      F800C798      240         DATA
+F800C79C      F800C7D4      60          CODE
+F800C7D8      F800C8B8      228         DATA
+F800C8BC      F800C900      72          CODE
+F800C904      F800C960      96          DATA
+F800C964      F800C9AC      76          CODE
+F800C9B0      F800CA3C      144         DATA
+F800CA40      F800CA58      28          CODE
+F800CA5C      F800CB98      320         DATA
+F800CB9C      F800CBAC      20          CODE
+F800CBB0      F800CBFC      80          DATA
+F800CC00      F800CC1C      32          CODE
+F800CC20      F800CD00      228         DATA
+F800CD04      F800CD38      56          CODE
+F800CD3C      F800CD60      40          DATA
+F800CD64      F800CDB8      88          CODE
+F800CDBC      F800CDC4      12          DATA
+F800CDC8      F800CDC8      4           CODE
+F800CDCC      F800CEEC      292         DATA
+F800CEF0      F800CF18      44          CODE
+F800CF1C      F800CF88      112         DATA
+F800CF8C      F800CFC8      64          CODE
+F800CFCC      F800D008      64          DATA
+F800D00C      F800D060      88          CODE
+F800D064      F800D0E8      136         DATA
+F800D0EC      F800D144      92          CODE
+F800D148      F800D1F8      180         DATA
+F800D1FC      F800D23C      68          CODE
+F800D240      F800D7D0      1428        DATA
+F800D7D4      F800D824      84          CODE
+F800D828      F800DB50      812         DATA
+F800DB54      F800DB7C      44          CODE
+F800DB80      F800DC14      152         DATA
+F800DC18      F800DC20      12          CODE
+F800DC24      F800DC78      88          DATA
+F800DC7C      F800DCB0      56          CODE
+F800DCB4      F800DE48      408         DATA
+F800DE4C      F800DE4C      4           CODE
+F800DE50      F800DF74      296         DATA
+F800DF78      F800DF90      28          CODE
+F800DF94      F800E144      436         DATA
+F800E148      F800E260      284         CODE
+F800E264      F800E3AC      332         DATA
+F800E3B0      F800E3BC      16          CODE
+F800E3C0      F800F2EC      3888        DATA
+F800F2F0      F800F328      60          CODE
+F800F32C      F800F4D0      424         DATA
+F800F4D4      F800F500      48          CODE
+F800F504      F800F708      520         DATA
+F800F70C      F800F73C      52          CODE
+F800F740      F800F778      60          DATA
+F800F77C      F800F7A0      40          CODE
+F800F7A4      F800F808      104         DATA
+F800F80C      F800F820      24          CODE
+F800F824      F8021414      72692       DATA
+F8021418      F802142C      24          CODE
+F8021430      F8021458      44          DATA
+F802145C      F802146C      20          CODE
+F8021470      F80219DC      1392        DATA
+F80219E0      F80219E8      12          CODE
+F80219EC      F8021A1C      52          DATA
+F8021A20      F8021A54      56          CODE
+F8021A58      F8021C54      512         DATA
+F8021C58      F8021C64      16          CODE
+F8021C68      F8023644      6624        DATA
+F8023648      F8023648      4           CODE
+F802364C      F8023654      12          DATA
+F8023658      F8023658      4           CODE
+F802365C      F80257F0      8600        DATA
+F80257F4      F8025828      56          CODE
+F802582C      F8025D98      1392        DATA
+F8025D9C      F8025DA0      8           CODE
+F8025DA4      F8025E58      184         DATA
+F8025E5C      F8025E8C      52          CODE
+F8025E90      F8026038      428         DATA
+F802603C      F8026040      8           CODE
+F8026044      F8026098      88          DATA
+F802609C      F80260C0      40          CODE
+F80260C4      F80260F8      56          DATA
+F80260FC      F8026100      8           CODE
+F8026104      F8026158      88          DATA
+F802615C      F8026168      16          CODE
+F802616C      F80261B8      80          DATA
+F80261BC      F80261CC      20          CODE
+F80261D0      F8026218      76          DATA
+F802621C      F8026220      8           CODE
+F8026224      F80262D8      184         DATA
+F80262DC      F80262F8      32          CODE
+F80262FC      F80268A4      1452        DATA
+F80268A8      F80268B0      12          CODE
+F80268B4      F8029860      12208       DATA
+F8029864      F8029868      8           CODE
+F802986C      F8029CE8      1152        DATA
+F8029CEC      F8029CF4      12          CODE
+F8029CF8      F8029CFC      8           DATA
+F8029D00      F8029D2C      48          CODE
+F8029D30      F802A2F0      1476        DATA
+F802A2F4      F802A300      16          CODE
+F802A304      F802BB10      6160        DATA
+F802BB14      F802BB24      20          CODE
+F802BB28      F802C738      3092        DATA
+F802C73C      F802C73C      4           CODE
+F802C740      F802D340      3076        DATA
+F802D344      F802D354      20          CODE
+F802D358      F802DA28      1748        DATA
+F802DA2C      F802DA44      28          CODE
+F802DA48      F802F58C      6984        DATA
+F802F590      F802F59C      16          CODE
+F802F5A0      F8030028      2700        DATA
+F803002C      F8030048      32          CODE
+F803004C      F803004C      4           DATA
+F8030050      F803006C      32          CODE
+F8030070      F8030140      212         DATA
+F8030144      F8030168      40          CODE
+F803016C      F8030188      32          DATA
+F803018C      F8030190      8           CODE
+F8030194      F80301A0      16          DATA
+F80301A4      F80301A4      4           CODE
+F80301A8      F80301B4      16          DATA
+F80301B8      F80301B8      4           CODE
+F80301BC      F80301D8      32          DATA
+F80301DC      F80301FC      36          CODE
+F8030200      F8030208      12          DATA
+F803020C      F8030220      24          CODE
+F8030224      F8030234      20          DATA
+F8030238      F803023C      8           CODE
+F8030240      F8030270      52          DATA
+F8030274      F80302A8      56          CODE
+F80302AC      F8030378      208         DATA
+F803037C      F8030388      16          CODE
+F803038C      F80303B4      44          DATA
+F80303B8      F80303BC      8           CODE
+F80303C0      F80303C0      4           DATA
+F80303C4      F80303D4      20          CODE
+F80303D8      F8030408      52          DATA
+F803040C      F8030424      28          CODE
+F8030428      F8030448      36          DATA
+F803044C      F8030460      24          CODE
+F8030464      F8030664      516         DATA
+F8030668      F8030670      12          CODE
+F8030674      F8030718      168         DATA
+F803071C      F8030720      8           CODE
+F8030724      F8030798      120         DATA
+F803079C      F80307AC      20          CODE
+F80307B0      F80307BC      16          DATA
+F80307C0      F80307D4      24          CODE
+F80307D8      F80307D8      4           DATA
+F80307DC      F80307E0      8           CODE
+F80307E4      F8030814      52          DATA
+F8030818      F8030824      16          CODE
+F8030828      F8030834      16          DATA
+F8030838      F803083C      8           CODE
+F8030840      F803084C      16          DATA
+F8030850      F8030868      28          CODE
+F803086C      F803089C      52          DATA
+F80308A0      F80308A8      12          CODE
+F80308AC      F8030A10      360         DATA
+F8030A14      F8030A1C      12          CODE
+F8030A20      F8030A24      8           DATA
+F8030A28      F8030A34      16          CODE
+F8030A38      F8030A94      96          DATA
+F8030A98      F8030ABC      40          CODE
+F8030AC0      F8030AC0      4           DATA
+F8030AC4      F8030AE4      36          CODE
+F8030AE8      F8030BBC      216         DATA
+F8030BC0      F8030BC8      12          CODE
+F8030BCC      F8030C10      72          DATA
+F8030C14      F8030C4C      60          CODE
+F8030C50      F8030C7C      48          DATA
+F8030C80      F8030C90      20          CODE
+F8030C94      F8030D90      256         DATA
+F8030D94      F8030D9C      12          CODE
+F8030DA0      F8030DA0      4           DATA
+F8030DA4      F8030DC0      32          CODE
+F8030DC4      F8030E6C      172         DATA
+F8030E70      F8030E8C      32          CODE
+F8030E90      F803106C      480         DATA
+F8031070      F803109C      48          CODE
+F80310A0      F8031214      376         DATA
+F8031218      F8031220      12          CODE
+F8031224      F8031450      560         DATA
+F8031454      F8031474      36          CODE
+F8031478      F8031534      192         DATA
+F8031538      F8031548      20          CODE
+F803154C      F80315BC      116         DATA
+F80315C0      F80315EC      48          CODE
+F80315F0      F8031628      60          DATA
+F803162C      F8031648      32          CODE
+F803164C      F8031674      44          DATA
+F8031678      F8031678      4           CODE
+F803167C      F80316C0      72          DATA
+F80316C4      F80316C8      8           CODE
+F80316CC      F8031A4C      900         DATA
+F8031A50      F8031A64      24          CODE
+F8031A68      F8031BD8      372         DATA
+F8031BDC      F8031BDC      4           CODE
+F8031BE0      F8031C50      116         DATA
+F8031C54      F8031CC8      120         CODE
+F8031CCC      F8031CF8      48          DATA
+F8031CFC      F8031D0C      20          CODE
+F8031D10      F8031D34      40          DATA
+F8031D38      F8031D64      48          CODE
+F8031D68      F8031E40      220         DATA
+F8031E44      F8031E50      16          CODE
+F8031E54      F8031E6C      28          DATA
+F8031E70      F8031E88      28          CODE
+F8031E8C      F8031EB0      40          DATA
+F8031EB4      F8031EF0      64          CODE
+F8031EF4      F8032004      276         DATA
+F8032008      F8032020      28          CODE
+F8032024      F80320B4      148         DATA
+F80320B8      F80320B8      4           CODE
+F80320BC      F80320C4      12          DATA
+F80320C8      F80320CC      8           CODE
+F80320D0      F8032100      52          DATA
+F8032104      F803210C      12          CODE
+F8032110      F8032188      124         DATA
+F803218C      F803218C      4           CODE
+F8032190      F80321BC      48          DATA
+F80321C0      F80321C4      8           CODE
+F80321C8      F8032278      180         DATA
+F803227C      F80322A0      40          CODE
+F80322A4      F80322C8      40          DATA
+F80322CC      F8032300      56          CODE
+F8032304      F80324B8      440         DATA
+F80324BC      F80324D0      24          CODE
+F80324D4      F803253C      108         DATA
+F8032540      F8032544      8           CODE
+F8032548      F8032588      68          DATA
+F803258C      F80325A8      32          CODE
+F80325AC      F80326BC      276         DATA
+F80326C0      F80326D0      20          CODE
+F80326D4      F803275C      140         DATA
+F8032760      F8032764      8           CODE
+F8032768      F8032818      180         DATA
+F803281C      F8032838      32          CODE
+F803283C      F8032A78      576         DATA
+F8032A7C      F8032A84      12          CODE
+F8032A88      F8032AAC      40          DATA
+F8032AB0      F8032AB4      8           CODE
+F8032AB8      F8032AD0      28          DATA
+F8032AD4      F8032AFC      44          CODE
+F8032B00      F8032FD4      1240        DATA
+F8032FD8      F8032FDC      8           CODE
+F8032FE0      F8033080      164         DATA
+F8033084      F80330A0      32          CODE
+F80330A4      F80331D4      308         DATA
+F80331D8      F80331E4      16          CODE
+F80331E8      F8033230      76          DATA
+F8033234      F80332BC      140         CODE
+F80332C0      F8033810      1364        DATA
+F8033814      F803382C      28          CODE
+F8033830      F80341E8      2492        DATA
+F80341EC      F8034208      32          CODE
+F803420C      F803447C      628         DATA
+F8034480      F8034490      20          CODE
+F8034494      F80345AC      284         DATA
+F80345B0      F80345D8      44          CODE
+F80345DC      F8034814      572         DATA
+F8034818      F803482C      24          CODE
+F8034830      F8035800      4052        DATA
+F8035804      F803582C      44          CODE
+F8035830      F8036370      2884        DATA
+F8036374      F803639C      44          CODE
+F80363A0      F8036EC0      2852        DATA
+F8036EC4      F8036EC4      4           CODE
+F8036EC8      F8036F24      96          DATA
+F8036F28      F8036F2C      8           CODE
+F8036F30      F8037024      248         DATA
+F8037028      F8037028      4           CODE
+F803702C      F8037B6C      2884        DATA
+F8037B70      F8037B94      40          CODE
+F8037B98      F8038100      1388        DATA
+F8038104      F803810C      12          CODE
+F8038110      F8038218      268         DATA
+F803821C      F803821C      4           CODE
+F8038220      F8038E40      3108        DATA
+F8038E44      F8038E84      68          CODE
+F8038E88      F803970C      2184        DATA
+F8039710      F8039734      40          CODE
+F8039738      F803A630      3836        DATA
+F803A634      F803A674      68          CODE
+F803A678      F803B3A0      3372        DATA
+F803B3A4      F803B3E4      68          CODE
+F803B3E8      F803BD6C      2440        DATA
+F803BD70      F803BD9C      48          CODE
+F803BDA0      F803BE28      140         DATA
+F803BE2C      F803BE58      48          CODE
+F803BE5C      F803BFCC      372         DATA
+F803BFD0      F803C100      308         CODE
+F803C104      F803C10C      12          DATA
+F803C110      F803C1B8      172         CODE
+F803C1BC      F803C1CC      20          DATA
+F803C1D0      F803C220      84          CODE
+F803C224      F803C288      104         DATA
+F803C28C      F803C3FC      372         CODE
+F803C400      F807EE18      272924      DATA
+F807EE1C      F807EE60      72          CODE
+F807EE64      F80A1534      141012      DATA
+F80A1538      F80A153C      8           CODE
+F80A1540      F80A2068      2860        DATA
+F80A206C      F80A20A0      56          CODE
+F80A20A4      F80B1418      62328       DATA
+F80B141C      F80B1458      64          CODE
+F80B145C      F80B2547      4335        DATA
+F80B2548      F80B3FFF      6843        DATA
+F80C1C50      F80C1CFF      179         DATA
+F80C4098      F80C5FFF      8043        DATA
+
+--- Memory Blocks ---
+  __text               f8000000-f80b2547   730,440 bytes  r-x
+  __TEXT               f80b2548-f80b3fff     6,840 bytes  r-x
+  __data               f80b4000-f80c1c4f    56,400 bytes  rw-
+  __DATA               f80c1c50-f80c1cff       176 bytes  rwx
+  __bss                f80c1d00-f80c1fff       768 bytes  rw-
+  __bss                f80c2000-f80c27bf     1,984 bytes  rw-
+  __common             f80c27c0-f80c4097     6,360 bytes  rw-
+  __DATA               f80c4098-f80c5fff     8,040 bytes  rwx
+  HEADER               00000000-00000347       840 bytes  --- (GhidraScript)  
+INFO  Report written to: /tmp/i860_kernel_report.txt (GhidraScript)  
+INFO  REPORT: Execute script: /Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/scripts/ExportFactPack.java '--out=/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260211-020258/iter_1/factpack' '--seed-map=/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260211-020258/iter_1/sweep/dynamic_recovery_map.json' '--phase2=/Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/../firmware/analysis/phase2/cross_block_results.json'  (HeadlessAnalyzer)  
+INFO  SCRIPT: /Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/scripts/ExportFactPack.java (HeadlessAnalyzer)  
+INFO  ExportFactPack.java> === ExportFactPack === (GhidraScript)  
+INFO  ExportFactPack.java> Output directory: /Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260211-020258/iter_1/factpack (GhidraScript)  
+INFO  ExportFactPack.java> Seed map: /Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/reports/iterative_closure/20260211-020258/iter_1/sweep/dynamic_recovery_map.json (GhidraScript)  
+INFO  ExportFactPack.java> Phase2 hints: /Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/../firmware/analysis/phase2/cross_block_results.json (GhidraScript)  
+INFO  ExportFactPack.java> Fact pack export complete: (GhidraScript)  
+INFO  ExportFactPack.java>   functions: 60 (GhidraScript)  
+INFO  ExportFactPack.java>   blocks: 334 (GhidraScript)  
+INFO  ExportFactPack.java>   edges: 2695 (GhidraScript)  
+INFO  ExportFactPack.java>   insns: 2536 (GhidraScript)  
+INFO  ExportFactPack.java>   refs: 188 (GhidraScript)  
+INFO  ExportFactPack.java>   strings: 1148 (GhidraScript)  
+INFO  ExportFactPack.java>   dispatch_unresolved: 11 (GhidraScript)  
+INFO  ExportFactPack.java>   code_bytes (decoded): 10144 (GhidraScript)  
+INFO  ANALYZING changes made by post scripts: file:///Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/i860_kernel.bin (HeadlessAnalyzer)  
+WARN  Decompiling f800c584, pcode error at fdec89f4: Could not follow disassembly flow into non-existing memory at fdec89f4 (DecompileCallback)  
+WARN  Decompiling f800c584, pcode error at fdec89e4: Could not follow disassembly flow into non-existing memory at fdec89e4 (DecompileCallback)  
+WARN  Decompiling f800c630, pcode error at f800c670: Unable to resolve constructor at f800c670 (DecompileCallback)  
+WARN  Decompiling f8021a20, pcode error at f8961a48: Could not follow disassembly flow into non-existing memory at f8961a48 (DecompileCallback)  
+WARN  Decompiling f8021a20, pcode error at f802da48: Unable to resolve constructor at f802da48 (DecompileCallback)  
+WARN  Decompiling f8021a20, pcode error at f8021c68: Unable to resolve constructor at f8021c68 (DecompileCallback)  
+WARN  Decompiling f8021a20, pcode error at f8037ef4: Failed to resolve varnode <fddest>, index=17 (DecompileCallback)  
+WARN  Decompiling f8021a20, pcode error at f1a918a8: Could not follow disassembly flow into non-existing memory at f1a918a8 (DecompileCallback)  
+WARN  Decompiling f8021a20, pcode error at f5894838: Could not follow disassembly flow into non-existing memory at f5894838 (DecompileCallback)  
+WARN  Decompiling f8021a20, pcode error at fde5135c: Could not follow disassembly flow into non-existing memory at fde5135c (DecompileCallback)  
+INFO  -----------------------------------------------------
+    Basic Constant Reference Analyzer          0.040 secs
+    Call-Fixup Installer                       0.000 secs
+    Create Function                            0.001 secs
+    Decompiler Switch Analysis                 2.112 secs
+    Non-Returning Functions - Discovered       0.003 secs
+    Reference                                  0.000 secs
+    Shared Return Calls                        0.003 secs
+    Stack                                      0.018 secs
+    Subroutine References                      0.002 secs
+-----------------------------------------------------
+     Total Time   2 secs
+-----------------------------------------------------
+ (AutoAnalysisManager)  
+INFO  REPORT: Post-analysis succeeded for file: file:///Users/jvindahl/Development/ghidra-i860/re/nextdimension/kernel/i860_kernel.bin (HeadlessAnalyzer)  
+INFO  /i860_kernel.bin: file created (jvindahl) (LocalFileSystem)  
+INFO  REPORT: Save succeeded for: /i860_kernel.bin (ghidra_i860_kernel:/i860_kernel.bin) (HeadlessAnalyzer)  
+INFO  REPORT: Import succeeded (HeadlessAnalyzer)  

@@ -1,0 +1,14 @@
+Hard Mask Recovery Map Generation
+text_bin: /tmp/openstep42_i860_extract/ND_MachDriver___TEXT_section.bin
+clean_bin: /tmp/openstep42_i860_extract/ND_MachDriver___TEXT_clean_window.bin
+base: 0xF8000000
+text_end: 0xF80DB39F
+text_size: 897,952 bytes
+embedded_macho_ranges: 6
+byte_heuristic_ranges: 61
+pcode_hotspot_ranges: 0
+merged_deny_ranges: 49
+denied_bytes: 599,916
+out_of_range_targets: 507
+seeds_appended: 503
+final_seed_count: 814

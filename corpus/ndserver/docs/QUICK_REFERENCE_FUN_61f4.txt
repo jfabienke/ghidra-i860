@@ -1,0 +1,206 @@
+================================================================================
+QUICK REFERENCE CARD: FUN_000061f4
+Errno Wrapper Family Lead Function
+================================================================================
+
+ADDRESS & SIZE
+  Address:      0x000061f4 (25076 decimal)
+  Size:         134 bytes (0x86)
+  Type:         Dispatcher / Gateway Function
+  Category:     Callback
+  Priority:     HIGH
+
+FUNCTION SIGNATURE
+  Name:         FUN_000061f4
+  Parameters:   2 (input struct, output struct)
+  Return:       int (D0 = 0 fail, 1 success)
+  Convention:   M68000 CDECL
+
+KEY MEMORY ADDRESSES
+  Dispatch Table Base:     0x60b0
+  Errno Global:            0x040105b0
+  Metadata Global:         0x7ccc
+  Function Entry:          0x000061f4
+  Cleanup/Return:          0x00006272
+
+INSTRUCTION SECTIONS
+  Setup:                   0x61f4 - 0x61fa  (4 instructions)
+  Output Init:             0x6202 - 0x6230  (8 instructions)
+  Index Validation:        0x6238 - 0x6256  (8 instructions)
+  Dispatch Lookup:         0x6248 - 0x626e  (8 instructions)
+  Success/Failure Paths:   0x6258 - 0x6270  (2 instructions)
+  Cleanup:                 0x6272 - 0x6278  (3 instructions)
+
+PARAMETER STRUCTURES
+  Input[0x08]:  Copied to Output[0x08]
+  Input[0x0c]:  NOT copied (used by called function)
+  Input[0x10]:  Copied to Output[0x10]
+  Input[0x14]:  CRITICAL - Syscall index/selector
+
+  Output[0x03]:  Set to 0x01 (flag)
+  Output[0x04]:  Set to 0x20 (size constant)
+  Output[0x08]:  Receives Input[0x08]
+  Output[0x0c]:  Zeroed (0x00000000)
+  Output[0x10]:  Receives Input[0x10]
+  Output[0x14]:  0x64 + Input[0x14] (computed)
+  Output[0x18]:  Loaded from *(0x7ccc)
+  Output[0x1c]:  Set to -0x12f (-303)
+
+DISPATCH MECHANISM
+  Index Source:        Input[0x14]
+  Offset Correction:   Input[0x14] - 0x708 (1800)
+  Minimum Value:       0x2 (after offset)
+  Table Base:          0x60b0
+  Entry Size:          4 bytes (32-bit pointers)
+  Access Pattern:      dispatch[Input[0x14]] = *(0x60b0 + Input[0x14]*4)
+  Validation:          NULL check before call
+
+REGISTER ALLOCATION
+  A6:     Frame pointer (link.w)
+  A2:     Input struct pointer (saved)
+  A1:     Output struct pointer (parameter)
+  A0:     Dispatch table base, Function pointer
+  D0:     Index (raw), Return status
+  D1:     Constant, Comparison operand
+  SP:     Stack pointer (modified for calls)
+
+ERROR HANDLING
+  Out-of-Bounds Index:  D0 = 0, branch to cleanup
+  NULL Dispatch Entry:  D0 = 0, branch to cleanup
+  Success:              D0 = 1, after syscall returns
+
+CALLING CONVENTION (M68000 CDECL)
+  Stack at entry:
+    (A6+0x0c) <- param2 (output struct ptr)
+    (A6+0x08) <- param1 (input struct ptr)
+    (A6+0x04) <- return address
+    (A6+0x00) <- old A6
+
+CONSTANTS
+  0x20 (32):      Output[0x04] size/type
+  0x64 (100):     Offset for index computation
+  0x708 (1800):   Index offset correction
+  0x12f (303):    Negated to -303 for error field
+  0x7ccc:         Global metadata source
+  0x60b0:         Dispatch table base
+
+DISASSEMBLY LANDMARKS
+  0x000061f4:  link.w A6,0x0           ; Entry
+  0x000061f8:  move.l A2,-(SP)         ; Save A2
+  0x00006202:  move.b #0x1,(0x3,A1)    ; Init flag
+  0x0000620e:  move.l (0x8,A2),(0x8,A1) ; Copy field
+  0x00006238:  move.l (0x14,A2),D0     ; Load index
+  0x0000623c:  addi.l #-0x708,D0       ; Apply offset
+  0x00006244:  cmp.l D0,D1             ; Bounds check
+  0x0000624c:  lea (0x60b0).l,A0       ; Table base
+  0x00006252:  tst.l (0x0,A0,D0*0x4)   ; NULL test
+  0x0000626a:  movea.l (0x0,A0,D0*0x4),A0  ; Load fn
+  0x0000626e:  jsr A0                  ; Call syscall
+  0x00006272:  movea.l (-0x4,A6),A2    ; Restore A2
+  0x00006276:  unlk A6                 ; Cleanup
+  0x00006278:  rts                     ; Return
+
+FAMILY COMPOSITION (12 FUNCTIONS)
+  DISPATCHER:  1 function  (FUN_000061f4)
+  PATTERN A:   3 functions (62, 48, 48 bytes) - BLE error check
+  PATTERN B:   5 functions (48-44 bytes) - -1 error check
+  PATTERN C:   3 functions (40 bytes) - Minimal wrappers
+  TOTAL:       560 bytes combined
+
+WRAPPER FAMILY ADDRESSES
+  0x61f4  FUN_000061f4   134 bytes  DISPATCHER
+  0x627a  FUN_0000627a    62 bytes  PATTERN A
+  0x62b8  FUN_000062b8    48 bytes  PATTERN B
+  0x62e8  FUN_000062e8    48 bytes  PATTERN B
+  0x6318  FUN_00006318    40 bytes  PATTERN C
+  0x6340  FUN_00006340    44 bytes  PATTERN B
+  0x636c  FUN_0000636c    44 bytes  PATTERN B
+  0x6398  FUN_00006398    40 bytes  PATTERN C
+  0x63c0  FUN_000063c0    40 bytes  PATTERN C
+  0x63e8  FUN_000063e8    44 bytes  PATTERN B
+  0x6414  FUN_00006414    48 bytes  PATTERN A
+  0x6444  FUN_00006444    48 bytes  PATTERN A
+
+SYSCALL TARGETS (0x050xxxxx range)
+  0x05002d62  (FUN_0000627a)
+  0x0500330e  (FUN_000062b8)
+  0x05002bc4  (FUN_000062e8)
+  0x0500229a  (FUN_00006318)
+  0x050022e8  (FUN_00006340)
+  0x0500284c  (FUN_0000636c)
+  0x0500324e  (FUN_00006398)
+  0x05002228  (FUN_000063c0)
+  0x0500222e  (FUN_000063e8)
+  0x05002234  (FUN_00006414)
+  0x050028ac  (FUN_00006444)
+  0x050028ac  (duplicate, see mapping)
+
+CONTROL FLOW
+  Entry -> Setup -> Validate -> Initialize -> Lookup -> Dispatch -> Cleanup -> Exit
+            |        |           |            |          |
+            |        |           |            |          +-> JSR A0 (call syscall)
+            |        |           |            +-> TST.L (0x60b0 + index*4)
+            |        |           +-> MOVE.B, MOVEQ, MOVE.L
+            |        +-> CMP bounds check
+            +-> LINK.W A6, 0x0 (setup frame)
+
+CALL PATTERNS (from wrapper functions)
+  Pattern A:  BLE (branch less-or-equal) for error detection
+              errno copied to A3 parameter on error
+              3-argument syscall dispatch
+
+  Pattern B:  -1 (exact) for error detection
+              errno copied to A2 parameter on error
+              2-3 argument syscall dispatch
+
+  Pattern C:  -1 (exact) for error detection
+              errno copied to A2 parameter on error
+              1-2 argument syscall dispatch (minimal)
+
+DEBUGGING BREAKPOINTS
+  0x000061f4  Function entry (before setup)
+  0x00006238  Before bounds check (see raw index)
+  0x0000623c  After offset calculation (see adjusted index)
+  0x0000624c  Before table lookup (confirm table at 0x60b0)
+  0x0000626a  Before syscall dispatch (see which function)
+  0x00006272  After syscall return (see D0 status)
+
+COMMON ERRORS
+  ERROR: Out-of-bounds index -> D0 = 0, jump to 0x6258
+  ERROR: NULL dispatch entry -> D0 = 0, jump to 0x6258
+  SUCCESS: Syscall executed -> D0 = 1, syscall return ignored
+
+ARCHITECTURAL ROLE
+  Central dispatcher/gateway for syscall-like operations
+  Validation point before dispatch
+  Extensible via dispatch table lookup
+  Integration point with errno global
+  Callback interface to kernel/IPC subsystem
+
+REFERENCES
+  Main Analysis: FUN_000061f4_ERRNO_WRAPPER_ANALYSIS.md (18 sections)
+  Pattern Guide: ERRNO_WRAPPER_FAMILY_PATTERN_GUIDE.md (templates)
+  Summary Doc:  ANALYSIS_SUMMARY_FUN_000061f4.md (executive overview)
+  Source:       ghidra_export/disassembly_full.asm (lines 3979+)
+  Metadata:     ghidra_export/functions.json (entry 447)
+
+KEY TAKEAWAYS
+  1. Dispatcher pattern: Jump table at 0x60b0 for routing
+  2. Index transform: Raw input minus 0x708 for bounds validation
+  3. Metadata init: Consistent output structure setup before dispatch
+  4. Error handling: Delegated to wrapper functions via errno global
+  5. Extensible: Design allows adding new syscalls to dispatch table
+  6. Family: 12 total wrappers following PATTERN A/B/C templates
+
+ANALYSIS STATUS
+  Dispatcher:        COMPLETE (18-section analysis)
+  Pattern A/B/C:     READY FOR ANALYSIS (templates provided)
+  Syscall Mapping:   PENDING (kernel source needed)
+  Integration:       PENDING (caller analysis needed)
+
+================================================================================
+Created: 2025-11-08
+Version: 1.0
+Confidence: HIGH
+Status: COMPLETE FOR FUN_000061f4, READY FOR FAMILY ANALYSIS
+================================================================================

@@ -1,0 +1,28 @@
+# i860 Conformance Corpus
+# Purpose: Verify decoder behavior against Intel i860 Programmer's Reference Manual
+# Byte Order: LITTLE ENDIAN
+
+# 1. bc.t 0x100 (Delayed, Annulled if Not Taken)
+# Opcode 0x1D. Target = PC + 4 + (imm26 << 2).
+# Encoding: 3F 00 00 74
+3F000074  bc.t 0x100
+
+# 2. bnc.t 0x100 (Delayed, Annulled if Not Taken)
+# Opcode 0x1F. Target = PC + 4 + (imm26 << 2).
+# Encoding: 3F 00 00 7C
+3F00007C  bnc.t 0x100
+
+# 3. br 0x100 (Delayed)
+# Opcode 0x1A. Target = PC + 4 + (imm26 << 2).
+# Encoding: 3F 00 00 68
+3F000068  br 0x100
+
+# 4. st.l r1, 0x1235(r2) (Split Immediate, Size Bit 0=1)
+# Opcode 0x07, lsbit0=1. sthi=0x2, stlo=0x235.
+# Encoding: 35 0A 42 1C
+350A421C  st.l r1, 0x1235(r2)
+
+# 5. bte r1, r2, 0x100 (Split Offset, Not Delayed)
+# Opcode 0x16. sbrhi=0, sbrlo=0x3F.
+# Encoding: 3F 08 40 58
+3F084058  bte r1, r2, 0x100

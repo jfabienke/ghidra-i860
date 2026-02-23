@@ -1,0 +1,79 @@
+Analyze the following function and return a structured JSON intent dossier.
+
+FUNCTION: FUN_f8008098 at 0xf8008098
+SIZE: 72 bytes (18 instructions)
+CONFIDENCE SOURCE: curated
+HAS UNRESOLVED BRI: False
+PRIORITY TAGS: mmio_access
+
+CALLERS (0): (none)
+CALLEES (0): (none)
+
+BLOCKS (1):
+  0xf8008098..0xf80080df (18 insns)
+
+INSTRUCTIONS:
+  0xf8008098: xorh 0x40c6,r24,r0                       defs=[r0_sink] uses=[0x10,r24,0x40c6] pcode=[INT_ZEXT,INT_LEFT,INT_XOR]
+  0xf800809c: ld.b r0(r8),r0                           defs=[r0_sink] uses=[0x0,r8] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80080a0: ld.b -0x7fe2(r12),r16                    defs=[r16] uses=[r12,0x801e] pcode=[INT_SEXT,INT_ADD,LOAD,INT_ZEXT] [MMIO:mmio_high_space]
+  0xf80080a4: xorh 0xa0c6,r24,r0                       defs=[r0_sink] uses=[0x10,r24,0xa0c6] pcode=[INT_ZEXT,INT_LEFT,INT_XOR]
+  0xf80080a8: ld.b r0(r8),r0                           defs=[r0_sink] uses=[0x0,r8] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80080ac: ixfr r16,f8                              defs=[f8] uses=[r16] pcode=[COPY]
+  0xf80080b0: xorh 0xc0c6,r24,r0                       defs=[r0_sink] uses=[0x10,r24,0xc0c6] pcode=[INT_ZEXT,INT_LEFT,INT_XOR]
+  0xf80080b4: ld.b r0(r8),r0                           defs=[r0_sink] uses=[0x0,r8] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80080b8: st.b r16,-0x7fe2(r13)                    defs=[] uses=[r16,0xffff801e,r13] pcode=[INT_ADD,STORE] [MMIO:mmio_high_space]
+  0xf80080bc: ld.s r6(r0),r0                           defs=[r0_sink] uses=[0x0,r6] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80080c0: ld.s r18(r0),r0                          defs=[r0_sink] uses=[0x0,r18] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80080c4: xorh 0x7386,r31,r31                      defs=[r31] uses=[0x10,0x7386,r31] pcode=[INT_ZEXT,INT_LEFT,INT_XOR]
+  0xf80080c8: orh 0x1f50,r4,r31                        defs=[r31] uses=[0x1f50,0x10,r4] pcode=[INT_ZEXT,INT_LEFT,INT_OR]
+  0xf80080cc: xorh 0x3987,r31,r31                      defs=[r31] uses=[0x10,0x3987,r31] pcode=[INT_ZEXT,INT_LEFT,INT_XOR]
+  0xf80080d0: ld.b r2(r16),r0                          defs=[r0_sink] uses=[r16,r2] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80080d4: ld.b r18(r4),r0                          defs=[r0_sink] uses=[r4,r18] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80080d8: ld.b r30(r16),r0                         defs=[r0_sink] uses=[r16,r30] pcode=[INT_ADD,LOAD,INT_ZEXT]
+  0xf80080dc: ld.b r6(r4),r0                           defs=[r0_sink] uses=[r4,r6] pcode=[INT_ADD,LOAD,INT_ZEXT]
+
+REFERENCES:
+  (none)
+
+STRINGS IN RANGE:
+  (none)
+
+DISPATCH UNRESOLVED:
+  (none)
+
+CONTEXT:
+- R15 cluster (GState flags): False
+- MMIO accesses: 0xf80080a0=mmio_high_space
+- Nearby deny ranges: (none)
+- Nearby embedded objects: (none)
+
+Return ONLY valid JSON matching this schema:
+{
+  "function_id": "0xf8008098",
+  "function_name": "FUN_f8008098",
+  "primary_intent": "<one-line purpose statement>",
+  "intent_category": "<one of: initialization, dispatch, parser, raster, mmio_driver, math_kernel, utility, synchronization, error_handler, unknown>",
+  "evidence": [
+    {"addr": "0x...", "fact": "<what this instruction/pattern proves>"}
+  ],
+  "register_protocol": {
+    "inputs": ["<rN = description>"],
+    "outputs": ["<rN = description>"],
+    "side_effects": ["<memory write / MMIO / control reg change>"]
+  },
+  "data_accesses": [
+    {"addr": "0x...", "target": "0x...", "kind": "read|write|mmio", "interpretation": "..."}
+  ],
+  "control_flow_summary": "<how the function flows: linear, loop, conditional tree, dispatch, etc.>",
+  "confidence": <0-100>,
+  "confidence_factors": {
+    "supporting": ["<what raises confidence>"],
+    "limiting": ["<what caps confidence>"]
+  },
+  "alternatives": [
+    {"intent": "<alternative purpose>", "why_not_primary": "<evidence against>"}
+  ],
+  "open_questions": ["<what remains unknown>"],
+  "required_next_evidence": ["<what would resolve open questions>"],
+  "subsystem_hint": "<suggested subsystem: postscript_dispatch, pixel_pipeline, memory_management, board_init, interrupt_handling, unknown>"
+}
